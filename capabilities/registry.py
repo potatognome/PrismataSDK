@@ -51,6 +51,8 @@ class CapabilityRegistry:
         self._capabilities: dict[str, Capability] = {}
 
     def register(self, capability: Capability) -> Capability:
+        if capability.name in self._capabilities:
+            raise ValueError(f"Capability already registered: {capability.name}")
         self._capabilities[capability.name] = capability
         return capability
 
