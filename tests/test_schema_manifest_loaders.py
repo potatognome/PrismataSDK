@@ -37,7 +37,7 @@ def test_manifest_loader_loads_runtime_manifest():
 def test_schema_loader_resolves_canonical_root_path():
     root = SchemaLoader.canonical_schema_root(r"C:\workspace")
 
-    assert str(root).endswith(r"PrismataCore\canonical")
+    assert root.parts[-2:] == ("PrismataCore", "canonical")
 
 
 def test_schema_loader_loads_schema_from_file(tmp_path):

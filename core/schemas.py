@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from pathlib import Path, PureWindowsPath
+from pathlib import Path
 import json
 from typing import Any
 
@@ -38,11 +38,7 @@ class SchemaLoader:
         if workspace_root is None:
             return (Path.cwd() / CANONICAL_SCHEMA_ROOT).resolve()
 
-        if isinstance(workspace_root, str) and ("\\" in workspace_root or ":" in workspace_root):
-            root = PureWindowsPath(workspace_root) / PureWindowsPath(*CANONICAL_SCHEMA_ROOT.parts)
-            return Path(str(root))
-
-        base = Path(workspace_root)
+        base = Path(str(workspace_root).replace("\\", "/"))
         return (base / CANONICAL_SCHEMA_ROOT).resolve()
 
     @classmethod
