@@ -40,6 +40,12 @@ def test_schema_loader_resolves_canonical_root_path(tmp_path):
     assert root.parts[-2:] == ("PrismataCore", "canonical")
 
 
+def test_schema_loader_resolves_canonical_root_path_from_cwd():
+    root = SchemaLoader.canonical_schema_root()
+
+    assert root.parts[-2:] == ("PrismataCore", "canonical")
+
+
 def test_schema_loader_loads_schema_from_file(tmp_path):
     schema_file = tmp_path / "pane.schema.json"
     schema_payload = {

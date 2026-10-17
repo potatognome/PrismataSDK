@@ -6,7 +6,7 @@ from typing import Any
 from core.manifests import Manifest
 
 
-class CapabilityNotFoundError(KeyError):
+class CapabilityNotFoundError(LookupError):
     """Raised when a manifest references an unknown capability."""
 
 
