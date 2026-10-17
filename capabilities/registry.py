@@ -79,6 +79,6 @@ class CapabilityResolver:
                 missing.append(capability_name)
 
         if missing:
-            raise ValueError(f"Manifest {manifest.name!r} references unknown capabilities: {', '.join(missing)}")
+            raise ValueError(f"Manifest '{manifest.name}' references unknown capabilities: {', '.join(missing)}")
 
         return CapabilityResolution(manifest=manifest, capabilities=capabilities)
