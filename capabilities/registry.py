@@ -6,6 +6,10 @@ from typing import Any
 from core.manifests import Manifest
 
 
+class CapabilityNotFoundError(KeyError):
+    """Raised when a manifest references an unknown capability."""
+
+
 @dataclass(slots=True)
 class Capability:
     """A capability definition exposed by a module manifest."""
@@ -54,7 +58,7 @@ class CapabilityRegistry:
         try:
             return self._capabilities[name]
         except KeyError as exc:
-            raise ValueError(f"Unknown capability: {name}") from exc
+            raise CapabilityNotFoundError(name) from exc
 
     def list_capabilities(self) -> list[Capability]:
         return list(self._capabilities.values())
@@ -71,10 +75,10 @@ class CapabilityResolver:
         for capability_name in manifest.capabilities:
             try:
                 capabilities.append(registry.resolve(capability_name))
-            except ValueError:
+            except CapabilityNotFoundError:
                 missing.append(capability_name)
 
         if missing:
-            raise ValueError(f"Manifest {manifest.name!r} references unknown capabilities: {missing}")
+            raise ValueError(f"Manifest {manifest.name!r} references unknown capabilities: {', '.join(missing)}")
 
         return CapabilityResolution(manifest=manifest, capabilities=capabilities)
