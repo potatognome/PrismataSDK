@@ -38,7 +38,7 @@ class SchemaLoader:
         if workspace_root is None:
             return (Path.cwd() / CANONICAL_SCHEMA_ROOT).resolve()
 
-        base = Path(str(workspace_root).replace("\\", "/"))
+        base = Path(workspace_root)
         return (base / CANONICAL_SCHEMA_ROOT).resolve()
 
     @classmethod
