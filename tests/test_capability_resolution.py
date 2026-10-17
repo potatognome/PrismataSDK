@@ -1,3 +1,5 @@
+import pytest
+
 from capabilities import Capability, CapabilityRegistry, CapabilityResolver
 from core.manifests import ManifestLoader
 
@@ -36,8 +38,5 @@ def test_capability_resolver_rejects_unknown_capability():
         }
     )
 
-    try:
+    with pytest.raises(ValueError, match="unknown capabilities"):
         CapabilityResolver.resolve_manifest(manifest, registry)
-        assert False, "Expected ValueError for unknown capability"
-    except ValueError as exc:
-        assert "unknown capabilities" in str(exc)

@@ -39,8 +39,8 @@ class SchemaLoader:
             return (Path.cwd() / CANONICAL_SCHEMA_ROOT).resolve()
 
         if isinstance(workspace_root, str) and ("\\" in workspace_root or ":" in workspace_root):
-            root = PureWindowsPath(workspace_root) / PureWindowsPath("PrismataCore") / "canonical"
-            return Path(str(root))
+            root = PureWindowsPath(workspace_root) / PureWindowsPath(*CANONICAL_SCHEMA_ROOT.parts)
+            return Path(str(root)).resolve()
 
         base = Path(workspace_root)
         return (base / CANONICAL_SCHEMA_ROOT).resolve()
