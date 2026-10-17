@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prismatasdk"
+version = "0.1.0"
+description = "PrismataSDK migration scaffold aligned to CMF + PSO architecture"
+requires-python = ">=3.11"
+readme = "README.md"
+dependencies = []
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[tool.setuptools]
+packages = [
+    "core",
+    "ui",
+    "capabilities",
+    "tenants",
+    "cli",
+    "apps",
+    "examples",
+    "tests",
+]
