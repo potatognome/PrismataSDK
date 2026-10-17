@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 import json
 from typing import Any
 
@@ -35,7 +35,14 @@ class SchemaLoader:
 
     @staticmethod
     def canonical_schema_root(workspace_root: str | Path | None = None) -> Path:
-        base = Path(workspace_root) if workspace_root is not None else Path.cwd()
+        if workspace_root is None:
+            return (Path.cwd() / CANONICAL_SCHEMA_ROOT).resolve()
+
+        if isinstance(workspace_root, str) and ("\\" in workspace_root or ":" in workspace_root):
+            root = PureWindowsPath(workspace_root) / PureWindowsPath("PrismataCore") / "canonical"
+            return Path(str(root))
+
+        base = Path(workspace_root)
         return (base / CANONICAL_SCHEMA_ROOT).resolve()
 
     @classmethod
