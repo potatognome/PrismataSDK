@@ -38,5 +38,5 @@ def test_capability_resolver_rejects_unknown_capability():
         }
     )
 
-    with pytest.raises(ValueError, match=r"references unknown capabilities: missing"):
+    with pytest.raises(ValueError, match=r"Manifest 'ui-core' references unknown capabilities: \['missing'\]"):
         CapabilityResolver.resolve_manifest(manifest, registry)

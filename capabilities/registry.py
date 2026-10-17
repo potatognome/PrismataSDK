@@ -54,7 +54,7 @@ class CapabilityRegistry:
         try:
             return self._capabilities[name]
         except KeyError as exc:
-            raise KeyError(f"Unknown capability: {name}") from exc
+            raise ValueError(f"Unknown capability: {name}") from exc
 
     def list_capabilities(self) -> list[Capability]:
         return list(self._capabilities.values())
@@ -71,11 +71,10 @@ class CapabilityResolver:
         for capability_name in manifest.capabilities:
             try:
                 capabilities.append(registry.resolve(capability_name))
-            except KeyError:
+            except ValueError:
                 missing.append(capability_name)
 
         if missing:
-            missing_list = ", ".join(missing)
-            raise ValueError(f"Manifest {manifest.name!r} references unknown capabilities: {missing_list}")
+            raise ValueError(f"Manifest {manifest.name!r} references unknown capabilities: {missing!r}")
 
         return CapabilityResolution(manifest=manifest, capabilities=capabilities)
