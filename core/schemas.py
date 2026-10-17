@@ -35,7 +35,10 @@ class SchemaLoader:
 
     @staticmethod
     def canonical_schema_root(workspace_root: str | Path | None = None) -> Path:
-        base = Path(workspace_root) if workspace_root is not None else Path.cwd()
+        if workspace_root is None:
+            return (Path.cwd() / CANONICAL_SCHEMA_ROOT).resolve()
+
+        base = Path(workspace_root)
         return (base / CANONICAL_SCHEMA_ROOT).resolve()
 
     @classmethod

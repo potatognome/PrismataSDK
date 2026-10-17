@@ -34,10 +34,16 @@ def test_manifest_loader_loads_runtime_manifest():
     assert manifest.interfaces == ["ui.framework"]
 
 
-def test_schema_loader_resolves_canonical_root_path():
-    root = SchemaLoader.canonical_schema_root(r"C:\workspace")
+def test_schema_loader_resolves_canonical_root_path(tmp_path):
+    root = SchemaLoader.canonical_schema_root(tmp_path)
 
-    assert str(root).endswith(r"PrismataCore\canonical")
+    assert root.parts[-2:] == ("PrismataCore", "canonical")
+
+
+def test_schema_loader_resolves_canonical_root_path_from_cwd():
+    root = SchemaLoader.canonical_schema_root()
+
+    assert root.parts[-2:] == ("PrismataCore", "canonical")
 
 
 def test_schema_loader_loads_schema_from_file(tmp_path):
