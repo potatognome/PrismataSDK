@@ -1,6 +1,6 @@
 # PrismataSDK Migration Plan
 
-## Created: 2026-10-15  Last Updated: 2026-10-16
+## Created: 2026-10-15  Last Updated: 2026-10-17
 
 This document outlines the complete migration strategy for transitioning PrismataSDK into its new architecture, fully aligned with PrismataCore’s CMF capsule model, PSO construction rules, and updated schema system. It prioritizes user interface elements, multi‑coloured pane rendering, UI framework stability, and menu functionality. Breaking changes are permitted and expected.
 
@@ -13,6 +13,8 @@ Load objects from registry folders (pane.d, menu.d, chroma.d, etc.).
 Validate objects using canonical schemas.
 Support multi‑coloured panes, UI frameworks, and menu routing.
 Breaking changes are allowed and encouraged during this migration. The goal is correctness, clarity, and alignment with PrismataCore.
+Create several example scripts in the examples folder demonstrating progressive complexity of UI frameworks, panes, multi pane layouts, menu functions, visibility and enablement conditions.
+Encourage use of multi-coloured terminal backgrounds
 
 2. Migration Priorities
 
@@ -34,15 +36,15 @@ Validate against pane.schema.yaml.
 
 2.3 Menu System
 
-Menus and menu-items define interactive UI behavior.
+Menus, menu-items and headers define interactive UI behavior.
 Implement menu_loader and menu_item_loader.
 Support menu → pane dispatch.
 Support menu → ui_framework routing.
-Validate against menu.schema.yaml and menu-item.schema.yaml.
+Validate against menu.schema.yaml, menu-item.schema.yaml and header.schema.yaml.
 
 2.4 Chroma System
 
-Colour roles, border roles and colour schemes  define multi‑coloured pane behavior.
+Colour roles, border roles and colour schemes define multi‑coloured pane behavior.
 Implement chroma_loader.
 Support chroma application inside UI frameworks.
 Validate against colour-scheme.schema.yaml.
@@ -83,8 +85,7 @@ ui-framework.d
 3.4 Manifest Loader
 
 Support both root manifest and module manifests.
-
-manifest.yaml
+*.manifest.yaml
 manifest.d/*.yaml
 
 4. PSO Migration
@@ -92,7 +93,6 @@ manifest.d/*.yaml
 4.1 PSO Builder
 
 All CMF capsules must be converted into PSO objects.
-
 Enforce schema validation.
 Enforce rule validation.
 Enforce UDI correctness.
@@ -153,7 +153,6 @@ inspect
 9.1 UI Testing (Highest Priority)
 
 Multi‑coloured pane rendering.
-
 UI framework composition.
 Menu routing.
 
@@ -181,11 +180,13 @@ Examples must include:
 example manifests
 example panes
 example menus
-example chromaschemes
+example colour-schemes
+example colour-roles
+example border-roles
 example border patterns
 example ui frameworks
 
-Primary example object reference path: /PrismataCore/examples/registry.
+Primary example object reference path: /PrismataSDK/examples/registry.
 
 These examples serve as reference objects for testing and development.
 
@@ -195,6 +196,8 @@ Vile - VI-light editor for CMF capsules.
 Vise - Structured editor aware of schemas and rules.
 Universe - Workspace generator, ingestion engine, scaffolder, registry browser, and previewer.
 These apps must be updated to use CMF + PSO.
+All applications being migrated into PrismataSDK must have a valid manifest in the new app folder root.
+All tooling modules, primitives and helpers must have valid manifest entries contained in a tooling manifest.
 
 12. Breaking Changes Policy
 

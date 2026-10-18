@@ -1,0 +1,31 @@
+id: default
+udi: prismata.example-registry.pane.default
+kind: pane
+description: Default pane used as a fallback layout component.
+version: 0.5.0
+tenant: null
+source:
+  path: examples/registry/pane.d/default.pane.object.yaml
+  repo: PrismataCore
+  imported_at: '2026-10-14T00:00:00Z'
+metadata:
+  name: default.pane
+  label: Default Pane (0.4.3)
+  description: Default pane used as a fallback layout component.
+  schema_version: 1.0.0
+relations: {}
+validation:
+  status: valid
+  errors: []
+notes:
+- Migrated from Prismata examples/registry; role mappings moved into `content.roles`.
+content:
+  border_pattern: default
+  colour_scheme: default
+  content_role: primary-surface
+  colour_role: primary-surface
+  border_role: default
+  x: 0
+  y: 0
+  width: 80
+  height: 24

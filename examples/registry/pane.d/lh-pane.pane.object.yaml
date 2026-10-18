@@ -1,0 +1,33 @@
+id: lh-pane
+udi: prismata.example-registry.pane.lh-pane
+kind: pane
+description: Primary left-hand pane that fills the left side of a multi-pane terminal
+  layout.
+version: 0.5.0
+tenant: null
+source:
+  path: examples/registry/pane.d/lh-pane.pane.object.yaml
+  repo: PrismataCore
+  imported_at: '2026-10-14T00:00:00Z'
+metadata:
+  name: lh-pane.pane
+  label: LH Pane (0.4.3)
+  description: Primary left-hand pane that fills the left side of a multi-pane terminal
+    layout.
+  schema_version: 1.0.0
+relations: {}
+validation:
+  status: valid
+  errors: []
+notes:
+- Migrated from Prismata examples/registry; role mappings moved into `content.roles`.
+content:
+  border_pattern: single-line
+  colour_scheme: default
+  content_role: primary-surface
+  colour_role: primary-surface
+  border_role: border
+  x: 5
+  y: 5
+  width: 44
+  height: 64

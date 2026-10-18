@@ -1,0 +1,24 @@
+id: primary-surface
+udi: prismata.example-registry.colour-role.primary-surface
+kind: colour-role
+version: 0.5.0
+tenant: null
+source:
+  path: examples/registry/colour-role.d/primary-surface.colour-role.object.yaml
+  repo: PrismataCore
+  imported_at: '2026-10-14T00:00:00Z'
+metadata:
+  name: primary-surface.colour-role
+  label: Primary Surface Colour Role
+  description: Primary surface colour role used for main content areas.
+  schema_version: 1.0.0
+relations: {}
+validation:
+  status: valid
+  errors: []
+notes:
+- Migrated from Prismata examples/registry; role colours moved into `content.layers`.
+content:
+  layers:
+    bg: ansi:rgb(10,10,12)
+    fg: ansi:rgb(220,220,220)

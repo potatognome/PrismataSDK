@@ -1,0 +1,33 @@
+id: single-line
+udi: prismata.example-registry.border-pattern.single-line
+kind: border-pattern
+version: 0.5.0
+tenant: null
+source:
+  path: examples/registry/border-pattern.d/single-line.border-pattern.object.yaml
+  repo: PrismataCore
+  imported_at: '2026-10-14T00:00:00Z'
+metadata:
+  name: single-line.border-pattern
+  label: Prismata Single-Line Terminal Border Pattern (0.5.0)
+  description: Single-line terminal border pattern for Prismata UI.
+  schema_version: 1.0.0
+relations: {}
+validation:
+  status: valid
+  errors: []
+notes:
+- Migrated from Prismata examples/registry; wrapped in CMF `content`.
+content:
+  glyphs:
+    top: \u2500
+    bottom: \u2500
+    left: \u2502
+    right: \u2502
+    top_left: \u250C
+    top_right: \u2510
+    bottom_left: \u2514
+    bottom_right: \u2518
+  thickness: 1
+  padding: 1
+  border_role: default

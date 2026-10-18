@@ -1,0 +1,33 @@
+id: rh-pane
+udi: prismata.example-registry.pane.rh-pane
+kind: pane
+description: Secondary right-hand pane that fills the right side of a multi-pane terminal
+  layout.
+version: 0.5.0
+tenant: null
+source:
+  path: examples/registry/pane.d/rh-pane.pane.object.yaml
+  repo: PrismataCore
+  imported_at: '2026-10-14T00:00:00Z'
+metadata:
+  name: rh-pane.pane
+  label: RH Pane (0.4.3)
+  description: Secondary right-hand pane that fills the right side of a multi-pane
+    terminal layout.
+  schema_version: 1.0.0
+relations: {}
+validation:
+  status: valid
+  errors: []
+notes:
+- Migrated from Prismata examples/registry; role mappings moved into `content.roles`.
+content:
+  border_pattern: single-line
+  colour_scheme: default
+  content_role: secondary-surface
+  colour_role: secondary-surface
+  border_role: accent-surface
+  x: 51
+  y: 5
+  width: 44
+  height: 64

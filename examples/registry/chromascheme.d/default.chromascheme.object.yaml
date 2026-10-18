@@ -1,0 +1,127 @@
+id: default
+udi: prismata.example-registry.chromascheme.default
+kind: chromascheme
+version: 0.5.0
+tenant: null
+source:
+  path: examples/registry/chromascheme.d/default.chromascheme.object.yaml
+  repo: PrismataCore
+  imported_at: '2026-10-14T00:00:00Z'
+metadata:
+  name: default.chromascheme
+  label: Prismata Default Terminal ChromaScheme (0.4.0)
+  description: Generated exemplar terminal chromascheme for Prismata UI.
+  schema_version: 1.0.0
+relations: {}
+validation:
+  status: valid
+  errors: []
+notes:
+- Migrated from Prismata examples/registry; colour_set, roles, geometry moved into
+  `content`.
+content:
+  colour_set:
+  - id: c0
+    origin: base
+    rgb:
+      r: 163
+      g: 138
+      b: 134
+  - id: c1
+    origin: base
+    rgb:
+      r: 149
+      g: 170
+      b: 138
+  - id: c2
+    origin: base
+    rgb:
+      r: 141
+      g: 171
+      b: 177
+  - id: c3
+    origin: base
+    rgb:
+      r: 170
+      g: 145
+      b: 184
+  - id: c4
+    origin: derived
+    rgb:
+      r: 163
+      g: 133
+      b: 127
+  - id: c5
+    origin: derived
+    rgb:
+      r: 144
+      g: 170
+      b: 131
+  - id: c6
+    origin: derived
+    rgb:
+      r: 134
+      g: 170
+      b: 177
+  - id: c7
+    origin: derived
+    rgb:
+      r: 168
+      g: 138
+      b: 184
+  roles:
+    primary-surface:
+      layers:
+        bg:
+          colourRef: c0
+    secondary-surface:
+      layers:
+        bg:
+          colourRef: c1
+    tertiary-surface:
+      layers:
+        bg:
+          colourRef: c2
+    accent-surface:
+      layers:
+        bg:
+          colourRef: c3
+    border-fg:
+      layers:
+        fg:
+          colourRef: c4
+    menu-fg:
+      layers:
+        fg:
+          colourRef: c5
+    menu-bg:
+      layers:
+        bg:
+          colourRef: c6
+    interactive-fg:
+      layers:
+        fg:
+          colourRef: c7
+  geometry:
+    baseGeometry: quadratic
+    overlays:
+    - type: harmonic
+      params:
+        rotation: 45
+    - type: luminance_wheel
+      params:
+        amplitude: 0.08
+    - type: chroma_spiral
+      params:
+        step: 0.01
+    expressions:
+      parageometric: true
+      offsets:
+      - 45.0
+      - 135.0
+      - 225.0
+      - 315.0
+      - 45.0
+      - 135.0
+      - 225.0
+      - 315.0

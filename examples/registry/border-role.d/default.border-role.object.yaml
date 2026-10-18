@@ -1,0 +1,27 @@
+id: default
+udi: prismata.example-registry.border-role.default
+kind: border-role
+version: 0.5.0
+tenant: null
+source:
+  path: examples/registry/border-role.d/default.border-role.object.yaml
+  repo: PrismataCore
+  imported_at: '2026-10-14T00:00:00Z'
+metadata:
+  name: default.border-role
+  label: Default Border
+  description: Default semantic role for the border in pane layouts, headers, menus,
+    menu items and other UI components.
+  schema_version: 1.0.0
+relations: {}
+validation:
+  status: valid
+  errors: []
+notes:
+- Migrated from Prismata examples/registry; layers moved into `content`.
+content:
+  layers:
+    bg: ansi:rgb(12,22,34)
+    fg: ansi:rgb(120,220,255)
+    style:
+    - bold

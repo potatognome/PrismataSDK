@@ -1,0 +1,47 @@
+id: default
+udi: prismata.example-registry.colour-scheme.default
+kind: colour-scheme
+version: 0.5.0
+tenant: null
+source:
+  path: examples/registry/colour-scheme.d/default.colour-scheme.object.yaml
+  repo: PrismataCore
+  imported_at: '2026-10-14T00:00:00Z'
+metadata:
+  name: default.colour-scheme
+  label: Prismata Default Terminal Scheme (0.4.1)
+  description: Default terminal-focused colour mapping produced from a ChromaScheme
+    0.4.0 source.
+  schema_version: 1.0.0
+relations: {}
+validation:
+  status: valid
+  errors: []
+notes:
+- Migrated from Prismata examples/registry; role mappings moved into `content.roles`.
+content:
+  roles:
+    default:
+      fg: ansi:rgb(220,220,220)
+      bg: ansi:rgb(10,10,12)
+    primary-surface:
+      fg: ansi:rgb(220,220,220)
+      bg: ansi:rgb(10,10,12)
+    secondary-surface:
+      fg: ansi:rgb(200,200,200)
+      bg: ansi:rgb(18,18,20)
+    border:
+      fg: ansi:rgb(160,160,160)
+      bg: ansi:rgb(10,10,12)
+    accent-surface:
+      fg: ansi:rgb(120,220,255)
+      bg: ansi:rgb(12,22,34)
+    alert-surface:
+      fg: ansi:rgb(255,160,120)
+      bg: ansi:rgb(38,12,10)
+    background:
+      fg: ansi:rgb(220,220,220)
+      bg: ansi:rgb(10,10,12)
+    menu_surface:
+      fg: ansi:rgb(220,220,220)
+      bg: ansi:rgb(10,10,12)

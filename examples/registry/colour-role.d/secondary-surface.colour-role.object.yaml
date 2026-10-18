@@ -1,0 +1,24 @@
+id: secondary-surface
+udi: prismata.example-registry.colour-role.secondary-surface
+kind: colour-role
+version: 0.5.0
+tenant: null
+source:
+  path: examples/registry/colour-role.d/secondary-surface.colour-role.object.yaml
+  repo: PrismataCore
+  imported_at: '2026-10-14T00:00:00Z'
+metadata:
+  name: secondary-surface.colour-role
+  label: Secondary Surface Colour Role
+  description: Secondary surface colour role used across panes and menus.
+  schema_version: 1.0.0
+relations: {}
+validation:
+  status: valid
+  errors: []
+notes:
+- Migrated from Prismata examples/registry; role colours moved into `content.layers`.
+content:
+  layers:
+    bg: ansi:rgb(18,18,20)
+    fg: ansi:rgb(200,200,200)

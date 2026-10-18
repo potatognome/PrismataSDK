@@ -1,0 +1,38 @@
+id: exemplar-multi-pane-menus
+udi: prismata.example-registry.ui-framework.exemplar-multi-pane-menus
+kind: ui-framework
+description: Two side-by-side panes with explicit pane-to-menu bindings and header-driven
+  menu titles.
+version: 0.5.0
+tenant: null
+source:
+  path: examples/registry/ui-framework.d/exemplar-multi-pane-menus.ui-framework.object.yaml
+  repo: PrismataCore
+  imported_at: '2026-10-14T00:00:00Z'
+metadata:
+  name: exemplar-multi-pane-menus.ui-framework
+  label: Exemplar Multi-Pane Menus (0.5.0)
+  description: Two side-by-side panes with explicit pane-to-menu bindings and header-driven
+    menu titles.
+  schema_version: 1.0.0
+relations: {}
+validation:
+  status: valid
+  errors: []
+notes:
+- Migrated from Prismata examples/registry; role mappings moved into `content.roles`.
+content:
+  panes:
+  - prismata.example-registry.pane.lh-pane
+  - prismata.example-registry.pane.rh-pane
+  menus:
+  - prismata.example-registry.menu.exemplar-primary
+  - prismata.example-registry.menu.exemplar-secondary
+  pane_bindings:
+  - pane: prismata.example-registry.pane.lh-pane
+    menu: prismata.example-registry.menu.exemplar-primary
+  - pane: prismata.example-registry.pane.rh-pane
+    menu: prismata.example-registry.menu.exemplar-secondary
+  colour_scheme: default
+  active_pane: prismata.example-registry.pane.lh-pane
+  border_pattern: single-line

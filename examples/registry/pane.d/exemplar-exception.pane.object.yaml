@@ -1,0 +1,35 @@
+id: exemplar-exception
+udi: prismata.example-registry.pane.exemplar-exception
+kind: pane
+description: Warning/exception pane in the exemplar layout. It sits in the lower right
+  area and overlaps the secondary panel.
+version: 0.5.0
+tenant: null
+source:
+  path: examples/registry/pane.d/exemplar-exception.pane.object.yaml
+  repo: PrismataCore
+  imported_at: '2026-10-14T00:00:00Z'
+metadata:
+  name: exemplar-exception.pane
+  label: Exemplar Exception Pane (0.4.3)
+  description: Warning/exception pane in the exemplar layout. It sits in the lower
+    right area and overlaps the secondary panel.
+  schema_version: 1.0.0
+relations: {}
+validation:
+  status: valid
+  errors: []
+notes:
+- Migrated from Prismata examples/registry; role mappings moved into `content.roles`.
+content:
+  border_pattern: double-line
+  colour_scheme: default
+  content_role: alert-surface
+  colour_role: alert-surface
+  border_role: border
+  x: 64
+  y: 42
+  width: 28
+  height: 18
+  layout:
+    mode: single

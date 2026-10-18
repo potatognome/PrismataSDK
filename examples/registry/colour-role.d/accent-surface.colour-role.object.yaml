@@ -1,0 +1,24 @@
+id: accent-surface
+udi: prismata.example-registry.colour-role.accent-surface
+kind: colour-role
+version: 0.5.0
+tenant: null
+source:
+  path: examples/registry/colour-role.d/accent-surface.colour-role.object.yaml
+  repo: PrismataCore
+  imported_at: '2026-10-14T00:00:00Z'
+metadata:
+  name: accent-surface.colour-role
+  label: Accent Surface Colour Role
+  description: Accent surface used for highlighted regions and interactive elements.
+  schema_version: 1.0.0
+relations: {}
+validation:
+  status: valid
+  errors: []
+notes:
+- Migrated from Prismata examples/registry; role colours moved into `content.layers`.
+content:
+  layers:
+    bg: ansi:rgb(12,22,34)
+    fg: ansi:rgb(120,220,255)

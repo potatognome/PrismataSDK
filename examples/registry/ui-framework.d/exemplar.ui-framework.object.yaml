@@ -1,0 +1,33 @@
+id: exemplar
+udi: prismata.example-registry.ui-framework.exemplar
+kind: ui-framework
+description: Multi-pane terminal layout showing overlapping and non-overlapping panes
+  for exemplar rendering.
+version: 0.5.0
+tenant: null
+source:
+  path: examples/registry/ui-framework.d/exemplar.ui-framework.object.yaml
+  repo: PrismataCore
+  imported_at: '2026-10-14T00:00:00Z'
+metadata:
+  name: exemplar.ui-framework
+  label: Exemplar UI Framework (0.5.0)
+  description: Multi-pane terminal layout showing overlapping and non-overlapping
+    panes for exemplar rendering.
+  schema_version: 1.0.0
+relations: {}
+validation:
+  status: valid
+  errors: []
+notes:
+- Migrated from Prismata examples/registry; role mappings moved into `content.roles`.
+content:
+  menus: []
+  panes:
+  - prismata.example-registry.pane.exemplar-primary
+  - prismata.example-registry.pane.exemplar-secondary
+  - prismata.example-registry.pane.exemplar-tertiary
+  - prismata.example-registry.pane.exemplar-exception
+  colour_scheme: default
+  active_pane: prismata.example-registry.pane.exemplar-primary
+  border_pattern: single-line

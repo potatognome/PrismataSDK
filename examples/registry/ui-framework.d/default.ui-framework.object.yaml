@@ -1,0 +1,31 @@
+id: default
+udi: prismata.example-registry.ui-framework.default
+kind: menu
+description: Secondary no-op menu used by the right-hand exemplar pane with a title
+  header and per-item styling.
+version: 0.5.0
+tenant: null
+source:
+  path: examples/registry/ui-framework.d/default.ui-framework.object.yaml
+  repo: PrismataCore
+  imported_at: '2026-10-14T00:00:00Z'
+metadata:
+  name: default.ui-framework
+  label: Default UI Framework (0.5.0)
+  description: Secondary no-op menu used by the right-hand exemplar pane with a title
+    header and per-item styling.
+  schema_version: 1.0.0
+relations: {}
+validation:
+  status: valid
+  errors: []
+notes:
+- Migrated from Prismata examples/registry; role mappings moved into `content.roles`.
+content:
+  menus:
+  - prismata.example-registry.menu.default
+  panes:
+  - prismata.example-registry.pane.default
+  colour_scheme: default
+  active_pane: prismata.example-registry.pane.default
+  border_pattern: single-line

@@ -1,0 +1,33 @@
+id: exemplar-secondary
+udi: prismata.example-registry.menu.exemplar-secondary
+kind: menu
+description: Secondary no-op menu used by the right-hand exemplar pane with a title
+  header and per-item styling.
+version: 0.5.0
+tenant: null
+source:
+  path: examples/registry/menu-item.d/default.menu-item.object.yaml
+  repo: PrismataCore
+  imported_at: '2026-10-14T00:00:00Z'
+metadata:
+  name: exemplar-secondary.menu
+  label: Exemplar Secondary Menu (0.4.3)
+  description: Secondary no-op menu used by the right-hand exemplar pane with a title
+    header and per-item styling.
+  schema_version: 1.0.0
+relations: {}
+validation:
+  status: valid
+  errors: []
+notes:
+- Migrated from Prismata examples/registry; role mappings moved into `content.roles`.
+content:
+  menu:
+    title: Exemplar Secondary Menu 0.4.3
+    header:
+      text: Exemplar Secondary Menu 0.4.3
+    items:
+    - label: 'Prismata Secondary Menu Item #1 (0.4.3)'
+      colour_role: secondary-surface
+    - label: 'Prismata Secondary Menu Item #2 (0.4.3)'
+      colour_role: tertiary-surface

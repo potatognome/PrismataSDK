@@ -1,0 +1,33 @@
+id: exemplar-tertiary
+udi: prismata.example-registry.pane.exemplar-tertiary
+kind: pane
+description: Tertiary pane in the exemplar layout. It overlaps both the primary and
+  secondary panes.
+version: 0.5.0
+tenant: null
+source:
+  path: examples/registry/pane.d/exemplar-tertiary.pane.object.yaml
+  repo: PrismataCore
+  imported_at: '2026-10-14T00:00:00Z'
+metadata:
+  name: exemplar-tertiary.pane
+  label: Exemplar Tertiary Pane (0.5.0)
+  description: Tertiary pane in the exemplar layout. It overlaps both the primary
+    and secondary panes.
+  schema_version: 1.0.0
+relations: {}
+validation:
+  status: valid
+  errors: []
+notes:
+- Migrated from Prismata examples/registry; role mappings moved into `content.roles`.
+content:
+  border_pattern: default
+  colour_scheme: default
+  content_role: accent-surface
+  colour_role: accent-surface
+  border_role: border
+  x: 18
+  y: 42
+  width: 42
+  height: 28

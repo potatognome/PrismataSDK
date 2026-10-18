@@ -1,0 +1,58 @@
+id: default
+udi: prismata.example-registry.header.example
+kind: header
+version: 0.5.0
+tenant: null
+source:
+  path: examples/registry/header.d/example.header.object.yaml
+  repo: PrismataCore
+  imported_at: '2026-10-14T00:00:00Z'
+metadata:
+  name: example.header
+  label: Prismata Example Header (0.5.0)
+  description: Example header produced for Prismata example registry.
+  schema_version: 1.0.0
+relations: {}
+validation:
+  status: valid
+  errors: []
+notes:
+ - Prismata Example Header with title Prismata Example Header (0.5.0)
+content:
+  title: Example Header
+    # type: string
+    # description: Optional. Title for the header.
+  level: 1
+    # type: integer
+    # description: Optional. Header structural level. Sorts low (super) to high (sub). Defaults to align with the surrounding content.
+  padding: 1
+    # type: integer
+    # minimum: 1
+    # description: Optional. Padding for the header. Defaults to 1 (row).
+  inset: 0
+    # type: integer
+    # minimum: 0
+    # description: Optional. Inset for the header. Defaults to 0 (no inset).
+  alignment: left
+    # type: string
+    # description: Optional. Text alignment semantics. Defaults to left alignment.
+  border_pattern: no border
+    # type: string
+    # description: Optional. Border pattern for the header. Defaults to no border.
+  border_role: default
+    # type: string
+    # description: Optional. Border role for the header. Defaults to the default border role for colour and styling.
+  colour_role: primary-surface
+    # type: string
+    # description: Optional. Colour role for the header text. Defaults to the primary space colour role.
+  colour_scheme: default
+    # type: string
+    # description: Optional. Colour scheme for the header background. Defaults to the default colour scheme.
+  header_content:
+    # type: array
+    items:
+     - Header text content goes here
+     - Multi-line accepted
+     - Use for diagnostics, information pane, decorative bordered spacer, etc.
+    #  type: string
+    #  description: Optional. Custom content for the header. Defaults to an empty string.

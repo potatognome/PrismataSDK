@@ -1,0 +1,33 @@
+id: double-line
+udi: prismata.example-registry.border-pattern.double-line
+kind: border-pattern
+version: 0.5.0
+tenant: null
+source:
+  path: examples/registry/border-pattern.d/double-line.border-pattern.object.yaml
+  repo: PrismataCore
+  imported_at: '2026-10-14T00:00:00Z'
+metadata:
+  name: double-line.border-pattern
+  label: Prismata Double-Line Terminal Border Pattern (0.4.0)
+  description: Double-line terminal border pattern for Prismata UI.
+  schema_version: 1.0.0
+relations: {}
+validation:
+  status: valid
+  errors: []
+notes:
+- Migrated from Prismata examples/registry; wrapped in CMF `content`.
+content:
+  glyphs:
+    top: '='
+    bottom: '='
+    left: '||'
+    right: '||'
+    top_left: "\u2554"
+    top_right: "\u2557"
+    bottom_left: "\u255A"
+    bottom_right: "\u255D"
+  thickness: 2
+  padding: 1
+  border_role: default
