@@ -1,0 +1,10 @@
+﻿udi: prismata.example.ui_framework.two_pane
+kind: ui_framework
+version: 1.0.0
+
+content:
+  layout: two_pane
+  panes:
+    left: prismata.example.pane.lh_test
+    right: prismata.example.pane.rh_test
+  menu: prismata.example.menu.test_menu

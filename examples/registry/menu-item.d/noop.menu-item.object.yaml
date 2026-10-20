@@ -1,0 +1,49 @@
+id: noop
+udi: prismata.example-registry.menu-item.noop
+kind: menu-item
+version: 0.5.0
+tenant: null
+
+source:
+  path: examples/registry/menu-item.d/noop.menu-item.object.yaml
+  repo: PrismataCore
+  imported_at: '2026-10-14T00:00:00Z'
+
+metadata:
+  name: Prismata Noop Menu Item (0.5.0)
+  description: Everyone can breathe easy.  This menu item does nothing.
+  schema_version: 1.0.0
+
+relations: {}
+
+validation:
+  status: valid
+  errors: []
+
+notes:
+- Migrated from Prismata examples/registry; role mappings moved into `content.roles`.
+
+content:
+  semantic_role: action
+  capability: prismata.meta.capability.noop
+  inject_into_pane: []
+  colour_role: prismata.example-registry.colour-role.accent-surface
+  colour_scheme: prismata.example-registry.colour-scheme.default
+  border_pattern: prismata.example-registry.border-pattern.single-line
+  border_role: prismata.example-registry.border-role.default
+  headers:
+    header_1:
+      text: Everyone can breathe easy.  This menu item does nothing.
+      colour_role: prismata.example-registry.colour-role.primary-surface
+  footers:
+    footer_1:
+      text: I am a footer.  Inset is 2 spaces in from the left and configurable.
+      inset: 2
+      colour_role: prismata.example-registry.colour-role.primary-surface
+  tooltip:
+    text: Literally Nothing
+    colour_role: prismata.example-registry.colour-role.accent-surface
+  #   visibility_mode: conditional
+  #   visibility_conditions: prismata.example-registry.visibility-condition.noop-tooltip
+  visibility_mode: static
+  enable_mode: enabled

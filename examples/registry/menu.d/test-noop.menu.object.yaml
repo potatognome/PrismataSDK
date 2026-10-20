@@ -1,0 +1,35 @@
+id: test-noop
+udi: prismata.example-registry.menu.test-noop
+kind: menu
+description: Example no-op menu used for testing purposes
+  and per-item styling.
+version: 0.5.0
+tenant: null
+
+source:
+  path: examples/registry/menu-item.d/default.menu-item.object.yaml
+  repo: PrismataCore
+  imported_at: '2026-10-14T00:00:00Z'
+
+metadata:
+  name: Test No-op Menu (0.5.0)
+  description: Example no-op menu used for testing purposes.
+  schema_version: 1.0.0
+
+relations: {}
+
+validation:
+  status: valid
+  errors: []
+
+notes:
+- Migrated from Prismata examples/registry; role mappings moved into `content.roles`.
+
+content:
+  title: Test No-op Menu 0.5.0
+  order:
+  - prismata.example-registry.header.example
+  - prismata.example-registry.menu-item.test-noop
+  - prismata.example-registry.header.example
+  - prismata.example-registry.menu-item.test-noop
+  - prismata.example-registry.header.example

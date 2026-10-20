@@ -25,14 +25,16 @@ This checklist tracks the execution status of the PrismataSDK migration against 
 - [x] Define and implement explicit UI gate acceptance criteria for framework loading, pane location resolution, and menu routing before colour work.
 - [x] Expand automated tests for loader correctness, rule validation, rendering, and framework routing.
 - [x] Add multi-coloured pane rendering behavior and role-based colour resolution.
+- [x] Add border-pattern resolution and chromascheme application flow in the pane runtime.
+- [x] Populate `examples/registry` with initial exemplar objects (panes, menus, colour-schemes, colour-roles, chromaschemes, headers).
+- [x] Align example object references to use /PrismataSDK/examples/registry as the migration reference set.
+- [x] Add tests to consume `examples/registry` objects and validate CMF -> PSO conversion.
 
 ## Incomplete
 
-- [ ] Add border-pattern resolution and chromascheme application flow.
 - [ ] Add preview engine integration for pane rendering, borders, and chroma composition.
 - [ ] Add tenant override loading and resolution for panes, menus, borders, chroma, and frameworks.
 - [ ] Add CLI commands for validate, build, preview, list, and inspect using CMF + PSO.
-- [ ] Align example object references to use /PrismataCore/examples/registry as the migration reference set.
 - [ ] Add examples for panes, menus, chroma, borders, and UI frameworks that match the migrated architecture.
 - [ ] Add app migration tasks for Vile, Vise, and Universe integration.
 
@@ -41,6 +43,6 @@ This checklist tracks the execution status of the PrismataSDK migration against 
 - Source of truth: `.github/PrismataSDK-migration-plan.md`
 - Execution tracker: this checklist should be updated as each migration phase is completed.
 - Canonical schema source: `/PrismataCore/canonical`
-- Example reference source: `/PrismataCore/examples/registry`
+- Example reference source: `/PrismataSDK/examples/registry`
 - UI-first gate: framework loader + pane resolution + menu routing must remain complete and validated before chroma/border/ANSI work proceeds.
 - Breaking changes remain acceptable and expected until migration is complete.

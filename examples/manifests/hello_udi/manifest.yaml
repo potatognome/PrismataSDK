@@ -1,0 +1,7 @@
+﻿udi: prismata.example.module.hello_udi
+kind: module
+version: 1.0.0
+
+capabilities:
+  - udi: prismata.example.capability.hello_udi
+    description: "Say hello to all related UDIs"

@@ -3,21 +3,26 @@ udi: prismata.example-registry.header.example
 kind: header
 version: 0.5.0
 tenant: null
+
 source:
   path: examples/registry/header.d/example.header.object.yaml
   repo: PrismataCore
   imported_at: '2026-10-14T00:00:00Z'
+
 metadata:
-  name: example.header
-  label: Prismata Example Header (0.5.0)
+  name: Prismata Example Header (0.5.0)
   description: Example header produced for Prismata example registry.
   schema_version: 1.0.0
+
 relations: {}
+
 validation:
   status: valid
   errors: []
+
 notes:
  - Prismata Example Header with title Prismata Example Header (0.5.0)
+
 content:
   title: Example Header
     # type: string

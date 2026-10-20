@@ -1,0 +1,6 @@
+﻿udi: prismata.example.pane.rh_test
+kind: pane
+version: 1.0.0
+
+content:
+  title: "Right Test Pane"

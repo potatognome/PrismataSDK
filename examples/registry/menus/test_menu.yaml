@@ -1,0 +1,21 @@
+﻿udi: prismata.example.menu.test_menu
+kind: menu
+version: 1.0.0
+
+content:
+  items:
+    - key: "1"
+      name: "Test LH Pane"
+      action: execute
+      capability: prismata.example.capability.hello_udi
+      target_pane: prismata.example.pane.lh_test
+
+    - key: "2"
+      name: "Test RH Pane"
+      action: execute
+      capability: prismata.example.capability.hello_udi
+      target_pane: prismata.example.pane.rh_test
+
+    - key: "0"
+      name: "Quit"
+      action: exit

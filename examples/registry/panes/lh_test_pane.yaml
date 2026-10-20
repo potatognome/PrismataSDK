@@ -1,0 +1,6 @@
+﻿udi: prismata.example.pane.lh_test
+kind: pane
+version: 1.0.0
+
+content:
+  title: "Left Test Pane"

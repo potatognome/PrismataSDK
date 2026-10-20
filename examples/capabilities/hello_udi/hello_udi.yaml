@@ -1,0 +1,7 @@
+﻿udi: prismata.example.capability.hello_udi
+kind: capability
+version: 1.0.0
+
+content:
+  action: hello_udi
+  max_depth: 10
