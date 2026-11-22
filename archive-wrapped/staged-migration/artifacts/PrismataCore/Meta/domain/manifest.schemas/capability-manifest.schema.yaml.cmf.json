@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-manifest-schemas-capability-manifest-schema-yaml",
+  "udi": "prismata.meta-domain-manifest-schemas.wrapped-manifest.capability-manifest-schema-f1b66b9356",
+  "kind": "wrapped-manifest",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "capability-manifest.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "manifest",
+    "relative_path": "Meta/domain/manifest.schemas/capability-manifest.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/manifest.schemas/capability-manifest.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "38998d552b5c0a21eaaac476f06bcf7f57e1c66f77ed9945b0ecb70e8931e9af"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: capability-manifest\r\nschema_type: manifest\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.capability-manifest\r\n  name: capability-manifest.schema\r\n  description: Canonical schema for capability manifests.\r\n\r\nspec:\r\n  target_kind: capability-manifest\r\n  naming:\r\n    file_suffix: .capability.manifest.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: udi\r\n    path: udi\r\n    type: string\r\n    required: true\r\n\r\n  - name: id\r\n    path: id\r\n    type: string\r\n    required: true\r\n\r\n  - name: capabilities\r\n    path: capabilities\r\n    type: array\r\n    required: true\r\n    item:\r\n      type: object\r\n\r\nobject:\r\n  udi: \"\"\r\n  id: \"\"\r\n  capabilities: []\r\n\r\n",
+    "classification": {
+      "subtype": "manifest",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

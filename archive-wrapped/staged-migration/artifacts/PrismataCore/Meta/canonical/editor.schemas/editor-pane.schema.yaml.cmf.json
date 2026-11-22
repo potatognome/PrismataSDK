@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-editor-schemas-editor-pane-schema-yaml",
+  "udi": "prismata.meta-canonical-editor-schemas.wrapped-schema.editor-pane-schema-55c79ec18a",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "editor-pane.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/editor.schemas/editor-pane.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/editor.schemas/editor-pane.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "6f41e91f950c3f4fa8740d0d2c31b51f5cf3277265e8e0c1c992900e5ee4f025"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: editor-pane\r\nschema_type: editor\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.editor-pane\r\n  name: editor-pane.schema\r\n  location: /Prismata/Meta/editor.schemas/editor-pane.schema.yaml\r\n  description: Canonical schema defining an editor pane.\r\n\r\nspec:\r\n  target_kind: editor-pane\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: id\r\n    path: id\r\n    type: string\r\n    required: true\r\n\r\n  - name: role\r\n    path: role\r\n    type: string\r\n    required: true\r\n\r\n  - name: bindings\r\n    path: bindings\r\n    type: array\r\n    required: false\r\n\r\nobject:\r\n  id: \"\"\r\n  role: \"\"\r\n  bindings: []\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

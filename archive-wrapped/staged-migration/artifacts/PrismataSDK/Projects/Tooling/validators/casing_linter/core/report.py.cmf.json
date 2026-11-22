@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-validators-casing-linter-core-report-py",
+  "udi": "prismata.projects-tooling-validators-casing-linter-core.wrapped-codeblock.report-2bd11088c8",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "report.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/validators/casing_linter/core/report.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/validators/casing_linter/core/report.py",
+    "encoding": "utf-8",
+    "content_sha256": "d7cbe1d1bc5517925594ac775f24704f87aa6a751449a30e2ef737a2f3e1dcaa"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "def generate_report(issues):\n    lines = []\n    lines.append('Casing Audit Report')\n    lines.append('-------------------')\n    lines.append(f'Total issues: {len(issues)}')\n    lines.append('')\n\n    for path, key, casing in issues:\n        lines.append(f'{path}: {key} ? {casing}')\n\n    return '\\\\n'.join(lines)\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

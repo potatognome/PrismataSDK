@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-prismatalabs-examples-pcms-2026-level2-dual-pane-py",
+  "udi": "prismata.projects-applications-prismatalabs-examples.wrapped-codeblock.pcms-2026-level2-dual-pane-573c4c5318",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "pcms_2026_level2_dual_pane.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/PrismataLabs/examples/pcms_2026_level2_dual_pane.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/PrismataLabs/examples/pcms_2026_level2_dual_pane.py",
+    "encoding": "utf-8",
+    "content_sha256": "717000599ea3faaffc959cc7b6efaf834c73c2c60796acca916eed5ef8ec584f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff#!/usr/bin/env python3\r\nfrom __future__ import annotations\r\n\r\nimport sys\r\nfrom pathlib import Path\r\n\r\nimport yaml\r\n\r\n\r\ndef _locate_prismata_root() -> Path:\r\n    here = Path(__file__).resolve()\r\n    candidates = [here.parent, Path.cwd(), Path.home() / \".copilot\" / \"repos\" / \"Prismata\"]\r\n    candidates.extend(here.parents)\r\n    for candidate in candidates:\r\n        if (candidate / \"Projects\" / \"Tooling\" / \"primitives\" / \"python\").exists():\r\n            return candidate\r\n    raise RuntimeError(\r\n        \"Could not locate Prismata root. Set your working directory inside Prismata \"\r\n        \"or place this script where C:\\\\...\\\\Prismata\\\\Projects exists.\"\r\n    )\r\n\r\n\r\nROOT = _locate_prismata_root()\r\nif str(ROOT) not in sys.path:\r\n    sys.path.insert(0, str(ROOT))\r\n\r\nfrom Projects.Tooling.primitives.python import enable_windows_vt, render_panes_to_terminal_frame, terminal_space\r\n\r\n\r\ndef _canonical_role(role: str | None) -> str:\r\n    return role or \"default\"\r\n\r\n\r\ndef _canonical_border(border: str | None) -> str:\r\n    return border or \"default\"\r\n\r\n\r\ndef _load_yaml(path: Path) -> dict:\r\n    with path.open(\"r\", encoding=\"utf-8\") as handle:\r\n        return yaml.safe_load(handle) or {}\r\n\r\n\r\ndef _normalize_menu(menu: dict | None, pane_title: str) -> dict | None:\r\n    if not isinstance(menu, dict):\r\n        return None\r\n    data = dict(menu.get(\"menu\") if isinstance(menu.get(\"menu\"), dict) else menu)\r\n    data[\"title\"] = data.get(\"title\") or data.get(\"label\") or data.get(\"id\") or pane_title\r\n    data[\"label\"] = data.get(\"label\") or data.get(\"title\") or data.get(\"id\") or pane_title\r\n    data[\"colour_role\"] = _canonical_role(data.get(\"colour_role\"))\r\n    data[\"border_pattern\"] = _canonical_border(data.get(\"border_pattern\"))\r\n\r\n    items = data.get(\"items\")\r\n    if not isinstance(items, list):\r\n        raise ValueError(\"Menu object must define 'items' as a list.\")\r\n    normalized_items: list[dict] = []\r\n    for item in items:\r\n        if not isinstance(item, dict):\r\n            continue\r\n        item_data = dict(item)\r\n        item_data[\"label\"] = item_data.get(\"label\") or item_data.get(\"title\") or item_data.get(\"id\") or \"Item\"\r\n        item_data[\"colour_role\"] = _canonical_role(item_data.get(\"colour_role\"))\r\n        item_data[\"border_pattern\"] = _canonical_border(item_data.get(\"border_pattern\"))\r\n        normalized_items.append(item_data)\r\n    data[\"items\"] = normalized_items\r\n    return data\r\n\r\n\r\ndef _build_panes_from_framework(ui_framework_file: str) -> tuple[list[dict], str]:\r\n    framework_path = (\r\n        ROOT\r\n        / \"Projects\"\r\n        / \"Applications\"\r\n        / \"PrismataLabs\"\r\n        / \"examples\"\r\n        / \"objects\"\r\n        / \"ui_frameworks\"\r\n        / ui_framework_file\r\n    )\r\n    framework = _load_yaml(framework_path)\r\n    menus = framework.get(\"menus\") or []\r\n    menu_index = {\r\n        m.get(\"udi\"): m\r\n        for m in menus\r\n        if isinstance(m, dict) and isinstance(m.get(\"udi\"), str) and m.get(\"udi\")\r\n    }\r\n    pane_bindings = {\r\n        b.get(\"pane\"): b.get(\"menu\")\r\n        for b in (framework.get(\"pane_bindings\") or [])\r\n        if isinstance(b, dict) and b.get(\"pane\") and b.get(\"menu\")\r\n    }\r\n\r\n    panes: list[dict] = []\r\n    for pane in framework.get(\"panes\") or []:\r\n        if not isinstance(pane, dict):\r\n            continue\r\n        pane_data = dict(pane)\r\n        pane_data[\"title\"] = pane_data.get(\"title\") or pane_data.get(\"label\") or pane_data.get(\"id\") or \"Pane\"\r\n        pane_data[\"label\"] = pane_data.get(\"label\") or pane_data.get(\"title\") or pane_data.get(\"id\") or \"Pane\"\r\n        pane_data[\"colour_role\"] = _canonical_role(pane_data.get(\"colour_role\"))\r\n        pane_data[\"border_role\"] = _canonical_role(pane_data.get(\"border_role\"))\r\n        pane_data[\"content_role\"] = _canonical_role(pane_data.get(\"content_role\"))\r\n        pane_data[\"border_pattern\"] = _canonical_border(pane_data.get(\"border_pattern\"))\r\n\r\n        pane_udi = pane_data.get(\"udi\")\r\n        bound_menu_ref = pane_bindings.get(pane_udi) if isinstance(pane_udi, str) else None\r\n\r\n        selected_menu = menu_index.get(bound_menu_ref) if isinstance(bound_menu_ref, str) else None\r\n        if not isinstance(selected_menu, dict):\r\n            selected_menu = pane_data.get(\"menu\")\r\n            if isinstance(selected_menu, dict):\r\n                selected_menu = selected_menu\r\n            elif isinstance(selected_menu, str):\r\n                selected_menu = menu_index.get(selected_menu)\r\n            else:\r\n                selected_menu = None\r\n        normalized = _normalize_menu(selected_menu, pane_data[\"title\"])\r\n        if normalized:\r\n            pane_data[\"menu\"] = normalized\r\n\r\n        panes.append(pane_data)\r\n\r\n    return panes, framework.get(\"colour_scheme\", \"default\")\r\n\r\n\r\ndef main() -> None:\r\n    if hasattr(sys.stdout, \"reconfigure\"):\r\n        sys.stdout.reconfigure(encoding=\"utf-8\")\r\n    enable_windows_vt()\r\n\r\n    panes, colour_scheme = _build_panes_from_framework(\"dual-pane.ui-framework.yaml\")\r\n    lines = render_panes_to_terminal_frame(\r\n        panes,\r\n        meta_root=ROOT / \"Meta\",\r\n        colour_scheme=colour_scheme,\r\n        size=terminal_space((120, 38)),\r\n    )\r\n    for line in lines[1:] if lines and lines[0].startswith(\"\\x1b[2J\") else lines:\r\n        print(line)\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

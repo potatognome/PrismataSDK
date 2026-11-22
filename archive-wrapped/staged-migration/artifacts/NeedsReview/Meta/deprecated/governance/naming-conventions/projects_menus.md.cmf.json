@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-governance-naming-conventions-projects-menus-md",
+  "udi": "prismata.meta-deprecated-governance-naming-conventions.wrapped-document.projects-menus-115372a76a",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "projects_menus.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Meta/deprecated/governance/naming-conventions/projects_menus.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/governance/naming-conventions/projects_menus.md",
+    "encoding": "utf-8",
+    "content_sha256": "66360e8ceabd285bee80c60cc1ac68e1300ad3c3138cd080f274f11f41060ac3"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## Project Menu Configuration Files (YAML)\r\nEach project in the Prismata workspace which includes 'CLI_Menu' in PROJECT_INTERFACES contains a project.menus folder outlining the projects menu labels and metadata.\r\n\r\nThe menus folder will be placed in each respective projects root folder /project.menus\r\n\r\nIndividual menu files within the project.menus folder must start with the filename prefix \"menu_\" and match the id field of the menu itself.",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

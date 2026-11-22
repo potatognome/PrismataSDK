@@ -1,0 +1,36 @@
+{
+  "id": "meta-system-runtime-schemas-runtime-state-schema-yaml",
+  "udi": "prismata.meta-system-runtime-schemas.wrapped-schema.runtime-state-schema-ed0d67187b",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "runtime-state.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/system/runtime.schemas/runtime-state.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/system/runtime.schemas/runtime-state.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "9e42c69a8bf5c738532a077a7c4be8d5b17537f5be7065a419abe9f53adfbe5e"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: runtime-state\r\nschema_type: runtime\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.runtime-state\r\n  name: runtime-state.schema\r\n  location: /Prismata/Meta/runtime.schemas/runtime-state.schema.yaml\r\n  description: Canonical schema defining mutable runtime UI state.\r\n\r\nspec:\r\n  target_kind: runtime-state\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: panes\r\n    path: panes\r\n    type: object\r\n    required: false\r\n\r\n  - name: menus\r\n    path: menus\r\n    type: object\r\n    required: false\r\n\r\n  - name: context\r\n    path: context\r\n    type: object\r\n    required: false\r\n\r\nobject:\r\n  panes: {}\r\n  menus: {}\r\n  context: {}\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

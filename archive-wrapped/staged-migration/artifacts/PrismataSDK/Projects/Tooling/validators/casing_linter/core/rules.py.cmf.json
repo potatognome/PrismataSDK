@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-validators-casing-linter-core-rules-py",
+  "udi": "prismata.projects-tooling-validators-casing-linter-core.wrapped-codeblock.rules-9bed0d2332",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "rules.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/validators/casing_linter/core/rules.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/validators/casing_linter/core/rules.py",
+    "encoding": "utf-8",
+    "content_sha256": "5b506910092db5b3ea6fd1d6f98e6cccc10ad07d997959efdb38c2af4cb6eef2"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import re\n\nKEBAB = re.compile(r'^[a-z0-9]+(-[a-z0-9]+)*$')\nSNAKE = re.compile(r'^[a-z0-9]+(_[a-z0-9]+)*$')\nCAMEL = re.compile(r'^[A-Z][A-Za-z0-9]*$')\n\ndef is_kebab(s): return bool(KEBAB.match(s))\ndef is_snake(s): return bool(SNAKE.match(s))\ndef is_camel(s): return bool(CAMEL.match(s))\n\ndef classify_yaml_key(key):\n    if '-' in key:\n        return 'kebab' if is_kebab(key) else 'invalid-kebab'\n    if '_' in key:\n        return 'snake' if is_snake(key) else 'invalid-snake'\n    if key.lower() == key:\n        return 'flat'\n    return 'invalid'\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

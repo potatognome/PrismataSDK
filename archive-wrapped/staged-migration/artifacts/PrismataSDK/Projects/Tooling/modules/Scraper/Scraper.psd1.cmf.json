@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-modules-scraper-scraper-psd1",
+  "udi": "prismata.projects-tooling-modules-scraper.wrapped-artifact.scraper-1130d93eb4",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "Scraper.psd1",
+    "source_file_type": "psd1",
+    "wrapped_subtype": "artifact",
+    "relative_path": "Projects/Tooling/modules/Scraper/Scraper.psd1",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/modules/Scraper/Scraper.psd1",
+    "encoding": "utf-8",
+    "content_sha256": "12be7e834ee455244d73f49fc72437d57babac93ef0aa12a2d9a2e140922df5f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "@{\r\n    # ---------------------------------------------------------------------\r\n    # Identity\r\n    # ---------------------------------------------------------------------\r\n    RootModule        = 'Scraper.psm1'\r\n    ModuleVersion     = '1.0.0'\r\n    GUID              = 'b7e1c1d5-4f3e-4c9a-9e2f-1a2b3c4d5e6f'\r\n    Author            = 'Daniel'\r\n    CompanyName       = 'Prismata'\r\n    Copyright         = '(c) 2026 Prismata. All rights reserved.'\r\n\r\n    # ---------------------------------------------------------------------\r\n    # Description\r\n    # ---------------------------------------------------------------------\r\n    Description       = 'Prismata Scraper module providing multi-folder scraping, mode registry, YAML config loading, and output naming engine.'\r\n\r\n    # ---------------------------------------------------------------------\r\n    # PowerShell Compatibility\r\n    # ---------------------------------------------------------------------\r\n    PowerShellVersion = '5.1'\r\n    CompatiblePSEditions = @('Desktop', 'Core')\r\n\r\n    # ---------------------------------------------------------------------\r\n    # Module Dependencies\r\n    # ---------------------------------------------------------------------\r\n    RequiredModules   = @(\r\n        @{ ModuleName = 'powershell-yaml'; ModuleVersion = '0.4.2' }\r\n    )\r\n\r\n    # ---------------------------------------------------------------------\r\n    # Initialization Scripts\r\n    # These scripts DO execute at module import time.\r\n    # ---------------------------------------------------------------------\r\n    ScriptsToProcess  = @(\r\n        'onload.ps1'\r\n    )\r\n\r\n    # ---------------------------------------------------------------------\r\n    # Exported Members\r\n    # (You can restrict this later if you want)\r\n    # ---------------------------------------------------------------------\r\n    FunctionsToExport = @(\r\n        'Invoke-Scraper',\r\n        'Invoke-ScraperFolder',\r\n        'Start-Scrape',\r\n        'Get-ScraperHelp',\r\n        'Initialize-ScraperModule',\r\n        'Test-ScraperModule',\r\n        'Get-Yaml',\r\n        'Get-ProjectsIndex',\r\n        'Resolve-ProjectPaths',\r\n        'Get-ModeRegistry',\r\n        'Resolve-Mode',\r\n        'Merge-ScraperSettings',\r\n        'New-ScraperOutputName',\r\n        'Get-WorkspaceRoot'\r\n    )\r\n\r\n    AliasesToExport   = @()\r\n    CmdletsToExport   = @()\r\n    VariablesToExport = @('*')\r\n\r\n    # ---------------------------------------------------------------------\r\n    # Private Data (optional)\r\n    # ---------------------------------------------------------------------\r\n    PrivateData = @{\r\n        PSData = @{\r\n            Tags = @('Prismata', 'Scraper', 'Tooling', 'YAML', 'Automation')\r\n            ProjectUri = 'https://example.com/prismata'\r\n            LicenseUri = 'https://example.com/prismata/license'\r\n            IconUri    = 'https://example.com/prismata/icon'\r\n        }\r\n    }\r\n}\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

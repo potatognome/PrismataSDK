@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-udi-uditool-egg-info-entry-points-txt",
+  "udi": "prismata.projects-tooling-udi-uditool-egg-info.wrapped-document.entry-points-033abf21fe",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "entry_points.txt",
+    "source_file_type": "txt",
+    "wrapped_subtype": "document",
+    "relative_path": "Projects/Tooling/udi/uditool.egg-info/entry_points.txt",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/udi/uditool.egg-info/entry_points.txt",
+    "encoding": "utf-8",
+    "content_sha256": "fae02ed4c6686cd96f49827ca620d365706ffcb5928347695233c3163fa3288e"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "[console_scripts]\nuditool = uditool.cli:main\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

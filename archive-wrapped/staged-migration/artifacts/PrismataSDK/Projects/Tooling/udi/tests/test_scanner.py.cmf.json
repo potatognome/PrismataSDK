@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-udi-tests-test-scanner-py",
+  "udi": "prismata.projects-tooling-udi-tests.wrapped-codeblock.test-scanner-b95449e54f",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_scanner.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/udi/tests/test_scanner.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/udi/tests/test_scanner.py",
+    "encoding": "utf-8",
+    "content_sha256": "c13068c4fa60ec3757b66dd704f3d0b7472c2dd7a94d77567958a2fcf273e5e8"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import os\r\nfrom uditool.scanner import scan_globs\r\n\r\n\r\ndef test_scan_sample(tmp_path):\r\n    # create a sample yaml without udi\r\n    p = tmp_path / \"Projects\" / \"demo\" / \"config\"\r\n    p.mkdir(parents=True)\r\n    f = p / \"sample.yaml\"\r\n    f.write_text(\"metadata:\\n  name: Sample Item\\n\")\r\n    out = tmp_path / \"out\"\r\n    out.mkdir()\r\n    reports = scan_globs([str(f)], str(out))\r\n    assert len(reports) == 1\r\n    assert reports[0][\"drift\"]\r\n    # suggested location should be metadata.udi\r\n    assert reports[0].get(\"suggested_udi_location\") == \"metadata.udi\"\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

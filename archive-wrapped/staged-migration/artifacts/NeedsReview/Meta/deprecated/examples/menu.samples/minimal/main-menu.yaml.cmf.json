@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-examples-menu-samples-minimal-main-menu-yaml",
+  "udi": "prismata.meta-deprecated-examples-menu-samples-minimal.wrapped-object.main-menu-16358bdb47",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "main-menu.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/examples/menu.samples/minimal/main-menu.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/examples/menu.samples/minimal/main-menu.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "e5000ec409687ce5a9ea31d808caba193cd53b64897eb12c0a03fcc4f5d725b3"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeffmenus:\r\n  - id: menu.main\r\n    key: menu.main\r\n    udi: prismata.menu.main\r\n    name: Main Menu\r\n    title: Main Menu\r\n    label: Main Menu\r\n    position: Main\r\n    order: 1\r\n    type: main\r\n    icon: \"\ud83d\udeaa\"\r\n    colourScheme: main-menu\r\n    borderScheme: main-menu\r\n    description: Minimal Prismata entry point.\r\n    finalItemType: Quit\r\n    header:\r\n      udi: prismata.menu.main.header\r\n      text: Main Menu\r\n      style: header\r\n      colourScheme: header\r\n      borderScheme: main-menu\r\n      visibilityMode: Static\r\n    footer:\r\n      udi: prismata.menu.main.footer\r\n      text: Q: Quit\r\n      style: footer\r\n      colourScheme: footer\r\n      borderScheme: main-menu\r\n      visibilityMode: Static\r\n    items:\r\n      - udi: prismata.menu.main.start\r\n        key: main.start\r\n        name: Start\r\n        label: Start\r\n        type: action\r\n        order: 1\r\n        selectionMethod: number\r\n        action: execute\r\n        ui_framework: menu\r\n        capability: prismata.app.start\r\n        executeTarget: start_prismata\r\n        icon: \"\u25b6\"\r\n        colourScheme: default\r\n        description: Start Prismata.\r\n\r\n      - udi: prismata.menu.main.settings\r\n        key: main.settings\r\n        name: Settings\r\n        label: Settings\r\n        type: navigate\r\n        order: 2\r\n        selectionMethod: number\r\n        action: navigate\r\n        ui_framework: menu\r\n        capability: prismata.menu.settings\r\n        navigateTarget: menu.settings\r\n        submenu_ref: menu.settings\r\n        icon: \"\u2699\ufe0f\"\r\n        description: Open the settings menu.\r\n\r\n      - udi: prismata.menu.main.quit\r\n        key: main.quit\r\n        name: Quit\r\n        label: Quit\r\n        type: action\r\n        order: 3\r\n        selectionMethod: number\r\n        action: exit\r\n        ui_framework: menu\r\n        capability: prismata.app.quit\r\n        executeTarget: exit_application\r\n        icon: \"\ud83d\udeaa\"\r\n        description: Exit Prismata.\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

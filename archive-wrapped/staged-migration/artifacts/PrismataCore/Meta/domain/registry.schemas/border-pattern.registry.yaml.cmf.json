@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-registry-schemas-border-pattern-registry-yaml",
+  "udi": "prismata.meta-domain-registry-schemas.wrapped-object.border-pattern-registry-82f00671ae",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "border-pattern.registry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/domain/registry.schemas/border-pattern.registry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/registry.schemas/border-pattern.registry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "2ccf44b86ae940c720455449dd37c6ac84ae59535d68d39134b957d73583cdb4"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: registry\r\nschema_type: registry\r\n\r\nmetadata:\r\n  udi: prismata.meta.registry.border-pattern\r\n  name: border-pattern.registry\r\n  description: Registry of canonical border patterns.\r\n\r\nspec:\r\n  target_kind: border-pattern\r\n  naming:\r\n    file_suffix: .registry.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: border-patterns\r\n    path: border-patterns\r\n    type: array\r\n    required: true\r\n\r\nobject:\r\n  border-patterns: []\r\n\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

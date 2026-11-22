@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-project-menus-settings-menu-yaml",
+  "udi": "prismata.projects-applications-universe-config-project-menus.wrapped-object.settings-menu-e6209867d7",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "settings-menu.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/Universe/config/project-menus/settings-menu.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/project-menus/settings-menu.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "7c2de8fa69a45754bd22b9e64941f3ec3650f67e79fa13a151f42687fa115ea9"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: settings-menu.yaml\r\n## Type: project menu\r\n## Purpose: Top-level Settings menu that exposes submenus for path\r\n## configuration, naming, export options, registry, and feature toggles.\r\n\r\nmetadata:\r\n  udi: prismata.universe.menu.settings\r\n  name: \"Settings Menu\"\r\n  version: \"0.1.0\"\r\n  kind: menu\r\n  description: \"Top-level settings menu for paths, naming, export, and registry.\"\r\n\r\nheader:\r\n  type: \"settings_features\"\r\n\r\nitems:\r\n  - key: \"1\"\r\n    udi: \"prismata.universe.menu.settings.select-universe\"\r\n    label: \"Select Active Universe Folder Path\"\r\n    description: \"Set the active tenant-universe workspace root. Triggers bootstrap on empty folders.\"\r\n    capability: \"prismata.universe.capability.app-settings-paths\"\r\n    args:\r\n      key_value: \"workspace_root\"\r\n      pick_mode: \"folder\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"2\"\r\n    udi: \"prismata.universe.menu.settings.default-folder-paths\"\r\n    label: \"Default Folder Paths\"\r\n    capability: \"prismata.universe.capability.app-settings-paths\"\r\n    ui_framework: menu\r\n    submenu_ref: \"prismata.universe.menu.settings.paths\"\r\n\r\n  - key: \"3\"\r\n    udi: \"prismata.universe.menu.settings.ignore-file-types\"\r\n    label: \"Ignore File Types\"\r\n    capability: \"prismata.universe.capability.app-settings-ignore\"\r\n    ui_framework: menu\r\n    submenu_ref: \"prismata.universe.menu.settings.ignore\"\r\n\r\n  - key: \"4\"\r\n    udi: \"prismata.universe.menu.settings.auto-archive\"\r\n    label: \"Auto-Archive (toggle)\"\r\n    description: \"Automatically archive previous file versions before overwriting. Stored in settings.features.autoArchive.\"\r\n    capability: \"prismata.universe.capability.app-settings-auto-archive\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"5\"\r\n    udi: \"prismata.universe.menu.settings.auto-versioning\"\r\n    label: \"Auto-Versioning (toggle)\"\r\n    description: \"Automatically increment the version field when creating new versions. Stored in settings.features.autoVersioning.\"\r\n    capability: \"prismata.universe.capability.app-settings-auto-versioning\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"6\"\r\n    udi: \"prismata.universe.menu.settings.export\"\r\n    label: \"Export Settings\"\r\n    description: \"Configure default export type, allowed extensions, and version suffix behavior.\"\r\n    capability: \"prismata.universe.capability.app-settings-export\"\r\n    ui_framework: menu\r\n    submenu_ref: \"prismata.universe.menu.settings.export\"\r\n\r\n  - key: \"7\"\r\n    udi: \"prismata.universe.menu.settings.registry\"\r\n    label: \"Registry Configuration\"\r\n    description: \"Set registry path, semantic rules, and key synonym mappings.\"\r\n    capability: \"prismata.universe.capability.app-settings-registry\"\r\n    ui_framework: menu\r\n    submenu_ref: \"prismata.universe.menu.settings.registry\"\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

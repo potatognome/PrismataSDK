@@ -1,0 +1,855 @@
+[
+  {
+    "source_path": ".github/copilot-instructions.d/building_examples_policy.md",
+    "wrapped_path": ".github/copilot-instructions.d/building_examples_policy.md.cmf.json",
+    "kind": "wrapped-agent-instruction",
+    "owner": "sdk",
+    "disposition": "review",
+    "target_repo": "PrismataSDK",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": ".github/copilot-instructions.d/udi-compliance-policy.md",
+    "wrapped_path": ".github/copilot-instructions.d/udi-compliance-policy.md.cmf.json",
+    "kind": "wrapped-agent-instruction",
+    "owner": "sdk",
+    "disposition": "review",
+    "target_repo": "PrismataSDK",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": ".github/copilot-instructions.d/windowed_apps_compositor.md",
+    "wrapped_path": ".github/copilot-instructions.d/windowed_apps_compositor.md.cmf.json",
+    "kind": "wrapped-agent-instruction",
+    "owner": "sdk",
+    "disposition": "review",
+    "target_repo": "PrismataSDK",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": ".github/copilot-instructions.md",
+    "wrapped_path": ".github/copilot-instructions.md.cmf.json",
+    "kind": "wrapped-agent-instruction",
+    "owner": "sdk",
+    "disposition": "review",
+    "target_repo": "PrismataSDK",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.checklists/migration-dryrun.log",
+    "wrapped_path": ".workspace/.artifacts/.checklists/migration-dryrun.log.cmf.json",
+    "kind": "wrapped-checklist",
+    "owner": "workspace-runtime",
+    "disposition": "quarantine-runtime",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.checklists/migration-unresolved.list",
+    "wrapped_path": ".workspace/.artifacts/.checklists/migration-unresolved.list.cmf.json",
+    "kind": "wrapped-checklist",
+    "owner": "workspace-runtime",
+    "disposition": "quarantine-runtime",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.checklists/migration.log",
+    "wrapped_path": ".workspace/.artifacts/.checklists/migration.log.cmf.json",
+    "kind": "wrapped-checklist",
+    "owner": "workspace-runtime",
+    "disposition": "quarantine-runtime",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.checklists/smoke-test.list",
+    "wrapped_path": ".workspace/.artifacts/.checklists/smoke-test.list.cmf.json",
+    "kind": "wrapped-checklist",
+    "owner": "workspace-runtime",
+    "disposition": "quarantine-runtime",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.checklists/smoke-testi9kkgf8t.tmp",
+    "wrapped_path": ".workspace/.artifacts/.checklists/smoke-testi9kkgf8t.tmp.cmf.json",
+    "kind": "wrapped-checklist",
+    "owner": "workspace-runtime",
+    "disposition": "quarantine-runtime",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.checklists/token-candidates.log",
+    "wrapped_path": ".workspace/.artifacts/.checklists/token-candidates.log.cmf.json",
+    "kind": "wrapped-checklist",
+    "owner": "workspace-runtime",
+    "disposition": "quarantine-runtime",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.checklists/validation-fixes.list",
+    "wrapped_path": ".workspace/.artifacts/.checklists/validation-fixes.list.cmf.json",
+    "kind": "wrapped-checklist",
+    "owner": "workspace-runtime",
+    "disposition": "quarantine-runtime",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": "Historical/change-records/remediation-plan-2026-10-01.md",
+    "wrapped_path": "Historical/change-records/remediation-plan-2026-10-01.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/checklists/CHANGELOG-Prismata_Architecture_Plan_Checklist.md",
+    "wrapped_path": "Historical/plan-documents/checklists/CHANGELOG-Prismata_Architecture_Plan_Checklist.md.cmf.json",
+    "kind": "wrapped-checklist",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/checklists/Prismata_Architecture_Plan_Checklist.md",
+    "wrapped_path": "Historical/plan-documents/checklists/Prismata_Architecture_Plan_Checklist.md.cmf.json",
+    "kind": "wrapped-checklist",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/plan-overview/2026-07-30-plan-post-integration.md",
+    "wrapped_path": "Historical/plan-documents/plan-overview/2026-07-30-plan-post-integration.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/plan-overview/2026-08-14/index/version-history-index.md",
+    "wrapped_path": "Historical/plan-documents/plan-overview/2026-08-14/index/version-history-index.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/plan-overview/2026-08-14/stage-00-bootstrap/00-bootstrap-plan.md",
+    "wrapped_path": "Historical/plan-documents/plan-overview/2026-08-14/stage-00-bootstrap/00-bootstrap-plan.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/plan-overview/2026-08-14/stage-01-astalyzer/01-astalyzer-finalization.md",
+    "wrapped_path": "Historical/plan-documents/plan-overview/2026-08-14/stage-01-astalyzer/01-astalyzer-finalization.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/plan-overview/2026-08-14/stage-02-universe/02-universe-mvp-mvi.md",
+    "wrapped_path": "Historical/plan-documents/plan-overview/2026-08-14/stage-02-universe/02-universe-mvp-mvi.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/plan-overview/2026-08-14/stage-03-tooling/03-tooling-ingestion.md",
+    "wrapped_path": "Historical/plan-documents/plan-overview/2026-08-14/stage-03-tooling/03-tooling-ingestion.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/plan-overview/2026-08-14/stage-04-semantic/04-semantic-substrate.md",
+    "wrapped_path": "Historical/plan-documents/plan-overview/2026-08-14/stage-04-semantic/04-semantic-substrate.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/plan-overview/2026-08-14/stage-05-manifest/05-manifest-registry.md",
+    "wrapped_path": "Historical/plan-documents/plan-overview/2026-08-14/stage-05-manifest/05-manifest-registry.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation",
+      "manifest",
+      "registry"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/plan-overview/2026-08-14/stage-06-doclibrarian/06-doclibrarian-pipeline.md",
+    "wrapped_path": "Historical/plan-documents/plan-overview/2026-08-14/stage-06-doclibrarian/06-doclibrarian-pipeline.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/plan-overview/2026-08-14/timelines/prismata-timeline-v1.md",
+    "wrapped_path": "Historical/plan-documents/plan-overview/2026-08-14/timelines/prismata-timeline-v1.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/plan-overview/2026-08-14/timelines/tooling-timeline-v1.md",
+    "wrapped_path": "Historical/plan-documents/plan-overview/2026-08-14/timelines/tooling-timeline-v1.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/plan-overview/2026-08-14/timelines/universe-timeline-v1.md",
+    "wrapped_path": "Historical/plan-documents/plan-overview/2026-08-14/timelines/universe-timeline-v1.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/plan-overview/2026-08-18/Stage 00-Current Implementation Status.md",
+    "wrapped_path": "Historical/plan-documents/plan-overview/2026-08-18/Stage 00-Current Implementation Status.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/plan-overview/2026-08-18/Stage 01-Universe-Testing-Suite.md",
+    "wrapped_path": "Historical/plan-documents/plan-overview/2026-08-18/Stage 01-Universe-Testing-Suite.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/plan-overview/2026-08-18/Stage 02-VaultGuard-MVI-MVP-Checklist.md",
+    "wrapped_path": "Historical/plan-documents/plan-overview/2026-08-18/Stage 02-VaultGuard-MVI-MVP-Checklist.md.cmf.json",
+    "kind": "wrapped-checklist",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/plan-overview/CHANGELOG.md",
+    "wrapped_path": "Historical/plan-documents/plan-overview/CHANGELOG.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/plan-overview/PR_B_draft_PR_body.md",
+    "wrapped_path": "Historical/plan-documents/plan-overview/PR_B_draft_PR_body.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/plan-overview/Prismata_Multi_Tenant_Plan.md",
+    "wrapped_path": "Historical/plan-documents/plan-overview/Prismata_Multi_Tenant_Plan.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/project-management/CHANGELOG-UDI-ASTalyzer-Universe-Architecture-Plan.md",
+    "wrapped_path": "Historical/plan-documents/project-management/CHANGELOG-UDI-ASTalyzer-Universe-Architecture-Plan.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/project-management/CHANGELOG-Universe_Implementation_Plan.md",
+    "wrapped_path": "Historical/plan-documents/project-management/CHANGELOG-Universe_Implementation_Plan.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/project-management/CHANGELOG-Universe_Verbs_Checklist.md",
+    "wrapped_path": "Historical/plan-documents/project-management/CHANGELOG-Universe_Verbs_Checklist.md.cmf.json",
+    "kind": "wrapped-checklist",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/project-management/CHANGELOG-VaultGuard.md",
+    "wrapped_path": "Historical/plan-documents/project-management/CHANGELOG-VaultGuard.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/project-management/UDI-ASTalyzer-Universe-Architecture-Plan.md",
+    "wrapped_path": "Historical/plan-documents/project-management/UDI-ASTalyzer-Universe-Architecture-Plan.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/project-management/Universe_Implementation_Plan.md",
+    "wrapped_path": "Historical/plan-documents/project-management/Universe_Implementation_Plan.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/project-management/Universe_Verbs_Checklist.md",
+    "wrapped_path": "Historical/plan-documents/project-management/Universe_Verbs_Checklist.md.cmf.json",
+    "kind": "wrapped-checklist",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/project-management/VaultGuard_Governance.md",
+    "wrapped_path": "Historical/plan-documents/project-management/VaultGuard_Governance.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/project-management/VaultGuard_Onboarding.md",
+    "wrapped_path": "Historical/plan-documents/project-management/VaultGuard_Onboarding.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/ui-elements/2026-08-21-ui_framework_layer_introduction.md",
+    "wrapped_path": "Historical/plan-documents/ui-elements/2026-08-21-ui_framework_layer_introduction.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/ui-elements/2026-08-21-ui_framework_migration_guide.md",
+    "wrapped_path": "Historical/plan-documents/ui-elements/2026-08-21-ui_framework_migration_guide.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/ui-elements/2026-08-24-ui_stack_canonical_documentation.md",
+    "wrapped_path": "Historical/plan-documents/ui-elements/2026-08-24-ui_stack_canonical_documentation.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/ui-elements/2026-09-08-menu-consolidation-plan.prompt.md",
+    "wrapped_path": "Historical/plan-documents/ui-elements/2026-09-08-menu-consolidation-plan.prompt.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/ui-elements/2026-09-08-menu-item.schema-update.md",
+    "wrapped_path": "Historical/plan-documents/ui-elements/2026-09-08-menu-item.schema-update.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "schema",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Historical/plan-documents/ui-elements/2026-09-08-pcms-2026-updates.github-prompt.md",
+    "wrapped_path": "Historical/plan-documents/ui-elements/2026-09-08-pcms-2026-updates.github-prompt.md.cmf.json",
+    "kind": "wrapped-plan",
+    "owner": "historical",
+    "disposition": "preserve-historical",
+    "target_repo": "ArchiveOnly",
+    "tags": [
+      "planning",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/canonical/copilot-instructions.d/building_exemplar.md",
+    "wrapped_path": "Meta/deprecated/canonical/copilot-instructions.d/building_exemplar.md.cmf.json",
+    "kind": "wrapped-agent-instruction",
+    "owner": "review",
+    "disposition": "deprecate",
+    "target_repo": "NeedsReview",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/canonical/copilot-instructions.d/project_classification.md",
+    "wrapped_path": "Meta/deprecated/canonical/copilot-instructions.d/project_classification.md.cmf.json",
+    "kind": "wrapped-agent-instruction",
+    "owner": "review",
+    "disposition": "deprecate",
+    "target_repo": "NeedsReview",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/canonical/copilot-instructions.d/root_modes_workspace_project_paths.md",
+    "wrapped_path": "Meta/deprecated/canonical/copilot-instructions.d/root_modes_workspace_project_paths.md.cmf.json",
+    "kind": "wrapped-agent-instruction",
+    "owner": "review",
+    "disposition": "deprecate",
+    "target_repo": "NeedsReview",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/copilot-instructions.d/cli_menu_patterns.md",
+    "wrapped_path": "Meta/deprecated/governance/copilot-instructions.d/cli_menu_patterns.md.cmf.json",
+    "kind": "wrapped-agent-instruction",
+    "owner": "review",
+    "disposition": "deprecate",
+    "target_repo": "NeedsReview",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/copilot-instructions.d/colour_key_usage.md",
+    "wrapped_path": "Meta/deprecated/governance/copilot-instructions.d/colour_key_usage.md.cmf.json",
+    "kind": "wrapped-agent-instruction",
+    "owner": "review",
+    "disposition": "deprecate",
+    "target_repo": "NeedsReview",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/copilot-instructions.d/documentation_guidelines.md",
+    "wrapped_path": "Meta/deprecated/governance/copilot-instructions.d/documentation_guidelines.md.cmf.json",
+    "kind": "wrapped-agent-instruction",
+    "owner": "review",
+    "disposition": "deprecate",
+    "target_repo": "NeedsReview",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/copilot-instructions.d/logging_policy.md",
+    "wrapped_path": "Meta/deprecated/governance/copilot-instructions.d/logging_policy.md.cmf.json",
+    "kind": "wrapped-agent-instruction",
+    "owner": "review",
+    "disposition": "deprecate",
+    "target_repo": "NeedsReview",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/copilot-instructions.d/tuilkit_enabled_apps_guidelines.md",
+    "wrapped_path": "Meta/deprecated/governance/copilot-instructions.d/tuilkit_enabled_apps_guidelines.md.cmf.json",
+    "kind": "wrapped-agent-instruction",
+    "owner": "review",
+    "disposition": "deprecate",
+    "target_repo": "NeedsReview",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/copilot-instructions.d/tuilkit_imports.md",
+    "wrapped_path": "Meta/deprecated/governance/copilot-instructions.d/tuilkit_imports.md.cmf.json",
+    "kind": "wrapped-agent-instruction",
+    "owner": "review",
+    "disposition": "deprecate",
+    "target_repo": "NeedsReview",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/copilot-instructions.d/version_bumping.md",
+    "wrapped_path": "Meta/deprecated/governance/copilot-instructions.d/version_bumping.md.cmf.json",
+    "kind": "wrapped-agent-instruction",
+    "owner": "review",
+    "disposition": "deprecate",
+    "target_repo": "NeedsReview",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/naming-conventions/projects_index_file.md",
+    "wrapped_path": "Meta/deprecated/governance/naming-conventions/projects_index_file.md.cmf.json",
+    "kind": "wrapped-document",
+    "owner": "review",
+    "disposition": "deprecate",
+    "target_repo": "NeedsReview",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/naming-conventions/projects_manifest_file.md",
+    "wrapped_path": "Meta/deprecated/governance/naming-conventions/projects_manifest_file.md.cmf.json",
+    "kind": "wrapped-manifest",
+    "owner": "review",
+    "disposition": "deprecate",
+    "target_repo": "NeedsReview",
+    "tags": [
+      "instruction",
+      "manifest"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/naming-conventions/projects_menus.md",
+    "wrapped_path": "Meta/deprecated/governance/naming-conventions/projects_menus.md.cmf.json",
+    "kind": "wrapped-document",
+    "owner": "review",
+    "disposition": "deprecate",
+    "target_repo": "NeedsReview",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/naming-conventions/projects_primary_config_file.md",
+    "wrapped_path": "Meta/deprecated/governance/naming-conventions/projects_primary_config_file.md.cmf.json",
+    "kind": "wrapped-document",
+    "owner": "review",
+    "disposition": "deprecate",
+    "target_repo": "NeedsReview",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/naming-conventions/projects_schemas.md",
+    "wrapped_path": "Meta/deprecated/governance/naming-conventions/projects_schemas.md.cmf.json",
+    "kind": "wrapped-schema",
+    "owner": "review",
+    "disposition": "deprecate",
+    "target_repo": "NeedsReview",
+    "tags": [
+      "instruction",
+      "schema"
+    ]
+  },
+  {
+    "source_path": "Meta/domain/governance.schemas/audit.schema.yaml",
+    "wrapped_path": "Meta/domain/governance.schemas/audit.schema.yaml.cmf.json",
+    "kind": "wrapped-schema",
+    "owner": "core",
+    "disposition": "transform-core-candidate",
+    "target_repo": "PrismataCore",
+    "tags": [
+      "instruction",
+      "schema"
+    ]
+  },
+  {
+    "source_path": "Meta/domain/governance.schemas/entitlement.schema.yaml",
+    "wrapped_path": "Meta/domain/governance.schemas/entitlement.schema.yaml.cmf.json",
+    "kind": "wrapped-schema",
+    "owner": "core",
+    "disposition": "transform-core-candidate",
+    "target_repo": "PrismataCore",
+    "tags": [
+      "instruction",
+      "schema"
+    ]
+  },
+  {
+    "source_path": "Meta/domain/governance.schemas/governance-manifest.schema.yaml",
+    "wrapped_path": "Meta/domain/governance.schemas/governance-manifest.schema.yaml.cmf.json",
+    "kind": "wrapped-manifest",
+    "owner": "core",
+    "disposition": "transform-core-candidate",
+    "target_repo": "PrismataCore",
+    "tags": [
+      "instruction",
+      "schema",
+      "manifest"
+    ]
+  },
+  {
+    "source_path": "Meta/domain/governance.schemas/permission.schema.yaml",
+    "wrapped_path": "Meta/domain/governance.schemas/permission.schema.yaml.cmf.json",
+    "kind": "wrapped-schema",
+    "owner": "core",
+    "disposition": "transform-core-candidate",
+    "target_repo": "PrismataCore",
+    "tags": [
+      "instruction",
+      "schema"
+    ]
+  },
+  {
+    "source_path": "Meta/domain/governance.schemas/policy.schema.yaml",
+    "wrapped_path": "Meta/domain/governance.schemas/policy.schema.yaml.cmf.json",
+    "kind": "wrapped-schema",
+    "owner": "core",
+    "disposition": "transform-core-candidate",
+    "target_repo": "PrismataCore",
+    "tags": [
+      "instruction",
+      "schema"
+    ]
+  },
+  {
+    "source_path": "Meta/domain/governance.schemas/role.schema.yaml",
+    "wrapped_path": "Meta/domain/governance.schemas/role.schema.yaml.cmf.json",
+    "kind": "wrapped-schema",
+    "owner": "core",
+    "disposition": "transform-core-candidate",
+    "target_repo": "PrismataCore",
+    "tags": [
+      "instruction",
+      "schema"
+    ]
+  },
+  {
+    "source_path": "Projects/Applications/Universe/tests/ui.interface.migration.test.ts",
+    "wrapped_path": "Projects/Applications/Universe/tests/ui.interface.migration.test.ts.cmf.json",
+    "kind": "wrapped-codeblock",
+    "owner": "sdk",
+    "disposition": "transform-sdk-candidate",
+    "target_repo": "PrismataSDK",
+    "tags": [
+      "planning",
+      "code"
+    ]
+  },
+  {
+    "source_path": "Projects/Tooling/primitives/python/checklist.py",
+    "wrapped_path": "Projects/Tooling/primitives/python/checklist.py.cmf.json",
+    "kind": "wrapped-checklist",
+    "owner": "sdk",
+    "disposition": "transform-sdk-candidate",
+    "target_repo": "PrismataSDK",
+    "tags": [
+      "planning",
+      "code",
+      "documentation"
+    ]
+  }
+]

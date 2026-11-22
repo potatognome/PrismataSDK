@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-composition-schemas-menu-group-schema-yaml",
+  "udi": "prismata.meta-canonical-composition-schemas.wrapped-schema.menu-group-schema-b6be3cc51e",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "menu-group.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/composition.schemas/menu-group.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/composition.schemas/menu-group.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "d05e8ab60208d1c07adbc5871802512c1445ad80ba972b34628b27a374c40e65"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: menu-group\r\nschema_type: composition\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.menu-group\r\n  name: menu-group.schema\r\n  description: Composition schema defining grouped menu sections and nested menus.\r\n\r\nspec:\r\n  target_kind: menu-group\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: id\r\n    path: id\r\n    type: string\r\n    required: true\r\n\r\n  - name: label\r\n    path: label\r\n    type: string\r\n    required: true\r\n\r\n  - name: items\r\n    path: items\r\n    type: array\r\n    required: true\r\n\r\n  - name: groups\r\n    path: groups\r\n    type: array\r\n    required: false\r\n\r\nobject:\r\n  id: \"\"\r\n  label: \"\"\r\n  items: []\r\n  groups: []\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

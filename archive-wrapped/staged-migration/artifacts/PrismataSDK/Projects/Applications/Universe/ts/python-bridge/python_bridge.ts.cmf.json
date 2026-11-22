@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-ts-python-bridge-python-bridge-ts",
+  "udi": "prismata.projects-applications-universe-ts-python-bridge.wrapped-codeblock.python-bridge-e0526d0783",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "python_bridge.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/Universe/ts/python-bridge/python_bridge.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/ts/python-bridge/python_bridge.ts",
+    "encoding": "utf-8",
+    "content_sha256": "84704b65cd9aa667edb129898b26aa252bf217ceabdfcf8b8709dd974da82209"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "// Canonical Universe Python Bridge\r\n// Thin TypeScript boundary for Python-backed runtime operations.\r\n\r\nimport * as path from \"path\";\r\nimport * as fs from \"fs\";\r\nimport { spawnSync } from \"child_process\";\r\n\r\nfunction resolveBridgePath(): string {\r\n    return path.resolve(__dirname, \"../../python/python_bridge.py\");\r\n}\r\n\r\nfunction resolvePythonExecutable(): string {\r\n    const candidates = [\r\n        path.resolve(__dirname, \"../../../../../.venv/Scripts/python.exe\"),\r\n        path.resolve(__dirname, \"../../../../.venv/Scripts/python.exe\"),\r\n    ];\r\n\r\n    for (const candidate of candidates) {\r\n        if (fs.existsSync(candidate)) {\r\n            return candidate;\r\n        }\r\n    }\r\n\r\n    return \"python\";\r\n}\r\n\r\nexport async function pythonExecute(command: string, payload: any): Promise<any> {\r\n    const bridgePath = resolveBridgePath();\r\n    const pythonExe = resolvePythonExecutable();\r\n    const inputPayload = JSON.stringify(payload ?? {});\r\n\r\n    const runner = [\r\n        \"import importlib.util, json, sys\",\r\n        \"bridge_path = sys.argv[1]\",\r\n        \"cmd = sys.argv[2]\",\r\n        \"payload = json.loads(sys.argv[3])\",\r\n        \"spec = importlib.util.spec_from_file_location('universe_bridge', bridge_path)\",\r\n        \"if spec is None or spec.loader is None:\",\r\n        \"    raise RuntimeError(f'Unable to load bridge: {bridge_path}')\",\r\n        \"mod = importlib.util.module_from_spec(spec)\",\r\n        \"spec.loader.exec_module(mod)\",\r\n        \"result = mod.execute(cmd, payload)\",\r\n        \"print(json.dumps(result))\",\r\n    ].join(\"\\n\");\r\n\r\n    const proc = spawnSync(pythonExe, [\"-c\", runner, bridgePath, command, inputPayload], {\r\n        encoding: \"utf8\",\r\n    });\r\n\r\n    if (proc.error) {\r\n        throw proc.error;\r\n    }\r\n\r\n    if (proc.status !== 0) {\r\n        throw new Error((proc.stderr || \"python bridge command failed\").trim());\r\n    }\r\n\r\n    const stdout = String(proc.stdout ?? \"\").trim();\r\n    if (!stdout) {\r\n        return {};\r\n    }\r\n\r\n    return JSON.parse(stdout);\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

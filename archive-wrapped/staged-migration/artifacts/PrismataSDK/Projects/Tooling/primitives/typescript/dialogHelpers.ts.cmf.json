@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-primitives-typescript-dialoghelpers-ts",
+  "udi": "prismata.projects-tooling-primitives-typescript.wrapped-codeblock.dialoghelpers-0f8b73a33c",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "dialogHelpers.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/primitives/typescript/dialogHelpers.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/primitives/typescript/dialogHelpers.ts",
+    "encoding": "utf-8",
+    "content_sha256": "e3928611d8dee68278ebe35d4d5df495eea9e9dd4c79e8c28184976e444475a3"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import { execSync } from \"child_process\";\r\n\r\nexport type DialogKind = \"file\" | \"folder\";\r\n\r\nfunction runPowerShell(command: string): string | null {\r\n  try {\r\n    const output = execSync(`powershell -NoProfile -Command \"${command.replace(/\"/g, '\\\\\"')}\"`, {\r\n      encoding: \"utf8\",\r\n      stdio: [\"ignore\", \"pipe\", \"pipe\"],\r\n    }).trim();\r\n    return output || null;\r\n  } catch {\r\n    return null;\r\n  }\r\n}\r\n\r\nexport function pickNativePath(kind: DialogKind): string | null {\r\n  if (process.platform !== \"win32\") {\r\n    return null;\r\n  }\r\n\r\n  if (kind === \"file\") {\r\n    const command = [\r\n      \"Add-Type -AssemblyName System.Windows.Forms;\",\r\n      \"$dlg = New-Object System.Windows.Forms.OpenFileDialog;\",\r\n      \"$dlg.CheckFileExists = $true;\",\r\n      \"if ($dlg.ShowDialog() -eq [System.Windows.Forms.DialogResult]::OK) { Write-Output $dlg.FileName }\",\r\n    ].join(\" \");\r\n    return runPowerShell(command);\r\n  }\r\n\r\n  const command = [\r\n    \"Add-Type -AssemblyName System.Windows.Forms;\",\r\n    \"$dlg = New-Object System.Windows.Forms.FolderBrowserDialog;\",\r\n    \"if ($dlg.ShowDialog() -eq [System.Windows.Forms.DialogResult]::OK) { Write-Output $dlg.SelectedPath }\",\r\n  ].join(\" \");\r\n\r\n  return runPowerShell(command);\r\n}\r\n\r\nexport function pickNativeSavePath(defaultFilename: string = \"universe-output.json\"): string | null {\r\n  if (process.platform !== \"win32\") {\r\n    return null;\r\n  }\r\n\r\n  const safeName = defaultFilename.replace(/'/g, \"''\");\r\n  const command = [\r\n    \"Add-Type -AssemblyName System.Windows.Forms;\",\r\n    \"$dlg = New-Object System.Windows.Forms.SaveFileDialog;\",\r\n    `$dlg.FileName = '${safeName}';`,\r\n    \"$dlg.Filter = 'JSON files (*.json)|*.json|All files (*.*)|*.*';\",\r\n    \"$dlg.DefaultExt = 'json';\",\r\n    \"if ($dlg.ShowDialog() -eq [System.Windows.Forms.DialogResult]::OK) { Write-Output $dlg.FileName }\",\r\n  ].join(\" \");\r\n\r\n  return runPowerShell(command);\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

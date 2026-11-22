@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-prismatalabs-examples-objects-headers-basic-menu-header-yaml",
+  "udi": "prismata.projects-applications-prismatalabs-examples-objects-headers.wrapped-object.basic-menu-header-1c71dafbde",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "basic-menu-header.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/PrismataLabs/examples/objects/headers/basic-menu-header.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/PrismataLabs/examples/objects/headers/basic-menu-header.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "46b16e07ac6087c49a2c54142278bcb60fd4bcaa501cb57fcf95f8c38cef3dc6"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "id: example-basic-menu-header\r\nudi: prismata.examples.menu-header.basic\r\nkind: menu-header\r\ntext: Example Control Menu\r\ncolour_role: prismata.examples.colour-role.menu-accent\r\ncolour_scheme: prismata.examples.colour-scheme.surface\r\nborder_pattern: prismata.examples.border.example-menu\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

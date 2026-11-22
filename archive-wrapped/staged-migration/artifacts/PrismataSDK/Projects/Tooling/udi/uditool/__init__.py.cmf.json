@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-udi-uditool-init-py",
+  "udi": "prismata.projects-tooling-udi-uditool.wrapped-codeblock.init-94614c85c3",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "__init__.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/udi/uditool/__init__.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/udi/uditool/__init__.py",
+    "encoding": "utf-8",
+    "content_sha256": "f7bd8342c7a2fb9de998c98aa07f3a07adb11cd24ff723b292d9a0ec031325e1"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\"\"\"uditool package\"\"\"\r\n\r\nfrom .udi_utils import parse_udi, build_udi, slugify, validate_udi, derive_udi_from_path_and_content\r\n\r\n__all__ = [\"parse_udi\", \"build_udi\", \"slugify\", \"validate_udi\", \"derive_udi_from_path_and_content\"]\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

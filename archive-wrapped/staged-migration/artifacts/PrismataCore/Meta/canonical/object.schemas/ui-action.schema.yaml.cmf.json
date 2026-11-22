@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-object-schemas-ui-action-schema-yaml",
+  "udi": "prismata.meta-canonical-object-schemas.wrapped-schema.ui-action-schema-909ed6267d",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "ui-action.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/object.schemas/ui-action.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/object.schemas/ui-action.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "453c30736ed4e5cb86b5be08aa9f2767b552215bf5aed8ddff9be14c09b8412d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: ui-action\r\nschema_type: object\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.ui-action\r\n  name: ui-action.schema\r\n  description: Canonical schema defining UI-level actions affecting multiple panes or frameworks.\r\n\r\nspec:\r\n  target_kind: ui-action\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: id\r\n    path: id\r\n    type: string\r\n    required: true\r\n\r\n  - name: targets\r\n    path: targets\r\n    type: array\r\n    required: false\r\n\r\n  - name: parameters\r\n    path: parameters\r\n    type: object\r\n    required: false\r\n\r\nobject:\r\n  id: \"\"\r\n  targets: []\r\n  parameters: {}\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

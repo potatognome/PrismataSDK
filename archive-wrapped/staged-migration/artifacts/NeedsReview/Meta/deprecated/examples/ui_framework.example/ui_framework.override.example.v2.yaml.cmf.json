@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-examples-ui-framework-example-ui-framework-override-example-v2-yaml",
+  "udi": "prismata.meta-deprecated-examples-ui-framework-example.wrapped-object.ui-framework-override-example-v2-2c01b62db0",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "ui_framework.override.example.v2.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/examples/ui_framework.example/ui_framework.override.example.v2.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/examples/ui_framework.example/ui_framework.override.example.v2.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "d149111d69402ba8dd9b77f51f0614cb89b939cad6b8548307a404baf3d583a0"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Example override file for project-level or tenant-level UI customization.\r\r\n# This file replaces or extends canonical pane coordinates and behavior.\r\r\n\r\r\nui_interface:\r\r\n  ui_framework: multi_pane\r\r\n\r\r\n  overrides:\r\r\n    project: \"project/ui/multi_pane.override.yaml\"\r\r\n    tenant: \"tenant/ui/multi_pane.override.yaml\"\r\r\n\r\r\n  panes:\r\r\n    - id: left\r\r\n      role: tree\r\r\n      coordinates:\r\r\n        x: 0\r\r\n        y: 0\r\r\n        width: 35\r\r\n        height: 100\r\r\n      carousel:\r\r\n        enabled: false\r\r\n\r\r\n    - id: right\r\r\n      role: preview\r\r\n      coordinates:\r\r\n        x: 35\r\r\n        y: 0\r\r\n        width: 65\r\r\n        height: 100\r\r\n      carousel:\r\r\n        enabled: true\r\r\n        navigation:\r\r\n          wrap: true\r\r\n          jump: true\r\r\n          refresh: true\r\r\n\r\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

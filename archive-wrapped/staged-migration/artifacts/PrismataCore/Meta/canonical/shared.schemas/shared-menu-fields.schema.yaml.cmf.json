@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-shared-schemas-shared-menu-fields-schema-yaml",
+  "udi": "prismata.meta-canonical-shared-schemas.wrapped-schema.shared-menu-fields-schema-64b3f179c7",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "shared-menu-fields.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/shared.schemas/shared-menu-fields.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/shared.schemas/shared-menu-fields.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "1648a51be4ae26ee945c04d4b94f980799e595251d0c1baeba2eec4bb5b90178"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: shared-menu-fields\r\nschema_type: shared\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.shared-menu-fields\r\n  name: shared-menu-fields.schema\r\n  description: Reusable menu field block.\r\n\r\nspec:\r\n  target_kind: shared-menu-fields\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: label\r\n    path: label\r\n    type: string\r\n    required: false\r\n\r\n  - name: accelerator\r\n    path: accelerator\r\n    type: string\r\n    required: false\r\n\r\n  - name: icon\r\n    path: icon\r\n    type: string\r\n    required: false\r\n\r\nobject:\r\n  label: \"\"\r\n  accelerator: \"\"\r\n  icon: \"\"\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

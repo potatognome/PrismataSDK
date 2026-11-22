@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-engine-schemas-menu-renderer-schema-yaml",
+  "udi": "prismata.meta-canonical-engine-schemas.wrapped-schema.menu-renderer-schema-7548156c98",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "menu-renderer.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/engine.schemas/menu-renderer.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/engine.schemas/menu-renderer.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "25635aa1f1f012d7de72fb7b4cf48349e43be8d29c921a9b83b213b0410a5242"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: menu-renderer\r\nschema_type: engine\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.menu-renderer\r\n  name: menu-renderer.schema\r\n  location: /Prismata/Meta/engine.schemas/menu-renderer.schema.yaml\r\n  description: Renderer configuration for menu objects.\r\n\r\nspec:\r\n  target_kind: menu-renderer\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: rendererType\r\n    path: rendererType\r\n    type: string\r\n    required: true\r\n\r\n  - name: menu\r\n    path: menu\r\n    type: object\r\n    required: true\r\n    ref:\r\n      schema: prismata.meta.schema.menu\r\n\r\n  - name: layout\r\n    path: layout\r\n    type: object\r\n    required: false\r\n    ref:\r\n      schema: prismata.meta.schema.shared-layout\r\n\r\n  - name: styling\r\n    path: styling\r\n    type: object\r\n    required: false\r\n    ref:\r\n      schema: prismata.meta.schema.shared-styling\r\n\r\n  - name: geometry\r\n    path: geometry\r\n    type: object\r\n    required: false\r\n    ref:\r\n      schema: prismata.meta.schema.shared-geometry\r\n\r\n  - name: pipeline\r\n    path: pipeline\r\n    type: object\r\n    required: false\r\n    ref:\r\n      schema: prismata.meta.schema.renderer-pipeline\r\n\r\nobject:\r\n  rendererType: \"menu\"\r\n  menu:\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

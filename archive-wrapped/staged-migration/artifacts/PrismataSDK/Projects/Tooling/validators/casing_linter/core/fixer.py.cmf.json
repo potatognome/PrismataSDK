@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-validators-casing-linter-core-fixer-py",
+  "udi": "prismata.projects-tooling-validators-casing-linter-core.wrapped-codeblock.fixer-b90f7ac3e5",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "fixer.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/validators/casing_linter/core/fixer.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/validators/casing_linter/core/fixer.py",
+    "encoding": "utf-8",
+    "content_sha256": "268e9d8a793d61639902635a31b06cd001b4058b29027e92924cfb5e2848c94c"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import shutil\nfrom pathlib import Path\nimport yaml\n\nARCHIVE_ROOT = Path(\"Projects/Tooling/validators/bom_validator/archive\")\n\ndef bump_version(path: Path) -> Path:\n    stem = path.stem\n    if \".v\" in stem:\n        base, v = stem.rsplit(\".v\", 1)\n        new_stem = f\"{base}.v{int(v)+1}\"\n    else:\n        new_stem = f\"{stem}.v2\"\n    return path.with_name(new_stem + path.suffix)\n\ndef remove_bom(path: Path) -> Path:\n    ARCHIVE_ROOT.mkdir(parents=True, exist_ok=True)\n    shutil.copy(path, ARCHIVE_ROOT / path.name)\n\n    with open(path, \"rb\") as f:\n        raw = f.read()\n\n    # Strip BOM if present\n    if raw.startswith(b\"\\xEF\\xBB\\xBF\"):\n        raw = raw[3:]\n\n    new_path = bump_version(path)\n\n    # Write clean UTF-8 (no BOM)\n    with open(new_path, \"w\", encoding=\"utf-8\") as f:\n        f.write(raw.decode(\"utf-8\"))\n\n    return new_path\n\ndef fix_key(key):\n    if '-' in key:\n        return key.lower().replace('_', '-')\n    if '_' in key:\n        return key.lower().replace('-', '_')\n    return key.lower()\n\ndef fix_yaml_file(path):\n    data = yaml.safe_load(path.read_text())\n\n    def fix(obj):\n        if isinstance(obj, dict):\n            new = {}\n            for key, value in obj.items():\n                new_key = fix_key(key)\n                new[new_key] = fix(value)\n            return new\n        elif isinstance(obj, list):\n            return [fix(item) for item in obj]\n        return obj\n\n    fixed = fix(data)\n\n    ARCHIVE_ROOT.mkdir(parents=True, exist_ok=True)\n    shutil.copy(path, ARCHIVE_ROOT / path.name)\n\n    new_path = bump_version(path)\n    new_path.write_text(yaml.dump(fixed, sort_keys=False))\n\n    return new_path\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-astalyzer-src-astalyzer-model-ts",
+  "udi": "prismata.projects-tooling-astalyzer-src-astalyzer.wrapped-codeblock.model-5cb467dea7",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "model.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/ASTalyzer/src/astalyzer/model.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/ASTalyzer/src/astalyzer/model.ts",
+    "encoding": "utf-8",
+    "content_sha256": "6c94e51ed410567331e11f161e1d34e1a2a13bee0ba12a940fc719b30aa55072"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "// TICCSEO AST model \r\nexport interface PromptAST {\r\n  udi?: string;\r\n  task?: string;\r\n  inputs: string[];\r\n  context?: string;\r\n  constraints: string[];\r\n  style?: string;\r\n  examples: string[];\r\n  output_format?: string;\r\n}\r\n\r\nexport const createEmptyAST = (): PromptAST => ({\r\n  udi: undefined,\r\n  task: undefined,\r\n  inputs: [],\r\n  context: undefined,\r\n  constraints: [],\r\n  style: undefined,\r\n  examples: [],\r\n  output_format: undefined,\r\n});\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

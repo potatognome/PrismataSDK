@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-canonical-config-sections-d-log-files-json",
+  "udi": "prismata.meta-deprecated-canonical-config-sections-d.wrapped-object.log-files-c7de19a9b9",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "LOG_FILES.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/canonical/config_sections.d/LOG_FILES.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/canonical/config_sections.d/LOG_FILES.json",
+    "encoding": "utf-8",
+    "content_sha256": "7fd9c713d522a6eb3aa45bf70fad2d91f396ed0657a9881f2d12106fbc907d5d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\r\n    \"_META\"                            : {\r\n        \"SORT_ORDER\"                   : 60\r\n    },\r\n    \"LOG_FILES\"                        : {\r\n        \"MASTER\"                       : \"$PROJECT_NAME_MASTER.log\",\r\n        \"SESSION\"                      : \"$PROJECT_NAME_SESSION.log\",\r\n        \"RUNTIME\"                      : \"$PROJECT_NAME_RUNTIME.log\",\r\n        \"TRY\"                          : \"$PROJECT_NAME_TRY.log\",\r\n        \"INIT\"                         : \"$PROJECT_NAME_INIT.log\",\r\n        \"FS\"                           : \"$PROJECT_NAME_FS.log\",\r\n        \"CONFIG_READ\"                  : \"$PROJECT_NAME_CONFIG_READ.log\",\r\n        \"ERROR\"                        : \"$PROJECT_NAME_ERROR.log\"\r\n    },\r\n    \"REMOVE_LOG_FILES\"                 : []\r\n}\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

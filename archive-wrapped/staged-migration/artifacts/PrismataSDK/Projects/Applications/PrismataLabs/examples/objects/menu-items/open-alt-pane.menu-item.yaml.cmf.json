@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-prismatalabs-examples-objects-menu-items-open-alt-pane-menu-item-yaml",
+  "udi": "prismata.projects-applications-prismatalabs-examples-objects-menu-items.wrapped-object.open-alt-pane-menu-item-ca06b293e7",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "open-alt-pane.menu-item.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/PrismataLabs/examples/objects/menu-items/open-alt-pane.menu-item.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/PrismataLabs/examples/objects/menu-items/open-alt-pane.menu-item.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "820fd22c26dde78ab59e98d4d9aef2c7ade91c590a34b2d1ec11f37a503e388b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "id: example-open-alt-pane\r\nudi: prismata.examples.menu-item.open-alt-pane\r\nkind: menu-item\r\nlabel: Open alternate pane\r\ncapability: prismata.examples.capability.open-alt-pane\r\ncolour_role: prismata.examples.colour-role.menu-accent\r\ncolour_scheme: prismata.examples.colour-scheme.surface\r\nborder_pattern: prismata.examples.border.example-item\r\nheader:\r\n  id: example-alt-pane-header\r\n  text: Pane\r\n  colour_role: prismata.examples.colour-role.menu-accent\r\n  colour_scheme: prismata.examples.colour-scheme.surface\r\n  border_pattern: prismata.examples.border.example-item\r\nvisibility_mode: static\r\nenable_mode: enabled\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-validators-bom-validator-cli-py",
+  "udi": "prismata.projects-tooling-validators-bom-validator.wrapped-codeblock.cli-9c605555a2",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "cli.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/validators/bom_validator/cli.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/validators/bom_validator/cli.py",
+    "encoding": "utf-8",
+    "content_sha256": "cdcbf91798d4f3137f5fc2f33f477cf39537515aa1b261aedf93803610e26fe1"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "from pathlib import Path\nfrom core.scanner import scan_yaml_for_bom\nfrom core.fixer import remove_bom\nfrom core.report import generate_report\n\ndef run_cli():\n    import argparse\n    parser = argparse.ArgumentParser(description='Prismata BOM Validator')\n    parser.add_argument('--root', type=str, default='Meta', help='Root folder to scan')\n    parser.add_argument('--fix', action='store_true', help='Remove BOM and version bump')\n    parser.add_argument('--report', type=str, help='Write audit report')\n\n    args = parser.parse_args()\n\n    root = Path(args.root)\n    bom_files = scan_yaml_for_bom(root)\n\n    report = generate_report(bom_files)\n    print(report)\n\n    if args.report:\n        with open(args.report, 'w') as f:\n            f.write(report)\n\n    if args.fix:\n        fixed = []\n        for f in bom_files:\n            new_path = remove_bom(f)\n            fixed.append(new_path)\n\n        print('\\nFixed files:')\n        for f in fixed:\n            print('  ', f)\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

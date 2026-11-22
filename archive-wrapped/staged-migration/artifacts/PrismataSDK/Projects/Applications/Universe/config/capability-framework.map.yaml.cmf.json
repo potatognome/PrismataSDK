@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-capability-framework-map-yaml",
+  "udi": "prismata.projects-applications-universe-config.wrapped-object.capability-framework-map-3c9b356cc2",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "capability-framework.map.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/Universe/config/capability-framework.map.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/capability-framework.map.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "d74ba9d78b38f35e374e222b343bfe14373896d7b4eef8d0c27adffbdf75541d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# capability -> ui_framework mapping used for menu migration\r\n# format: capability: ui_framework\r\n\r\nprismata.universe.capability.app-bootstrap-run: basic\r\nprismata.universe.capability.app-quit: basic\r\nprismata.universe.capability.fs-search-results: menu\r\nprismata.universe.capability.fs-select-multi: menu\r\nprismata.universe.capability.fs-edit-multi: menu\r\nprismata.universe.capability.fs-verify-multi: menu\r\nprismata.universe.capability.app-settings-paths: menu\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

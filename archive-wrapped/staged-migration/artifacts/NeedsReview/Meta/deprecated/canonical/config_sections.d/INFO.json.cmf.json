@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-canonical-config-sections-d-info-json",
+  "udi": "prismata.meta-deprecated-canonical-config-sections-d.wrapped-object.info-02fba91be7",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "INFO.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/canonical/config_sections.d/INFO.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/canonical/config_sections.d/INFO.json",
+    "encoding": "utf-8",
+    "content_sha256": "fbf4563cae08e668733961c3594e0d240a14e51efbfb4be8218ac2416a676837"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\r\n    \"_META\"                            : {\r\n        \"SORT_ORDER\"                   : 0\r\n    },\r\n    \"INFO\"                             : {\r\n        \"PROJECT_NAME\"                 : \"$PROJECT_NAME\",\r\n        \"PROJECT_TYPE\"                 : \"$PROJECT_TYPE\",\r\n        \"PROJECT_ROLE\"                 : \"$PROJECT_ROLE\",\r\n        \"PROJECT_INTERFACES\"           : [\"$PROJECT_INTERFACES\"],\r\n        \"PROJECT_FOLDER\"               : \"$PROJECT_FOLDER\",\r\n        \"PROJECT_DESCRIPTION\"          : \"$PROJECT_DESCRIPTION\",\r\n        \"AUTHOR\"                       : \"$PROJECT_AUTHOR\",\r\n        \"VERSION\"                      : \"$PROJECT_VERSION\",\r\n        \"LICENSE\"                      : \"$PROJECT_LICENSE\",\r\n        \"BUILD_TYPE\"                   : \"$PROJECT_BUILD_TYPE\",\r\n        \"MAIN_ENTRY_POINT\"             : \"$PROJECT_MAIN_ENTRY\",\r\n        \"COLOUR_FSTR\"                  : \"!project\"\r\n    },\r\n    \"REMOVE_INFO\"                      : []\r\n    \r\n}\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

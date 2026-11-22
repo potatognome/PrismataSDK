@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-primitives-python-checklist-py",
+  "udi": "prismata.projects-tooling-primitives-python.wrapped-checklist.checklist-b0f6fdd017",
+  "kind": "wrapped-checklist",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "checklist.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "checklist",
+    "relative_path": "Projects/Tooling/primitives/python/checklist.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/primitives/python/checklist.py",
+    "encoding": "utf-8",
+    "content_sha256": "1d127b9169a467128e729f03db485f32dfb3fb62c95407806d9c2b1064b08920"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "from __future__ import annotations\r\n\r\nfrom pathlib import Path\r\nfrom typing import Iterable, List\r\nimport tempfile\r\n\r\nfrom .path_helper import find_prismata_root\r\n\r\n\r\ndef _checklists_dir() -> Path:\r\n    root = find_prismata_root()\r\n    return root / \".workspace\" / \".artifacts\" / \".checklists\"\r\n\r\n\r\ndef _ensure_dir(path: Path) -> None:\r\n    path.mkdir(parents=True, exist_ok=True)\r\n\r\n\r\ndef _normalize_entry(e: str) -> str:\r\n    return str(e).strip()\r\n\r\n\r\ndef add_entries(checklist_name: str, entries: Iterable[str]) -> None:\r\n    \"\"\"Append entries to a checklist file, dedupe and sort the file.\r\n\r\n    checklist_name: logical name, stored as <name>.txt\r\n    entries: iterable of text lines; they will be normalized.\r\n    \"\"\"\r\n    d = _checklists_dir()\r\n    _ensure_dir(d)\r\n    path = d / f\"{checklist_name}.list\"\r\n\r\n    # Migrate legacy .txt checklist if present\r\n    legacy = d / f\"{checklist_name}.txt\"\r\n    if legacy.exists() and not path.exists():\r\n        try:\r\n            legacy.replace(path)\r\n        except Exception:\r\n            try:\r\n                legacy.rename(path)\r\n            except Exception:\r\n                pass\r\n\r\n    existing: List[str] = []\r\n    if path.exists():\r\n        try:\r\n            existing = [line.rstrip('\\n') for line in path.read_text(encoding='utf-8').splitlines() if line.strip()]\r\n        except Exception:\r\n            existing = []\r\n\r\n    new = [ _normalize_entry(e) for e in entries if _normalize_entry(e) ]\r\n    combined = list(dict.fromkeys(existing + new))  # preserve order then dedupe\r\n\r\n    # Sort by file path (lexicographic)\r\n    combined_sorted = sorted(set(combined))\r\n\r\n    # Atomic write\r\n    fd, tmp = tempfile.mkstemp(prefix=checklist_name, suffix='.tmp', dir=str(d))\r\n    try:\r\n        # close the low-level fd before opening by name\r\n        try:\r\n            import os\r\n\r\n            os.close(fd)\r\n        except Exception:\r\n            pass\r\n        with open(tmp, 'w', encoding='utf-8') as f:\r\n            for line in combined_sorted:\r\n                f.write(f\"{line}\\n\")\r\n        Path(tmp).replace(path)\r\n    finally:\r\n        try:\r\n            Path(tmp).unlink(missing_ok=True)\r\n        except Exception:\r\n            pass\r\n\r\n\r\ndef get_entries(checklist_name: str) -> List[str]:\r\n    d = _checklists_dir()\r\n    path = d / f\"{checklist_name}.list\"\r\n\r\n    if not path.exists():\r\n        return []\r\n    try:\r\n        return [line.rstrip('\\n') for line in path.read_text(encoding='utf-8').splitlines() if line.strip()]\r\n    except Exception:\r\n        return []\r\n",
+    "classification": {
+      "subtype": "checklist",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

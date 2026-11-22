@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-colour-colour-preview-multipane-schema-yaml",
+  "udi": "prismata.meta-canonical-colour.wrapped-schema.colour-preview-multipane-schema-ae68151d37",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "colour-preview-multipane.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/colour/colour-preview-multipane.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/colour/colour-preview-multipane.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "072db386e5513aaeef9d8ca209d8003b07957c30eb1b101ae1f843fa78d98a88"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "$schema: \"http://json-schema.org/draft-07/schema#\"\r\ntitle: Multi-pane colour preview\r\n\r\ntype: object\r\nproperties:\r\n  panes:\r\n    type: array\r\n    items:\r\n      type: object\r\n      required:\r\n        - role\r\n        - layers\r\n        - fractalPosition\r\n        - proportion\r\n      properties:\r\n        role:\r\n          type: string\r\n        layers:\r\n          type: object\r\n          additionalProperties:\r\n            type: object\r\n            properties:\r\n              colourRef:\r\n                type: string\r\n            required:\r\n              - colourRef\r\n            additionalProperties: true\r\n        fractalPosition:\r\n          type: string\r\n          enum:\r\n            - Q1\r\n            - Q2\r\n            - Q3\r\n            - Q4\r\n        proportion:\r\n          type: number\r\n          minimum: 0.0\r\n          maximum: 1.0\r\n      additionalProperties: true\r\nrequired:\r\n  - panes\r\nadditionalProperties: true\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

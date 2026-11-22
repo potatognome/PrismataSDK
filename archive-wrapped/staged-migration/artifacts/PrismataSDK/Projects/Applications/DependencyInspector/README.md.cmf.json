@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-dependencyinspector-readme-md",
+  "udi": "prismata.projects-applications-dependencyinspector.wrapped-document.readme-cb5a0a1a9c",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "README.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Projects/Applications/DependencyInspector/README.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/DependencyInspector/README.md",
+    "encoding": "utf-8",
+    "content_sha256": "81731e4cb8af1ed164280d49917eb6e2a42d353f23b38688805a11e7c2ddad98"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Prismata Dependency Inspector\r\n\r\nA standalone tool for:\r\n\r\n- schema-driven dependency extraction  \r\n- manifest dependency resolution  \r\n- fallback inference  \r\n- renderer simulation  \r\n- GUI visualization  \r\n\r\nRun CLI:\r\n\r\npython -m dependency_inspector --schema pane\r\npython -m dependency_inspector --all\r\n\r\nRun GUI:\r\n\r\npython -m dependency_inspector --gui",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

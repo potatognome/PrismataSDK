@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-examples-colourscheme-samples-generated-exemplar-scheme-yaml",
+  "udi": "prismata.meta-deprecated-examples-colourscheme-samples.wrapped-object.generated-exemplar-scheme-9d4129aac1",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "generated.exemplar.scheme.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/examples/colourscheme.samples/generated.exemplar.scheme.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/examples/colourscheme.samples/generated.exemplar.scheme.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "4163cb6f9abe5f93f86f28b4b1bcf6f56c6f833e4a455381ef0bb9dc617a5f6e"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeffcolourSet:\r\n  -\r\n    id: \"c0\"\r\n    origin: \"base\"\r\n    rgb:\r\n      r: 163\r\n      g: 138\r\n      b: 134\r\n    oklch:\r\n      l: 0.64\r\n      c: 0.0576\r\n      h: 9.444444\r\n    originMetadata:\r\n      hueOffset: 45.0\r\n  -\r\n    id: \"c1\"\r\n    origin: \"base\"\r\n    rgb:\r\n      r: 149\r\n      g: 170\r\n      b: 138\r\n    oklch:\r\n      l: 0.666667\r\n      c: 0.0608\r\n      h: 99.444444\r\n    originMetadata:\r\n      hueOffset: 135.0\r\n  -\r\n    id: \"c2\"\r\n    origin: \"base\"\r\n    rgb:\r\n      r: 141\r\n      g: 171\r\n      b: 177\r\n    oklch:\r\n      l: 0.693333\r\n      c: 0.064\r\n      h: 189.444444\r\n    originMetadata:\r\n      hueOffset: 225.0\r\n  -\r\n    id: \"c3\"\r\n    origin: \"base\"\r\n    rgb:\r\n      r: 170\r\n      g: 145\r\n      b: 184\r\n    oklch:\r\n      l: 0.72\r\n      c: 0.0672\r\n      h: 279.444444\r\n    originMetadata:\r\n      hueOffset: 315.0\r\n  -\r\n    id: \"c4\"\r\n    origin: \"derived\"\r\n    rgb:\r\n      r: 163\r\n      g: 133\r\n      b: 127\r\n    oklch:\r\n      l: 0.64\r\n      c: 0.0704\r\n      h: 9.444444\r\n    originMetadata:\r\n      hueOffset: 45.0\r\n  -\r\n    id: \"c5\"\r\n    origin: \"derived\"\r\n    rgb:\r\n      r: 144\r\n      g: 170\r\n      b: 131\r\n    oklch:\r\n      l: 0.666667\r\n      c: 0.0736\r\n      h: 99.444444\r\n    originMetadata:\r\n      hueOffset: 135.0\r\n  -\r\n    id: \"c6\"\r\n    origin: \"derived\"\r\n    rgb:\r\n      r: 134\r\n      g: 170\r\n      b: 177\r\n    oklch:\r\n      l: 0.693333\r\n      c: 0.0768\r\n      h: 189.444444\r\n    originMetadata:\r\n      hueOffset: 225.0\r\n  -\r\n    id: \"c7\"\r\n    origin: \"derived\"\r\n    rgb:\r\n      r: 168\r\n      g: 138\r\n      b: 184\r\n    oklch:\r\n      l: 0.72\r\n      c: 0.08\r\n      h: 279.444444\r\n    originMetadata:\r\n      hueOffset: 315.0\r\nroles:\r\n  primary_surface:\r\n    layers:\r\n      bg:\r\n        colourRef: \"c0\"\r\n  secondary_surface:\r\n    layers:\r\n      bg:\r\n        colourRef: \"c1\"\r\n  tertiary_surface:\r\n    layers:\r\n      bg:\r\n        colourRef: \"c2\"\r\n  accent_surface:\r\n    layers:\r\n      bg:\r\n        colourRef: \"c3\"\r\n  border_fg:\r\n    layers:\r\n      fg:\r\n        colourRef: \"c4\"\r\n  menu_fg:\r\n    layers:\r\n      fg:\r\n        colourRef: \"c5\"\r\n  menu_bg:\r\n    layers:\r\n      bg:\r\n        colourRef: \"c6\"\r\n  interactive_fg:\r\n    layers:\r\n      fg:\r\n        colourRef: \"c7\"\r\n  interactive_bg:\r\n    layers:\r\n      bg:\r\n        colourRef: \"c0\"\r\n  neutral_fg:\r\n    layers:\r\n      fg:\r\n        colourRef: \"c1\"\r\n  neutral_bg:\r\n    layers:\r\n      bg:\r\n        colourRef: \"c2\"\r\ngeometry:\r\n  baseGeometry: \"quadratic\"\r\n  overlays:\r\n    -\r\n      type: \"harmonic\"\r\n      params:\r\n        rotation: 45\r\n    -\r\n      type: \"luminance_wheel\"\r\n      params:\r\n        amplitude: 0.08\r\n    -\r\n      type: \"chroma_spiral\"\r\n      params:\r\n        step: 0.01\r\n  expressions:\r\n    parageometric: true\r\n    offsets:\r\n      - 45.0\r\n      - 135.0\r\n      - 225.0\r\n      - 315.0\r\n      - 45.0\r\n      - 135.0\r\n      - 225.0\r\n      - 315.0\r\npreview:\r\n  model: \"MultiPanePreviewModel\"\r\n  panes:\r\n    -\r\n      paneId: \"pane_0\"\r\n      layout: \"fractal_quadrant\"\r\n      roleUsageHints:\r\n        backgroundRole: \"primary_surface\"\r\n        interactiveRole: \"interactive_bg\"\r\n        textRole: \"menu_fg\"\r\n      border:\r\n        colourRef: \"c4\"\r\n      fill:\r\n        colourRef: \"c0\"\r\n    -\r\n      paneId: \"pane_1\"\r\n      layout: \"fractal_quadrant\"\r\n      roleUsageHints:\r\n        backgroundRole: \"secondary_surface\"\r\n        interactiveRole: \"interactive_bg\"\r\n        textRole: \"menu_fg\"\r\n      border:\r\n        colourRef: \"c4\"\r\n      fill:\r\n        colourRef: \"c1\"\r\n    -\r\n      paneId: \"pane_2\"\r\n      layout: \"fractal_quadrant\"\r\n      roleUsageHints:\r\n        backgroundRole: \"tertiary_surface\"\r\n        interactiveRole: \"interactive_bg\"\r\n        textRole: \"menu_fg\"\r\n      border:\r\n        colourRef: \"c4\"\r\n      fill:\r\n        colourRef: \"c2\"\r\n    -\r\n      paneId: \"pane_3\"\r\n      layout: \"fractal_quadrant\"\r\n      roleUsageHints:\r\n        backgroundRole: \"accent_surface\"\r\n        interactiveRole: \"interactive_bg\"\r\n        textRole: \"menu_fg\"\r\n      border:\r\n        colourRef: \"c4\"\r\n      fill:\r\n        colourRef: \"c3\"\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

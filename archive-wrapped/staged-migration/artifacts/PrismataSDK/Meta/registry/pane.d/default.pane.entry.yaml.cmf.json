@@ -1,0 +1,36 @@
+{
+  "id": "meta-registry-pane-d-default-pane-entry-yaml",
+  "udi": "prismata.meta-registry-pane-d.wrapped-object.default-pane-entry-8485bb14ce",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "default.pane.entry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/registry/pane.d/default.pane.entry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/registry/pane.d/default.pane.entry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "176c36ce8e31b89b0840a410c67adde29fdf86ab6672fecec094651ccc2388b5"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: default.pane.entry.yaml\r\n## Type: pane registry entry (0.4.0)\r\n## Purpose: Default Prismata pane registry entry.\r\n## Provides default border pattern, colour scheme, and layout for panes.\r\n\r\nid: default\r\nudi: prismata.meta.pane.default\r\nname: default.pane\r\nlabel: \"Prismata Default Pane (0.4.0)\"\r\nkind: pane\r\ndescription: \"Single-surface pane with default border and colour roles.\"\r\nschema_version: 0.4.2\r\n\r\nborder_pattern: single-line\r\ncolour_scheme: default\r\ncontent_role: primary-surface\r\ncolour_role: primary-surface\r\nx: 12\r\ny: 12\r\nwidth: 76\r\nheight: 76\r\nlayout:\r\n  mode: single\r\n\r\nmeta:\r\n  created_by: copilot\r\n  created_at: 2026-09-24\r\n  schema_version: 0.4.2\r\n\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

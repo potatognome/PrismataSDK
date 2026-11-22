@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-templates-prismmatrix-ts",
+  "udi": "prismata.meta-deprecated-templates.wrapped-codeblock.prismmatrix-95d26b5487",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "PrismMatrix.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Meta/deprecated/templates/PrismMatrix.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/templates/PrismMatrix.ts",
+    "encoding": "utf-8",
+    "content_sha256": "850796c9147fee2c0c0f50868212071e87507e3bd1f99d6dcfb1c00941ac8e97"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "export interface ExpressionVector {\n    dims: number[]\n}\n\nexport const PrismMatrix = {\n    project(semantic: number[], affect: number[]): ExpressionVector {\n        return { dims: [] }\n    }\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

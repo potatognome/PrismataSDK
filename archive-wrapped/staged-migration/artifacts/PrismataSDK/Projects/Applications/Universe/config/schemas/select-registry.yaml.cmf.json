@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-schemas-select-registry-yaml",
+  "udi": "prismata.projects-applications-universe-config-schemas.wrapped-schema.select-registry-4429873924",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "select-registry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Applications/Universe/config/schemas/select-registry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/schemas/select-registry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "f355b193463926fa87feed196fc94b740fd0e9c371d91cb6165579c5891dcec4"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: select-registry.yaml\r\n## Type: schema\r\n## Purpose: Schema describing registry data used for selection and type\r\n## classification during UI and tooling operations.\r\n\r\nmetadata:\r\n  udi: prismata.universe.schema.select-registry\r\n  name: select-registry\r\n  kind: schema-definition\r\n  description: \"Schema describing registry data used for selection and type classification.\"\r\n\r\n\r\nid: \"prismata.universe.schema.select-registry\"\r\nversion: \"1.0.0\"\r\ntype: object\r\nproperties:\r\n  exemplars: { type: array }\r\n  version_map: { type: object }\r\n  type_classification: { type: object }\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

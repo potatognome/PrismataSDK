@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-schemas-find-results-yaml",
+  "udi": "prismata.projects-applications-universe-config-schemas.wrapped-schema.find-results-e5a162cfea",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "find-results.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Applications/Universe/config/schemas/find-results.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/schemas/find-results.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "d421965faf8ed91301b87a321f328d2313b4c3977ca6d26fa1791dbaae762257"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: find-results.yaml\r\n## Type: schema\r\n## Purpose: Schema describing the layout and payloads returned by find\r\n## operations (results list, preview, version carousel, diff panel).\r\n\r\nmetadata:\r\n  udi: prismata.universe.schema.find-results\r\n  name: find-results\r\n  kind: schema-definition\r\n  description: \"Schema describing the layout and payloads returned by find operations.\"\r\n\r\n\r\nid: \"prismata.universe.schema.find-results\"\r\nversion: \"2.0.0\"\r\ntype: object\r\nproperties:\r\n  results_list: { type: array }\r\n  preview: { type: object }\r\n  version_carousel: { type: object }\r\n  diff_panel: { type: object }\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

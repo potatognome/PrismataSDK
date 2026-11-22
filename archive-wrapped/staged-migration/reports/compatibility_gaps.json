@@ -1,0 +1,2817 @@
+[
+  {
+    "source_path": ".github/copilot-instructions.d/building_examples_policy.md",
+    "wrapped_path": ".github/copilot-instructions.d/building_examples_policy.md.cmf.json",
+    "target_repo": "PrismataSDK",
+    "disposition": "review",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": ".github/copilot-instructions.d/udi-compliance-policy.md",
+    "wrapped_path": ".github/copilot-instructions.d/udi-compliance-policy.md.cmf.json",
+    "target_repo": "PrismataSDK",
+    "disposition": "review",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": ".github/copilot-instructions.d/windowed_apps_compositor.md",
+    "wrapped_path": ".github/copilot-instructions.d/windowed_apps_compositor.md.cmf.json",
+    "target_repo": "PrismataSDK",
+    "disposition": "review",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": ".github/copilot-instructions.md",
+    "wrapped_path": ".github/copilot-instructions.md.cmf.json",
+    "target_repo": "PrismataSDK",
+    "disposition": "review",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": ".gitignore",
+    "wrapped_path": ".gitignore.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": []
+  },
+  {
+    "source_path": ".gitmodules",
+    "wrapped_path": ".gitmodules.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": []
+  },
+  {
+    "source_path": ".workspace/.artifacts/.checklists/migration-dryrun.log",
+    "wrapped_path": ".workspace/.artifacts/.checklists/migration-dryrun.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "planning",
+      "documentation",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.checklists/migration-unresolved.list",
+    "wrapped_path": ".workspace/.artifacts/.checklists/migration-unresolved.list.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "planning",
+      "documentation",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.checklists/migration.log",
+    "wrapped_path": ".workspace/.artifacts/.checklists/migration.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "planning",
+      "documentation",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.checklists/smoke-test.list",
+    "wrapped_path": ".workspace/.artifacts/.checklists/smoke-test.list.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "planning",
+      "documentation",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.checklists/smoke-testi9kkgf8t.tmp",
+    "wrapped_path": ".workspace/.artifacts/.checklists/smoke-testi9kkgf8t.tmp.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "planning",
+      "documentation",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.checklists/token-candidates.log",
+    "wrapped_path": ".workspace/.artifacts/.checklists/token-candidates.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "planning",
+      "documentation",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.checklists/validation-fixes.list",
+    "wrapped_path": ".workspace/.artifacts/.checklists/validation-fixes.list.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "planning",
+      "documentation",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.logs/_root.yaml",
+    "wrapped_path": ".workspace/.artifacts/.logs/_root.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_CONFIG_READ.log",
+    "wrapped_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_CONFIG_READ.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_DATABASE.log",
+    "wrapped_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_DATABASE.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_DEBUG.log",
+    "wrapped_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_DEBUG.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_ERROR.log",
+    "wrapped_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_ERROR.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_FS.log",
+    "wrapped_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_FS.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_INIT.log",
+    "wrapped_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_INIT.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_RUNTIME.log",
+    "wrapped_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_RUNTIME.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_TRY.log",
+    "wrapped_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_TRY.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_WARNING.log",
+    "wrapped_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_WARNING.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.projects_data/_root.yaml",
+    "wrapped_path": ".workspace/.artifacts/.projects_data/_root.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/Brittany/Newton/Account_History_2025.csv",
+    "wrapped_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/Brittany/Newton/Account_History_2025.csv.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/Brittany/Shakepay/cash_transactions_summary.csv",
+    "wrapped_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/Brittany/Shakepay/cash_transactions_summary.csv.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/Brittany/Shakepay/crypto_transactions_summary.csv",
+    "wrapped_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/Brittany/Shakepay/crypto_transactions_summary.csv.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/Daniel/Newton - Daniel.csv",
+    "wrapped_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/Daniel/Newton - Daniel.csv.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/Daniel/Newton/Account_History_2025.csv",
+    "wrapped_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/Daniel/Newton/Account_History_2025.csv.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/Daniel/Shakepay - Daniel - Crypto.csv",
+    "wrapped_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/Daniel/Shakepay - Daniel - Crypto.csv.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/Daniel/Shakepay/cash_transactions_summary.csv",
+    "wrapped_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/Daniel/Shakepay/cash_transactions_summary.csv.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/Daniel/Shakepay/crypto_transactions_summary.csv",
+    "wrapped_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/Daniel/Shakepay/crypto_transactions_summary.csv.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/historical/ADA_CAD_20250101-20260101.csv",
+    "wrapped_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/historical/ADA_CAD_20250101-20260101.csv.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/historical/BTC_CAD_20250101-20260101.csv",
+    "wrapped_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/historical/BTC_CAD_20250101-20260101.csv.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/historical/ETH_CAD_20250101-20260101.csv",
+    "wrapped_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/historical/ETH_CAD_20250101-20260101.csv.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/historical/NEAR_CAD_20250101-20260101.csv",
+    "wrapped_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/historical/NEAR_CAD_20250101-20260101.csv.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/historical/SOL_CAD_20250101-20260101.csv",
+    "wrapped_path": ".workspace/.artifacts/.projects_data/inputData/crUPto/historical/SOL_CAD_20250101-20260101.csv.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.tests_logs/test_log_test_browse_directory.log",
+    "wrapped_path": ".workspace/.artifacts/.tests_logs/test_log_test_browse_directory.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.tests_logs/test_log_test_colour_fstr.log",
+    "wrapped_path": ".workspace/.artifacts/.tests_logs/test_log_test_colour_fstr.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.tests_logs/test_log_test_colour_log.log",
+    "wrapped_path": ".workspace/.artifacts/.tests_logs/test_log_test_colour_log.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.tests_logs/test_log_test_colour_path.log",
+    "wrapped_path": ".workspace/.artifacts/.tests_logs/test_log_test_colour_path.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.tests_logs/test_log_test_confirm.log",
+    "wrapped_path": ".workspace/.artifacts/.tests_logs/test_log_test_confirm.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.tests_logs/test_log_test_edit_key_value_pairs.log",
+    "wrapped_path": ".workspace/.artifacts/.tests_logs/test_log_test_edit_key_value_pairs.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.tests_logs/test_log_test_get_numeric_choice.log",
+    "wrapped_path": ".workspace/.artifacts/.tests_logs/test_log_test_get_numeric_choice.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.tests_logs/test_log_test_interpret_codes.log",
+    "wrapped_path": ".workspace/.artifacts/.tests_logs/test_log_test_interpret_codes.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.tests_logs/test_log_test_log_exception.log",
+    "wrapped_path": ".workspace/.artifacts/.tests_logs/test_log_test_log_exception.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.tests_logs/test_log_test_print_rainbow_row.log",
+    "wrapped_path": ".workspace/.artifacts/.tests_logs/test_log_test_print_rainbow_row.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.tests_logs/test_log_test_prompt_with_default.log",
+    "wrapped_path": ".workspace/.artifacts/.tests_logs/test_log_test_prompt_with_default.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.tests_logs/test_log_test_show_info_screen.log",
+    "wrapped_path": ".workspace/.artifacts/.tests_logs/test_log_test_show_info_screen.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.tests_logs/test_log_test_show_menu_with_preview.log",
+    "wrapped_path": ".workspace/.artifacts/.tests_logs/test_log_test_show_menu_with_preview.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.tests_logs/test_log_test_show_numbered_menu.log",
+    "wrapped_path": ".workspace/.artifacts/.tests_logs/test_log_test_show_numbered_menu.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/.tests_logs/test_log_test_strip_ansi.log",
+    "wrapped_path": ".workspace/.artifacts/.tests_logs/test_log_test_strip_ansi.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.artifacts/Prismata Schemas File & Full Path List.txt",
+    "wrapped_path": ".workspace/.artifacts/Prismata Schemas File & Full Path List.txt.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "schema",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.gitkeep",
+    "wrapped_path": ".workspace/.gitkeep.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.logs/tUilKit/tUilKit_SESSION.log",
+    "wrapped_path": ".workspace/.logs/tUilKit/tUilKit_SESSION.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.projects_config/GLOBAL_SHARED.d/BORDER_PATTERNS.json",
+    "wrapped_path": ".workspace/.projects_config/GLOBAL_SHARED.d/BORDER_PATTERNS.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.projects_config/GLOBAL_SHARED.d/COLOURS.json",
+    "wrapped_path": ".workspace/.projects_config/GLOBAL_SHARED.d/COLOURS.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.projects_config/GLOBAL_SHARED.d/FS_OPERATIONS.json",
+    "wrapped_path": ".workspace/.projects_config/GLOBAL_SHARED.d/FS_OPERATIONS.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.projects_config/GLOBAL_SHARED.d/TESTS_OPTIONS.json",
+    "wrapped_path": ".workspace/.projects_config/GLOBAL_SHARED.d/TESTS_OPTIONS.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/.projects_config/GLOBAL_SHARED.d/TIME_STAMP_OPTIONS.json",
+    "wrapped_path": ".workspace/.projects_config/GLOBAL_SHARED.d/TIME_STAMP_OPTIONS.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/system/system.cache/_root.yaml",
+    "wrapped_path": ".workspace/system/system.cache/_root.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/system/system.history/_root.yaml",
+    "wrapped_path": ".workspace/system/system.history/_root.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/system/system.sessions/_root.yaml",
+    "wrapped_path": ".workspace/system/system.sessions/_root.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/system/system.temp/_root.yaml",
+    "wrapped_path": ".workspace/system/system.temp/_root.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/udi/projects.index.yaml",
+    "wrapped_path": ".workspace/udi/projects.index.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/udi/tooling.manifest.yaml",
+    "wrapped_path": ".workspace/udi/tooling.manifest.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/.gitkeep",
+    "wrapped_path": ".workspace/universe/.gitkeep.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/module.tuilkit/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/module.tuilkit/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/module.tuilkit/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/module.tuilkit/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/module.tuilkit/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/module.tuilkit/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/module.tuilkit/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/module.tuilkit/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/module.tuilkit/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/module.tuilkit/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/module.vaultguard/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/module.vaultguard/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/module.vaultguard/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/module.vaultguard/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/module.vaultguard/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/module.vaultguard/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/module.vaultguard/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/module.vaultguard/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/module.vaultguard/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/module.vaultguard/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.annotator/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.annotator/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.annotator/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.annotator/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.annotator/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.annotator/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.annotator/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.annotator/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.annotator/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.annotator/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.apply-action-stubs-auto/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.apply-action-stubs-auto/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.apply-action-stubs-auto/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.apply-action-stubs-auto/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.apply-action-stubs-auto/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.apply-action-stubs-auto/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.apply-action-stubs-auto/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.apply-action-stubs-auto/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.apply-action-stubs-auto/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.apply-action-stubs-auto/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.apply-action-stubs/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.apply-action-stubs/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.apply-action-stubs/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.apply-action-stubs/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.apply-action-stubs/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.apply-action-stubs/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.apply-action-stubs/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.apply-action-stubs/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.apply-action-stubs/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.apply-action-stubs/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.apply-menu-templates/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.apply-menu-templates/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.apply-menu-templates/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.apply-menu-templates/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.apply-menu-templates/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.apply-menu-templates/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.apply-menu-templates/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.apply-menu-templates/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.apply-menu-templates/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.apply-menu-templates/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.astalyzer-wrapper/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.astalyzer-wrapper/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.astalyzer-wrapper/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.astalyzer-wrapper/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.astalyzer-wrapper/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.astalyzer-wrapper/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.astalyzer-wrapper/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.astalyzer-wrapper/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.astalyzer-wrapper/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.astalyzer-wrapper/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.astalyzer/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.astalyzer/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.astalyzer/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.astalyzer/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.astalyzer/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.astalyzer/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.astalyzer/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.astalyzer/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.astalyzer/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.astalyzer/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.border-patterns/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.border-patterns/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.border-patterns/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.border-patterns/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.border-patterns/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.border-patterns/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.border-patterns/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.border-patterns/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.border-patterns/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.border-patterns/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.bordered-header/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.bordered-header/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.bordered-header/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.bordered-header/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.bordered-header/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.bordered-header/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.bordered-header/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.bordered-header/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.bordered-header/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.bordered-header/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.colour_key-helpers/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.colour_key-helpers/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.colour_key-helpers/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.colour_key-helpers/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.colour_key-helpers/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.colour_key-helpers/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.colour_key-helpers/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.colour_key-helpers/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.colour_key-helpers/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.colour_key-helpers/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.compare-menu-templates/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.compare-menu-templates/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.compare-menu-templates/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.compare-menu-templates/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.compare-menu-templates/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.compare-menu-templates/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.compare-menu-templates/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.compare-menu-templates/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.compare-menu-templates/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.compare-menu-templates/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.config-helpers/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.config-helpers/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.config-helpers/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.config-helpers/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.config-helpers/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.config-helpers/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.config-helpers/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.config-helpers/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.config-helpers/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.config-helpers/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.configmerge/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.configmerge/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.configmerge/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.configmerge/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.configmerge/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.configmerge/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.configmerge/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.configmerge/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.configmerge/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.configmerge/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.dialog-helpers/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.dialog-helpers/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.dialog-helpers/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.dialog-helpers/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.dialog-helpers/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.dialog-helpers/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.dialog-helpers/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.dialog-helpers/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.dialog-helpers/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.dialog-helpers/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.folder-tree/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.folder-tree/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.folder-tree/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.folder-tree/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.folder-tree/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.folder-tree/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.folder-tree/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.folder-tree/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.folder-tree/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.folder-tree/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.menu-helpers/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.menu-helpers/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.menu-helpers/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.menu-helpers/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.menu-helpers/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.menu-helpers/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.menu-helpers/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.menu-helpers/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.menu-helpers/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.menu-helpers/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.menu-tree-tooling/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.menu-tree-tooling/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.menu-tree-tooling/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.menu-tree-tooling/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.menu-tree-tooling/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.menu-tree-tooling/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.menu-tree-tooling/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.menu-tree-tooling/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.menu-tree-tooling/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.menu-tree-tooling/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.mode-registry-helpers/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.mode-registry-helpers/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "registry",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.mode-registry-helpers/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.mode-registry-helpers/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "registry",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.mode-registry-helpers/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.mode-registry-helpers/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "registry",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.mode-registry-helpers/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.mode-registry-helpers/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "registry",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.mode-registry-helpers/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.mode-registry-helpers/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "registry",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.path-helpers/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.path-helpers/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.path-helpers/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.path-helpers/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.path-helpers/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.path-helpers/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.path-helpers/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.path-helpers/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.path-helpers/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.path-helpers/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.replace-hardcoded-menus/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.replace-hardcoded-menus/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.replace-hardcoded-menus/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.replace-hardcoded-menus/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.replace-hardcoded-menus/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.replace-hardcoded-menus/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.replace-hardcoded-menus/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.replace-hardcoded-menus/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.replace-hardcoded-menus/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.replace-hardcoded-menus/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.sample-script/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.sample-script/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.sample-script/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.sample-script/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.sample-script/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.sample-script/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.sample-script/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.sample-script/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.sample-script/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.sample-script/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.sample/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.sample/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.sample/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.sample/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.sample/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.sample/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.sample/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.sample/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.sample/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.sample/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.sanitize-output/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.sanitize-output/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.sanitize-output/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.sanitize-output/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.sanitize-output/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.sanitize-output/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.sanitize-output/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.sanitize-output/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.sanitize-output/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.sanitize-output/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.scrape-folder/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.scrape-folder/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.scrape-folder/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.scrape-folder/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.scrape-folder/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.scrape-folder/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.scrape-folder/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.scrape-folder/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.scrape-folder/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.scrape-folder/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.scraper/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.scraper/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.scraper/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.scraper/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.scraper/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.scraper/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.scraper/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.scraper/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.scraper/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.scraper/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.show-invocation-table/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.show-invocation-table/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.show-invocation-table/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.show-invocation-table/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.show-invocation-table/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.show-invocation-table/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.show-invocation-table/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.show-invocation-table/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.show-invocation-table/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.show-invocation-table/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.universe-scaffold/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.universe-scaffold/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.universe-scaffold/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.universe-scaffold/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.universe-scaffold/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.universe-scaffold/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.universe-scaffold/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.universe-scaffold/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.universe-scaffold/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.universe-scaffold/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.validate-menu-actions/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.validate-menu-actions/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.validate-menu-actions/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.validate-menu-actions/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.validate-menu-actions/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.validate-menu-actions/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.validate-menu-actions/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.validate-menu-actions/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.validate-menu-actions/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.validate-menu-actions/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.vile/0.0.1/manifest.fragment.yaml",
+    "wrapped_path": ".workspace/universe/archive/tooling.vile/0.0.1/manifest.fragment.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.vile/0.0.1/metadata.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.vile/0.0.1/metadata.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.vile/0.0.1/module.files.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.vile/0.0.1/module.files.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.vile/0.0.1/udi.assignment.json",
+    "wrapped_path": ".workspace/universe/archive/tooling.vile/0.0.1/udi.assignment.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/archive/tooling.vile/0.0.1/validation.log",
+    "wrapped_path": ".workspace/universe/archive/tooling.vile/0.0.1/validation.log.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/create-tests/dummy.manifest.yaml",
+    "wrapped_path": ".workspace/universe/create-tests/dummy.manifest.yaml.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "manifest",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/ingestion/first-ingestion.json",
+    "wrapped_path": ".workspace/universe/ingestion/first-ingestion.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/registry/registry.jsonl",
+    "wrapped_path": ".workspace/universe/registry/registry.jsonl.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "registry",
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/semantic/semantic-bundle.json",
+    "wrapped_path": ".workspace/universe/semantic/semantic-bundle.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/semantic/semantic-bundle.json.archive.json",
+    "wrapped_path": ".workspace/universe/semantic/semantic-bundle.json.archive.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/state/initialized.flag",
+    "wrapped_path": ".workspace/universe/state/initialized.flag.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": ".workspace/universe/state/settings.json",
+    "wrapped_path": ".workspace/universe/state/settings.json.cmf.json",
+    "target_repo": "ArchiveOnly",
+    "disposition": "quarantine-runtime",
+    "tags": [
+      "runtime-state"
+    ]
+  },
+  {
+    "source_path": "LICENSE",
+    "wrapped_path": "LICENSE.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/README.md",
+    "wrapped_path": "Meta/README.md.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": [
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/.gitkeep",
+    "wrapped_path": "Meta/deprecated/.gitkeep.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/canonical/.gitkeep",
+    "wrapped_path": "Meta/deprecated/canonical/.gitkeep.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/canonical/config_sections.d/ALT_CONFIG.json",
+    "wrapped_path": "Meta/deprecated/canonical/config_sections.d/ALT_CONFIG.json.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/canonical/config_sections.d/INFO.json",
+    "wrapped_path": "Meta/deprecated/canonical/config_sections.d/INFO.json.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/canonical/config_sections.d/LOG_CATEGORIES.json",
+    "wrapped_path": "Meta/deprecated/canonical/config_sections.d/LOG_CATEGORIES.json.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/canonical/config_sections.d/LOG_FILES.json",
+    "wrapped_path": "Meta/deprecated/canonical/config_sections.d/LOG_FILES.json.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/canonical/config_sections.d/PATHS.json",
+    "wrapped_path": "Meta/deprecated/canonical/config_sections.d/PATHS.json.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/canonical/config_sections.d/ROOTS.json",
+    "wrapped_path": "Meta/deprecated/canonical/config_sections.d/ROOTS.json.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/canonical/config_sections.d/ROOT_MODES.json",
+    "wrapped_path": "Meta/deprecated/canonical/config_sections.d/ROOT_MODES.json.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/canonical/copilot-instructions.d/building_exemplar.md",
+    "wrapped_path": "Meta/deprecated/canonical/copilot-instructions.d/building_exemplar.md.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/canonical/copilot-instructions.d/project_classification.md",
+    "wrapped_path": "Meta/deprecated/canonical/copilot-instructions.d/project_classification.md.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/canonical/copilot-instructions.d/root_modes_workspace_project_paths.md",
+    "wrapped_path": "Meta/deprecated/canonical/copilot-instructions.d/root_modes_workspace_project_paths.md.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/examples/colourscheme.samples/generated.exemplar.scheme.v2.yaml",
+    "wrapped_path": "Meta/deprecated/examples/colourscheme.samples/generated.exemplar.scheme.v2.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/examples/colourscheme.samples/generated.exemplar.scheme.yaml",
+    "wrapped_path": "Meta/deprecated/examples/colourscheme.samples/generated.exemplar.scheme.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/examples/colourscheme.samples/quadratic-4-8.scheme.v2.yaml",
+    "wrapped_path": "Meta/deprecated/examples/colourscheme.samples/quadratic-4-8.scheme.v2.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/examples/colourscheme.samples/quadratic-4-8.scheme.yaml",
+    "wrapped_path": "Meta/deprecated/examples/colourscheme.samples/quadratic-4-8.scheme.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/examples/menu.samples/full/full-conditions.v2.yaml",
+    "wrapped_path": "Meta/deprecated/examples/menu.samples/full/full-conditions.v2.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/examples/menu.samples/full/full-conditions.yaml",
+    "wrapped_path": "Meta/deprecated/examples/menu.samples/full/full-conditions.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/examples/menu.samples/full/full-headers-footers.v2.yaml",
+    "wrapped_path": "Meta/deprecated/examples/menu.samples/full/full-headers-footers.v2.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/examples/menu.samples/full/full-headers-footers.yaml",
+    "wrapped_path": "Meta/deprecated/examples/menu.samples/full/full-headers-footers.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/examples/menu.samples/full/full-menu-items.v2.yaml",
+    "wrapped_path": "Meta/deprecated/examples/menu.samples/full/full-menu-items.v2.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/examples/menu.samples/full/full-menu-items.yaml",
+    "wrapped_path": "Meta/deprecated/examples/menu.samples/full/full-menu-items.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/examples/menu.samples/full/full-menu-tree.v2.yaml",
+    "wrapped_path": "Meta/deprecated/examples/menu.samples/full/full-menu-tree.v2.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/examples/menu.samples/full/full-menu-tree.yaml",
+    "wrapped_path": "Meta/deprecated/examples/menu.samples/full/full-menu-tree.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/examples/menu.samples/full/full-menu-types.v2.yaml",
+    "wrapped_path": "Meta/deprecated/examples/menu.samples/full/full-menu-types.v2.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/examples/menu.samples/full/full-menu-types.yaml",
+    "wrapped_path": "Meta/deprecated/examples/menu.samples/full/full-menu-types.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/examples/menu.samples/full/full-registry-overrides.v2.yaml",
+    "wrapped_path": "Meta/deprecated/examples/menu.samples/full/full-registry-overrides.v2.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "registry"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/examples/menu.samples/full/full-registry-overrides.yaml",
+    "wrapped_path": "Meta/deprecated/examples/menu.samples/full/full-registry-overrides.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "registry"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/examples/menu.samples/minimal/main-menu.v2.yaml",
+    "wrapped_path": "Meta/deprecated/examples/menu.samples/minimal/main-menu.v2.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/examples/menu.samples/minimal/main-menu.yaml",
+    "wrapped_path": "Meta/deprecated/examples/menu.samples/minimal/main-menu.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/examples/menu.samples/minimal/settings-menu.v2.yaml",
+    "wrapped_path": "Meta/deprecated/examples/menu.samples/minimal/settings-menu.v2.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/examples/menu.samples/minimal/settings-menu.yaml",
+    "wrapped_path": "Meta/deprecated/examples/menu.samples/minimal/settings-menu.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/examples/menu.samples/minimal/simple-conditions.v2.yaml",
+    "wrapped_path": "Meta/deprecated/examples/menu.samples/minimal/simple-conditions.v2.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/examples/menu.samples/minimal/simple-conditions.yaml",
+    "wrapped_path": "Meta/deprecated/examples/menu.samples/minimal/simple-conditions.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/examples/ui_framework.example/ui_framework.override.example.v2.yaml",
+    "wrapped_path": "Meta/deprecated/examples/ui_framework.example/ui_framework.override.example.v2.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/examples/ui_framework.example/ui_framework.override.example.yaml",
+    "wrapped_path": "Meta/deprecated/examples/ui_framework.example/ui_framework.override.example.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": []
+  },
+  {
+    "source_path": "Meta/deprecated/governance/copilot-instructions.d/cli_menu_patterns.md",
+    "wrapped_path": "Meta/deprecated/governance/copilot-instructions.d/cli_menu_patterns.md.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/copilot-instructions.d/colour_key_usage.md",
+    "wrapped_path": "Meta/deprecated/governance/copilot-instructions.d/colour_key_usage.md.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/copilot-instructions.d/documentation_guidelines.md",
+    "wrapped_path": "Meta/deprecated/governance/copilot-instructions.d/documentation_guidelines.md.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/copilot-instructions.d/logging_policy.md",
+    "wrapped_path": "Meta/deprecated/governance/copilot-instructions.d/logging_policy.md.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/copilot-instructions.d/tuilkit_enabled_apps_guidelines.md",
+    "wrapped_path": "Meta/deprecated/governance/copilot-instructions.d/tuilkit_enabled_apps_guidelines.md.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/copilot-instructions.d/tuilkit_imports.md",
+    "wrapped_path": "Meta/deprecated/governance/copilot-instructions.d/tuilkit_imports.md.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/copilot-instructions.d/version_bumping.md",
+    "wrapped_path": "Meta/deprecated/governance/copilot-instructions.d/version_bumping.md.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/naming-conventions/projects_index_file.md",
+    "wrapped_path": "Meta/deprecated/governance/naming-conventions/projects_index_file.md.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/naming-conventions/projects_manifest_file.md",
+    "wrapped_path": "Meta/deprecated/governance/naming-conventions/projects_manifest_file.md.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "instruction",
+      "manifest"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/naming-conventions/projects_menus.md",
+    "wrapped_path": "Meta/deprecated/governance/naming-conventions/projects_menus.md.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/naming-conventions/projects_primary_config_file.md",
+    "wrapped_path": "Meta/deprecated/governance/naming-conventions/projects_primary_config_file.md.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "instruction",
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/governance/naming-conventions/projects_schemas.md",
+    "wrapped_path": "Meta/deprecated/governance/naming-conventions/projects_schemas.md.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "instruction",
+      "schema"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/manifest_sections.d/00_meta.v2.yaml",
+    "wrapped_path": "Meta/deprecated/manifest_sections.d/00_meta.v2.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "manifest"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/manifest_sections.d/00_meta.yaml",
+    "wrapped_path": "Meta/deprecated/manifest_sections.d/00_meta.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "manifest"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/manifest_sections.d/10_identity.v2.yaml",
+    "wrapped_path": "Meta/deprecated/manifest_sections.d/10_identity.v2.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "manifest"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/manifest_sections.d/10_identity.yaml",
+    "wrapped_path": "Meta/deprecated/manifest_sections.d/10_identity.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "manifest"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/manifest_sections.d/20_capabilities.v2.yaml",
+    "wrapped_path": "Meta/deprecated/manifest_sections.d/20_capabilities.v2.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "manifest"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/manifest_sections.d/20_capabilities.yaml",
+    "wrapped_path": "Meta/deprecated/manifest_sections.d/20_capabilities.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "manifest"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/manifest_sections.d/30_dependencies.v2.yaml",
+    "wrapped_path": "Meta/deprecated/manifest_sections.d/30_dependencies.v2.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "manifest"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/manifest_sections.d/30_dependencies.yaml",
+    "wrapped_path": "Meta/deprecated/manifest_sections.d/30_dependencies.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "manifest"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/manifest_sections.d/40_protocols.v2.yaml",
+    "wrapped_path": "Meta/deprecated/manifest_sections.d/40_protocols.v2.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "manifest"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/manifest_sections.d/40_protocols.yaml",
+    "wrapped_path": "Meta/deprecated/manifest_sections.d/40_protocols.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "manifest"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/manifest_sections.d/50_io.v2.yaml",
+    "wrapped_path": "Meta/deprecated/manifest_sections.d/50_io.v2.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "manifest"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/manifest_sections.d/50_io.yaml",
+    "wrapped_path": "Meta/deprecated/manifest_sections.d/50_io.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "manifest"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/templates/ChromaSchemes.ts",
+    "wrapped_path": "Meta/deprecated/templates/ChromaSchemes.ts.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "code"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/templates/ChromaTutor.ts",
+    "wrapped_path": "Meta/deprecated/templates/ChromaTutor.ts.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "code"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/templates/PrismMatrix.ts",
+    "wrapped_path": "Meta/deprecated/templates/PrismMatrix.ts.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "code"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/templates/PrismPulse.ts",
+    "wrapped_path": "Meta/deprecated/templates/PrismPulse.ts.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "code"
+    ]
+  },
+  {
+    "source_path": "Meta/deprecated/templates/PrismSense.ts",
+    "wrapped_path": "Meta/deprecated/templates/PrismSense.ts.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "deprecate",
+    "tags": [
+      "code"
+    ]
+  },
+  {
+    "source_path": "README.md",
+    "wrapped_path": "README.md.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": [
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "__init__.py",
+    "wrapped_path": "__init__.py.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": [
+      "code"
+    ]
+  },
+  {
+    "source_path": "logFileList.txt",
+    "wrapped_path": "logFileList.txt.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": [
+      "documentation"
+    ]
+  },
+  {
+    "source_path": "package.json",
+    "wrapped_path": "package.json.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": []
+  },
+  {
+    "source_path": "pnpm-lock.yaml",
+    "wrapped_path": "pnpm-lock.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": []
+  },
+  {
+    "source_path": "pnpm-workspace.yaml",
+    "wrapped_path": "pnpm-workspace.yaml.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": []
+  },
+  {
+    "source_path": "tests/ConfigMerge/ConfigMerge.Tests.ps1",
+    "wrapped_path": "tests/ConfigMerge/ConfigMerge.Tests.ps1.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": [
+      "code"
+    ]
+  },
+  {
+    "source_path": "tests/ConfigMerge/Get-ConfigMergeHelp.Tests.ps1",
+    "wrapped_path": "tests/ConfigMerge/Get-ConfigMergeHelp.Tests.ps1.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": [
+      "code"
+    ]
+  },
+  {
+    "source_path": "tests/primitives/Show-InvocationTable.Tests.ps1",
+    "wrapped_path": "tests/primitives/Show-InvocationTable.Tests.ps1.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": [
+      "code"
+    ]
+  },
+  {
+    "source_path": "tests/primitives/config-helpers-smoke.ps1",
+    "wrapped_path": "tests/primitives/config-helpers-smoke.ps1.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": [
+      "code"
+    ]
+  },
+  {
+    "source_path": "tests/primitives/show-invocation-smoke.ps1",
+    "wrapped_path": "tests/primitives/show-invocation-smoke.ps1.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": [
+      "code"
+    ]
+  },
+  {
+    "source_path": "tests/test_chromascheme_schemas.py",
+    "wrapped_path": "tests/test_chromascheme_schemas.py.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": [
+      "schema",
+      "code"
+    ]
+  },
+  {
+    "source_path": "tests/test_phase2_tuilkit_fallbacks.py",
+    "wrapped_path": "tests/test_phase2_tuilkit_fallbacks.py.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": [
+      "code"
+    ]
+  },
+  {
+    "source_path": "tests/test_prismatalabs2_canonical_keys.py",
+    "wrapped_path": "tests/test_prismatalabs2_canonical_keys.py.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": [
+      "code"
+    ]
+  },
+  {
+    "source_path": "tests/test_prismatalabs2_schema_validation.py",
+    "wrapped_path": "tests/test_prismatalabs2_schema_validation.py.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": [
+      "schema",
+      "code"
+    ]
+  },
+  {
+    "source_path": "tests/test_prismatalabs2_udi_bindings.py",
+    "wrapped_path": "tests/test_prismatalabs2_udi_bindings.py.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": [
+      "code"
+    ]
+  },
+  {
+    "source_path": "tests/test_tuilkit_adapters.py",
+    "wrapped_path": "tests/test_tuilkit_adapters.py.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": [
+      "code"
+    ]
+  },
+  {
+    "source_path": "tests/test_universe_canonical_runtime.py",
+    "wrapped_path": "tests/test_universe_canonical_runtime.py.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": [
+      "code"
+    ]
+  },
+  {
+    "source_path": "tests/test_validator_suite_repo_gate.py",
+    "wrapped_path": "tests/test_validator_suite_repo_gate.py.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": [
+      "code"
+    ]
+  },
+  {
+    "source_path": "tools/migrate/convert-short-names-to-udis.py",
+    "wrapped_path": "tools/migrate/convert-short-names-to-udis.py.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": [
+      "code"
+    ]
+  },
+  {
+    "source_path": "tools/migrate/report_token_candidates.py",
+    "wrapped_path": "tools/migrate/report_token_candidates.py.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": [
+      "code"
+    ]
+  },
+  {
+    "source_path": "tsconfig.json",
+    "wrapped_path": "tsconfig.json.cmf.json",
+    "target_repo": "NeedsReview",
+    "disposition": "review",
+    "tags": []
+  }
+]

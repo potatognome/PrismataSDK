@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-primitives-python-settings-store-py",
+  "udi": "prismata.projects-tooling-primitives-python.wrapped-codeblock.settings-store-29bd842c69",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "settings_store.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/primitives/python/settings_store.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/primitives/python/settings_store.py",
+    "encoding": "utf-8",
+    "content_sha256": "dfdb573382a5c2287bffd52521dc620b9d127ea4c2b67c74081ec729e8581236"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\"\"\"Shared settings persistence helpers for Prismata applications.\r\n\r\nThis module centralizes small, safe settings-file operations so applications\r\ncan keep app-specific defaults/shape logic while sharing file I/O behavior.\r\n\"\"\"\r\n\r\nfrom __future__ import annotations\r\n\r\nimport json\r\nfrom pathlib import Path\r\nfrom typing import Any, Dict, Iterable, Optional\r\n\r\nimport yaml\r\n\r\nfrom Projects.Tooling.primitives.python.path_helper import app_root_for\r\n\r\n\r\ndef detect_file_format(path: Path) -> str:\r\n    suffix = path.suffix.lower()\r\n    if suffix in {\".yaml\", \".yml\"}:\r\n        return \"yaml\"\r\n    return \"json\"\r\n\r\n\r\ndef _read_mapping(path: Path, file_format: str) -> Dict[str, Any]:\r\n    text = path.read_text(encoding=\"utf-8\")\r\n    if file_format == \"yaml\":\r\n        data = yaml.safe_load(text)\r\n    else:\r\n        data = json.loads(text)\r\n\r\n    if isinstance(data, dict):\r\n        return data\r\n    return {}\r\n\r\n\r\ndef _write_mapping(path: Path, data: Dict[str, Any], file_format: str) -> None:\r\n    if file_format == \"yaml\":\r\n        payload = yaml.safe_dump(data, sort_keys=False)\r\n    else:\r\n        payload = json.dumps(data, indent=2) + \"\\n\"\r\n\r\n    path.parent.mkdir(parents=True, exist_ok=True)\r\n    tmp_path = path.with_suffix(path.suffix + \".tmp\")\r\n    tmp_path.write_text(payload, encoding=\"utf-8\")\r\n    tmp_path.replace(path)\r\n\r\n\r\ndef load_mapping(\r\n    path: Path,\r\n    *,\r\n    defaults: Optional[Dict[str, Any]] = None,\r\n    file_format: Optional[str] = None,\r\n    legacy_paths: Optional[Iterable[Path]] = None,\r\n) -> Dict[str, Any]:\r\n    default_data = dict(defaults or {})\r\n    selected: Optional[Path] = None\r\n\r\n    if path.exists():\r\n        selected = path\r\n    elif legacy_paths:\r\n        for legacy in legacy_paths:\r\n            if legacy.exists():\r\n                selected = legacy\r\n                break\r\n\r\n    if selected is None:\r\n        return default_data\r\n\r\n    resolved_format = file_format or detect_file_format(selected)\r\n    try:\r\n        loaded = _read_mapping(selected, resolved_format)\r\n    except Exception:\r\n        return default_data\r\n\r\n    merged = dict(default_data)\r\n    merged.update(loaded)\r\n    return merged\r\n\r\n\r\ndef save_mapping(path: Path, data: Dict[str, Any], *, file_format: Optional[str] = None) -> None:\r\n    resolved_format = file_format or detect_file_format(path)\r\n    _write_mapping(path, dict(data), resolved_format)\r\n\r\n\r\ndef resolve_app_root(prismata_root: Path, app_name: str) -> Path:\r\n    return app_root_for(prismata_root, app_name)\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

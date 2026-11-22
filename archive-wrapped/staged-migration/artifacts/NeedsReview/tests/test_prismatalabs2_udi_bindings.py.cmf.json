@@ -1,0 +1,36 @@
+{
+  "id": "tests-test-prismatalabs2-udi-bindings-py",
+  "udi": "prismata.tests.wrapped-codeblock.test-prismatalabs2-udi-bindings-7371476258",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_prismatalabs2_udi_bindings.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "tests/test_prismatalabs2_udi_bindings.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "tests/test_prismatalabs2_udi_bindings.py",
+    "encoding": "utf-8",
+    "content_sha256": "fc8bf2c91131355e332bf2d4f87e291eb9c0a89117d1a5dcfa18ffa0824dcdaa"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufefffrom __future__ import annotations\r\n\r\nimport importlib.util\r\nimport sys\r\nfrom pathlib import Path\r\n\r\nROOT = Path(__file__).resolve().parents[1]\r\nif str(ROOT) not in sys.path:\r\n    sys.path.insert(0, str(ROOT))\r\n\r\n\r\ndef _load_module(path: Path, module_name: str):\r\n    spec = importlib.util.spec_from_file_location(module_name, path)\r\n    module = importlib.util.module_from_spec(spec)\r\n    assert spec and spec.loader\r\n    spec.loader.exec_module(module)\r\n    return module\r\n\r\n\r\ndef test_level1_uses_udi_binding_for_menu_resolution():\r\n    path = (\r\n        ROOT\r\n        / \"Projects\"\r\n        / \"Applications\"\r\n        / \"PrismataLabs\"\r\n        / \"examples\"\r\n        / \"pcms_2026_level1_single_pane.py\"\r\n    )\r\n    module = _load_module(path, \"pcms_level1\")\r\n    panes, _ = module._build_panes_from_framework(\"single-pane.ui-framework.yaml\")\r\n\r\n    assert panes\r\n    assert panes[0][\"menu\"][\"udi\"] == \"prismata.examples.menu.single-pane\"\r\n\r\n    source = path.read_text(encoding=\"utf-8\")\r\n    assert \"menu_index = {m.get(\\\"id\\\")\" not in source\r\n    assert \"pane_bindings.get(pane_data.get(\\\"id\\\"))\" not in source\r\n    assert \"ROLE_ALIASES\" not in source\r\n    assert \"BORDER_ALIASES\" not in source\r\n    assert \"menu-items\" not in source\r\n\r\n\r\ndef test_level2_uses_udi_binding_for_menu_resolution():\r\n    path = (\r\n        ROOT\r\n        / \"Projects\"\r\n        / \"Applications\"\r\n        / \"PrismataLabs\"\r\n        / \"examples\"\r\n        / \"pcms_2026_level2_dual_pane.py\"\r\n    )\r\n    module = _load_module(path, \"pcms_level2\")\r\n    panes, _ = module._build_panes_from_framework(\"dual-pane.ui-framework.yaml\")\r\n\r\n    assert len(panes) == 2\r\n    assert panes[0][\"menu\"][\"udi\"] == \"prismata.examples.menu.dual-pane\"\r\n    assert panes[1][\"menu\"][\"udi\"] == \"prismata.examples.menu.dual-pane\"\r\n\r\n    source = path.read_text(encoding=\"utf-8\")\r\n    assert \"menu_index = {m.get(\\\"id\\\")\" not in source\r\n    assert \"pane_bindings.get(pane_data.get(\\\"id\\\"))\" not in source\r\n    assert \"ROLE_ALIASES\" not in source\r\n    assert \"BORDER_ALIASES\" not in source\r\n    assert \"menu-items\" not in source\r\n\r\n\r\ndef test_level3_uses_udi_binding_for_menu_resolution():\r\n    path = (\r\n        ROOT\r\n        / \"Projects\"\r\n        / \"Applications\"\r\n        / \"PrismataLabs\"\r\n        / \"examples\"\r\n        / \"pcms_2026_level3_diagnostic_dual_pane.py\"\r\n    )\r\n    module = _load_module(path, \"pcms_level3\")\r\n    panes, _ = module._build_panes_from_framework(\"diagnostic.ui-framework.yaml\")\r\n\r\n    assert len(panes) == 2\r\n    assert panes[0][\"menu\"][\"udi\"] == \"prismata.examples.menu.diagnostic-pane\"\r\n    assert panes[1][\"menu\"][\"udi\"] == \"prismata.examples.menu.diagnostic-pane\"\r\n\r\n    source = path.read_text(encoding=\"utf-8\")\r\n    assert \"menu_index = {m.get(\\\"id\\\")\" not in source\r\n    assert \"pane_bindings.get(pane_data.get(\\\"id\\\"))\" not in source\r\n    assert \"ROLE_ALIASES\" not in source\r\n    assert \"BORDER_ALIASES\" not in source\r\n    assert \"menu-items\" not in source\r\n\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

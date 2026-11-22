@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-project-menus-folder-paths-yaml",
+  "udi": "prismata.projects-applications-universe-config-project-menus.wrapped-object.folder-paths-9fbb8b140f",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "folder_paths.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/Universe/config/project-menus/folder_paths.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/project-menus/folder_paths.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "4b3c36acdd1c86837a448b2ed0b0c4124d97cf82ec4d37d4388b5ca178a2f197"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: folder_paths.yaml\r\n## Type: settings manifest\r\n## Purpose: Canonical folder path mapping used by the Default Folder Paths\r\n## settings menu. Maps settings keys to labels and capability metadata.\r\n\r\nid: \"prismata.universe.config.folder-paths\"\r\nudi: \"prismata.universe.config.folder-paths\"\r\nschema_version: \"1.0.0\"\r\nversion: \"1.0.0\"\r\ndescription: >\r\n  Canonical folder path keys used by Universe's Default Folder Paths settings menu.\r\n  Each entry maps a settings key (stored in settings.paths) to its menu label and\r\n  the capability that resolves it (app-settings-paths).\r\n\r\npaths:\r\n  - key: \"canonical_folder\"\r\n    label: \"Canonical Folder\"\r\n    description: \"Root folder for canonical registry schemas and manifests.\"\r\n    capability: \"prismata.universe.capability.app-settings-paths\"\r\n    pick_mode: \"folder\"\r\n\r\n  - key: \"project_root\"\r\n    label: \"Project Root\"\r\n    description: \"Root folder for the active Prismata project.\"\r\n    capability: \"prismata.universe.capability.app-settings-paths\"\r\n    pick_mode: \"folder\"\r\n\r\n  - key: \"workspace_root\"\r\n    label: \"Workspace Root\"\r\n    description: \"Universe workspace directory (state, ingestion, registry, archive).\"\r\n    capability: \"prismata.universe.capability.app-settings-paths\"\r\n    pick_mode: \"folder\"\r\n\r\n  - key: \"temp_folder\"\r\n    label: \"Temp Folder\"\r\n    description: \"Temporary working directory for intermediate outputs.\"\r\n    capability: \"prismata.universe.capability.app-settings-paths\"\r\n    pick_mode: \"folder\"\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

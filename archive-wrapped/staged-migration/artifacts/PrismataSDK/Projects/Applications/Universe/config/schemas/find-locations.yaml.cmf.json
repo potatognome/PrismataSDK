@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-schemas-find-locations-yaml",
+  "udi": "prismata.projects-applications-universe-config-schemas.wrapped-schema.find-locations-9a0b557e23",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "find-locations.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Applications/Universe/config/schemas/find-locations.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/schemas/find-locations.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "0dcf34bb10e1158e99c70661cce5fb602891f9ddc903cc3f9ed178f5fec81647"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: find-locations.yaml\r\n## Type: schema\r\n## Purpose: Schema for find location descriptors (folder and recursion)\r\n## used by file search and ingestion tasks.\r\n\r\nmetadata:\r\n  udi: prismata.universe.schema.find-location\r\n  name: find-location\r\n  kind: schema-definition\r\n  description: \"Schema for find location descriptors (folder and recursion) used by file search.\"\r\n\r\n\r\nid: \"prismata.universe.schema.find-location\"\r\nversion: \"1.0.0\"\r\ntype: object\r\nproperties:\r\n  folder: { type: string }\r\n  recursive: { type: boolean }\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

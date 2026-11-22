@@ -1,0 +1,36 @@
+{
+  "id": "meta-registry-pane-d-exemplar-secondary-pane-entry-yaml",
+  "udi": "prismata.meta-registry-pane-d.wrapped-object.exemplar-secondary-pane-entry-b1037a0f25",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "exemplar-secondary.pane.entry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/registry/pane.d/exemplar-secondary.pane.entry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/registry/pane.d/exemplar-secondary.pane.entry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "28fdbe22746e7751407bbde1818f5bc059c0f26a127a91de935042e81537021a"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: exemplar-secondary.pane.entry.yaml\r\n## Type: pane registry entry (0.4.0)\r\n## Purpose: Secondary exemplar pane placed to overlap the primary pane.\r\n\r\nid: exemplar-secondary\r\nudi: prismata.meta.pane.exemplar-secondary\r\nname: exemplar-secondary.pane\r\nlabel: \"Secondary\"\r\nkind: pane\r\ndescription: \"Secondary pane in the exemplar layout. It overlaps part of the primary pane.\"\r\nschema_version: 0.4.2\r\n\r\nborder_pattern: double-line\r\ncolour_scheme: default\r\ncontent_role: secondary-surface\r\ncolour_role: secondary-surface\r\nborder_role: accent-surface\r\nx: 42\r\ny: 8\r\nwidth: 50\r\nheight: 34\r\nlayout:\r\n  mode: single\r\n\r\nmeta:\r\n  created_by: copilot\r\n  created_at: 2026-10-01\r\n  schema_version: 0.4.2\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

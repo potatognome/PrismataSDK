@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-project-menus-find-menu-yaml",
+  "udi": "prismata.projects-applications-universe-config-project-menus.wrapped-object.find-menu-bfb4a17035",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "find-menu.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/Universe/config/project-menus/find-menu.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/project-menus/find-menu.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "7fe6e72da02aeed24ecc4538a0d7513228b0e17c6894bb854e99e34d7b81cfba"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "metadata:\r\n  udi: prismata.universe.menu.find.select\r\n  name: \"Find & Select Menu\"\r\n  version: \"0.1.0\"\r\n  kind: menu\r\n  description: \"Menu for finding, selecting, and previewing objects.\"\r\n\r\nudi: \"prismata.universe.menu.find.select\"\r\nkind: menu\r\ntype: \"menu\"\r\ntitle: \"Find & Select Menu\"\r\nheader:\r\n  type: \"search_params\"\r\n\r\nitems:\r\n  - key: \"1\"\r\n    udi: \"prismata.universe.menu.find.set-search-parameters\"\r\n    label: \"Set Search Parameters\"\r\n    description: \"Configure multi-modal search filters.\"\r\n    capability: \"prismata.universe.capability.fs-search\"\r\n    ui_framework: menu\r\n    submenu_ref: \"prismata.universe.menu.find.parameters\"\r\n\r\n  - key: \"2\"\r\n    udi: \"prismata.universe.menu.find.search-results\"\r\n    label: \"Search Results\"\r\n    description: \"View results with preview, version carousel, and diff finder panes.\"\r\n    capability: \"prismata.universe.capability.fs-search-results\"\r\n    ui_framework: menu\r\n    submenu_ref: null\r\n\r\n  - key: \"3\"\r\n    udi: \"prismata.universe.menu.find.select.multi-select\"\r\n    label: \"Multi-Select\"\r\n    capability: \"prismata.universe.capability.fs-select-multi\"\r\n    ui_framework: menu\r\n    submenu_ref: null\r\n\r\n  - key: \"4\"\r\n    udi: \"prismata.universe.menu.find.select.single-select-reference\"\r\n    label: \"Single Select (Reference)\"\r\n    capability: \"prismata.universe.capability.fs-select-single\"\r\n    ui_framework: menu\r\n    submenu_ref: null\r\n\r\n  - key: \"5\"\r\n    udi: \"prismata.universe.menu.find.select.exemplar-registry\"\r\n    label: \"Exemplar Registry\"\r\n    capability: \"prismata.universe.capability.fs-exemplar-preview\"\r\n    ui_framework: menu\r\n    submenu_ref: null\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-astalyzer-wrapper-tests-test-choose-default-command-py",
+  "udi": "prismata.projects-tooling-astalyzer-wrapper-tests.wrapped-codeblock.test-choose-default-command-51643a1edf",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_choose_default_command.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/ASTalyzer/wrapper/tests/test_choose_default_command.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/ASTalyzer/wrapper/tests/test_choose_default_command.py",
+    "encoding": "utf-8",
+    "content_sha256": "295fd389c0da49d42af5ac5394694573aa2f3a4fffe8107107961566c87d2da5"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import shutil\r\nfrom Prismata.Projects.Tooling.ASTalyzer.wrapper.astalyzer_cli import _choose_default_command, DEFAULT_CMD\r\n\r\n\r\ndef test_choose_default_command_prefers_python_when_npx_missing(monkeypatch):\r\n    # Simulate missing external tools (npx, ts-node) so chooser falls back to Python\r\n    monkeypatch.setattr(\r\n        \"Prismata.Projects.Tooling.ASTalyzer.wrapper.astalyzer_cli.shutil.which\",\r\n        lambda name: None,\r\n    )\r\n    cmd = _choose_default_command()\r\n    assert cmd == DEFAULT_CMD\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

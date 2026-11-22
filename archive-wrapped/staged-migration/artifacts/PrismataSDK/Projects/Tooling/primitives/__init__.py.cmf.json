@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-primitives-init-py",
+  "udi": "prismata.projects-tooling-primitives.wrapped-codeblock.init-f38af74b85",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "__init__.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/primitives/__init__.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/primitives/__init__.py",
+    "encoding": "utf-8",
+    "content_sha256": "1a0e7e6004ba560adc9c73f5d4abc5c9f4ac8a736b8adb326069d338f5720fe7"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# __init__.py for the Prismata Tooling primitives package\r\n# Must be empty\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-shared-schemas-shared-object-header-schema-yaml",
+  "udi": "prismata.meta-canonical-shared-schemas.wrapped-schema.shared-object-header-schema-a45395e7ea",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "shared-object-header.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/shared.schemas/shared-object-header.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/shared.schemas/shared-object-header.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "f195e3ab8127fed7b342f252e7906facb946a863c31c1dc35c708616b3a867a1"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: shared-object-header\r\nschema_type: shared\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.shared-object-header\r\n  name: shared-object-header.schema\r\n  description: Reusable object header block (UDI, ID, slug).\r\n\r\nspec:\r\n  target_kind: shared-object-header\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: udi\r\n    path: udi\r\n    type: string\r\n    required: true\r\n\r\n  - name: id\r\n    path: id\r\n    type: string\r\n    required: true\r\n\r\n  - name: slug\r\n    path: slug\r\n    type: string\r\n    required: true\r\n\r\nobject:\r\n  udi: \"\"\r\n  id: \"\"\r\n  slug: \"\"\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

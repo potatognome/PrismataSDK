@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-shared-schemas-shared-capabilities-schema-yaml",
+  "udi": "prismata.meta-canonical-shared-schemas.wrapped-schema.shared-capabilities-schema-df4ebcbe72",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "shared-capabilities.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/shared.schemas/shared-capabilities.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/shared.schemas/shared-capabilities.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "77d37b2452a6a6f1b058ea3c3dd4e8a9ce7da8a49dde467e796f306f8be0e5eb"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: schema\r\nschema_type: shared\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.shared-capabilities\r\n  name: shared-capabilities.schema\r\n  description: Shared capability identifiers for menu-items and UI actions.\r\n\r\nspec:\r\n  target_kind: capability\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: capability\r\n    path: capability\r\n    type: string\r\n    required: true\r\n\r\n  - name: category\r\n    path: category\r\n    type: string\r\n    required: false\r\n\r\n  - name: description\r\n    path: description\r\n    type: string\r\n    required: false\r\n\r\nobject:\r\n  capability: \"\"\r\n  category: \"\"\r\n  description: \"\"\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

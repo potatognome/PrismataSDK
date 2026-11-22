@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-astalyzer-src-astalyzer-parser-ts",
+  "udi": "prismata.projects-tooling-astalyzer-src-astalyzer.wrapped-codeblock.parser-ac3a9aa42f",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "parser.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/ASTalyzer/src/astalyzer/parser.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/ASTalyzer/src/astalyzer/parser.ts",
+    "encoding": "utf-8",
+    "content_sha256": "43274346fb7a3294635b322fbd29b5457619340bbbb0d15b0f20c90e6237a120"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "// TICCSEO prompt parser \r\nimport { PromptAST, createEmptyAST } from \"./model\";\r\n\r\nconst MARKERS = {\r\n  task: /^task\\s*:\\s*(.*)$/i,\r\n  input: /^input\\s*:\\s*(.*)$/i,\r\n  context: /^context\\s*:\\s*(.*)$/i,\r\n  output_format: /^(output\\s*format|output)\\s*:\\s*(.*)$/i,\r\n  style: /^style\\s*:\\s*(.*)$/i,\r\n  constraints: /^constraints\\s*:\\s*$/i,\r\n  examples: /^examples?\\s*:\\s*$/i,\r\n};\r\n\r\nexport function parsePrompt(raw: string): PromptAST {\r\n  const ast = createEmptyAST();\r\n  const lines = raw.split(/\\r?\\n/).map(l => l.trim()).filter(Boolean);\r\n\r\n  let mode: \"constraints\" | \"examples\" | null = null;\r\n\r\n  for (const line of lines) {\r\n    if (MARKERS.constraints.test(line)) {\r\n      mode = \"constraints\";\r\n      continue;\r\n    }\r\n    if (MARKERS.examples.test(line)) {\r\n      mode = \"examples\";\r\n      continue;\r\n    }\r\n\r\n    if (mode === \"constraints\" && line.startsWith(\"-\")) {\r\n      ast.constraints.push(line.slice(1).trim());\r\n      continue;\r\n    }\r\n    if (mode === \"examples\" && line.startsWith(\"-\")) {\r\n      ast.examples.push(line.slice(1).trim());\r\n      continue;\r\n    }\r\n\r\n    let matched = false;\r\n\r\n    for (const key of Object.keys(MARKERS)) {\r\n      const pattern = MARKERS[key as keyof typeof MARKERS];\r\n      const m = line.match(pattern);\r\n      if (!m) continue;\r\n\r\n      matched = true;\r\n      mode = null;\r\n\r\n      switch (key) {\r\n        case \"task\":\r\n          ast.task = m[1].trim();\r\n          break;\r\n        case \"input\":\r\n          ast.inputs.push(m[1].trim());\r\n          break;\r\n        case \"context\":\r\n          ast.context = m[1].trim();\r\n          break;\r\n        case \"output_format\":\r\n          ast.output_format = m[2].trim();\r\n          break;\r\n        case \"style\":\r\n          ast.style = m[1].trim();\r\n          break;\r\n      }\r\n      break;\r\n    }\r\n  }\r\n\r\n  return ast;\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

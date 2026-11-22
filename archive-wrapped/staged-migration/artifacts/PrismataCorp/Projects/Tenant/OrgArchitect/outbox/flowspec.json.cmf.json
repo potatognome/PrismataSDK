@@ -1,0 +1,36 @@
+{
+  "id": "projects-tenant-orgarchitect-outbox-flowspec-json",
+  "udi": "prismata.projects-tenant-orgarchitect-outbox.wrapped-object.flowspec-e6a7d5e765",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "flowspec.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Tenant/OrgArchitect/outbox/flowspec.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tenant/OrgArchitect/outbox/flowspec.json",
+    "encoding": "utf-8",
+    "content_sha256": "941239ade9d6f5285099261feded4f1632e4b9a0ef364f416a61895b9f1a4a35"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\"flow\": true}",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

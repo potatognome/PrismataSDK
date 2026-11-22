@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-manifest-sections-d-10-identity-yaml",
+  "udi": "prismata.meta-deprecated-manifest-sections-d.wrapped-object.x-10-identity-1a0888f340",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "10_identity.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/manifest_sections.d/10_identity.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/manifest_sections.d/10_identity.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "6375d1e10dfcdb47d75711645cea6d327e9d8646e462661fe3822dc3492225e3"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff_META:\r\n  SORT_ORDER: 10\r\n  description: \"Capabilities implemented by the project.\"\r\n\r\ncapabilities: []\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

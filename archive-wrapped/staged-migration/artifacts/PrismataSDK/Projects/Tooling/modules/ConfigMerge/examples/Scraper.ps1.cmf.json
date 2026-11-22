@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-modules-configmerge-examples-scraper-ps1",
+  "udi": "prismata.projects-tooling-modules-configmerge-examples.wrapped-codeblock.scraper-e478601dfc",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "Scraper.ps1",
+    "source_file_type": "ps1",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/modules/ConfigMerge/examples/Scraper.ps1",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/modules/ConfigMerge/examples/Scraper.ps1",
+    "encoding": "utf-8",
+    "content_sha256": "b9680f2c35a71e7c7b1887083c357a582e79e06dfdf73d3424613ce11f9640bf"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeffImport-Module \"$PSScriptRoot/../ConfigMerge.psm1\" -Force\r\n\r\nfunction Invoke-Scraper {\r\n    param(\r\n        [hashtable] $Defaults,\r\n        [hashtable] $ModeConfig,\r\n        [hashtable] $UserConfig,\r\n        [hashtable] $StyleConfig,\r\n        [hashtable] $CliConfig\r\n    )\r\n\r\n    $settings = Merge-Config -Defaults $Defaults `\r\n                             -Mode     $ModeConfig `\r\n                             -Config   $UserConfig `\r\n                             -Style    $StyleConfig `\r\n                             -Cli      $CliConfig\r\n\r\n    # Use $settings.includeTypes, $settings.excludeTypes, etc.\r\n    return $settings\r\n}",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "tests-test-chromascheme-schemas-py",
+  "udi": "prismata.tests.wrapped-schema.test-chromascheme-schemas-df1df7b796",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_chromascheme_schemas.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "schema",
+    "relative_path": "tests/test_chromascheme_schemas.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "tests/test_chromascheme_schemas.py",
+    "encoding": "utf-8",
+    "content_sha256": "d03ab47f0d0464490c1e384da91ce9ddc2d0bb7ae40f12ab92a696a517c6c7a3"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\"\"\"Tests for ChromaScheme canonical schemas and the colour_schema_validator.\"\"\"\r\nfrom __future__ import annotations\r\n\r\nimport sys\r\nfrom pathlib import Path\r\n\r\nimport yaml\r\nimport pytest\r\n\r\n# Add validators directory so colour_schema_validator is importable directly\r\nsys.path.insert(0, str(Path(__file__).resolve().parents[1] / \"Projects\" / \"Tooling\" / \"validators\"))\r\nimport colour_schema_validator as validator\r\n\r\n\r\ndef _prismata_root() -> str:\r\n    return str(Path(__file__).resolve().parent.parent)\r\n\r\n\r\n# ---------------------------------------------------------------------------\r\n# chromascheme.output.schema\r\n# ---------------------------------------------------------------------------\r\n\r\ndef test_valid_chromascheme_output():\r\n    root = _prismata_root()\r\n    instance = {\r\n        \"colourSet\": [\r\n            {\"id\": \"c0\", \"origin\": \"base\", \"rgb\": {\"r\": 255, \"g\": 120, \"b\": 200}},\r\n        ],\r\n        \"roles\": {\r\n            \"primary_surface\": {\"layers\": {\"bg\": {\"colourRef\": \"c0\"}}},\r\n        },\r\n        \"geometry\": {\r\n            \"baseGeometry\": \"quadratic\",\r\n            \"overlays\": [{\"type\": \"harmonic\", \"params\": {\"rotation\": 45}}],\r\n        },\r\n    }\r\n    errs = validator.validate_chromascheme_output(instance, root)\r\n    assert errs == [], f\"Unexpected errors: {errs}\"\r\n\r\n\r\ndef test_chromascheme_output_missing_required():\r\n    root = _prismata_root()\r\n    # Missing 'geometry'\r\n    instance = {\r\n        \"colourSet\": [{\"id\": \"c0\", \"rgb\": {\"r\": 0, \"g\": 0, \"b\": 0}}],\r\n        \"roles\": {},\r\n    }\r\n    errs = validator.validate_chromascheme_output(instance, root)\r\n    assert len(errs) >= 1\r\n\r\n\r\ndef test_chromascheme_output_missing_colour_id():\r\n    root = _prismata_root()\r\n    instance = {\r\n        \"colourSet\": [\r\n            # Missing 'id' \u2014 violates required: [id, rgb]\r\n            {\"origin\": \"base\", \"rgb\": {\"r\": 0, \"g\": 0, \"b\": 0}},\r\n        ],\r\n        \"roles\": {},\r\n        \"geometry\": {\"baseGeometry\": \"quadratic\", \"overlays\": []},\r\n    }\r\n    errs = validator.validate_chromascheme_output(instance, root)\r\n    assert len(errs) >= 1\r\n\r\n\r\n# ---------------------------------------------------------------------------\r\n# colour.roles.schema\r\n# ---------------------------------------------------------------------------\r\n\r\ndef test_valid_colour_roles():\r\n    root = _prismata_root()\r\n    instance = {\r\n        \"roles\": {\r\n            \"primary_surface\": {\"layers\": {\"bg\": {\"colourRef\": \"c0\"}}},\r\n            \"border_fg\": {\"layers\": {\"fg\": {\"colourRef\": \"c4\"}}},\r\n        }\r\n    }\r\n    errs = validator.validate_colour_roles(instance, root)\r\n    assert errs == [], f\"Unexpected errors: {errs}\"\r\n\r\n\r\ndef test_colour_roles_empty_is_valid():\r\n    root = _prismata_root()\r\n    # No required fields at the top level\r\n    errs = validator.validate_colour_roles({}, root)\r\n    assert errs == []\r\n\r\n\r\n# ---------------------------------------------------------------------------\r\n# colour.preview.multipane.schema\r\n# ---------------------------------------------------------------------------\r\n\r\ndef test_valid_multipane_preview():\r\n    root = _prismata_root()\r\n    instance = {\r\n        \"panes\": [\r\n            {\r\n                \"role\": \"primary_surface\",\r\n                \"layers\": {\"bg\": {\"colourRef\": \"c0\"}},\r\n                \"fractalPosition\": \"Q1\",\r\n                \"proportion\": 0.5,\r\n            },\r\n            {\r\n                \"role\": \"secondary_surface\",\r\n                \"layers\": {\"bg\": {\"colourRef\": \"c1\"}, \"border\": {\"colourRef\": \"c4\"}},\r\n                \"fractalPosition\": \"Q2\",\r\n                \"proportion\": 0.5,\r\n            },\r\n        ]\r\n    }\r\n    errs = validator.validate_multipane_preview(instance, root)\r\n    assert errs == [], f\"Unexpected errors: {errs}\"\r\n\r\n\r\ndef test_multipane_preview_invalid_fractal_position():\r\n    root = _prismata_root()\r\n    instance = {\r\n        \"panes\": [\r\n            {\r\n                \"role\": \"primary_surface\",\r\n                \"layers\": {},\r\n                \"fractalPosition\": \"Q99\",  # not in enum\r\n                \"proportion\": 0.5,\r\n            }\r\n        ]\r\n    }\r\n    errs = validator.validate_multipane_preview(instance, root)\r\n    assert len(errs) >= 1\r\n\r\n\r\ndef test_multipane_preview_proportion_out_of_range():\r\n    root = _prismata_root()\r\n    instance = {\r\n        \"panes\": [\r\n            {\r\n                \"role\": \"primary_surface\",\r\n                \"layers\": {},\r\n                \"fractalPosition\": \"Q1\",\r\n                \"proportion\": 1.5,  # > 1\r\n            }\r\n        ]\r\n    }\r\n    errs = validator.validate_multipane_preview(instance, root)\r\n    assert len(errs) >= 1\r\n\r\n\r\ndef test_multipane_preview_pane_missing_required():\r\n    root = _prismata_root()\r\n    instance = {\r\n        \"panes\": [\r\n            # Missing 'role', 'fractalPosition', 'proportion'\r\n            {\"layers\": {\"bg\": {\"colourRef\": \"c0\"}}},\r\n        ]\r\n    }\r\n    errs = validator.validate_multipane_preview(instance, root)\r\n    assert len(errs) >= 1\r\n\r\n\r\n# ---------------------------------------------------------------------------\r\n# Sample instance round-trip\r\n# ---------------------------------------------------------------------------\r\n\r\ndef test_sample_scheme_loads_and_validates():\r\n    root = _prismata_root()\r\n    sample_path = (\r\n        Path(root) / \"Meta\" / \"canonical\" / \"colour\" / \"samples\" / \"quadratic-4-8.scheme.yaml\"\r\n    )\r\n    with open(sample_path, \"r\", encoding=\"utf-8\") as fh:\r\n        instance = yaml.safe_load(fh)\r\n\r\n    errs = validator.validate_chromascheme_output(instance, root)\r\n    assert errs == [], f\"Sample failed validation: {errs}\"\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-schemas-selection-logic-yaml",
+  "udi": "prismata.projects-applications-universe-config-schemas.wrapped-schema.selection-logic-38dcd645c1",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "selection-logic.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Applications/Universe/config/schemas/selection-logic.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/schemas/selection-logic.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "c72a7cad9d8cbb46618dd271e3f8901f8360564f9e55fd64e7a8e33e54982ca3"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: selection-logic.yaml\r\n## Type: schema\r\n## Purpose: Schema describing selection logic (compatibility checks,\r\n## visible operations) used by UI and CLI selection subsystems.\r\n\r\nmetadata:\r\n  udi: prismata.universe.schema.selection-logic\r\n  name: selection-logic\r\n  kind: schema-definition\r\n  description: \"Schema describing selection logic (compatibility checks, visible operations).\"\r\n\r\n\r\nid: \"prismata.universe.schema.selection-logic\"\r\nversion: \"1.0.0\"\r\ntype: object\r\nproperties:\r\n  selection_type: { type: string }\r\n  selection_count: { type: integer }\r\n  reference_object_selected: { type: boolean }\r\n  compatibility_matrix:\r\n    type: object\r\n    properties:\r\n      type_compatible: { type: boolean }\r\n      semantic_compatible: { type: boolean }\r\n      version_compatible: { type: boolean }\r\n      registry_compatible: { type: boolean }\r\n  visible_operations:\r\n    type: array\r\n    items: { type: string }\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

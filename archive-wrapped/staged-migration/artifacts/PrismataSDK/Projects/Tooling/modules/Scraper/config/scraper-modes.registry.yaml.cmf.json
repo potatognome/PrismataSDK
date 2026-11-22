@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-modules-scraper-config-scraper-modes-registry-yaml",
+  "udi": "prismata.projects-tooling-modules-scraper-config.wrapped-object.scraper-modes-registry-70aa65cb87",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "scraper-modes.registry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Tooling/modules/Scraper/config/scraper-modes.registry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/modules/Scraper/config/scraper-modes.registry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "bd9d7b0b64782afb96ccb06a1d29f8fdf2bab07fec8d65a9132247e175726b7a"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeffmodes:\n\n  # ---------------------------------------------------------\n  # Base Modes\n  # ---------------------------------------------------------\n\n  default:\n    includeType: [\"*\"]\n    excludeFolders: [\"node_modules\", \"dist\", \"build\", \".git\"]\n    \n  docs-only:\n    includeType: [\".md\", \".txt\"]\n    excludeFolders: [\"node_modules\", \"dist\", \"build\", \".git\"]\n\n  yaml:\n    includeType: [\".yaml\"]\n    excludeFolders: [\"node_modules\", \".git\"]\n\n  json:\n    includeType: [\".json\"]\n    excludeFolders: [\"node_modules\", \".git\"]\n\n  ts:\n    includeType: [\".ts\"]\n    excludeFolders: [\"node_modules\", \"dist\", \"build\"]\n\n  py:\n    includeType: [\".py\"]\n    excludeFolders: [\"__pycache__\", \".git\"]\n\n  copilot:\n    includeFolders: [\".github\"]\n    includeType: [\".md\", \".txt\"]\n    excludeFolders: [\"node_modules\", \"dist\", \"build\"]\n\n  # ---------------------------------------------------------\n  # Composite / Inherited Modes\n  # ---------------------------------------------------------\n\n  summary-docs:\n    extends: \"docs-only\"\n    ignoreType: [\".txt\"]\n    excludeFolders: [\"drafts\", \"archive\"]\n\n  code-only:\n    includeType: [\".ts\", \".py\", \".ps1\", \".psm1\", \".psd1\"]\n    excludeFolders: [\"node_modules\", \"dist\", \"build\", \"__pycache__\", \".git\"]\n\n  config-only:\n    includeType: [\".json\", \".yaml\"]\n    excludeFolders: [\"node_modules\", \"dist\", \"build\", \".git\"]\n\n  config-clean:\n    extends: \"config-only\"\n    excludeFolders: [\"archive\", \"legacy\"]\n\n  ts-docs:\n    extends: \"ts\"\n    includeType: [\".ts\", \".md\"]\n    excludeFolders: [\"node_modules\", \"dist\", \"build\"]\n\n  py-docs:\n    extends: \"py\"\n    includeType: [\".py\", \".md\"]\n    excludeFolders: [\"__pycache__\", \".git\"]\n\n  analysis:\n    includeType: [\".md\", \".yaml\", \".json\"]\n    excludeFolders: [\"node_modules\", \"dist\", \"build\", \"__pycache__\", \".git\"]\n\n  frontend:\n    includeType: [\".ts\", \".md\", \".json\"]\n    excludeFolders: [\"node_modules\", \"dist\", \"build\"]\n\n  backend:\n    includeType: [\".py\", \".json\", \".yaml\"]\n    excludeFolders: [\"__pycache__\", \".git\", \"dist\", \"build\"]\n\n  # ---------------------------------------------------------\n  # Highly Filtered / Specialized Modes\n  # ---------------------------------------------------------\n\n  docs-minimal:\n    extends: \"docs-only\"\n    ignoreType: [\".txt\"]\n    excludeFolders: [\"drafts\", \"samples\", \"archive\", \"temp\"]\n\n  config-schema:\n    extends: \"config-only\"\n    includeFolders: [\"schema\"]\n    excludeFolders: [\"node_modules\", \"dist\", \"build\", \".git\"]\n\n  copilot-clean:\n    extends: \"copilot\"\n    excludeFolders: [\"drafts\", \"samples\"]\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

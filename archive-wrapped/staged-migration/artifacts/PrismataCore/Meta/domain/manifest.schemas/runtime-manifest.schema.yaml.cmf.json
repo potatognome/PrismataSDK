@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-manifest-schemas-runtime-manifest-schema-yaml",
+  "udi": "prismata.meta-domain-manifest-schemas.wrapped-manifest.runtime-manifest-schema-1440aa5590",
+  "kind": "wrapped-manifest",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "runtime-manifest.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "manifest",
+    "relative_path": "Meta/domain/manifest.schemas/runtime-manifest.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/manifest.schemas/runtime-manifest.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "567198b5418cad2f9b579b98245481c0819b8e6c358e57766592f02f3ae54f2d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: runtime-manifest\r\nschema_type: manifest\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.runtime-manifest\r\n  name: runtime-manifest.schema\r\n  description: Canonical schema for runtime manifests.\r\n\r\nspec:\r\n  target_kind: runtime-manifest\r\n  naming:\r\n    file_suffix: .runtime.manifest.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: udi\r\n    path: udi\r\n    type: string\r\n    required: true\r\n\r\n  - name: id\r\n    path: id\r\n    type: string\r\n    required: true\r\n\r\n  - name: config\r\n    path: config\r\n    type: object\r\n    required: false\r\n\r\nobject:\r\n  udi: \"\"\r\n  id: \"\"\r\n  config: {}\r\n\r\n",
+    "classification": {
+      "subtype": "manifest",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

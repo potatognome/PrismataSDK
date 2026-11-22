@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-shared-schemas-shared-geometry-schema-yaml",
+  "udi": "prismata.meta-canonical-shared-schemas.wrapped-schema.shared-geometry-schema-6220742d53",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "shared-geometry.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/shared.schemas/shared-geometry.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/shared.schemas/shared-geometry.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "0b3e302d28d09ec99c8ad194163eb2eab8ac36260586bbba4d89ccc99b99e923"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: schema\r\nschema_type: shared\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.shared-geometry\r\n  name: shared-geometry.schema\r\n  description: Shared geometry fields for coordinate systems, alignment, and scaling.\r\n\r\nspec:\r\n  target_kind: geometry\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: x\r\n    path: x\r\n    type: integer\r\n    required: false\r\n\r\n  - name: y\r\n    path: y\r\n    type: integer\r\n    required: false\r\n\r\n  - name: width\r\n    path: width\r\n    type: integer\r\n    required: false\r\n\r\n  - name: height\r\n    path: height\r\n    type: integer\r\n    required: false\r\n\r\n  - name: align\r\n    path: align\r\n    type: string\r\n    required: false\r\n\r\n  - name: scale\r\n    path: scale\r\n    type: string\r\n    required: false\r\n\r\nobject:\r\n  x: 0\r\n  y: 0\r\n  width: 100\r\n  height: 100\r\n  align: \"\"\r\n  scale: \"\"\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

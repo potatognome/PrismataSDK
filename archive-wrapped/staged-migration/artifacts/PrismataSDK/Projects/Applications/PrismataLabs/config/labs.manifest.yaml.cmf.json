@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-prismatalabs-config-labs-manifest-yaml",
+  "udi": "prismata.projects-applications-prismatalabs-config.wrapped-manifest.labs-manifest-eee1eee518",
+  "kind": "wrapped-manifest",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "labs.manifest.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "manifest",
+    "relative_path": "Projects/Applications/PrismataLabs/config/labs.manifest.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/PrismataLabs/config/labs.manifest.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "1853a22d78825de93b97fcaed4bc4b1d173bb1ed3d4523054a990a4e08d20d1d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeffmetadata:\r\n  udi: prismata.prismatalabs.manifest\r\n  name: PrismataLabs Application Manifest\r\n  version: 0.3.1\r\n  kind: application-manifest\r\n  description: >\r\n    PrismataLabs preview environment for colour-schemes, border-patterns,\r\n    panes, menus, menu-items, and ui-frameworks. Provides a Python-first\r\n    preview engine and structured menu-driven workflow. Updated menu schema\r\n    version: 0.4.3.\r\n\r\n# ---------------------------------------------------------------------------\r\n# Application Roots\r\n# ---------------------------------------------------------------------------\r\n\r\npaths:\r\n  pythonBridge: \"./python/python_bridge.py\"\r\n  capabilities: \"./config/capability-manifest.yaml\"\r\n  projectMenus: \"./config/project-menus\"\r\n  settings: \"./config/labs.settings.yaml\"\r\n\r\n# ---------------------------------------------------------------------------\r\n# Preview Engine Configuration\r\n# ---------------------------------------------------------------------------\r\n\r\npreview:\r\n  enable: true\r\n\r\n  # Default preview roles\r\n  defaultColourScheme: \"default\"\r\n  defaultBorderPattern: \"default\"\r\n  defaultUIFramework: \"default\"\r\n\r\n  # Preview behaviour flags\r\n  showBorder: true\r\n  showColour: true\r\n  showHeader: true\r\n  showFooter: true\r\n\r\n  # Multi-pane preview defaults\r\n  multiPane:\r\n    layout: \"horizontal\"\r\n    maxWidth: 120\r\n    maxHeight: 40\r\n\r\n# ---------------------------------------------------------------------------\r\n# Registry Roots (canonical Meta)\r\n# ---------------------------------------------------------------------------\r\n\r\nregistry:\r\n  colourSchemes: \"../../../Meta/registry/colour-scheme.d\"\r\n  colourRoles: \"../../../Meta/registry/colour-role.d\"\r\n  borderPatterns: \"../../../Meta/registry/border-pattern.d\"\r\n  uiFrameworks: \"../../../Meta/registry/ui-framework.d\"\r\n  panes: \"../../../Meta/registry/pane.d\"\r\n\r\n# ---------------------------------------------------------------------------\r\n# Manifest & Schema Roots\r\n# ---------------------------------------------------------------------------\r\n\r\nschemas:\r\n  manifestSchemas: \"../../../Meta/domain/manifest.schemas\"\r\n  objectSchemas: \"../../../Meta/canonical/object.schemas\"\r\n  compositionSchemas: \"../../../Meta/canonical/composition.schemas\"\r\n\r\n# ---------------------------------------------------------------------------\r\n# Application Behaviour\r\n# ---------------------------------------------------------------------------\r\n\r\nbehaviour:\r\n  allowDynamicHeader: true\r\n  allowDynamicFooter: true\r\n  allowConditionalVisibility: true\r\n  allowConditionalEnablement: true\r\n  allowMenuItemInjection: true\r\n\r\n# ---------------------------------------------------------------------------\r\n# Universe2 Integration\r\n# ---------------------------------------------------------------------------\r\n\r\nuniverseIntegration:\r\n  ingestMenus: true\r\n  ingestCapabilities: true\r\n  ingestPreviewEngine: true\r\n  submenuName: \"PrismataLabs\"\r\n  submenuIcon: \"\u00f0\u0178\u00a7\u00aa\"\r\n\r\n# ---------------------------------------------------------------------------\r\n# PrismCommander Integration (future)\r\n# ---------------------------------------------------------------------------\r\n\r\nprismCommander:\r\n  ingestComponents: true\r\n  ingestPreviewableObjects: true\r\n  submenuName: \"Labs2 Components\"\r\n  submenuIcon: \"\u00f0\u0178\u201d\u00a7\"\r\n\r\n# ---------------------------------------------------------------------------\r\n# Diagnostics\r\n# ---------------------------------------------------------------------------\r\n\r\ndiagnostics:\r\n  enableLogging: true\r\n  logFile: \"./logs/labs2.log\"\r\n  showValidationErrors: true\r\n  showPreviewMetadata: true\r\n\r\n",
+    "classification": {
+      "subtype": "manifest",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

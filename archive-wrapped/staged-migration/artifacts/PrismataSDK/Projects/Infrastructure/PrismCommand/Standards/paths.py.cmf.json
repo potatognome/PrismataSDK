@@ -1,0 +1,36 @@
+{
+  "id": "projects-infrastructure-prismcommand-standards-paths-py",
+  "udi": "prismata.projects-infrastructure-prismcommand-standards.wrapped-codeblock.paths-052e3e5263",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "paths.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Infrastructure/PrismCommand/Standards/paths.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Infrastructure/PrismCommand/Standards/paths.py",
+    "encoding": "utf-8",
+    "content_sha256": "f1de786b445d6ef7227fcdbfaafa930036d98aece82d06d5ec0a10c43b2de4a2"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\r\nimport pathlib\r\nPRISMATA_ROOT = pathlib.Path(__file__).resolve().parents[4]\r\nORGARCHITECT_DIR = (PRISMATA_ROOT / \"Projects\" / \"Tenant\" / \"OrgArchitect\").resolve()\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

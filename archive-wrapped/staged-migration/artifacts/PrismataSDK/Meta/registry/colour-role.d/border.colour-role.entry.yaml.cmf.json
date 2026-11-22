@@ -1,0 +1,36 @@
+{
+  "id": "meta-registry-colour-role-d-border-colour-role-entry-yaml",
+  "udi": "prismata.meta-registry-colour-role-d.wrapped-object.border-colour-role-entry-f8af5ea545",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "border.colour-role.entry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/registry/colour-role.d/border.colour-role.entry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/registry/colour-role.d/border.colour-role.entry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "d4193f88947ed2faa519689a380c013778aeee6a5374b0c8bc80506d9da65769"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: border.colour-role.entry.yaml\r\n## Type: colour-role registry entry (0.4.0)\r\n## Purpose: Border colour-role registry entry for Prismata terminal UI.\r\n## Provides semantic role mapping for the border foreground and background colours.\r\n\r\nid: border\r\nudi: prismata.meta.colour-role.border\r\nslug: border\r\nname: border.colour-role\r\nlabel: \"Border\"\r\nkind: colour-role\r\ndescription: Semantic role for the border foreground & background.\r\nschema_version: 0.4.1\r\n\r\nlayers:\r\n  bg: \"ansi:rgb(10,10,12)\"\r\n  fg: \"ansi:rgb(160,160,160)\"\r\n\r\nmeta:\r\n  created_by: Daniel\r\n  created_at: 2026-10-01\r\n  schema_version: 0.4.1\r\n\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

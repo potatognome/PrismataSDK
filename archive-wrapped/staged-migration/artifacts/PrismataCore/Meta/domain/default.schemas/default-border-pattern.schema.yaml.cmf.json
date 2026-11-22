@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-default-schemas-default-border-pattern-schema-yaml",
+  "udi": "prismata.meta-domain-default-schemas.wrapped-schema.default-border-pattern-schema-50f897a5e6",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "default-border-pattern.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/domain/default.schemas/default-border-pattern.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/default.schemas/default-border-pattern.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "420b7a5d0e90e00efdb57070b6663986231d061624ae89eaea068c48642cec62"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: default-border-pattern\r\nschema_type: defaults\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.default-border-pattern\r\n  name: default-border-pattern.schema\r\n  description: Canonical schema defining default border pattern selection.\r\n\r\nspec:\r\n  target_kind: default-border-pattern\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: pattern\r\n    path: pattern\r\n    type: string\r\n    required: false\r\n\r\nobject:\r\n  border_pattern: \"\"\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

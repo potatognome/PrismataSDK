@@ -1,0 +1,36 @@
+{
+  "id": "projects-tenant-orgarchitect-outbox-jobspec-json",
+  "udi": "prismata.projects-tenant-orgarchitect-outbox.wrapped-object.jobspec-621403f691",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "jobspec.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Tenant/OrgArchitect/outbox/jobspec.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tenant/OrgArchitect/outbox/jobspec.json",
+    "encoding": "utf-8",
+    "content_sha256": "f635ffbc5adff3f3a3eac635805696dfbab95dd35d2c5ba933c9f55ebeff30f4"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\"job\": true}",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

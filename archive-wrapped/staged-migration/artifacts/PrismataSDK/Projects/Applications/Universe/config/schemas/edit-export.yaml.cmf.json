@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-schemas-edit-export-yaml",
+  "udi": "prismata.projects-applications-universe-config-schemas.wrapped-schema.edit-export-b8bb3d2ad2",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "edit-export.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Applications/Universe/config/schemas/edit-export.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/schemas/edit-export.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "2d080f25d17a7d8072ad72bdd59afe67c5106fc75afb20cc718e3e59fd2536f3"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: edit-export.yaml\r\n## Type: schema\r\n## Purpose: Schema for export operation parameters used by edit/export\r\n## commands (path, type, naming options).\r\n\r\nmetadata:\r\n  udi: prismata.universe.schema.edit-export\r\n  name: edit-export\r\n  kind: schema-definition\r\n  description: \"Schema for export operation parameters used by edit/export commands.\"\r\n\r\n\r\nid: \"prismata.universe.schema.edit-export\"\r\nversion: \"1.0.0\"\r\ntype: object\r\nproperties:\r\n  export_path: { type: string }\r\n  file_type: { type: string }\r\n  naming_convention_enabled: { type: boolean }\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

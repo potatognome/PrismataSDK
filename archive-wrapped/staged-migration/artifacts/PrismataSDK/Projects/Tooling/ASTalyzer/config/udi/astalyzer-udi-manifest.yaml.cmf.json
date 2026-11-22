@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-astalyzer-config-udi-astalyzer-udi-manifest-yaml",
+  "udi": "prismata.projects-tooling-astalyzer-config-udi.wrapped-manifest.astalyzer-udi-manifest-1f52a37c16",
+  "kind": "wrapped-manifest",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "astalyzer-udi-manifest.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "manifest",
+    "relative_path": "Projects/Tooling/ASTalyzer/config/udi/astalyzer-udi-manifest.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/ASTalyzer/config/udi/astalyzer-udi-manifest.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "082012990ad0a77761412fae42841d2dc171962a54a91bcf5c93ae74ba558ffd"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# UDI manifest\r\nmetadata:\r\n  udi: prismata.astalyzer.manifest.astalyzer\r\n  name: ASTalyzer\r\n  version: 0.2.0\r\n  kind: manifest\r\n  description: UDI manifest for the ASTalyzer prompt and API scanning tool.\r\n\r\nudi: prismata.astalyzer.manifest.astalyzer\r\nversion: 0.2.0\r\nkind: manifest\r\napplication: ASTalyzer\r\n\r\ncapabilities:\r\n  - id: \"prismata.astalyzer.capability.analyze-prompt-ticcseo\"\r\n    name: Analyze Prompt (TICCSEO AST)\r\n    description: Parse a raw prompt string into a TICCSEO AST.\r\n    inputs:\r\n      - id: prompt_raw\r\n        type: text\r\n        required: true\r\n    outputs:\r\n      - id: prompt_ast\r\n        type: object\r\n        schema_id: \"prismata.astalyzer.schema.prompt-ast-ticcseo\"\r\n        required: true\r\n\r\n  - id: \"prismata.astalyzer.capability.scan-api-recursive\"\r\n    name: Scan APIs (Recursive)\r\n    description: Recursively scan a folder or file for external API usage.\r\n    inputs:\r\n      - id: root_path\r\n        type: path\r\n        required: true\r\n    outputs:\r\n      - id: api_report\r\n        type: object\r\n        schema_id: \"prismata.astalyzer.schema.api-scan-report\"\r\n        required: true\r\n    options:\r\n      - id: include_internal\r\n        type: boolean\r\n        default: false\r\n      - id: include_types\r\n        type: boolean\r\n        default: true\r\n\r\nrouting:\r\n  engine: pcms2026\r\n  mode: cli\r\n  entrypoint: src/astalyzer/main.ts\r\n",
+    "classification": {
+      "subtype": "manifest",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

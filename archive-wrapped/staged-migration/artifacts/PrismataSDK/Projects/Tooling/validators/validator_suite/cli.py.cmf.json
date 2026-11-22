@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-validators-validator-suite-cli-py",
+  "udi": "prismata.projects-tooling-validators-validator-suite.wrapped-codeblock.cli-24342b3dd2",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "cli.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/validators/validator_suite/cli.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/validators/validator_suite/cli.py",
+    "encoding": "utf-8",
+    "content_sha256": "fdce4c7df96569abb2b701e94f45332d6570ceb8452cd84433b307b4adb21b00"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "from Projects.Tooling.validators.validator_suite.runner import run_all_validators, fix_all\n\ndef run_cli():\n    import argparse\n    parser = argparse.ArgumentParser(description='Prismata Validator Suite')\n    parser.add_argument(\"--fix\", action=\"store_true\", help=\"Fix all issues\")\n    parser.add_argument(\"--gui\", action=\"store_true\", help=\"Launch GUI dashboard\")\n    parser.add_argument(\"--root\", default=\".\", help=\"Repo root to validate\")\n\n    args = parser.parse_args()\n\n    if args.gui:\n        from Projects.Tooling.validators.validator_suite.gui import ValidatorDashboard\n        app = ValidatorDashboard()\n        app.mainloop()\n        return\n\n    results = run_all_validators(args.root)\n    print(\"Validator Suite Report\")\n    print(\"----------------------\")\n    print(f\"Casing issues: {len(results['casing']['issues'])}\")\n    print(f\"BOM issues: {len(results['bom']['issues'])}\")\n    print(f\"Repo gate issues: {results['repo_gate']['summary']['failed_checks']}\")\n\n    if args.fix:\n        fix_all(results)\n        print(\"\\nFixes applied.\")\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

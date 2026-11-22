@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-examples-schemas-example-registry-entry-schema-yaml",
+  "udi": "prismata.meta-domain-examples-schemas.wrapped-schema.example-registry-entry-schema-c75d106d20",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "example-registry-entry.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/domain/examples.schemas/example-registry-entry.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/examples.schemas/example-registry-entry.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "891d6cb80a650eaab5e93013c382a4aaee72610cf7a9c3999ee0b7ec4999a568"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: example-registry-entry\r\nschema_type: examples\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.example-registry-entry\r\n  name: example-registry-entry.schema\r\n  description: Minimal example registry entry for documentation and testing.\r\n\r\nspec:\r\n  target_kind: example-registry-entry\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: id\r\n    path: id\r\n    type: string\r\n    required: true\r\n\r\n  - name: label\r\n    path: label\r\n    type: string\r\n    required: false\r\n\r\nobject:\r\n  id: \"example-entry\"\r\n  label: \"Example Entry\"\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

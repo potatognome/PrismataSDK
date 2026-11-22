@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-dependencyinspector-gui-py",
+  "udi": "prismata.projects-applications-dependencyinspector.wrapped-codeblock.gui-c5501cd702",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "gui.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/DependencyInspector/gui.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/DependencyInspector/gui.py",
+    "encoding": "utf-8",
+    "content_sha256": "03da030ca020987c162e4ad7d3eba50aba2f94b258ab6b2e2706b278f71057cb"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import tkinter as tk\r\nfrom tkinter import ttk\r\nfrom .core.schema_loader import load_all_schemas\r\nfrom .core.registry_loader import load_registry\r\nfrom .core.dependency_extractor import extract_dependencies_from_schema, analyze_manifest\r\nfrom .core.renderer_simulator import simulate_renderer\r\nfrom .core.utils import flatten_registry\r\n\r\ndef run_gui():\r\n    schemas = load_all_schemas()\r\n    registry = load_registry()\r\n\r\n    app = PrismataVisualizer(registry, schemas)\r\n    app.mainloop()\r\n\r\nclass PrismataVisualizer(tk.Tk):\r\n    def __init__(self, registry, schemas):\r\n        super().__init__()\r\n        self.title(\"Prismata Dependency & Renderer Visualizer\")\r\n        self.geometry(\"900x600\")\r\n\r\n        self.registry = registry\r\n        self.schemas = schemas\r\n\r\n        self.create_widgets()\r\n\r\n    def create_widgets(self):\r\n        left = ttk.Frame(self)\r\n        left.pack(side=tk.LEFT, fill=tk.Y)\r\n\r\n        ttk.Label(left, text=\"Manifest Type\").pack(anchor=\"w\")\r\n        self.type_var = tk.StringVar()\r\n        type_combo = ttk.Combobox(left, textvariable=self.type_var,\r\n                                  values=list(self.registry.keys()))\r\n        type_combo.pack(fill=tk.X)\r\n        type_combo.bind(\"<<ComboboxSelected>>\", self.on_type_selected)\r\n\r\n        self.listbox = tk.Listbox(left)\r\n        self.listbox.pack(fill=tk.BOTH, expand=True)\r\n        self.listbox.bind(\"<<ListboxSelect>>\", self.on_manifest_selected)\r\n\r\n        right = ttk.Frame(self)\r\n        right.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)\r\n\r\n        self.text = tk.Text(right, wrap=\"none\")\r\n        self.text.pack(fill=tk.BOTH, expand=True)\r\n\r\n    def on_type_selected(self, event=None):\r\n        mtype = self.type_var.get()\r\n        self.listbox.delete(0, tk.END)\r\n        for entry_id in self.registry.get(mtype, {}):\r\n            self.listbox.insert(tk.END, entry_id)\r\n\r\n    def on_manifest_selected(self, event=None):\r\n        idx = self.listbox.curselection()\r\n        if not idx:\r\n            return\r\n\r\n        mtype = self.type_var.get()\r\n        entry_id = self.listbox.get(idx[0])\r\n\r\n        schema = self.schemas.get(mtype)\r\n        deps = extract_dependencies_from_schema(schema) if schema else []\r\n        manifest_file = self.registry[mtype][entry_id][\"file\"]\r\n\r\n        dep_graph = analyze_manifest(manifest_file, deps, flatten_registry(self.registry))\r\n        sim = simulate_renderer(mtype, entry_id, self.registry)\r\n\r\n        self.text.delete(\"1.0\", tk.END)\r\n        self.text.insert(tk.END, dep_graph)\r\n        self.text.insert(tk.END, \"\\n\\n\")\r\n        self.text.insert(tk.END, sim)\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

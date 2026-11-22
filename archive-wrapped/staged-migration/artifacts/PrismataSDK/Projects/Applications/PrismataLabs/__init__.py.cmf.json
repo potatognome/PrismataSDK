@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-prismatalabs-init-py",
+  "udi": "prismata.projects-applications-prismatalabs.wrapped-codeblock.init-ff3d6f6622",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "__init__.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/PrismataLabs/__init__.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/PrismataLabs/__init__.py",
+    "encoding": "utf-8",
+    "content_sha256": "c161a9e262f528d2f293c9657a7ed94d450f6f94e3490c8f2fbfbaec5bc2f579"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff# PrismataLabs application package\r\n# Must be empty\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

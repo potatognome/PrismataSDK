@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-object-schemas-menu-binding-schema-yaml",
+  "udi": "prismata.meta-canonical-object-schemas.wrapped-schema.menu-binding-schema-a4040e2c94",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "menu-binding.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/object.schemas/menu-binding.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/object.schemas/menu-binding.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "aba2a0868510baa5c871c56bf524b180a31cf6489f9285032fd102574c6cedf1"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: menu-binding\r\nschema_type: object\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.menu-binding\r\n  name: menu-binding.schema\r\n  description: Canonical schema defining bindings between menu-items and actions or panes.\r\n\r\nspec:\r\n  target_kind: menu-binding\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: id\r\n    path: id\r\n    type: string\r\n    required: true\r\n\r\n  - name: menuItem\r\n    path: menuItem\r\n    type: string\r\n    required: true\r\n\r\n  - name: action\r\n    path: action\r\n    type: string\r\n    required: false\r\n\r\n  - name: pane\r\n    path: pane\r\n    type: string\r\n    required: false\r\n\r\n  - name: parameters\r\n    path: parameters\r\n    type: object\r\n    required: false\r\n\r\nobject:\r\n  menuItem: \"\"\r\n  action: \"\"\r\n  pane: \"\"\r\n  parameters: {}\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

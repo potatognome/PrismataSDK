@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-examples-menu-samples-full-full-registry-overrides-yaml",
+  "udi": "prismata.meta-deprecated-examples-menu-samples-full.wrapped-object.full-registry-overrides-abeed48559",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "full-registry-overrides.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/examples/menu.samples/full/full-registry-overrides.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/examples/menu.samples/full/full-registry-overrides.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "ef836a21864b609c4a42b0cdec8a3a1855488f0815e2725a67e344cf2df5436d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeffmenuTypes:\r\n  main:\r\n    defaultColourScheme: main-menu\r\n    defaultBorderScheme: main-menu\r\n    defaultHeaderStyle: header\r\n    defaultHeaderColourScheme: header\r\n    defaultHeaderBorderScheme: main-menu\r\n    defaultSelectionMethod: number\r\n    defaultItemType: action\r\n\r\n  settings:\r\n    defaultColourScheme: settings-menu\r\n    defaultBorderScheme: settings-menu\r\n    defaultHeaderStyle: header\r\n    defaultHeaderColourScheme: header\r\n    defaultHeaderBorderScheme: settings-menu\r\n    defaultSelectionMethod: number\r\n    defaultItemType: toggle\r\n\r\n  admin:\r\n    defaultColourScheme: admin-menu\r\n    defaultBorderScheme: default\r\n    defaultHeaderStyle: header\r\n    defaultHeaderColourScheme: header\r\n    defaultHeaderBorderScheme: default\r\n    defaultSelectionMethod: number\r\n    defaultItemType: action\r\n\r\nmenuItemTypes:\r\n  action:\r\n    defaultColourScheme: primary-action\r\n    defaultSelectionMethod: number\r\n    behaviourFlags:\r\n      - executable\r\n      - routable\r\n\r\n  navigate:\r\n    defaultColourScheme: navigation-item\r\n    defaultSelectionMethod: number\r\n    behaviourFlags:\r\n      - routable\r\n\r\n  toggle:\r\n    defaultColourScheme: accent-toggle\r\n    defaultSelectionMethod: toggle\r\n    behaviourFlags:\r\n      - stateful\r\n\r\n  slider:\r\n    defaultColourScheme: slider-item\r\n    defaultSelectionMethod: slider\r\n    behaviourFlags:\r\n      - continuous\r\n\r\n  carousel:\r\n    defaultColourScheme: carousel-item\r\n    defaultSelectionMethod: carousel\r\n    behaviourFlags:\r\n      - cyclical\r\n\r\n  static:\r\n    defaultColourScheme: neutral-static\r\n    defaultSelectionMethod: none\r\n    behaviourFlags:\r\n      - informational\r\n\r\n  header:\r\n    defaultColourScheme: header-item\r\n    defaultSelectionMethod: none\r\n    behaviourFlags:\r\n      - noninteractive\r\n\r\n  menu:\r\n    defaultColourScheme: menu-item\r\n    defaultSelectionMethod: number\r\n    behaviourFlags:\r\n      - navigable\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

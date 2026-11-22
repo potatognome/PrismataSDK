@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-chromascheme-index-ts",
+  "udi": "prismata.projects-tooling-chromascheme.wrapped-codeblock.index-35bc686e73",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "index.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/chromascheme/index.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/chromascheme/index.ts",
+    "encoding": "utf-8",
+    "content_sha256": "3e71d20ba7d6ca24c782a26ddc1f880232d6cb917e9617013cafa1cb61c299e0"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "export * from \"./interfaces\";\r\nexport { ColourSet }           from \"./colourSet\";\r\nexport { ColourRefResolver }   from \"./colourRefResolver\";\r\nexport { FractalQuadrantMapper } from \"./fractalQuadrantMapper\";\r\nexport { PaneLayoutEngine }    from \"./paneLayoutEngine\";\r\nexport { PreviewRenderer }     from \"./previewRenderer\";\r\nexport { GeometryInterpreter } from \"./geometryInterpreter\";\r\nexport { RoleBindingResolver } from \"./roleBindingResolver\";\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

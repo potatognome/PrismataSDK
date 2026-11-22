@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-examples-menu-samples-full-full-headers-footers-yaml",
+  "udi": "prismata.meta-deprecated-examples-menu-samples-full.wrapped-object.full-headers-footers-0638b926fc",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "full-headers-footers.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/examples/menu.samples/full/full-headers-footers.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/examples/menu.samples/full/full-headers-footers.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "170bdfeaedcdfdd73411789e0d36758460ff62527feebce262eae5e5c7d44596"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeffheader:\r\n  udi: prismata.header.demo.main\r\n  text: Header/Footer Demo\r\n  style: header\r\n  colourScheme: header\r\n  borderScheme: main-menu\r\n  visibilityMode: Static\r\n  visibilityCondition: null\r\n  visibilityDependencies:\r\n    - demo_mode\r\n\r\nsubheader:\r\n  udi: prismata.header.demo.sub\r\n  text: Section A\r\n  style: subheader\r\n  colourScheme: subheader\r\n  borderScheme: main-menu\r\n  visibilityMode: Conditional\r\n  visibilityCondition: feature_flag('section_a') == true\r\n  visibilityDependencies:\r\n    - section_a\r\n\r\nfooter:\r\n  udi: prismata.footer.demo.main\r\n  text: F1: Help | F2: Options | Q: Quit\r\n  style: footer\r\n  colourScheme: footer\r\n  borderScheme: main-menu\r\n  visibilityMode: Static\r\n  visibilityCondition: null\r\n  visibilityDependencies:\r\n    - help_enabled\r\n\r\nsubfooter:\r\n  udi: prismata.subfooter.demo.main\r\n  text: Progress: 73%\r\n  style: subfooter\r\n  colourScheme: footer-progress\r\n  borderScheme: main-menu\r\n  visibilityMode: Conditional\r\n  visibilityCondition: env('SHOW_PROGRESS') == true\r\n  visibilityDependencies:\r\n    - show_progress\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

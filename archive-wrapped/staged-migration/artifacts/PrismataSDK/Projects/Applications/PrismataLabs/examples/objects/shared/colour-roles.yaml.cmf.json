@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-prismatalabs-examples-objects-shared-colour-roles-yaml",
+  "udi": "prismata.projects-applications-prismatalabs-examples-objects-shared.wrapped-object.colour-roles-2f7f772b38",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "colour-roles.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/PrismataLabs/examples/objects/shared/colour-roles.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/PrismataLabs/examples/objects/shared/colour-roles.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "809b5f6d2e7238143d5818211c938ccb34c5ba0c8b39122ee4060d7f0dcea5cb"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "kind: colour-roles\r\nentries:\r\n- id: example-pane-primary\r\n  udi: prismata.examples.colour-role.pane-primary\r\n  kind: colour-role\r\n  layers:\r\n    fg: ansi:rgb(220,220,220)\r\n    bg: ansi:rgb(12,17,26)\r\n- id: example-pane-secondary\r\n  udi: prismata.examples.colour-role.pane-secondary\r\n  kind: colour-role\r\n  layers:\r\n    fg: ansi:rgb(210,240,255)\r\n    bg: ansi:rgb(22,30,38)\r\n- id: example-menu-accent\r\n  udi: prismata.examples.colour-role.menu-accent\r\n  kind: colour-role\r\n  layers:\r\n    fg: ansi:rgb(120,220,255)\r\n    bg: ansi:rgb(12,22,34)\r\n- id: example-menu-border\r\n  udi: prismata.examples.colour-role.menu-border\r\n  kind: colour-role\r\n  layers:\r\n    fg: ansi:rgb(255,205,120)\r\n    bg: ansi:rgb(32,21,12)\r\n- id: example-item-border\r\n  udi: prismata.examples.colour-role.item-border\r\n  kind: colour-role\r\n  layers:\r\n    fg: ansi:rgb(160,160,160)\r\n    bg: ansi:rgb(17,17,22)\r\n- id: example-alert\r\n  udi: prismata.examples.colour-role.alert\r\n  kind: colour-role\r\n  layers:\r\n    fg: ansi:rgb(255,160,120)\r\n    bg: ansi:rgb(38,12,10)\r\n- id: example-border\r\n  udi: prismata.examples.colour-role.border\r\n  kind: colour-role\r\n  layers:\r\n    fg: ansi:rgb(163,175,200)\r\n    bg: ansi:rgb(10,10,12)\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

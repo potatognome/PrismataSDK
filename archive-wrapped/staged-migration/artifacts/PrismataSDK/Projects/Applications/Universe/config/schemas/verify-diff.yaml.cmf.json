@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-schemas-verify-diff-yaml",
+  "udi": "prismata.projects-applications-universe-config-schemas.wrapped-schema.verify-diff-e10ba3f208",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "verify-diff.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Applications/Universe/config/schemas/verify-diff.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/schemas/verify-diff.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "3b9bcbaeeb2bca6e3a3d14d5d61d212016237565271f76094b13af75b9a751ca"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: verify-diff.yaml\r\n## Type: schema\r\n## Purpose: Schema for diff/compare operations used to compute and\r\n## validate differences between objects for merge/preview workflows.\r\n\r\nmetadata:\r\n  udi: prismata.universe.schema.verify-diff\r\n  name: verify-diff\r\n  kind: schema-definition\r\n  description: \"Schema for diff/compare operations used to compute and validate differences between objects.\"\r\n\r\n\r\nid: \"prismata.universe.schema.verify-diff\"\r\nversion: \"2.0.0\"\r\ntype: object\r\nproperties:\r\n  compatible_keys: { type: array }\r\n  normalized_values: { type: array }\r\n  objects: { type: array }\r\n  diff_summary: { type: object }\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

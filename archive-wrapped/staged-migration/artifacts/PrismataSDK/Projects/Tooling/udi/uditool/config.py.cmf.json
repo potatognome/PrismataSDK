@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-udi-uditool-config-py",
+  "udi": "prismata.projects-tooling-udi-uditool.wrapped-codeblock.config-ba581189f8",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "config.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/udi/uditool/config.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/udi/uditool/config.py",
+    "encoding": "utf-8",
+    "content_sha256": "7f92ff26e2ee6b354842397dc1bad03345d78276b36b23258b86a50f29d69658"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import re\r\n\r\nCANONICAL_KINDS = [\r\n    \"api-ref\",\r\n    \"ast-node\",\r\n    \"capability\",\r\n    \"chroma-scheme\",\r\n    \"colour-keys\",\r\n    \"colour-roles\",\r\n    \"colour-scheme\",\r\n    \"composition\",\r\n    \"config\",\r\n    \"document\",\r\n    \"function-ref\",\r\n    \"log-file\",\r\n    \"manifest\",\r\n    \"menu\",\r\n    \"menu-item\",\r\n    \"metadata\",\r\n    \"pane\",\r\n    \"pane-roles\",\r\n    \"registry\",\r\n    \"scan-result\",\r\n    \"schema\",\r\n    \"service\",\r\n    \"search-result\",\r\n    \"ui-framework\",\r\n]\r\n\r\nCANONICAL_NAMESPACES = [\"prismata\", \"lumen\", \"nebula\"]\r\n\r\nUDI_REGEX = re.compile(r\"^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$\")\r\n\r\nFOLDER_SCOPE_MAP = {\r\n    \"Meta/canonical\": \"meta\",\r\n    \"ui-framework\": \"ui-framework\",\r\n    \"colour-schemes\": \"colour-scheme\",\r\n    \"chroma-schemes\": \"chroma-scheme\",\r\n    \"pane\": \"pane\",\r\n    \"pane-roles\": \"pane-roles\",\r\n    \"registry\": \"registry\",\r\n    \"log-files\": \"log-file\",\r\n}\r\n\r\nDETECTOR_VERSION = \"1.1.0\"\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

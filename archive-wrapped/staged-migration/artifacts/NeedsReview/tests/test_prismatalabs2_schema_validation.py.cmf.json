@@ -1,0 +1,36 @@
+{
+  "id": "tests-test-prismatalabs2-schema-validation-py",
+  "udi": "prismata.tests.wrapped-schema.test-prismatalabs2-schema-validation-41f497062b",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_prismatalabs2_schema_validation.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "schema",
+    "relative_path": "tests/test_prismatalabs2_schema_validation.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "tests/test_prismatalabs2_schema_validation.py",
+    "encoding": "utf-8",
+    "content_sha256": "b55efecc35a7b9a99dbee016b2935b7b7730d7960d0581871c0b9cf6fcbc2070"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufefffrom __future__ import annotations\r\n\r\nimport sys\r\nfrom pathlib import Path\r\n\r\nROOT = Path(__file__).resolve().parents[1]\r\nif str(ROOT) not in sys.path:\r\n    sys.path.insert(0, str(ROOT))\r\n\r\nfrom Projects.Applications.PrismataLabs.python.schema_validator import (\r\n    classify_object,\r\n    validate_collection,\r\n    validate_menu_item,\r\n    validate_ui_framework,\r\n)\r\n\r\n\r\ndef _labs2_examples() -> Path:\r\n    return (\r\n        ROOT\r\n        / \"Projects\"\r\n        / \"Applications\"\r\n        / \"PrismataLabs\"\r\n        / \"examples\"\r\n        / \"objects\"\r\n    )\r\n\r\n\r\ndef _load_yaml(path: Path):\r\n    import yaml\r\n\r\n    return yaml.safe_load(path.read_text(encoding=\"utf-8\"))\r\n\r\n\r\ndef test_classify_ui_framework_and_collections():\r\n    examples = _labs2_examples()\r\n    framework = _load_yaml(examples / \"ui_frameworks\" / \"single-pane.ui-framework.yaml\")\r\n    borders = _load_yaml(examples / \"shared\" / \"borders.yaml\")\r\n\r\n    assert classify_object(framework) == \"ui-framework\"\r\n    assert classify_object(borders) == \"border-pattern-collection\"\r\n\r\n\r\ndef test_validate_ui_framework_example_passes():\r\n    examples = _labs2_examples()\r\n    framework = _load_yaml(examples / \"ui_frameworks\" / \"single-pane.ui-framework.yaml\")\r\n\r\n    valid, errors = validate_ui_framework(framework)\r\n\r\n    assert valid is True\r\n    assert errors == []\r\n\r\n\r\ndef test_validate_border_collection_example_passes():\r\n    examples = _labs2_examples()\r\n    borders = _load_yaml(examples / \"shared\" / \"borders.yaml\")\r\n\r\n    valid, errors = validate_collection(borders, \"border-pattern\")\r\n\r\n    assert valid is True\r\n    assert errors == []\r\n\r\n\r\ndef test_validate_menu_item_rejects_unknown_capability():\r\n    item = {\r\n        \"id\": \"example-item\",\r\n        \"udi\": \"prismata.examples.menu-item.example-item\",\r\n        \"kind\": \"menu-item\",\r\n        \"label\": \"Example Item\",\r\n        \"capability\": \"prismata.examples.capability.not-declared\",\r\n        \"visibility_mode\": \"static\",\r\n        \"enable_mode\": \"enabled\",\r\n    }\r\n\r\n    valid, errors = validate_menu_item(\r\n        item,\r\n        capability_index={\"prismata.examples.capability.print-hello\"},\r\n    )\r\n\r\n    assert valid is False\r\n    assert any(\"Capability not declared\" in err for err in errors)\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

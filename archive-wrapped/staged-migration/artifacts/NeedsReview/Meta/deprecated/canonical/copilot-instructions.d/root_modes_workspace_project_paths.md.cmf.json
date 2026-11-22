@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-canonical-copilot-instructions-d-root-modes-workspace-project-paths-md",
+  "udi": "prismata.meta-deprecated-canonical-copilot-instructions-d.wrapped-agent-instruction.root-modes-workspace-project-paths-0faa0d5d02",
+  "kind": "wrapped-agent-instruction",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "root_modes_workspace_project_paths.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "agent-instruction",
+    "relative_path": "Meta/deprecated/canonical/copilot-instructions.d/root_modes_workspace_project_paths.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/canonical/copilot-instructions.d/root_modes_workspace_project_paths.md",
+    "encoding": "utf-8",
+    "content_sha256": "fad224d4295787a3d20fc986dabe1223c32aed44740164412bd1e62566ffd6e2"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Workspace vs Project Root Modes (Config, Logs, Data)\r\n\r\n# LAST UPDATE: 2026-07-23\r\n\r\n## Purpose\r\n\r\n- Define a single agent policy for using alternate workspace-level and\r\nproject-level folders for config, logs, and output data.\r\n\r\n## Scope\r\n\r\n- Applies to all active development areas under `/Prismata/Projects/` and\r\n  `Applications/`.\r\n- Applies to runtime code, scripts, tests, docs, and generated files.\r\n\r\n## Root Mode Contract\r\n\r\nAgents must respect `ROOT_MODES` in app config and never hardcode output roots.\r\n\r\nSupported mode values:\r\n\r\n- `project`\r\n- `workspace`\r\n\r\nCommon keys used by projects:\r\n\r\n- `ROOT_MODES.CONFIG`\r\n- `ROOT_MODES.LOGS`\r\n- `ROOT_MODES.INPUTS`\r\n- `ROOT_MODES.OUTPUTS`\r\n- `ROOT_MODES.TESTS_CONFIG`\r\n- `ROOT_MODES.TESTS_LOGS`\r\n- `ROOT_MODES.TESTS_INPUTS`\r\n- `ROOT_MODES.TESTS_OUTPUTS`\r\n\r\nIf a key is missing, default to `project` behavior.\r\n\r\n## Canonical Folders\r\n\r\nWhen mode is `project`, use project-local folders from `PATHS`.\r\n\r\nExamples:\r\n\r\n- `config/`\r\n- `.logs/`\r\n- `output/`\r\n\r\nWhen mode is `workspace`, use workspace-level alternate roots.\r\n\r\nExamples:\r\n\r\n- `.projects_config/`\r\n- `.projects_data/`\r\n- `.logs/`\r\n- `.tests_config/`\r\n- `.tests_logs/`\r\n\r\nFor workspace-level placement, namespace by application where appropriate.\r\n\r\nExamples:\r\n\r\n- `.logs/Chromaspace/`\r\n- `.projects_data/Chromaschemes/`\r\n\r\n### Workspace Shared Config Convention\r\n\r\n- Use a single shared config bundle at:\r\n  - `.workspace/.projects_config/GLOBAL_SHARED.d/`\r\n- In app configs, expose this path via:\r\n  - `PATHS[\"GLOBAL_SHARED.d\"] = \".workspace/.projects_config/GLOBAL_SHARED.d/\"`\r\n- Keep app-local optional overrides under:\r\n  - `PATHS[\"ALT_CONFIG.d\"]`\r\n- Do not rely on per-app `SHARED_CONFIG` blocks in active primary configs.\r\n\r\n## Required Agent Behavior\r\n\r\n- Read app config first; do not assume folder mode.\r\n- Resolve file destinations from config + mode, then create directories if\r\n  needed.\r\n- Use loader/factory utilities where available (for example tUilKit\r\n  `ConfigLoader` and file system utilities) instead of ad hoc path logic.\r\n- Keep logging paths config-driven:\r\n  - Prefer `config_loader.global_config.get(\"LOG_FILES\", {})`.\r\n  - Avoid literal `LOG_FILES` path dictionaries unless there is no configured\r\n    alternative.\r\n- In terminal output for root-mode reports, use semantic root-mode colour keys:\r\n  - `!root_mode` for root-mode labels/headings\r\n  - `!workspace_root_mode` for value `workspace`\r\n  - `!project_root_mode` for value `project`\r\n  - `!workspace` and `!project` for scope labels/values where applicable\r\n- Support `.d` override directories for config loads.\r\n- Preserve deterministic file naming in tests and generated artifacts.\r\n\r\n## Path Resolution Guidance\r\n\r\nRecommended order for locating config files:\r\n\r\n1. Explicit config path provided by the app/tool.\r\n2. Project-level config root.\r\n3. Workspace-level alternate config root.\r\n4. Fail with a clear error if unresolved.\r\n\r\nRecommended order for writing logs/data:\r\n\r\n1. Mode-directed root (`workspace` or `project`).\r\n2. Project/app namespace under that root.\r\n3. Configured file names from `PATHS` / `LOG_FILES`.\r\n\r\n## Tests and Docs Requirements\r\n\r\n- If root behavior is changed, update tests to cover both `project` and\r\n  `workspace` modes.\r\n- Update README/changelog notes when root mode behavior changes.\r\n- Ensure test logs and test config follow their dedicated root-mode toggles.\r\n\r\n## Anti-Patterns (Do Not Do)\r\n\r\n- Do not hardcode absolute machine-specific paths in source.\r\n- Do not write logs directly to project folders when `ROOT_MODES.LOGS` is\r\n  `workspace`.\r\n- Do not bypass config resolution by writing outputs to ad hoc locations.\r\n- Do not ignore alternate workspace folders when they are enabled.\r\n\r\n---\r\nLast updated: 2026-05-27\r\n",
+    "classification": {
+      "subtype": "agent-instruction",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

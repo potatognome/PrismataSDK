@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-udi-projects-tooling-udi-ci-yml",
+  "udi": "prismata.projects-tooling-udi.wrapped-object.projects-tooling-udi-ci-b6d5d12ad8",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "Projects-Tooling-udi-ci.yml",
+    "source_file_type": "yml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Tooling/udi/Projects-Tooling-udi-ci.yml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/udi/Projects-Tooling-udi-ci.yml",
+    "encoding": "utf-8",
+    "content_sha256": "c82ffbb837d6ad3f30e19996ebf4ab5f03f2e15a102830b2c3daaf9b84ccdc97"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "name: UDI Validator\r\n\r\non:\r\n  push:\r\n    paths:\r\n      - 'Projects/Tooling/udi/**'\r\n  pull_request:\r\n    paths:\r\n      - 'Projects/**'\r\n\r\njobs:\r\n  validate:\r\n    runs-on: ubuntu-latest\r\n    steps:\r\n      - uses: actions/checkout@v4\r\n      - name: Set up Python\r\n        uses: actions/setup-python@v4\r\n        with:\r\n          python-version: '3.10'\r\n      - name: Install\r\n        run: |\r\n          python -m pip install --upgrade pip\r\n          pip install -e Projects/Tooling/udi[dev]\r\n      - name: Run dry-run scan\r\n        run: |\r\n          python -m uditool.cli scan --globs \"Meta/canonical/**/*.yaml\" \"Projects/**/config/**/*.yaml\" --out Projects/meta/udi-migration-logs/ --dry-run\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

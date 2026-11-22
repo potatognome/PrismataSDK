@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-prismatalabs-examples-exemplar-py",
+  "udi": "prismata.projects-applications-prismatalabs-examples.wrapped-codeblock.exemplar-f40b836319",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "exemplar.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/PrismataLabs/examples/exemplar.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/PrismataLabs/examples/exemplar.py",
+    "encoding": "utf-8",
+    "content_sha256": "0b3447811f2612175995e7c831334cbf616cd2a566924ac293bb1bf9308fd103"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import sys\r\nfrom pathlib import Path\r\n\r\nROOT = Path(__file__).resolve().parents[4]\r\nif str(ROOT) not in sys.path:\r\n    sys.path.insert(0, str(ROOT))\r\n\r\nfrom Projects.Tooling.primitives.python import (\r\n    enable_windows_vt,\r\n    find_prismata_root,\r\n    load_registry,\r\n    render_panes_to_terminal_frame,\r\n    resolve_registry_entry,\r\n    terminal_space,\r\n)\r\n\r\nROOT = find_prismata_root(ROOT)\r\n\r\n\r\ndef _load_pane_specs(pane_ids: list[str]) -> list[dict]:\r\n    pane_registry = load_registry(\"pane\", ROOT)\r\n    panes: list[dict] = []\r\n    for pane_ref in pane_ids:\r\n        pane = resolve_registry_entry(pane_registry, pane_ref)\r\n        if pane is None:\r\n            raise ValueError(f\"Pane reference '{pane_ref}' not found in pane registry.\")\r\n        panes.append({\r\n            \"id\": pane.get(\"id\", pane_ref),\r\n            \"label\": pane.get(\"label\") or pane.get(\"title\") or pane_ref,\r\n            \"title\": pane.get(\"title\") or pane.get(\"label\") or pane_ref,\r\n            \"colour_role\": pane.get(\"colour_role\") or \"primary-surface\",\r\n            \"border_role\": pane.get(\"border_role\") or \"border\",\r\n            \"content_role\": pane.get(\"content_role\") or \"primary-surface\",\r\n            \"border_pattern\": pane.get(\"border_pattern\") or \"single-line\",\r\n            \"x\": pane.get(\"x\", 5),\r\n            \"y\": pane.get(\"y\", 5),\r\n            \"width\": pane.get(\"width\", 40),\r\n            \"height\": pane.get(\"height\", 20),\r\n        })\r\n    return panes\r\n\r\n\r\ndef _terminal_space() -> tuple[int, int]:\r\n    return terminal_space((120, 38))\r\n\r\n\r\ndef _override_trace(framework: dict) -> list[str]:\r\n    lines: list[str] = []\r\n    lines.append(\r\n        f\"ui-framework: {framework.get('id', 'unknown')} | colour_role={framework.get('colour_role', 'default')} | border_pattern={framework.get('border_pattern', 'single-line')}\"\r\n    )\r\n    for pane in framework.get(\"panes\", []):\r\n        pane_name = pane.get(\"label\") or pane.get(\"title\") or pane.get(\"id\") or \"unnamed\"\r\n        lines.append(\r\n            f\"pane: {pane_name} | colour_role={pane.get('colour_role', 'default')} | border_pattern={pane.get('border_pattern', 'single-line')} | content_role={pane.get('content_role', pane.get('colour_role', 'default'))}\"\r\n        )\r\n    return lines\r\n\r\n\r\ndef build_exemplar_ui_framework() -> dict:\r\n    ui_frameworks = load_registry(\"ui-framework\", ROOT)\r\n    framework = resolve_registry_entry(ui_frameworks, \"exemplar\") or resolve_registry_entry(ui_frameworks, \"prismata.meta.ui-framework.exemplar\")\r\n    if framework is None:\r\n        raise ValueError(\"UI framework 'exemplar' not found in ui-framework registry.\")\r\n    pane_refs = framework.get(\"panes\") or []\r\n    if not pane_refs:\r\n        raise ValueError(\"Exemplar ui-framework does not declare panes.\")\r\n    pane_specs = _load_pane_specs(pane_refs)\r\n    framework[\"panes\"] = pane_specs\r\n    framework[\"active_pane\"] = framework.get(\"active_pane\") or pane_specs[0][\"id\"]\r\n    return framework\r\n\r\n\r\ndef render_exemplar_framework() -> list[str]:\r\n    framework = build_exemplar_ui_framework()\r\n    rendered = render_panes_to_terminal_frame(\r\n        framework[\"panes\"],\r\n        meta_root=ROOT / \"Meta\",\r\n        colour_scheme=framework.get(\"colour_scheme\", \"default\"),\r\n        size=_terminal_space(),\r\n    )\r\n    if rendered and rendered[0].startswith(\"\\x1b[2J\"):\r\n        return rendered[1:]\r\n    return rendered\r\n\r\n\r\ndef main():\r\n    if hasattr(sys.stdout, \"reconfigure\"):\r\n        sys.stdout.reconfigure(encoding=\"utf-8\")\r\n    enable_windows_vt()\r\n\r\n    for line in render_exemplar_framework():\r\n        print(line)\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

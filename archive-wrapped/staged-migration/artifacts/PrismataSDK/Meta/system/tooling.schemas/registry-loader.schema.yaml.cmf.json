@@ -1,0 +1,36 @@
+{
+  "id": "meta-system-tooling-schemas-registry-loader-schema-yaml",
+  "udi": "prismata.meta-system-tooling-schemas.wrapped-schema.registry-loader-schema-0ab06da7db",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "registry-loader.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/system/tooling.schemas/registry-loader.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/system/tooling.schemas/registry-loader.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "f8b72b8c2e045dd5cc19e6cad6126515e97b8b525980f3a4b57d3bb24c604d03"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: registry-loader\r\nschema_type: tooling\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.registry-loader\r\n  name: registry-loader.schema\r\n  description: Canonical schema defining how registries are loaded and interpreted.\r\n\r\nspec:\r\n  target_kind: registry-loader\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: registry\r\n    path: registry\r\n    type: string\r\n    required: true\r\n\r\n  - name: entries\r\n    path: entries\r\n    type: array\r\n    required: false\r\n\r\nobject:\r\n  registry: \"\"\r\n  entries: []\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

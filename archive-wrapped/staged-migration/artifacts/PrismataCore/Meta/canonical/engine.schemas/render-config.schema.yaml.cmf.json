@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-engine-schemas-render-config-schema-yaml",
+  "udi": "prismata.meta-canonical-engine-schemas.wrapped-schema.render-config-schema-a7a2acc584",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "render-config.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/engine.schemas/render-config.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/engine.schemas/render-config.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "229ad039a9544d65448d51f219c9a46282f13ae84ceea48add29512b2531dea6"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: render-config\r\nschema_type: engine\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.render-config\r\n  name: render-config.schema\r\n  location: /Prismata/Meta/engine.schemas/render-config.schema.yaml\r\n  description: Canonical schema defining rendering configuration.\r\n\r\nspec:\r\n  target_kind: render-config\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: resolution\r\n    path: resolution\r\n    type: string\r\n    required: false\r\n\r\n  - name: colourMode\r\n    path: colourMode\r\n    type: string\r\n    required: false\r\n\r\n  - name: debug\r\n    path: debug\r\n    type: boolean\r\n    required: false\r\n\r\nobject:\r\n  resolution: \"\"\r\n  colourMode: \"\"\r\n  debug: false\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

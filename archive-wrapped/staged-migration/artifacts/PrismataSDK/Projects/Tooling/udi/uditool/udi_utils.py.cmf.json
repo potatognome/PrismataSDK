@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-udi-uditool-udi-utils-py",
+  "udi": "prismata.projects-tooling-udi-uditool.wrapped-codeblock.udi-utils-8cf37edc24",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "udi_utils.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/udi/uditool/udi_utils.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/udi/uditool/udi_utils.py",
+    "encoding": "utf-8",
+    "content_sha256": "61a23075e1d2284561956c60b0ab566b56bd2bc7b5ff87edff7ead8484772e62"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import re\r\nimport unicodedata\r\nfrom .config import UDI_REGEX, CANONICAL_KINDS, CANONICAL_NAMESPACES\r\n\r\n\r\ndef slugify(name: str) -> str:\r\n    if not name:\r\n        return \"\"\r\n    s = name.strip()\r\n    s = unicodedata.normalize(\"NFKD\", s)\r\n    s = s.encode(\"ascii\", \"ignore\").decode(\"ascii\")\r\n    s = s.lower()\r\n    s = re.sub(r\"[^a-z0-9]+\", \"-\", s)\r\n    s = re.sub(r\"-+\", \"-\", s)\r\n    s = s.strip(\"-\")\r\n    return s[:64]\r\n\r\n\r\ndef normalize_scope(scope: str) -> str:\r\n    \"\"\"Normalize a folder/scope name into a canonical scope token.\r\n\r\n    Rules:\r\n    - Split on dot, slash or backslash into tokens.\r\n    - Singularize simple plural endings (drop trailing 's').\r\n    - Join tokens with a hyphen.\r\n    - Run through `slugify` to remove any remaining invalid chars.\r\n    \"\"\"\r\n    if not scope:\r\n        return \"meta\"\r\n    # split on dot, slash or backslash\r\n    parts = re.split(r\"[.\\\\/]+\", scope)\r\n    tokens = []\r\n    for p in parts:\r\n        p = p.strip()\r\n        if not p:\r\n            continue\r\n        # basic singularization: drop trailing 's' when present\r\n        if p.endswith(\"s\") and len(p) > 1:\r\n            p = p[:-1]\r\n        tokens.append(p)\r\n    joined = \"-\".join(tokens)\r\n    return slugify(joined)\r\n\r\n\r\ndef parse_udi(udi: str):\r\n    if not udi:\r\n        return None\r\n    parts = udi.split(\".\")\r\n    if len(parts) != 4:\r\n        return None\r\n    return {\"namespace\": parts[0], \"scope\": parts[1], \"kind\": parts[2], \"slug\": parts[3]}\r\n\r\n\r\ndef build_udi(namespace: str, scope: str, kind: str, slug: str) -> str:\r\n    return f\"{namespace}.{scope}.{kind}.{slug}\"\r\n\r\n\r\ndef validate_udi(udi: str):\r\n    errors = []\r\n    if not udi:\r\n        errors.append(\"empty\")\r\n        return False, errors\r\n    if not UDI_REGEX.match(udi):\r\n        errors.append(\"pattern_mismatch\")\r\n    parsed = parse_udi(udi)\r\n    if parsed:\r\n        if parsed[\"namespace\"] not in CANONICAL_NAMESPACES:\r\n            errors.append(\"invalid_namespace\")\r\n        if parsed[\"kind\"] not in CANONICAL_KINDS:\r\n            errors.append(\"invalid_kind\")\r\n        if len(parsed[\"slug\"]) > 64:\r\n            errors.append(\"slug_too_long\")\r\n    else:\r\n        errors.append(\"segment_count\")\r\n    return len(errors) == 0, errors\r\n\r\n\r\ndef derive_udi_from_path_and_content(path: str, metadata_name: str = None, namespace: str = \"prismata\", scope: str = None, kind: str = None):\r\n    # Minimal deterministic derivation using given hints\r\n    slug = slugify(metadata_name or path.split(\"/\")[-1].split(\".\")[0])\r\n    if not scope:\r\n        # fallback: use parent folder name\r\n        parts = path.replace(\"\\\\\", \"/\").split(\"/\")\r\n        if len(parts) >= 2:\r\n            scope = parts[-2]\r\n        else:\r\n            scope = \"meta\"\r\n    # normalize scope tokens (handles dots in folder names like 'projects.manifests')\r\n    scope = normalize_scope(scope)\r\n\r\n    if not kind:\r\n        kind = \"metadata\"\r\n    return build_udi(namespace, scope, kind, slug)\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

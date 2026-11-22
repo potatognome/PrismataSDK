@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-examples-ui-framework-example-ui-framework-override-example-yaml",
+  "udi": "prismata.meta-deprecated-examples-ui-framework-example.wrapped-object.ui-framework-override-example-270ffc8be1",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "ui_framework.override.example.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/examples/ui_framework.example/ui_framework.override.example.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/examples/ui_framework.example/ui_framework.override.example.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "a9cee371c3dd1b14ee34527f686ba52d1a90196a5e844a6d177ee29e707fe894"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff# Example override file for project-level or tenant-level UI customization.\r\n# This file replaces or extends canonical pane coordinates and behavior.\r\n\r\nui_interface:\r\n  ui_framework: multi_pane\r\n\r\n  overrides:\r\n    project: \"project/ui/multi_pane.override.yaml\"\r\n    tenant: \"tenant/ui/multi_pane.override.yaml\"\r\n\r\n  panes:\r\n    - id: left\r\n      role: tree\r\n      coordinates:\r\n        x: 0\r\n        y: 0\r\n        width: 35\r\n        height: 100\r\n      carousel:\r\n        enabled: false\r\n\r\n    - id: right\r\n      role: preview\r\n      coordinates:\r\n        x: 35\r\n        y: 0\r\n        width: 65\r\n        height: 100\r\n      carousel:\r\n        enabled: true\r\n        navigation:\r\n          wrap: true\r\n          jump: true\r\n          refresh: true\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

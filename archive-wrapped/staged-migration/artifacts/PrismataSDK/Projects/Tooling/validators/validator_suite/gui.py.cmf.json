@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-validators-validator-suite-gui-py",
+  "udi": "prismata.projects-tooling-validators-validator-suite.wrapped-codeblock.gui-82f945c90c",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "gui.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/validators/validator_suite/gui.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/validators/validator_suite/gui.py",
+    "encoding": "utf-8",
+    "content_sha256": "34ca2ee77d75173c25628638c9f393142d70c23efb0c4823c7fde2c74fd44de0"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import tkinter as tk\nfrom tkinter import ttk\nfrom Projects.Tooling.validators.validator_suite.runner import run_all_validators, fix_all\n\nclass ValidatorDashboard(tk.Tk):\n    def __init__(self):\n        super().__init__()\n        self.title('Prismata Validator Suite')\n        self.geometry('900x600')\n\n        self.results = None\n        self.create_widgets()\n\n    def create_widgets(self):\n        left = ttk.Frame(self)\n        left.pack(side=tk.LEFT, fill=tk.Y, padx=10, pady=10)\n\n        ttk.Label(left, text='Validators').pack(anchor='w')\n\n        self.validator_list = tk.Listbox(left, height=10)\n        self.validator_list.pack(fill=tk.X)\n        self.validator_list.bind('<<ListboxSelect>>', self.on_validator_selected)\n\n        self.validator_list.insert(tk.END, 'Casing Validator')\n        self.validator_list.insert(tk.END, 'BOM Validator')\n\n        ttk.Button(left, text='Run All', command=self.run_all).pack(fill=tk.X, pady=5)\n        ttk.Button(left, text='Fix All', command=self.fix_all).pack(fill=tk.X, pady=5)\n\n        right = ttk.Frame(self)\n        right.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=10, pady=10)\n\n        ttk.Label(right, text='Details').pack(anchor='w')\n\n        self.text = tk.Text(right, wrap='none')\n        self.text.pack(fill=tk.BOTH, expand=True)\n\n    def run_all(self):\n        self.results = run_all_validators()\n        self.text.delete('1.0', tk.END)\n        self.text.insert(tk.END, 'Validators executed.\\nSelect a validator to view details.')\n\n    def fix_all(self):\n        if not self.results:\n            self.text.insert(tk.END, '\\nRun validators first.')\n            return\n\n        fix_all(self.results)\n        self.text.insert('1.0', 'All fixes applied.\\n')\n\n    def on_validator_selected(self, event=None):\n        if not self.results:\n            return\n\n        idx = self.validator_list.curselection()\n        if not idx:\n            return\n\n        name = self.validator_list.get(idx[0])\n        self.text.delete('1.0', tk.END)\n\n        if name == 'Casing Validator':\n            issues = self.results['casing']['issues']\n            self.text.insert(tk.END, f'Casing Issues: {len(issues)}\\\\n\\\\n')\n            for path, key, casing in issues:\n                self.text.insert(tk.END, f'{path}: {key} ? {casing}\\\\n')\n\n        elif name == 'BOM Validator':\n            issues = self.results['bom']['issues']\n            self.text.insert(tk.END, f'BOM Issues: {len(issues)}\\\\n\\\\n')\n            for path in issues:\n                self.text.insert(tk.END, f'{path}\\\\n')\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

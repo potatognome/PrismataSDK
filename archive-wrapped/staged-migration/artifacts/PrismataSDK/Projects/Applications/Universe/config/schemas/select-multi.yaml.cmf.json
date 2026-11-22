@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-schemas-select-multi-yaml",
+  "udi": "prismata.projects-applications-universe-config-schemas.wrapped-schema.select-multi-97e84003a3",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "select-multi.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Applications/Universe/config/schemas/select-multi.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/schemas/select-multi.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "9b22623735010a4bc8aff1cf38631015a9a6ba241cf8535fbb810e207f172e41"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: select-multi.yaml\r\n## Type: schema\r\n## Purpose: Schema for multi-selection behavior and operation filtering used\r\n## by bulk UI operations.\r\n\r\nmetadata:\r\n  udi: prismata.universe.schema.select-multi\r\n  name: select-multi\r\n  kind: schema-definition\r\n  description: \"Schema for multi-selection behavior and operation filtering.\"\r\n\r\n\r\nid: \"prismata.universe.schema.select-multi\"\r\nversion: \"1.0.0\"\r\ntype: object\r\nproperties:\r\n  selected_objects: { type: array }\r\n  type_compatibility_matrix: { type: object }\r\n  filtered_operations: { type: array }\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

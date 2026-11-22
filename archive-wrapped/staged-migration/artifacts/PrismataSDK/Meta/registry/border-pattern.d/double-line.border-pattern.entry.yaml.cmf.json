@@ -1,0 +1,36 @@
+{
+  "id": "meta-registry-border-pattern-d-double-line-border-pattern-entry-yaml",
+  "udi": "prismata.meta-registry-border-pattern-d.wrapped-object.double-line-border-pattern-entry-cd181b788c",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "double-line.border-pattern.entry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/registry/border-pattern.d/double-line.border-pattern.entry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/registry/border-pattern.d/double-line.border-pattern.entry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "e5bf7d535e11f2de14c23f6bb90074fbfb40bc84ac603dd40a8d5fd8391b4e1a"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: default.border-pattern.entry.yaml\r\n## Type: border-pattern registry entry (0.4.0)\r\n## Purpose: Default Prismata terminal border-pattern registry entry.\r\n## Provides border patterns for UI surfaces, borders,\r\n## menus, and interactive elements.\r\n\r\nid: double-line\r\nudi: prismata.meta.border-pattern.double-line\r\nname: double-line.border-pattern\r\nlabel: \"Prismata Double-Line Terminal Border Pattern (0.4.0)\"\r\nkind: border-pattern\r\ndescription: Double-line terminal border pattern for Prismata UI.\r\nschema_version: 0.4.0\r\n\r\nglyphs:\r\n  top: \"=\"\r\n  bottom: \"=\"\r\n  left: \"||\"\r\n  right: \"||\"\r\n  corner_top_left: \"+\"\r\n  corner_top_right: \"+\"\r\n  corner_bottom_left: \"+\"\r\n  corner_bottom_right: \"+\"\r\n\r\nthickness: 1\r\npadding: 1\r\ncolour_role: border\r\n\r\nmeta:\r\n  created_by: copilot\r\n  created_at: 2026-09-24\r\n  schema_version: 0.4.0\r\n\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

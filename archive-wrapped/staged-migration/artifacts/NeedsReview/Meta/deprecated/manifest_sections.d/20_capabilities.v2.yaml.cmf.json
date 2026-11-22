@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-manifest-sections-d-20-capabilities-v2-yaml",
+  "udi": "prismata.meta-deprecated-manifest-sections-d.wrapped-object.x-20-capabilities-v2-36e230a0a8",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "20_capabilities.v2.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/manifest_sections.d/20_capabilities.v2.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/manifest_sections.d/20_capabilities.v2.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "21b1880b007ea14ddc721cb914b7b7f45d38d495e46b310020c4d6e4c23f72bf"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "_META:\r\r\n  SORT_ORDER: 20\r\r\n  description: \"Interface contract for exposed and consumed channels.\"\r\r\n\r\r\ninterfaces:\r\r\n  exposes: []\r\r\n  consumes:\r\r\n    - schema\r\r\n    - manifest\r\r\n\r\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

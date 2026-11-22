@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-primitives-typescript-chromaadapter-ts",
+  "udi": "prismata.projects-tooling-primitives-typescript.wrapped-codeblock.chromaadapter-57444e709b",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "chromaAdapter.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/primitives/typescript/chromaAdapter.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/primitives/typescript/chromaAdapter.ts",
+    "encoding": "utf-8",
+    "content_sha256": "198603e0b7af3378bdba72937e8d449677c0600faeb2216caabd9863d03ca03a"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import * as fs from \"fs\";\r\nimport * as path from \"path\";\r\n\r\nexport interface Rgb { r: number; g: number; b: number }\r\n\r\nexport function rgbToAnsi24(rgb: Rgb): string {\r\n  return `\\u001b[38;2;${rgb.r};${rgb.g};${rgb.b}m`;\r\n}\r\n\r\nexport function bgRgbToAnsi24(rgb: Rgb): string {\r\n  return `\\u001b[48;2;${rgb.r};${rgb.g};${rgb.b}m`;\r\n}\r\n\r\nexport function resetAnsi(): string { return '\\u001b[0m'; }\r\n\r\n/**\r\n * Parse a simple exemplar chroma YAML file that contains `colourSet` mapping\r\n * like { c0: [r,g,b], c1: [r,g,b], ... } and return a token->rgb map.\r\n */\r\nexport function parseChromaColourSet(filePath: string): Record<string, Rgb> {\r\n  let jsyaml: any = null;\r\n  try { jsyaml = require('js-yaml'); } catch (_) { jsyaml = null; }\r\n  const raw = fs.readFileSync(filePath, 'utf8');\r\n  const obj = jsyaml ? jsyaml.load(raw) : JSON.parse(raw);\r\n  const out: Record<string, Rgb> = {};\r\n  const cs = obj?.colourSet ?? obj?.colour_set ?? obj?.colourSet;\r\n  if (!cs || typeof cs !== 'object') return out;\r\n  for (const k of Object.keys(cs)) {\r\n    const arr = cs[k];\r\n    if (Array.isArray(arr) && arr.length >= 3) {\r\n      out[k] = { r: Number(arr[0]) || 0, g: Number(arr[1]) || 0, b: Number(arr[2]) || 0 };\r\n    }\r\n  }\r\n  return out;\r\n}\r\n\r\n/**\r\n * Given a `roles` mapping where the values are { fg: \"ansi:rgb(...)\" } or colourRef tokens (e.g., 'c0'),\r\n * and a token->rgb map, produce role->ANSI mapping for fg/bg.\r\n */\r\nexport function buildRoleAnsiMap(roles: Record<string, any>, tokenMap: Record<string, Rgb>): Record<string, { fg?: string; bg?: string }> {\r\n  const out: Record<string, { fg?: string; bg?: string }> = {};\r\n  for (const r of Object.keys(roles)) {\r\n    const layers = roles[r] || {};\r\n    const entry: { fg?: string; bg?: string } = {};\r\n    if (layers.fg) {\r\n      const m = String(layers.fg).match(/ansi:rgb\\((\\d+),(\\d+),(\\d+)\\)/);\r\n      if (m) entry.fg = rgbToAnsi24({ r: Number(m[1]), g: Number(m[2]), b: Number(m[3]) });\r\n      else if (tokenMap[layers.fg]) entry.fg = rgbToAnsi24(tokenMap[layers.fg]);\r\n    }\r\n    if (layers.bg) {\r\n      const m = String(layers.bg).match(/ansi:rgb\\((\\d+),(\\d+),(\\d+)\\)/);\r\n      if (m) entry.bg = bgRgbToAnsi24({ r: Number(m[1]), g: Number(m[2]), b: Number(m[3]) });\r\n      else if (tokenMap[layers.bg]) entry.bg = bgRgbToAnsi24(tokenMap[layers.bg]);\r\n    }\r\n    out[r] = entry;\r\n  }\r\n  return out;\r\n}\r\n\r\nexport default { rgbToAnsi24, bgRgbToAnsi24, resetAnsi, parseChromaColourSet, buildRoleAnsiMap };\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "meta-registry-ui-framework-d-default-ui-framework-entry-yaml",
+  "udi": "prismata.meta-registry-ui-framework-d.wrapped-object.default-ui-framework-entry-b6bfa0a9d3",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "default.ui-framework.entry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/registry/ui-framework.d/default.ui-framework.entry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/registry/ui-framework.d/default.ui-framework.entry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "3c1bde00b50afde817af7aaa41b74bd2bf34b0d718259b1e4f9389e665425d4b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: default.ui-framework.entry.yaml\r\n## Type: ui-framework registry entry\r\n## Purpose: Default Prismata ui-framework registry entry.\r\n## Provides default border pattern, colour scheme, and layout for panes.\r\n\r\nid: default\r\nudi: prismata.meta.ui-framework.default\r\nname: default.ui-framework\r\nlabel: \"Default UI Framework (0.4.1)\"\r\nkind: ui-framework\r\ndescription: \"Minimal UI framework wiring menus, panes, and colour schemes.\"\r\nschema_version: 0.4.1\r\n\r\nmenus:\r\n  - prismata.meta.menu.default\r\npanes:\r\n  - prismata.meta.pane.default\r\ncolour_scheme: default\r\nactive_pane: prismata.meta.pane.default\r\nborder_pattern: single-line\r\n\r\nmeta:\r\n  created_by: copilot\r\n  created_at: 2026-09-24\r\n  schema_version: 0.4.1\r\n\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "meta-registry-border-pattern-d-single-line-border-pattern-entry-yaml",
+  "udi": "prismata.meta-registry-border-pattern-d.wrapped-object.single-line-border-pattern-entry-746fe417a5",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "single-line.border-pattern.entry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/registry/border-pattern.d/single-line.border-pattern.entry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/registry/border-pattern.d/single-line.border-pattern.entry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "fd1476a452eb06a730f6303f2863d79ffbf148c0a145d16b50c0b9a07b8cd74c"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: default.border-pattern.entry.yaml\r\n## Type: border-pattern registry entry (0.4.0)\r\n## Purpose: Default Prismata terminal border-pattern registry entry.\r\n## Provides border patterns for UI surfaces, borders,\r\n## menus, and interactive elements.\r\n\r\nid: single-line\r\nudi: prismata.meta.border-pattern.single-line\r\nname: single-line.border-pattern\r\nlabel: \"Prismata Single-Line Terminal Border Pattern (0.4.0)\"\r\nkind: border-pattern\r\ndescription: Single-line terminal border pattern for Prismata UI.\r\nschema_version: 0.4.0\r\n\r\nglyphs:\r\n  top: \"\\u2500\"\r\n  bottom: \"\\u2500\"\r\n  left: \"\\u2502\"\r\n  right: \"\\u2502\"\r\n  corner_top_left: \"\\u250C\"\r\n  corner_top_right: \"\\u2510\"\r\n  corner_bottom_left: \"\\u2514\"\r\n  corner_bottom_right: \"\\u2518\"\r\n\r\nthickness: 1\r\npadding: 1\r\ncolour_role: border\r\n\r\nmeta:\r\n  created_by: copilot\r\n  created_at: 2026-09-24\r\n  schema_version: 0.4.0\r\n\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

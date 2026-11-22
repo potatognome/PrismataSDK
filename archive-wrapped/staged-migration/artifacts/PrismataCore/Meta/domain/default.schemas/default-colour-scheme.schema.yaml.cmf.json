@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-default-schemas-default-colour-scheme-schema-yaml",
+  "udi": "prismata.meta-domain-default-schemas.wrapped-schema.default-colour-scheme-schema-e4dde3bc46",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "default-colour-scheme.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/domain/default.schemas/default-colour-scheme.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/default.schemas/default-colour-scheme.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "f102f29c3b770cad5f257671deb32b567367aa551385171c192a277672f3ffc2"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: default-colour-scheme\r\nschema_type: defaults\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.default-colour-scheme\r\n  name: default-colour-scheme.schema\r\n  description: Canonical schema defining default colour scheme selection.\r\n\r\nspec:\r\n  target_kind: default-colour-scheme\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: scheme\r\n    path: scheme\r\n    type: string\r\n    required: false\r\n\r\nobject:\r\n  scheme: \"\"\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

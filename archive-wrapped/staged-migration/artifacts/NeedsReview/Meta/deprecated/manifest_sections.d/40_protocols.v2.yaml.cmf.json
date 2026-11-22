@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-manifest-sections-d-40-protocols-v2-yaml",
+  "udi": "prismata.meta-deprecated-manifest-sections-d.wrapped-object.x-40-protocols-v2-e5f9b9a17c",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "40_protocols.v2.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/manifest_sections.d/40_protocols.v2.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/manifest_sections.d/40_protocols.v2.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "795c1bc9814d7aa1eb55a341e893a6800b29ddaa51faf6caff7d2a37be935cfb"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "_META:\r\r\n  SORT_ORDER: 40\r\r\n  description: \"Classification tags for discovery and grouping.\"\r\r\n\r\r\ntags: []\r\r\n\r\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

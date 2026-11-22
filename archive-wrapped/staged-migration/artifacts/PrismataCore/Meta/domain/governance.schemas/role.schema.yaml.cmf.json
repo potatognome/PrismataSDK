@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-governance-schemas-role-schema-yaml",
+  "udi": "prismata.meta-domain-governance-schemas.wrapped-schema.role-schema-8dbc416870",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "role.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/domain/governance.schemas/role.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/governance.schemas/role.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "433ee2b6abc66c29b2201aefea85d47bccede9f612ee27d11ac17a9cd393b69c"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: role\r\nschema_type: governance\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.role\r\n  name: role.schema\r\n  description: Canonical schema defining governance roles.\r\n\r\nspec:\r\n  target_kind: role\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: udi\r\n    path: udi\r\n    type: string\r\n    required: true\r\n\r\n  - name: id\r\n    path: id\r\n    type: string\r\n    required: true\r\n\r\n  - name: name\r\n    path: name\r\n    type: string\r\n    required: true\r\n\r\n  - name: description\r\n    path: description\r\n    type: string\r\n    required: false\r\n\r\n  - name: permissions\r\n    path: permissions\r\n    type: array\r\n    required: false\r\n    item:\r\n      type: string\r\n\r\nobject:\r\n  udi: \"\"\r\n  id: \"\"\r\n  name: \"\"\r\n  description: \"\"\r\n  permissions: []\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-examples-menu-samples-full-full-menu-types-yaml",
+  "udi": "prismata.meta-deprecated-examples-menu-samples-full.wrapped-object.full-menu-types-d6aff5b6d6",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "full-menu-types.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/examples/menu.samples/full/full-menu-types.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/examples/menu.samples/full/full-menu-types.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "3fd8a68c6e1916889115adc069d38aeafdcfd275f2dddb7c3df5ef20c8f17bd8"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeffmenuTypes:\r\n  main:\r\n    defaultColourScheme: main-menu\r\n    defaultBorderScheme: main-menu\r\n    defaultHeaderStyle: header\r\n    defaultHeaderColourScheme: header\r\n    defaultHeaderBorderScheme: main-menu\r\n    defaultSelectionMethod: number\r\n    defaultItemType: action\r\n\r\n  settings:\r\n    defaultColourScheme: settings-menu\r\n    defaultBorderScheme: settings-menu\r\n    defaultHeaderStyle: header\r\n    defaultHeaderColourScheme: header\r\n    defaultHeaderBorderScheme: settings-menu\r\n    defaultSelectionMethod: number\r\n    defaultItemType: toggle\r\n\r\n  admin:\r\n    defaultColourScheme: admin-menu\r\n    defaultBorderScheme: default\r\n    defaultHeaderStyle: header\r\n    defaultHeaderColourScheme: header\r\n    defaultHeaderBorderScheme: default\r\n    defaultSelectionMethod: number\r\n    defaultItemType: action\r\n\r\n  diagnostics:\r\n    defaultColourScheme: diagnostics-menu\r\n    defaultBorderScheme: default\r\n    defaultHeaderStyle: header\r\n    defaultHeaderColourScheme: header\r\n    defaultHeaderBorderScheme: default\r\n    defaultSelectionMethod: number\r\n    defaultItemType: static\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

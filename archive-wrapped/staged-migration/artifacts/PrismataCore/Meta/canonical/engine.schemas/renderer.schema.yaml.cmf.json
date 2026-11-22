@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-engine-schemas-renderer-schema-yaml",
+  "udi": "prismata.meta-canonical-engine-schemas.wrapped-schema.renderer-schema-0a976ec58a",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "renderer.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/engine.schemas/renderer.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/engine.schemas/renderer.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "632247d844c3b2147c7feeb40ba2920945ad930438b25dee0f6da3128b9363d6"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: renderer\r\nschema_type: engine\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.renderer\r\n  name: renderer.schema\r\n  location: /Prismata/Meta/engine.schemas/renderer.schema.yaml\r\n  description: Canonical schema defining the top-level Prismata renderer.\r\n\r\nspec:\r\n  target_kind: renderer\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: pipeline\r\n    path: pipeline\r\n    type: string\r\n    required: true\r\n\r\n  - name: config\r\n    path: config\r\n    type: string\r\n    required: false\r\n\r\nobject:\r\n  pipeline: \"\"\r\n  config: \"\"\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-astalyzer-wrapper-tests-test-wrapper-run-py",
+  "udi": "prismata.projects-tooling-astalyzer-wrapper-tests.wrapped-codeblock.test-wrapper-run-a436319988",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_wrapper_run.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/ASTalyzer/wrapper/tests/test_wrapper_run.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/ASTalyzer/wrapper/tests/test_wrapper_run.py",
+    "encoding": "utf-8",
+    "content_sha256": "a6403d139ddb8ee1bd2e8b680d5032bdf028f8c6cc70d288ffbf2cca6ddd39e1"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import tempfile\r\nimport json\r\nfrom pathlib import Path\r\n\r\nfrom Prismata.Projects.Tooling.ASTalyzer.wrapper.astalyzer_cli import run_astalyzer\r\n\r\n\r\ndef test_run_astalyzer_on_small_sample(tmp_path: Path):\r\n    # create a tiny sample project\r\n    sample = tmp_path / \"sample\"\r\n    sample.mkdir()\r\n    (sample / \"a.py\").write_text(\"def foo(x: int) -> int:\\n    return x * 2\\n\")\r\n\r\n    temp_path, summary = run_astalyzer(str(sample))\r\n    assert temp_path.exists()\r\n    # summary should include either modules_count or preview_lines\r\n    assert \"modules_count\" in summary or \"preview_lines\" in summary\r\n    # cleanup\r\n    temp_path.unlink(missing_ok=True)\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

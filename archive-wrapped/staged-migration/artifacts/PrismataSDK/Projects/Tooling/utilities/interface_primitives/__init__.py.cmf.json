@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-utilities-interface-primitives-init-py",
+  "udi": "prismata.projects-tooling-utilities-interface-primitives.wrapped-codeblock.init-9253f5965b",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "__init__.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/utilities/interface_primitives/__init__.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/utilities/interface_primitives/__init__.py",
+    "encoding": "utf-8",
+    "content_sha256": "af93b892d20943156587b40300b21eaad99daa25f5df212e42a3fdf6d60e6db8"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# runtime-provided interface_primitives package",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

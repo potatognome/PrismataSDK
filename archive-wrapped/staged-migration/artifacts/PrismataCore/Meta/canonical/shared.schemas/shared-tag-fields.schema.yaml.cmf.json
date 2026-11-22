@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-shared-schemas-shared-tag-fields-schema-yaml",
+  "udi": "prismata.meta-canonical-shared-schemas.wrapped-schema.shared-tag-fields-schema-7068da83fb",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "shared-tag-fields.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/shared.schemas/shared-tag-fields.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/shared.schemas/shared-tag-fields.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "ea6d42d3f117e9947e5fdddab8ee5edc4c48ca47bb2e4abf7a82517ab17329ed"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: shared-tag-fields\r\nschema_type: shared\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.shared-tag-fields\r\n  name: shared-tag-fields.schema\r\n  description: Reusable tag array block.\r\n\r\nspec:\r\n  target_kind: shared-tag-fields\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: tags\r\n    path: tags\r\n    type: array\r\n    required: false\r\n    item:\r\n      type: string\r\n\r\nobject:\r\n  tags: []\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

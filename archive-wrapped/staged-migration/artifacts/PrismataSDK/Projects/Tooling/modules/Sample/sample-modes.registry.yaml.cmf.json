@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-modules-sample-sample-modes-registry-yaml",
+  "udi": "prismata.projects-tooling-modules-sample.wrapped-object.sample-modes-registry-bf0c86d31b",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "sample-modes.registry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Tooling/modules/Sample/sample-modes.registry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/modules/Sample/sample-modes.registry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "13f1536ad077b6f516bb21a63d7d74b65c855ba8ed31a252b86d481162fd9b5c"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeffmodes:\r\n\r\n  # ---------------------------------------------------------\r\n  # Base Modes\r\n  # ---------------------------------------------------------\r\n\r\n  default:\r\n    sampleString: \"Sample String (Mode-default)\"\r\n    sampleInt: 100\r\n    samplePath: \"C:\\\\Sample\\\\Path\\\\Mode-default\"\r\n    sampleArray: [\"Sample\", \"Array\", \"Mode-default\"]\r\n\r\n  # ---------------------------------------------------------\r\n  # Composite / Inherited Modes\r\n  # ---------------------------------------------------------\r\n\r\n  sample-composite:\r\n    extends: \"default\"\r\n    sampleString: \"Sample String (Mode: sample-composite)\"\r\n    sampleInt: 200\r\n    samplePath: \"C:\\\\Sample\\\\Path\\\\Mode sample-composite\"\r\n    sampleArray: [\"Mode-sample-composite\"]\r\n\r\n  # ---------------------------------------------------------\r\n  # Highly Filtered / Specialized Modes\r\n  # ---------------------------------------------------------\r\n\r\n  sample-filtered:\r\n    filters: \"sample-composite\"\r\n    sampleString: \"Sample String (Mode: sample-filtered)\"\r\n    sampleInt: 50\r\n    samplePath: \"C:\\\\Mode sample-filtered\"\r\n    sampleArray: [\"Mode-sample-filtered\"]\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

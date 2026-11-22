@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-prismatalabs-examples-example-object-scenarios-py",
+  "udi": "prismata.projects-applications-prismatalabs-examples.wrapped-codeblock.example-object-scenarios-d8056528e5",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "example-object-scenarios.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/PrismataLabs/examples/example-object-scenarios.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/PrismataLabs/examples/example-object-scenarios.py",
+    "encoding": "utf-8",
+    "content_sha256": "493b9db898b208730d113113df3c0f5d1365c5c474d9b66ef907cc14b6c13921"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff#!/usr/bin/env python3\r\nfrom __future__ import annotations\r\n\r\nimport sys\r\nfrom pathlib import Path\r\n\r\nimport yaml\r\n\r\nROOT = Path(__file__).resolve().parents[4]\r\nif str(ROOT) not in sys.path:\r\n    sys.path.insert(0, str(ROOT))\r\n\r\nfrom Projects.Tooling.primitives.python import enable_windows_vt, find_prismata_root, render_panes_to_terminal_frame, terminal_space\r\n\r\nROOT = find_prismata_root(ROOT)\r\nOBJECTS = ROOT / \"Projects\" / \"Applications\" / \"PrismataLabs\" / \"examples\" / \"objects\"\r\n\r\n\r\ndef load_yaml(path: Path):\r\n    with path.open(\"r\", encoding=\"utf-8\") as handle:\r\n        return yaml.safe_load(handle) or {}\r\n\r\n\r\ndef load_group(name: str):\r\n    group_dir = OBJECTS / name\r\n    payload = {}\r\n    if group_dir.exists():\r\n        for path in sorted(group_dir.glob(\"*.yaml\")):\r\n            data = load_yaml(path)\r\n            item_id = data.get(\"id\") or data.get(\"name\") or path.stem\r\n            payload[item_id] = data\r\n    return payload\r\n\r\n\r\ndef _canonicalize_role(role):\r\n    return role or \"default\"\r\n\r\n\r\ndef _canonicalize_border(border):\r\n    return border or \"default\"\r\n\r\n\r\ndef _renderable_pane(pane: dict, menu: dict | None = None) -> dict:\r\n    pane_data = dict(pane)\r\n    pane_data[\"label\"] = pane_data.get(\"label\") or pane_data.get(\"title\") or pane_data.get(\"id\") or \"Pane\"\r\n    pane_data[\"title\"] = pane_data.get(\"title\") or pane_data.get(\"label\") or pane_data.get(\"id\") or \"Pane\"\r\n    pane_data[\"colour_role\"] = _canonicalize_role(pane_data.get(\"colour_role\"))\r\n    pane_data[\"border_role\"] = _canonicalize_role(pane_data.get(\"border_role\"))\r\n    pane_data[\"content_role\"] = _canonicalize_role(pane_data.get(\"content_role\"))\r\n    pane_data[\"border_pattern\"] = _canonicalize_border(pane_data.get(\"border_pattern\"))\r\n\r\n    selected_menu = menu if isinstance(menu, dict) else pane_data.get(\"menu\")\r\n    if isinstance(selected_menu, dict):\r\n        menu_data = dict(selected_menu)\r\n        nested_menu = menu_data.get(\"menu\") if isinstance(menu_data.get(\"menu\"), dict) else None\r\n        if nested_menu:\r\n            menu_data = dict(nested_menu)\r\n        menu_data[\"title\"] = menu_data.get(\"title\") or menu_data.get(\"label\") or menu_data.get(\"id\") or pane_data[\"title\"]\r\n        menu_data[\"label\"] = menu_data.get(\"label\") or menu_data.get(\"title\") or menu_data.get(\"id\") or pane_data[\"title\"]\r\n        menu_data[\"colour_role\"] = _canonicalize_role(menu_data.get(\"colour_role\"))\r\n        menu_data[\"border_pattern\"] = _canonicalize_border(menu_data.get(\"border_pattern\"))\r\n\r\n        items = menu_data.get(\"items\")\r\n        if not isinstance(items, list):\r\n            raise ValueError(\"Menu object must define 'items' as a list.\")\r\n        for item in items:\r\n            if not isinstance(item, dict):\r\n                continue\r\n            item[\"label\"] = item.get(\"label\") or item.get(\"title\") or item.get(\"id\") or \"Item\"\r\n            item[\"colour_role\"] = _canonicalize_role(item.get(\"colour_role\"))\r\n            item[\"border_pattern\"] = _canonicalize_border(item.get(\"border_pattern\"))\r\n        menu_data[\"items\"] = items\r\n        pane_data[\"menu\"] = menu_data\r\n\r\n    return pane_data\r\n\r\n\r\ndef scenario_single_pane():\r\n    pane = load_group(\"panes\").get(\"example-single-pane\", {})\r\n    menu = load_group(\"menus\").get(\"example-single-pane-menu\", {})\r\n    return {\r\n        \"name\": \"single-pane\",\r\n        \"title\": \"Single Pane Functional Menu\",\r\n        \"panes\": [_renderable_pane(pane, menu)],\r\n    }\r\n\r\n\r\ndef scenario_dual_pane():\r\n    left_pane = load_group(\"panes\").get(\"example-left-pane\", {})\r\n    right_pane = load_group(\"panes\").get(\"example-right-pane\", {})\r\n    return {\r\n        \"name\": \"dual-pane\",\r\n        \"title\": \"Dual Pane Active Menu\",\r\n        \"panes\": [\r\n            _renderable_pane(left_pane),\r\n            _renderable_pane(right_pane),\r\n        ],\r\n    }\r\n\r\n\r\ndef scenario_diagnostic():\r\n    left_pane = load_group(\"panes\").get(\"example-left-pane\", {})\r\n    right_pane = load_group(\"panes\").get(\"example-right-pane\", {})\r\n    return {\r\n        \"name\": \"diagnostic\",\r\n        \"title\": \"Diagnostic Pane Roles and Parameters\",\r\n        \"panes\": [\r\n            _renderable_pane(left_pane),\r\n            _renderable_pane(right_pane),\r\n        ],\r\n    }\r\n\r\n\r\ndef render_scenario(scenario):\r\n    panes = scenario.get(\"panes\") or []\r\n    if not panes:\r\n        return []\r\n    rendered = render_panes_to_terminal_frame(\r\n        panes,\r\n        meta_root=ROOT / \"Meta\",\r\n        colour_scheme=\"default\",\r\n        size=terminal_space((120, 38)),\r\n    )\r\n    return rendered[1:] if rendered and rendered[0].startswith(\"\\x1b[2J\") else rendered\r\n\r\n\r\ndef main():\r\n    if hasattr(sys.stdout, \"reconfigure\"):\r\n        sys.stdout.reconfigure(encoding=\"utf-8\")\r\n    enable_windows_vt()\r\n\r\n    scenarios = [\r\n        scenario_single_pane(),\r\n        scenario_dual_pane(),\r\n        scenario_diagnostic(),\r\n    ]\r\n    for scenario in scenarios:\r\n        print(f\"=== {scenario['title']} ===\")\r\n        for line in render_scenario(scenario):\r\n            print(line)\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

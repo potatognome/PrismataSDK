@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-src-selection-selectionlogic-ts",
+  "udi": "prismata.projects-applications-universe-src-selection.wrapped-codeblock.selectionlogic-d2a836f937",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "selectionLogic.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/Universe/src/selection/selectionLogic.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/src/selection/selectionLogic.ts",
+    "encoding": "utf-8",
+    "content_sha256": "8767955f8d2e5173553bdc481db5af3754d519eb6d41f7f51b3001ea0a4adb2b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "export type SelectionType =\r\n  | \"none\"\r\n  | \"single\"\r\n  | \"multi\"\r\n  | \"heterogeneous\"\r\n  | \"homogeneous\";\r\n\r\nexport interface SelectedObject {\r\n  id: string;\r\n  udi?: string;\r\n  type: string;\r\n  version?: string;\r\n  registryKey?: string;\r\n  semanticKeys?: string[];\r\n}\r\n\r\nexport interface SelectionState {\r\n  selectionType: SelectionType;\r\n  selectionCount: number;\r\n  referenceObjectSelected: boolean;\r\n  referenceObject?: SelectedObject;\r\n  selectedObjects: SelectedObject[];\r\n}\r\n\r\nexport interface CompatibilityMatrix {\r\n  type_compatible: boolean;\r\n  semantic_compatible: boolean;\r\n  version_compatible: boolean;\r\n  registry_compatible: boolean;\r\n}\r\n\r\nexport interface SelectionLogicResult {\r\n  state: SelectionState;\r\n  compatibility: CompatibilityMatrix;\r\n  visibleOperations: string[];\r\n}\r\n\r\nfunction classifySelection(selected: SelectedObject[]): SelectionType {\r\n  if (selected.length === 0) return \"none\";\r\n  if (selected.length === 1) return \"single\";\r\n\r\n  const types = new Set(selected.map(o => o.type));\r\n  return types.size === 1 ? \"homogeneous\" : \"heterogeneous\";\r\n}\r\n\r\nfunction buildCompatibilityMatrix(\r\n  selected: SelectedObject[],\r\n  reference?: SelectedObject\r\n): CompatibilityMatrix {\r\n  if (selected.length === 0) {\r\n    return {\r\n      type_compatible: false,\r\n      semantic_compatible: false,\r\n      version_compatible: false,\r\n      registry_compatible: false,\r\n    };\r\n  }\r\n\r\n  const types = new Set(selected.map(o => o.type));\r\n  const typeCompatible =\r\n    !reference || types.has(reference.type) || types.size === 1;\r\n\r\n  const semanticCompatible = (() => {\r\n    if (selected.length < 2) return false;\r\n    const [first, ...rest] = selected;\r\n    const baseKeys = new Set(first.semanticKeys ?? []);\r\n    if (baseKeys.size === 0) return false;\r\n    return rest.some(obj =>\r\n      (obj.semanticKeys ?? []).some(k => baseKeys.has(k))\r\n    );\r\n  })();\r\n\r\n  const versionCompatible = selected.some(o => !!o.version);\r\n  const registryCompatible = selected.some(o => !!o.registryKey);\r\n\r\n  return {\r\n    type_compatible: typeCompatible,\r\n    semantic_compatible: semanticCompatible,\r\n    version_compatible: versionCompatible,\r\n    registry_compatible: registryCompatible,\r\n  };\r\n}\r\n\r\nfunction deriveVisibleOperations(\r\n  selectionType: SelectionType,\r\n  compatibility: CompatibilityMatrix,\r\n  referenceSelected: boolean\r\n): string[] {\r\n  const ops: string[] = [];\r\n\r\n  if (selectionType !== \"none\") {\r\n    ops.push(\"prismata.universe.capability.fs-verify-multi\");\r\n    ops.push(\"prismata.universe.capability.fs-update-fields\");\r\n  }\r\n\r\n  if (selectionType === \"single\") {\r\n    ops.push(\"prismata.universe.capability.fs-create-from-object\");\r\n    ops.push(\"prismata.universe.capability.fs-edit-vile\");\r\n    if (compatibility.version_compatible) {\r\n      ops.push(\"prismata.universe.capability.fs-update-version\");\r\n      ops.push(\"prismata.universe.capability.fs-version-apply\");\r\n    }\r\n  }\r\n\r\n  if (selectionType === \"multi\" || selectionType === \"homogeneous\" || selectionType === \"heterogeneous\") {\r\n    ops.push(\"prismata.universe.capability.fs-edit-multi\");\r\n    if (compatibility.registry_compatible) {\r\n      ops.push(\"prismata.universe.capability.fs-edit-registry-insert\");\r\n    }\r\n    if (compatibility.version_compatible) {\r\n      ops.push(\"prismata.universe.capability.fs-update-version\");\r\n      ops.push(\"prismata.universe.capability.fs-version-apply\");\r\n    }\r\n  }\r\n\r\n  if (selectionType === \"heterogeneous\") {\r\n    ops.push(\"prismata.universe.capability.fs-verify-sequence\");\r\n  }\r\n\r\n  if (selectionType === \"homogeneous\") {\r\n    ops.push(\"prismata.universe.capability.fs-verify-collective\");\r\n  }\r\n\r\n  if (referenceSelected && compatibility.type_compatible) {\r\n    ops.push(\"prismata.universe.capability.fs-edit-conform\");\r\n    ops.push(\"prismata.universe.capability.fs-verify-reference\");\r\n  }\r\n\r\n  if (compatibility.semantic_compatible) {\r\n    ops.push(\"prismata.universe.capability.fs-diff-compatible\");\r\n  }\r\n\r\n  return ops;\r\n}\r\n\r\nexport function computeSelectionLogic(\r\n  selectedObjects: SelectedObject[],\r\n  referenceObject?: SelectedObject\r\n): SelectionLogicResult {\r\n  const selectionType = classifySelection(selectedObjects);\r\n\r\n  const state: SelectionState = {\r\n    selectionType,\r\n    selectionCount: selectedObjects.length,\r\n    referenceObjectSelected: !!referenceObject,\r\n    referenceObject,\r\n    selectedObjects,\r\n  };\r\n\r\n  const compatibility = buildCompatibilityMatrix(selectedObjects, referenceObject);\r\n\r\n  const visibleOperations = deriveVisibleOperations(\r\n    selectionType,\r\n    compatibility,\r\n    state.referenceObjectSelected\r\n  );\r\n\r\n  return {\r\n    state,\r\n    compatibility,\r\n    visibleOperations,\r\n  };\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

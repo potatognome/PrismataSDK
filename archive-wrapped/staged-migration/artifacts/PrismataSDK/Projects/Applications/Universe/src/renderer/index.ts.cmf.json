@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-src-renderer-index-ts",
+  "udi": "prismata.projects-applications-universe-src-renderer.wrapped-codeblock.index-3bb3543efa",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "index.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/Universe/src/renderer/index.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/src/renderer/index.ts",
+    "encoding": "utf-8",
+    "content_sha256": "ea7da636a6918e95d07be60d1853a9f135963913561adb8e679a75725bae5372"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "export * from \"../../../../Tooling/primitives/typescript/menuRenderer\";\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-chromascheme-previewrenderer-ts",
+  "udi": "prismata.projects-tooling-chromascheme.wrapped-codeblock.previewrenderer-afa0cbfc2d",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "previewRenderer.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/chromascheme/previewRenderer.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/chromascheme/previewRenderer.ts",
+    "encoding": "utf-8",
+    "content_sha256": "347e4608dfb00f0c2b3d8a19159fee828a73e384f6342c11a815abeb84a16d2a"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import {\r\n  FrameBuffer,\r\n  IPreviewRenderer,\r\n  PaneModel,\r\n  RenderedPane,\r\n} from \"./interfaces\";\r\nimport { FractalQuadrantMapper } from \"./fractalQuadrantMapper\";\r\nimport { PaneLayoutEngine } from \"./paneLayoutEngine\";\r\nimport { IColourRefResolver } from \"./interfaces\";\r\n\r\n/**\r\n * Produces a deterministic FrameBuffer from a set of pane models.\r\n * Rendering is pure: no I/O, no content, no side-effects.\r\n * The default canvas is 80\u00d724 (character units).\r\n */\r\nexport class PreviewRenderer implements IPreviewRenderer {\r\n  private readonly _layoutEngine: PaneLayoutEngine;\r\n  private readonly _totalWidth: number;\r\n  private readonly _totalHeight: number;\r\n\r\n  constructor(\r\n    resolver: IColourRefResolver,\r\n    options?: { totalWidth?: number; totalHeight?: number }\r\n  ) {\r\n    const mapper = new FractalQuadrantMapper();\r\n    this._layoutEngine = new PaneLayoutEngine(mapper, resolver);\r\n    this._totalWidth  = options?.totalWidth  ?? 80;\r\n    this._totalHeight = options?.totalHeight ?? 24;\r\n  }\r\n\r\n  render(panes: PaneModel[]): FrameBuffer {\r\n    const rendered: RenderedPane[] = this._layoutEngine.computeLayout(\r\n      panes,\r\n      this._totalWidth,\r\n      this._totalHeight\r\n    );\r\n    return rendered;\r\n  }\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

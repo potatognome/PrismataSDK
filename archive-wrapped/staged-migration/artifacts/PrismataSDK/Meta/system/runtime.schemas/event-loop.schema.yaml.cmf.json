@@ -1,0 +1,36 @@
+{
+  "id": "meta-system-runtime-schemas-event-loop-schema-yaml",
+  "udi": "prismata.meta-system-runtime-schemas.wrapped-schema.event-loop-schema-01b7c84c8a",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "event-loop.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/system/runtime.schemas/event-loop.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/system/runtime.schemas/event-loop.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "5c958f8b83dbaa07e22eb7db08be3b52b107cb360f16a463ce3526e54628e4af"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: event-loop\r\nschema_type: runtime\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.event-loop\r\n  name: event-loop.schema\r\n  location: /Prismata/Meta/runtime.schemas/event-loop.schema.yaml\r\n  description: Canonical schema defining the Prismata runtime event loop.\r\n\r\nspec:\r\n  target_kind: event-loop\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: queue\r\n    path: queue\r\n    type: array\r\n    required: true\r\n\r\n  - name: handlers\r\n    path: handlers\r\n    type: array\r\n    required: false\r\n\r\nobject:\r\n  queue: []\r\n  handlers: []\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

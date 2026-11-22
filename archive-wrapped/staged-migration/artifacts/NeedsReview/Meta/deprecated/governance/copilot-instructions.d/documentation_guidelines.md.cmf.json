@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-governance-copilot-instructions-d-documentation-guidelines-md",
+  "udi": "prismata.meta-deprecated-governance-copilot-instructions-d.wrapped-agent-instruction.documentation-guidelines-82bfd4be6a",
+  "kind": "wrapped-agent-instruction",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "documentation_guidelines.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "agent-instruction",
+    "relative_path": "Meta/deprecated/governance/copilot-instructions.d/documentation_guidelines.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/governance/copilot-instructions.d/documentation_guidelines.md",
+    "encoding": "utf-8",
+    "content_sha256": "bbe8e84b563154135376811532e940fdb00a96ea70ab36fb52cfdafca0c0b5ca"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Documentation Guidelines\r\n\r\nThis document outlines best practices for creating and organizing documentation across Prismata ecosystem projects.\r\n\r\n## Documentation Structure\r\n\r\nAll package and project documentation and user/planning guides should be organized as follows relative to Prismata's Historical document root folder:\r\n\r\n/Prismata/Historical/\r\n\r\n## Subfolders\r\n\r\n/Prismata/Historical/architecture-evolution/\r\n    - used for ecosystem wide architectural plans and updates\r\n\r\n/Prismata/Historical/change-records/\r\n    - used for archival of completed-item plan-documents files that have been fully implemented, tested, verified and validated, or alternatively discontinued and deprecated\r\n\r\n/Prismata/Historical/plan-documents/\r\n    - used for project or project module plan documents, project ecosystem overview updates, project-management, ui-elements that are currently in planning or work-in-progress implementation.\r\n    - completed items get moved into change-records folder, above.\r\n    - subfolders |-> checklists\r\n    - subfolders |-> plan-overview\r\n    - subfolders |-> project-management\r\n    - subfolders |-> ui-elements\r\n\r\n## Documentation Types\r\n\r\nUse this priority model:\r\n\r\n### 1) Core Documentation (required for all projects)\r\n\r\n#### `README.md`\r\nPurpose: First-stop guide for users and contributors.\r\n\r\nRequired sections:\r\n- Project purpose (1-2 sentences)\r\n- Installation / setup\r\n- Quick usage example\r\n- Link to docs folder and key files\r\n\r\nGuidelines:\r\n- Keep concise and task-oriented\r\n- Prefer copy/paste-ready examples\r\n- Update whenever startup or usage changes\r\n\r\n#### `CHANGELOG.md`\r\nPurpose: Track what changed per release.\r\n\r\nRequired rules:\r\n- One section per version\r\n- Use date format `YYYY-MM-DD`\r\n- Group by: Added, Changed, Fixed, Removed (as applicable)\r\n- Flag breaking changes explicitly\r\n\r\nGuidelines:\r\n- Write from user impact perspective\r\n- Keep entries short and specific\r\n\r\n#### `ROADMAP.md` (or `planning/roadmap.md`)\r\nPurpose: Capture planned work and priorities.\r\n\r\nRequired sections:\r\n- Near-term priorities\r\n- Mid-term goals\r\n- Deferred / backlog ideas\r\n\r\nGuidelines:\r\n- Use short bullet points\r\n- Mark items as Planned / In Progress / Done\r\n- Review at each release milestone\r\n\r\n### 2) Supporting Documentation (recommended)\r\n\r\n#### User Documentation\r\nLocation: `docs/user-guides/`\r\n\r\nGuidelines:\r\n- Focus on installation, configuration, troubleshooting\r\n- Use plain language and examples\r\n- Keep one workflow per file where possible\r\n\r\n#### Developer Documentation\r\nLocation: `docs/developer-guides/`\r\n\r\nGuidelines:\r\n- Document architecture, testing, and contribution flow\r\n- Link to relevant code paths\r\n- Keep implementation details aligned with current code\r\n\r\n#### Planning / Design Documentation\r\nLocation: `docs/planning/`\r\n\r\nGuidelines:\r\n- Capture decisions, trade-offs, and rationale\r\n- Include decision date and context\r\n- Update when priorities or architecture changes\r\n\r\n### 3) Optional Documentation (larger projects)\r\n\r\nAdd these only when project complexity justifies them:\r\n- `CONTRIBUTING.md`\r\n- `ARCHITECTURE.md`\r\n- `API_REFERENCE.md`\r\n- Migration guides\r\n- Feature-specific deep dives\r\n\r\nRule of thumb: start with `README.md`, `CHANGELOG.md`, and `ROADMAP.md`; expand only as the project grows.\r\n\r\n## Maintenance Rules\r\n\r\n- Keep documentation in `docs/` under project root\r\n- Tag any documentation guidelines files by appending either \"Summary/Detailed/Comprehensive\" to the filename.\r\n- Any or all developer guides (where applicable) should always have a Summary version.\r\n- Include last updated date in top section of each file\r\n- Update docs in the same change set as related code updates\r\n- Remove stale docs instead of letting them drift\r\n- Prefer short, scannable markdown over long narrative text\r\n\r\n## Links to Related Guides\r\n\r\n- [Workspace Copilot Instructions](../../../.github/copilot-instructions.md)\r\n- [tUilKit Enabled Apps Guidelines](tuilkit_enabled_apps_guidelines.md)\r\n- [CLI Menu Patterns](cli_menu_patterns.md)\r\n- [Logging Policy](logging_policy.md)\r\n- [Colour Key Usage](colour_key_usage.md)\r\n- [Building Examples Policy](building_examples_policy.md)\r\n- [Root Modes Policy](root_modes_workspace_project_paths.md)\r\n\r\n---\r\nLast updated: 2026-05-27\r\n",
+    "classification": {
+      "subtype": "agent-instruction",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}
