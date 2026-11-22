@@ -1,7 +1,27 @@
-﻿udi: prismata.example.module.hello_udi
+id: prismata.example.module.hello_udi
+udi: prismata.example.manifest.hello_udi
 kind: module
 version: 1.0.0
-
-capabilities:
-  - udi: prismata.example.capability.hello_udi
-    description: "Say hello to all related UDIs"
+tenant: null
+source:
+  author: PrismataSDK
+  repository: PrismataSDK
+  path: examples/manifests/hello_udi/manifest.yaml
+metadata:
+  name: Hello UDI Module
+  description: "Minimal manifest for the Hello UDI runtime demonstration"
+relations:
+  module: prismata.example.module.hello_udi
+  capabilities:
+    - prismata.example.capability.hello_udi
+validation:
+  cmf_compliant: true
+  udi_compliant: true
+notes:
+  - "M2 Manifest System MVP"
+content:
+  module_udi: prismata.example.module.hello_udi
+  dependencies: []
+  capabilities:
+    - udi: prismata.example.capability.hello_udi
+      description: "Say hello to all related UDIs"

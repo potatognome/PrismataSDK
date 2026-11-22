@@ -1,6 +1,7 @@
 from core.manifests import Manifest, ManifestLoader
 from core.schemas import SchemaRule, SchemaSpec, SchemaLoader
 import json
+from pathlib import Path
 
 
 def test_schema_loader_validates_required_fields():
@@ -32,6 +33,18 @@ def test_manifest_loader_loads_runtime_manifest():
     assert manifest.name == "ui-core"
     assert manifest.capabilities == ["pane", "menu"]
     assert manifest.interfaces == ["ui.framework"]
+
+
+def test_manifest_loader_loads_hello_udi_manifest():
+    path = Path(__file__).resolve().parents[1] / "examples" / "manifests" / "hello_udi" / "manifest.yaml"
+
+    manifest = ManifestLoader.load_from_file(path)
+
+    assert manifest.udi == "prismata.example.manifest.hello_udi"
+    assert manifest.name == "prismata.example.module.hello_udi"
+    assert manifest.version == "1.0.0"
+    assert manifest.dependencies == []
+    assert manifest.capabilities == ["prismata.example.capability.hello_udi"]
 
 
 def test_schema_loader_resolves_canonical_root_path(tmp_path):

@@ -1,12 +1,32 @@
 # Copilot Instructions for PrismataSDK
 
-## Created: 2026-10-15  Last Updated: 2026-10-16
+## Created: 2026-10-15  Last Updated: 2026-11-21
 
-PrismataSDK Copilot Instruction File
+PrismataSDK is the runtime, security, tooling, rendering, and composition repository.
+It consumes definitions owned by PrismataCore and does not redefine canonical schemas,
+laws, identity rules, CMF structure, or PSO structure.
 
-This instruction file defines how Copilot should behave when assisting with development inside the PrismataSDK repository. It references the PrismataSDK Migration Plan and the active migration checklist so that guidance, completions, and code suggestions stay aligned with the new CMF + PSO architecture. Copilot must prioritize UI subsystem migration, multi‑coloured pane rendering, UI framework stability, and menu functionality.
+Read `.github/copilot-instructions.d/index.md` before repository work.
 
-The authoritative migration plan is located at `.github/PrismataSDK-migration-plan.md` and the execution tracker is `.github/checklists/prismatasdk-migration-checklist.md`.
+## Authoritative References
+
+- PrismataCore KADD: `../PrismataCore/canonical/kadd/` in a sibling-checkout workspace,
+  or the separately versioned PrismataCore dependency when repositories are cloned independently.
+- SDK developer guide: `docs/guides/prismata.sdk.dev-guide.md`
+- Hello_UDI milestone plan: `docs/plans/hello_udi_milestone_plan.yaml`
+- SDK migration plan: `.github/PrismataSDK-migration-plan.md`
+- Live migration checklist: `.github/checklists/prismatasdk-migration-checklist.md`
+
+If references conflict, apply this precedence:
+
+1. KADD architectural intent in PrismataCore
+2. Repository-specific SDK instructions
+3. The SDK developer guide and Hello_UDI plan
+4. The migration plan and checklist
+5. Local implementation preferences
+
+The former combined Prismata repository is migration input only. It is not an
+architectural authority for new SDK work.
 
 1. Purpose of This Instruction File
 

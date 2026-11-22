@@ -1,6 +1,16 @@
-﻿udi: prismata.example.pane.lh_test
+id: prismata.example.pane.lh_test
+udi: prismata.example.pane.lh_test
 kind: pane
 version: 1.0.0
-
+tenant: null
+metadata:
+  name: Left Test Pane
+relations:
+  framework: prismata.example.ui_framework.two_pane
+validation:
+  cmf_compliant: true
+  udi_compliant: true
+notes:
+  - "M5 Pane Registry MVP"
 content:
   title: "Left Test Pane"

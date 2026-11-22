@@ -4,6 +4,11 @@ This checklist tracks the execution status of the PrismataSDK migration against 
 
 ## Completed
 
+- [x] Complete M0-M11 of the Hello_UDI structural runtime milestone.
+- [x] Load the CMF/UDI Hello_UDI manifest and capability artifacts.
+- [x] Resolve the two-pane framework, panes, menu items, and capability context.
+- [x] Execute Hello_UDI output and inject it into left or right panes.
+- [x] Implement and test the continuous runtime loop and quit behavior.
 - [x] Confirm migration scope is focused on the UI layer and CMF + PSO architecture.
 - [x] Create the authoritative migration plan document for PrismataSDK.
 - [x] Create a repo-level migration scaffold for the SDK package layout.
@@ -39,6 +44,11 @@ This checklist tracks the execution status of the PrismataSDK migration against 
 - [ ] Add app migration tasks for Vile, Vise, and Universe integration.
 
 ## Execution Notes
+
+- Repository instruction index: `.github/copilot-instructions.d/index.md`
+- Architectural authority: sibling PrismataCore `canonical/kadd/`
+- Developer guide: `docs/guides/prismata.sdk.dev-guide.md`
+- Hello_UDI plan: `docs/plans/hello_udi_milestone_plan.yaml`
 
 - Source of truth: `.github/PrismataSDK-migration-plan.md`
 - Execution tracker: this checklist should be updated as each migration phase is completed.

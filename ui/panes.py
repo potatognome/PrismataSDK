@@ -12,6 +12,7 @@ class Pane:
     """Schema-friendly pane descriptor for the migrated UI runtime."""
 
     id: str
+    udi: str | None = None
     kind: str = "pane"
     title: str = ""
     position: dict[str, Any] | None = None
@@ -193,6 +194,39 @@ class PaneRuntime:
 
 def apply_role_palette(pane: Pane, role_palette: dict[str, str], default_colour: str = "#000000") -> dict[str, str]:
     return {role: role_palette.get(role, default_colour) for role in pane.colour_roles}
+
+
+class PaneLoader:
+    """Loads pane descriptors from CMF-like registry payloads."""
+
+    @staticmethod
+    def load(payload: dict[str, Any]) -> Pane:
+        required = {"id", "udi", "kind", "version"}
+        missing = sorted(required - set(payload))
+        if missing:
+            raise ValueError(f"Pane payload missing required fields: {', '.join(missing)}")
+
+        content = payload.get("content")
+        if not isinstance(content, dict):
+            content = {}
+        metadata = payload.get("metadata")
+        if not isinstance(metadata, dict):
+            metadata = {}
+
+        return Pane(
+            id=str(payload["id"]),
+            udi=str(payload["udi"]),
+            kind=str(payload["kind"]),
+            title=str(content.get("title") or metadata.get("name") or payload["id"]),
+            position=content.get("position"),
+            size=content.get("size"),
+            visible=bool(content.get("visible", True)),
+            enabled=bool(content.get("enabled", True)),
+            colour_scheme=content.get("colour_scheme"),
+            colour_roles=list(content.get("colour_roles", [])),
+            border_role=content.get("border_role"),
+            border_pattern=content.get("border_pattern"),
+        )
 
 
 def resolve_pane_location(pane: Pane, context: dict[str, Any] | None = None) -> dict[str, int]:

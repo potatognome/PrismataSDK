@@ -1,0 +1,740 @@
+---
+# Hello_UDI Milestone Development Plan
+# CMF-Enveloped Planning Document
+# PrismataCore + PrismataSDK Collaborative Milestone Plan
+
+id: prismata.core.document.hello-udi-milestone-plan
+udi: prismata.core.document.hello-udi-milestone-plan
+kind: milestone-plan
+version: 1.0.0
+tenant: null
+
+source:
+  origin: internal
+  repository: potatognome/PrismataCore
+  branch: main
+  created_at: 2026-11-16T20:04:19Z
+  created_by: copilot
+  last_modified_at: 2026-11-21T18:10:15-05:00
+
+metadata:
+  name: Hello_UDI Milestone Development Plan
+  display_name: Hello_UDI End-to-End Runtime Demonstration
+  description: >
+    A phased development plan to demonstrate the complete PrismataSDK runtime 
+    path from manifest → capability resolution → UI framework → menu → pane → 
+    output injection using only PrismataCore schemas, validators, and 
+    CMF/PSO infrastructure.
+  tags:
+    - prismata
+    - sdk
+    - runtime
+    - demonstration
+    - milestone-plan
+    - hello_udi
+  schema_version: 1.0.0
+  scope: sdk-runtime
+  status: complete
+  priority: high
+  timeline_weeks: 12
+  target_repositories:
+    - potatognome/PrismataCore
+    - potatognome/PrismataSDK
+
+relations:
+  belongs_to: prismata.core.project.hello_udi
+  impacts:
+    - prismata.core.schema.manifest
+    - prismata.core.schema.capability
+    - prismata.core.schema.ui-framework
+    - prismata.core.schema.menu
+    - prismata.core.schema.pane
+    - prismata.core.schema.chromascheme
+  dependencies: []
+  referenced_by: []
+
+validation:
+  cmf_compliant: true
+  udi_compliant: true
+  schema_valid: true
+  rules:
+    - all_milestones_have_unique_ids
+    - all_deliverables_reference_valid_udis
+    - success_criteria_are_measurable
+    - milestone_sequence_is_logical
+
+notes:
+  - >
+    This plan establishes the reference implementation for the PrismataSDK
+    runtime path. All artifacts generated during milestone execution MUST
+    be CMF-enveloped and UDI-compliant.
+  - >
+    Explicit deferral of rendering, styling, and tenant-specific features
+    allows focus on core infrastructure validation.
+  - >
+    The CMF Wrapper tool (Milestone extension) is proposed but not critical
+    to the Hello_UDI demonstration success criteria.
+  - >
+    Definition of Done requires successful end-to-end execution of the
+    complete runtime chain without modifications to CMF/PSO core models.
+
+content:
+  executive_summary: |
+    Hello_UDI is a comprehensive demonstration of the PrismataSDK runtime
+    starting from manifest discovery and concluding with capability execution
+    and pane output injection. This plan organizes development into 11
+    sequential milestones plus an optional tooling enhancement.
+
+    Success means:
+    1. PrismataCore validation infrastructure is production-ready
+    2. PrismataSDK has a functioning end-to-end reference implementation
+    3. New capabilities can be developed using the established pattern
+
+  objective: |
+    Demonstrate the complete PrismataSDK runtime path:
+    
+    Manifest → Capability Resolution → UI Framework → Menu → Pane → Output Injection
+    
+    Using only:
+    - PrismataCore schemas
+    - PSO (Prismata Schematic Object) model
+    - CMF (Canonical Metadata Format) envelope
+    - Validators
+    - Loaders
+    - Registries
+
+  milestones:
+
+    - milestone_id: m0
+      udi: prismata.core.milestone.hello_udi.m0_foundation_validation
+      name: Foundation Validation
+      sequence: 0
+      status: complete
+      estimated_duration_days: 7
+      
+      goal: |
+        Verify that PrismataCore is sufficient to support SDK migration
+        and that all core schemas are CMF-enveloped and UDI-compliant.
+      
+      inputs:
+        - type: schema
+          reference: prismata.core.schema.chromascheme
+          purpose: Color palette and role definitions
+        - type: schema
+          reference: prismata.core.schema.colour-scheme
+          purpose: Base and semantic color definitions
+        - type: schema
+          reference: prismata.core.schema.border-pattern
+          purpose: Border visual patterns
+        - type: validator
+          reference: prismata.core.validator.cmf_envelope
+          purpose: CMF structure validation
+        - type: validator
+          reference: prismata.core.validator.udi_compliance
+          purpose: UDI format and consistency validation
+        - type: model
+          reference: prismata.core.model.pso
+          purpose: Prismata Schematic Object runtime model
+      
+      outputs:
+        - type: validation_report
+          udi: prismata.core.report.m0_validation
+          description: CMF/PSO validation results
+        - type: document
+          udi: prismata.core.document.m0_baseline
+          description: PrismataSDK migration baseline establishment
+      
+      success_criteria:
+        - CMF validation passes for all canonical schemas
+        - PSO construction succeeds for example objects
+        - All example objects load and initialize without error
+        - UDI compliance check passes for all artifacts
+        - Validator chain completes without failures
+      
+      acceptance_tests:
+        - Load all canonical schemas from PrismataCore
+        - Construct PSO for each schema
+        - Validate CMF envelope structure
+        - Verify UDI format compliance
+        - Execute cmf_envelope_validator
+        - Execute udi_validator
+        - Execute canonical_schema_validator
+      
+      deliverables:
+        - PrismataCore migration baseline document
+        - Validation test suite
+        - CMF/PSO example loading test
+      
+      blockers: []
+
+    - milestone_id: m1
+      udi: prismata.core.milestone.hello_udi.m1_documentation_scaffold
+      name: Documentation Scaffold
+      sequence: 1
+      status: complete
+      estimated_duration_days: 5
+      depends_on:
+        - m0
+      
+      goal: |
+        Create the developer landing zone and reference documentation
+        before writing additional SDK functionality. New developers should
+        understand the architecture without reading source code.
+      
+      deliverables:
+        - type: document
+          path: PrismataSDK/docs/guides/prismata.sdk.dev-guide.md
+          udi: prismata.core.document.sdk_developer_guide
+          sections:
+            - SDK Folder Structure and Conventions
+            - CMF Lifecycle and Envelope Rules
+            - PSO Lifecycle and Construction
+            - Registry Architecture and Discovery
+            - Manifest Architecture and Format
+            - Capability Architecture and Execution
+            - Hello_UDI Demonstration Architecture
+            - UDI Compliance Policy for SDK Artifacts
+            - CMF to PSO Transformation Pipeline
+      
+      success_criteria:
+        - Documentation is complete and reviewed
+        - All key concepts have dedicated sections
+        - Code examples are present for each major concept
+        - Architecture diagrams are provided
+        - Developer can understand the full chain without source review
+      
+      acceptance_tests:
+        - Peer review of documentation completeness
+        - Verification that all milestones 2-10 are documented
+        - Confirmation that CMF/PSO/UDI concepts are explained
+      
+      blockers: []
+
+    - milestone_id: m2
+      udi: prismata.core.milestone.hello_udi.m2_manifest_system_mvp
+      name: Manifest System MVP
+      sequence: 2
+      status: complete
+      estimated_duration_days: 7
+      depends_on:
+        - m1
+      
+      goal: |
+        Create the minimum manifest infrastructure required for module
+        discovery and capability declaration.
+      
+      deliverables:
+        - type: manifest
+          path: examples/manifests/hello_udi/manifest.yaml
+          udi: prismata.example.manifest.hello_udi
+          schema_reference: prismata.core.schema.manifest
+          content_requirements:
+            - module_udi: prismata.example.module.hello_udi
+            - version: 1.0.0
+            - declared_capabilities:
+                - prismata.example.capability.hello_udi
+            - dependencies: []
+            - metadata_declaration: true
+      
+      success_criteria:
+        - Manifest loads without error
+        - Manifest is CMF-enveloped and UDI-compliant
+        - System can discover prismata.example.module.hello_udi
+        - Manifest declares all required capabilities
+      
+      acceptance_tests:
+        - Load manifest.yaml via registry
+        - Verify UDI prismata.example.module.hello_udi is discoverable
+        - Construct PSO from manifest
+        - Validate CMF envelope
+      
+      blockers: []
+
+    - milestone_id: m3
+      udi: prismata.core.milestone.hello_udi.m3_capability_resolution_mvp
+      name: Capability Resolution MVP
+      sequence: 3
+      status: complete
+      estimated_duration_days: 7
+      depends_on:
+        - m2
+      
+      goal: |
+        Implement capability UDI resolution and runtime discovery.
+        Given a capability UDI, the system must return a valid capability
+        PSO that can be executed.
+      
+      deliverables:
+        - type: capability
+          path: examples/capabilities/hello_udi/hello_udi.yaml
+          udi: prismata.example.capability.hello_udi
+          schema_reference: prismata.core.schema.capability
+          content_requirements:
+            - capability_udi: prismata.example.capability.hello_udi
+            - version: 1.0.0
+            - metadata: true
+            - execution_target: hello_udi_runtime
+        - type: loader
+          name: CapabilityResolver
+          responsibility: |
+            Given a capability UDI, resolve to loaded capability PSO.
+            Return PSO ready for execution.
+      
+      success_criteria:
+        - Capability file is CMF-enveloped and UDI-compliant
+        - CapabilityResolver can load capability by UDI
+        - PSO construction succeeds
+        - Capability object can be executed
+      
+      acceptance_tests:
+        - Resolve prismata.example.capability.hello_udi
+        - Construct PSO from capability
+        - Verify capability metadata
+        - Execute capability (dry-run)
+      
+      blockers: []
+
+    - milestone_id: m4
+      udi: prismata.core.milestone.hello_udi.m4_ui_framework_mvp
+      name: Two-Pane UI Framework MVP
+      sequence: 4
+      status: complete
+      estimated_duration_days: 7
+      depends_on:
+        - m3
+      
+      goal: |
+        Create the smallest meaningful UI framework: two panes (left and right)
+        with a menu pane concept. Framework must be loadable, discoverable,
+        and convertible to PSO.
+      
+      deliverables:
+        - type: ui_framework
+          path: examples/registry/ui_frameworks/two_pane.yaml
+          udi: prismata.example.ui_framework.two_pane
+          schema_reference: prismata.core.schema.ui-framework
+          content_requirements:
+            - framework_name: Two Pane Layout
+            - pane_slots:
+                - name: left_pane
+                  position: left
+                  role: menu_or_content
+                - name: right_pane
+                  position: right
+                  role: content
+            - layout_grid: "1fr 1fr"
+      
+      success_criteria:
+        - Framework is CMF-enveloped and UDI-compliant
+        - Framework can be discovered by UDI
+        - PSO construction creates runtime model with both panes
+        - Framework loader verifies pane slot configuration
+      
+      acceptance_tests:
+        - Load two_pane framework
+        - Construct PSO
+        - Verify left and right pane objects in PSO
+        - Confirm framework is discoverable
+      
+      blockers: []
+
+    - milestone_id: m5
+      udi: prismata.core.milestone.hello_udi.m5_pane_registry_mvp
+      name: Pane Registry MVP
+      sequence: 5
+      status: complete
+      estimated_duration_days: 5
+      depends_on:
+        - m4
+      
+      goal: |
+        Create pane discovery and resolution. Pane UDIs must resolve to
+        pane PSOs that can be injected into framework pane slots.
+      
+      deliverables:
+        - type: pane
+          path: examples/registry/panes/lh_test_pane.yaml
+          udi: prismata.example.pane.lh_test
+          schema_reference: prismata.core.schema.pane
+          content_requirements:
+            - pane_name: Left Pane Test
+            - border_role: standard
+            - colour_role: default
+            - padding: standard
+        - type: pane
+          path: examples/registry/panes/rh_test_pane.yaml
+          udi: prismata.example.pane.rh_test
+          schema_reference: prismata.core.schema.pane
+          content_requirements:
+            - pane_name: Right Pane Test
+            - border_role: standard
+            - colour_role: default
+            - padding: standard
+        - type: loader
+          name: PaneResolver
+          responsibility: |
+            Given a pane UDI, resolve to loaded pane PSO ready for
+            framework injection.
+      
+      success_criteria:
+        - Both panes are CMF-enveloped and UDI-compliant
+        - PaneResolver can load any pane by UDI
+        - PSO construction succeeds for each pane
+      
+      acceptance_tests:
+        - Resolve prismata.example.pane.lh_test
+        - Resolve prismata.example.pane.rh_test
+        - Construct PSO for both
+        - Verify pane metadata
+      
+      blockers: []
+
+    - milestone_id: m6
+      udi: prismata.core.milestone.hello_udi.m6_menu_runtime_mvp
+      name: Menu Runtime MVP
+      sequence: 6
+      status: complete
+      estimated_duration_days: 7
+      depends_on:
+        - m5
+      
+      goal: |
+        Create menu loading, menu item resolution, and execution routing.
+        Menu items must resolve to capabilities and target panes.
+      
+      deliverables:
+        - type: menu
+          path: examples/registry/menus/test_menu.yaml
+          udi: prismata.example.menu.test_menu
+          schema_reference: prismata.core.schema.menu
+          content_requirements:
+            - menu_name: Test Menu
+            - menu_items:
+                - item_udi: prismata.example.menu_item.test_lh
+                  label: "1) Test Left Pane"
+                  order: 1
+                - item_udi: prismata.example.menu_item.test_rh
+                  label: "2) Test Right Pane"
+                  order: 2
+                - item_udi: prismata.example.menu_item.quit
+                  label: "0) Quit"
+                  order: 0
+        - type: menu_item
+          udi: prismata.example.menu_item.test_lh
+          schema_reference: prismata.core.schema.menu-item
+          content_requirements:
+            - capability_udi: prismata.example.capability.hello_udi
+            - target_pane_udi: prismata.example.pane.lh_test
+            - action_type: execute_capability
+        - type: menu_item
+          udi: prismata.example.menu_item.test_rh
+          schema_reference: prismata.core.schema.menu-item
+          content_requirements:
+            - capability_udi: prismata.example.capability.hello_udi
+            - target_pane_udi: prismata.example.pane.rh_test
+            - action_type: execute_capability
+        - type: menu_item
+          udi: prismata.example.menu_item.quit
+          schema_reference: prismata.core.schema.menu-item
+          content_requirements:
+            - action_type: quit
+      
+      success_criteria:
+        - Menu and all menu items are CMF-enveloped and UDI-compliant
+        - Menu can be discovered and loaded
+        - Each menu item resolves to capability and target pane
+        - Menu selection routing is unambiguous
+      
+      acceptance_tests:
+        - Load test_menu
+        - Resolve each menu item
+        - Verify capability routing
+        - Verify pane targeting
+        - Construct PSOs for all items
+      
+      blockers: []
+
+    - milestone_id: m7
+      udi: prismata.core.milestone.hello_udi.m7_udi_context_graph
+      name: UDI Context Graph
+      sequence: 7
+      status: complete
+      estimated_duration_days: 7
+      depends_on:
+        - m6
+      
+      goal: |
+        Construct the object ownership and dependency chain. Build runtime
+        context that traces from menu item → menu → pane → framework → 
+        capability. Enable capabilities to traverse and reason about their
+        execution context.
+      
+      deliverables:
+        - type: builder
+          name: ContextGraphBuilder
+          responsibility: |
+            Given any object UDI, build related_objects[] chain:
+              Menu Item UDI
+              → Menu UDI
+              → Pane UDI
+              → Framework UDI
+              → Capability UDI
+            
+            Limit to 10 related objects by default.
+        - type: data_structure
+          name: RuntimeContext
+          fields:
+            - initiating_object: udi
+            - related_objects: udi[]
+            - execution_path: udi[]
+            - metadata: object
+      
+      success_criteria:
+        - ContextGraphBuilder can construct context for any object
+        - Context chain is ordered and predictable
+        - Maximum 10 related objects enforced
+        - All UDIs in context are valid and resolvable
+      
+      acceptance_tests:
+        - Build context from menu item
+        - Build context from capability
+        - Verify context chain is complete
+        - Verify UDI order matches dependencies
+        - Test maximum 10 object limit
+      
+      blockers: []
+
+    - milestone_id: m8
+      udi: prismata.core.milestone.hello_udi.m8_hello_udi_capability
+      name: Hello_UDI Capability Implementation
+      sequence: 8
+      status: complete
+      estimated_duration_days: 7
+      depends_on:
+        - m7
+      
+      goal: |
+        Implement the first real capability that uses runtime context.
+        Capability must emit greetings to all related objects in the
+        context graph.
+      
+      deliverables:
+        - type: capability
+          udi: prismata.example.capability.hello_udi
+          implementation: |
+            Given runtime context with related_objects[]:
+            
+            For each object in related_objects (max 10):
+              Emit: "Hello to <object_type> <udi> from prismata.example.capability.hello_udi"
+            
+            Example output:
+              Hello to menu_item prismata.example.menu_item.test_lh from prismata.example.capability.hello_udi
+              Hello to menu prismata.example.menu.test_menu from prismata.example.capability.hello_udi
+              Hello to pane prismata.example.pane.lh_test from prismata.example.capability.hello_udi
+              Hello to framework prismata.example.ui_framework.two_pane from prismata.example.capability.hello_udi
+      
+      success_criteria:
+        - Capability executes without error
+        - Output is emitted to stdout
+        - Each related object is greeted once
+        - UDIs are correctly formatted and displayed
+      
+      acceptance_tests:
+        - Execute capability with full context
+        - Verify output format
+        - Verify all related objects are addressed
+        - Confirm execution time is reasonable
+      
+      blockers: []
+
+    - milestone_id: m9
+      udi: prismata.core.milestone.hello_udi.m9_pane_output_injection
+      name: Pane Output Injection
+      sequence: 9
+      status: complete
+      estimated_duration_days: 7
+      depends_on:
+        - m8
+      
+      goal: |
+        Route capability output into the target pane specified by the
+        menu item. Different pane targets display different capability
+        output. Output must be rendered within the pane boundaries.
+      
+      deliverables:
+        - type: injector
+          name: PaneOutputInjector
+          responsibility: |
+            Given:
+              - capability output (string)
+              - target pane UDI
+            
+            Route output to specified pane.
+            Re-render framework with updated pane content.
+            Preserve menu and other panes.
+        - type: renderer
+          name: PaneRenderer
+          responsibility: |
+            Render pane with borders, padding, and injected content.
+            Respect pane color and border roles.
+      
+      success_criteria:
+        - Menu choice 1 → capability executes → output appears in left pane
+        - Menu choice 2 → capability executes → output appears in right pane
+        - Other panes remain unchanged
+        - Output is properly bounded within pane
+        - Framework layout is preserved
+      
+      acceptance_tests:
+        - Select menu option 1, verify left pane receives output
+        - Select menu option 2, verify right pane receives output
+        - Confirm other pane is unchanged
+        - Verify pane boundaries are respected
+      
+      blockers: []
+
+    - milestone_id: m10
+      udi: prismata.core.milestone.hello_udi.m10_runtime_loop
+      name: Runtime Loop
+      sequence: 10
+      status: complete
+      estimated_duration_days: 7
+      depends_on:
+        - m9
+      
+      goal: |
+        Create persistent interactive application loop. User selects
+        menu option, capability executes and injects output into pane,
+        menu is re-rendered, loop continues until quit.
+      
+      deliverables:
+        - type: runtime_engine
+          name: HelloUDIRuntimeEngine
+          loop_behavior: |
+            1. Display Menu (with panes)
+            2. Await User Selection
+            3. Resolve Menu Item
+            4. If Quit: Exit
+            5. Otherwise: Execute Capability
+            6. Inject Output into Target Pane
+            7. Re-render Complete Framework
+            8. Goto Step 1
+      
+      success_criteria:
+        - Application runs continuously until quit selected
+        - Each iteration completes without error
+        - Output persists until cleared
+        - Menu responsive to all choices
+        - Application is fully interactive
+      
+      acceptance_tests:
+        - Start application
+        - Select option 1, verify left pane output
+        - Select option 2, verify right pane output
+        - Select option 1 again, verify new output replaces old
+        - Select option 0 (quit), verify graceful exit
+      
+      blockers: []
+
+    - milestone_id: m11
+      udi: prismata.core.milestone.hello_udi.m11_structural_validation
+      name: Structural UI Validation
+      sequence: 11
+      status: complete
+      estimated_duration_days: 5
+      depends_on:
+        - m10
+      
+      goal: |
+        Validate all high-priority SDK architecture. Confirm that the
+        complete runtime chain is built on solid foundations and that
+        all major components interact correctly.
+      
+      validation_scope:
+        - Manifest loading and discovery
+        - Capability resolution and execution
+        - Framework loading and pane slot configuration
+        - Pane loading and injection
+        - Menu loading and item resolution
+        - UDI routing and context graph
+        - Pane output injection and rendering
+      
+      validation_excludes: |
+        EXPLICITLY DEFERRED (not validated in m11):
+        - Border patterns (styling detail)
+        - Colour roles (styling detail)
+        - Chromaschemes (styling detail)
+        - ANSI styling (rendering detail)
+        - Tenant overrides (multi-tenant feature)
+        - Vile (image rendering)
+        - Vise (video rendering)
+        - Universe (advanced cosmology)
+      
+      success_criteria:
+        - All 7 validation areas pass their tests
+        - No regressions in core infrastructure
+        - CMF/PSO models remain unchanged
+        - All artifacts remain UDI-compliant
+      
+      acceptance_tests:
+        - Execute full validation test suite
+        - Verify all 7 areas pass
+        - Confirm no deferred areas are tested
+        - Review validation report
+      
+      blockers: []
+
+  definition_of_done: |
+    Hello_UDI is complete when the following chain executes successfully
+    using ONLY canonical PrismataCore infrastructure:
+    
+    Manifest
+    → Capability Resolution
+    → Framework Resolution
+    → Menu Selection
+    → Pane Injection
+    → Hello_UDI Output
+    → Runtime Loop (Continuous)
+    
+    All artifacts must be:
+    - CMF-enveloped
+    - UDI-compliant
+    - Registered in canonical repositories
+    - Discoverable via UDI
+    - Convertible to PSO
+    - Validatable by core validators
+    
+    At completion, PrismataSDK has:
+    1. A functioning end-to-end platform demonstration
+    2. A reference implementation for future capability development
+    3. Proven that core PrismataCore infrastructure is sufficient for SDK migration
+
+  future_enhancements:
+    - proposed_tool: CMF_Wrapper
+      udi: prismata.core.tool.cmf_wrapper
+      purpose: Accelerate legacy Prismata module migration
+      location: PrismataSDK/core/ops/cmf_wrapper.py
+      functionality:
+        - Scan legacy YAML and module objects
+        - Detect object type, metadata, version, name, description
+        - Auto-generate CMF envelope structure
+        - Preserve legacy content in content field
+        - Support batch migration with --folder and --recursive flags
+      not_critical_to_hello_udi: true
+      deferred_implementation: true
+
+  acceptance_criteria:
+    - All milestones m0-m11 are complete
+    - Definition of Done criteria are satisfied
+    - Full end-to-end runtime execution succeeds
+    - All artifacts pass CMF and UDI validation
+    - Validation test suite passes
+    - Developer guide is complete and reviewed
+    - No code regressions in PrismataCore
+
+  next_steps:
+    - Preserve the completed Hello_UDI runtime as the SDK vertical-slice reference
+    - Extend preview integration only after structural behavior remains stable
+    - Add tenant override loading and resolution as a later SDK milestone
+    - Add CLI commands for validate, build, preview, list, and inspect
+    - Complete app migrations for Vile, Vise, and Universe separately

@@ -72,3 +72,37 @@ class UIFrameworkRuntime:
 def resolve_menu_target(framework: UIFramework, menu_id: str) -> str | None:
     runtime = UIFrameworkRuntime(framework=framework)
     return runtime.resolve_menu_target(menu_id)
+
+
+class UIFrameworkLoader:
+    """Loads a UI framework from a CMF-like registry payload."""
+
+    @staticmethod
+    def load(payload: dict[str, Any]) -> UIFramework:
+        required = {"id", "udi", "kind", "version"}
+        missing = sorted(required - set(payload))
+        if missing:
+            raise ValueError(f"UI framework payload missing required fields: {', '.join(missing)}")
+
+        content = payload.get("content")
+        if not isinstance(content, dict):
+            content = {}
+
+        panes = content.get("panes", [])
+        if isinstance(panes, dict):
+            pane_ids = list(panes.values())
+        else:
+            pane_ids = list(panes)
+
+        metadata = dict(payload.get("metadata", content))
+        menu_routes = dict(content.get("menu_routes", {}))
+        if not menu_routes and isinstance(content.get("menu"), str):
+            menu_routes = {content["menu"]: "slot:left"}
+
+        return UIFramework(
+            id=str(payload["id"]),
+            kind=str(payload["kind"]),
+            panes=[str(pane) for pane in pane_ids],
+            menu_routes=menu_routes,
+            metadata=metadata,
+        )

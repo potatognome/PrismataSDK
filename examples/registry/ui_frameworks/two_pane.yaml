@@ -1,10 +1,32 @@
-﻿udi: prismata.example.ui_framework.two_pane
-kind: ui_framework
+id: prismata.example.ui_framework.two_pane
+udi: prismata.example.ui_framework.two_pane
+kind: ui-framework
 version: 1.0.0
-
+tenant: null
+source:
+  author: PrismataSDK
+  repository: PrismataSDK
+  path: examples/registry/ui_frameworks/two_pane.yaml
+metadata:
+  name: Two Pane Layout
+  layout: split
+relations:
+  panes:
+    - prismata.example.pane.lh_test
+    - prismata.example.pane.rh_test
+  menus:
+    - prismata.example.menu.test_menu
+validation:
+  cmf_compliant: true
+  udi_compliant: true
+notes:
+  - "M4 Two-Pane UI Framework MVP"
 content:
   layout: two_pane
   panes:
+    left: prismata.example.pane.lh_test
+    right: prismata.example.pane.rh_test
+  pane_slots:
     left: prismata.example.pane.lh_test
     right: prismata.example.pane.rh_test
   menu: prismata.example.menu.test_menu

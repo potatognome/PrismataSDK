@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Any
+import yaml
 
 from core.manifests import Manifest
 
@@ -15,9 +17,37 @@ class Capability:
     """A capability definition exposed by a module manifest."""
 
     name: str
+    udi: str | None = None
     interfaces: list[str] = field(default_factory=list)
     dependencies: list[str] = field(default_factory=list)
     metadata: dict[str, Any] = field(default_factory=dict)
+    execution_target: str | None = None
+    content: dict[str, Any] = field(default_factory=dict)
+
+    @staticmethod
+    def load_from_file(path: str | Path) -> "Capability":
+        payload = yaml.safe_load(Path(path).read_text(encoding="utf-8"))
+        if not isinstance(payload, dict):
+            raise TypeError("Capability file must contain a YAML mapping")
+
+        udi = payload.get("udi")
+        name = payload.get("id") or udi
+        if not name:
+            raise ValueError("Capability payload missing required field: udi")
+
+        content = payload.get("content")
+        if not isinstance(content, dict):
+            content = {}
+
+        return Capability(
+            name=str(name),
+            udi=str(udi) if udi else None,
+            interfaces=list(content.get("interfaces", [])),
+            dependencies=list(content.get("dependencies", [])),
+            metadata=dict(payload.get("metadata", content)),
+            execution_target=str(content.get("execution_target") or content.get("action") or ""),
+            content=content,
+        )
 
 
 @dataclass(slots=True)
@@ -35,9 +65,12 @@ class CapabilityResolution:
             "capabilities": [
                 {
                     "name": capability.name,
+                    "udi": capability.udi,
                     "interfaces": capability.interfaces,
                     "dependencies": capability.dependencies,
                     "metadata": capability.metadata,
+                    "execution_target": capability.execution_target,
+                    "content": capability.content,
                 }
                 for capability in self.capabilities
             ],
@@ -57,6 +90,11 @@ class CapabilityRegistry:
         return capability
 
     def resolve(self, name: str) -> Capability:
+        if name in self._capabilities:
+            return self._capabilities[name]
+        for capability in self._capabilities.values():
+            if capability.udi == name:
+                return capability
         try:
             return self._capabilities[name]
         except KeyError as exc:

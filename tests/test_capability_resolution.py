@@ -1,4 +1,5 @@
 import pytest
+from pathlib import Path
 
 from capabilities import Capability, CapabilityRegistry, CapabilityResolver
 from core.manifests import ManifestLoader
@@ -48,3 +49,17 @@ def test_capability_registry_rejects_duplicate_registration():
 
     with pytest.raises(ValueError, match=r"Capability already registered: pane"):
         registry.register(Capability(name="pane"))
+
+
+def test_hello_udi_capability_loads_as_cmf_capability():
+    path = Path(__file__).resolve().parents[1] / "examples" / "capabilities" / "hello_udi" / "hello_udi.yaml"
+
+    capability = Capability.load_from_file(path)
+    registry = CapabilityRegistry()
+    registry.register(capability)
+
+    resolved = registry.resolve("prismata.example.capability.hello_udi")
+
+    assert resolved.udi == "prismata.example.capability.hello_udi"
+    assert resolved.execution_target == "hello_udi_runtime"
+    assert resolved.content["max_depth"] == 10

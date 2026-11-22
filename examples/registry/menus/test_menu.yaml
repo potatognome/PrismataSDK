@@ -1,21 +1,34 @@
-﻿udi: prismata.example.menu.test_menu
+id: prismata.example.menu.test_menu
+udi: prismata.example.menu.test_menu
 kind: menu
 version: 1.0.0
-
+tenant: null
+metadata:
+  name: Test Menu
+relations:
+  framework: prismata.example.ui_framework.two_pane
+validation:
+  cmf_compliant: true
+  udi_compliant: true
+notes:
+  - "M6 Menu Runtime MVP"
 content:
   items:
-    - key: "1"
+    - udi: prismata.example.menu_item.test_lh
+      key: "1"
       name: "Test LH Pane"
-      action: execute
+      action: execute_capability
       capability: prismata.example.capability.hello_udi
       target_pane: prismata.example.pane.lh_test
 
-    - key: "2"
+    - udi: prismata.example.menu_item.test_rh
+      key: "2"
       name: "Test RH Pane"
-      action: execute
+      action: execute_capability
       capability: prismata.example.capability.hello_udi
       target_pane: prismata.example.pane.rh_test
 
-    - key: "0"
+    - udi: prismata.example.menu_item.quit
+      key: "0"
       name: "Quit"
-      action: exit
+      action: quit

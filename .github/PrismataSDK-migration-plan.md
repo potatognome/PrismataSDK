@@ -2,6 +2,14 @@
 
 ## Created: 2026-10-15  Last Updated: 2026-10-17
 
+## Architectural References
+
+- Follow KADD in `../PrismataCore/canonical/kadd/` when repositories are sibling checkouts.
+- Follow PrismataSDK at `docs/guides/prismata.sdk.dev-guide.md`.
+- Track the Hello_UDI vertical slice in `docs/plans/hello_udi_milestone_plan.yaml`.
+- Use `.github/copilot-instructions.d/index.md` for repository-specific agent guidance.
+- Treat the former combined Prismata repository as legacy migration input only.
+
 This document outlines the complete migration strategy for transitioning PrismataSDK into its new architecture, fully aligned with PrismataCore’s CMF capsule model, PSO construction rules, and updated schema system. It prioritizes user interface elements, multi‑coloured pane rendering, UI framework stability, and menu functionality. Breaking changes are permitted and expected.
 
 1. Migration Philosophy
