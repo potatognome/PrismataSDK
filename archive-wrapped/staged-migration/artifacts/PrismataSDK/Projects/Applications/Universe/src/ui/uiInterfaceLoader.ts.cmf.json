@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-src-ui-uiinterfaceloader-ts",
+  "udi": "prismata.projects-applications-universe-src-ui.wrapped-codeblock.uiinterfaceloader-f17a1efd7c",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "uiInterfaceLoader.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/Universe/src/ui/uiInterfaceLoader.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/src/ui/uiInterfaceLoader.ts",
+    "encoding": "utf-8",
+    "content_sha256": "a46a22517f252724934a37b34651e7d024263e8875492c08f9840b20cdf3e181"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "export {\r\n  loadUniverseUiFrameworksConfig,\r\n  type UiFrameworkOverridePaths,\r\n  type UiPaneCoordinates,\r\n  type UiPaneCarouselNavigation,\r\n  type UiPaneCarousel,\r\n  type UiPaneDefinition,\r\n  type UniverseUiFrameworksConfig,\r\n} from \"../../../../Tooling/primitives/typescript/uiInterfaceLoader\";\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

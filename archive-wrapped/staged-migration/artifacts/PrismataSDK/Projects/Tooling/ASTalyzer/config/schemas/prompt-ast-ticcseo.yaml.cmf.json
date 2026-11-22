@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-astalyzer-config-schemas-prompt-ast-ticcseo-yaml",
+  "udi": "prismata.projects-tooling-astalyzer-config-schemas.wrapped-schema.prompt-ast-ticcseo-d6b6f0d5e1",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "prompt-ast-ticcseo.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Tooling/ASTalyzer/config/schemas/prompt-ast-ticcseo.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/ASTalyzer/config/schemas/prompt-ast-ticcseo.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "85db46435a0e936a78c9dbcc5427cfa6dd1950f8d8d6b690e65d511a097afc3c"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# TICCSEO AST schema\r\nmetadata:\r\n  udi: prismata.astalyzer.schema.prompt-ast-ticcseo\r\n  name: prompt-ast-ticcseo\r\n  version: 0.1.0\r\n  kind: schema-definition\r\n  description: Canonical AST schema for TICCSEO prompt analysis output.\r\n\r\nid: \"prismata.astalyzer.schema.prompt-ast-ticcseo\"\r\nversion: 0.1.0\r\nkind: schema-definition\r\ndescription: >\r\n  Canonical AST schema for TICCSEO prompt analysis output.\r\n\r\ntype: object\r\n\r\nfields:\r\n  task:\r\n    type: string\r\n    required: false\r\n\r\n  inputs:\r\n    type: array\r\n    items:\r\n      type: string\r\n    required: false\r\n\r\n  context:\r\n    type: string\r\n    required: false\r\n\r\n  constraints:\r\n    type: array\r\n    items:\r\n      type: string\r\n    required: false\r\n\r\n  style:\r\n    type: string\r\n    required: false\r\n\r\n  examples:\r\n    type: array\r\n    items:\r\n      type: string\r\n    required: false\r\n\r\n  output_format:\r\n    type: string\r\n    required: false\r\n\r\n_tags:\r\n  category: prompt_ast\r\n  tags:\r\n    - ast\r\n    - ticcseo\r\n    - prompt\r\n    - pcms2026\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

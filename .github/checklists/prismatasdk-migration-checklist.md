@@ -34,6 +34,8 @@ This checklist tracks the execution status of the PrismataSDK migration against 
 - [x] Populate `examples/registry` with initial exemplar objects (panes, menus, colour-schemes, colour-roles, chromaschemes, headers).
 - [x] Align example object references to use /PrismataSDK/examples/registry as the migration reference set.
 - [x] Add tests to consume `examples/registry` objects and validate CMF -> PSO conversion.
+- [x] Add wrapped-archive review corpus tooling to inventory CMF artifacts, classify Core/SDK/Corp ownership, and emit a compatibility matrix for staged migration review.
+- [x] Add staged migration corpus assembly tooling that routes wrapped artifacts into Core/SDK/Corp/Archive lanes and emits compatibility-gap reports for integration review.
 
 ## Incomplete
 

@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-capability-schemas-capability-group-schema-yaml",
+  "udi": "prismata.meta-domain-capability-schemas.wrapped-schema.capability-group-schema-3d60f47ecb",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "capability-group.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/domain/capability.schemas/capability-group.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/capability.schemas/capability-group.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "168e84580ca74910cbcba478376fb85482d7325be52648aa467516b86507f7ca"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: capability-group\r\nschema_type: capability\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.capability-group\r\n  name: capability-group.schema\r\n  description: Canonical schema defining a capability group.\r\n\r\nspec:\r\n  target_kind: capability-group\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: udi\r\n    path: udi\r\n    type: string\r\n    required: true\r\n\r\n  - name: id\r\n    path: id\r\n    type: string\r\n    required: true\r\n\r\n  - name: name\r\n    path: name\r\n    type: string\r\n    required: true\r\n\r\n  - name: capabilities\r\n    path: capabilities\r\n    type: array\r\n    required: false\r\n    item:\r\n      type: string\r\n\r\nobject:\r\n  udi: \"\"\r\n  id: \"\"\r\n  name: \"\"\r\n  capabilities: []\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

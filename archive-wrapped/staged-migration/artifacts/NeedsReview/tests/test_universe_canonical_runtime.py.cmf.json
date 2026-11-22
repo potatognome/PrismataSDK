@@ -1,0 +1,36 @@
+{
+  "id": "tests-test-universe-canonical-runtime-py",
+  "udi": "prismata.tests.wrapped-codeblock.test-universe-canonical-runtime-667be4e741",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_universe_canonical_runtime.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "tests/test_universe_canonical_runtime.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "tests/test_universe_canonical_runtime.py",
+    "encoding": "utf-8",
+    "content_sha256": "99d6d5e232cc6bbfb2aad5ebe9705f09fd022ab332841dffd01ea76d54626dea"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "from __future__ import annotations\r\n\r\nimport sys\r\nfrom pathlib import Path\r\n\r\nROOT = Path(__file__).resolve().parents[1]\r\nif str(ROOT) not in sys.path:\r\n    sys.path.insert(0, str(ROOT))\r\n\r\nfrom Projects.Applications.Universe.python.python_bridge import execute\r\n\r\n\r\ndef test_universe_python_bridge_service_renders_visibility():\r\n    payload = {\r\n        \"menu\": {\r\n            \"items\": [\r\n                {\"key\": \"1\", \"label\": \"Bootstrap\", \"visibility_condition\": \"bootstrap_mode\"},\r\n                {\"key\": \"2\", \"label\": \"Edit\", \"visibility_condition\": \"initialized_and_vile_ingested\"},\r\n                {\"key\": \"3\", \"label\": \"Edit Locked\", \"visibility_condition\": \"initialized_and_vile_not_ingested\"},\r\n            ]\r\n        },\r\n        \"runtimeState\": {\r\n            \"bootstrapMode\": False,\r\n            \"tuilkitRuntimeMode\": \"fallback-not-ingested\",\r\n            \"tuilkitIngested\": False,\r\n        },\r\n    }\r\n\r\n    result = execute(\"render_menu_visibility\", payload)\r\n    labels = [item[\"label\"] for item in result[\"visibleItems\"]]\r\n\r\n    assert \"Edit Locked\" in labels\r\n    assert \"Edit\" not in labels\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

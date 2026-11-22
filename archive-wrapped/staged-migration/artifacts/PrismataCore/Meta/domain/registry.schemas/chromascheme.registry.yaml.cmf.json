@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-registry-schemas-chromascheme-registry-yaml",
+  "udi": "prismata.meta-domain-registry-schemas.wrapped-object.chromascheme-registry-8664f9370d",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "chromascheme.registry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/domain/registry.schemas/chromascheme.registry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/registry.schemas/chromascheme.registry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "5c5f894e86219504bb1f5e2d5ef33dff354d2cb63f9ed1039d0c8cce6bd0f2db"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: registry\r\nschema_type: registry\r\n\r\nmetadata:\r\n  udi: prismata.meta.registry.chromascheme\r\n  name: chromascheme.registry\r\n  description: Registry of canonical chromaschemes.\r\n\r\nspec:\r\n  target_kind: chromascheme\r\n  naming:\r\n    file_suffix: .registry.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: chromaschemes\r\n    path: chromaschemes\r\n    type: array\r\n    required: true\r\n\r\nobject:\r\n  chromaschemes: []\r\n\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

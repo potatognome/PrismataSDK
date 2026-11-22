@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-shared-schemas-shared-styling-schema-yaml",
+  "udi": "prismata.meta-canonical-shared-schemas.wrapped-schema.shared-styling-schema-1ea1b4f600",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "shared-styling.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/shared.schemas/shared-styling.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/shared.schemas/shared-styling.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "1b1de286f94b47982673013ac921b79d0b19d115dc6991d62dd9a27f5ee55e3f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: shared-styling\r\nschema_type: shared\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.shared-styling\r\n  name: shared-styling.schema\r\n  description: Reusable styling fields for UI components.\r\n\r\nspec:\r\n  target_kind: shared-styling\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: colour\r\n    path: colour\r\n    type: string\r\n    required: false\r\n\r\n  - name: background\r\n    path: background\r\n    type: string\r\n    required: false\r\n\r\n  - name: border\r\n    path: border\r\n    type: string\r\n    required: false\r\n\r\n  - name: padding\r\n    path: padding\r\n    type: string\r\n    required: false\r\n\r\nobject:\r\n  colour: \"\"\r\n  background: \"\"\r\n  border: \"\"\r\n  padding: \"\"\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

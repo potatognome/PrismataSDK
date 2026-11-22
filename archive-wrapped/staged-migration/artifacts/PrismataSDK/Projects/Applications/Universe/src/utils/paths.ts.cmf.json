@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-src-utils-paths-ts",
+  "udi": "prismata.projects-applications-universe-src-utils.wrapped-codeblock.paths-b8bba1f24b",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "paths.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/Universe/src/utils/paths.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/src/utils/paths.ts",
+    "encoding": "utf-8",
+    "content_sha256": "eaa9248467bd0c2e969bc9b7bb2ffbcac6f32f00c3fbcf35d8c106577fea317d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import * as path from \"path\";\r\n\r\nexport function resolvePrismataRoot(): string {\r\n  // Climb to the repository root (Prismata) so callers can resolve\r\n  // top-level sibling directories like `.workspace` correctly.\r\n  return path.resolve(__dirname, \"../../../../../\");\r\n}\r\n\r\nexport function capabilityArgsFor(capabilityId: string, universePaths: any): Record<string, unknown> {\r\n  const runtimeCreateDir = path.join(universePaths.workspaceRoot, \"create-tests\");\r\n  const runtimeSemanticDir = path.join(universePaths.workspaceRoot, \"semantic\");\r\n  const runtimeManifestPath = path.join(runtimeCreateDir, \"dummy.manifest.yaml\");\r\n\r\n  switch (capabilityId) {\r\n    case \"prismata.universe.capability.fs-create-from-object\":\r\n      return {\r\n        filePath: runtimeManifestPath,\r\n        name: \"Universe Test Panel\",\r\n      };\r\n\r\n    case \"prismata.universe.capability.fs-edit-vile\":\r\n      return {\r\n        filePath: runtimeManifestPath,\r\n        content: [\r\n          \"id: prismata.universe.test.manifest\",\r\n          \"name: Universe Test Panel\",\r\n          \"version: 0.0.2\",\r\n          \"kind: module\",\r\n          \"\",\r\n        ].join(\"\\n\"),\r\n        newContent: [\r\n          \"id: prismata.universe.test.manifest\",\r\n          \"name: Universe Test Panel\",\r\n          \"version: 0.0.2\",\r\n          \"kind: module\",\r\n          \"\",\r\n        ].join(\"\\n\"),\r\n        mode: \"vile\",\r\n      };\r\n\r\n    case \"prismata.universe.capability.semantic-primitive-extract\":\r\n      return {\r\n        primitive: \"tooling.vile\",\r\n        family: \"tooling\",\r\n      };\r\n\r\n    case \"prismata.universe.capability.semantic-dependency-graph\":\r\n      return {\r\n        nodes: [\"tooling.vile\", \"module.vaultguard\"],\r\n        edges: [[\"tooling.vile\", \"module.vaultguard\"]],\r\n      };\r\n\r\n    case \"prismata.universe.capability.semantic-bundle\":\r\n      return {\r\n        outputDir: runtimeSemanticDir,\r\n        bundleName: \"semantic-bundle.json\",\r\n      };\r\n\r\n    default:\r\n      return {};\r\n  }\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

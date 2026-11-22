@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-udi-uditool-cli-py",
+  "udi": "prismata.projects-tooling-udi-uditool.wrapped-codeblock.cli-7582841856",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "cli.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/udi/uditool/cli.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/udi/uditool/cli.py",
+    "encoding": "utf-8",
+    "content_sha256": "f81338ae87d504cec034205888da765904e9efaa0bc354039176e289245e6630"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import argparse\r\nfrom .scanner import scan_globs\r\n\r\n\r\ndef main():\r\n    parser = argparse.ArgumentParser(prog=\"uditool\")\r\n    sub = parser.add_subparsers(dest=\"cmd\")\r\n    p = sub.add_parser(\"scan\")\r\n    p.add_argument(\"--globs\", nargs=\"+\", required=True)\r\n    p.add_argument(\"--out\", required=True)\r\n    p.add_argument(\"--dry-run\", action=\"store_true\")\r\n    p.add_argument(\"--aggregate\", action=\"store_true\", help=\"Write aggregated full-report.yaml into --out\")\r\n    args = parser.parse_args()\r\n    if args.cmd == \"scan\":\r\n        reports = scan_globs(args.globs, args.out, aggregate=args.aggregate)\r\n        print(f\"Scanned {len(reports)} files; reports in {args.out}\")\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

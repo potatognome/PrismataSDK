@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-astalyzer-src-astalyzer-normalizer-ts",
+  "udi": "prismata.projects-tooling-astalyzer-src-astalyzer.wrapped-codeblock.normalizer-c7b34a7a35",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "normalizer.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/ASTalyzer/src/astalyzer/normalizer.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/ASTalyzer/src/astalyzer/normalizer.ts",
+    "encoding": "utf-8",
+    "content_sha256": "6104aebc4632822627e78f4a814d9eab7342a98d90e0a2cbd85a979192ac7e50"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "// Prompt normalizer \r\nimport { PromptAST } from \"./model\";\r\n\r\nexport function toMinimalPrompt(ast: PromptAST): string {\r\n  const parts: string[] = [];\r\n\r\n  if (ast.task) parts.push(ast.task);\r\n  if (ast.inputs.length > 0) parts.push(`Input: ${ast.inputs.join(\"; \")}`);\r\n  if (ast.context) parts.push(`Context: ${ast.context}`);\r\n  if (ast.constraints.length > 0)\r\n    parts.push(`Constraints: ${ast.constraints.join(\"; \")}`);\r\n  if (ast.style) parts.push(`Style: ${ast.style}`);\r\n  if (ast.output_format) parts.push(`Output: ${ast.output_format}`);\r\n\r\n  return parts.join(\" \");\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-governance-naming-conventions-projects-manifest-file-md",
+  "udi": "prismata.meta-deprecated-governance-naming-conventions.wrapped-manifest.projects-manifest-file-4c02d91b0a",
+  "kind": "wrapped-manifest",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "projects_manifest_file.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "manifest",
+    "relative_path": "Meta/deprecated/governance/naming-conventions/projects_manifest_file.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/governance/naming-conventions/projects_manifest_file.md",
+    "encoding": "utf-8",
+    "content_sha256": "e98edad83b6abe9066d2ad188028a636547732927de663cef99a7c2ec0b77160"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## Project Primary Manifest Files (YAML)\r\nEach project in the Prismata workspace contains a manifest file defining the projects capabilities.\r\n\r\nThe manifest file will be placed in each respective projects root folder /{$PROJECT_NAME}\r\n\r\nThe manifest file will be named based on the project name, in matched casing, and with the appended suffix \"_MANIFEST.yaml\"\r\n\r\nManifest file: {$PROJECT_NAME}_MANIFEST.yaml\r\n\r\nGrouped project manifests are placed under /Prismata/.workspace/projects.manifests ",
+    "classification": {
+      "subtype": "manifest",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

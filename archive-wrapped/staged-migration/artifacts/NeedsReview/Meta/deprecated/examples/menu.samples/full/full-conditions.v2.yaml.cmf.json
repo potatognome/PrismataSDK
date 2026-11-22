@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-examples-menu-samples-full-full-conditions-v2-yaml",
+  "udi": "prismata.meta-deprecated-examples-menu-samples-full.wrapped-object.full-conditions-v2-71cd846d10",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "full-conditions.v2.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/examples/menu.samples/full/full-conditions.v2.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/examples/menu.samples/full/full-conditions.v2.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "eb5ccbac24de98813e15698c0e52a8431b54bc45c19d16443bf592de9041f244"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "menus:\r\r\n  - id: menu.conditions\r\r\n    key: menu.conditions\r\r\n    udi: prismata.menu.conditions\r\r\n    name: Conditional Menu\r\r\n    title: Conditional Menu\r\r\n    label: Conditional Menu\r\r\n    position: Main\r\r\n    order: 10\r\r\n    type: main\r\r\n    icon: \"\u2696\ufe0f\"\r\r\n    colourScheme: main-menu\r\r\n    borderScheme: default\r\r\n    description: Demonstrates menu- and item-level condition handling.\r\r\n    visibilityMode: Conditional\r\r\n    visibilityCondition: feature_flag('conditional_menu') == true\r\r\n    visibilityDependencies:\r\r\n      - conditional_menu\r\r\n    enableMode: Conditional\r\r\n    enableCondition: env('ENABLE_CONDITIONAL_MENU') == true\r\r\n    enableDependencies:\r\r\n      - ENABLE_CONDITIONAL_MENU\r\r\n    header:\r\r\n      udi: prismata.menu.conditions.header\r\r\n      text: Conditional Menu\r\r\n      style: header\r\r\n      colourScheme: header\r\r\n      borderScheme: default\r\r\n      visibilityMode: Conditional\r\r\n      visibilityCondition: feature_flag('conditional_menu') == true\r\r\n      visibilityDependencies:\r\r\n        - conditional_menu\r\r\n    footer:\r\r\n      udi: prismata.menu.conditions.footer\r\r\n      text: Conditional menu footer.\r\r\n      style: footer\r\r\n      colourScheme: footer\r\r\n      borderScheme: default\r\r\n      visibilityMode: Conditional\r\r\n      visibilityCondition: config_exists('conditions.yaml') == true\r\r\n      visibilityDependencies:\r\r\n        - conditions_config\r\r\n    items:\r\r\n      - udi: prismata.menu.conditions.item1\r\r\n        key: conditional.item1\r\r\n        name: Only if feature enabled\r\r\n        label: Only if feature enabled\r\r\n        type: action\r\r\n        order: 1\r\r\n        selectionMethod: number\r\r\n        action: execute\r\r\n        ui_framework: menu\r\r\n        capability: prismata.conditions.execute\r\r\n        executeTarget: conditional_action\r\r\n        icon: \"\ud83d\udd0d\"\r\r\n        visibilityMode: Conditional\r\r\n        visibilityCondition: feature_flag('conditional_item') == true\r\r\n        visibilityDependencies:\r\r\n          - conditional_item\r\r\n        enableMode: Conditional\r\r\n        enableCondition: project_has_tag('beta') == true\r\r\n        enableDependencies:\r\r\n          - beta\r\r\n\r\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

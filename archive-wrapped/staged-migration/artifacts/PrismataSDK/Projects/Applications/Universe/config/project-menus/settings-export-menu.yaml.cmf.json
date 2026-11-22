@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-project-menus-settings-export-menu-yaml",
+  "udi": "prismata.projects-applications-universe-config-project-menus.wrapped-object.settings-export-menu-72c9200eaf",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "settings-export-menu.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/Universe/config/project-menus/settings-export-menu.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/project-menus/settings-export-menu.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "6be40bec3f0a572234289635d2d4ff523ebeb449f7fbfaa423f9368de56e8ac6"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: settings-export-menu.yaml\r\n## Type: project menu\r\n## Purpose: Menu exposing export-related settings (default type,\r\n## allowed extensions, version suffix behavior) for the application.\r\n\r\nmetadata:\r\n  udi: prismata.universe.menu.settings.export\r\n  name: \"Settings > Export Menu\"\r\n  version: \"0.1.0\"\r\n  kind: menu\r\n  description: \"Submenu for export-related settings.\"\r\n\r\nudi: \"prismata.universe.menu.settings-export\"\r\nkind: menu\r\ntype: \"menu\"\r\ntitle: \"Export Settings\"\r\n\r\nitems:\r\n  - key: \"1\"\r\n    udi: \"prismata.universe.menu.settings.export.default-type\"\r\n    label: \"Set Default Export Type\"\r\n    description: \"Set default export type (for example: yaml, json).\"\r\n    capability: \"prismata.universe.capability.app-settings-export\"\r\n    setting_key: \"default_export_type\"\r\n    value_type: \"string\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"2\"\r\n    udi: \"prismata.universe.menu.settings.export.allowed-ext\"\r\n    label: \"Set Allowed Extensions\"\r\n    description: \"Set allowed export extensions as a list (prompt supports multi-value input).\"\r\n    capability: \"prismata.universe.capability.app-settings-export\"\r\n    setting_key: \"allowed_extensions\"\r\n    value_type: \"string_array\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"3\"\r\n    udi: \"prismata.universe.menu.settings.export.auto-append\"\r\n    label: \"Set Auto Append Version\"\r\n    description: \"Enable or disable automatic version suffix appending on export.\"\r\n    capability: \"prismata.universe.capability.app-settings-export\"\r\n    setting_key: \"auto_append_version\"\r\n    value_type: \"boolean\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

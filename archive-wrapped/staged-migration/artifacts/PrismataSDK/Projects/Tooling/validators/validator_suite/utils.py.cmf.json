@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-validators-validator-suite-utils-py",
+  "udi": "prismata.projects-tooling-validators-validator-suite.wrapped-codeblock.utils-f4ea1ef9ce",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "utils.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/validators/validator_suite/utils.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/validators/validator_suite/utils.py",
+    "encoding": "utf-8",
+    "content_sha256": "0faa9804278d6725acd235d95ad1bd7a22ed581b9ebe68109aaca00b20886317"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Reserved for future shared utilities\r\n# utils.py\r\n\r\nIGNORE_FOLDERS = {\r\n    \"Projects/Tooling/validators/validator_suite\",\r\n    \"Projects/Tooling/validators/casing_linter/archive\",\r\n    \"Projects/Tooling/validators/bom_validator/archive\",\r\n    \"Meta/deprecated\",\r\n    \"archive\",\r\n    \"backup\"\r\n}\r\n\r\ndef should_ignore(path):\r\n    p = str(path).replace(\"\\\\\", \"/\")\r\n    return any(p.startswith(folder) for folder in IGNORE_FOLDERS)\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

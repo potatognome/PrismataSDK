@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-primitives-typescript-colourregistry-ts",
+  "udi": "prismata.projects-tooling-primitives-typescript.wrapped-codeblock.colourregistry-f1e32d9b14",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "colourRegistry.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/primitives/typescript/colourRegistry.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/primitives/typescript/colourRegistry.ts",
+    "encoding": "utf-8",
+    "content_sha256": "d716f514d72482380cb72cac105c8ce39a02a67565d0043f419e965b8099cdf1"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import * as fs from \"fs\";\r\nimport * as path from \"path\";\r\n\r\nexport interface ColourRoleLayers {\r\n  fg?: string;\r\n  bg?: string;\r\n}\r\n\r\nexport interface ColourSchemeEntry {\r\n  id: string;\r\n  label?: string;\r\n  description?: string;\r\n  chroma_source?: string;\r\n  roles: Record<string, ColourRoleLayers>;\r\n}\r\n\r\nfunction registryDir(prismataRoot: string) {\r\n  return path.join(prismataRoot, \"Meta\", \"registry\", \"colour-schemes.d\");\r\n}\r\n\r\nexport function loadColourRegistry(prismataRoot: string): ColourSchemeEntry[] {\r\n  const dir = registryDir(prismataRoot);\r\n  if (!fs.existsSync(dir)) return [];\r\n\r\n  const files = fs.readdirSync(dir).filter((f) => f.endsWith('.yaml') || f.endsWith('.yml'));\r\n  const entries: ColourSchemeEntry[] = [];\r\n\r\n  let jsyaml: any = null;\r\n  try {\r\n    // @ts-ignore\r\n    jsyaml = require('js-yaml');\r\n  } catch (_) {\r\n    jsyaml = null;\r\n  }\r\n\r\n  for (const f of files) {\r\n    try {\r\n      const raw = fs.readFileSync(path.join(dir, f), 'utf8');\r\n      const obj = jsyaml ? jsyaml.load(raw) : JSON.parse(raw);\r\n      let entry = obj;\r\n      if (entry && typeof entry === 'object' && Object.keys(entry).length === 1) {\r\n        const onlyKey = Object.keys(entry)[0];\r\n        if (entry[onlyKey] && typeof entry[onlyKey] === 'object') entry = entry[onlyKey];\r\n      }\r\n      if (entry && entry.id && entry.roles) {\r\n        entries.push(entry as ColourSchemeEntry);\r\n      }\r\n    } catch (_) {\r\n      continue;\r\n    }\r\n  }\r\n\r\n  return entries;\r\n}\r\n\r\nexport function mergeScheme(base: ColourSchemeEntry, overlay: Partial<ColourSchemeEntry>): ColourSchemeEntry {\r\n  const merged: ColourSchemeEntry = {\r\n    id: base.id,\r\n    label: overlay.label ?? base.label,\r\n    description: overlay.description ?? base.description,\r\n    chroma_source: overlay.chroma_source ?? base.chroma_source,\r\n    roles: { ...(base.roles ?? {}) },\r\n  };\r\n\r\n  if (overlay.roles) {\r\n    for (const r of Object.keys(overlay.roles)) {\r\n      merged.roles[r] = { ...(merged.roles[r] ?? {}), ...(overlay.roles as any)[r] };\r\n    }\r\n  }\r\n\r\n  return merged;\r\n}\r\n\r\nexport function findColourSchemeById(prismataRoot: string, id: string, appRoot?: string): ColourSchemeEntry | null {\r\n  const all = loadColourRegistry(prismataRoot);\r\n  const base = all.find((e) => e.id === id) ?? null;\r\n  if (!base) return null;\r\n\r\n  // if no appRoot provided, return base\r\n  if (!appRoot) return base;\r\n\r\n  // check project and tenant override files\r\n  const projectPath = path.join(appRoot, 'config', 'project', 'ui', 'colour-scheme.override.yaml');\r\n  const tenantPath = path.join(appRoot, 'config', 'tenant', 'ui', 'colour-scheme.override.yaml');\r\n\r\n  let overlay: Partial<ColourSchemeEntry> | null = null;\r\n  let jsyaml: any = null;\r\n  try { jsyaml = require('js-yaml'); } catch (_) { jsyaml = null; }\r\n\r\n  function tryLoadOverride(p: string): Partial<ColourSchemeEntry> | null {\r\n    if (!fs.existsSync(p)) return null;\r\n    try {\r\n      const raw = fs.readFileSync(p, 'utf8');\r\n      const obj = jsyaml ? jsyaml.load(raw) : JSON.parse(raw);\r\n      // file may be a mapping of id->entry or a single entry\r\n      if (!obj) return null;\r\n      if (obj.id && obj.id === id) return obj as Partial<ColourSchemeEntry>;\r\n      if (typeof obj === 'object') {\r\n        if (obj[id]) return obj[id] as Partial<ColourSchemeEntry>;\r\n        // try to find in nested mapping\r\n        for (const k of Object.keys(obj)) {\r\n          const v = (obj as any)[k];\r\n          if (v && v.id === id) return v as Partial<ColourSchemeEntry>;\r\n        }\r\n      }\r\n    } catch (_) { return null; }\r\n    return null;\r\n  }\r\n\r\n  // project override preferred over tenant (per Option A)\r\n  overlay = tryLoadOverride(projectPath) ?? tryLoadOverride(tenantPath) ?? null;\r\n\r\n  if (overlay) return mergeScheme(base, overlay);\r\n  return base;\r\n}\r\n\r\nexport default { loadColourRegistry, findColourSchemeById };\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

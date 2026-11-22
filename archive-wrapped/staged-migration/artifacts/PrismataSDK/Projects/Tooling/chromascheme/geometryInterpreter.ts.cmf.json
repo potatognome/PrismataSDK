@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-chromascheme-geometryinterpreter-ts",
+  "udi": "prismata.projects-tooling-chromascheme.wrapped-codeblock.geometryinterpreter-15d8323959",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "geometryInterpreter.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/chromascheme/geometryInterpreter.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/chromascheme/geometryInterpreter.ts",
+    "encoding": "utf-8",
+    "content_sha256": "883ced12aa1f1242230a710ab3c92c72dc660bd5dabba1d2a572c3b380c159b0"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import {\r\n  GeometryDescriptor,\r\n  IGeometryDescriptor,\r\n} from \"./interfaces\";\r\n\r\n/**\r\n * Interprets ChromaScheme geometry metadata without coupling to rendering.\r\n * Keeps geometry logic decoupled from role bindings and colour resolution.\r\n */\r\nexport class GeometryInterpreter implements IGeometryDescriptor {\r\n  readonly descriptor: Readonly<GeometryDescriptor>;\r\n\r\n  constructor(descriptor: GeometryDescriptor) {\r\n    this.descriptor = Object.freeze({\r\n      baseGeometry: descriptor.baseGeometry,\r\n      overlays: Object.freeze([...descriptor.overlays]),\r\n    });\r\n  }\r\n\r\n  overlayTypes(): string[] {\r\n    return this.descriptor.overlays.map(o => o.type);\r\n  }\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

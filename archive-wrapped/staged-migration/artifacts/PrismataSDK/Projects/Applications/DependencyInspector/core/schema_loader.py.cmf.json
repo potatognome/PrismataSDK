@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-dependencyinspector-core-schema-loader-py",
+  "udi": "prismata.projects-applications-dependencyinspector-core.wrapped-schema.schema-loader-02d267eb29",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "schema_loader.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Applications/DependencyInspector/core/schema_loader.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/DependencyInspector/core/schema_loader.py",
+    "encoding": "utf-8",
+    "content_sha256": "56809b9ea96609370c155a1b5671b620ebb053efa8b18f3925073428d1b17450"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "from pathlib import Path\r\nimport yaml\r\n\r\nSCHEMA_ROOT = Path(\"Meta/canonical/object.schemas\")\r\n\r\ndef load_schema(name: str):\r\n    file = SCHEMA_ROOT / f\"{name}.schema.yaml\"\r\n    if file.exists():\r\n        return yaml.safe_load(file.read_text())\r\n    return None\r\n\r\ndef load_all_schemas():\r\n    schemas = {}\r\n    for file in SCHEMA_ROOT.glob(\"*.schema.yaml\"):\r\n        name = file.name.split(\".\")[0]\r\n        schemas[name] = yaml.safe_load(file.read_text())\r\n    return schemas\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

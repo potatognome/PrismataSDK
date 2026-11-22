@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-canonical-gitkeep",
+  "udi": "prismata.meta-deprecated-canonical.wrapped-artifact.gitkeep-5b86ff83e9",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": ".gitkeep",
+    "source_file_type": "",
+    "wrapped_subtype": "artifact",
+    "relative_path": "Meta/deprecated/canonical/.gitkeep",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/canonical/.gitkeep",
+    "encoding": "utf-8",
+    "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-templates-prismsense-ts",
+  "udi": "prismata.meta-deprecated-templates.wrapped-codeblock.prismsense-52dc5bf490",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "PrismSense.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Meta/deprecated/templates/PrismSense.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/templates/PrismSense.ts",
+    "encoding": "utf-8",
+    "content_sha256": "269cf2d14e3ed9e65fd9f24c0c832db899a08fe6fd7ca681e6b8735749de5a57"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "export interface SemanticCategory {\n    id: string\n    aliases?: string[]\n}\n\nexport const PrismSense = {\n    loadCategories(): SemanticCategory[] {\n        return []\n    }\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

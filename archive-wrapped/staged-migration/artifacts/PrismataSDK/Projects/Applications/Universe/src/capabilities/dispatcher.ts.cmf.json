@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-src-capabilities-dispatcher-ts",
+  "udi": "prismata.projects-applications-universe-src-capabilities.wrapped-codeblock.dispatcher-e132860824",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "dispatcher.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/Universe/src/capabilities/dispatcher.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/src/capabilities/dispatcher.ts",
+    "encoding": "utf-8",
+    "content_sha256": "08d7e369db61b3f5eb4bc477cdfcc3dad4d595c3d0ee8eeaca1e698235ba6af9"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import { CapabilityHandlerMap } from \"./handlers\";\r\nimport { SelectedObject } from \"../selection/selectionLogic\";\r\nimport { RuntimeState } from \"../bootstrap/state\";\r\n\r\nexport interface CapabilityServices {\r\n  runBootstrapSequence?: () => Promise<any>;\r\n}\r\n\r\nexport interface CapabilityContext {\r\n  selectedObjects: SelectedObject[];\r\n  referenceObject?: SelectedObject;\r\n  args?: Record<string, any>;\r\n  runtimeState?: RuntimeState;\r\n  services?: CapabilityServices;\r\n}\r\n\r\nexport interface CapabilityResult {\r\n  success: boolean;\r\n  message: string;\r\n  data?: any;\r\n}\r\n\r\nexport class UdiDispatcher {\r\n  private handlers: CapabilityHandlerMap;\r\n\r\n  constructor(handlers: CapabilityHandlerMap) {\r\n    this.handlers = handlers;\r\n  }\r\n \r\n\r\n  async execute(\r\n    capabilityId: string,\r\n    context: CapabilityContext\r\n  ): Promise<CapabilityResult> {\r\n    const handler = this.handlers[capabilityId];\r\n\r\n    if (!handler) {\r\n      return {\r\n        success: false,\r\n        message: `No handler registered for capability: ${capabilityId}`,\r\n      };\r\n    }\r\n\r\n    try {\r\n      const result = await handler(context);\r\n      return {\r\n        success: true,\r\n        message: `Capability ${capabilityId} executed successfully.`,\r\n        data: result,\r\n      };\r\n    } catch (err: any) {\r\n      return {\r\n        success: false,\r\n        message: `Capability ${capabilityId} failed: ${err.message}`,\r\n      };\r\n    }\r\n  }\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-modules-configmerge-conflictmode-registry-yaml",
+  "udi": "prismata.projects-tooling-modules-configmerge.wrapped-object.conflictmode-registry-0fc703fa6e",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "conflictMode.registry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Tooling/modules/ConfigMerge/conflictMode.registry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/modules/ConfigMerge/conflictMode.registry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "098f66500e4587fd1927fcec490c9c907682657e2f03e59ec893698d5d79c18b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# =====================================================================\r\n#  conflictMode.registry.yaml\r\n#  UDI-Compliant Conflict Mode Registry\r\n#  Defines universal, portable, schema-agnostic merge behaviors\r\n# =====================================================================\r\n\r\nversion: 1.0.0\r\nregistryName: \"ConfigMerge ConflictMode Registry\"\r\nudiCompliant: true\r\n\r\nschema:\r\n  requiredFields:\r\n    - name\r\n    - description\r\n    - behavior\r\n    - appliesTo\r\n    - precedence\r\n    - asciiIndicator\r\n    - udiCompliant\r\n  optionalFields:\r\n    - colourKey\r\n    - notes\r\n    - examples\r\n\r\nmodes:\r\n\r\n  # ---------------------------------------------------------------\r\n  # 0. removeWins \u2014 legacy paired include/exclude resolver\r\n  # ---------------------------------------------------------------\r\n  - name: removeWins\r\n    description: >\r\n      Legacy behavior where exclude* entries are removed from include*\r\n      after layered merge. Maintained for backward compatibility.\r\n    behavior: remove\r\n    appliesTo: [array, scalar]\r\n    precedence: normal\r\n    asciiIndicator: \"-\"\r\n    colourKey: \"conflict.remove\"\r\n    udiCompliant: true\r\n\r\n    notes: >\r\n      This mode assumes paired include*/exclude* keys and applies\r\n      include-side removal when both sides are present.\r\n\r\n  # ---------------------------------------------------------------\r\n  # 1. unionWins \u2014 additive merge (UDI-compliant)\r\n  # ---------------------------------------------------------------\r\n  - name: unionWins\r\n    description: >\r\n      All layers contribute. Arrays are merged by union; scalars use the\r\n      highest-precedence non-null value. No assumptions about remove or\r\n      exclude semantics. Safe default for all schemas.\r\n    behavior: union\r\n    appliesTo: [array, scalar]\r\n    precedence: normal\r\n    asciiIndicator: \"=\"\r\n    colourKey: \"conflict.union\"     # optional, used only when colourKeyPath is enabled\r\n    udiCompliant: true\r\n\r\n    notes: >\r\n      This mode is portable across all modules and schemas. It does not\r\n      assume the existence of excludeType or remove semantics. Works for\r\n      includeType-only and includeType/excludeType schemas.\r\n\r\n    examples:\r\n      - default: [a,b]\r\n        config: [b,c]\r\n        mode: [d]\r\n        final: [a,b,c,d]\r\n\r\n  # ---------------------------------------------------------------\r\n  # 2. includeWins \u2014 full replacement (UDI-compliant)\r\n  # ---------------------------------------------------------------\r\n  - name: includeWins\r\n    description: >\r\n      Higher-precedence arrays or scalars replace lower-precedence values.\r\n      No assumptions about remove or exclude semantics. Works for both\r\n      includeType-only and includeType/excludeType schemas.\r\n    behavior: replace\r\n    appliesTo: [array, scalar]\r\n    precedence: override\r\n    asciiIndicator: \"+\"\r\n    colourKey: \"conflict.include\"\r\n    udiCompliant: true\r\n\r\n    notes: >\r\n      This mode is ideal for schemas where the higher layer should fully\r\n      override lower layers. It does not require excludeType or remove\r\n      semantics, making it universally portable.\r\n\r\n    examples:\r\n      - default: [a,b]\r\n        config: [b,c]\r\n        mode: [d]\r\n        final: [d]\r\n\r\n  # ---------------------------------------------------------------\r\n  # 3. cliWins \u2014 top-layer override (UDI-compliant)\r\n  # ---------------------------------------------------------------\r\n  - name: cliWins\r\n    description: >\r\n      CLI values override all other layers. Scalars and arrays are replaced\r\n      entirely by CLI input. This mode is universal and does not assume any\r\n      schema-specific semantics.\r\n    behavior: override\r\n    appliesTo: [array, scalar]\r\n    precedence: top\r\n    asciiIndicator: \"!\"\r\n    colourKey: \"conflict.cli\"\r\n    udiCompliant: true\r\n\r\n    notes: >\r\n      This mode is used for debugging, runtime overrides, audit-loop\r\n      corrections, and user-driven configuration changes. It is always safe\r\n      because CLI is the highest-precedence layer.\r\n\r\n    examples:\r\n      - default: [a,b]\r\n        config: [b,c]\r\n        cli: [x,y]\r\n        final: [x,y]\r\n\r\n# =====================================================================\r\n# End of registry\r\n# =====================================================================\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

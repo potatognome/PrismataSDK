@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-astalyzer-config-project-menus-astalyzer-main-menu-yaml",
+  "udi": "prismata.projects-tooling-astalyzer-config-project-menus.wrapped-object.astalyzer-main-menu-106d1634b4",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "astalyzer-main-menu.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Tooling/ASTalyzer/config/project.menus/astalyzer-main-menu.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/ASTalyzer/config/project.menus/astalyzer-main-menu.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "067eb7abd4bdf8d0f57dbbbc4a68ed3bc8b670ea6f79097f12fafa805ec7b57f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# ASTalyzer main menu \r\nid: \"prismata.astalyzer.menu.main\"\r\nversion: 0.2.0\r\nkind: menu\r\ndescription: Main PCMS-2026 menu for ASTalyzer tools.\r\n\r\nlayout:\r\n  type: list\r\n  title: ASTalyzer \u2014 Prompt & Code Analysis Tools\r\n\r\nitems:\r\n  - id: \"prismata.astalyzer.menu-item.analyze-prompt-ticcseo\"\r\n    label: Analyze Prompt (TICCSEO AST)\r\n    group: analysis\r\n    action:\r\n      type: udi-capability\r\n      capability_id: \"prismata.astalyzer.capability.analyze-prompt-ticcseo\"\r\n    hints:\r\n      short: Parse a raw prompt into TICCSEO AST.\r\n      long: >\r\n        Takes a raw prompt string, parses it into Task, Input, Context,\r\n        Constraints, Style, Examples, and Output Format, and returns a\r\n        structured AST object conforming to prompt-ast-ticcseo schema.\r\n\r\n  - id: \"prismata.astalyzer.menu-item.scan-api-recursive\"\r\n    label: Scan Folder for APIs (Recursive)\r\n    group: analysis\r\n    action: \"prismata.astalyzer.menu.scan\"\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

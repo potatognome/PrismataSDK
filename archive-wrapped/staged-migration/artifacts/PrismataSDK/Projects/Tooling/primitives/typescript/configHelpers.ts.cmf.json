@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-primitives-typescript-confighelpers-ts",
+  "udi": "prismata.projects-tooling-primitives-typescript.wrapped-codeblock.confighelpers-c67ba2cf3f",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "configHelpers.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/primitives/typescript/configHelpers.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/primitives/typescript/configHelpers.ts",
+    "encoding": "utf-8",
+    "content_sha256": "3af41e8dbc902e21ab45215d97a6a2e1f86c3328abcde664ead4d4ddb01f5a7d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "export interface FlattenedEntry {\r\n  key: string;\r\n  value: any;\r\n  type: string;\r\n}\r\n\r\nfunction getTypeFullName(value: any): string {\r\n  if (value === null || value === undefined) return \"Null\";\r\n  if (Array.isArray(value)) return \"Array\";\r\n  if (typeof value === \"object\") return value.constructor?.name ?? \"Object\";\r\n  return typeof value;\r\n}\r\n\r\nexport function flattenConfigObject(input: any, prefix = \"\"): FlattenedEntry[] {\r\n  const out: FlattenedEntry[] = [];\r\n\r\n  if (input === null || input === undefined) {\r\n    if (prefix) out.push({ key: prefix, value: input, type: getTypeFullName(input) });\r\n    return out;\r\n  }\r\n\r\n  if (Array.isArray(input)) {\r\n    for (let i = 0; i < input.length; i++) {\r\n      const item = input[i];\r\n      const key = prefix ? `${prefix}[${i}]` : `[${i}]`;\r\n      if (item !== null && typeof item === \"object\") {\r\n        out.push(...flattenConfigObject(item, key));\r\n      } else {\r\n        out.push({ key, value: item, type: getTypeFullName(item) });\r\n      }\r\n    }\r\n    return out;\r\n  }\r\n\r\n  if (typeof input === \"object\") {\r\n    for (const k of Object.keys(input)) {\r\n      const v = input[k];\r\n      const key = prefix ? `${prefix}.${k}` : k;\r\n      if (v !== null && typeof v === \"object\") {\r\n        out.push(...flattenConfigObject(v, key));\r\n      } else {\r\n        out.push({ key, value: v, type: getTypeFullName(v) });\r\n      }\r\n    }\r\n    return out;\r\n  }\r\n\r\n  // scalar\r\n  out.push({ key: prefix, value: input, type: getTypeFullName(input) });\r\n  return out;\r\n}\r\n\r\nfunction isAllowedChar(ch: string): boolean {\r\n  const code = ch.charCodeAt(0);\r\n  // alphanumeric\r\n  if ((code >= 48 && code <= 57) || (code >= 65 && code <= 90) || (code >= 97 && code <= 122)) return true;\r\n  // space, dot, dash, underscore\r\n  if (ch === ' ' || ch === '.' || ch === '-' || ch === '_') return true;\r\n  return false;\r\n}\r\n\r\nexport function convertConfigToText(obj: any, options?: { removePunctuation?: boolean; includeTypeNames?: boolean }): string {\r\n  const opts = { removePunctuation: true, includeTypeNames: true, ...(options ?? {}) };\r\n  const flat = flattenConfigObject(obj, \"\");\r\n\r\n  const sanitize = (val: string) => {\r\n    if (!opts.removePunctuation) return val;\r\n    let out = \"\";\r\n    for (const ch of String(val)) {\r\n      if (isAllowedChar(ch)) out += ch;\r\n    }\r\n    return out;\r\n  };\r\n\r\n  const lines = flat.map(item => {\r\n    let val = \"\";\r\n    if (item.value === null || item.value === undefined) {\r\n      val = \"\";\r\n    } else if (Array.isArray(item.value)) {\r\n      val = item.value.join(\", \");\r\n    } else {\r\n      val = String(item.value);\r\n    }\r\n\r\n    val = sanitize(val);\r\n    if (opts.includeTypeNames) {\r\n      return `${item.key} : ${val} (Type: ${item.type})`;\r\n    }\r\n    return `${item.key} : ${val}`;\r\n  });\r\n\r\n  return lines.join(\"\\n\");\r\n}\r\n\r\nexport default { flattenConfigObject, convertConfigToText };\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-examples-menu-samples-minimal-simple-conditions-v2-yaml",
+  "udi": "prismata.meta-deprecated-examples-menu-samples-minimal.wrapped-object.simple-conditions-v2-2c58e62802",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "simple-conditions.v2.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/examples/menu.samples/minimal/simple-conditions.v2.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/examples/menu.samples/minimal/simple-conditions.v2.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "ba755a3a3b453179758ca74261a217f1d2b2d96d06ce36e703589d2ee3cd79c1"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "menus:\r\r\n  - id: menu.admin\r\r\n    key: menu.admin\r\r\n    udi: prismata.menu.admin\r\r\n    name: Admin Tools\r\r\n    title: Admin Tools\r\r\n    label: Admin Tools\r\r\n    position: Sub\r\r\n    parent: menu.main\r\r\n    order: 3\r\r\n    type: admin\r\r\n    icon: \"\ud83e\uddf0\"\r\r\n    colourScheme: admin-menu\r\r\n    borderScheme: default\r\r\n    description: Conditional admin menu used by the minimal sample set.\r\r\n    visibilityMode: Conditional\r\r\n    visibilityCondition: user_is_admin == true\r\r\n    visibilityDependencies:\r\r\n      - user_is_admin\r\r\n    enableMode: Conditional\r\r\n    enableCondition: feature_flag('admin_tools') == true\r\r\n    enableDependencies:\r\r\n      - admin_tools\r\r\n    header:\r\r\n      udi: prismata.menu.admin.header\r\r\n      text: Admin Tools\r\r\n      style: header\r\r\n      colourScheme: header\r\r\n      borderScheme: default\r\r\n      visibilityMode: Conditional\r\r\n      visibilityCondition: user_is_admin == true\r\r\n      visibilityDependencies:\r\r\n        - user_is_admin\r\r\n    footer:\r\r\n      udi: prismata.menu.admin.footer\r\r\n      text: Admin access required\r\r\n      style: footer\r\r\n      colourScheme: footer\r\r\n      borderScheme: default\r\r\n      visibilityMode: Conditional\r\r\n      visibilityCondition: user_is_admin == true\r\r\n      visibilityDependencies:\r\r\n        - user_is_admin\r\r\n    items:\r\r\n      - udi: prismata.menu.admin.logs\r\r\n        key: admin.logs\r\r\n        name: View Logs\r\r\n        label: View Logs\r\r\n        type: action\r\r\n        order: 1\r\r\n        selectionMethod: number\r\r\n        action: execute\r\r\n        ui_framework: menu\r\r\n        capability: prismata.admin.view_logs\r\r\n        executeTarget: view_logs\r\r\n        icon: \"\ud83d\udcc4\"\r\r\n        visibilityMode: Conditional\r\r\n        visibilityCondition: user_is_admin == true\r\r\n        visibilityDependencies:\r\r\n          - user_is_admin\r\r\n\r\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

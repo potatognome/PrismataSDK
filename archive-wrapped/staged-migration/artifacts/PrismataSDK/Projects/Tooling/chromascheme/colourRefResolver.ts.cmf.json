@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-chromascheme-colourrefresolver-ts",
+  "udi": "prismata.projects-tooling-chromascheme.wrapped-codeblock.colourrefresolver-a57a97f001",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "colourRefResolver.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/chromascheme/colourRefResolver.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/chromascheme/colourRefResolver.ts",
+    "encoding": "utf-8",
+    "content_sha256": "833be5300941caca267d35fa9ab876475d6a6f0fb08da37f2edef81ab0606f52"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import {\r\n  ColourEntry,\r\n  IColourRefResolver,\r\n  IColourSet,\r\n} from \"./interfaces\";\r\n\r\n/**\r\n * Resolves ColourRef strings to their matching ColourEntry.\r\n * Deterministic: given the same colourSet, the same ref always resolves\r\n * to the same entry. The colourSet is never mutated.\r\n */\r\nexport class ColourRefResolver implements IColourRefResolver {\r\n  private readonly _colourSet: IColourSet;\r\n\r\n  constructor(colourSet: IColourSet) {\r\n    this._colourSet = colourSet;\r\n  }\r\n\r\n  resolve(ref: string): ColourEntry | null {\r\n    return this._colourSet.get(ref);\r\n  }\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

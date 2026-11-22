@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-primitives-powershell-mode-registry-helpers-ps1",
+  "udi": "prismata.projects-tooling-primitives-powershell.wrapped-codeblock.mode-registry-helpers-7afcdc5b0d",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "mode-registry.helpers.ps1",
+    "source_file_type": "ps1",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/primitives/powershell/mode-registry.helpers.ps1",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/primitives/powershell/mode-registry.helpers.ps1",
+    "encoding": "utf-8",
+    "content_sha256": "c1c6f15427b840ee75e21a413dbe929f88eb0fb7da6ab76599c6c295b8074240"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\r\n# ---------------------------------------------------------\r\n# Load Mode Registry\r\n# ---------------------------------------------------------\r\nfunction Get-ModeRegistry {\r\n    # $PSScriptRoot points to the module folder; use it directly to locate the registry\r\n    $moduleRoot = $PSScriptRoot\r\n    $registryPath = Join-Path $moduleRoot \"config/scraper-modes.registry.yaml\"\r\n    Write-Host \">>> Loading mode registry from: $registryPath\"\r\n    Write-Host \">>> (If this file is missing, the scraper will use default settings.)\"\r\n    Write-Host \"\"\r\n    if (-not (Test-Path $registryPath)) {\r\n        Write-Host \">>> Mode registry missing, returning empty hashtable\"\r\n        return @{}\r\n    }\r\n\r\n    $yaml = Get-Yaml -Path $registryPath\r\n\r\n    # Support two YAML shapes:\r\n    # 1) modes: - name: ... (array of mode objects)\r\n    # 2) modes: { ts: { includeTypes: [...] }, ... } (mapping)\r\n    if ($null -eq $yaml.modes) { return @{} }\r\n\r\n    if ($yaml.modes -is [hashtable]) {\r\n        return $yaml.modes\r\n    }\r\n\r\n    $ht = @{}\r\n    foreach ($mode in $yaml.modes) {\r\n        $name = $mode.name\r\n        if ($name) { $ht[$name] = $mode }\r\n    }\r\n\r\n    Write-Host \">>> Mode registry loaded with $($ht.Keys.Count) modes.\"\r\n    return $ht\r\n}\r\n\r\n# ---------------------------------------------------------\r\n# Mode Inheritance Resolver\r\n# ---------------------------------------------------------\r\nfunction Resolve-Mode {\r\n    param(\r\n        [string]$Mode,\r\n        [hashtable]$Registry\r\n    )\r\n\r\n    if (-not $Registry.ContainsKey($Mode)) { return @{} }\r\n\r\n    $modeData = $Registry[$Mode].Clone()\r\n\r\n    # Ensure `name` field exists for mapping-style registries\r\n    if (-not $modeData.ContainsKey('name')) {\r\n        $modeData['name'] = $Mode\r\n    }\r\n\r\n    if ($modeData.ContainsKey(\"extends\")) {\r\n        $parent = $modeData[\"extends\"]\r\n        $parentData = Resolve-Mode -Mode $parent -Registry $Registry\r\n\r\n        foreach ($key in $parentData.Keys) {\r\n            if (-not $modeData.ContainsKey($key)) {\r\n                $modeData[$key] = $parentData[$key]\r\n            }\r\n        }\r\n    }\r\n\r\n    return $modeData\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

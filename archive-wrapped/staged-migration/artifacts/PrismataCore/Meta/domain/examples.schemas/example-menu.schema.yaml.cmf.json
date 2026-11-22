@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-examples-schemas-example-menu-schema-yaml",
+  "udi": "prismata.meta-domain-examples-schemas.wrapped-schema.example-menu-schema-44ff134b91",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "example-menu.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/domain/examples.schemas/example-menu.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/examples.schemas/example-menu.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "7eaf7131c0f853d5f97e9413202854a6cf76e46d72e6d546fb8ab06d740396d3"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: example-menu\r\nschema_type: examples\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.example-menu\r\n  name: example-menu.schema\r\n  description: Minimal example menu object for documentation and testing.\r\n\r\nspec:\r\n  target_kind: example-menu\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: label\r\n    path: label\r\n    type: string\r\n    required: true\r\n\r\n  - name: items\r\n    path: items\r\n    type: array\r\n    required: false\r\n    item:\r\n      type: string\r\n\r\nobject:\r\n  label: \"Example Menu\"\r\n  items: [\"item1\", \"item2\"]\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

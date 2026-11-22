@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-registry-schemas-pane-registry-yaml",
+  "udi": "prismata.meta-domain-registry-schemas.wrapped-object.pane-registry-74c171b1ec",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "pane.registry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/domain/registry.schemas/pane.registry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/registry.schemas/pane.registry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "3c5deb9607757ea045d6846b23b63491dbb5849dbd7492b3f60a4b8af5b37853"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: registry\r\nschema_type: registry\r\n\r\nmetadata:\r\n  udi: prismata.meta.registry.pane\r\n  name: pane.registry\r\n  description: Registry of canonical panes.\r\n\r\nspec:\r\n  target_kind: pane\r\n  naming:\r\n    file_suffix: .registry.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: panes\r\n    path: panes\r\n    type: array\r\n    required: true\r\n\r\nobject:\r\n  panes: []\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

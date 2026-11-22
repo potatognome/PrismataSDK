@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-schemas-edit-update-fields-yaml",
+  "udi": "prismata.projects-applications-universe-config-schemas.wrapped-schema.edit-update-fields-e3b603f1ba",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "edit-update-fields.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Applications/Universe/config/schemas/edit-update-fields.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/schemas/edit-update-fields.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "ea650e06b53788d648c38598e15c913d9853b6ca37e5209c5fb303462f692a4b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: edit-update-fields.yaml\r\n## Type: schema\r\n## Purpose: Schema describing results from update-field operations\r\n## (missing mandatory/optional fields and the updated object payload).\r\n\r\nmetadata:\r\n  udi: prismata.universe.schema.edit-update-fields\r\n  name: edit-update-fields\r\n  kind: schema-definition\r\n  description: \"Schema describing results from update-field operations.\"\r\n\r\n\r\nid: \"prismata.universe.schema.edit-update-fields\"\r\nversion: \"1.0.0\"\r\ntype: object\r\nproperties:\r\n  missing_mandatory: { type: array }\r\n  missing_optional: { type: array }\r\n  updated_object: { type: object }\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

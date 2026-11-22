@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-schemas-verify-multi-yaml",
+  "udi": "prismata.projects-applications-universe-config-schemas.wrapped-schema.verify-multi-69ff7d8013",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "verify-multi.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Applications/Universe/config/schemas/verify-multi.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/schemas/verify-multi.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "ea89de3f1c89322bf1c89ee7a46a6bff0ab795dc955243d40aee00996814e7b1"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: verify-multi.yaml\r\n## Type: schema\r\n## Purpose: Schema for multi-selection verification (compatibility checks,\r\n## allowed operations, and summaries used by batch operations).\r\n\r\nmetadata:\r\n  udi: prismata.universe.schema.verify-multi\r\n  name: verify-multi\r\n  kind: schema-definition\r\n  description: \"Schema for multi-selection verification (compatibility checks, allowed operations, and summaries).\"\r\n\r\n\r\nid: \"prismata.universe.schema.verify-multi\"\r\nversion: \"2.0.0\"\r\ntype: object\r\nproperties:\r\n  selected_objects: { type: array }\r\n  selection_type: { type: string }\r\n  type_compatibility_matrix: { type: object }\r\n  allowed_operations: { type: array }\r\n  verification_summary: { type: object }\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

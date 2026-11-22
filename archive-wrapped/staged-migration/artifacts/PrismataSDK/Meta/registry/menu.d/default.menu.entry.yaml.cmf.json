@@ -1,0 +1,36 @@
+{
+  "id": "meta-registry-menu-d-default-menu-entry-yaml",
+  "udi": "prismata.meta-registry-menu-d.wrapped-object.default-menu-entry-318066d364",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "default.menu.entry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/registry/menu.d/default.menu.entry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/registry/menu.d/default.menu.entry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "aa987d6f94905f46cfb95a6e0fbf6286afbb90e0075bf611132ebd72e3b118d5"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: default.menu.entry.yaml\r\n## Type: menu registry entry (0.4.3)\r\n## Purpose: Default Prismata menu registry entry.\r\n\r\nid: default\r\nudi: prismata.meta.menu.default\r\nname: default.menu\r\nlabel: \"Prismata Default Menu (0.4.3)\"\r\nkind: menu\r\ndescription: \"Basic menu with a title header and item-local styling support.\"\r\nschema_version: 0.4.3\r\n\r\nmenu:\r\n  title: \"Default Menu 0.4.3\"\r\n  header:\r\n    text: \"Default Menu 0.4.3\"\r\n  items:\r\n    - prismata.meta.menu-item.default\r\n\r\nmeta:\r\n  created_by: copilot\r\n  created_at: 2026-10-02\r\n  schema_version: 0.4.3\r\n\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-canonical-config-sections-d-log-categories-json",
+  "udi": "prismata.meta-deprecated-canonical-config-sections-d.wrapped-object.log-categories-276c53b624",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "LOG_CATEGORIES.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/canonical/config_sections.d/LOG_CATEGORIES.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/canonical/config_sections.d/LOG_CATEGORIES.json",
+    "encoding": "utf-8",
+    "content_sha256": "fa8d97951360846607914139c3235e0c3a680299ae849a48c5f6892c921e127c"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\r\n    \"_META\"                            : {\r\n        \"SORT_ORDER\"                   : 70\r\n    },\r\n    \"LOG_CATEGORIES\"                   : {\r\n        \"default\"                      : [\r\n            \"MASTER\",\r\n            \"SESSION\"\r\n        ],\r\n        \"runtime\"                      : [\r\n            \"MASTER\",\r\n            \"SESSION\",\r\n            \"RUNTIME\"\r\n        ],\r\n        \"error\"                        : [\r\n            \"MASTER\",\r\n            \"SESSION\",\r\n            \"ERROR\"\r\n        ],\r\n        \"init\"                         : [\r\n            \"MASTER\",\r\n            \"SESSION\",\r\n            \"INIT\"\r\n        ],\r\n        \"fs\"                           : [\r\n            \"MASTER\",\r\n            \"SESSION\",\r\n            \"FS\"\r\n        ],\r\n        \"config_read\"                  : [\r\n            \"MASTER\",\r\n            \"SESSION\",\r\n            \"CONFIG_READ\"\r\n        ],\r\n        \"try\"                          : [\r\n            \"MASTER\",\r\n            \"SESSION\",\r\n            \"TRY\"\r\n        ],\r\n        \"all\"                          : [\r\n            \"MASTER\",\r\n            \"SESSION\",\r\n            \"RUNTIME\",\r\n            \"TRY\",\r\n            \"INIT\",\r\n            \"FS\",\r\n            \"CONFIG_READ\",\r\n            \"ERROR\"\r\n        ]\r\n    },\r\n    \"REMOVE_LOG_CATEGORIES\"            : []\r\n}\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

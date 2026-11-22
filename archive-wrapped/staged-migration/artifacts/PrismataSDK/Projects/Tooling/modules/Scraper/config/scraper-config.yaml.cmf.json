@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-modules-scraper-config-scraper-config-yaml",
+  "udi": "prismata.projects-tooling-modules-scraper-config.wrapped-object.scraper-config-1fda3563da",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "scraper-config.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Tooling/modules/Scraper/config/scraper-config.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/modules/Scraper/config/scraper-config.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "b74eeac90b5a2d1db28c972707adc22aa978aff941f3c05266373b9bb00b7796"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# =====================================================================\r\n#  Scraper default config\r\n#  UDI-Compliant Scraper configuration schema for Prismata Scraper module.\r\n#  This file defines the default configuration for the Scraper module.\r\n#  Defines universal, portable, schema-agnostic merge behaviors\r\n# =====================================================================\r\n\r\nversion: 1.0.0\r\nregistryName: \"Scraper Default Configuration\"\r\nudiCompliant: true\r\n\r\n# =====================================================================\r\n# Scraper Input Spec - Folders\r\n# =====================================================================\r\n\r\nignoreFolder:\r\n  - \".git\"\r\n  - \"node_modules\"\r\n  - \"bin\"\r\n  - \"obj\"\r\n\r\nincludeFolders: null\r\n\r\nexcludeFolders:\r\n  - \".workspace\"\r\n  - \".git\"\r\n  - \"node_modules\"\r\n  - \"bin\"\r\n  - \"obj\"\r\n\r\nsummarizeFolder:\r\n  - \".workspace\"\r\n\r\n# =====================================================================\r\n# Scraper Input Spec - Files\r\n# =====================================================================\r\n\r\nignoreType: null\r\n\r\nincludeType:\r\n  - \".ts\"\r\n  - \".py\"\r\n  - \".json\"\r\n  - \".yaml\"\r\n  - \".md\"\r\n\r\nexcludeType: null\r\n\r\nsummarizeType:\r\n  - \".ts\"\r\n  - \".py\"\r\n  - \".json\"\r\n  - \".yaml\"\r\n  - \".md\"\r\n\r\n# =====================================================================\r\n# General Scraper Settings\r\n# =====================================================================\r\n\r\nFolderTree: true\r\n\r\nAddFilesAsLeaves: true\r\n\r\nAddTreeToScrapeFile: false\r\n\r\noutputFolder: \".workspace/.scrapes\"\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

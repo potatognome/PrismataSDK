@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-prismatalabs-python-python-bridge-py",
+  "udi": "prismata.projects-applications-prismatalabs-python.wrapped-codeblock.python-bridge-aac8117ab9",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "python_bridge.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/PrismataLabs/python/python_bridge.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/PrismataLabs/python/python_bridge.py",
+    "encoding": "utf-8",
+    "content_sha256": "409bc38c13a3c477510b1a98e0cdd5abd09ca9900c05626bbe0efa976624a41b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff\"\"\"\r\nPrismataLabs Python Bridge\r\nDispatches preview and validation commands from TypeScript.\r\n\"\"\"\r\n\r\nfrom __future__ import annotations\r\n\r\nfrom typing import Any, Dict\r\n\r\nfrom .tuilkit_runtime import PrismataTuilKitRuntime\r\n\r\n# Capability modules\r\nfrom .preview_object import preview_object\r\nfrom .validate_preview import validate_preview\r\nfrom .select_load_objects import select_load_objects\r\nfrom .configure_default_folders import configure_default_folders\r\n\r\n\r\n_runtime = PrismataTuilKitRuntime()\r\n\r\n\r\n# ---------------------------------------------------------------------------\r\n# Command Dispatcher\r\n# ---------------------------------------------------------------------------\r\n\r\ndef execute(command: str, payload: Dict[str, Any]) -> Dict[str, Any]:\r\n    \"\"\"\r\n    Dispatch a command from TypeScript to the appropriate Python capability.\r\n\r\n    Args:\r\n        command: Name of the capability (string)\r\n        payload: Arbitrary dict passed from TS\r\n\r\n    Returns:\r\n        Dict containing the capability result\r\n    \"\"\"\r\n\r\n    # Preview selected object\r\n    if command == \"preview_object\":\r\n        return preview_object(payload)\r\n\r\n    # Validate selected object\r\n    if command == \"validate_preview\":\r\n        return validate_preview(payload)\r\n\r\n    # Select & load objects (colour-schemes, border-patterns, panes, menus, etc.)\r\n    if command == \"select_load_objects\":\r\n        return select_load_objects(payload)\r\n\r\n    # Configure default folder paths\r\n    if command == \"configure_default_folders\":\r\n        return configure_default_folders(payload)\r\n\r\n    if command == \"tuilkit_status\":\r\n        return _runtime.status()\r\n\r\n    if command == \"tuilkit_capability_manifest\":\r\n        return _runtime.generate_capability_manifest()\r\n\r\n    # Unknown command\r\n    return {\r\n        \"error\": f\"Unknown command: {command}\",\r\n        \"payload\": payload,\r\n    }\r\n\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

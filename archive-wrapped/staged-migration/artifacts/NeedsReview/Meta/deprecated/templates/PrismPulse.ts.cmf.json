@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-templates-prismpulse-ts",
+  "udi": "prismata.meta-deprecated-templates.wrapped-codeblock.prismpulse-b73d7ed369",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "PrismPulse.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Meta/deprecated/templates/PrismPulse.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/templates/PrismPulse.ts",
+    "encoding": "utf-8",
+    "content_sha256": "a9203665142e598b5e0c687790a1fdae3d6f45e35d0e913805e8ea8e40ba78e6"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "export interface PulseState {\n    arousal: number\n    valence: number\n    tempo: number\n}\n\nexport const PrismPulse = {\n    neutral(): PulseState {\n        return { arousal: 0, valence: 0, tempo: 1 }\n    }\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

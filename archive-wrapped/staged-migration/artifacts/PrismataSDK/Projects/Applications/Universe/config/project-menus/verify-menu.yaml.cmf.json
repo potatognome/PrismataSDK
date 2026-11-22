@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-project-menus-verify-menu-yaml",
+  "udi": "prismata.projects-applications-universe-config-project-menus.wrapped-object.verify-menu-f3f89ae649",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "verify-menu.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/Universe/config/project-menus/verify-menu.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/project-menus/verify-menu.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "9819264dee62bdb52c3ca0e4399001d1042bf13bb4716ada7596a1cc398129ae"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: verify-menu.yaml\r\n## Type: project menu\r\n## Purpose: Menu definition for verification workflows (verify against\r\n## reference object, multi-selection checks, diffs). Loaded by menu\r\n## loaders and runtime UI.\r\n\r\nmetadata:\r\n  udi: prismata.universe.menu.verify\r\n  name: \"Verify Menu\"\r\n  version: \"0.1.0\"\r\n  kind: menu\r\n  description: \"Menu for verification, version, diff, and semantic operations.\"\r\n\r\nitems:\r\n  - key: \"1\"\r\n    udi: \"prismata.universe.menu.verify.verify-against-reference-object\"\r\n    label: \"Verify Against Reference Object\"\r\n    description: \"Verify selected objects against a reference object or exemplar.\"\r\n    capability: \"prismata.universe.capability.fs-verify-reference\"\r\n    ui_framework: menu\r\n    submenu_ref: null\r\n    visibility_condition: \"reference_object_selected\"\r\n\r\n  - key: \"2\"\r\n    udi: \"prismata.universe.menu.verify.verify-multi-selection\"\r\n    label: \"Verify Multi-Selection\"\r\n    description: \"Verify multiple selected objects using type-compatible operations.\"\r\n    capability: \"prismata.universe.capability.fs-verify-multi\"\r\n    ui_framework: menu\r\n    submenu_ref: null\r\n\r\n  - key: \"2.1\"\r\n    udi: \"prismata.universe.menu.verify.run-sequential-validation\"\r\n    label: \"Run Sequential Validation\"\r\n    capability: \"prismata.universe.capability.fs-verify-sequence\"\r\n\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"2.2\"\r\n    udi: \"prismata.universe.menu.verify.run-collective-validation\"\r\n    label: \"Run Collective Validation\"\r\n    capability: \"prismata.universe.capability.fs-verify-collective\"\r\n\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"3\"\r\n    udi: \"prismata.universe.menu.verify.apply-version-change-to-selection\"\r\n    label: \"Apply Version Change to Selection\"\r\n    description: \"Forward or backward version remapping for selected objects.\"\r\n    capability: \"prismata.universe.capability.fs-version-apply\"\r\n    ui_framework: menu\r\n    submenu_ref: null\r\n\r\n  - key: \"4\"\r\n    udi: \"prismata.universe.menu.verify.diff-panel\"\r\n    label: \"Diff Panel\"\r\n    description: \"Cross-type diffing using semantic key/value matching.\"\r\n    capability: \"prismata.universe.capability.fs-diff-compatible\"\r\n    ui_framework: menu\r\n    submenu_ref: null\r\n\r\n  - key: \"5\"\r\n    udi: \"prismata.universe.menu.verify.semantic-primitive-extraction\"\r\n    label: \"Semantic Primitive Extraction\"\r\n    description: \"Extract semantic primitive metadata from the current context.\"\r\n    capability: \"prismata.universe.capability.semantic-primitive-extract\"\r\n\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"6\"\r\n    udi: \"prismata.universe.menu.verify.semantic-dependency-graph\"\r\n    label: \"Semantic Dependency Graph\"\r\n    description: \"Generate a semantic dependency graph for active primitives.\"\r\n    capability: \"prismata.universe.capability.semantic-dependency-graph\"\r\n\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"7\"\r\n    udi: \"prismata.universe.menu.verify.semantic-bundle\"\r\n    label: \"Semantic Bundle\"\r\n    description: \"Generate and archive semantic bundle output.\"\r\n    capability: \"prismata.universe.capability.semantic-bundle\"\r\n\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

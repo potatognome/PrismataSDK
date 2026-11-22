@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-project-menus-find-results-menu-yaml",
+  "udi": "prismata.projects-applications-universe-config-project-menus.wrapped-object.find-results-menu-16b52fa7c9",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "find-results-menu.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/Universe/config/project-menus/find-results-menu.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/project-menus/find-results-menu.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "b1e8f790770b6cbfb24ea6f8c2f8895ddfc437f5358f27b58c463f088e5d074b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: find-results-menu.yaml\r\n## Type: project menu\r\n## Purpose: Menu for search results actions and panes (results list,\r\n## preview pane, diff finder). Used by search and navigation workflows.\r\n\r\nmetadata:\r\n  udi: prismata.universe.menu.find.results\r\n  name: \"Find Results Menu\"\r\n  version: \"0.1.0\"\r\n  kind: menu\r\n  description: \"Submenu for search result actions and pane views.\"\r\n\r\nudi: \"prismata.universe.menu.find.results\"\r\nkind: menu\r\ntype: \"menu\"\r\ntitle: \"Search Results\"\r\nheader:\r\n  type: \"search_params\"\r\n\r\nitems:\r\n  - key: \"1\"\r\n    udi: \"prismata.universe.menu.find.results.results-list\"\r\n    label: \"Results List\"\r\n    description: \"Display the current search result set in ranked order.\"\r\n    capability: \"prismata.universe.capability.fs-search-results\"\r\n    ui_framework: pane\r\n    submenu_ref: null\r\n\r\n  - key: \"2\"\r\n    udi: \"prismata.universe.menu.find.results.preview-pane\"\r\n    label: \"Preview Pane\"\r\n    description: \"Show the active object preview and metadata summary.\"\r\n    capability: \"prismata.universe.capability.fs-exemplar-preview\"\r\n    ui_framework: pane\r\n    submenu_ref: null\r\n\r\n  - key: \"3\"\r\n    udi: \"prismata.universe.menu.find.results.version-carousel\"\r\n    label: \"Version Carousel\"\r\n    description: \"Page through compatible versions of the active result.\"\r\n    capability: \"prismata.universe.capability.fs-search-results\"\r\n    ui_framework: multi_pane\r\n    submenu_ref: null\r\n\r\n  - key: \"4\"\r\n    udi: \"prismata.universe.menu.find.results.diff-finder\"\r\n    label: \"Diff Finder\"\r\n    description: \"Compare semantic fields and normalized values across matches.\"\r\n    capability: \"prismata.universe.capability.fs-diff-compatible\"\r\n    ui_framework: diff_view\r\n    submenu_ref: null\r\n\r\n  - key: \"5\"\r\n    udi: \"prismata.universe.menu.find.results.refresh-results\"\r\n    label: \"Refresh Results\"\r\n    description: \"Re-run the current find operation and refresh pane output.\"\r\n    capability: \"prismata.universe.capability.fs-search-execute\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

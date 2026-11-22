@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-registry-schemas-ui-framework-registry-yaml",
+  "udi": "prismata.meta-domain-registry-schemas.wrapped-object.ui-framework-registry-d799498a2d",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "ui-framework.registry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/domain/registry.schemas/ui-framework.registry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/registry.schemas/ui-framework.registry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "6f7c1f424717ad9892c63d34c4cef06a4534f8a369505ab329d58351d3ea8abd"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: registry\r\nschema_type: registry\r\n\r\nmetadata:\r\n  udi: prismata.meta.registry.ui-framework\r\n  name: ui-framework.registry\r\n  description: Registry of canonical UI frameworks.\r\n\r\nspec:\r\n  target_kind: ui-framework\r\n  naming:\r\n    file_suffix: .registry.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: ui-frameworks\r\n    path: ui-frameworks\r\n    type: array\r\n    required: true\r\n\r\nobject:\r\n  ui-frameworks: []\r\n\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

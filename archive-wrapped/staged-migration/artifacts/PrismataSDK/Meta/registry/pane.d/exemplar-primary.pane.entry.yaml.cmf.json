@@ -1,0 +1,36 @@
+{
+  "id": "meta-registry-pane-d-exemplar-primary-pane-entry-yaml",
+  "udi": "prismata.meta-registry-pane-d.wrapped-object.exemplar-primary-pane-entry-40dda6f7a3",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "exemplar-primary.pane.entry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/registry/pane.d/exemplar-primary.pane.entry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/registry/pane.d/exemplar-primary.pane.entry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "31527fbde4052f9ca76e49573102513d085311401d8b8c3b19bbe88cba10a630"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: exemplar-primary.pane.entry.yaml\r\n## Type: pane registry entry (0.4.0)\r\n## Purpose: Primary exemplar pane placed within a multi-pane layout.\r\n\r\nid: exemplar-primary\r\nudi: prismata.meta.pane.exemplar-primary\r\nname: exemplar-primary.pane\r\nlabel: \"Primary\"\r\nkind: pane\r\ndescription: \"Primary pane for the exemplar multi-pane layout.\"\r\nschema_version: 0.4.2\r\n\r\nborder_pattern: single-line\r\ncolour_scheme: default\r\ncontent_role: primary-surface\r\ncolour_role: primary-surface\r\nborder_role: border\r\nx: 5\r\ny: 5\r\nwidth: 42\r\nheight: 32\r\nlayout:\r\n  mode: single\r\n\r\nmeta:\r\n  created_by: copilot\r\n  created_at: 2026-10-01\r\n  schema_version: 0.4.2\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

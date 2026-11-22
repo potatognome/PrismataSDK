@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-examples-schemas-example-manifest-schema-yaml",
+  "udi": "prismata.meta-domain-examples-schemas.wrapped-manifest.example-manifest-schema-95ba5f4ac7",
+  "kind": "wrapped-manifest",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "example-manifest.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "manifest",
+    "relative_path": "Meta/domain/examples.schemas/example-manifest.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/examples.schemas/example-manifest.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "705bec6751916768c22bb7a90f1c2f374e793d5f7010e60f730099d5cf76276d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: example-manifest\r\nschema_type: examples\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.example-manifest\r\n  name: example-manifest.schema\r\n  description: Minimal example manifest for documentation and testing.\r\n\r\nspec:\r\n  target_kind: example-manifest\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: udi\r\n    path: udi\r\n    type: string\r\n    required: true\r\n\r\n  - name: id\r\n    path: id\r\n    type: string\r\n    required: true\r\n\r\n  - name: version\r\n    path: version\r\n    type: string\r\n    required: true\r\n\r\nobject:\r\n  udi: \"prismata.examples.manifest.example\"\r\n  id: \"example\"\r\n  version: \"1.0.0\"\r\n\r\n",
+    "classification": {
+      "subtype": "manifest",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

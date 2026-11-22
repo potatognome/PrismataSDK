@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-dependencyinspector-core-utils-py",
+  "udi": "prismata.projects-applications-dependencyinspector-core.wrapped-codeblock.utils-992b5cb4f9",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "utils.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/DependencyInspector/core/utils.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/DependencyInspector/core/utils.py",
+    "encoding": "utf-8",
+    "content_sha256": "fc87156ed33c90811f015570235ce28ddc3f77f4955d65fe93868f61abb5550b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "def find_field(data, field):\r\n    if field in data:\r\n        return data[field]\r\n    for key, value in data.items():\r\n        if isinstance(value, dict) and field in value:\r\n            return value[field]\r\n    return None\r\n\r\ndef flatten_registry(registry):\r\n    flat = {}\r\n    for kind, entries in registry.items():\r\n        for entry_id, info in entries.items():\r\n            flat[entry_id] = info\r\n    return flat\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-primitives-python-terminal-frame-renderer-py",
+  "udi": "prismata.projects-tooling-primitives-python.wrapped-codeblock.terminal-frame-renderer-32591bb0c3",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "terminal_frame_renderer.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/primitives/python/terminal_frame_renderer.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/primitives/python/terminal_frame_renderer.py",
+    "encoding": "utf-8",
+    "content_sha256": "5833741e7754fa78601a75b4bfb228519fd2745fdfa48cf52451507e51ac7213"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\"\"\"\r\nTerminal frame compositor for pane rendering.\r\n\r\nThis module renders panes to a shared terminal-space canvas so pane coordinates\r\ncan overlap while preserving ANSI colour/style sequences emitted by pane renderer.\r\n\"\"\"\r\n\r\nfrom __future__ import annotations\r\n\r\nimport os\r\nimport shutil\r\nimport sys\r\nfrom pathlib import Path\r\nfrom typing import Any\r\n\r\nfrom .pane_renderer import (\r\n    load_border_pattern_registry,\r\n    load_colour_role_registry,\r\n    load_colour_scheme_registry,\r\n    render_pane,\r\n)\r\n\r\n\r\ndef _scale_percentage(value: Any, *, axis_size: int) -> int:\r\n    \"\"\"Convert a 1-100 screen percentage into a terminal cell coordinate.\"\"\"\r\n    if isinstance(value, str):\r\n        try:\r\n            value = float(value.strip())\r\n        except ValueError:\r\n            return int(value)\r\n\r\n    if isinstance(value, (int, float)):\r\n        if 0 <= float(value) <= 100:\r\n            if axis_size <= 0:\r\n                return 0\r\n            return max(0, min(axis_size, int(round((float(value) / 100.0) * axis_size))))\r\n        return int(value)\r\n\r\n    return int(value)\r\n\r\n\r\ndef enable_windows_vt() -> None:\r\n    \"\"\"Enable ANSI virtual terminal processing in Windows consoles when available.\"\"\"\r\n    if os.name != \"nt\" or not sys.stdout.isatty():\r\n        return\r\n    try:\r\n        import ctypes\r\n\r\n        kernel32 = ctypes.windll.kernel32\r\n        handle = kernel32.GetStdHandle(-11)\r\n        mode = ctypes.c_ulong()\r\n        if kernel32.GetConsoleMode(handle, ctypes.byref(mode)):\r\n            kernel32.SetConsoleMode(handle, mode.value | 0x0004)\r\n    except Exception:\r\n        pass\r\n\r\n\r\ndef terminal_space(default_size: tuple[int, int] = (120, 38)) -> tuple[int, int]:\r\n    width, height = shutil.get_terminal_size(default_size)\r\n    return max(80, width), max(24, height)\r\n\r\n\r\ndef _paint_pane_to_frame(\r\n    frame: list[list[tuple[str, str]]],\r\n    pane_lines: list[str],\r\n    origin_x: int,\r\n    origin_y: int,\r\n    pane_width: int | None = None,\r\n) -> None:\r\n    max_width = len(frame[0]) if pane_width is None else min(pane_width, len(frame[0]))\r\n    clip_right = origin_x + max_width\r\n\r\n    for row_offset, line in enumerate(pane_lines):\r\n        y = origin_y + row_offset\r\n        if y < 0 or y >= len(frame):\r\n            continue\r\n\r\n        active_style = \"\"\r\n        x = origin_x\r\n        i = 0\r\n\r\n        while i < len(line):\r\n            if line.startswith(\"\\x1b[\", i):\r\n                end = line.find(\"m\", i)\r\n                if end != -1:\r\n                    sequence = line[i : end + 1]\r\n                    if sequence in {\"\\x1b[0m\", \"\\x1b[39m\", \"\\x1b[49m\"}:\r\n                        active_style = \"\"\r\n                    else:\r\n                        active_style += sequence\r\n                    i = end + 1\r\n                    continue\r\n\r\n            char = line[i]\r\n            if char in {\"\\n\", \"\\r\"}:\r\n                i += 1\r\n                continue\r\n\r\n            if x < 0 or x >= len(frame[0]) or x >= clip_right:\r\n                i += 1\r\n                x += 1\r\n                continue\r\n\r\n            frame[y][x] = (char, active_style)\r\n            x += 1\r\n            i += 1\r\n\r\n\r\ndef _finalize_frame(frame: list[list[tuple[str, str]]]) -> list[str]:\r\n    rendered: list[str] = []\r\n    for row in frame:\r\n        row_text: list[str] = []\r\n        active_style = \"\"\r\n        for char, cell_style in row:\r\n            if cell_style != active_style:\r\n                if active_style:\r\n                    row_text.append(\"\\x1b[0m\")\r\n                active_style = cell_style\r\n                if active_style:\r\n                    row_text.append(active_style)\r\n            row_text.append(char)\r\n        if active_style:\r\n            row_text.append(\"\\x1b[0m\")\r\n        rendered.append(\"\".join(row_text))\r\n    return rendered\r\n\r\n\r\ndef render_panes_to_terminal_frame(\r\n    panes: list[dict[str, Any]],\r\n    *,\r\n    meta_root: Path,\r\n    colour_scheme: str = \"default\",\r\n    size: tuple[int, int] | None = None,\r\n) -> list[str]:\r\n    \"\"\"Render panes on a shared frame so positioned panes can overlap correctly.\"\"\"\r\n    width, height = size if size else terminal_space()\r\n    frame = [[(\" \", \"\") for _ in range(width)] for _ in range(height)]\r\n\r\n    border_registry = load_border_pattern_registry(meta_root / \"registry\" / \"border-pattern.d\")\r\n    colour_roles = load_colour_role_registry(meta_root / \"registry\" / \"colour-role.d\")\r\n    colour_schemes = load_colour_scheme_registry(meta_root / \"registry\" / \"colour-scheme.d\")\r\n\r\n    for pane in panes:\r\n        pane_layout = dict(pane)\r\n        x = _scale_percentage(pane_layout.get(\"x\", 0), axis_size=width)\r\n        y = _scale_percentage(pane_layout.get(\"y\", 0), axis_size=height)\r\n        pane_width = _scale_percentage(pane_layout.get(\"width\", 100), axis_size=width)\r\n        pane_height = _scale_percentage(pane_layout.get(\"height\", 100), axis_size=height)\r\n\r\n        pane_width = min(pane_width, max(1, width - x))\r\n        pane_height = min(pane_height, max(1, height - y))\r\n\r\n        pane_layout[\"x\"] = x\r\n        pane_layout[\"y\"] = y\r\n        pane_layout[\"width\"] = pane_width\r\n        pane_layout[\"height\"] = pane_height\r\n\r\n        pane_lines = render_pane(\r\n            pane_layout,\r\n            border_registry,\r\n            colour_roles,\r\n            colour_schemes,\r\n            {\"colour_scheme\": colour_scheme},\r\n            {},\r\n        )\r\n        _paint_pane_to_frame(frame, pane_lines, x, y, pane_width)\r\n\r\n    rendered = _finalize_frame(frame)\r\n    if rendered:\r\n        return [\"\\x1b[2J\\x1b[H\"] + rendered\r\n    return [\"\\x1b[2J\\x1b[H\"]\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-project-menus-main-menu-yaml",
+  "udi": "prismata.projects-applications-universe-config-project-menus.wrapped-object.main-menu-adf0678e33",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "main-menu.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/Universe/config/project-menus/main-menu.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/project-menus/main-menu.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "8358bdf2d514fe8f0337d4bd8466189964821c4f6b297a2db54cb9f9dd5132e7"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: main-menu.yaml\r\n## Type: project menu\r\n## Purpose: Application main menu; entry point for bootstrapping, find,\r\n## edit, and verify workflows exposed to the user via UI frameworks.\r\n\r\nmetadata:\r\n  udi: prismata.universe.menu.main\r\n  name: \"Main Menu\"\r\n  version: \"0.1.0\"\r\n  kind: menu\r\n  description: \"Application main menu for bootstrapping, find, edit, and verify workflows.\"\r\n\r\nudi: \"prismata.universe.menu.main\"\r\nkind: menu\r\ntype: \"menu\"\r\ntitle: \"Main Menu\"\r\nheader:\r\n  type: \"runtime_state\"\r\n\r\nitems:\r\n  - key: \"1\"\r\n    udi: \"prismata.universe.menu.main.run-bootstrap-sequence\"\r\n    label: \"Run Bootstrap Sequence\"\r\n    description: \"Initialize Universe ingestion, archive, and registry state.\"\r\n    capability: \"prismata.universe.capability.app-bootstrap-run\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n    visibility_condition: \"bootstrap_mode\"\r\n\r\n  - key: \"0\"\r\n    udi: \"prismata.universe.menu.main.quit\"\r\n    label: \"Quit\"\r\n    description: \"Exit the application.\"\r\n    capability: \"prismata.universe.capability.app-quit\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n    visibility_condition: \"initialized\"\r\n\r\n  - key: \"1\"\r\n    udi: \"prismata.universe.menu.main.find\"\r\n    label: \"Find & Select\"\r\n    description: \"Search for files, preview results, and perform diff operations.\"\r\n    capability: \"prismata.universe.capability.fs-search-results\"\r\n    ui_framework: menu\r\n    submenu_ref: \"prismata.universe.menu.find\"\r\n    visibility_condition: \"initialized\"\r\n\r\n  - key: \"2\"\r\n    udi: \"prismata.universe.menu.main.edit\"\r\n    label: \"Create & Edit\"\r\n    description: \"Create new objects, update fields, conform to reference objects, and export.\"\r\n    capability: \"prismata.universe.capability.fs-edit-multi\"\r\n    ui_framework: menu\r\n    submenu_ref: \"prismata.universe.menu.edit\"\r\n    visibility_condition: \"initialized_and_vile_ingested\"\r\n\r\n  - key: \"2\"\r\n    udi: \"prismata.universe.menu.main.edit-locked-until-vile-ingestion\"\r\n    label: \"Edit (Locked until Vile ingestion)\"\r\n    description: \"Create/Edit remains locked until tooling.vile is ingested.\"\r\n    capability: \"prismata.universe.capability.fs-edit-multi\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n    visibility_condition: \"initialized_and_vile_not_ingested\"\r\n\r\n  - key: \"3\"\r\n    udi: \"prismata.universe.menu.main.verify\"\r\n    label: \"Verify\"\r\n    description: \"Validate objects, run semantic substrate operations, apply version changes, and run diff panels.\"\r\n    capability: \"prismata.universe.capability.fs-verify-multi\"\r\n    ui_framework: menu\r\n    submenu_ref: \"prismata.universe.menu.verify\"\r\n    visibility_condition: \"initialized\"\r\n\r\n  - key: \"4\"\r\n    udi: \"prismata.universe.menu.main.settings\"\r\n    label: \"Settings\"\r\n    description: \"Configure folder paths, naming conventions, export rules, and registry behavior.\"\r\n    capability: \"prismata.universe.capability.app-settings-paths\"\r\n    ui_framework: menu\r\n    submenu_ref: \"prismata.universe.menu.settings\"\r\n    visibility_condition: \"initialized\"\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

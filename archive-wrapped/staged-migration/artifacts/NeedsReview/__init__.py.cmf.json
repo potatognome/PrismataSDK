@@ -1,0 +1,36 @@
+{
+  "id": "init-py",
+  "udi": "prismata.root.wrapped-codeblock.init-60ad4f3d2e",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "__init__.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "__init__.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "__init__.py",
+    "encoding": "utf-8",
+    "content_sha256": "44bf4534f2f820500200440e0de5256486a160aa2ba4eb1d95c08f213cceb02e"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Prismata package initialization",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

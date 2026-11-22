@@ -1,0 +1,36 @@
+{
+  "id": "meta-registry-menu-d-exemplar-primary-menu-entry-yaml",
+  "udi": "prismata.meta-registry-menu-d.wrapped-object.exemplar-primary-menu-entry-6390a3b98a",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "exemplar-primary.menu.entry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/registry/menu.d/exemplar-primary.menu.entry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/registry/menu.d/exemplar-primary.menu.entry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "cab366d28eba399a70d6f6f8511a76d8cc849d06a1e4e0265160eccefac7f76b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: exemplar-primary.menu.entry.yaml\r\n## Type: menu registry entry\r\n## Purpose: Left-hand menu in the exemplar multi-pane registry layout.\r\n\r\nid: exemplar-primary\r\nudi: prismata.meta.menu.exemplar-primary\r\nname: exemplar-primary.menu\r\nlabel: \"Primary Menu\"\r\nkind: menu\r\ndescription: \"Primary no-op menu used by the left-hand exemplar pane with a title header and per-item styling.\"\r\nschema_version: 0.4.3\r\n\r\nmenu:\r\n  title: \"Exemplar Primary Menu 0.4.3\"\r\n  header:\r\n    text: \"Exemplar Primary Menu 0.4.3\"\r\n  items:\r\n    - label: \"Prismata Test Menu Item #1 (0.4.3)\"\r\n      colour_role: primary-surface\r\n      border_pattern: single-line\r\n      header:\r\n        text: \"Primary\"\r\n    - label: \"Prismata Test Menu Item #2 (0.4.3)\"\r\n      colour_role: secondary-surface\r\n      border_pattern: double-line\r\n      header:\r\n        text: \"Secondary\"\r\n    - label: \"Prismata Test Menu Item #3 (0.4.3)\"\r\n      colour_role: accent-surface\r\n      border_pattern: single-line\r\n      header:\r\n        text: \"Accent\"\r\n\r\nmeta:\r\n  created_by: copilot\r\n  created_at: 2026-10-02\r\n  schema_version: 0.4.3\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

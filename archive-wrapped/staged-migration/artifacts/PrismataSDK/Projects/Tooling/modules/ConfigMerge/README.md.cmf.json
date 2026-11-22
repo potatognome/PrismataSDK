@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-modules-configmerge-readme-md",
+  "udi": "prismata.projects-tooling-modules-configmerge.wrapped-document.readme-60af694b98",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "README.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Projects/Tooling/modules/ConfigMerge/README.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/modules/ConfigMerge/README.md",
+    "encoding": "utf-8",
+    "content_sha256": "07c6e859c646cac04e1c81e255d66da8c4674e0ac607ffc2d7a7c0540703df3f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff# ConfigMerge Module\r\n\r\nDeterministic configuration merge engine with conflictMode precedence.\r\n\r\n## Features\r\n- Merge order: Defaults \u00e2\u2020\u2019 Mode \u00e2\u2020\u2019 Config \u00e2\u2020\u2019 Style \u00e2\u2020\u2019 CLI\r\n- Array union merging\r\n- Scalar overwrite\r\n- No null erasure\r\n- Deterministic output\r\n- ConflictMode: removeWins, includeWins, unionWins\r\n\r\n## Files\r\n- ConfigMerge.psm1\r\n- ConfigMerge.Tests.ps1\r\n- ConfigMerge.schema.yaml\r\n- examples/\r\n\r\n\r\n## Usage\r\n```powershell\r\nImport-Module ConfigMerge\r\n\r\n$settings = Merge-Config -Defaults $d -Mode $m -Config $c -Style $s -Cli $cli\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

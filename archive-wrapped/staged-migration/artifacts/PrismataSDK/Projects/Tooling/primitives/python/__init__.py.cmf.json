@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-primitives-python-init-py",
+  "udi": "prismata.projects-tooling-primitives-python.wrapped-codeblock.init-3438ac0d0b",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "__init__.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/primitives/python/__init__.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/primitives/python/__init__.py",
+    "encoding": "utf-8",
+    "content_sha256": "5d83a6c9620fd5833f78322a4635faa000c1b275c2c37296e114330f905acdda"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# __init__.py for the Prismata Python primitives package\r\n# Prismata Python primitives package\r\n# Expose shared tooling modules\r\n\r\nfrom .path_helper import (\r\n    find_prismata_root,\r\n    discover_preview_resources,\r\n    load_registry,\r\n    resolve_registry_entry,\r\n    select_file,\r\n    select_folder,\r\n    select_save_file,\r\n)\r\n\r\nfrom .dialog_helpers import (\r\n    pick_native_path,\r\n    pick_native_save_path,\r\n)\r\n\r\nfrom .terminal_frame_renderer import (\r\n    enable_windows_vt,\r\n    render_panes_to_terminal_frame,\r\n    terminal_space,\r\n)\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

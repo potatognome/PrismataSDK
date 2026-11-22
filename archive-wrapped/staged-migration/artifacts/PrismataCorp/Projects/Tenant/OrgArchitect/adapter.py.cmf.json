@@ -1,0 +1,36 @@
+{
+  "id": "projects-tenant-orgarchitect-adapter-py",
+  "udi": "prismata.projects-tenant-orgarchitect.wrapped-codeblock.adapter-e6005e9f8a",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "adapter.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tenant/OrgArchitect/adapter.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tenant/OrgArchitect/adapter.py",
+    "encoding": "utf-8",
+    "content_sha256": "32e0c1135d69ebdd5279de8fa02bb33459c9fead2ae742ab9d4cc0180a69eae1"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\r\nimport json\r\nfrom pathlib import Path\r\n\r\nOUTBOX = Path(__file__).resolve().parent / \"outbox\"\r\n\r\ndef status():\r\n    return {\"status\": \"ok\", \"module\": __name__}\r\n\r\ndef run(config: dict):\r\n    OUTBOX.mkdir(parents=True, exist_ok=True)\r\n    flow = {\"flow\": True}\r\n    job = {\"job\": True}\r\n    summary = {\"summary\": True}\r\n    (OUTBOX / \"flowspec.json\").write_text(json.dumps(flow), encoding=\"utf-8\")\r\n    (OUTBOX / \"jobspec.json\").write_text(json.dumps(job), encoding=\"utf-8\")\r\n    (OUTBOX / \"department_summary.json\").write_text(json.dumps(summary), encoding=\"utf-8\")\r\n    return {\"flow_spec\": flow, \"job_spec\": job, \"department_summary\": summary}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

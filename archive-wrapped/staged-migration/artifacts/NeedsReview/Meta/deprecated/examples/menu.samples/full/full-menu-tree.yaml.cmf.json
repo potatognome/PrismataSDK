@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-examples-menu-samples-full-full-menu-tree-yaml",
+  "udi": "prismata.meta-deprecated-examples-menu-samples-full.wrapped-object.full-menu-tree-788bf5029b",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "full-menu-tree.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/examples/menu.samples/full/full-menu-tree.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/examples/menu.samples/full/full-menu-tree.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "7a368b027b97792928f9d497691d38218a5f129a59cae676f43181d62469ad84"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeffmenus:\r\n  - id: menu.main\r\n    key: menu.main\r\n    udi: prismata.menu.main\r\n    name: Main Menu\r\n    title: Prismata Main Menu\r\n    label: Prismata Main Menu\r\n    position: Main\r\n    order: 1\r\n    type: main\r\n    icon: \"\ud83c\udfe0\"\r\n    colourScheme: main-menu\r\n    borderScheme: main-menu\r\n    description: Primary entry point for Prismata.\r\n    finalItemType: Quit\r\n    visibilityMode: Static\r\n    enableMode: Enabled\r\n    registryKey: main.registry\r\n    registryOverrides:\r\n      menuTypes:\r\n        main:\r\n          defaultColourScheme: main-menu\r\n          defaultBorderScheme: main-menu\r\n    header:\r\n      udi: prismata.menu.main.header\r\n      text: Prismata Main Menu\r\n      style: header\r\n      colourScheme: header\r\n      borderScheme: main-menu\r\n      visibilityMode: Static\r\n    footer:\r\n      udi: prismata.menu.main.footer\r\n      text: F1: Help | Q: Quit\r\n      style: footer\r\n      colourScheme: footer\r\n      borderScheme: main-menu\r\n      visibilityMode: Static\r\n    items:\r\n      - udi: prismata.menu.main.start\r\n        key: main.start\r\n        name: Start Prismata\r\n        label: Start Prismata\r\n        type: action\r\n        order: 1\r\n        selectionMethod: number\r\n        action: execute\r\n        ui_framework: menu\r\n        capability: prismata.app.start\r\n        executeTarget: start_prismata\r\n        icon: \"\u25b6\"\r\n        description: Launch the primary experience.\r\n\r\n      - udi: prismata.menu.main.settings\r\n        key: main.settings\r\n        name: Settings\r\n        label: Settings\r\n        type: navigate\r\n        order: 2\r\n        selectionMethod: number\r\n        action: navigate\r\n        ui_framework: menu\r\n        capability: prismata.menu.settings\r\n        navigateTarget: menu.settings\r\n        submenu_ref: menu.settings\r\n        icon: \"\u2699\ufe0f\"\r\n        description: Open settings and preferences.\r\n\r\n  - id: menu.settings\r\n    key: menu.settings\r\n    udi: prismata.menu.settings\r\n    name: Settings\r\n    title: Settings\r\n    label: Settings\r\n    position: Sub\r\n    parent: menu.main\r\n    order: 2\r\n    type: settings\r\n    icon: \"\u2699\ufe0f\"\r\n    colourScheme: settings-menu\r\n    borderScheme: settings-menu\r\n    description: Complete settings menu exemplar.\r\n    finalItemType: Back\r\n    visibilityMode: Conditional\r\n    visibilityCondition: project_selected == true\r\n    visibilityDependencies:\r\n      - project_selected\r\n    enableMode: Conditional\r\n    enableCondition: config_exists('config/project-menus/settings.yaml') == true\r\n    enableDependencies:\r\n      - config_exists\r\n    header:\r\n      udi: prismata.menu.settings.header\r\n      text: Settings\r\n      style: header\r\n      colourScheme: header\r\n      borderScheme: settings-menu\r\n      visibilityMode: Conditional\r\n      visibilityCondition: project_selected == true\r\n      visibilityDependencies:\r\n        - project_selected\r\n    footer:\r\n      udi: prismata.menu.settings.footer\r\n      text: Use arrows to adjust and Enter to confirm.\r\n      style: footer\r\n      colourScheme: footer\r\n      borderScheme: settings-menu\r\n      visibilityMode: Static\r\n    items:\r\n      - udi: prismata.menu.settings.darkmode\r\n        key: settings.darkmode\r\n        name: Dark Mode\r\n        label: Dark Mode\r\n        type: toggle\r\n        order: 1\r\n        selectionMethod: toggle\r\n        action: execute\r\n        ui_framework: toggle_table\r\n        capability: prismata.settings.toggle_dark_mode\r\n        executeTarget: toggle_darkmode\r\n        icon: \"\u263e\"\r\n        description: Toggle dark mode styling.\r\n\r\n      - udi: prismata.menu.settings.theme\r\n        key: settings.theme\r\n        name: Theme\r\n        label: Theme\r\n        type: carousel\r\n        order: 2\r\n        selectionMethod: carousel\r\n        action: execute\r\n        ui_framework: custom\r\n        capability: prismata.settings.cycle_theme\r\n        executeTarget: cycle_theme\r\n        icon: \"\ud83c\udfa8\"\r\n        description: Cycle available themes.\r\n\r\n  - id: menu.admin\r\n    key: menu.admin\r\n    udi: prismata.menu.admin\r\n    name: Admin Tools\r\n    title: Admin Tools\r\n    label: Admin Tools\r\n    position: Sub\r\n    parent: menu.main\r\n    order: 3\r\n    type: admin\r\n    icon: \"\ud83e\uddf0\"\r\n    colourScheme: admin-menu\r\n    borderScheme: default\r\n    description: Conditional admin tools menu.\r\n    finalItemType: Back\r\n    visibilityMode: Conditional\r\n    visibilityCondition: user_is_admin == true\r\n    visibilityDependencies:\r\n      - user_is_admin\r\n    enableMode: Conditional\r\n    enableCondition: feature_flag('admin_tools') == true\r\n    enableDependencies:\r\n      - admin_tools\r\n    header:\r\n      udi: prismata.menu.admin.header\r\n      text: Admin Tools\r\n      style: header\r\n      colourScheme: header\r\n      borderScheme: default\r\n      visibilityMode: Conditional\r\n      visibilityCondition: user_is_admin == true\r\n      visibilityDependencies:\r\n        - user_is_admin\r\n    footer:\r\n      udi: prismata.menu.admin.footer\r\n      text: Admin mode.\r\n      style: footer\r\n      colourScheme: footer\r\n      borderScheme: default\r\n      visibilityMode: Conditional\r\n      visibilityCondition: user_is_admin == true\r\n      visibilityDependencies:\r\n        - user_is_admin\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

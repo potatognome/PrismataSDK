@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-src-utils-viewloaders-ts",
+  "udi": "prismata.projects-applications-universe-src-utils.wrapped-codeblock.viewloaders-483a91a4b8",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "viewLoaders.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/Universe/src/utils/viewLoaders.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/src/utils/viewLoaders.ts",
+    "encoding": "utf-8",
+    "content_sha256": "4a802941353221b7792c3ff5211bbdda4047332de838d3b5d937b083c668bd06"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import * as path from \"path\";\r\nimport {\r\n  UiFramework,\r\n  MenuDefinition,\r\n  SchemaDefinition,\r\n  injectFrameworkFromCapability,\r\n  loadCapabilityFrameworkMapFromFile,\r\n  loadMenuFromFile,\r\n  loadSchemaFromFile,\r\n  normalizeMenuItemFrameworks,\r\n  normalizeViewName,\r\n  validateMenuItemFrameworks,\r\n} from \"../../../../Tooling/primitives/typescript/menuLoaders\";\r\n\r\nexport { UiFramework, MenuDefinition, SchemaDefinition };\r\nexport {\r\n  injectFrameworkFromCapability,\r\n  loadCapabilityFrameworkMapFromFile,\r\n  normalizeMenuItemFrameworks,\r\n  normalizeViewName,\r\n  validateMenuItemFrameworks,\r\n};\r\n\r\nexport function loadCapabilityFrameworkMap(prismataRoot: string): Record<string, UiFramework> {\r\n  const file = path.join(prismataRoot, \"config\", \"capability-framework.map.yaml\");\r\n  return loadCapabilityFrameworkMapFromFile(file);\r\n}\r\n\r\nexport function loadMenu(id: string): MenuDefinition {\r\n  const fileName = `${normalizeViewName(id)}-menu.yaml`;\r\n  const fullPath = path.join(__dirname, \"../../config/project-menus\", fileName);\r\n  return loadMenuFromFile(fullPath);\r\n}\r\n\r\nexport function loadSchema(id: string): SchemaDefinition {\r\n  const schemaId = id.replace(\"prismata.universe.menu.\", \"prismata.universe.schema.\");\r\n  const fileName = `${normalizeViewName(id)}.yaml`;\r\n  const fullPath = path.join(__dirname, \"../../config/schemas\", fileName);\r\n  return loadSchemaFromFile(fullPath, schemaId);\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

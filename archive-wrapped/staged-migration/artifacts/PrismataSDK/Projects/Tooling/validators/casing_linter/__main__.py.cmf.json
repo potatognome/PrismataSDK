@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-validators-casing-linter-main-py",
+  "udi": "prismata.projects-tooling-validators-casing-linter.wrapped-codeblock.main-b46c9fac03",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "__main__.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/validators/casing_linter/__main__.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/validators/casing_linter/__main__.py",
+    "encoding": "utf-8",
+    "content_sha256": "b66a6ab396c7d8b7626be0bcd88d808dbc6dacbc228b8ae28cc9519ebb423d15"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import sys\nfrom pathlib import Path\n# Add Prismata root to sys.path\nROOT = Path(__file__).resolve().parents[4]   # goes up to your repo root\nprint(\"\")\nprint (f\"Root Folder: {ROOT}\")\nprint(\"\")\n\nsys.path.insert(0, str(ROOT))\n\nfrom Projects.Tooling.validators.casing_linter.cli import run_cli\n\nif __name__ == '__main__':\n    run_cli()\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "tests-test-tuilkit-adapters-py",
+  "udi": "prismata.tests.wrapped-codeblock.test-tuilkit-adapters-039726d39c",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_tuilkit_adapters.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "tests/test_tuilkit_adapters.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "tests/test_tuilkit_adapters.py",
+    "encoding": "utf-8",
+    "content_sha256": "0f02267a7c75bb64f5e5f8105de0fb00c31220e5869fe9d0f0a039ae24b4dff4"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufefffrom __future__ import annotations\r\n\r\nimport sys\r\nfrom pathlib import Path\r\n\r\nROOT = Path(__file__).resolve().parents[1]\r\nif str(ROOT) not in sys.path:\r\n    sys.path.insert(0, str(ROOT))\r\n\r\nfrom Projects.Applications.PrismataLabs.python.tuilkit_runtime import PrismataTuilKitRuntime\r\nfrom Projects.Applications.Universe.python.tuilkit_runtime import UniverseTuilKitRuntime\r\n\r\n\r\ndef test_prismatalabs_tuilkit_runtime_exposes_capabilities():\r\n    runtime = PrismataTuilKitRuntime()\r\n\r\n    assert runtime.logger is not None\r\n    assert runtime.menu_handler is not None\r\n\r\n    manifest = runtime.generate_capability_manifest()\r\n    assert manifest[\"kind\"] == \"capability-manifest\"\r\n    assert any(item[\"udi\"] == \"module.tuilkit.capability.menu.render\" for item in manifest[\"capabilities\"])\r\n\r\n    menu_lines = runtime.render_menu(\"Test Menu\", [\"Open\", \"Close\", \"Quit\"])\r\n    assert isinstance(menu_lines, list)\r\n    assert len(menu_lines) >= 3\r\n\r\n\r\ndef test_universe_tuilkit_runtime_can_generate_manifest():\r\n    runtime = UniverseTuilKitRuntime()\r\n    manifest = runtime.generate_capability_manifest()\r\n\r\n    assert manifest[\"kind\"] == \"capability-manifest\"\r\n    assert any(item[\"udi\"] == \"module.tuilkit.capability.menu.render\" for item in manifest[\"capabilities\"])\r\n    assert any(item[\"udi\"] == \"module.tuilkit.capability.runtime.ingest\" for item in manifest[\"capabilities\"])\r\n\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

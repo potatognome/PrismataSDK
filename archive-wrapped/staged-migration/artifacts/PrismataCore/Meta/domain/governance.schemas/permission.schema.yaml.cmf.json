@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-governance-schemas-permission-schema-yaml",
+  "udi": "prismata.meta-domain-governance-schemas.wrapped-schema.permission-schema-0ead0329a4",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "permission.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/domain/governance.schemas/permission.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/governance.schemas/permission.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "6621871988393f15d77a29bc6cbeb458edfc8ec1baaff9af0ac96494e42d4457"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: permission\r\nschema_type: governance\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.permission\r\n  name: permission.schema\r\n  description: Canonical schema defining governance permissions.\r\n\r\nspec:\r\n  target_kind: permission\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: udi\r\n    path: udi\r\n    type: string\r\n    required: true\r\n\r\n  - name: id\r\n    path: id\r\n    type: string\r\n    required: true\r\n\r\n  - name: name\r\n    path: name\r\n    type: string\r\n    required: true\r\n\r\n  - name: description\r\n    path: description\r\n    type: string\r\n    required: false\r\n\r\n  - name: resource\r\n    path: resource\r\n    type: string\r\n    required: false\r\n\r\n  - name: action\r\n    path: action\r\n    type: string\r\n    required: false\r\n\r\nobject:\r\n  udi: \"\"\r\n  id: \"\"\r\n  name: \"\"\r\n  description: \"\"\r\n  resource: \"\"\r\n  action: \"\"\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

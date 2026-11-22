@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-schemas-edit-multi-yaml",
+  "udi": "prismata.projects-applications-universe-config-schemas.wrapped-schema.edit-multi-461cde8976",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "edit-multi.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Applications/Universe/config/schemas/edit-multi.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/schemas/edit-multi.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "842ac49848a5ff2218878cebadc91b23480df41845063f83fba6a9d450949135"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: edit-multi.yaml\r\n## Type: schema\r\n## Purpose: Schema for bulk edit operations (selection, compatibility,\r\n## and allowed operations) used by multi-edit tooling.\r\n\r\nmetadata:\r\n  udi: prismata.universe.schema.edit-multi\r\n  name: edit-multi\r\n  kind: schema-definition\r\n  description: \"Schema for bulk edit operations (selection, compatibility, and allowed operations).\"\r\n\r\n\r\nid: \"prismata.universe.schema.edit-multi\"\r\nversion: \"2.0.0\"\r\ntype: object\r\nproperties:\r\n  selected_objects: { type: array }\r\n  type_compatibility_matrix: { type: object }\r\n  allowed_operations: { type: array }\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

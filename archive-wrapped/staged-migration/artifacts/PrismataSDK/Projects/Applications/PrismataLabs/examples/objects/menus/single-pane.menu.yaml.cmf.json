@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-prismatalabs-examples-objects-menus-single-pane-menu-yaml",
+  "udi": "prismata.projects-applications-prismatalabs-examples-objects-menus.wrapped-object.single-pane-menu-82192aa175",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "single-pane.menu.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/PrismataLabs/examples/objects/menus/single-pane.menu.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/PrismataLabs/examples/objects/menus/single-pane.menu.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "716f128b7e8e7bed57ae7b882c87773073b42b63118c3e60fb88c5bd6ae419d5"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "id: example-single-pane-menu\r\nudi: prismata.examples.menu.single-pane\r\nkind: menu\r\ntitle: Single Pane Demo\r\nheader:\r\n  id: example-single-pane-menu-header\r\n  text: Single Pane Demo\r\n  colour_role: prismata.examples.colour-role.menu-accent\r\n  colour_scheme: prismata.examples.colour-scheme.surface\r\n  border_pattern: prismata.examples.border.example-menu\r\ncolour_role: prismata.examples.colour-role.menu-accent\r\ncolour_scheme: prismata.examples.colour-scheme.surface\r\nborder_pattern: prismata.examples.border.example-menu\r\nitems:\r\n- id: example-print-hello-world\r\n  udi: prismata.examples.menu-item.print-hello-world\r\n  kind: menu-item\r\n  label: Print Hello World\r\n  capability: prismata.examples.capability.print-hello\r\n  colour_role: prismata.examples.colour-role.menu-accent\r\n  colour_scheme: prismata.examples.colour-scheme.surface\r\n  border_pattern: prismata.examples.border.example-item\r\n  header:\r\n    id: example-print-hello-header\r\n    text: Hello\r\n    colour_role: prismata.examples.colour-role.menu-accent\r\n    colour_scheme: prismata.examples.colour-scheme.surface\r\n    border_pattern: prismata.examples.border.example-item\r\n  visibility_mode: static\r\n  enable_mode: enabled\r\n- id: example-clear-hello-world\r\n  udi: prismata.examples.menu-item.clear-hello-world\r\n  kind: menu-item\r\n  label: Clear all Hello World\r\n  capability: prismata.examples.capability.clear-hello\r\n  colour_role: prismata.examples.colour-role.alert\r\n  colour_scheme: prismata.examples.colour-scheme.surface\r\n  border_pattern: prismata.examples.border.example-item\r\n  header:\r\n    id: example-clear-header\r\n    text: Clear\r\n    colour_role: prismata.examples.colour-role.alert\r\n    colour_scheme: prismata.examples.colour-scheme.surface\r\n    border_pattern: prismata.examples.border.example-item\r\n  visibility_mode: static\r\n  enable_mode: enabled\r\n- id: example-exit-app\r\n  udi: prismata.examples.menu-item.exit\r\n  kind: menu-item\r\n  label: Exit\r\n  capability: prismata.examples.capability.exit\r\n  colour_role: prismata.examples.colour-role.alert\r\n  colour_scheme: prismata.examples.colour-scheme.surface\r\n  border_pattern: prismata.examples.border.example-item\r\n  header:\r\n    id: example-exit-header\r\n    text: Quit\r\n    colour_role: prismata.examples.colour-role.alert\r\n    colour_scheme: prismata.examples.colour-scheme.surface\r\n    border_pattern: prismata.examples.border.example-item\r\n  visibility_mode: static\r\n  enable_mode: enabled\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

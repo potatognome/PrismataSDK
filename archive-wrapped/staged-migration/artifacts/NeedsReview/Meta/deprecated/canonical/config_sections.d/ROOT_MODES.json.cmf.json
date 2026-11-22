@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-canonical-config-sections-d-root-modes-json",
+  "udi": "prismata.meta-deprecated-canonical-config-sections-d.wrapped-object.root-modes-7040958adf",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "ROOT_MODES.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/canonical/config_sections.d/ROOT_MODES.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/canonical/config_sections.d/ROOT_MODES.json",
+    "encoding": "utf-8",
+    "content_sha256": "d921add5457f3c723cf69ad6a588d296776bdd589f26dc60ebcaeab4d48ec8e4"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\r\n    \"_META\": {\r\n        \"SORT_ORDER\": 20\r\n    },\r\n    \"ROOT_MODES\": {\r\n        \"CONFIG\": \"workspace\",\r\n        \"LOGS\": \"workspace\",\r\n        \"INPUTS\": \"workspace\",\r\n        \"OUTPUTS\": \"workspace\",\r\n        \"TESTS_CONFIG\": \"workspace\",\r\n        \"TESTS_LOGS\": \"workspace\",\r\n        \"TESTS_INPUTS\": \"workspace\",\r\n        \"TESTS_OUTPUTS\": \"workspace\"\r\n    },\r\n    \"REMOVE_ROOT_MODES\": []\r\n}\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

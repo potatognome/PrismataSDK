@@ -1,0 +1,48 @@
+{
+  "input_root": "archive-wrapped/Prismata",
+  "output_root": "archive-wrapped/review-corpus",
+  "include_glob": "**/*.cmf.json",
+  "artifact_count": 791,
+  "invalid_count": 0,
+  "owner_counts": {
+    "core": 100,
+    "corp": 4,
+    "historical": 68,
+    "review": 91,
+    "sdk": 310,
+    "workspace-runtime": 218
+  },
+  "disposition_counts": {
+    "deprecate": 65,
+    "preserve-historical": 68,
+    "quarantine-runtime": 218,
+    "review": 30,
+    "transform-core-candidate": 100,
+    "transform-corp-candidate": 4,
+    "transform-sdk-candidate": 306
+  },
+  "subtype_counts": {
+    "agent-instruction": 14,
+    "artifact": 92,
+    "checklist": 13,
+    "codeblock": 171,
+    "document": 50,
+    "manifest": 48,
+    "object": 250,
+    "plan": 31,
+    "schema": 122
+  },
+  "tag_counts": {
+    "code": 178,
+    "documentation": 108,
+    "instruction": 26,
+    "manifest": 61,
+    "planning": 45,
+    "registry": 58,
+    "runtime-state": 218,
+    "schema": 142
+  },
+  "planning_index_count": 70,
+  "total_content_bytes": 6840128,
+  "invalid": []
+}

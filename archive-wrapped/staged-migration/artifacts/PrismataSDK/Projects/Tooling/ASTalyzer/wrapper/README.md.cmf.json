@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-astalyzer-wrapper-readme-md",
+  "udi": "prismata.projects-tooling-astalyzer-wrapper.wrapped-document.readme-49455eb76a",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "README.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Projects/Tooling/ASTalyzer/wrapper/README.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/ASTalyzer/wrapper/README.md",
+    "encoding": "utf-8",
+    "content_sha256": "3c1af4111ecce6b33bf441f0e19ea476c96f3cdc98d3ba0d225839dbd897c150"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "ASTalyzer wrapper (tUilKit / pcms-2026 menus)\r\n==========================================\r\n\r\nPurpose\r\n-------\r\nLightweight Python wrapper that exposes the ASTalyzer tooling via the project's YAML menus (pcms-2026/tUilKit style) and provides safe execution of the analyzer so very large JSON output is captured to a temporary file and presented via a pager or saved to disk.\r\n\r\nLocation\r\n--------\r\n- Wrapper: `wrapper/astalyzer_cli.py`\r\n- Menu YAML: `config/project.menus/astalyzer-main-menu.yaml`\r\n- Smoke runner: `wrapper/tests/run_smoke.py`\r\n\r\nQuick start\r\n-----------\r\nFrom the ASTalyzer project root run the interactive wrapper (falls back to a simple console menu when YAML/pyyaml is missing):\r\n\r\n```bash\r\npython wrapper/astalyzer_cli.py\r\n```\r\n\r\nRun the smoke script (no external deps required):\r\n\r\n```bash\r\npython wrapper/tests/run_smoke.py\r\n```\r\n\r\nNotes / dependencies\r\n--------------------\r\n- Python 3.8+ (used to run the wrapper).  \r\n- Optional: `PyYAML` (`yaml`) to enable full YAML registry parsing. If not installed the wrapper falls back to a simple console menu.  \r\n- Optional: `node` + `npx` + `tsx` (or `ts-node`) if you want the wrapper to prefer the TypeScript entrypoint in `src/astalyzer/main.ts`. If those are not available the wrapper will call the bundled `main.py`.\r\n\r\nBehavior\r\n--------\r\n- `run_astalyzer()` executes the analyzer subprocess, captures stdout/stderr into a temporary JSON file, and returns a small summary (module count, top file paths) plus the tempfile path.  \r\n- Use the menu actions `View last output` / `Save last output` to inspect or persist the full JSON output.\r\n\r\nExtending\r\n---------\r\n- To integrate with an existing tUilKit runtime, replace the simple console fallback with calls into the project's menu factory.  \r\n- The YAML menu loader uses `menu_helpers.load_yaml_menu_registry()` to discover menus under `config/project.menus/`.\r\n\r\nLicense\r\n-------\r\nFollow the repository licensing (no new license added here).\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

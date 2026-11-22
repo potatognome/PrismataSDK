@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-core-schemas-schema-definition-schema-yaml",
+  "udi": "prismata.meta-canonical-core-schemas.wrapped-schema.schema-definition-schema-2cfb9bfa4a",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "schema-definition.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/core.schemas/schema-definition.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/core.schemas/schema-definition.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "dd89158d591be0af00a98506022676b3aedc33ce90870c66e9833ffee5494c74"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: schema-definition\r\nschema_type: core\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.schema-definition\r\n  name: schema-definition.schema\r\n  description: Canonical schema defining the structure of schema definitions.\r\n\r\nspec:\r\n  target_kind: schema-definition\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: version\r\n    path: version\r\n    type: string\r\n    required: true\r\n\r\n  - name: kind\r\n    path: kind\r\n    type: string\r\n    required: true\r\n\r\n  - name: schema_type\r\n    path: schema_type\r\n    type: string\r\n    required: true\r\n\r\n  - name: metadata\r\n    path: metadata\r\n    type: object\r\n    required: true\r\n\r\n  - name: spec\r\n    path: spec\r\n    type: object\r\n    required: true\r\n\r\n  - name: fields\r\n    path: fields\r\n    type: array\r\n    required: true\r\n\r\nobject:\r\n  version: \"\"\r\n  kind: \"\"\r\n  schema_type: \"\"\r\n  metadata: {}\r\n  spec: {}\r\n  fields: []\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "meta-registry-pane-d-rh-pane-pane-entry-yaml",
+  "udi": "prismata.meta-registry-pane-d.wrapped-object.rh-pane-pane-entry-723ebe7efa",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "rh-pane.pane.entry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/registry/pane.d/rh-pane.pane.entry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/registry/pane.d/rh-pane.pane.entry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "59518870ced3808bde1665215cb3811316327bd810fef63dd07522ffff4ccfed"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: rh-pane.pane.entry.yaml\r\n## Type: pane registry entry\r\n## Purpose: Right-hand pane in a side-by-side multi-pane layout.\r\n\r\nid: rh-pane\r\nudi: prismata.meta.pane.rh-pane\r\n\r\nname: rh-pane.pane\r\nlabel: \"RH Pane\"\r\nkind: pane\r\ndescription: \"Secondary right-hand pane that fills the right side of a multi-pane terminal layout.\"\r\nschema_version: 0.4.2\r\n\r\nborder_pattern: single-line\r\ncolour_scheme: default\r\ncontent_role: secondary-surface\r\ncolour_role: secondary-surface\r\nborder_role: accent-surface\r\nx: 51\r\ny: 5\r\nwidth: 44\r\nheight: 64\r\nlayout:\r\n  mode: single\r\n\r\nmeta:\r\n  created_by: copilot\r\n  created_at: 2026-10-02\r\n  schema_version: 0.4.2\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

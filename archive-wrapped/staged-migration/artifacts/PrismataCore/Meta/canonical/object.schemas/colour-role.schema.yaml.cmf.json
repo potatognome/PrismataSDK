@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-object-schemas-colour-role-schema-yaml",
+  "udi": "prismata.meta-canonical-object-schemas.wrapped-schema.colour-role-schema-9fa98b7b92",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "colour-role.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/object.schemas/colour-role.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/object.schemas/colour-role.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "8f0fffa109a10034d816775bbc4707919436d56c6ac215374e6a5259f9d5d784"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.2\r\nkind: colour-role\r\nschema_type: object\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.colour-role\r\n  name: colour-role.schema\r\n  description: Canonical schema defining semantic colour roles.\r\n\r\nspec:\r\n  target_kind: colour-role\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n  imports:\r\n    - prismata.meta.schema.shared-udi-fields\r\n\r\nfields:\r\n  - name: id\r\n    path: id\r\n    type: string\r\n    required: true\r\n\r\n  - name: udi\r\n    path: udi\r\n    type: string\r\n    required: true\r\n\r\n  - name: layers\r\n    path: layers\r\n    type: object\r\n    required: true\r\n\r\nobject:\r\n  id: \"\"\r\n  udi: \"\"\r\n  layers:\r\n    bg: \"\"\r\n    fg: \"\"\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

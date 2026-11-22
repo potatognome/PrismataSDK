@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-composition-schemas-ui-framework-layout-schema-yaml",
+  "udi": "prismata.meta-canonical-composition-schemas.wrapped-schema.ui-framework-layout-schema-f4f26e3db4",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "ui-framework-layout.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/composition.schemas/ui-framework-layout.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/composition.schemas/ui-framework-layout.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "2abc4765ad419fad4e3c874e71b754f376c5ea9422d6f9c2fb99678bbf63a10f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: ui-framework-layout\r\nschema_type: composition\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.ui-framework-layout\r\n  name: ui-framework-layout.schema\r\n  description: Composition schema defining top-level pane arrangement rules for UI frameworks.\r\n\r\nspec:\r\n  target_kind: ui-framework-layout\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: panes\r\n    path: panes\r\n    type: array\r\n    required: true\r\n\r\n  - name: ordering\r\n    path: ordering\r\n    type: array\r\n    required: false\r\n\r\n  - name: constraints\r\n    path: constraints\r\n    type: object\r\n    required: false\r\n\r\nobject:\r\n  panes: []\r\n  ordering: []\r\n  constraints: {}\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

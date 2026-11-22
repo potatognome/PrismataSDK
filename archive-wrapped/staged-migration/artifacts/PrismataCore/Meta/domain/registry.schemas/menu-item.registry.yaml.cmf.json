@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-registry-schemas-menu-item-registry-yaml",
+  "udi": "prismata.meta-domain-registry-schemas.wrapped-object.menu-item-registry-7087f5b6d8",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "menu-item.registry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/domain/registry.schemas/menu-item.registry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/registry.schemas/menu-item.registry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "aeef0eccb2b5a3c8c24066035c0985bc0f3ecbd41ed2b11113bed09b976a55de"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: registry\r\nschema_type: registry\r\n\r\nmetadata:\r\n  udi: prismata.meta.registry.menu-item\r\n  name: menu-item.registry\r\n  description: Registry of canonical menu items.\r\n\r\nspec:\r\n  target_kind: menu-item\r\n  naming:\r\n    file_suffix: .registry.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: menu-items\r\n    path: menu-items\r\n    type: array\r\n    required: true\r\n\r\nobject:\r\n  menu-items: []\r\n\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

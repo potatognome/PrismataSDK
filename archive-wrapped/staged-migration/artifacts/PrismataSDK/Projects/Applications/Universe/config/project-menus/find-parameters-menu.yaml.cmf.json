@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-project-menus-find-parameters-menu-yaml",
+  "udi": "prismata.projects-applications-universe-config-project-menus.wrapped-object.find-parameters-menu-818015f1ed",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "find-parameters-menu.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/Universe/config/project-menus/find-parameters-menu.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/project-menus/find-parameters-menu.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "7d361d6ce2f33a98fe3fcf914eaeb07c211a1c92b24cbc5d5454320dae974d12"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "metadata:\r\n  udi: prismata.universe.menu.find.parameters\r\n  name: \"Find Parameters Menu\"\r\n  version: \"0.1.0\"\r\n  kind: menu\r\n  description: \"Submenu for configuring multi-modal search filters.\"\r\n\r\nudi: \"prismata.universe.menu.find.parameters\"\r\nkind: menu\r\ntype: \"menu\"\r\ntitle: \"Set Search Parameters\"\r\nheader:\r\n  type: \"search_params\"\r\n\r\nitems:\r\n\r\n  - key: \"1\"\r\n    udi: \"prismata.universe.menu.find.locations.select-project-scope\"\r\n    label: \"Add/Remove Search Path(s)\"\r\n    description: \"Add or remove project search paths (supports multiple entries).\"\r\n    capability: \"prismata.universe.capability.fs-search-location\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"2\"\r\n    udi: \"prismata.universe.menu.find.parameters.file-type\"\r\n    label: \"Add/Remove File Type(s)\"\r\n    description: \"Filter search results by artifact type.\"\r\n    capability: \"prismata.universe.capability.fs-search\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"3\"\r\n    udi: \"prismata.universe.menu.find.parameters.text-query\"\r\n    label: \"Add/Remove Text Queries\"\r\n    description: \"Search by keyword, title, or semantic fragment.\"\r\n    capability: \"prismata.universe.capability.fs-search\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"4\"\r\n    udi: \"prismata.universe.menu.find.parameters.tags\"\r\n    label: \"Add/Remove Tags\"\r\n    description: \"Restrict search using canonical tags or semantic labels.\"\r\n    capability: \"prismata.universe.capability.fs-search\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"5\"\r\n    udi: \"prismata.universe.menu.find.parameters.canonical-only\"\r\n    label: \"Search Canonical Folders Only (Y/N)\"\r\n    description: \"Limit matches to canonical registry entries.\"\r\n    capability: \"prismata.universe.capability.fs-search\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"6\"\r\n    udi: \"prismata.universe.menu.find.parameters.recursive\"\r\n    label: \"Search Folders Recursively (Y/N)\"\r\n    description: \"Toggle recursive folder search.\"\r\n    capability: \"prismata.universe.capability.fs-search\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

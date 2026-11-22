@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-udi-pytest-cache-gitignore",
+  "udi": "prismata.projects-tooling-udi-pytest-cache.wrapped-artifact.gitignore-816319f1d1",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": ".gitignore",
+    "source_file_type": "",
+    "wrapped_subtype": "artifact",
+    "relative_path": "Projects/Tooling/udi/.pytest_cache/.gitignore",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/udi/.pytest_cache/.gitignore",
+    "encoding": "utf-8",
+    "content_sha256": "3ed731b65d06150c138e2dadb0be0697550888a6b47eb8c45ecc9adba8b8e9bd"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Created by pytest automatically.\n*\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

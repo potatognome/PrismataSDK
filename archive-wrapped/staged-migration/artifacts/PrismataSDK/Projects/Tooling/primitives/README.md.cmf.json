@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-primitives-readme-md",
+  "udi": "prismata.projects-tooling-primitives.wrapped-document.readme-ca7376b375",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "README.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Projects/Tooling/primitives/README.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/primitives/README.md",
+    "encoding": "utf-8",
+    "content_sha256": "2cca9ce52843de1f9add079deae54c0fedfa6d0e7a459b480767fa404c581f35"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Tooling Primitives\r\n\r\nThis directory is the canonical primitives root for Prismata tooling.\r\n\r\n## Layout\r\n\r\n- `powershell/` - active PowerShell primitives used by Scraper, Sample, and other tooling entrypoints.\r\n- `python/` - active Python support modules for ASTalyzer and related wrappers.\r\n- `typescript/` - active Typescript support modules and primitives for Universe and related wrappers.\r\n\r\n## Rules\r\n\r\n- New reusable PowerShell primitives and support code belong in `powershell/`.\r\n- New reusable Python primitives and support code belongs in `python/`.\r\n- New reusable Typscript primitives and support code belongs in `typescript/`.\r\n- Avoid adding new active scripts at the root unless they are temporary shims.\r\n\r\n## Current Consumers\r\n\r\n- Scraper uses `powershell/config-helpers.ps1`, `powershell/folder-tree.ps1`, and related helpers.\r\n- ConfigMerge uses `powershell/config-helpers.ps1`.\r\n- ASTalyzer wrapper resolves `python/` directly.\r\n\r\n## Migration Notes\r\n\r\n- Keep path changes deterministic and update tests when moving an active primitive.\r\n- Preserve compatibility wrappers until all direct callers are migrated\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

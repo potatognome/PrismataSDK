@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-project-menus-settings-ignore-menu-yaml",
+  "udi": "prismata.projects-applications-universe-config-project-menus.wrapped-object.settings-ignore-menu-aead885f71",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "settings-ignore-menu.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/Universe/config/project-menus/settings-ignore-menu.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/project-menus/settings-ignore-menu.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "0d854def41d0745d427e4dc6e604f1dfbc9dba951cdb4aed21f2eda196969aef"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: settings-ignore-menu.yaml\r\n## Type: project menu\r\n## Purpose: Menu for managing ignored file extensions and related\r\n## ignore-list features used by ingestion and tooling.\r\n\r\nmetadata:\r\n  udi: prismata.universe.menu.settings-ignore\r\n  name: \"Settings > Ignore Menu\"\r\n  version: \"0.1.0\"\r\n  kind: menu\r\n  description: \"Submenu for managing ignored file extensions.\"\r\n\r\nmenu-items:\r\n  - menu-key: \"1\"\r\n    udi: \"prismata.universe.menu.settings.ignore.add\"\r\n    label: \"Add Ignore Extension\"\r\n    description: \"Add a file extension (e.g. .mid, .wav) to the ignore list. Stored in settings.ignore_extensions.\"\r\n    capability: \"prismata.universe.capability.app-settings-ignore\"\r\n    args:\r\n      action: \"add\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - menu-key: \"2\"\r\n    udi: \"prismata.universe.menu.settings.ignore.remove\"\r\n    label: \"Remove Ignore Extension\"\r\n    description: \"Remove an extension from the ignore list.\"\r\n    capability: \"prismata.universe.capability.app-settings-ignore\"\r\n    args:\r\n      action: \"remove\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - menu-key: \"3\"\r\n    udi: \"prismata.universe.menu.settings.ignore.list\"\r\n    label: \"List Ignore Extensions\"\r\n    description: \"Show currently configured ignored file extensions.\"\r\n    capability: \"prismata.universe.capability.app-settings-ignore\"\r\n    args:\r\n      action: \"list\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

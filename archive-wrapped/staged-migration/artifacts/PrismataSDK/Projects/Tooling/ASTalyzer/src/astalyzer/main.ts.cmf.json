@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-astalyzer-src-astalyzer-main-ts",
+  "udi": "prismata.projects-tooling-astalyzer-src-astalyzer.wrapped-codeblock.main-3fe503995e",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "main.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/ASTalyzer/src/astalyzer/main.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/ASTalyzer/src/astalyzer/main.ts",
+    "encoding": "utf-8",
+    "content_sha256": "c92c42ec90524b5c9e3ab2fc344d5dc1a56224450e8a126eaf595f1e7ff2e3ba"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import { parsePrompt } from \"./parser\";\r\nimport { scanAPIsRecursive } from \"./api-scanner\";\r\n\r\nfunction main() {\r\n  const target = process.argv[2] || \".\";\r\n  const apiScan = scanAPIsRecursive(target);\r\n  // Emit JSON only so wrappers can parse summaries deterministically.\r\n  console.log(JSON.stringify(apiScan, null, 2));\r\n}\r\n\r\nmain();\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

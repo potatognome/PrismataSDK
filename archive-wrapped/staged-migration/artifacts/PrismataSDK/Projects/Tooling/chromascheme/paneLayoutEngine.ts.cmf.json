@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-chromascheme-panelayoutengine-ts",
+  "udi": "prismata.projects-tooling-chromascheme.wrapped-codeblock.panelayoutengine-d640bde85f",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "paneLayoutEngine.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/chromascheme/paneLayoutEngine.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/chromascheme/paneLayoutEngine.ts",
+    "encoding": "utf-8",
+    "content_sha256": "c245b1adf33afa16589c68290115783141ab29e07ac2ff26cba3555981a9eccd"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import {\r\n  IFractalQuadrantMapper,\r\n  IPaneLayoutEngine,\r\n  PaneModel,\r\n  PaneRect,\r\n  RenderedPane,\r\n  IColourRefResolver,\r\n} from \"./interfaces\";\r\n\r\n/**\r\n * Computes pixel/character-space layout for a set of pane models.\r\n * Uses a FractalQuadrantMapper to derive normalised rects, then scales\r\n * them to the provided totalWidth \u00d7 totalHeight canvas.\r\n * Does not mutate the input pane models.\r\n */\r\nexport class PaneLayoutEngine implements IPaneLayoutEngine {\r\n  private readonly _mapper: IFractalQuadrantMapper;\r\n  private readonly _resolver: IColourRefResolver;\r\n\r\n  constructor(mapper: IFractalQuadrantMapper, resolver: IColourRefResolver) {\r\n    this._mapper = mapper;\r\n    this._resolver = resolver;\r\n  }\r\n\r\n  computeLayout(panes: PaneModel[], totalWidth: number, totalHeight: number): RenderedPane[] {\r\n    return panes.map(pane => {\r\n      const normalised: PaneRect = this._mapper.map(pane.fractalPosition);\r\n\r\n      const rect: PaneRect = {\r\n        x:      Math.round(normalised.x * totalWidth),\r\n        y:      Math.round(normalised.y * totalHeight),\r\n        width:  Math.round(normalised.width  * totalWidth),\r\n        height: Math.round(normalised.height * totalHeight),\r\n      };\r\n\r\n      const bgColour   = pane.layers.bg     ? this._resolver.resolve(pane.layers.bg.colourRef)     : null;\r\n      const borderColour = pane.layers.border ? this._resolver.resolve(pane.layers.border.colourRef) : null;\r\n\r\n      return {\r\n        role: pane.role,\r\n        rect,\r\n        bgColour:     bgColour     ? bgColour.rgb     : null,\r\n        borderColour: borderColour ? borderColour.rgb : null,\r\n      };\r\n    });\r\n  }\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

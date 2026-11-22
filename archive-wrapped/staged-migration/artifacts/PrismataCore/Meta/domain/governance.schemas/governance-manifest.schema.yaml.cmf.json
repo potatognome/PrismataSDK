@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-governance-schemas-governance-manifest-schema-yaml",
+  "udi": "prismata.meta-domain-governance-schemas.wrapped-manifest.governance-manifest-schema-0e40e310c7",
+  "kind": "wrapped-manifest",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "governance-manifest.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "manifest",
+    "relative_path": "Meta/domain/governance.schemas/governance-manifest.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/governance.schemas/governance-manifest.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "bad8492bfea38134712612e3f681aa6e7dc26b2f06130c410529ff8c486cf7fb"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: governance-manifest\r\nschema_type: governance\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.governance-manifest\r\n  name: governance-manifest.schema\r\n  description: Canonical schema for governance manifests.\r\n\r\nspec:\r\n  target_kind: governance-manifest\r\n  naming:\r\n    file_suffix: .manifest.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: udi\r\n    path: udi\r\n    type: string\r\n    required: true\r\n\r\n  - name: id\r\n    path: id\r\n    type: string\r\n    required: true\r\n\r\n  - name: name\r\n    path: name\r\n    type: string\r\n    required: true\r\n\r\n  - name: version\r\n    path: version\r\n    type: string\r\n    required: true\r\n\r\n  - name: description\r\n    path: description\r\n    type: string\r\n    required: false\r\n\r\n  - name: roles\r\n    path: roles\r\n    type: array\r\n    required: false\r\n    item:\r\n      type: object\r\n\r\n  - name: permissions\r\n    path: permissions\r\n    type: array\r\n    required: false\r\n    item:\r\n      type: object\r\n\r\n  - name: policies\r\n    path: policies\r\n    type: array\r\n    required: false\r\n    item:\r\n      type: object\r\n\r\nobject:\r\n  udi: \"\"\r\n  id: \"\"\r\n  name: \"\"\r\n  version: \"\"\r\n  description: \"\"\r\n  roles: []\r\n  permissions: []\r\n  policies: []\r\n\r\n",
+    "classification": {
+      "subtype": "manifest",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

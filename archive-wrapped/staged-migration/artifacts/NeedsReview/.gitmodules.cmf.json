@@ -1,0 +1,36 @@
+{
+  "id": "gitmodules",
+  "udi": "prismata.root.wrapped-artifact.gitmodules-7445606fbf",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": ".gitmodules",
+    "source_file_type": "",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".gitmodules",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".gitmodules",
+    "encoding": "utf-8",
+    "content_sha256": "62211f0cf025c3119c73f00c97fc2efe6da9cba68c2fc6833c3edcf62b892a96"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "[submodule \"Projects/Core/Chromaverse\"]\r\n\tpath = Projects/Core/Chromaverse\r\n\turl = https://github.com/potatognome/Chromaverse.git\r\n[submodule \"Projects/Core/Prism\"]\r\n\tpath = Projects/Core/Prism\r\n\turl = https://github.com/potatognome/Prism.git\r\n[submodule \"Projects/Core/tUilKit\"]\r\n\tpath = Projects/Core/tUilKit\r\n\turl = https://github.com/potatognome/tUilKit.git\r\n[submodule \"Projects/Infrastructure/H3l3n\"]\r\n\tpath = Projects/Infrastructure/H3l3n\r\n\turl = https://github.com/potatognome/H3l3n.git\r\n[submodule \"Projects/Infrastructure/LogStation\"]\r\n\tpath = Projects/Infrastructure/LogStation\r\n\turl = https://github.com/potatognome/LogStation.git\r\n[submodule \"Projects/Infrastructure/Syncbot\"]\r\n\tpath = Projects/Infrastructure/Syncbot\r\n\turl = https://github.com/potatognome/Syncbot.git\r\n[submodule \"Projects/Infrastructure/V4l1d8r\"]\r\n\tpath = Projects/Infrastructure/V4l1d8r\r\n\turl = https://github.com/potatognome/V4l1d8r.git\r\n[submodule \"Projects/Tenant/HomeOffice\"]\r\n\tpath = Projects/Tenant/HomeOffice\r\n\turl = https://github.com/potatognome/HomeOffice.git\r\n[submodule \"Projects/Tenant/M3m01r5\"]\r\n\tpath = Projects/Tenant/M3m01r5\r\n\turl = https://github.com/potatognome/M3m01r5.git\r\n[submodule \"Projects/Tenant/PrismCommander\"]\r\n\tpath = Projects/Tenant/PrismCommander\r\n\turl = https://github.com/potatognome/PrismCommander.git\r\n[submodule \"Projects/Tenant/ThoughtFire\"]\r\n\tpath = Projects/Tenant/ThoughtFire\r\n\turl = https://github.com/potatognome/Thoughtfire.git\r\n[submodule \"Projects/Tenant/crUPto\"]\r\n\tpath = Projects/Tenant/crUPto\r\n\turl = https://github.com/potatognome/crUPto.git\r\n[submodule \"Projects/Infrastructure/PrismCommand\"]\n\tpath = Projects/Infrastructure/PrismCommand\n\turl = https://github.com/PotatoGnome/PrismCommand\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-canonical-copilot-instructions-d-project-classification-md",
+  "udi": "prismata.meta-deprecated-canonical-copilot-instructions-d.wrapped-agent-instruction.project-classification-49d2fb5d78",
+  "kind": "wrapped-agent-instruction",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "project_classification.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "agent-instruction",
+    "relative_path": "Meta/deprecated/canonical/copilot-instructions.d/project_classification.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/canonical/copilot-instructions.d/project_classification.md",
+    "encoding": "utf-8",
+    "content_sha256": "8de400bee55788e7e6fe88282534015564e179933c97f06ab25ae33db8a6039a"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "PROJECT_CLASSIFICATION.md\r\n(Place in copilot-instructions.d/)\r\n\r\nPurpose\r\nThis extension defines how every project in the PrismCorp ecosystem must classify itself inside the INFO section of its primary config.\r\nClassification ensures consistent introspection, validation, orchestration, and tooling behavior across all repositories.\r\n\r\n1. Project Type\r\nEvery project must declare a top\u2011level project_type.\r\nThis identifies the project\u2019s category within the ecosystem.\r\n\r\nValid values:\r\n\r\ncore \u2014 foundational standards, schemas, taxonomies\r\n\r\ninfrastructure \u2014 tools that enforce, orchestrate, scaffold, introspect\r\n\r\ntenant \u2014 departments, applications, agents, data repositories\r\n\r\nproject_type determines dependency direction and high\u2011level behavior.\r\n\r\n2. Role\r\nEvery project must declare a role, even if descriptive.\r\nRoles describe what the project does within its type.\r\n\r\nCore roles\r\nfoundation\r\n\r\nschema\r\n\r\ntaxonomy\r\n\r\nInfrastructure roles (operational)\r\nvalidation\r\n\r\nscaffolding\r\n\r\nintrospection\r\n\r\norchestration\r\n\r\nui\r\n\r\nlogging\r\n\r\nsync\r\n\r\nTenant roles\r\ndepartment\r\n\r\napplication\r\n\r\ndata\r\n\r\nagent\r\n\r\nNote:  \r\nOnly infrastructure roles affect system behavior.\r\nCore and tenant roles are descriptive for consistency and schema uniformity.\r\n\r\n3. Interface Capabilities\r\nProjects must declare how they can be interacted with using a boolean capability matrix under project_interfaces.\r\n\r\nValid interface keys:\r\n\r\ncli\r\n\r\ncli_args\r\n\r\ncli_menu\r\n\r\ncli_menu_args\r\n\r\ncli_invisible\r\n\r\nconfig_driven_cli\r\n\r\ncompositor\r\n\r\ntui\r\n\r\napi\r\n\r\nservice\r\n\r\nlogging_only\r\n\r\nThis matrix supports:\r\n\r\nstandard CLI\r\n\r\nconfig\u2011driven CLI\r\n\r\nmenu systems\r\n\r\ninvisible menu backends\r\n\r\ncompositor UIs\r\n\r\nTUIs\r\n\r\nagent/robot APIs\r\n\r\nbackground services\r\n\r\ndata\u2011only/logging\u2011only repos\r\n\r\n4. Example INFO Block\r\nyaml\r\nINFO:\r\n  project_type: \"infrastructure\"\r\n  role: \"validation\"\r\n  project_interfaces:\r\n    cli: true\r\n    cli_args: true\r\n    cli_menu: true\r\n    cli_menu_args: true\r\n    cli_invisible: true\r\n    config_driven_cli: true\r\n    compositor: false\r\n    tui: false\r\n    api: true\r\n    service: false\r\n    logging_only: false\r\n5. Enforcement\r\nOrgArchitect uses project_type and role to classify projects and emit flowspec/jobspec.\r\n\r\nV4l1d8r validates that the declared type, role, and interfaces match expected behavior.\r\n\r\nPrismCommand uses infrastructure roles to load and orchestrate system components.\r\n\r\nAll projects must include all three fields for schema uniformity.\r\n",
+    "classification": {
+      "subtype": "agent-instruction",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

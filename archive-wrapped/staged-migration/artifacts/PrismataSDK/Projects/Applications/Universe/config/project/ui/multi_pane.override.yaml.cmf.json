@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-project-ui-multi-pane-override-yaml",
+  "udi": "prismata.projects-applications-universe-config-project-ui.wrapped-object.multi-pane-override-df4d9aea8b",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "multi_pane.override.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/Universe/config/project/ui/multi_pane.override.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/project/ui/multi_pane.override.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "3e3f10dbc44643ba6662917e9a55792217341b261c6d6942db86f66a16aba6e5"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "user_interfaces:\r\n  ui_framework: multi_pane\r\n\r\n  panes:\r\n    - id: results_list\r\n      role: list\r\n      coordinates:\r\n        x: 0\r\n        y: 0\r\n        width: 45\r\n        height: 100\r\n\r\n    - id: preview\r\n      role: preview\r\n      coordinates:\r\n        x: 45\r\n        y: 0\r\n        width: 35\r\n        height: 100\r\n\r\n    - id: version_carousel\r\n      role: list\r\n      coordinates:\r\n        x: 80\r\n        y: 0\r\n        width: 20\r\n        height: 60\r\n\r\n    - id: diff_panel\r\n      role: diff_right\r\n      coordinates:\r\n        x: 80\r\n        y: 60\r\n        width: 20\r\n        height: 40\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

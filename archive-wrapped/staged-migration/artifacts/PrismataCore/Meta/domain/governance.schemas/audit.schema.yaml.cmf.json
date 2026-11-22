@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-governance-schemas-audit-schema-yaml",
+  "udi": "prismata.meta-domain-governance-schemas.wrapped-schema.audit-schema-af91c6cc1f",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "audit.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/domain/governance.schemas/audit.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/governance.schemas/audit.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "c357e7fb9be3eded8c22a5c3ad97c07fcd7a8926b9d018f4fcccbe8a1686253e"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: audit\r\nschema_type: governance\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.audit\r\n  name: audit.schema\r\n  description: Canonical schema defining audit records.\r\n\r\nspec:\r\n  target_kind: audit\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: udi\r\n    path: udi\r\n    type: string\r\n    required: true\r\n\r\n  - name: id\r\n    path: id\r\n    type: string\r\n    required: true\r\n\r\n  - name: actor\r\n    path: actor\r\n    type: string\r\n    required: true\r\n\r\n  - name: action\r\n    path: action\r\n    type: string\r\n    required: true\r\n\r\n  - name: resource\r\n    path: resource\r\n    type: string\r\n    required: false\r\n\r\n  - name: timestamp\r\n    path: timestamp\r\n    type: string\r\n    required: true\r\n\r\n  - name: metadata\r\n    path: metadata\r\n    type: object\r\n    required: false\r\n\r\nobject:\r\n  udi: \"\"\r\n  id: \"\"\r\n  actor: \"\"\r\n  action: \"\"\r\n  resource: \"\"\r\n  timestamp: \"\"\r\n  metadata: {}\r\n \r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

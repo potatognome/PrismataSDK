@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-examples-schemas-example-pane-schema-yaml",
+  "udi": "prismata.meta-domain-examples-schemas.wrapped-schema.example-pane-schema-8f08cfa10e",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "example-pane.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/domain/examples.schemas/example-pane.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/examples.schemas/example-pane.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "952327bf759798b01332d9d99106be23a279ab006c02bd8121d22ff6fac29e06"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: example-pane\r\nschema_type: examples\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.example-pane\r\n  name: example-pane.schema\r\n  description: Minimal example pane object for documentation and testing.\r\n\r\nspec:\r\n  target_kind: example-pane\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: title\r\n    path: title\r\n    type: string\r\n    required: true\r\n\r\n  - name: content\r\n    path: content\r\n    type: string\r\n    required: false\r\n\r\nobject:\r\n  title: \"Example Pane\"\r\n  content: \"This is an example pane.\"\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

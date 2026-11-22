@@ -1,0 +1,36 @@
+{
+  "id": "tests-test-validator-suite-repo-gate-py",
+  "udi": "prismata.tests.wrapped-codeblock.test-validator-suite-repo-gate-a19a3c71a2",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_validator_suite_repo_gate.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "tests/test_validator_suite_repo_gate.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "tests/test_validator_suite_repo_gate.py",
+    "encoding": "utf-8",
+    "content_sha256": "d2dee42d8b37d3241ff4c91c61427134d3180f5bebe9e997f7bcbd5704ae3c49"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import sys\r\nfrom pathlib import Path\r\n\r\nROOT = Path(__file__).resolve().parents[1]\r\nif str(ROOT) not in sys.path:\r\n    sys.path.insert(0, str(ROOT))\r\n\r\nfrom Projects.Tooling.validators.validator_suite.runner import run_repo_validation\r\n\r\n\r\ndef test_repo_validation_gate_reports_clean_repo_state():\r\n    root = Path(__file__).resolve().parents[1]\r\n\r\n    result = run_repo_validation(root)\r\n\r\n    assert isinstance(result, dict)\r\n    assert result[\"summary\"][\"failed_checks\"] == 0\r\n    assert result[\"summary\"][\"checks_run\"] >= 5\r\n    assert result[\"manifest_required\"][\"issues\"] == []\r\n    assert result[\"udi_shape\"][\"issues\"] == []\r\n    assert result[\"registry_schema\"][\"issues\"] == []\r\n    assert result[\"registry_schema_dependencies\"][\"issues\"] == []\r\n    assert result[\"render_smoke\"][\"issues\"] == []\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

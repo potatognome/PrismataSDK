@@ -1,0 +1,36 @@
+{
+  "id": "logfilelist-txt",
+  "udi": "prismata.root.wrapped-document.logfilelist-0314abb99e",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "logFileList.txt",
+    "source_file_type": "txt",
+    "wrapped_subtype": "document",
+    "relative_path": "logFileList.txt",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "logFileList.txt",
+    "encoding": "utf-8",
+    "content_sha256": "37a876cbbd2d46625b0a33d30e22b8fc050c23bfc6ab602903681470b6d2b9f7"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": " Volume in drive C is Windows\r\n Volume Serial Number is 6633-5038\r\n\r\n Directory of C:\\Repository\\Daniel\\dev_local\\Prismata\\.workspace\\.logs\\tUilKit\r\n\r\n2026-08-30  01:08 PM               480 tUilKit_ERROR.log\r\n2026-08-30  01:20 PM            39,792 tUilKit_MASTER.log\r\n2026-08-30  01:20 PM            37,769 tUilKit_SESSION.log\r\n               3 File(s)         78,041 bytes\r\n\r\n Directory of C:\\Repository\\Daniel\\dev_local\\Prismata\\.workspace\\tests\\.tests_logs\r\n\r\n2026-08-30  01:20 PM            31,281 SESSION.log\r\n2026-08-30  01:08 PM             2,968 test_log_test_apply_border.log\r\n2026-08-30  01:20 PM             1,259 test_log_test_browse_directory.log\r\n2026-08-30  01:08 PM             1,560 test_log_test_colour_fstr.log\r\n2026-08-30  01:08 PM             1,246 test_log_test_colour_log.log\r\n2026-08-30  01:08 PM             2,207 test_log_test_colour_path.log\r\n2026-08-30  01:20 PM             1,340 test_log_test_confirm.log\r\n2026-08-30  01:20 PM             1,243 test_log_test_edit_key_value_pairs.log\r\n2026-08-30  01:20 PM             1,098 test_log_test_get_numeric_choice.log\r\n2026-08-30  01:08 PM             1,678 test_log_test_interpret_codes.log\r\n2026-08-30  01:08 PM             1,733 test_log_test_log_exception.log\r\n2026-08-30  01:08 PM             6,030 test_log_test_print_rainbow_row.log\r\n2026-08-30  01:20 PM             2,251 test_log_test_prompt_with_default.log\r\n2026-08-30  01:20 PM               928 test_log_test_show_info_screen.log\r\n2026-08-30  01:20 PM             1,020 test_log_test_show_menu_with_preview.log\r\n2026-08-30  01:20 PM             1,607 test_log_test_show_numbered_menu.log\r\n2026-08-30  01:08 PM               976 test_log_test_strip_ansi.log\r\n              17 File(s)         60,425 bytes\r\n\r\n Directory of C:\\Repository\\Daniel\\dev_local\\Prismata\\.workspace\\tUilKit\\tests\\.logs\r\n\r\n2026-08-30  01:02 PM            19,467 SESSION.log\r\n2026-08-30  01:02 PM             2,968 test_log_test_apply_border.log\r\n2026-08-30  01:02 PM             1,560 test_log_test_colour_fstr.log\r\n2026-08-30  01:02 PM             1,246 test_log_test_colour_log.log\r\n2026-08-30  01:02 PM             2,207 test_log_test_colour_path.log\r\n2026-08-30  01:02 PM             1,678 test_log_test_interpret_codes.log\r\n2026-08-30  01:02 PM             1,733 test_log_test_log_exception.log\r\n2026-08-30  01:02 PM             6,030 test_log_test_print_rainbow_row.log\r\n2026-08-30  01:02 PM               976 test_log_test_strip_ansi.log\r\n               9 File(s)         37,865 bytes\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

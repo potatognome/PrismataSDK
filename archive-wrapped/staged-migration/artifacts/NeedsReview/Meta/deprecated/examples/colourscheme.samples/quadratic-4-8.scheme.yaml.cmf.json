@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-examples-colourscheme-samples-quadratic-4-8-scheme-yaml",
+  "udi": "prismata.meta-deprecated-examples-colourscheme-samples.wrapped-object.quadratic-4-8-scheme-896ff1828a",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "quadratic-4-8.scheme.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/examples/colourscheme.samples/quadratic-4-8.scheme.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/examples/colourscheme.samples/quadratic-4-8.scheme.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "7faf60c54767b9f3e68e02c2fe4200a8449335e825be54e3b0b05290cb35bef1"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeffcolourSet:\r\n  - id: \"c0\"\r\n    origin: \"base\"\r\n    rgb: { r: 255, g: 120, b: 200 }\r\n\r\n  - id: \"c1\"\r\n    origin: \"base\"\r\n    rgb: { r: 120, g: 200, b: 255 }\r\n\r\n  - id: \"c2\"\r\n    origin: \"base\"\r\n    rgb: { r: 200, g: 255, b: 120 }\r\n\r\n  - id: \"c3\"\r\n    origin: \"base\"\r\n    rgb: { r: 255, g: 200, b: 120 }\r\n\r\n  - id: \"c4\"\r\n    origin: \"derived\"\r\n    rgb: { r: 230, g: 150, b: 255 }\r\n\r\nroles:\r\n  primary_surface:\r\n    layers:\r\n      bg: { colourRef: \"c0\" }\r\n\r\n  secondary_surface:\r\n    layers:\r\n      bg: { colourRef: \"c1\" }\r\n\r\n  tertiary_surface:\r\n    layers:\r\n      bg: { colourRef: \"c2\" }\r\n\r\n  accent_surface:\r\n    layers:\r\n      bg: { colourRef: \"c3\" }\r\n\r\n  border_fg:\r\n    layers:\r\n      fg: { colourRef: \"c4\" }\r\n\r\ngeometry:\r\n  baseGeometry: \"quadratic\"\r\n  overlays:\r\n    - type: \"harmonic\"\r\n      params: { rotation: 45 }\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

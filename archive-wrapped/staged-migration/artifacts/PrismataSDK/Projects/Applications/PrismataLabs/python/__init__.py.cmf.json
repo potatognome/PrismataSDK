@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-prismatalabs-python-init-py",
+  "udi": "prismata.projects-applications-prismatalabs-python.wrapped-codeblock.init-8f1f20262e",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "__init__.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/PrismataLabs/python/__init__.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/PrismataLabs/python/__init__.py",
+    "encoding": "utf-8",
+    "content_sha256": "bde68e39c3669ffee61cdb1936d831398c5064a76c5aacf9852ea6fae671f624"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff# Initialization file for the PrismataLabs Python package\r\nfrom .tuilkit_runtime import PrismataTuilKitRuntime\r\n\r\n__all__ = [\"PrismataTuilKitRuntime\"]\r\n\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

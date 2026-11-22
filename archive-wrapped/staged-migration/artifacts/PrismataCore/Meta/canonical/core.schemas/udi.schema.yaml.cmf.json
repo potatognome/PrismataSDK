@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-core-schemas-udi-schema-yaml",
+  "udi": "prismata.meta-canonical-core-schemas.wrapped-schema.udi-schema-9a3327c4d6",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "udi.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/core.schemas/udi.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/core.schemas/udi.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "ea56f813f4586cb84c5ed8d87e174dc275bd09232549baaf76eb056d9104a10e"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: udi\r\nschema_type: core\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.udi\r\n  name: udi.schema\r\n  description: Canonical schema defining UDI structure and validation rules.\r\n\r\nspec:\r\n  target_kind: udi\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: pattern\r\n    path: pattern\r\n    type: string\r\n    required: true\r\n\r\n  - name: maxSegments\r\n    path: maxSegments\r\n    type: integer\r\n    required: true\r\n\r\n  - name: slugSeparator\r\n    path: slugSeparator\r\n    type: string\r\n    required: true\r\n\r\n  - name: allowSlugSeparator\r\n    path: allowSlugSeparator\r\n    type: boolean\r\n    required: true\r\n\r\nobject:\r\n  pattern: \"^prismata\\\\.[a-z0-9-]+\\\\.[a-z0-9-]+\\\\.[a-z0-9-|]+$\"\r\n  maxSegments: 4\r\n  slugSeparator: \"|\"\r\n  allowSlugSeparator: true\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

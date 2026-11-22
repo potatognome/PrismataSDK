@@ -1,0 +1,28 @@
+{
+  "wrapped_root": "archive-wrapped/Prismata",
+  "review_root": "archive-wrapped/review-corpus",
+  "output_root": "archive-wrapped/staged-migration",
+  "inventory_count": 791,
+  "copied_count": 505,
+  "indexed_only_count": 286,
+  "missing_source_count": 0,
+  "lane_counts": {
+    "ArchiveOnly": 286,
+    "NeedsReview": 91,
+    "PrismataCore": 100,
+    "PrismataCorp": 4,
+    "PrismataSDK": 310
+  },
+  "disposition_counts": {
+    "deprecate": 65,
+    "preserve-historical": 68,
+    "quarantine-runtime": 218,
+    "review": 30,
+    "transform-core-candidate": 100,
+    "transform-corp-candidate": 4,
+    "transform-sdk-candidate": 306
+  },
+  "gap_count": 313,
+  "planning_instruction_count": 70,
+  "dry_run": false
+}

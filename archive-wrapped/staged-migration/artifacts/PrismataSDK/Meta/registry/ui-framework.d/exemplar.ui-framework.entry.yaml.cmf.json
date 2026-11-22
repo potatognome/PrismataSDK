@@ -1,0 +1,36 @@
+{
+  "id": "meta-registry-ui-framework-d-exemplar-ui-framework-entry-yaml",
+  "udi": "prismata.meta-registry-ui-framework-d.wrapped-object.exemplar-ui-framework-entry-2d338882ac",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "exemplar.ui-framework.entry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/registry/ui-framework.d/exemplar.ui-framework.entry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/registry/ui-framework.d/exemplar.ui-framework.entry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "50f1055e8607aa68965f4a6668ed210ff0eb5c032de9afe154056a06e3ea2e8b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: exemplar.ui-framework.entry.yaml\r\n## Type: ui-framework registry entry\r\n## Purpose: Exemplar multi-pane terminal layout with overlap and non-overlap.\r\n\r\nid: exemplar\r\nudi: prismata.meta.ui-framework.exemplar\r\nname: exemplar.ui-framework\r\nlabel: \"Prismata Exemplar UI Framework (0.4.2)\"\r\nkind: ui-framework\r\ndescription: \"Multi-pane terminal layout showing overlapping and non-overlapping panes for exemplar rendering.\"\r\nschema_version: 0.4.2\r\n\r\nmenus: []\r\npanes:\r\n  - prismata.meta.pane.exemplar-primary\r\n  - prismata.meta.pane.exemplar-secondary\r\n  - prismata.meta.pane.exemplar-tertiary\r\n  - prismata.meta.pane.exemplar-exception\r\ncolour_scheme: default\r\nactive_pane: prismata.meta.pane.exemplar-primary\r\nborder_pattern: single-line\r\n\r\nmeta:\r\n  created_by: copilot\r\n  created_at: 2026-10-01\r\n  schema_version: 0.4.2\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

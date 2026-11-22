@@ -1,0 +1,36 @@
+{
+  "id": "meta-registry-colour-scheme-d-default-colour-scheme-entry-yaml",
+  "udi": "prismata.meta-registry-colour-scheme-d.wrapped-object.default-colour-scheme-entry-e96217c3e3",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "default.colour-scheme.entry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/registry/colour-scheme.d/default.colour-scheme.entry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/registry/colour-scheme.d/default.colour-scheme.entry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "e254ecd1810a5ee773c4bd495ae3fac66228a5c64e45182f928bbd7f5b5810be"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: default.colour-scheme.entry.yaml\r\n## Type: colour-scheme registry entry (0.4.0)\r\n## Purpose: Default Prismata terminal colour-scheme registry entry.\r\n## Provides semantic-role \u00e2\u2020\u2019 ANSI RGB mappings for UI surfaces, borders,\r\n## menus, and interactive elements. Compatible with ChromaScheme 0.4.0.\r\n\r\nid: default\r\nudi: prismata.meta.colour-scheme.default\r\nslug: default\r\nname: default.colour-scheme\r\nlabel: \"Prismata Default Terminal Scheme (0.4.1)\"\r\nkind: colour-scheme\r\ndescription: Default terminal-focused colour mapping produced from a ChromaScheme 0.4.0 source.\r\nschema_version: 0.4.1\r\n\r\nroles:\r\n  default:\r\n    fg: \"ansi:rgb(220,220,220)\"\r\n    bg: \"ansi:rgb(10,10,12)\"\r\n\r\n  primary-surface:\r\n    fg: \"ansi:rgb(220,220,220)\"\r\n    bg: \"ansi:rgb(10,10,12)\"\r\n\r\n  secondary-surface:\r\n    fg: \"ansi:rgb(200,200,200)\"\r\n    bg: \"ansi:rgb(18,18,20)\"\r\n\r\n  border:\r\n    fg: \"ansi:rgb(160,160,160)\"\r\n    bg: \"ansi:rgb(10,10,12)\"\r\n\r\n  accent-surface:\r\n    fg: \"ansi:rgb(120,220,255)\"\r\n    bg: \"ansi:rgb(12,22,34)\"\r\n\r\n  alert-surface:\r\n    fg: \"ansi:rgb(255,160,120)\"\r\n    bg: \"ansi:rgb(38,12,10)\"\r\n\r\n  background:\r\n    fg: \"ansi:rgb(220,220,220)\"\r\n    bg: \"ansi:rgb(10,10,12)\"\r\n\r\n  menu_surface:\r\n    fg: \"ansi:rgb(220,220,220)\"\r\n    bg: \"ansi:rgb(10,10,12)\"\r\n\r\nmeta:\r\n  created_by: copilot\r\n  created_at: 2026-09-24\r\n  schema_version: 0.4.1\r\n\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

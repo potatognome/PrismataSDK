@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-python-python-bridge-py",
+  "udi": "prismata.projects-applications-universe-python.wrapped-codeblock.python-bridge-8a918a10f4",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "python_bridge.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/Universe/python/python_bridge.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/python/python_bridge.py",
+    "encoding": "utf-8",
+    "content_sha256": "9ab60caf7986f19b2e515ba5cd43c3fce0a52ee2462264a7bdaf813661ecfdd0"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\"\"\"Canonical Python bridge for the Universe runtime.\r\n\r\nTypeScript shells stay thin while the actual runtime logic lives in Python.\r\n\"\"\"\r\n\r\nfrom __future__ import annotations\r\n\r\nfrom .tuilkit_runtime import UniverseTuilKitRuntime\r\nfrom .menu_runtime_service import render_menu_visibility\r\n\r\n\r\n_runtime = UniverseTuilKitRuntime()\r\n\r\n\r\ndef _requested_ingested(payload: dict) -> bool:\r\n    if isinstance(payload, dict):\r\n        runtime_state = payload.get(\"runtimeState\", {})\r\n        if isinstance(runtime_state, dict):\r\n            if \"vileIngested\" in runtime_state:\r\n                return bool(runtime_state.get(\"vileIngested\"))\r\n            if \"tuilkitIngested\" in runtime_state:\r\n                return bool(runtime_state.get(\"tuilkitIngested\"))\r\n    return _runtime.detect_ingested()\r\n\r\n\r\ndef execute(command: str, payload: dict):\r\n    if command == \"tuilkit_status\":\r\n        return _runtime.status(ingested=_requested_ingested(payload or {}))\r\n\r\n    if command == \"tuilkit_capability_manifest\":\r\n        return _runtime.generate_capability_manifest()\r\n\r\n    if command == \"ingest_tuilkit_package\":\r\n        ingested = _requested_ingested(payload or {})\r\n        return {\r\n            \"command\": command,\r\n            \"payload\": payload,\r\n            \"manifest\": _runtime.generate_capability_manifest(),\r\n            \"status\": \"ingested\" if ingested else \"pending-bootstrap\",\r\n            \"runtime\": _runtime.status(ingested=ingested),\r\n        }\r\n\r\n    if command == \"render_menu_visibility\":\r\n        return render_menu_visibility(payload or {})\r\n\r\n    return {\"command\": command, \"payload\": payload}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

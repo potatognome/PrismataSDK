@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-prismatalabs-pytest-cache-v-cache-nodeids",
+  "udi": "prismata.projects-applications-prismatalabs-pytest-cache-v-cache.wrapped-artifact.nodeids-3ec6093b7e",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "nodeids",
+    "source_file_type": "",
+    "wrapped_subtype": "artifact",
+    "relative_path": "Projects/Applications/PrismataLabs/.pytest_cache/v/cache/nodeids",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/PrismataLabs/.pytest_cache/v/cache/nodeids",
+    "encoding": "utf-8",
+    "content_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "[]",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

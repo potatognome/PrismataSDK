@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-primitives-powershell-sanitize-output-ps1",
+  "udi": "prismata.projects-tooling-primitives-powershell.wrapped-codeblock.sanitize-output-ab45c25ac0",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "sanitize-output.ps1",
+    "source_file_type": "ps1",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/primitives/powershell/sanitize-output.ps1",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/primitives/powershell/sanitize-output.ps1",
+    "encoding": "utf-8",
+    "content_sha256": "945361009e26571e9088d5e4ee87a87c2a33b497ef7af0351e83c288840785e8"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "function Sanitize-DisplayString {\r\n    [CmdletBinding()]\r\n    param(\r\n        [Parameter(Mandatory=$true, ValueFromPipeline=$true)]\r\n        [string]$InputString\r\n    )\r\n\r\n    begin {\r\n        if ($null -eq $InputString) { return $null }\r\n    }\r\n    process {\r\n        $s = [string]$InputString\r\n        # Normalize to NFC\r\n        try { $s = [string][System.Text.Normalization]::Normalize($s, [System.Text.NormalizationForm]::FormC) } catch {}\r\n        # Replace Unicode ellipsis with ASCII ellipsis (use char literal to avoid embedding non-ASCII bytes)\r\n        $ellipsis = [char]0x2026\r\n        $s = $s -replace $ellipsis, '...'\r\n        return $s\r\n    }\r\n}\r\n\r\nSet-StrictMode -Version Latest\r\n\r\nreturn\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

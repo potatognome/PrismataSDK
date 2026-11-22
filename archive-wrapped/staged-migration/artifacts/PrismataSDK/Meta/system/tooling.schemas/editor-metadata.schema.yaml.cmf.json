@@ -1,0 +1,36 @@
+{
+  "id": "meta-system-tooling-schemas-editor-metadata-schema-yaml",
+  "udi": "prismata.meta-system-tooling-schemas.wrapped-schema.editor-metadata-schema-bff9b6ed25",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "editor-metadata.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/system/tooling.schemas/editor-metadata.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/system/tooling.schemas/editor-metadata.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "329a8240c36631a341b2398780dc9a4ac10e87ed464273bb3120ad5707226a3d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: editor-metadata\r\nschema_type: tooling\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.editor-metadata\r\n  name: editor-metadata.schema\r\n  description: Canonical schema defining metadata for Prismata editor tooling.\r\n\r\nspec:\r\n  target_kind: editor-metadata\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: displayName\r\n    path: displayName\r\n    type: string\r\n    required: true\r\n\r\n  - name: icon\r\n    path: icon\r\n    type: string\r\n    required: false\r\n\r\n  - name: category\r\n    path: category\r\n    type: string\r\n    required: false\r\n\r\nobject:\r\n  displayName: \"\"\r\n  icon: \"\"\r\n  category: \"\"\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

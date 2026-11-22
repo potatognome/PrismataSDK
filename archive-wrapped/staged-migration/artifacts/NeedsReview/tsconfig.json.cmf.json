@@ -1,0 +1,36 @@
+{
+  "id": "tsconfig-json",
+  "udi": "prismata.root.wrapped-object.tsconfig-61ebb9fd6e",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "tsconfig.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": "tsconfig.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "tsconfig.json",
+    "encoding": "utf-8",
+    "content_sha256": "07a8688b6cfe0500f16d8104f8f737f8002b5ba33a4fb37ba77ac72d480c1445"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\r\n  \"compilerOptions\": {\r\n    \"target\": \"ES2020\",\r\n    \"module\": \"CommonJS\",\r\n    \"strict\": true,\r\n    \"esModuleInterop\": true,\r\n    \"forceConsistentCasingInFileNames\": true,\r\n    \"skipLibCheck\": true,\r\n    \"resolveJsonModule\": true,\r\n    \"rootDir\": \"../../\"\r\n  },\r\n  \"include\": [\"src/**/*.ts\"]\r\n}\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

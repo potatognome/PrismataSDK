@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-schemas-select-single-yaml",
+  "udi": "prismata.projects-applications-universe-config-schemas.wrapped-schema.select-single-fa72a95076",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "select-single.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Applications/Universe/config/schemas/select-single.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/schemas/select-single.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "062e9c8efd25b7a0d9070c8f990b2849e18e9df6393eb96128822d911baf7e94"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: select-single.yaml\r\n## Type: schema\r\n## Purpose: Schema for single selection validation and exemplar checks\r\n## used by selection tooling.\r\n\r\nmetadata:\r\n  udi: prismata.universe.schema.select-single\r\n  name: select-single\r\n  kind: schema-definition\r\n  description: \"Schema for single selection validation and exemplar checks.\"\r\n\r\n\r\nid: \"prismata.universe.schema.select-single\"\r\nversion: \"1.0.0\"\r\ntype: object\r\nproperties:\r\n  exemplar: { type: object }\r\n  exemplar_valid: { type: boolean }\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

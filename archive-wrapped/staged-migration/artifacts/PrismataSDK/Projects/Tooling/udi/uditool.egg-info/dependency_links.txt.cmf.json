@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-udi-uditool-egg-info-dependency-links-txt",
+  "udi": "prismata.projects-tooling-udi-uditool-egg-info.wrapped-document.dependency-links-715d8766c2",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "dependency_links.txt",
+    "source_file_type": "txt",
+    "wrapped_subtype": "document",
+    "relative_path": "Projects/Tooling/udi/uditool.egg-info/dependency_links.txt",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/udi/uditool.egg-info/dependency_links.txt",
+    "encoding": "utf-8",
+    "content_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

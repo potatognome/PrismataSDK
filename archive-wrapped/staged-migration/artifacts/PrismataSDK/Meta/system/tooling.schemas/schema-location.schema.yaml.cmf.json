@@ -1,0 +1,36 @@
+{
+  "id": "meta-system-tooling-schemas-schema-location-schema-yaml",
+  "udi": "prismata.meta-system-tooling-schemas.wrapped-schema.schema-location-schema-7dadbb7a9d",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "schema-location.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/system/tooling.schemas/schema-location.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/system/tooling.schemas/schema-location.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "cc38e36505b84f81be1a7d5ecf9e06d4319ace81e1486b4077e2886109013909"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: schema-location\r\nschema_type: tooling\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.schema-location\r\n  name: schema-location.schema\r\n  description: Canonical schema defining folder locations for schema groups.\r\n\r\nspec:\r\n  target_kind: schema-location\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: group\r\n    path: group\r\n    type: string\r\n    required: true\r\n\r\n  - name: path\r\n    path: path\r\n    type: string\r\n    required: true\r\n\r\nobject:\r\n  group: \"\"\r\n  path: \"\"\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

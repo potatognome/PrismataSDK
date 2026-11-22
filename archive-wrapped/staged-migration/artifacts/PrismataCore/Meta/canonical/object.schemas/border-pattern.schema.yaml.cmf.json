@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-object-schemas-border-pattern-schema-yaml",
+  "udi": "prismata.meta-canonical-object-schemas.wrapped-schema.border-pattern-schema-fa5b09b37a",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "border-pattern.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/object.schemas/border-pattern.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/object.schemas/border-pattern.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "1454b0ce8182b66e3070d709ec5e78dabbf86172898fa839adfee5154aa060ba"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: border-pattern\r\nschema_type: object\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.border-pattern\r\n  name: border-pattern.schema\r\n  description: Canonical border pattern schema.\r\n\r\nspec:\r\n  target_kind: border-pattern\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n  imports:\r\n    - prismata.meta.schema.shared-styling\r\n\r\nfields:\r\n  - name: id\r\n    path: id\r\n    type: string\r\n    required: true\r\n\r\n  - name: glyphs\r\n    path: glyphs\r\n    type: object\r\n    required: true\r\n\r\nobject:\r\n  glyphs:\r\n    TL: \"+\"\r\n    TR: \"+\"\r\n    BL: \"+\"\r\n    BR: \"+\"\r\n    H: \"-\"\r\n    V: \"|\"\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

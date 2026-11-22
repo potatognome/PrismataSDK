@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-dependencyinspector-core-graph-visualizer-py",
+  "udi": "prismata.projects-applications-dependencyinspector-core.wrapped-codeblock.graph-visualizer-63352f592b",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "graph_visualizer.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/DependencyInspector/core/graph_visualizer.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/DependencyInspector/core/graph_visualizer.py",
+    "encoding": "utf-8",
+    "content_sha256": "88e4975ac89c3997c9aff531b870a908bacee9cd7393db8d5bc5ba55af43c7e5"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "def ascii_tree(lines):\r\n    return \"\\n\".join(lines)\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

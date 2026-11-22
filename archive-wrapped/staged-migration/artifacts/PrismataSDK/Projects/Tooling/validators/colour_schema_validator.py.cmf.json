@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-validators-colour-schema-validator-py",
+  "udi": "prismata.projects-tooling-validators.wrapped-schema.colour-schema-validator-8d4ef940da",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "colour_schema_validator.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Tooling/validators/colour_schema_validator.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/validators/colour_schema_validator.py",
+    "encoding": "utf-8",
+    "content_sha256": "6de9f5f90b81c9b71915a36789b638e6962b1e33bb0dd44c055c0845905c31f7"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "from __future__ import annotations\r\n\r\nimport os\r\nfrom typing import Any, Dict, List, Optional\r\nfrom pathlib import Path\r\n\r\nimport yaml\r\n\r\ntry:\r\n    import jsonschema\r\n    from jsonschema import Draft7Validator\r\nexcept ImportError:  # pragma: no cover - environment may lack jsonschema\r\n    jsonschema = None\r\n    Draft7Validator = None\r\n\r\n\r\n_SCHEMA_CACHE: Dict[str, Dict[str, Any]] = {}\r\n\r\n\r\ndef _colour_schema_dir(prismata_root: Optional[str] = None) -> str:\r\n    base = prismata_root or os.path.join(os.path.dirname(__file__), \"..\", \"..\", \"..\")\r\n    return os.path.join(base, \"Meta\", \"canonical\", \"colour\")\r\n\r\n\r\ndef _load_colour_schema(schema_filename: str, prismata_root: Optional[str] = None) -> Dict[str, Any]:\r\n    cache_key = f\"colour:{prismata_root or ''}:{schema_filename}\"\r\n    if cache_key in _SCHEMA_CACHE:\r\n        return _SCHEMA_CACHE[cache_key]\r\n\r\n    schema_path = os.path.join(_colour_schema_dir(prismata_root), schema_filename)\r\n    with open(schema_path, \"r\", encoding=\"utf-8\") as fh:\r\n        loaded = yaml.safe_load(fh)\r\n\r\n    # Some schema files use a single top-level wrapper key \u2014 unwrap if present.\r\n    if isinstance(loaded, dict) and len(loaded) == 1 and not any(\r\n        k in loaded for k in (\"type\", \"properties\", \"$defs\", \"required\", \"$id\", \"title\")\r\n    ):\r\n        loaded = next(iter(loaded.values()))\r\n\r\n    _SCHEMA_CACHE[cache_key] = loaded\r\n    return loaded\r\n\r\n\r\ndef validate_colour_instance(\r\n    instance: Dict[str, Any],\r\n    schema_filename: str,\r\n    prismata_root: Optional[str] = None,\r\n) -> List[str]:\r\n    \"\"\"Validate a Python dict against the canonical colour schema set.\r\n\r\n    This validator intentionally does not accept deprecated compatibility fallbacks.\r\n    \"\"\"\r\n    schema = _load_colour_schema(schema_filename, prismata_root)\r\n    if Draft7Validator is None:\r\n        return [\"validator-unavailable: jsonschema is not installed\"]\r\n\r\n    validator_cls = jsonschema.validators.validator_for(schema)\r\n    validator_cls.check_schema(schema)\r\n    validator = validator_cls(schema)\r\n\r\n    errors: List[str] = []\r\n    for err in validator.iter_errors(instance):\r\n        path = \".\".join([str(p) for p in err.path]) if err.path else \"<root>\"\r\n        errors.append(f\"{path}: {err.message}\")\r\n    return errors\r\n\r\n\r\ndef validate_chromascheme_output(\r\n    instance: Dict[str, Any], prismata_root: Optional[str] = None\r\n) -> List[str]:\r\n    return validate_colour_instance(instance, \"chromascheme-output.schema.yaml\", prismata_root)\r\n\r\n\r\ndef validate_colour_roles(\r\n    instance: Dict[str, Any], prismata_root: Optional[str] = None\r\n) -> List[str]:\r\n    return validate_colour_instance(instance, \"colour-roles.schema.yaml\", prismata_root)\r\n\r\n\r\ndef validate_multipane_preview(\r\n    instance: Dict[str, Any], prismata_root: Optional[str] = None\r\n) -> List[str]:\r\n    return validate_colour_instance(instance, \"colour-preview-multipane.schema.yaml\", prismata_root)\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

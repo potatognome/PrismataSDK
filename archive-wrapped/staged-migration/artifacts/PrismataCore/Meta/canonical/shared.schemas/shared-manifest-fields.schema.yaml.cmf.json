@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-shared-schemas-shared-manifest-fields-schema-yaml",
+  "udi": "prismata.meta-canonical-shared-schemas.wrapped-manifest.shared-manifest-fields-schema-b8907019b0",
+  "kind": "wrapped-manifest",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "shared-manifest-fields.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "manifest",
+    "relative_path": "Meta/canonical/shared.schemas/shared-manifest-fields.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/shared.schemas/shared-manifest-fields.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "584bec20421d459ce42502a873aaec741f8179317d691e27519ce0cf5d2ac577"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: shared-manifest-fields\r\nschema_type: shared\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.shared-manifest-fields\r\n  name: shared-manifest-fields.schema\r\n  description: Reusable manifest field block.\r\n\r\nspec:\r\n  target_kind: shared-manifest-fields\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: version\r\n    path: version\r\n    type: string\r\n    required: true\r\n\r\n  - name: description\r\n    path: description\r\n    type: string\r\n    required: false\r\n\r\n  - name: tags\r\n    path: tags\r\n    type: array\r\n    required: false\r\n    item:\r\n      type: string\r\n\r\nobject:\r\n  version: \"\"\r\n  description: \"\"\r\n  tags: []\r\n\r\n",
+    "classification": {
+      "subtype": "manifest",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

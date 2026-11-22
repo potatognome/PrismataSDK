@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-schemas-settings-registry-yaml",
+  "udi": "prismata.projects-applications-universe-config-schemas.wrapped-schema.settings-registry-f6f2950c91",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "settings-registry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Applications/Universe/config/schemas/settings-registry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/schemas/settings-registry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "6f90ed78d25cb220271f9c5012975cbadf0133169ae60710189131b1409cfef2"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: settings-registry.yaml\r\n## Type: schema\r\n## Purpose: Schema for settings registry entries (paths, semantic rules,\r\n## and synonyms) used by settings management tooling.\r\n\r\nmetadata:\r\n  udi: prismata.universe.schema.settings-registry\r\n  name: settings-registry\r\n  kind: schema-definition\r\n  description: \"Schema for settings registry entries (paths, semantic rules, and synonyms).\"\r\n\r\n\r\nid: \"prismata.universe.schema.settings-registry\"\r\nversion: \"1.0.0\"\r\ntype: object\r\nproperties:\r\n  registry_path: { type: string }\r\n  semantic_rules: { type: object }\r\n  key_synonyms: { type: object }\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

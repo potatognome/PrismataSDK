@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-validators-bom-validator-core-fixer-py",
+  "udi": "prismata.projects-tooling-validators-bom-validator-core.wrapped-codeblock.fixer-ac6cad26b1",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "fixer.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/validators/bom_validator/core/fixer.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/validators/bom_validator/core/fixer.py",
+    "encoding": "utf-8",
+    "content_sha256": "4bfbfbf70f88bb666948b1983b090aa8f1863d1d1433d64456751bc66b80d4e5"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import shutil\nfrom pathlib import Path\n\nARCHIVE_ROOT = Path('Projects/Tooling/validators/bom_validator/archive')\n\ndef bump_version(path: Path) -> Path:\n    stem = path.stem\n    if '.v' in stem:\n        base, v = stem.rsplit('.v', 1)\n        new_stem = f'{base}.v{int(v)+1}'\n    else:\n        new_stem = f'{stem}.v2'\n    return path.with_name(new_stem + path.suffix)\n\ndef remove_bom(path: Path) -> Path:\n    ARCHIVE_ROOT.mkdir(parents=True, exist_ok=True)\n    shutil.copy(path, ARCHIVE_ROOT / path.name)\n\n    with open(path, 'rb') as f:\n        raw = f.read()\n\n    if raw.startswith(b'\\xEF\\xBB\\xBF'):\n        raw = raw[3:]\n\n    new_path = bump_version(path)\n\n    with open(new_path, 'w', encoding='utf-8') as f:\n        f.write(raw.decode('utf-8'))\n\n    return new_path\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

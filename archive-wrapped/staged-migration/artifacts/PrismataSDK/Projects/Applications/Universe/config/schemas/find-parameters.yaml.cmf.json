@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-schemas-find-parameters-yaml",
+  "udi": "prismata.projects-applications-universe-config-schemas.wrapped-schema.find-parameters-c56f2b7e5f",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "find-parameters.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Applications/Universe/config/schemas/find-parameters.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/schemas/find-parameters.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "4108178c5d96f5943c7dd4a5d9ea1f46a60e2280f22dbfd51e77eaf88891bd0b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: find-parameters.yaml\r\n## Type: schema\r\n## Purpose: Schema for search/find parameters (query string and filters)\r\n## used by search ingestion and UI components.\r\n\r\nmetadata:\r\n  udi: prismata.universe.schema.find-parameters\r\n  name: find-parameters\r\n  kind: schema-definition\r\n  description: \"Schema for search/find parameters (query string and filters).\"\r\n\r\n\r\nid: \"prismata.universe.schema.find-parameters\"\r\nversion: \"1.0.0\"\r\ntype: object\r\nproperties:\r\n  query: { type: string }\r\n  filters: { type: array }\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

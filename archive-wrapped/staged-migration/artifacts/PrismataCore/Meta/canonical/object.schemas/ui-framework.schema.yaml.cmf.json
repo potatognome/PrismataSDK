@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-object-schemas-ui-framework-schema-yaml",
+  "udi": "prismata.meta-canonical-object-schemas.wrapped-schema.ui-framework-schema-9b48c3b696",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "ui-framework.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/object.schemas/ui-framework.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/object.schemas/ui-framework.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "f8a7ca5ea025383c5ef4253dedd0d9a95dd18e08de23b0d79c0895266b69db1e"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.1\r\nkind: ui-framework\r\nschema_type: object\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.ui-framework\r\n  name: ui-framework.schema\r\n  description: Canonical UI framework schema.\r\n\r\nspec:\r\n  target_kind: ui-framework\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n  imports:\r\n    - prismata.meta.schema.shared-udi-fields\r\n\r\nfields:\r\n  - name: id\r\n    path: id\r\n    type: string\r\n    required: true\r\n\r\n  - name: udi\r\n    path: udi\r\n    type: string\r\n    required: true\r\n\r\n  - name: panes\r\n    path: panes\r\n    type: array\r\n    required: true\r\n\r\n  - name: menus\r\n    path: menus\r\n    type: array\r\n    required: false\r\n\r\n  - name: active_pane\r\n    path: active_pane\r\n    type: string\r\n    required: false\r\n\r\n  - name: pane_bindings\r\n    path: pane_bindings\r\n    type: array\r\n    required: false\r\n\r\n  - name: colour_scheme\r\n    path: colour_scheme\r\n    type: string\r\n    required: false\r\n\r\n  - name: border_pattern\r\n    path: border_pattern\r\n    type: string\r\n    required: false\r\n\r\nobject:\r\n  id: \"\"\r\n  udi: \"\"\r\n  panes: []\r\n  menus: []\r\n  active_pane: \"\"\r\n  pane_bindings: []\r\n  colour_scheme: \"\"\r\n  border_pattern: \"\"\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

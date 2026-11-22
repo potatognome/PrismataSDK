@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-manifest-sections-d-50-io-v2-yaml",
+  "udi": "prismata.meta-deprecated-manifest-sections-d.wrapped-object.x-50-io-v2-862c516aa6",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "50_io.v2.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/manifest_sections.d/50_io.v2.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/manifest_sections.d/50_io.v2.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "53ca462f0df35d3d3f8e2e31fbb62780d86aeaf501967aa1bbec272a2cf9399e"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "_META:\r\r\n  SORT_ORDER: 50\r\r\n  description: \"Migration and packaging metadata for project tracking.\"\r\r\n\r\r\nmetadata:\r\r\n  area: Core\r\r\n  source_path: \"\"\r\r\n  destination_path: \"\"\r\r\n  migration_phase: phase-1-core-foundation\r\r\n  history_strategy: subtree-merge\r\r\n  packaging: pyproject\r\r\n\r\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-udi-pcms2026-manifest-yaml",
+  "udi": "prismata.projects-applications-universe-config-udi.wrapped-manifest.pcms2026-manifest-5748d4ec71",
+  "kind": "wrapped-manifest",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "pcms2026-manifest.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "manifest",
+    "relative_path": "Projects/Applications/Universe/config/udi/pcms2026-manifest.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/udi/pcms2026-manifest.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "59cdfaeef3cac5aee7309382cf6a315d82e16b1d999083399456b3c6d1d1c4d8"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: pcms2026-manifest.yaml\r\n## Type: UDI manifest\r\n## Purpose: Project manifest describing PCMS2026 capabilities and UDI\r\n## metadata used by ingestion and tooling.\r\n\r\nid: prismata.universe.manifest.pcms2026\r\nschema_version: 0.4.1\r\n\r\nmetadata:\r\n  udi: prismata.universe.manifest.pcms2026\r\n  name: PCMS-2026 Universe\r\n  version: \"0.9.1\"\r\n  kind: manifest\r\n  description: \"Universe project: schema-driven editor for discovery, selection, editing, verification, and configuration.\"\r\n\r\nudi: prismata.universe.manifest.pcms2026\r\nkind: manifest\r\n\r\ncapabilities:\r\n  - id: \"prismata.universe.capability.fs-search\"\r\n  - id: \"prismata.universe.capability.fs-search-location\"\r\n  - id: \"prismata.universe.capability.fs-search-execute\"\r\n  - id: \"prismata.universe.capability.fs-search-results\"\r\n  - id: \"prismata.universe.capability.fs-select-multi\"\r\n  - id: \"prismata.universe.capability.fs-select-single\"\r\n  - id: \"prismata.universe.capability.fs-exemplar-preview\"\r\n  - id: \"prismata.universe.capability.fs-create-from-object\"\r\n  - id: \"prismata.universe.capability.fs-edit-multi\"\r\n  - id: \"prismata.universe.capability.fs-update-fields\"\r\n  - id: \"prismata.universe.capability.fs-update-version\"\r\n  - id: \"prismata.universe.capability.fs-edit-vile\"\r\n  - id: \"prismata.universe.capability.fs-edit-registry-insert\"\r\n  - id: \"prismata.universe.capability.fs-export-custom\"\r\n  - id: \"prismata.universe.capability.fs-verify-reference\"\r\n  - id: \"prismata.universe.capability.fs-verify-multi\"\r\n  - id: \"prismata.universe.capability.fs-verify-sequence\"\r\n  - id: \"prismata.universe.capability.fs-verify-collective\"\r\n  - id: \"prismata.universe.capability.fs-version-apply\"\r\n  - id: \"prismata.universe.capability.fs-diff-compatible\"\r\n  - id: \"prismata.universe.capability.fs-edit-conform\"\r\n  - id: \"prismata.universe.capability.value-match\"\r\n  - id: \"prismata.universe.capability.semantic-primitive-extract\"\r\n  - id: \"prismata.universe.capability.semantic-dependency-graph\"\r\n  - id: \"prismata.universe.capability.semantic-bundle\"\r\n  - id: \"prismata.universe.capability.app-settings-paths\"\r\n  - id: \"prismata.universe.capability.app-settings-naming\"\r\n  - id: \"prismata.universe.capability.app-settings-export\"\r\n  - id: \"prismata.universe.capability.app-settings-registry\"\r\n  - id: \"prismata.universe.capability.app-settings-auto-archive\"\r\n  - id: \"prismata.universe.capability.app-settings-auto-versioning\"\r\n  - id: \"prismata.universe.capability.app-bootstrap-run\"\r\n  - id: \"prismata.universe.capability.app-quit\"\r\n",
+    "classification": {
+      "subtype": "manifest",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

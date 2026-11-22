@@ -1,0 +1,36 @@
+{
+  "id": "tests-primitives-show-invocation-smoke-ps1",
+  "udi": "prismata.tests-primitives.wrapped-codeblock.show-invocation-smoke-b036602caf",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "show-invocation-smoke.ps1",
+    "source_file_type": "ps1",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "tests/primitives/show-invocation-smoke.ps1",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "tests/primitives/show-invocation-smoke.ps1",
+    "encoding": "utf-8",
+    "content_sha256": "32530ecc13b5a2448b2ec9231e9ab69cb455e60cba0f479182c528e060a06fd6"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff. (Join-Path $PSScriptRoot '..\\..\\Projects\\Tooling\\primitives\\show-invocation-table.ps1')\r\n\r\n# Example inputs\r\n$argsHash = [ordered]@{\r\n    InputPath = 'C:\\Projects\\Example\\input'\r\n    OutputPath = 'C:\\Projects\\Example\\out'\r\n    ConfigPath = 'C:\\Projects\\Example\\config.yaml'\r\n    Mode = 'Full'\r\n    Projects = 'Universe,Local'\r\n    Relative = $true\r\n    Long = ('x' * 200)\r\n}\r\n\r\nWrite-Host \"-- Table Output --\" -ForegroundColor Cyan\r\nShow-InvocationTable -InvocationArgs $argsHash -Title 'Invocation (table)' -Width 100 -Format table\r\n\r\nWrite-Host \"`n-- JSON Output --\" -ForegroundColor Cyan\r\n$json = Show-InvocationTable -InvocationArgs $argsHash -Title 'Invocation (json)' -Format json\r\nWrite-Host $json\r\n\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

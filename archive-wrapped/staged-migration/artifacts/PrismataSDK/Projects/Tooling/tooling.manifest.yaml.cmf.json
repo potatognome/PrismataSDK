@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-tooling-manifest-yaml",
+  "udi": "prismata.projects-tooling.wrapped-manifest.tooling-manifest-8dba37c803",
+  "kind": "wrapped-manifest",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "tooling.manifest.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "manifest",
+    "relative_path": "Projects/Tooling/tooling.manifest.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/tooling.manifest.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "a9311a570ac104cdcfb1d2f81c8d80780fd5eb7ddbdd7e2139e3ef604282cf31"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "metadata:\r\n  udi: prismata.tooling.manifest.tooling\r\n  name: Tooling Manifest\r\n  version: 1.0.0\r\n  kind: manifest\r\n  description: Versionable tooling and primitives manifest listing archived generators and active capability modules.\r\n\r\nudi: prismata.tooling.manifest.tooling\r\nkind: manifest\r\n\r\n# Overrides marking archived generator implementations and pointing to archived originals\r\n_archived_primitives:\r\n  - udi: prismata.tooling.capability.apply-menu-templates\r\n    archived: true\r\n    module: generators/_archived_originals/apply_menu_templates.py\r\n    notes: >\r\n      Archived generator. Active deprecation stub remains at generators/apply_menu_templates.py.\r\n\r\n  - udi: prismata.tooling.capability.validate-menu-actions\r\n    archived: true\r\n    module: generators/_archived_originals/validate_menu_actions.py\r\n    notes: >\r\n      Archived generator. Active deprecation stub remains at generators/validate_menu_actions.py.\r\n\r\n  - udi: prismata.tooling.capability.replace-hardcoded-menus\r\n    archived: true\r\n    module: generators/_archived_originals/replace_hardcoded_menus.py\r\n    notes: >\r\n      Archived generator. Active deprecation stub remains at generators/replace_hardcoded_menus.py.\r\n\r\n  - udi: prismata.tooling.capability.apply-action-stubs\r\n    archived: true\r\n    module: generators/_archived_originals/apply_action_stubs.py\r\n    notes: >\r\n      Archived generator. Active deprecation stub remains at generators/apply_action_stubs.py.\r\n\r\n  - udi: prismata.tooling.capability.apply-action-stubs-auto\r\n    archived: true\r\n    module: generators/_archived_originals/apply_action_stubs_auto.py\r\n    notes: >\r\n      Archived generator. Active deprecation stub remains at generators/apply_action_stubs_auto.py.\r\n\r\n  - udi: prismata.tooling.capability.compare-menu-templates\r\n    archived: true\r\n    module: generators/_archived_originals/compare_menu_templates.py\r\n    notes: >\r\n      Archived generator. Active deprecation stub remains at generators/compare_menu_templates.py.\r\n\r\n  - udi: prismata.tooling.capability.menu-tree-tooling\r\n    archived: true\r\n    module: generators/_archived_originals/menu_tree_tooling.py\r\n    notes: >\r\n      Archived generator. Active deprecation stub remains at generators/menu_tree_tooling.py.\r\n\r\nmodules:\r\n  - udi: prismata.universe.capability.auto-archive\r\n    name: Auto-Archive Toggle\r\n    version: 1.0.0\r\n    module: Projects/Applications/Universe/src/capabilities/handlers.ts\r\n    capability: prismata.universe.capability.app-settings-auto-archive\r\n    description: >\r\n      Toggles the auto-archive feature flag in Universe settings. When enabled,\r\n      file-write operations (fs-create-from-object, fs-edit-vile) archive the\r\n      previous file version to the Universe archive directory before overwriting.\r\n\r\n  - udi: prismata.universe.capability.auto-versioning\r\n    name: Auto-Versioning Toggle\r\n    version: 1.0.0\r\n    module: Projects/Applications/Universe/src/capabilities/handlers.ts\r\n    capability: prismata.universe.capability.app-settings-auto-versioning\r\n    description: >\r\n      Toggles the auto-versioning feature flag in Universe settings. When enabled,\r\n      fs-update-version reads the version field from selected YAML/JSON files and\r\n      increments it using the shared versionUtil (remapVersion) forward/backward logic.\r\n",
+    "classification": {
+      "subtype": "manifest",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

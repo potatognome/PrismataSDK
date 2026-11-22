@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-primitives-powershell-folder-tree-ps1",
+  "udi": "prismata.projects-tooling-primitives-powershell.wrapped-codeblock.folder-tree-3faf494146",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "folder-tree.ps1",
+    "source_file_type": "ps1",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/primitives/powershell/folder-tree.ps1",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/primitives/powershell/folder-tree.ps1",
+    "encoding": "utf-8",
+    "content_sha256": "72e6ad55531d5adebb1a0095100ec2944efb798599a4558063fb94e72bf9565c"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "function Test-PathFolderMatch {\r\n    param(\r\n        [string]$Path,\r\n        [string[]]$FolderNames\r\n    )\r\n\r\n    if (-not $FolderNames -or $FolderNames.Count -eq 0) { return $false }\r\n    $segments = $Path -split '[\\\\/]'\r\n    foreach ($folderName in $FolderNames) {\r\n        if (-not [string]::IsNullOrWhiteSpace($folderName) -and ($segments -contains $folderName)) {\r\n            return $true\r\n        }\r\n    }\r\n\r\n    return $false\r\n}\r\n\r\nfunction New-FolderTreeText {\r\n    param(\r\n        [string]$RootPath,\r\n        [string[]]$IncludeTypes,\r\n        [string[]]$IgnoreTypes,\r\n        [string[]]$SummarizeTypes,\r\n        [string[]]$IncludeFolders,\r\n        [string[]]$IgnoreFolders,\r\n        [string[]]$SummarizeFolders,\r\n        [bool]$AddFilesAsLeaves = $true,\r\n        [scriptblock]$SummarizationCallback\r\n    )\r\n\r\n    $lines = [System.Collections.Generic.List[string]]::new()\r\n    $rootName = Split-Path -Path $RootPath -Leaf\r\n    [void]$lines.Add($rootName)\r\n\r\n    function Add-Node {\r\n        param(\r\n            [string]$CurrentPath,\r\n            [string]$Prefix\r\n        )\r\n\r\n        $dirs = @(Get-ChildItem -Path $CurrentPath -Directory -ErrorAction SilentlyContinue | Sort-Object Name)\r\n        $files = @(Get-ChildItem -Path $CurrentPath -File -ErrorAction SilentlyContinue | Sort-Object Name)\r\n\r\n        $visibleDirs = @()\r\n        foreach ($dir in $dirs) {\r\n            if (Test-PathFolderMatch -Path $dir.FullName -FolderNames $IgnoreFolders) { continue }\r\n            $visibleDirs += $dir\r\n        }\r\n\r\n        $visibleFiles = @()\r\n        if ($AddFilesAsLeaves) {\r\n            foreach ($file in $files) {\r\n                if (Test-PathFolderMatch -Path $file.FullName -FolderNames $IgnoreFolders) { continue }\r\n                if ($IncludeFolders -and $IncludeFolders.Count -gt 0 -and -not (Test-PathFolderMatch -Path $file.FullName -FolderNames $IncludeFolders)) {\r\n                    continue\r\n                }\r\n\r\n                $ext = [System.IO.Path]::GetExtension($file.FullName)\r\n                if ($IgnoreTypes -contains $ext) { continue }\r\n                if ($IncludeTypes -and $IncludeTypes.Count -gt 0 -and ($IncludeTypes -notcontains '*') -and -not ($IncludeTypes -contains $ext)) {\r\n                    continue\r\n                }\r\n\r\n                $visibleFiles += $file\r\n            }\r\n        }\r\n\r\n        $allItems = @($visibleDirs + $visibleFiles)\r\n        for ($i = 0; $i -lt $allItems.Count; $i++) {\r\n            $item = $allItems[$i]\r\n            $isLast = ($i -eq ($allItems.Count - 1))\r\n            $branch = if ($isLast) { '\\-- ' } else { '|-- ' }\r\n            $nextPrefix = if ($isLast) { \"$Prefix    \" } else { \"$Prefix|   \" }\r\n\r\n            if ($item.PSIsContainer) {\r\n                if ($SummarizeFolders -contains $item.Name) {\r\n                    $summaryLine = if ($SummarizationCallback) {\r\n                        & $SummarizationCallback $item.FullName $IgnoreTypes $SummarizeTypes\r\n                    } else {\r\n                        \"[summary] $($item.Name)\"\r\n                    }\r\n                    [void]$lines.Add(\"$Prefix$branch$summaryLine\")\r\n                } else {\r\n                    [void]$lines.Add(\"$Prefix$branch$($item.Name)/\")\r\n                    Add-Node -CurrentPath $item.FullName -Prefix $nextPrefix\r\n                }\r\n            } else {\r\n                [void]$lines.Add(\"$Prefix$branch$($item.Name)\")\r\n            }\r\n        }\r\n    }\r\n\r\n    Add-Node -CurrentPath $RootPath -Prefix ''\r\n    return ($lines -join \"`n\")\r\n}",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-primitives-powershell-path-helpers-ps1",
+  "udi": "prismata.projects-tooling-primitives-powershell.wrapped-codeblock.path-helpers-d65db77722",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "path-helpers.ps1",
+    "source_file_type": "ps1",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/primitives/powershell/path-helpers.ps1",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/primitives/powershell/path-helpers.ps1",
+    "encoding": "utf-8",
+    "content_sha256": "18c62698a21ded66324f102b657a33096362d4dfd5c42ffef46c433c1bc217f1"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# ---------------------------------------------------------\r\n# Workspace Root Discovery\r\n# ---------------------------------------------------------\r\nfunction Get-WorkspaceRoot {\r\n    param(\r\n        [string]$StartPath = (Resolve-Path \".\").Path\r\n    )\r\n    $current = $StartPath\r\n    while ($true) {\r\n        $marker = Join-Path $current \".workspace\"\r\n        if (Test-Path $marker) { return $current }\r\n\r\n        $parent = Split-Path $current -Parent\r\n        if ($parent -eq $current -or [string]::IsNullOrEmpty($parent)) {\r\n            return $StartPath\r\n        }\r\n        $current = $parent\r\n    }\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

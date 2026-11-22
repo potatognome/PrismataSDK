@@ -1,0 +1,36 @@
+{
+  "id": "tests-configmerge-get-configmergehelp-tests-ps1",
+  "udi": "prismata.tests-configmerge.wrapped-codeblock.get-configmergehelp-tests-25ed889be8",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "Get-ConfigMergeHelp.Tests.ps1",
+    "source_file_type": "ps1",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "tests/ConfigMerge/Get-ConfigMergeHelp.Tests.ps1",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "tests/ConfigMerge/Get-ConfigMergeHelp.Tests.ps1",
+    "encoding": "utf-8",
+    "content_sha256": "86908a8eefb5395711c022d87d6c2b2dec988e8ce484cbc5f50dd2b3044b4bb0"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff# --- BOOTSTRAP: Import ConfigMerge module ---\r\n$TestRoot = Split-Path -Parent $MyInvocation.MyCommand.Path\r\n$ModulePath = Join-Path $TestRoot '..\\..\\Projects\\Tooling\\modules\\ConfigMerge\\ConfigMerge.psm1'\r\nImport-Module $ModulePath -Force\r\n\r\nif (-not (Get-Command Get-ConfigMergeHelp -ErrorAction SilentlyContinue)) {\r\n    throw \"Get-ConfigMergeHelp is NOT imported. ModulePath = $ModulePath\"\r\n}\r\n\r\nDescribe 'ConfigMerge Get-ConfigMergeHelp' {\r\n    It 'returns a non-empty help string' {\r\n        $out = Get-ConfigMergeHelp\r\n        $out | Should -Not -BeNullOrEmpty\r\n        $out | Should -Match 'Conflict resolution options'\r\n    }\r\n\r\n    It 'supports verbose example output' {\r\n        $out = Get-ConfigMergeHelp -VerboseOutput\r\n        $out | Should -Match 'Example usage'\r\n    }\r\n\r\n    It 'documents conflict mode APIs' {\r\n        $out = Get-ConfigMergeHelp\r\n        $out | Should -Match 'Get-ConflictModeManifest'\r\n        $out | Should -Match 'Set-ConflictMode'\r\n    }\r\n}\r\n\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}
