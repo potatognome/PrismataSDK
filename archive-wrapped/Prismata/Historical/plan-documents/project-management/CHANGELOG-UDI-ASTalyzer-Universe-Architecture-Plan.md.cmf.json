@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-project-management-changelog-udi-astalyzer-universe-architecture-plan-md",
+  "udi": "prismata.historical-plan-documents-project-management.wrapped-plan.changelog-udi-astalyzer-universe-architecture-plan-d9706dfc26",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "CHANGELOG-UDI-ASTalyzer-Universe-Architecture-Plan.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/project-management/CHANGELOG-UDI-ASTalyzer-Universe-Architecture-Plan.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/project-management/CHANGELOG-UDI-ASTalyzer-Universe-Architecture-Plan.md",
+    "encoding": "utf-8",
+    "content_sha256": "c054227dc7340df74f4232bfad359aa8dee589df7bfe17e0966a90e069712d81"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# UDI/ASTalyzer/Universe Plan \u2014 CHANGELOG\r\n\r\n## [2026-07-18]\r\n\r\n- Canonicalized architectural plan for UDI, ASTalyzer, and Universe; archived original snapshot.\r\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

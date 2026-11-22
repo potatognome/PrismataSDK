@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-shared-schemas-shared-layout-schema-yaml",
+  "udi": "prismata.meta-canonical-shared-schemas.wrapped-schema.shared-layout-schema-6e730a26e4",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "shared-layout.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/shared.schemas/shared-layout.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/shared.schemas/shared-layout.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "75f93e600c24c7ec9059e80e3009ce34dc0efbfbe62863b6f339ee7df0691580"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: shared-layout\r\nschema_type: shared\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.shared-layout\r\n  name: shared-layout.schema\r\n  description: Reusable layout fields for panes, menus, and UI components.\r\n\r\nspec:\r\n  target_kind: shared-layout\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: grid\r\n    path: grid\r\n    type: object\r\n    required: false\r\n\r\n  - name: flex\r\n    path: flex\r\n    type: object\r\n    required: false\r\n\r\n  - name: constraints\r\n    path: constraints\r\n    type: object\r\n    required: false\r\n\r\nobject:\r\n  grid: {}\r\n  flex: {}\r\n  constraints: {}\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

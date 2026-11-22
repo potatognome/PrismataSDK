@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-plan-overview-pr-b-draft-pr-body-md",
+  "udi": "prismata.historical-plan-documents-plan-overview.wrapped-plan.pr-b-draft-pr-body-993c250252",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "PR_B_draft_PR_body.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/plan-overview/PR_B_draft_PR_body.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/plan-overview/PR_B_draft_PR_body.md",
+    "encoding": "utf-8",
+    "content_sha256": "ffb2f8b0a028a5338310dbec2660af2937f8cf3871c64b721a168c16a93a74c3"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# PR B \u2014 Compression sweep (draft PR body)\r\n\r\nTitle: PR B: Compression sweep \u2014 inline wrappers, archive generators, compat shims\r\n\r\n## Summary\r\n\r\n- Inline thin wrappers when safe and keep subprocess fallbacks.\r\n- Archive generator originals under `Projects/Tooling/generators/_archived_originals/` and add deprecation stubs at original paths.\r\n- Move compatibility shims to `Projects/Tooling/compat` and add `deprecated_` shim APIs.\r\n- Harden `ui_schema_validator` with `_SCHEMA_CACHE`, preloaded resolver `store`, and non-fatal fallback validation.\r\n- Update a set of import sites to use canonical `Prismata.Projects.Tooling.*` paths; additional import updates are in-progress.\r\n\r\n## Tests & safety\r\n\r\n- Ran `pytest` locally: 29 passed (targeted test run); warnings include `jsonschema.RefResolver` deprecation.\r\n- Ran wrapper tests for ASTalyzer and menu primitive tests; targeted tests passed.\r\n\r\n## Checklist (confirm before merge)\r\n\r\n- [ ] Finish repo-wide import-site updates to point at `Projects/Tooling/compat` (in-progress).\r\n- [ ] Run full `pytest -q` across repository and resolve any remaining warnings/errors.\r\n- [ ] Validate manifests/CI: ensure workspace manifest overrides are acceptable for CI.\r\n- [ ] Add migration notes for consumers (update import paths; deprecated shims available under `Projects/Tooling/compat`).\r\n- [ ] Squash/fix any review feedback and confirm runtime smoke tests.\r\n\r\n## Notes for reviewers\r\n\r\n- Archival approach chosen to avoid breaking CI and allow staged migration.\r\n- If you want automation to open the PR, install the GitHub CLI `gh` or create the PR via the web UI using branch `feature/pr-b-compression-sweep` and this body.\r\n\r\nBranch: `feature/pr-b-compression-sweep`\r\n\r\nLocation: `Projects/Tooling/PR_B_draft_PR_body.md`\r\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-modules-configmerge-configmerge-psd1",
+  "udi": "prismata.projects-tooling-modules-configmerge.wrapped-artifact.configmerge-c481f89678",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "ConfigMerge.psd1",
+    "source_file_type": "psd1",
+    "wrapped_subtype": "artifact",
+    "relative_path": "Projects/Tooling/modules/ConfigMerge/ConfigMerge.psd1",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/modules/ConfigMerge/ConfigMerge.psd1",
+    "encoding": "utf-8",
+    "content_sha256": "57b0bfdaad16893bd32c29746ba7d7eac8337763fa2bec67c84d53371e8e0e08"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "@{\r\n    # Script module metadata\r\n    RootModule        = 'ConfigMerge.psm1'\r\n    ModuleVersion     = '1.0.0'\r\n    GUID              = 'b7c1e4b1-4e8f-4c9e-9f7a-2c8d1f4f9c11'\r\n\r\n    Author            = 'Daniel'\r\n    CompanyName       = 'Prismata Tooling'\r\n    Copyright         = '(c) 2026 <the.potato.gnome@gmail.com> All rights reserved.'\r\n\r\n    Description       = 'Deterministic configuration merge engine with conflictMode precedence.'\r\n\r\n    # No ScriptsToProcess\r\n\r\n    # Only export the public API\r\n    FunctionsToExport = @(\r\n        'Merge-Config'\r\n        , 'Get-ConfigMergeHelp'\r\n        , 'Invoke-ConfigMerge'\r\n        , 'Show-ConfigMergeTable'\r\n        , 'Get-ConflictModeRegistry'\r\n        , 'Get-ConflictModeManifest'\r\n        , 'Validate-ConflictMode'\r\n        , 'Apply-ConflictMode'\r\n        , 'Write-ConflictModeAuditEntry'\r\n        , 'Get-ConflictModeAuditTrail'\r\n        , 'Set-ConflictMode'\r\n    )\r\n\r\n    CmdletsToExport   = @()\r\n    VariablesToExport = @()\r\n    AliasesToExport   = @()\r\n\r\n    # PowerShell compatibility\r\n    PowerShellVersion = '5.1'\r\n    CompatiblePSEditions = @('Desktop','Core')\r\n\r\n    # Private data for tooling or future metadata\r\n    PrivateData = @{\r\n        ConfigMerge = @{\r\n            Schema = 'ConfigMerge.schema.yaml'\r\n            Notes  = 'Primitive module providing deterministic merge semantics and conflictMode resolution.'\r\n        }\r\n    }\r\n}\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

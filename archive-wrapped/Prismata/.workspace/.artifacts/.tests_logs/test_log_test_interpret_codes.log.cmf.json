@@ -1,0 +1,36 @@
+{
+  "id": "workspace-artifacts-tests-logs-test-log-test-interpret-codes-log",
+  "udi": "prismata.workspace-artifacts-tests-logs.wrapped-artifact.test-log-test-interpret-codes-d3166946d0",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_log_test_interpret_codes.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/.artifacts/.tests_logs/test_log_test_interpret_codes.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.artifacts/.tests_logs/test_log_test_interpret_codes.log",
+    "encoding": "utf-8",
+    "content_sha256": "f9428e2205b7b9cf7219b76e2b29bd3c57a41683dcd14cc74abcbcb1b3482b06"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 13:08:04  ======================================================================\r\n2026-08-30 13:08:04 |  Test 4: test_interpret_codes                                        |\r\n2026-08-30 13:08:04  ======================================================================\r\n2026-08-30 13:08:04 Running: 4 test_interpret_codes \u2014 interpret_codes \u2014 {KEY} token replacement\r\n2026-08-30 13:08:05 result = ColourManager. interpret_codes with arguments: 'This is {RED}red{RESET} text.'\r\n2026-08-30 13:08:05 ran successfully. Producing output: 'This is \\x1b[38;2;255;0;0mred\\x1b[0m text.'\r\n2026-08-30 13:08:05 Tokens handled correctly\r\n2026-08-30 13:08:05 result = ColourManager. interpret_codes with arguments: '{INFO}info text'\r\n2026-08-30 13:08:05 ran successfully. Producing output: '\\x1b[38;2;190;190;190minfo text'\r\n2026-08-30 13:08:05 Tokens handled correctly\r\n2026-08-30 13:08:05 result = ColourManager. interpret_codes with arguments: 'no codes here'\r\n2026-08-30 13:08:05 ran successfully. Producing output: 'no codes here'\r\n2026-08-30 13:08:05 Tokens handled correctly\r\n2026-08-30 13:08:05 result = ColourManager. interpret_codes with arguments: '{UNKNOWN_KEY_XYZ}value'\r\n2026-08-30 13:08:05 ran successfully. Producing output: '{UNKNOWN_KEY_XYZ}value'\r\n2026-08-30 13:08:05 Token '{UNKNOWN_KEY_XYZ}' still present in output\r\n2026-08-30 13:08:05 result = ColourManager. interpret_codes with arguments: ''\r\n2026-08-30 13:08:05 ran successfully. Producing output: ''\r\n2026-08-30 13:08:05 Tokens handled correctly\r\n2026-08-30 13:08:05 \u2705 PASSED: 4 test_interpret_codes\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 22:16:19  ======================================================================\r\n2026-08-30 22:16:19 |  Test 4: test_interpret_codes                                        |\r\n2026-08-30 22:16:19  ======================================================================\r\n2026-08-30 22:16:19 Running: 4 test_interpret_codes \u2014 interpret_codes \u2014 {KEY} token replacement\r\n2026-08-30 22:16:20 result = ColourManager. interpret_codes with arguments: 'This is {RED}red{RESET} text.'\r\n2026-08-30 22:16:20 ran successfully. Producing output: 'This is \\x1b[38;2;255;0;0mred\\x1b[0m text.'\r\n2026-08-30 22:16:20 Tokens handled correctly\r\n2026-08-30 22:16:20 result = ColourManager. interpret_codes with arguments: '{INFO}info text'\r\n2026-08-30 22:16:20 ran successfully. Producing output: '\\x1b[38;2;190;190;190minfo text'\r\n2026-08-30 22:16:20 Tokens handled correctly\r\n2026-08-30 22:16:20 result = ColourManager. interpret_codes with arguments: 'no codes here'\r\n2026-08-30 22:16:20 ran successfully. Producing output: 'no codes here'\r\n2026-08-30 22:16:20 Tokens handled correctly\r\n2026-08-30 22:16:20 result = ColourManager. interpret_codes with arguments: '{UNKNOWN_KEY_XYZ}value'\r\n2026-08-30 22:16:20 ran successfully. Producing output: '{UNKNOWN_KEY_XYZ}value'\r\n2026-08-30 22:16:20 Token '{UNKNOWN_KEY_XYZ}' still present in output\r\n2026-08-30 22:16:20 result = ColourManager. interpret_codes with arguments: ''\r\n2026-08-30 22:16:20 ran successfully. Producing output: ''\r\n2026-08-30 22:16:20 Tokens handled correctly\r\n2026-08-30 22:16:20 \u2705 PASSED: 4 test_interpret_codes\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-09-08 12:08:11  ======================================================================\r\n2026-09-08 12:08:11 |  Test 4: test_interpret_codes                                        |\r\n2026-09-08 12:08:11  ======================================================================\r\n2026-09-08 12:08:11 Running: 4 test_interpret_codes \u2014 interpret_codes \u2014 {KEY} token replacement\r\n2026-09-08 12:08:12 result = ColourManager. interpret_codes with arguments: 'This is {RED}red{RESET} text.'\r\n2026-09-08 12:08:12 ran successfully. Producing output: 'This is \\x1b[38;2;255;0;0mred\\x1b[0m text.'\r\n2026-09-08 12:08:12 Tokens handled correctly\r\n2026-09-08 12:08:12 result = ColourManager. interpret_codes with arguments: '{INFO}info text'\r\n2026-09-08 12:08:12 ran successfully. Producing output: '\\x1b[38;2;190;190;190minfo text'\r\n2026-09-08 12:08:12 Tokens handled correctly\r\n2026-09-08 12:08:12 result = ColourManager. interpret_codes with arguments: 'no codes here'\r\n2026-09-08 12:08:12 ran successfully. Producing output: 'no codes here'\r\n2026-09-08 12:08:12 Tokens handled correctly\r\n2026-09-08 12:08:12 result = ColourManager. interpret_codes with arguments: '{UNKNOWN_KEY_XYZ}value'\r\n2026-09-08 12:08:12 ran successfully. Producing output: '{UNKNOWN_KEY_XYZ}value'\r\n2026-09-08 12:08:12 Token '{UNKNOWN_KEY_XYZ}' still present in output\r\n2026-09-08 12:08:12 result = ColourManager. interpret_codes with arguments: ''\r\n2026-09-08 12:08:12 ran successfully. Producing output: ''\r\n2026-09-08 12:08:12 Tokens handled correctly\r\n2026-09-08 12:08:12 \u2705 PASSED: 4 test_interpret_codes\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

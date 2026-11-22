@@ -1,0 +1,36 @@
+{
+  "id": "workspace-artifacts-logs-tuilkit-tuilkit-debug-log",
+  "udi": "prismata.workspace-artifacts-logs-tuilkit.wrapped-artifact.tuilkit-debug-1d672b00a6",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "tUilKit_DEBUG.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_DEBUG.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_DEBUG.log",
+    "encoding": "utf-8",
+    "content_sha256": "499a6e043b7f352e381ff4312d07d9b012d7dddd8e29caa3d023c1ed7da717b9"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "2026-08-30 22:16:33 Testing custom 'debug' category\r\n2026-08-30 22:16:33 Performance metric: 150ms\r\n2026-08-30 22:16:33 Critical system error\r\n2026-09-08 12:07:35 Testing custom 'debug' category\r\n2026-09-08 12:07:35 Performance metric: 150ms\r\n2026-09-08 12:07:35 Critical system error\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

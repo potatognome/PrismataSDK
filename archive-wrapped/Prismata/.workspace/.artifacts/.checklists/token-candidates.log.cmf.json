@@ -1,0 +1,36 @@
+{
+  "id": "workspace-artifacts-checklists-token-candidates-log",
+  "udi": "prismata.workspace-artifacts-checklists.wrapped-checklist.token-candidates-13ef7f441a",
+  "kind": "wrapped-checklist",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "token-candidates.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "checklist",
+    "relative_path": ".workspace/.artifacts/.checklists/token-candidates.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.artifacts/.checklists/token-candidates.log",
+    "encoding": "utf-8",
+    "content_sha256": "28768b27a545477875e23c77b34a6b2f6cc83f4aa123951adb1737e79848426e"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "Token: accent-surface\r\n  - Prismata/Meta/registry/colour-role.d/accent-surface.colour-role.entry.yaml -> udi=prismata.meta.colour-role.accent-surface, id=accent-surface, slug=accent-surface, reasons=id,slug,udi\r\n\r\nToken: alert-surface\r\n  - Prismata/Meta/registry/colour-role.d/alert-surface.colour-role.entry.yaml -> udi=prismata.meta.colour-role.alert-surface, id=alert-surface, slug=alert-surface, reasons=id,slug,udi\r\n\r\nToken: basic\r\n  No candidates found\r\n\r\nToken: border\r\n  - Prismata/Meta/registry/colour-role.d/border.colour-role.entry.yaml -> udi=prismata.meta.colour-role.border, id=border, slug=border, reasons=id,slug,udi\r\n\r\nToken: custom\r\n  No candidates found\r\n\r\nToken: default\r\n  - Prismata/Meta/registry/border-pattern.d/default.border-pattern.entry.yaml -> udi=prismata.meta.border-pattern.default, id=default, slug=<none>, reasons=id,udi\r\n  - Prismata/Meta/registry/colour-role.d/default.colour-role.entry.yaml -> udi=prismata.meta.colour-role.default, id=default, slug=default, reasons=id,slug,udi\r\n  - Prismata/Meta/registry/colour-scheme.d/default.colour-scheme.entry.yaml -> udi=prismata.meta.colour-scheme.default, id=default, slug=default, reasons=id,slug,udi\r\n  - Prismata/Meta/registry/menu-item.d/default.menu-item.entry.yaml -> udi=prismata.meta.menu-item.default, id=default, slug=<none>, reasons=id,udi\r\n  - Prismata/Meta/registry/menu.d/default.menu.entry.yaml -> udi=prismata.meta.menu.default, id=default, slug=<none>, reasons=id,udi\r\n  - Prismata/Meta/registry/pane.d/default.pane.entry.yaml -> udi=prismata.meta.pane.default, id=default, slug=<none>, reasons=id,udi\r\n  - Prismata/Meta/registry/ui-framework.d/default.ui-framework.entry.yaml -> udi=prismata.meta.ui-framework.default, id=default, slug=<none>, reasons=id,udi\r\n\r\nToken: diff_view\r\n  No candidates found\r\n\r\nToken: double-line\r\n  - Prismata/Meta/registry/border-pattern.d/double-line.border-pattern.entry.yaml -> udi=prismata.meta.border-pattern.double-line, id=double-line, slug=<none>, reasons=id,udi\r\n\r\nToken: footer\r\n  No candidates found\r\n\r\nToken: header\r\n  No candidates found\r\n\r\nToken: menu\r\n  - Prismata/Meta/registry/menu.d/default.menu.entry.yaml -> udi=prismata.meta.menu.default, id=default, slug=<none>, reasons=udi_endswith\r\n  - Prismata/Meta/registry/menu.d/exemplar-primary.menu.entry.yaml -> udi=prismata.meta.menu.exemplar-primary, id=<none>, slug=<none>, reasons=udi_endswith\r\n  - Prismata/Meta/registry/menu.d/exemplar-secondary.menu.entry.yaml -> udi=prismata.meta.menu.exemplar-secondary, id=<none>, slug=<none>, reasons=udi_endswith\r\n\r\nToken: menu_surface\r\n  No candidates found\r\n\r\nToken: multi_pane\r\n  No candidates found\r\n\r\nToken: pane\r\n  - Prismata/Meta/registry/pane.d/default.pane.entry.yaml -> udi=prismata.meta.pane.default, id=<none>, slug=default.pane, reasons=udi_endswith,slug\r\n  - Prismata/Meta/registry/pane.d/exemplar-primary.pane.entry.yaml -> udi=prismata.meta.pane.exemplar-primary, id=<none>, slug=exemplar-primary.pane, reasons=udi_endswith,slug\r\n  - Prismata/Meta/registry/pane.d/exemplar-secondary.pane.entry.yaml -> udi=prismata.meta.pane.exemplar-secondary, id=<none>, slug=exemplar-secondary.pane, reasons=udi_endswith,slug\r\n  - Prismata/Meta/registry/pane.d/exemplar-tertiary.pane.entry.yaml -> udi=prismata.meta.pane.exemplar-tertiary, id=<none>, slug=exemplar-tertiary.pane, reasons=udi_endswith,slug\r\n  - Prismata/Meta/registry/pane.d/exemplar-exception.pane.entry.yaml -> udi=prismata.meta.pane.exemplar-exception, id=<none>, slug=exemplar-exception.pane, reasons=udi_endswith,slug\r\n  - Prismata/Meta/registry/pane.d/lh-pane.pane.entry.yaml -> udi=prismata.meta.pane.lh-pane, id=lh-pane, slug=lh-pane.pane, reasons=id,udi,slug\r\n  - Prismata/Meta/registry/pane.d/rh-pane.pane.entry.yaml -> udi=prismata.meta.pane.rh-pane, id=rh-pane, slug=rh-pane.pane, reasons=id,udi,slug\r\n\r\nToken: primary-application\r\n  No candidates found\r\n\r\nToken: primary-surface\r\n  - Prismata/Meta/registry/colour-role.d/primary-surface.colour-role.entry.yaml -> udi=prismata.meta.colour-role.primary-surface, id=primary-surface, slug=primary-surface, reasons=id,slug,udi\r\n\r\nToken: secondary-surface\r\n  - Prismata/Meta/registry/colour-role.d/secondary-surface.colour-role.entry.yaml -> udi=prismata.meta.colour-role.secondary-surface, id=secondary-surface, slug=secondary-surface, reasons=id,slug,udi\r\n\r\nToken: single-line\r\n  - Prismata/Meta/registry/border-pattern.d/single-line.border-pattern.entry.yaml -> udi=prismata.meta.border-pattern.single-line, id=single-line, slug=<none>, reasons=id,udi\r\n\r\nToken: structured_editor\r\n  No candidates found\r\n\r\nToken: toggle_table\r\n  No candidates found\r\n",
+    "classification": {
+      "subtype": "checklist",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

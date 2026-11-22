@@ -1,0 +1,36 @@
+{
+  "id": "github-copilot-instructions-md",
+  "udi": "prismata.github.wrapped-agent-instruction.copilot-instructions-0f01752a45",
+  "kind": "wrapped-agent-instruction",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "copilot-instructions.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "agent-instruction",
+    "relative_path": ".github/copilot-instructions.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".github/copilot-instructions.md",
+    "encoding": "utf-8",
+    "content_sha256": "72d44e435cd145dcc1954bf189f2f6944aa110f18eb0ca8d3645da50492b553b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Copilot Instructions - Prismata\r\n\r\n## LAST UPDATED: 2024-07-21\r\n\r\n## Purpose\r\nPrismata is a development ecosystem for cybernetic applications and a living lab for best practices in AI-augmented development. This file defines general policies and rules for the repository, while modular copilot-instructions files in the `copilot-instructions.d/` directory provide targeted guidance for specific domains, file types, and agents.\r\n\r\nThis file is minimal by design. All general rules, agent edit policies, and centralized log/config options are defined in the modular copilot-instructions files.\r\n\r\nRefer to:\r\n- [Modular copilot-instructions](./copilot-instructions.d/*.md) for extensions to the general rules in this file.\r\n\r\n## Repository Structure Awareness\r\n\r\nCopilot must understand the following key Prismata folders and treat them according to their roles:\r\n\r\n/Prismata/.workspace\r\n- Contains configs, logs, input and outputs, samples, and test data, logs and configuration.\r\n- Not visible on GitHub.  Include in .gitignore.\r\n- Copilot should treat this as support infrastructure, not a source of architectural truth.\r\n- Do not generate new global systems here.\r\n\r\n/Prismata/Meta/Historical\r\n- Contains architectural history, deprecated schemas, and prior iterations.\r\n- Copilot must not modify Historical files unless explicitly instructed.  Use only as reference when clarifying intent or evolution.\r\n\r\n/Prismata/Meta/canonical\r\n- Contains canonical schemas, manifests, UDI definitions, and metadata rules.\r\n- This is the single source of truth for schema and manifest structure.\r\n- Copilot must not create alternate schema formats or duplicate canonical files elsewhere.\r\n\r\n/Prismata/Projects/Tooling\r\n- Contains shared tooling such as ASTalyzer, Vile, and menu primitives.\r\n- Copilot should keep tooling modular, minimal, and deterministic.\r\n- ASTalyzer is analysis\u2011only; do not add editing logic.\r\n\r\n/Prismata/Projects/Applications\r\n- Contains application\u2011level modules (e.g., Universe).\r\n- Universe must rely on canonical schemas and ASTalyzer output.\r\n- Avoid cross\u2011project coupling or global orchestration.\r\n\r\n/Prismata/Projects/Services\r\n- Contains service\u2011level modules and background helpers.\r\n- Keep services small, focused, and free of unnecessary abstraction.\r\n\r\n\r\n## Python / TypeScript implementation\r\n\r\nPrismata is a Python-first system. TypeScript is a typed boundary layer for UI and tooling.\r\nCopilot must follow the rules below when generating or modifying code.\r\n\r\n1. Python for core logic\r\nCopilot must implement the following exclusively in Python:\r\n\r\n- schema processing (nodes, entries, compositions, metadata)\r\n- dynamic composition resolution\r\n- multi-parent sort-order logic\r\n- metadata merging and inheritance\r\n- agent logic and cognition models\r\n- CLI systems (PCMS\u20112026, UDI, menus, commands)\r\n- file system operations\r\n- runtime evaluation, dynamic behavior, state machines\r\n- robotics / ROS2 integration\r\n- ASTalyzer core logic\r\n- network operations\r\n- any algorithmic, dynamic, or runtime-dependent code\r\n\r\nRule: If a module performs logic, computation, resolution, or mutation, implement it in Python (not TypeScript).\r\n\r\n2. TypeScript for boundary layers\r\nUse TypeScript only for modules that act as an interface between Python and UI/tooling. Typical allowed domains:\r\n\r\n- type definitions mirroring Python schemas\r\n- boundary validation of Python-produced data\r\n- UI-facing structures (React components, web components, schema editors, dashboards)\r\n- developer tooling (inspectors, visualizers, metadata browsers)\r\n- static shape guarantees for data entering the UI\r\n\r\nRule: If a module's job is to describe shape, validate structure, or provide typed props to UI, prefer TypeScript.\r\n\r\n3. Keep TypeScript free of business logic\r\nDo not implement business or runtime logic in TypeScript. Avoid placing the following responsibilities in TS:\r\n\r\n- sorting, composition resolution, metadata evaluation\r\n- dynamic field behavior or agent behavior\r\n- CLI logic, file system logic, runtime decisions\r\n\r\nRule: TypeScript may describe and validate data, but must not interpret, transform, or own core logic.\r\n\r\n4. Single source of truth\r\nPython is the authoritative source for:\r\n\r\n- schema definitions and metadata models\r\n- composition rules and custom field definitions\r\n- folder path configuration\r\n\r\nTypeScript may mirror these structures only as static types for UI/tooling.\r\n\r\n5. Minimal TypeScript footprint\r\nPrefer Python unless the code is explicitly UI-facing, acts as a boundary layer, requires static typing for developer experience, or is part of schema-editor tooling.\r\n\r\nDecision rule (mandatory)\r\nWhen choosing a language, apply this decision tree:\r\n\r\n- Does the module perform logic or runtime behavior? \u2192 Python\r\n- Does it describe data shape for UI/tooling? \u2192 TypeScript\r\n- Does it validate Python output before the UI? \u2192 TypeScript\r\n- Does it interact with runtime systems? \u2192 Python\r\n- Is it part of developer-facing visualization or editor tooling? \u2192 TypeScript",
+    "classification": {
+      "subtype": "agent-instruction",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

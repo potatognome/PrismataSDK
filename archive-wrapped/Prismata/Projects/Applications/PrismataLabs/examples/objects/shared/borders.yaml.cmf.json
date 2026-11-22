@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-prismatalabs-examples-objects-shared-borders-yaml",
+  "udi": "prismata.projects-applications-prismatalabs-examples-objects-shared.wrapped-object.borders-7cf745aad6",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "borders.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/PrismataLabs/examples/objects/shared/borders.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/PrismataLabs/examples/objects/shared/borders.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "5db89e154974fe6319d12ef7cabb0adad11f27ddb75f83264a97b029c2da8cd0"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "kind: border-patterns\r\nentries:\r\n- id: example-pane-border\r\n  udi: prismata.examples.border.example-pane\r\n  kind: border-pattern\r\n  glyphs:\r\n    top: \u2500\r\n    bottom: \u2500\r\n    left: \u2502\r\n    right: \u2502\r\n    corner_top_left: \u250c\r\n    corner_top_right: \u2510\r\n    corner_bottom_left: \u2514\r\n    corner_bottom_right: \u2518\r\n  thickness: 1\r\n  padding: 1\r\n  colour_role: prismata.examples.colour-role.border\r\n- id: example-menu-border\r\n  udi: prismata.examples.border.example-menu\r\n  kind: border-pattern\r\n  glyphs:\r\n    top: \u2550\r\n    bottom: \u2550\r\n    left: \u2551\r\n    right: \u2551\r\n    corner_top_left: \u2554\r\n    corner_top_right: \u2557\r\n    corner_bottom_left: \u255a\r\n    corner_bottom_right: \u255d\r\n  thickness: 1\r\n  padding: 1\r\n  colour_role: prismata.examples.colour-role.menu-border\r\n- id: example-item-border\r\n  udi: prismata.examples.border.example-item\r\n  kind: border-pattern\r\n  glyphs:\r\n    top: \u2500\r\n    bottom: \u2500\r\n    left: \u2502\r\n    right: \u2502\r\n    corner_top_left: \u256d\r\n    corner_top_right: \u256e\r\n    corner_bottom_left: \u2570\r\n    corner_bottom_right: \u256f\r\n  thickness: 1\r\n  padding: 0\r\n  colour_role: prismata.examples.colour-role.item-border\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

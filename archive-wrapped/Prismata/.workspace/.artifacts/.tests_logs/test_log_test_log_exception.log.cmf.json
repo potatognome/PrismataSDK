@@ -1,0 +1,36 @@
+{
+  "id": "workspace-artifacts-tests-logs-test-log-test-log-exception-log",
+  "udi": "prismata.workspace-artifacts-tests-logs.wrapped-artifact.test-log-test-log-exception-679ecb480f",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_log_test_log_exception.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/.artifacts/.tests_logs/test_log_test_log_exception.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.artifacts/.tests_logs/test_log_test_log_exception.log",
+    "encoding": "utf-8",
+    "content_sha256": "7fa8712cdfba433d29b83f7c839078bc847fa6ca19eeb3c5e4b93720deecb7f9"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 13:08:06  ======================================================================\r\n2026-08-30 13:08:06 |  Test 8: test_log_exception                                          |\r\n2026-08-30 13:08:06  ======================================================================\r\n2026-08-30 13:08:06 Running: 8 test_log_exception \u2014 log_exception \u2014 various exception types\r\n2026-08-30 13:08:06 (side-effect) Logger. log_exception with arguments: description exception category log_files\r\n2026-08-30 13:08:06 Testing exception type: ValueError\r\n\r\n\r\n2026-08-30 13:08:06 UNEXPECTED ERROR: Deliberate ValueError during examples bad value\r\n2026-08-30 13:08:06 ValueError logged without crash\r\n2026-08-30 13:08:06 Testing exception type: FileNotFoundError\r\n\r\n\r\n2026-08-30 13:08:06 UNEXPECTED ERROR: Deliberate FileNotFoundError during examples no such file\r\n2026-08-30 13:08:06 FileNotFoundError logged without crash\r\n2026-08-30 13:08:06 Testing exception type: TypeError\r\n\r\n\r\n2026-08-30 13:08:06 UNEXPECTED ERROR: Deliberate TypeError during examples wrong type\r\n2026-08-30 13:08:06 TypeError logged without crash\r\n2026-08-30 13:08:07 Testing exception type: KeyError\r\n\r\n\r\n2026-08-30 13:08:07 UNEXPECTED ERROR: Deliberate KeyError during examples 'missing_key'\r\n2026-08-30 13:08:07 KeyError logged without crash\r\n2026-08-30 13:08:07 Testing exception type: RuntimeError\r\n\r\n\r\n2026-08-30 13:08:07 UNEXPECTED ERROR: Deliberate RuntimeError during examples something went wrong\r\n2026-08-30 13:08:07 RuntimeError logged without crash\r\n2026-08-30 13:08:07 PASSED: log_exception complete\r\n2026-08-30 13:08:07 \u2705 PASSED: 8 test_log_exception\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 22:16:21  ======================================================================\r\n2026-08-30 22:16:21 |  Test 8: test_log_exception                                          |\r\n2026-08-30 22:16:21  ======================================================================\r\n2026-08-30 22:16:21 Running: 8 test_log_exception \u2014 log_exception \u2014 various exception types\r\n2026-08-30 22:16:21 (side-effect) Logger. log_exception with arguments: description exception category log_files\r\n2026-08-30 22:16:21 Testing exception type: ValueError\r\n\r\n\r\n2026-08-30 22:16:21 UNEXPECTED ERROR: Deliberate ValueError during examples bad value\r\n2026-08-30 22:16:21 ValueError logged without crash\r\n2026-08-30 22:16:21 Testing exception type: FileNotFoundError\r\n\r\n\r\n2026-08-30 22:16:21 UNEXPECTED ERROR: Deliberate FileNotFoundError during examples no such file\r\n2026-08-30 22:16:21 FileNotFoundError logged without crash\r\n2026-08-30 22:16:21 Testing exception type: TypeError\r\n\r\n\r\n2026-08-30 22:16:21 UNEXPECTED ERROR: Deliberate TypeError during examples wrong type\r\n2026-08-30 22:16:21 TypeError logged without crash\r\n2026-08-30 22:16:21 Testing exception type: KeyError\r\n\r\n\r\n2026-08-30 22:16:21 UNEXPECTED ERROR: Deliberate KeyError during examples 'missing_key'\r\n2026-08-30 22:16:21 KeyError logged without crash\r\n2026-08-30 22:16:21 Testing exception type: RuntimeError\r\n\r\n\r\n2026-08-30 22:16:21 UNEXPECTED ERROR: Deliberate RuntimeError during examples something went wrong\r\n2026-08-30 22:16:21 RuntimeError logged without crash\r\n2026-08-30 22:16:21 PASSED: log_exception complete\r\n2026-08-30 22:16:21 \u2705 PASSED: 8 test_log_exception\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-09-08 12:08:13  ======================================================================\r\n2026-09-08 12:08:13 |  Test 8: test_log_exception                                          |\r\n2026-09-08 12:08:13  ======================================================================\r\n2026-09-08 12:08:13 Running: 8 test_log_exception \u2014 log_exception \u2014 various exception types\r\n2026-09-08 12:08:13 (side-effect) Logger. log_exception with arguments: description exception category log_files\r\n2026-09-08 12:08:13 Testing exception type: ValueError\r\n\r\n\r\n2026-09-08 12:08:13 UNEXPECTED ERROR: Deliberate ValueError during examples bad value\r\n2026-09-08 12:08:13 ValueError logged without crash\r\n2026-09-08 12:08:13 Testing exception type: FileNotFoundError\r\n\r\n\r\n2026-09-08 12:08:13 UNEXPECTED ERROR: Deliberate FileNotFoundError during examples no such file\r\n2026-09-08 12:08:13 FileNotFoundError logged without crash\r\n2026-09-08 12:08:13 Testing exception type: TypeError\r\n\r\n\r\n2026-09-08 12:08:13 UNEXPECTED ERROR: Deliberate TypeError during examples wrong type\r\n2026-09-08 12:08:13 TypeError logged without crash\r\n2026-09-08 12:08:13 Testing exception type: KeyError\r\n\r\n\r\n2026-09-08 12:08:13 UNEXPECTED ERROR: Deliberate KeyError during examples 'missing_key'\r\n2026-09-08 12:08:13 KeyError logged without crash\r\n2026-09-08 12:08:13 Testing exception type: RuntimeError\r\n\r\n\r\n2026-09-08 12:08:13 UNEXPECTED ERROR: Deliberate RuntimeError during examples something went wrong\r\n2026-09-08 12:08:13 RuntimeError logged without crash\r\n2026-09-08 12:08:13 PASSED: log_exception complete\r\n2026-09-08 12:08:13 \u2705 PASSED: 8 test_log_exception\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "workspace-artifacts-tests-logs-test-log-test-strip-ansi-log",
+  "udi": "prismata.workspace-artifacts-tests-logs.wrapped-artifact.test-log-test-strip-ansi-15d5b45d46",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_log_test_strip_ansi.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/.artifacts/.tests_logs/test_log_test_strip_ansi.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.artifacts/.tests_logs/test_log_test_strip_ansi.log",
+    "encoding": "utf-8",
+    "content_sha256": "4fda21c22bc4048e1dfcadb916e3661757553b9f9593006c9a34ce37e1f7368c"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 13:08:04  ======================================================================\r\n2026-08-30 13:08:04 |  Test 3: test_strip_ansi                                             |\r\n2026-08-30 13:08:04  ======================================================================\r\n2026-08-30 13:08:04 Running: 3 test_strip_ansi \u2014 strip_ansi \u2014 removes escape codes\r\n2026-08-30 13:08:04 stripped = ColourManager. strip_ansi with arguments: fstring=<coloured string>\r\n2026-08-30 13:08:04 ran successfully. Producing output: 'hello world'\r\n2026-08-30 13:08:04 Assert: no ANSI codes remain after strip\r\n2026-08-30 13:08:04 \r\n2026-08-30 13:08:04 Assert: plain text passes through unchanged\r\n2026-08-30 13:08:04 \r\n2026-08-30 13:08:04 strip_ansi('') \u2192 ''\r\n2026-08-30 13:08:04 strip_ansi(codes only) \u2192 ''\r\n2026-08-30 13:08:04 \r\n2026-08-30 13:08:04 \u2705 PASSED: 3 test_strip_ansi\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 22:16:19  ======================================================================\r\n2026-08-30 22:16:19 |  Test 3: test_strip_ansi                                             |\r\n2026-08-30 22:16:19  ======================================================================\r\n2026-08-30 22:16:19 Running: 3 test_strip_ansi \u2014 strip_ansi \u2014 removes escape codes\r\n2026-08-30 22:16:19 stripped = ColourManager. strip_ansi with arguments: fstring=<coloured string>\r\n2026-08-30 22:16:19 ran successfully. Producing output: 'hello world'\r\n2026-08-30 22:16:19 Assert: no ANSI codes remain after strip\r\n2026-08-30 22:16:19 \r\n2026-08-30 22:16:19 Assert: plain text passes through unchanged\r\n2026-08-30 22:16:19 \r\n2026-08-30 22:16:19 strip_ansi('') \u2192 ''\r\n2026-08-30 22:16:19 strip_ansi(codes only) \u2192 ''\r\n2026-08-30 22:16:19 \r\n2026-08-30 22:16:19 \u2705 PASSED: 3 test_strip_ansi\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-09-08 12:08:11  ======================================================================\r\n2026-09-08 12:08:11 |  Test 3: test_strip_ansi                                             |\r\n2026-09-08 12:08:11  ======================================================================\r\n2026-09-08 12:08:11 Running: 3 test_strip_ansi \u2014 strip_ansi \u2014 removes escape codes\r\n2026-09-08 12:08:11 stripped = ColourManager. strip_ansi with arguments: fstring=<coloured string>\r\n2026-09-08 12:08:11 ran successfully. Producing output: 'hello world'\r\n2026-09-08 12:08:11 Assert: no ANSI codes remain after strip\r\n2026-09-08 12:08:11 \r\n2026-09-08 12:08:11 Assert: plain text passes through unchanged\r\n2026-09-08 12:08:11 \r\n2026-09-08 12:08:11 strip_ansi('') \u2192 ''\r\n2026-09-08 12:08:11 strip_ansi(codes only) \u2192 ''\r\n2026-09-08 12:08:11 \r\n2026-09-08 12:08:11 \u2705 PASSED: 3 test_strip_ansi\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

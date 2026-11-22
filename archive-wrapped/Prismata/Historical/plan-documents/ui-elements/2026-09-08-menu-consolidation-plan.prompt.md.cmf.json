@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-ui-elements-2026-09-08-menu-consolidation-plan-prompt-md",
+  "udi": "prismata.historical-plan-documents-ui-elements.wrapped-plan.x-2026-09-08-menu-consolidation-plan-prompt-ce0ead7b6c",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "2026-09-08-menu-consolidation-plan.prompt.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/ui-elements/2026-09-08-menu-consolidation-plan.prompt.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/ui-elements/2026-09-08-menu-consolidation-plan.prompt.md",
+    "encoding": "utf-8",
+    "content_sha256": "cee1b960257840d51a0b997d18d5325cc1a53bf3f67681ecae6a6f1c1d6ad81b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# PCMS\u20112026 MENU SYSTEM REVIEW + CONSOLIDATION PLAN\r\n\r\n# Last updated: 2026-09-08\r\n\r\n- tUilKit CLI menu rendering primitives\r\n- Prismata Projects/Tooling/primitives menu helpers and wrappers\r\nYou are entering PCMS\u20112026 MENU SYSTEM REVIEW + CONSOLIDATION PLANNING MODE.\r\n\r\nYour task is to perform a full architectural review and consolidation plan\r\nfor all menu-related schemas, primitives, rendering logic, and helper\r\nwrappers across:\r\n\r\n- PCMS\u20112026 schemas (menus, menu-items, menu-headers, borders)\r\n- Universe menu logic (legacy)\r\n- TS + Python menu helper modules (legacy)\r\n\r\n============================================================\r\n1. REVIEW PCMS\u20112026 MENU SCHEMAS\r\n============================================================\r\nAnalyze the current canonical schemas:\r\n\r\n - menu.schema.yaml\r\n - menu-item.schema.yaml\r\n - menu-header.schema.yaml\r\n - border-pattern.schema.yaml (for menu borders)\r\n - ui-framework.schema.yaml (menu framework integration)\r\n\r\nIdentify:\r\n- schema mismatches\r\n- outdated assumptions (ui_interface, legacy routing)\r\n- border + colour scheme binding correctness\r\n\r\nConfirm schemas align with the updated UI stack:\r\n- Menu Layer (metadata only)\r\n- Routing Engine Layer (dispatch only)\r\n- UI Framework Layer (shape only)\r\n- Presentation Layer (styling only)\r\n\r\n============================================================\r\n2. REVIEW tUilKit CLI MENU RENDERING PRIMITIVES\r\n============================================================\r\nAnalyze tUilKit\u2019s canonical CLI/TUI menu rendering primitives:\r\n\r\n- cli_menu\r\n- cli_menu_item\r\n- cli_menu_header\r\n- cli_menu_border\r\n- cli_menu_highlight\r\n- cli_menu_navigation\r\n\r\nIdentify:\r\n- formatting rules\r\n- glyph usage\r\n- border usage\r\n- colour usage\r\n- selection/highlight behavior\r\n- zero-dependency guarantees\r\n- compatibility with updated schemas\r\n\r\nConfirm tUilKit remains:\r\n- independent\r\n- self-contained\r\n- the authoritative menu rendering provider\r\n\r\n============================================================\r\n3. REVIEW TOOLING MENU HELPERS & WRAPPERS\r\n============================================================\r\nAnalyze Tooling\u2019s role as the compatibility layer between Universe and\r\ntUilKit for menu operations.\r\n\r\nIdentify:\r\n- TS wrappers around tUilKit menu primitives\r\n- Python wrappers around tUilKit menu primitives\r\n- metadata utilities for menu construction\r\n- schema validation utilities for menu definitions\r\n- fallback behavior if tUilKit is unavailable\r\n\r\nConfirm Tooling must:\r\n- wrap tUilKit primitives\r\n- validate menu schemas\r\n- normalize menu metadata\r\n- provide minimal fallback rendering\r\n- never re-implement tUilKit formatting\r\n\r\n============================================================\r\n4. REVIEW UNIVERSE MENU LOGIC (LEGACY)\r\n============================================================\r\nIdentify all menu-related logic inside Universe:\r\n\r\n- menu definitions\r\n- menu routing helpers\r\n- menu rendering helpers\r\n- menu metadata utilities\r\n\r\nDetermine:\r\n- which modules must be removed\r\n- which modules must be rewritten to use Tooling wrappers\r\n- which modules still depend on legacy menu logic\r\n- which modules incorrectly perform rendering or styling\r\n\r\nUniverse must:\r\n- never call tUilKit directly\r\n- never implement its own menu rendering\r\n- never define borders or colours\r\n- never interpret menu content\r\n\r\n============================================================\r\n5. REVIEW MENU HANDLERS & HELPER METHODS\r\n============================================================\r\nIdentify all menu-related helper methods across TS, Python, and Universe.\r\n\r\nDetermine:\r\n- duplicated logic\r\n- helpers that belong in Tooling\r\n- helpers that must be removed\r\n- helpers that must be rewritten as thin wrappers\r\n- helpers that incorrectly perform routing or styling\r\n\r\n============================================================\r\n6. CREATE A CONSOLIDATION PLAN\r\n============================================================\r\nProduce a step-by-step plan to unify menu systems across the ecosystem:\r\n\r\n- PCMS\u20112026 schemas as authoritative definitions\r\n- tUilKit as the canonical rendering provider\r\n- Tooling as the adapter + fallback layer\r\n- TS/Python wrappers as thin language adapters\r\n- Universe as a pure consumer of Tooling menu helpers\r\n\r\nPlan must include:\r\n- affected files\r\n- required refactors\r\n- deprecated modules to remove\r\n- new wrapper modules to create\r\n- fallback rendering design\r\n- testing strategy\r\n\r\n============================================================\r\n7. OUTPUT REQUIREMENTS\r\n============================================================\r\nPLANNING MODE ONLY.\r\nDo NOT write code yet.\r\n\r\nOutput:\r\n- analysis\r\n- dependency maps\r\n- consolidation plan\r\n- fallback rendering design\r\n- file-by-file checklist\r\n\r\nWait for explicit instruction:\r\n\u201cProceed with menu system implementation.\u201d\r\n\r\nBegin by summarizing the current menu architecture across PCMS\u20112026\r\nschemas, tUilKit primitives, Tooling wrappers, and Universe.\r\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

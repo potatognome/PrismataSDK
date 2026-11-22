@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-project-classification-interface-capability-model-md",
+  "udi": "prismata.historical-architecture-evolution-project-classification.wrapped-document.interface-capability-model-1787b5ea08",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "Interface_Capability_Model.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/project-classification/Interface_Capability_Model.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/project-classification/Interface_Capability_Model.md",
+    "encoding": "utf-8",
+    "content_sha256": "4080114374a44dc33bed6607dfe6f8da743b0147bd875b04bbce39d435918ec8"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Interface Capability Model\r\n\r\n## LAST UPDATE: 2026-06-01\r\n\r\nCanonical interface capability model consolidated from snapshot.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

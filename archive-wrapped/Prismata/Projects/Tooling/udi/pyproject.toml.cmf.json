@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-udi-pyproject-toml",
+  "udi": "prismata.projects-tooling-udi.wrapped-artifact.pyproject-54e46f04c0",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "pyproject.toml",
+    "source_file_type": "toml",
+    "wrapped_subtype": "artifact",
+    "relative_path": "Projects/Tooling/udi/pyproject.toml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/udi/pyproject.toml",
+    "encoding": "utf-8",
+    "content_sha256": "4cf677e7a3c43c5a67bd94a078aa37ac80392772a906f9063260b9a822b0cbdd"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "[project]\r\nname = \"uditool\"\r\nversion = \"1.1.0\"\r\ndescription = \"Prismata UDI tooling\"\r\nreadme = \"README.md\"\r\nrequires-python = \">=3.10\"\r\n\r\n[project.optional-dependencies]\r\ndev = [\"pytest\", \"ruamel.yaml\", \"typer\"]\r\n\r\n[project.scripts]\r\nuditool = \"uditool.cli:main\"\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

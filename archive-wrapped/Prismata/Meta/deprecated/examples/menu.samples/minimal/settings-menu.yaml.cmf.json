@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-examples-menu-samples-minimal-settings-menu-yaml",
+  "udi": "prismata.meta-deprecated-examples-menu-samples-minimal.wrapped-object.settings-menu-d540ce90db",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "settings-menu.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/examples/menu.samples/minimal/settings-menu.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/examples/menu.samples/minimal/settings-menu.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "d848a4a0c8be8be236699f280400b01404f038b56449c5f8dc83ecaf5a8b5c3b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeffmenus:\r\n  - id: menu.settings\r\n    key: menu.settings\r\n    udi: prismata.menu.settings\r\n    name: Settings\r\n    title: Settings\r\n    label: Settings\r\n    position: Sub\r\n    parent: menu.main\r\n    order: 2\r\n    type: settings\r\n    icon: \"\u2699\ufe0f\"\r\n    colourScheme: settings-menu\r\n    borderScheme: settings-menu\r\n    description: Minimal settings menu.\r\n    finalItemType: Back\r\n    header:\r\n      udi: prismata.menu.settings.header\r\n      text: Settings\r\n      style: header\r\n      colourScheme: header\r\n      borderScheme: settings-menu\r\n      visibilityMode: Static\r\n    footer:\r\n      udi: prismata.menu.settings.footer\r\n      text: Use arrows to change values\r\n      style: footer\r\n      colourScheme: footer\r\n      borderScheme: settings-menu\r\n      visibilityMode: Static\r\n    items:\r\n      - udi: prismata.menu.settings.darkmode\r\n        key: settings.darkmode\r\n        name: Dark Mode\r\n        label: Dark Mode\r\n        type: toggle\r\n        order: 1\r\n        selectionMethod: toggle\r\n        action: execute\r\n        ui_framework: toggle_table\r\n        capability: prismata.settings.toggle_dark_mode\r\n        executeTarget: toggle_darkmode\r\n        icon: \"\u263e\"\r\n        colourScheme: default\r\n\r\n      - udi: prismata.menu.settings.volume\r\n        key: settings.volume\r\n        name: Volume\r\n        label: Volume\r\n        type: slider\r\n        order: 2\r\n        selectionMethod: slider\r\n        action: execute\r\n        ui_framework: custom\r\n        capability: prismata.settings.adjust_volume\r\n        executeTarget: adjust_volume\r\n        icon: \"\ud83d\udd0a\"\r\n        colourScheme: default\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

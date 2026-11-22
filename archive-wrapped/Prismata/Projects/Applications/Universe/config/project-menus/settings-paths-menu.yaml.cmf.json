@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-project-menus-settings-paths-menu-yaml",
+  "udi": "prismata.projects-applications-universe-config-project-menus.wrapped-object.settings-paths-menu-11ff1d9113",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "settings-paths-menu.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/Universe/config/project-menus/settings-paths-menu.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/project-menus/settings-paths-menu.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "0721fd6d235fa0113df5dd750eaee28c3d1cba7edc171a1d5ba82577f975932e"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: settings-paths-menu.yaml\r\n## Type: project menu\r\n## Purpose: Menu for managing default folder paths (canonical, project,\r\n## and workspace roots) referenced by settings and tooling.\r\n\r\nmetadata:\r\n  udi: prismata.universe.menu.settings.paths\r\n  name: \"Settings > Paths Menu\"\r\n  version: \"0.1.0\"\r\n  kind: menu\r\n  description: \"Submenu for default folder path configuration.\"\r\n\r\nitems:\r\n  - key: \"1\"\r\n    udi: \"prismata.universe.menu.settings.paths.canonical-folder\"\r\n    label: \"Canonical Folder\"\r\n    description: \"Set the root folder for canonical registry schemas and manifests.\"\r\n    capability: \"prismata.universe.capability.app-settings-paths\"\r\n    args:\r\n      key_value: \"canonical_folder\"\r\n      pick_mode: \"folder\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"2\"\r\n    udi: \"prismata.universe.menu.settings.paths.project-root\"\r\n    label: \"Project Root\"\r\n    description: \"Set the root folder for the active Prismata project.\"\r\n    capability: \"prismata.universe.capability.app-settings-paths\"\r\n    args:\r\n      key_value: \"project_root\"\r\n      pick_mode: \"folder\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"3\"\r\n    udi: \"prismata.universe.menu.settings.paths.workspace-root\"\r\n    label: \"Workspace Root\"\r\n    description: \"Set the Universe workspace directory (state, ingestion, registry, archive).\"\r\n    capability: \"prismata.universe.capability.app-settings-paths\"\r\n    args:\r\n      key_value: \"workspace_root\"\r\n      pick_mode: \"folder\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"4\"\r\n    udi: \"prismata.universe.menu.settings.paths.temp-folder\"\r\n    label: \"Temp Folder\"\r\n    description: \"Set the temporary working directory for intermediate outputs.\"\r\n    capability: \"prismata.universe.capability.app-settings-paths\"\r\n    args:\r\n      key_value: \"temp_folder\"\r\n      pick_mode: \"folder\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-project-menus-edit-export-menu-yaml",
+  "udi": "prismata.projects-applications-universe-config-project-menus.wrapped-object.edit-export-menu-2d19ace6b5",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "edit-export-menu.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/Universe/config/project-menus/edit-export-menu.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/project-menus/edit-export-menu.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "5516ff7e00349a6e0bd3407b4a6cf75bf3adc388c22f0833d24ecc5f224e52d7"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "metadata:\r\n  udi: prismata.universe.menu.edit.export\r\n  name: \"Edit > Export Menu\"\r\n  version: \"0.1.0\"\r\n  kind: menu\r\n  description: \"Submenu for exporting objects using current runtime settings.\"\r\n\r\nitems:\r\n  - key: \"1\"\r\n    udi: \"prismata.universe.menu.edit.export.custom\"\r\n    label: \"Export With Current Settings\"\r\n    description: \"Export selected objects using current runtime and naming settings.\"\r\n    capability: \"prismata.universe.capability.fs-export-custom\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-ui-elements-ui-frameworks-changelog-md",
+  "udi": "prismata.historical-architecture-evolution-ui-elements-ui-frameworks.wrapped-document.changelog-656f581684",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "CHANGELOG.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/ui-elements/ui-frameworks/CHANGELOG.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/ui-elements/ui-frameworks/CHANGELOG.md",
+    "encoding": "utf-8",
+    "content_sha256": "89b7f6dcf9b95aa8df1eaa501dfc7c50d6d6797c3fd48f39cbcb8d575737dd82"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Changelog \u2014 UI Frameworks\r\n\r\n- 2026-08-24 \u2014 Added `routing_engine.contract` and `pane_renderer.contract` detailing responsibilities and integration points for routing and rendering.\r\n- 2026-08-21 \u2014 `UI_framework_Contract` defined: framework types, pane/carousel/diff contracts, override rules, and content independence guarantees.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

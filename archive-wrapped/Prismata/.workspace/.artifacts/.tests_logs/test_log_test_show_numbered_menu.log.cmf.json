@@ -1,0 +1,36 @@
+{
+  "id": "workspace-artifacts-tests-logs-test-log-test-show-numbered-menu-log",
+  "udi": "prismata.workspace-artifacts-tests-logs.wrapped-artifact.test-log-test-show-numbered-menu-a36cacd9e5",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_log_test_show_numbered_menu.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/.artifacts/.tests_logs/test_log_test_show_numbered_menu.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.artifacts/.tests_logs/test_log_test_show_numbered_menu.log",
+    "encoding": "utf-8",
+    "content_sha256": "de0b77d1944903d19137b7e6126b41e38222fee20ec5b85a65946bc7e099ccbe"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 13:20:39  ======================================================================\r\n2026-08-30 13:20:39 |  Test 1: test_show_numbered_menu                                     |\r\n2026-08-30 13:20:39  ======================================================================\r\n2026-08-30 13:20:39 Running: 1 test_show_numbered_menu \u2014 show_numbered_menu \u2014 all inputs incl. break\r\n2026-08-30 13:20:39 result = CLIMenuHandler. show_numbered_menu with arguments: title='Test Menu' options=[opt_a, opt_b, opt_c] allow_back=True allow_quit=True\r\n2026-08-30 13:20:39 ran successfully. Producing output: 'opt_a' \u2192 assigned to result\r\n2026-08-30 13:20:39 Assert: valid choice returns correct key\r\n2026-08-30 13:20:39 \r\n2026-08-30 13:20:39 Last option PASSED\r\n2026-08-30 13:20:39 quit \u2192 'quit'\r\n2026-08-30 13:20:39 quit PASSED\r\n2026-08-30 13:20:39 back \u2192 'back'\r\n2026-08-30 13:20:39 back PASSED\r\n2026-08-30 13:20:39 q shortcut PASSED\r\n2026-08-30 13:20:39 Break (empty string) \u2192 None\r\n2026-08-30 13:20:39 Break (out-of-range number) \u2192 None\r\n2026-08-30 13:20:39 Break (non-numeric text) \u2192 None\r\n2026-08-30 13:20:39 Break (very long string) \u2192 None\r\n2026-08-30 13:20:39 Break (null byte) \u2192 None\r\n2026-08-30 13:20:39 Break (tab/newline) \u2192 None\r\n2026-08-30 13:20:39 Break (negative number) \u2192 None\r\n2026-08-30 13:20:39 Break (float) \u2192 None\r\n2026-08-30 13:20:39 Break (special chars) \u2192 None\r\n2026-08-30 13:20:39 Empty options \u2192 None\r\n2026-08-30 13:20:39 \u2705 PASSED: 1 test_show_numbered_menu\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 22:15:59  ======================================================================\r\n2026-08-30 22:15:59 |  Test 1: test_show_numbered_menu                                     |\r\n2026-08-30 22:15:59  ======================================================================\r\n2026-08-30 22:15:59 Running: 1 test_show_numbered_menu \u2014 show_numbered_menu \u2014 all inputs incl. break\r\n2026-08-30 22:15:59 result = CLIMenuHandler. show_numbered_menu with arguments: title='Test Menu' options=[opt_a, opt_b, opt_c] allow_back=True allow_quit=True\r\n2026-08-30 22:15:59 ran successfully. Producing output: 'opt_a' \u2192 assigned to result\r\n2026-08-30 22:15:59 Assert: valid choice returns correct key\r\n2026-08-30 22:15:59 \r\n2026-08-30 22:15:59 Last option PASSED\r\n2026-08-30 22:15:59 quit \u2192 'quit'\r\n2026-08-30 22:15:59 quit PASSED\r\n2026-08-30 22:15:59 back \u2192 'back'\r\n2026-08-30 22:15:59 back PASSED\r\n2026-08-30 22:15:59 q shortcut PASSED\r\n2026-08-30 22:15:59 Break (empty string) \u2192 None\r\n2026-08-30 22:15:59 Break (out-of-range number) \u2192 None\r\n2026-08-30 22:15:59 Break (non-numeric text) \u2192 None\r\n2026-08-30 22:15:59 Break (very long string) \u2192 None\r\n2026-08-30 22:15:59 Break (null byte) \u2192 None\r\n2026-08-30 22:15:59 Break (tab/newline) \u2192 None\r\n2026-08-30 22:15:59 Break (negative number) \u2192 None\r\n2026-08-30 22:15:59 Break (float) \u2192 None\r\n2026-08-30 22:15:59 Break (special chars) \u2192 None\r\n2026-08-30 22:15:59 Empty options \u2192 None\r\n2026-08-30 22:15:59 \u2705 PASSED: 1 test_show_numbered_menu\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-09-08 12:07:52  ======================================================================\r\n2026-09-08 12:07:52 |  Test 1: test_show_numbered_menu                                     |\r\n2026-09-08 12:07:52  ======================================================================\r\n2026-09-08 12:07:52 Running: 1 test_show_numbered_menu \u2014 show_numbered_menu \u2014 all inputs incl. break\r\n2026-09-08 12:07:52 result = CLIMenuHandler. show_numbered_menu with arguments: title='Test Menu' options=[opt_a, opt_b, opt_c] allow_back=True allow_quit=True\r\n2026-09-08 12:07:52 ran successfully. Producing output: 'opt_a' \u2192 assigned to result\r\n2026-09-08 12:07:52 Assert: valid choice returns correct key\r\n2026-09-08 12:07:52 \r\n2026-09-08 12:07:52 Last option PASSED\r\n2026-09-08 12:07:52 quit \u2192 'quit'\r\n2026-09-08 12:07:52 quit PASSED\r\n2026-09-08 12:07:52 back \u2192 'back'\r\n2026-09-08 12:07:52 back PASSED\r\n2026-09-08 12:07:52 q shortcut PASSED\r\n2026-09-08 12:07:52 Break (empty string) \u2192 None\r\n2026-09-08 12:07:52 Break (out-of-range number) \u2192 None\r\n2026-09-08 12:07:52 Break (non-numeric text) \u2192 None\r\n2026-09-08 12:07:52 Break (very long string) \u2192 None\r\n2026-09-08 12:07:52 Break (null byte) \u2192 None\r\n2026-09-08 12:07:52 Break (tab/newline) \u2192 None\r\n2026-09-08 12:07:52 Break (negative number) \u2192 None\r\n2026-09-08 12:07:52 Break (float) \u2192 None\r\n2026-09-08 12:07:52 Break (special chars) \u2192 None\r\n2026-09-08 12:07:52 Empty options \u2192 None\r\n2026-09-08 12:07:52 \u2705 PASSED: 1 test_show_numbered_menu\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

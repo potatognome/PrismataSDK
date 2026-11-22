@@ -1,0 +1,36 @@
+{
+  "id": "historical-analysis-ui-schema-compatibility-2026-09-15-md",
+  "udi": "prismata.historical-analysis.wrapped-schema.ui-schema-compatibility-2026-09-15-7889af0434",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "ui-schema-compatibility-2026-09-15.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "schema",
+    "relative_path": "Historical/analysis/ui-schema-compatibility-2026-09-15.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/analysis/ui-schema-compatibility-2026-09-15.md",
+    "encoding": "utf-8",
+    "content_sha256": "f28c6bafdeadc53cf14760e98e6007aa3c766de2004bb707165ac4d04597fddd"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# UI Schema Compatibility Analysis \u2014 2026-09-15\r\n\r\n==============================================\r\n\r\n## Prepared by: automation (schema migration run)\r\n\r\n## Date: 2026-09-15\r\n\r\n## Scope\r\n\r\n- Groups reviewed: borders (border-pattern, border-scheme-registry), colours (chromascheme-output, colour-roles, colour-scheme, colour-preview-multipane), menus (menu, menu-item, menu-registry, menu-types, menu-tree, menu-header), ui_framework & pane.\r\n- Goal: detect duplication, circular refs, boundary ambiguity, and implementation gaps; recommend pragmatic fixes and next steps.\r\n\r\n## Summary Findings\r\n\r\n- Header standardization: All UI schemas in `Meta/canonical/ui.schemas` now include `udi` and `metadata` headers; `spec.target_kind` and `spec.fields` were added across the set to match `core.schemas/schema.schema.yaml` expectations.\r\n- Naming: Filenames and UDIs were normalized to kebab-case and `prismata.meta.ui-schema.<kebab-case>` respectively. Registries follow `-registry` suffix convention.\r\n- Cross-references: `$ref` usage is mostly relative and consistent (e.g., `./control-structures.schema.yaml`); registries reference shape schemas correctly.\r\n\r\n## Group-specific notes\r\n\r\n- Borders\r\n  - `border-pattern.schema.yaml` (shape) and `border-pattern-registry.schema.yaml` (registry) are properly separated.\r\n  - `border-scheme-registry.schema.yaml` contains scheme definitions referencing border IDs and colourScheme keys. Consider consolidating colourScheme pointer naming for consistency (either `colourScheme` everywhere or `colour_scheme`).\r\n\r\n- Colours\r\n  - `chromascheme-output.schema.yaml` references `colour-roles.schema.yaml` and defines `colourSet` + `geometry` for previews; `colour-preview-multipane` is separate for visual test harnesses.\r\n  - `colour-roles` uses `$defs` and nested structures that are robust; ensure `$id` URIs are unique and consistent for cross-referencing. A few `$id` values still use dotted names (legacy) \u2014 consider normalizing `$id` to `prismata://meta/canonical/<kebab-case>` where present.\r\n\r\n- Menus\r\n  - Menu schemas correctly reference `control-structures` for visibility/enablement rules.\r\n  - `menu-registry` exposes `menuTypes` and `menuItemTypes` registries; consider adding explicit registry key documentation and sample entries in `Meta/defaults/ui` for reference.\r\n\r\n- UI Framework / Pane\r\n  - `pane.schema.yaml` now includes `spec.fields` describing `id`, `role`, `coordinates`. Consider adding a canonical `coordinates` field definition (e.g., `x,y,width,height` constraints) into a shared `$defs` so other schemas can reference it.\r\n\r\n## Potential Issues / Gaps\r\n\r\n- `$id` inconsistency: some schema files declare `$id` using legacy dotted names (e.g., `prismata://meta/canonical/chromascheme.output`). This does not break local `$ref` resolution but may confuse tooling expecting kebab-case in `$id` too.\r\n- Schema `required` semantics: The meta-schema expects `spec.fields` to enumerate fields and their `required` status. Currently many schemas list `required:` within the JSON Schema body, which is fine, but `spec.fields[].required` should be kept in sync where relevant for tooling that reads `spec.fields` rather than raw `required` lists.\r\n- Documentation drift: Historical docs and archived snapshots still include legacy paths and filenames in a few places (some were auto-fixed, some remain archived). These are low-risk but noisy.\r\n- Registry sample defaults: There are moved `.defaults.yaml` files in `Meta/defaults/ui`; ensure tooling knows to load defaults from that path.\r\n\r\n## Recommendations (actionable)\r\n\r\n1. Normalize `$id` URIs across `Meta/canonical/ui.schemas` to use kebab-case and `prismata://meta/canonical/<filename-without-ext>` to avoid ambiguity.\r\n2. Add a shared `$defs` for `coordinates` in `Meta/canonical/ui.schemas` (or core.schemas) and reference it from `pane.schema.yaml` and any layout-related schemas.\r\n3. Audit `spec.fields` vs `required` lists and keep them synchronized: for any field required by the schema, ensure `spec.fields` contains the entry with `required: true`.\r\n4. Add short sample entries in `Meta/defaults/ui/*.defaults.yaml` demonstrating registry shape and expected keys (helpful for tooling & docs).\r\n5. Run a single-pass resolver across all schemas (using `jsonschema`'s resolver with a `store`) to detect unresolved `$ref` targets and circular refs. I can run this if you want.\r\n6. Update remaining archived docs that still reference legacy paths (low priority) or add a short README in `Meta/deprecated/ui.schemas` explaining the migration.\r\n\r\n## Next steps I can take (pick any)\r\n\r\n- Normalize `$id` URIs automatically.\r\n- Add `coordinates` `$defs` and update `pane.schema.yaml` to reference it.\r\n- Synchronize `spec.fields` `required` flags with schema `required` lists.\r\n- Produce a report of any unresolved `$ref` or circular references by resolving all schemas programmatically.\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

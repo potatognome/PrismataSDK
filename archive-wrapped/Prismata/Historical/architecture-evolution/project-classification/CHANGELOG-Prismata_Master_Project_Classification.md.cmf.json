@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-project-classification-changelog-prismata-master-project-classification-md",
+  "udi": "prismata.historical-architecture-evolution-project-classification.wrapped-document.changelog-prismata-master-project-classification-fc75570129",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "CHANGELOG-Prismata_Master_Project_Classification.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/project-classification/CHANGELOG-Prismata_Master_Project_Classification.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/project-classification/CHANGELOG-Prismata_Master_Project_Classification.md",
+    "encoding": "utf-8",
+    "content_sha256": "d77916f3a9daa07a1575ba6e098e5947b09265e082658fd07ce2aa10c302edda"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Changelog \u2014 Prismata Master Project Classification\r\n\r\n- 2026-07-23 \u2014 Consolidated classification tables and canonical project roles.\r\n- 2026-06-01 \u2014 Initial Master Project Classification snapshot.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

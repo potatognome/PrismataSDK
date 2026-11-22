@@ -1,0 +1,36 @@
+{
+  "id": "workspace-projects-config-global-shared-d-border-patterns-json",
+  "udi": "prismata.workspace-projects-config-global-shared-d.wrapped-object.border-patterns-827f23cb47",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "BORDER_PATTERNS.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/.projects_config/GLOBAL_SHARED.d/BORDER_PATTERNS.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.projects_config/GLOBAL_SHARED.d/BORDER_PATTERNS.json",
+    "encoding": "utf-8",
+    "content_sha256": "c86757e94afe82e466601841b8fc35022e93ce008b983bbbcd9ef1bf0d6efb42"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\r\n    \"BORDER_PATTERNS\": {\r\n        \"SINGLE_LINE\": {\r\n            \"TOP\": [\"\u2500\"],\r\n            \"BOTTOM\": [\"\u2500\"],\r\n            \"LEFT\": [\"\u2502\"],\r\n            \"RIGHT\": [\"\u2502\"]\r\n        },\r\n        \"DOUBLE_LINE\": {\r\n            \"TOP\": [\"\u2550\"],\r\n            \"BOTTOM\": [\"\u2550\"],\r\n            \"LEFT\": [\"\u2551\"],\r\n            \"RIGHT\": [\"\u2551\"]\r\n        },\r\n        \"BOLD\": {\r\n            \"TOP\": [\"\u2501\"],\r\n            \"BOTTOM\": [\"\u2501\"],\r\n            \"LEFT\": [\"\u2503\"],\r\n            \"RIGHT\": [\"\u2503\"]\r\n        },\r\n        \"DASHED\": {\r\n            \"TOP\": [\"-\"],\r\n            \"BOTTOM\": [\"-\"],\r\n            \"LEFT\": [\"|\"],\r\n            \"RIGHT\": [\"|\"]\r\n        },\r\n        \"THICK_DASHED\": {\r\n            \"TOP\": [\"=\"],\r\n            \"BOTTOM\": [\"=\"],\r\n            \"LEFT\": [\"||\"],\r\n            \"RIGHT\": [\"||\"]\r\n        },\r\n        \"ASCII_BOX\": {\r\n            \"TOP\": [\"+\", \"-\", \"+\"],\r\n            \"BOTTOM\": [\"+\", \"-\", \"+\"],\r\n            \"LEFT\": [\"|\"],\r\n            \"RIGHT\": [\"|\"]\r\n        },\r\n        \"ROUNDED\": {\r\n            \"TOP\": [\"\u256d\", \"\u2500\", \"\u256e\"],\r\n            \"BOTTOM\": [\"\u2570\", \"\u2500\", \"\u256f\"],\r\n            \"LEFT\": [\"\u2502\"],\r\n            \"RIGHT\": [\"\u2502\"]\r\n        },\r\n        \"HEAVY_CONTOUR\": {\r\n            \"TOP\": [\"\u2588\"],\r\n            \"BOTTOM\": [\"\u2588\"],\r\n            \"LEFT\": [\"\u2588\"],\r\n            \"RIGHT\": [\"\u2588\"]\r\n        },\r\n        \"LIGHT_CONTOUR\": {\r\n            \"TOP\": [\"\u2591\"],\r\n            \"BOTTOM\": [\"\u2591\"],\r\n            \"LEFT\": [\"\u2591\"],\r\n            \"RIGHT\": [\"\u2591\"]\r\n        },\r\n        \"THICK_ASCII\": {\r\n            \"TOP\": [\"#\"],\r\n            \"BOTTOM\": [\"#\"],\r\n            \"LEFT\": [\"#\"],\r\n            \"RIGHT\": [\"#\"]\r\n        },\r\n        \"ZIGZAG\": {\r\n            \"TOP\": [\"/\", \"~\", \"\\\\\"],\r\n            \"BOTTOM\": [\"/\", \"~\", \"\\\\\"],\r\n            \"LEFT\": [\"/\"],\r\n            \"RIGHT\": [\"\\\\\"]\r\n        }\r\n    }\r\n}",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-project-classification-core-sub-categories-md",
+  "udi": "prismata.historical-architecture-evolution-project-classification.wrapped-document.core-sub-categories-4064a59059",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "Core_Sub_Categories.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/project-classification/Core_Sub_Categories.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/project-classification/Core_Sub_Categories.md",
+    "encoding": "utf-8",
+    "content_sha256": "6ea66c8b60d120263d019c48d0a11be2d3c94f613b7d00e16c979056ed06c426"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Core Sub Categories\r\n\r\n## LAST UPDATE: 2026-07-23\r\n\r\nCanonical list of core sub-categories consolidated from dated snapshots.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-ui-elements-2026-09-08-menu-item-schema-update-md",
+  "udi": "prismata.historical-plan-documents-ui-elements.wrapped-plan.x-2026-09-08-menu-item-schema-update-bd1a992fa3",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "2026-09-08-menu-item.schema-update.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/ui-elements/2026-09-08-menu-item.schema-update.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/ui-elements/2026-09-08-menu-item.schema-update.md",
+    "encoding": "utf-8",
+    "content_sha256": "fff43f4bb40d272bf35db4758f5263f9f0ad5b753f98419b679a2d7159823003"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Menu Item Schema\r\n\r\nversion: 0.1.0\r\n\r\ntype: object\r\ndescription: Canonical Menu-Item Object Model\r\nrequired:\r\n  - key\r\n  - name\r\n  - order\r\n  - action\r\n\r\nproperties:\r\n  key: { type: string }\r\n  udi: { type: string }\r\n  name: { type: string }\r\n  icon: { type: string }\r\n  colourScheme: { type: string }\r\n  type: { type: string }\r\n\r\n  selectionMethod:\r\n    type: string\r\n    enum:\r\n      - number\r\n      - toggle\r\n      - multi-toggle\r\n      - slider\r\n      - carousel\r\n      - text-input\r\n      - none\r\n\r\n  order: { type: integer }\r\n\r\n  action:\r\n    type: string\r\n    enum: [execute, navigate, back, exit, noop]\r\n\r\n  executeTarget: { type: string }\r\n  navigateTarget: { type: string }\r\n\r\n  visibilityMode:\r\n    type: string\r\n    enum: [Static, Conditional, Hidden]\r\n\r\n  visibilityCondition: { type: string }\r\n\r\n  visibilityDependencies:\r\n    type: array\r\n    items: { type: string }\r\n\r\n  enableMode:\r\n    type: string\r\n    enum: [Enabled, Disabled, Conditional]\r\n\r\n  enableCondition: { type: string }\r\n\r\n  enableDependencies:\r\n    type: array\r\n    items: { type: string }\r\n\r\n  registryKey: { type: string }\r\n  registryOverrides: { type: object }\r\n\r\n# UDI Menu Item Schema\r\n# Supports: action items, navigation items (submenus), header items\r\n# ui_framework refers to pane layout (basic, single_pane, two_pane, menu, custom)\r\n\r\ntype: object\r\n\r\nversion: 0.2.0\r\n\r\nrequired:\r\n  - key\r\n  - name\r\n  - type\r\n  - order\r\n  - selectionMethod\r\n  - action\r\n  - ui_framework\r\n  - capability\r\n\r\nproperties:\r\n\r\n  key:\r\n    type: string\r\n    description: Unique identifier for the menu item.\r\n\r\n  name:\r\n    type: string\r\n    description: Human-readable label or header text.\r\n\r\n  type:\r\n    type: string\r\n    enum:\r\n      - action\r\n      - navigate\r\n      - header\r\n    description: |\r\n      Item class:\r\n        - action: executes a capability\r\n        - navigate: opens a submenu\r\n        - header: non-interactive, non-numbered\r\n\r\n  order:\r\n    type: integer\r\n    description: |\r\n      Determines placement in the menu.\r\n      Header items use order only for positioning.\r\n\r\n  selectionMethod:\r\n    type: string\r\n    enum:\r\n      - number\r\n      - toggle\r\n      - multi-toggle\r\n      - slider\r\n      - carousel\r\n      - text-input\r\n      - none\r\n    description: |\r\n      Input method.\r\n      Header items MUST use: none.\r\n\r\n  action:\r\n    type: string\r\n    enum:\r\n      - execute\r\n      - navigate\r\n      - back\r\n      - exit\r\n      - none\r\n    description: |\r\n      Action performed when selected.\r\n      Header items MUST use: none.\r\n\r\n  ui_framework:\r\n    type: string\r\n    enum:\r\n      - basic\r\n      - menu\r\n      - single_pane\r\n      - two_pane\r\n      - custom\r\n    description: |\r\n      Defines pane layout:\r\n        - basic: raw terminal\r\n        - menu: menu-style pane\r\n        - single_pane: one bordered pane\r\n        - two_pane: two bordered panes\r\n        - custom: wizard/dashboard/multi-pane\r\n\r\n  capability:\r\n    type: string\r\n    description: |\r\n      Capability routed to agent.\r\n      Header items MUST use: \"none\".\r\n\r\n  navigateTarget:\r\n    type: string\r\n    nullable: true\r\n    description: Required when action = navigate.\r\n\r\n  executeTarget:\r\n    type: string\r\n    nullable: true\r\n    description: Required when action = execute.\r\n\r\n  icon:\r\n    type: string\r\n    nullable: true\r\n    description: Optional icon metadata.\r\n\r\n  colourScheme:\r\n    type: string\r\n    nullable: true\r\n    description: Optional colour scheme override.\r\n\r\n  description:\r\n    type: string\r\n    nullable: true\r\n    description: Extended help text.\r\n\r\n  tags:\r\n    type: array\r\n    items:\r\n      type: string\r\n    nullable: true\r\n    description: Metadata tags.\r\n\r\n  visibilityMode:\r\n    type: string\r\n    enum:\r\n      - static\r\n      - conditional\r\n      - hidden\r\n    nullable: true\r\n    description: Visibility control mode.\r\n\r\n  visibilityCondition:\r\n    type: string\r\n    nullable: true\r\n    description: |\r\n      Expression controlling visibility.\r\n      Example: user.groups.contains('admin')\r\n\r\n  visibilityDependencies:\r\n    type: array\r\n    items:\r\n      type: string\r\n    nullable: true\r\n    description: Keys referenced by visibilityCondition.\r\n\r\n  enableMode:\r\n    type: string\r\n    enum:\r\n      - enabled\r\n      - disabled\r\n      - conditional\r\n    nullable: true\r\n    description: Enablement mode.\r\n\r\n  enableCondition:\r\n    type: string\r\n    nullable: true\r\n    description: Expression controlling enablement.\r\n\r\n  enableDependencies:\r\n    type: array\r\n    items:\r\n      type: string\r\n    nullable: true\r\n    description: Keys referenced by enableCondition.\r\n\r\n  registryKey:\r\n    type: string\r\n    nullable: true\r\n    description: Lookup key in menu item registry.\r\n\r\n  registryOverrides:\r\n    type: object\r\n    nullable: true\r\n    description: Override registry defaults.\r\n\r\n  style:\r\n    type: object\r\n    nullable: true\r\n    description: tUilKit style metadata.\r\n\r\n  borderScheme:\r\n    type: string\r\n    nullable: true\r\n    description: Optional border override (headers commonly use this).\r\n\r\n  metadata:\r\n    type: object\r\n    nullable: true\r\n    description: Arbitrary UDI metadata block.\r\n\r\nadditionalProperties: false\r\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

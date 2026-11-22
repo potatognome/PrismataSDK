@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-validate-menu-actions-0-0-1-udi-assignment-json",
+  "udi": "prismata.workspace-universe-archive-tooling-validate-menu-actions-0-0-1.wrapped-object.udi-assignment-c67efbb93c",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "udi.assignment.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/archive/tooling.validate-menu-actions/0.0.1/udi.assignment.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.validate-menu-actions/0.0.1/udi.assignment.json",
+    "encoding": "utf-8",
+    "content_sha256": "e9f96dec1543f0e373a1ddd09362fe1ea20d4854880a194faa31efb3a0eb4e01"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  \"udi\": \"tooling.validate-menu-actions\",\n  \"package_name\": \"ValidateMenuActions\"\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

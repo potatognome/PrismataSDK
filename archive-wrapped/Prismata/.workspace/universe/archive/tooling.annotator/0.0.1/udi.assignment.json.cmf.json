@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-annotator-0-0-1-udi-assignment-json",
+  "udi": "prismata.workspace-universe-archive-tooling-annotator-0-0-1.wrapped-object.udi-assignment-df94aedff7",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "udi.assignment.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/archive/tooling.annotator/0.0.1/udi.assignment.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.annotator/0.0.1/udi.assignment.json",
+    "encoding": "utf-8",
+    "content_sha256": "b602904e99c60185309a7914224e18c8ccb2471bd2399bce5c8f3731aa5c0557"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  \"udi\": \"tooling.annotator\",\n  \"package_name\": \"Annotator\"\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

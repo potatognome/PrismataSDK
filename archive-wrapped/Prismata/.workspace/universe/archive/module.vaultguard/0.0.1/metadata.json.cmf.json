@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-module-vaultguard-0-0-1-metadata-json",
+  "udi": "prismata.workspace-universe-archive-module-vaultguard-0-0-1.wrapped-object.metadata-59ff7c2e1b",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "metadata.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/archive/module.vaultguard/0.0.1/metadata.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/module.vaultguard/0.0.1/metadata.json",
+    "encoding": "utf-8",
+    "content_sha256": "c9e92142830560f4c07d712a1784ab190a9e8e390731de2c46ffad17b384a9a8"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  \"package_name\": \"VaultGuard\",\n  \"udi\": \"module.vaultguard\",\n  \"version\": \"0.0.1\",\n  \"source_kind\": \"placeholder\",\n  \"source_path\": null,\n  \"ingested_at_utc\": \"2026-08-24T19:04:35.946Z\",\n  \"metadata\": {\n    \"placeholder\": true,\n    \"provenance\": \"C:\\\\Repository\\\\Daniel\\\\dev_local\\\\Prismata\\\\Meta\\\\governance\\\\vaultguard-prismcommand-onboarding.md\"\n  }\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-dependencyinspector-cli-py",
+  "udi": "prismata.projects-applications-dependencyinspector.wrapped-codeblock.cli-b7cee970c1",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "cli.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/DependencyInspector/cli.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/DependencyInspector/cli.py",
+    "encoding": "utf-8",
+    "content_sha256": "62ae4cb2d99612babe9fcb2d0b251dc856d0ba468143054e0d0014db15c9d82f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import argparse\r\nfrom .core.schema_loader import load_schema, load_all_schemas\r\nfrom .core.registry_loader import load_registry\r\nfrom .core.dependency_extractor import extract_dependencies_from_schema, analyze_manifest\r\n\r\ndef run_cli():\r\n    parser = argparse.ArgumentParser(description=\"Prismata Dependency Inspector\")\r\n    parser.add_argument(\"--schema\", type=str, help=\"Schema name\")\r\n    parser.add_argument(\"--all\", action=\"store_true\", help=\"Scan all schemas\")\r\n    parser.add_argument(\"--report\", type=str, help=\"Write output to a report file\")\r\n\r\n    args = parser.parse_args()\r\n\r\n    registry = load_registry()\r\n    results = []\r\n\r\n    if args.schema:\r\n        schema = load_schema(args.schema)\r\n        if not schema:\r\n            print(f\"Schema '{args.schema}' not found.\")\r\n            return\r\n\r\n        deps = extract_dependencies_from_schema(schema)\r\n        folder = registry.get(args.schema, {})\r\n        entry_id = registry.get(\"id\", \"\")\r\n\r\n        for entry_id, info in folder.items():\r\n            results.append(analyze_manifest(info[\"file\"], deps, registry))\r\n\r\n    elif args.all:\r\n        schemas = load_all_schemas()\r\n        for schema_name, schema in schemas.items():\r\n            deps = extract_dependencies_from_schema(schema)\r\n            folder = registry.get(schema_name, {})\r\n            for entry_id, info in folder.items():\r\n                results.append(analyze_manifest(info[\"file\"], deps, registry))\r\n\r\n    else:\r\n        print(\"Specify --schema <name> or --all\")\r\n        return\r\n\r\n    output = \"\\n\".join(results)\r\n    print(output)\r\n\r\n    if args.report:\r\n        with open(args.report, \"w\") as f:\r\n            f.write(output)\r\n        print(f\"Report written to {args.report}\")\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

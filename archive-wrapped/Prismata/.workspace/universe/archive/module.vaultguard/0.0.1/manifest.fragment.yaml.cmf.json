@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-module-vaultguard-0-0-1-manifest-fragment-yaml",
+  "udi": "prismata.workspace-universe-archive-module-vaultguard-0-0-1.wrapped-manifest.manifest-fragment-601144aec2",
+  "kind": "wrapped-manifest",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "manifest.fragment.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "manifest",
+    "relative_path": ".workspace/universe/archive/module.vaultguard/0.0.1/manifest.fragment.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/module.vaultguard/0.0.1/manifest.fragment.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "40f6ca98415e2518fefe55fc495b0801fda3a29b9af0f0d27d4d5662a0deccf9"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# VaultGuard + PrismCommand Onboarding\r\n\r\n## Current status\r\n\r\nThis document reflects the current scaffold that exists in the live repository layout under `Prismata/Projects/Services/VaultGuard/`.\r\n\r\nThe canonical live location is now:\r\n\r\n- `Prismata/Projects/Services/VaultGuard/terraform/`\r\n- `Prismata/Projects/Services/VaultGuard/policies/`\r\n- `Prismata/Projects/Services/VaultGuard/helm/`\r\n- `Prismata/Projects/Services/VaultGuard/kustomize/`\r\n\r\n## Scope\r\n\r\nThis scaffold establishes a dev-ready VaultGuard baseline and PrismCommand integration contract for secrets, policy enforcement, and runtime access boundaries.\r\n\r\n## What exists in the current scaffold\r\n\r\n- VaultGuard deployment scaffold in Terraform (`Prismata/Projects/Services/VaultGuard/terraform`) with:\r\n  - Kubernetes namespace creation\r\n  - HashiCorp Vault Helm release deployment\r\n  - HA mode enabled via `server.ha`\r\n  - Raft backend configuration\r\n  - TLS secret wiring and persistent volume templates\r\n- VaultGuard policy and RBAC scaffold (`Prismata/Projects/Services/VaultGuard/policies`) for:\r\n  - `prismcommand-service` least-privilege runtime reads\r\n  - `prismcommand-operator` elevated policy and lifecycle actions\r\n  -\n",
+    "classification": {
+      "subtype": "manifest",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

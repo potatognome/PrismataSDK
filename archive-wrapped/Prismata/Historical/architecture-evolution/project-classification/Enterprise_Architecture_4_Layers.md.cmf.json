@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-project-classification-enterprise-architecture-4-layers-md",
+  "udi": "prismata.historical-architecture-evolution-project-classification.wrapped-document.enterprise-architecture-4-layers-8785090ac0",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "Enterprise_Architecture_4_Layers.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/project-classification/Enterprise_Architecture_4_Layers.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/project-classification/Enterprise_Architecture_4_Layers.md",
+    "encoding": "utf-8",
+    "content_sha256": "875e5853e4f73e8ec5aeff4871d7f7cbd5fcfdb65a56706d0b1766e9336b83ea"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Enterprise Architecture \u2014 Four Layers\r\n\r\n## LAST UPDATE: 2026-08-17\r\n\r\nCanonical four-layer enterprise architecture overview. This document consolidates the iterative snapshots into a single canonical reference.\r\n\r\nHistory\r\n-------\r\n- Canonicalized from `../../archive/project-classification/2026-08-17-enterprise_architecture_4_layers.md`. See `CHANGELOG.md` and `../../archive/project-classification/` for dated snapshots.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

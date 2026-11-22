@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-validators-bom-validator-core-utils-py",
+  "udi": "prismata.projects-tooling-validators-bom-validator-core.wrapped-codeblock.utils-bbdf80a639",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "utils.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/validators/bom_validator/core/utils.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/validators/bom_validator/core/utils.py",
+    "encoding": "utf-8",
+    "content_sha256": "1bb3b714b75751ddcc694a858e29f0ef15df256796741f5a9fe5cbec0d9256a3"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Reserved for future BOM utilities\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

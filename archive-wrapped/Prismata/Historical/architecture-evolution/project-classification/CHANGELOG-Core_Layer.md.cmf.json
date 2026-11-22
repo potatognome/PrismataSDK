@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-project-classification-changelog-core-layer-md",
+  "udi": "prismata.historical-architecture-evolution-project-classification.wrapped-document.changelog-core-layer-114c1014f6",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "CHANGELOG-Core_Layer.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/project-classification/CHANGELOG-Core_Layer.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/project-classification/CHANGELOG-Core_Layer.md",
+    "encoding": "utf-8",
+    "content_sha256": "71d7ad97d9e334b97d9f988acb09b8bdf383d7c36d0eddd9ab6c67a98c9e9177"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Changelog \u2014 Core Layer\r\n\r\nThis changelog summarizes notable updates to the `Core_Layer` document. Entries are short human-written summaries of changes.\r\n\r\n- 2026-08-17 \u2014 Canonicalized `Core_Layer.md`: clarified that the repository physical layout is `Prismata/Projects/Applications`, `Prismata/Projects/Services`, `Prismata/Projects/Tooling`. Supersedes earlier wording that implied `Core`/`Infrastructure`/`Tenant` were physical roots.\r\n- 2026-07-23 \u2014 Clarified `project_type` mapping to `Applications`/`Services`/`Tooling` and added notes about preferring physical grouping for repository layout and CI paths.\r\n- 2026-06-01 \u2014 Initial snapshot: schema, taxonomy, and substrate definitions (conceptual core layer overview).\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

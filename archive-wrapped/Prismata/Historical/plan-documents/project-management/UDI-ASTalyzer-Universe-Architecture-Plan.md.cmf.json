@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-project-management-udi-astalyzer-universe-architecture-plan-md",
+  "udi": "prismata.historical-plan-documents-project-management.wrapped-plan.udi-astalyzer-universe-architecture-plan-8ff43bdb1b",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "UDI-ASTalyzer-Universe-Architecture-Plan.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/project-management/UDI-ASTalyzer-Universe-Architecture-Plan.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/project-management/UDI-ASTalyzer-Universe-Architecture-Plan.md",
+    "encoding": "utf-8",
+    "content_sha256": "3e48f2deb4e337015391f153567d7aa618bf6950c52fed17b6a2405dd6963360"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Architectural Plan: UDI Standard, ASTalyzer, and Universe\r\n\r\nCanonicalized from `archive/plan-documents/project-management/2026-07-18-UDI-ASTalyzer-Universe-architecture-plan.md`.\r\n\r\nDate (original): 2026-07-18\r\n\r\nSummary:\r\n- Establish a deterministic UDI standard and migration plan.\r\n- Complete ASTalyzer to produce deterministic AST output annotated with UDIs.\r\n- Complete Universe as the canonical schema editor enforcing UDI and canonical rules.\r\n\r\nScope & Next Steps:\r\n- Scan `Meta/canonical`, `Projects/Tooling/ASTalyzer`, and `Projects/Universe` for UDI readiness.\r\n- Integrate UDI tagging into ASTalyzer output.\r\n- Ensure Universe validates and enforces canonical schema rules.\r\n\r\nHistory:\r\n- 2026-07-18: Original plan recorded (see archive for full text).\r\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

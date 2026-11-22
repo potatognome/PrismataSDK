@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-capability-schemas-capability-udi-schema-yaml",
+  "udi": "prismata.meta-domain-capability-schemas.wrapped-schema.capability-udi-schema-9fd83b254f",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "capability-udi.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/domain/capability.schemas/capability-udi.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/capability.schemas/capability-udi.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "1eb0ed051465c3c56c1080b09068608ce9777705966d5ef1b82db708acd766ec"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: capability-udi\r\nschema_type: capability\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.capability-udi\r\n  name: capability-udi.schema\r\n  description: Canonical schema defining UDI rules for capabilities.\r\n\r\nspec:\r\n  target_kind: capability-udi\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: pattern\r\n    path: pattern\r\n    type: string\r\n    required: true\r\n\r\n  - name: maxSegments\r\n    path: maxSegments\r\n    type: integer\r\n    required: true\r\n\r\n  - name: allowSlugSeparator\r\n    path: allowSlugSeparator\r\n    type: string\r\n    required: true\r\n\r\nobject:\r\n  pattern: \"^prismata\\\\.meta\\\\.capability\\\\.[a-z0-9-|]+$\"\r\n  maxSegments: 4\r\n  allowSlugSeparator: \"|\"\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "github-copilot-instructions-d-windowed-apps-compositor-md",
+  "udi": "prismata.github-copilot-instructions-d.wrapped-agent-instruction.windowed-apps-compositor-be7ffdfc8b",
+  "kind": "wrapped-agent-instruction",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "windowed_apps_compositor.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "agent-instruction",
+    "relative_path": ".github/copilot-instructions.d/windowed_apps_compositor.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".github/copilot-instructions.d/windowed_apps_compositor.md",
+    "encoding": "utf-8",
+    "content_sha256": "b6c01a116d6913b4b277952e81a3c8e04a0fc8b247504fd9dc3d9295d00990ce"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Building Windowed Apps with the Updated Compositor\r\n\r\n## Purpose\r\n\r\n- Define the default architecture for terminal windowed apps built on the current tUilKit compositor primitives.\r\n- Keep rendering, input, state, and logging separated so windowed apps stay testable and reusable.\r\n- Ensure new windowed UI work uses the current `Canvas` / `Cursor` / `Chroma` stack instead of ad-hoc print-driven redraws.\r\n\r\n## Canonical Compositor Stack\r\n\r\nTreat the current terminal stack as the compositor baseline:\r\n\r\n- `Canvas` = frame surface for whole-screen or region redraws\r\n- `Cursor` = cursor visibility, movement, and line/screen control\r\n- `Chroma` = ANSI colour/style application\r\n\r\n## Rules\r\n\r\n- Use `Canvas.draw()` for the first frame and `Canvas.redraw()` for subsequent frames.\r\n- Keep `Cursor.hide()` / `Cursor.show()` in the render loop boundary, not scattered across business logic.\r\n- Use `Chroma` only for presentation styling; core state should remain plain data.\r\n- Always allow ANSI fallbacks to degrade cleanly to plain text output.\r\n\r\nReferences:\r\n\r\n- `src/tUilKit/terminal/canvas.py`\r\n- `src/tUilKit/terminal/cursor.py`\r\n- `src/tUilKit/terminal/chroma.py`\r\n- `tests/terminal/test_canvas.py`\r\n- `tests/terminal/test_cursor.py`\r\n- `tests/terminal/test_chroma.py`\r\n\r\n## Required Architecture\r\n\r\nWindowed apps should be split into four layers:\r\n\r\n1. **App state**\r\n   - Owns domain data, selection state, focus state, and window visibility.\r\n   - Contains no ANSI escape handling.\r\n\r\n2. **Window/view models**\r\n   - Each window builds a plain intermediate representation of its content.\r\n   - Prefer returning lines/rows/sections, not printing directly.\r\n\r\n3. **Compositor**\r\n   - Merges window outputs into one ordered frame.\r\n   - Owns clipping, stacking order, focus highlighting, and final line assembly.\r\n\r\n4. **Renderer/input shell**\r\n   - Emits the frame through `Canvas`.\r\n   - Handles keystrokes and maps them to state changes.\r\n\r\nDo not collapse all four responsibilities into one loop with inline `print()` calls.\r\n\r\n## Window Construction Rules\r\n\r\n- Build windows as independently testable units with clear inputs and outputs.\r\n- Give each window a single responsibility: navigation, detail pane, status bar, modal, help overlay, etc.\r\n- Keep window titles, dimensions, visible sections, and refresh behavior config-driven where practical.\r\n- Prefer deterministic layout rules over terminal-position magic spread across multiple modules.\r\n- Use overlays/modals as temporary composited layers, not special-case full-screen rewrites.\r\n\r\n## Rendering Rules\r\n\r\n- Compose a full frame before writing to stdout.\r\n- Redraw from a single compositor boundary; avoid multiple modules writing partial frames directly.\r\n- If only one region changes, still keep update ownership centralized in the compositor layer.\r\n- Treat plain-text rendering as the source of truth for tests; ANSI styling is an optional presentation layer.\r\n- When ANSI is unavailable, preserve readable ordering and labels rather than forcing cursor tricks.\r\n\r\n## Input and Focus Rules\r\n\r\n- Read input in one place and convert keys into semantic actions.\r\n- Track focused window explicitly.\r\n- Keep navigation rules local to the active window, but let the compositor own focus decoration.\r\n- Reserve low-level cursor movement for rendering only; do not use it as application state.\r\n- Follow `.github/copilot-instructions.d/cli_menu_patterns.md` for interactive picker behavior and redraw expectations.\r\n\r\n## tUilKit Integration Rules\r\n\r\n- Continue using tUilKit factories for shared services: `get_logger()`, `get_config_loader()`, `get_file_system()`, `get_colour_manager()`.\r\n- Do not bypass the logging policy because an app is windowed; route operational events through the logger and configured `LOG_FILES`.\r\n- Keep paths, logs, and runtime options config-driven.\r\n- Do not add app-specific window manager behavior to tUilKit core unless it is genuinely reusable across consuming projects.\r\n\r\n## Testing and Example Expectations\r\n\r\n- Unit-test compositor output as plain lines first.\r\n- Cover first draw, redraw, focus changes, empty windows, oversized content, ANSI-disabled fallback, and modal/overlay cases.\r\n- Keep example scripts in `examples/` as living behavior documentation for interactive flows.\r\n- Prefer tests that validate frame composition deterministically instead of snapshotting terminal noise.\r\n\r\n## Avoid\r\n\r\n- Ad-hoc `print()` redraw logic spread through action handlers\r\n- Mixing business logic with ANSI escape generation\r\n- Hardcoded machine-specific paths or terminal assumptions\r\n- Direct class instantiation for shared tUilKit services when factories exist\r\n- App-specific one-off compositor code in reusable core modules without a clear shared contract\r\n\r\n## References\r\n\r\n- `.github/copilot-instructions.d/cli_menu_patterns.md`\r\n- `.github/copilot-instructions.d/tuilkit_enabled_apps_guidelines.md`\r\n- `.github/copilot-instructions.d/logging_policy.md`\r\n- `.github/copilot-instructions.d/colour_key_usage.md`\r\n\r\n---\r\nLast updated: 2026-05-08\r\n",
+    "classification": {
+      "subtype": "agent-instruction",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-default-schemas-default-capabilities-schema-yaml",
+  "udi": "prismata.meta-domain-default-schemas.wrapped-schema.default-capabilities-schema-87aa82f878",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "default-capabilities.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/domain/default.schemas/default-capabilities.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/default.schemas/default-capabilities.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "5f685656821d8811ebe9e46bdfd96380e9a73b67e3152ba8b6319c310b81ff1f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: default-capabilities\r\nschema_type: defaults\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.default-capabilities\r\n  name: default-capabilities.schema\r\n  description: Canonical schema defining default capability sets.\r\n\r\nspec:\r\n  target_kind: default-capabilities\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: capabilities\r\n    path: capabilities\r\n    type: array\r\n    required: false\r\n    item:\r\n      type: string\r\n\r\nobject:\r\n  capabilities: []\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

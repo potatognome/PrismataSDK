@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-border-patterns-0-0-1-validation-log",
+  "udi": "prismata.workspace-universe-archive-tooling-border-patterns-0-0-1.wrapped-artifact.validation-a69fd0d719",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "validation.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/universe/archive/tooling.border-patterns/0.0.1/validation.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.border-patterns/0.0.1/validation.log",
+    "encoding": "utf-8",
+    "content_sha256": "ec93943efb51ed7c9a1a4d251a2851e8b9760ac63c065ae0289a06ee20db3357"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "validated tooling.border-patterns\ncanonicalized tooling.border-patterns\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

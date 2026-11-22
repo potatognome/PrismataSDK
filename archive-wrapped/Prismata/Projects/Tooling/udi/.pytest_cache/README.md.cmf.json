@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-udi-pytest-cache-readme-md",
+  "udi": "prismata.projects-tooling-udi-pytest-cache.wrapped-document.readme-ddb33af899",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "README.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Projects/Tooling/udi/.pytest_cache/README.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/udi/.pytest_cache/README.md",
+    "encoding": "utf-8",
+    "content_sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# pytest cache directory #\n\nThis directory contains data from the pytest's cache plugin,\nwhich provides the `--lf` and `--ff` options, as well as the `cache` fixture.\n\n**Do not** commit this to version control.\n\nSee [the docs](https://docs.pytest.org/en/stable/how-to/cache.html) for more information.\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

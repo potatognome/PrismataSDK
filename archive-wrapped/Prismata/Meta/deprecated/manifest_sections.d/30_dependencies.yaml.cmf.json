@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-manifest-sections-d-30-dependencies-yaml",
+  "udi": "prismata.meta-deprecated-manifest-sections-d.wrapped-object.x-30-dependencies-6f957537ab",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "30_dependencies.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/manifest_sections.d/30_dependencies.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/manifest_sections.d/30_dependencies.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "30b063c9988615f5f64a3657063834cef3d2459fca148fb17025281fcb7f7db5"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff_META:\r\n  SORT_ORDER: 30\r\n  description: \"Projects and packages this project depends on.\"\r\n\r\ndependencies: []\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

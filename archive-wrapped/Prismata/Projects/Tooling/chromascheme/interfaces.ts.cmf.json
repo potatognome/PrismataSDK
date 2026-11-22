@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-chromascheme-interfaces-ts",
+  "udi": "prismata.projects-tooling-chromascheme.wrapped-codeblock.interfaces-e5ec9eba62",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "interfaces.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/chromascheme/interfaces.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/chromascheme/interfaces.ts",
+    "encoding": "utf-8",
+    "content_sha256": "45dae691bec862d3e41060ebe81c3939c07f07fcea58797172d92392b9d90731"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "/**\r\n * Shared interfaces for the Prismata ChromaScheme tooling primitives.\r\n * All rendering and resolution logic depends on these contracts.\r\n */\r\n\r\n// ---------------------------------------------------------------------------\r\n// Value types\r\n// ---------------------------------------------------------------------------\r\n\r\nexport interface RgbColour {\r\n  r: number;\r\n  g: number;\r\n  b: number;\r\n}\r\n\r\nexport interface ColourEntry {\r\n  id: string;\r\n  origin?: string;\r\n  rgb: RgbColour;\r\n}\r\n\r\nexport interface ColourRef {\r\n  colourRef: string;\r\n}\r\n\r\nexport interface RoleLayerEntry {\r\n  layers?: {\r\n    bg?: ColourRef;\r\n    fg?: ColourRef;\r\n  };\r\n}\r\n\r\nexport interface RoleBindings {\r\n  primary_surface?:   RoleLayerEntry;\r\n  secondary_surface?: RoleLayerEntry;\r\n  tertiary_surface?:  RoleLayerEntry;\r\n  accent_surface?:    RoleLayerEntry;\r\n  border_fg?:         RoleLayerEntry;\r\n  menu_fg?:           RoleLayerEntry;\r\n  menu_bg?:           RoleLayerEntry;\r\n  interactive_fg?:    RoleLayerEntry;\r\n  interactive_bg?:    RoleLayerEntry;\r\n  neutral_fg?:        RoleLayerEntry;\r\n  neutral_bg?:        RoleLayerEntry;\r\n}\r\n\r\nexport interface GeometryOverlay {\r\n  type: string;\r\n  params?: Record<string, unknown>;\r\n}\r\n\r\nexport interface GeometryDescriptor {\r\n  baseGeometry: string;\r\n  overlays: GeometryOverlay[];\r\n}\r\n\r\n// ---------------------------------------------------------------------------\r\n// Fractal position type (mirrors schema enum)\r\n// ---------------------------------------------------------------------------\r\n\r\nexport type FractalPosition =\r\n  | \"Q1\" | \"Q2\" | \"Q3\" | \"Q4\"\r\n  | \"Q1:Q1\" | \"Q1:Q2\"\r\n  | \"Q2:Q1\" | \"Q2:Q2\"\r\n  | \"Q3:Q1\" | \"Q3:Q2\"\r\n  | \"Q4:Q1\" | \"Q4:Q2\" | \"Q4:Q3\" | \"Q4:Q4\";\r\n\r\nexport interface PaneRect {\r\n  x: number;\r\n  y: number;\r\n  width: number;\r\n  height: number;\r\n}\r\n\r\nexport interface PaneModel {\r\n  role: string;\r\n  layers: {\r\n    bg?: ColourRef;\r\n    border?: ColourRef;\r\n  };\r\n  fractalPosition: FractalPosition;\r\n  proportion: number;\r\n}\r\n\r\nexport interface RenderedPane {\r\n  role: string;\r\n  rect: PaneRect;\r\n  bgColour: RgbColour | null;\r\n  borderColour: RgbColour | null;\r\n}\r\n\r\nexport type FrameBuffer = RenderedPane[];\r\n\r\n// ---------------------------------------------------------------------------\r\n// Interfaces\r\n// ---------------------------------------------------------------------------\r\n\r\n/** Resolves a ColourRef string to the matching ColourEntry in a colourSet. */\r\nexport interface IColourRefResolver {\r\n  resolve(ref: string): ColourEntry | null;\r\n}\r\n\r\n/** Maps a FractalPosition token to a normalised PaneRect within [0,1]\u00d7[0,1]. */\r\nexport interface IFractalQuadrantMapper {\r\n  map(position: FractalPosition): PaneRect;\r\n}\r\n\r\n/** Scales normalised PaneRects to pixel/character dimensions. */\r\nexport interface IPaneLayoutEngine {\r\n  computeLayout(panes: PaneModel[], totalWidth: number, totalHeight: number): RenderedPane[];\r\n}\r\n\r\n/** Produces a FrameBuffer from a set of pane models and a resolved colourSet. */\r\nexport interface IPreviewRenderer {\r\n  render(panes: PaneModel[]): FrameBuffer;\r\n}\r\n\r\n/** Typed wrapper around a read-only colourSet array. */\r\nexport interface IColourSet {\r\n  readonly entries: ReadonlyArray<ColourEntry>;\r\n  get(id: string): ColourEntry | null;\r\n}\r\n\r\n/** Typed wrapper around role bindings that prevents mutation. */\r\nexport interface IRoleBindings {\r\n  readonly roles: Readonly<RoleBindings>;\r\n  getRole(name: keyof RoleBindings): RoleLayerEntry | null;\r\n}\r\n\r\n/** Interprets geometry metadata without coupling it to rendering. */\r\nexport interface IGeometryDescriptor {\r\n  readonly descriptor: Readonly<GeometryDescriptor>;\r\n  overlayTypes(): string[];\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

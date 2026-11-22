@@ -1,0 +1,36 @@
+{
+  "id": "tests-primitives-show-invocationtable-tests-ps1",
+  "udi": "prismata.tests-primitives.wrapped-codeblock.show-invocationtable-tests-9bb832bcf8",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "Show-InvocationTable.Tests.ps1",
+    "source_file_type": "ps1",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "tests/primitives/Show-InvocationTable.Tests.ps1",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "tests/primitives/Show-InvocationTable.Tests.ps1",
+    "encoding": "utf-8",
+    "content_sha256": "953beaaa02ae4cfd517901936dc0bccbc479a59351756eeb28a329165adc37d6"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "Describe 'Show-InvocationTable' {\r\n    It 'returns valid JSON for provided args' {\r\n        . \"${PSScriptRoot.Replace('Prismata\\\\tests\\\\primitives','Prismata\\\\Projects\\\\Tooling\\\\primitives')}\\show-invocation-table.ps1\"\r\n        $argsHash = [ordered]@{ a = 1; b = 'two'; long = ('x' * 150) }\r\n        $json = Show-InvocationTable -Args $argsHash -Format json\r\n        $obj = $json | ConvertFrom-Json\r\n        $obj | Should -Not -BeNullOrEmpty\r\n        ($obj | Where-Object { $_.Name -eq 'a' }).Value | Should -Be '1'\r\n    }\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-ui-elements-boot-sequence-changelog-md",
+  "udi": "prismata.historical-architecture-evolution-ui-elements-boot-sequence.wrapped-document.changelog-6023574b66",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "CHANGELOG.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/ui-elements/boot-sequence/CHANGELOG.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/ui-elements/boot-sequence/CHANGELOG.md",
+    "encoding": "utf-8",
+    "content_sha256": "fde51e0e9b463f62cf8713648f2a976524bd4d1ee40d5fd6496daa62d6572fa6"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Changelog \u2014 Boot Sequence Architecture\r\n\r\n- 2026-07-23 \u2014 Clarified loader discovery order, parser/registry stages, and validation steps for action registration and CI checks.\r\n- 2026-07-06 \u2014 Initial boot sequence architecture snapshot describing boot stages and best practices.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

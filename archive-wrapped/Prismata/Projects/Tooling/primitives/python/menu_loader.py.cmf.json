@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-primitives-python-menu-loader-py",
+  "udi": "prismata.projects-tooling-primitives-python.wrapped-codeblock.menu-loader-c53907b23c",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "menu_loader.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/primitives/python/menu_loader.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/primitives/python/menu_loader.py",
+    "encoding": "utf-8",
+    "content_sha256": "72a99e62f42eb2a8717b3376b0e0ff7ca259d5a3f48d53e867457346d1b9e419"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\"\"\"Shared menu loading helpers for Prismata Python frontends.\"\"\"\r\n\r\nfrom __future__ import annotations\r\n\r\nfrom pathlib import Path\r\nfrom typing import Any, Dict\r\n\r\nimport yaml\r\n\r\n\r\ndef load_yaml_mapping(path: Path) -> Dict[str, Any]:\r\n    \"\"\"Load a YAML file and always return a mapping.\"\"\"\r\n    data = yaml.safe_load(path.read_text(encoding=\"utf-8\")) or {}\r\n    if isinstance(data, dict):\r\n        return data\r\n    return {}\r\n\r\n\r\ndef load_first_menu(path: Path) -> Dict[str, Any]:\r\n    \"\"\"Load the first menu object from a menu-list YAML file.\"\"\"\r\n    data = load_yaml_mapping(path)\r\n    menus = data.get(\"menus\", []) if isinstance(data, dict) else []\r\n    if isinstance(menus, list) and menus:\r\n        first = menus[0]\r\n        if isinstance(first, dict):\r\n            return first\r\n    return {}\r\n\r\n\r\ndef load_menu_index(menu_dir: Path) -> Dict[str, Dict[str, Any]]:\r\n    \"\"\"Index menus by top-level and metadata UDI values.\"\"\"\r\n    indexed: Dict[str, Dict[str, Any]] = {}\r\n\r\n    for path in sorted(menu_dir.glob(\"*.yaml\")):\r\n        menu_obj = load_yaml_mapping(path)\r\n        if not menu_obj:\r\n            continue\r\n\r\n        metadata = menu_obj.get(\"metadata\") if isinstance(menu_obj.get(\"metadata\"), dict) else {}\r\n        top_udi = str(menu_obj.get(\"udi\", \"\")).strip()\r\n        meta_udi = str(metadata.get(\"udi\", \"\")).strip()\r\n\r\n        for key in [top_udi, meta_udi]:\r\n            if key:\r\n                indexed[key] = dict(menu_obj)\r\n\r\n    return indexed\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

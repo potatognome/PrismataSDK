@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-init-py",
+  "udi": "prismata.projects-tooling.wrapped-codeblock.init-b307482d75",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "__init__.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/__init__.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/__init__.py",
+    "encoding": "utf-8",
+    "content_sha256": "f74d5ce0c7f1ff664fb61f116b5a53bf4fb77b13b14d96fb8ef48d1e752c7b1d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Prismata Tooling package initialization\r\n# Must be empty\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

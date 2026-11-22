@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-validators-casing-linter-cli-py",
+  "udi": "prismata.projects-tooling-validators-casing-linter.wrapped-codeblock.cli-a5e042df6d",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "cli.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/validators/casing_linter/cli.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/validators/casing_linter/cli.py",
+    "encoding": "utf-8",
+    "content_sha256": "2bc760db3b6b5a3edda42d3a8cfb5a120ced46da3dabe98e857edd22be95d4a8"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "from Projects.Tooling.validators.casing_linter.core.scanner import scan_all_yaml\nfrom Projects.Tooling.validators.casing_linter.core.fixer import fix_yaml_file\nfrom Projects.Tooling.validators.casing_linter.core.report import generate_report\n\ndef run_cli():\n    import argparse\n    parser = argparse.ArgumentParser(description='Prismata Casing Linter')\n    parser.add_argument('--fix', action='store_true', help='Auto-fix casing issues')\n    parser.add_argument('--report', type=str, help='Write audit report')\n\n    args = parser.parse_args()\n\n    issues = scan_all_yaml()\n    report = generate_report(issues)\n\n    print(report)\n\n    if args.report:\n        with open(args.report, 'w') as f:\n            f.write(report)\n\n    if args.fix:\n        fixed_files = set()\n        for path, key, casing in issues:\n            new_path = fix_yaml_file(path)\n            fixed_files.add(new_path)\n        print('\\nFixed files:')\n        for f in fixed_files:\n            print('  ', f)\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

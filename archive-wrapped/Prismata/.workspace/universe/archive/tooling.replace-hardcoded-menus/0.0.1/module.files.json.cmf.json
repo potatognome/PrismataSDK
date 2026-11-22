@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-replace-hardcoded-menus-0-0-1-module-files-json",
+  "udi": "prismata.workspace-universe-archive-tooling-replace-hardcoded-menus-0-0-1.wrapped-object.module-files-557840c960",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "module.files.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/archive/tooling.replace-hardcoded-menus/0.0.1/module.files.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.replace-hardcoded-menus/0.0.1/module.files.json",
+    "encoding": "utf-8",
+    "content_sha256": "59210d7ce7ce47b87862d0fb47341b3d5e65dd8e4349402193f1048310982087"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  \"count\": 1,\n  \"files\": [\n    \"Projects/Tooling/generators/replace_hardcoded_menus.py\"\n  ]\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

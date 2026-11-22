@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-utilities-interface-primitives-border-patterns-py",
+  "udi": "prismata.projects-tooling-utilities-interface-primitives.wrapped-codeblock.border-patterns-2ecbe42ced",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "border_patterns.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/utilities/interface_primitives/border_patterns.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/utilities/interface_primitives/border_patterns.py",
+    "encoding": "utf-8",
+    "content_sha256": "148809750d8931c218e9ccab2ca055857fb9daffeebcca893cf50236623c53e3"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Will be deprecating this module in the future\r\n\r\nBORDER_STANDARD = {\"TOP\": \"=\", \"BOTTOM\": \"=\", \"LEFT\": \" \", \"RIGHT\": \" \"}\r\nBORDER_PANE = {\"TOP\": \"=\", \"BOTTOM\": \"=\", \"LEFT\": \"|\", \"RIGHT\": \"|\"}\r\nBORDER_V4L1D8R = {\"TOP\": \"<>\", \"BOTTOM\": \"<>\", \"LEFT\": \"||\", \"RIGHT\": \"||\"}\r\n\r\ndef get_border_pattern(name: str = \"standard\"):\r\n    return dict({\r\n        \"standard\": BORDER_STANDARD,\r\n        \"pane\": BORDER_PANE,\r\n        \"v4l1d8r\": BORDER_V4L1D8R,\r\n    }.get(name.lower(), BORDER_STANDARD))\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

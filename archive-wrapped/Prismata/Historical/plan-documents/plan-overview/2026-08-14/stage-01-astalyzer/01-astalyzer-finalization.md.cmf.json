@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-plan-overview-2026-08-14-stage-01-astalyzer-01-astalyzer-finalization-md",
+  "udi": "prismata.historical-plan-documents-plan-overview-2026-08-14-stage-01-asta.wrapped-plan.x-01-astalyzer-finalization-41c09b2313",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "01-astalyzer-finalization.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/plan-overview/2026-08-14/stage-01-astalyzer/01-astalyzer-finalization.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/plan-overview/2026-08-14/stage-01-astalyzer/01-astalyzer-finalization.md",
+    "encoding": "utf-8",
+    "content_sha256": "73f6aeb1f235069f702c66328b9c62303cd454e3b8f7336775e7e94eab648f70"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff# 01-astalyzer-finalization.md\n# Version: 1.0.0\n# Archived: stage-01-astalyzer\n\n# Prismata Historical Document \u2014 01-astalyzer-finalization.md\n# Version: 1.0.0\n# Archive Class: Stage 1\n\n## Stage Summary\nASTalyzer finalization marks **Stage 1** of Prismata\u2019s historical timeline.\nIt establishes the analysis substrate used by Universe ingestion and later tooling.\n\n## Goals\n- Finalize Python AST pipeline  \n- Stabilize deterministic AST output  \n- Add human-readable node summaries  \n- Align ASTalyzer menu with pcms-2026  \n\n## Deterministic Output Rules\n- Stable node ordering  \n- Canonical field names  \n- No environment-dependent metadata  \n- Reusable AST primitives for Universe ingestion  \n\n## Example Output (Simplified)\nnode(FunctionDef):\nname: \"load_schema\"\nargs: [\"path\"]\nreturns: \"Schema\"\n\n\n## Integration Points\n- Universe ingestion (Stage 2)  \n- Semantic substrate (Stage 4)  \n- DocLibrarian (Stage 6)  \n\n## Versioning\nASTalyzer is versioned as:\n- astalyzer-core-v1  \n- astalyzer-menu-v1  \n- astalyzer-deterministic-v1  \n\n## Notes\nThis document is archived under `/historical/stage-01/`.\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-chromascheme-colourset-ts",
+  "udi": "prismata.projects-tooling-chromascheme.wrapped-codeblock.colourset-a6673b76fc",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "colourSet.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/chromascheme/colourSet.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/chromascheme/colourSet.ts",
+    "encoding": "utf-8",
+    "content_sha256": "b0d107769760a5ddebae3e95dda46295b204041f6a8c3b55724fae0358c4c761"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import {\r\n  ColourEntry,\r\n  IColourSet,\r\n} from \"./interfaces\";\r\n\r\n/**\r\n * Immutable wrapper around a colourSet array.\r\n * Guarantees the source array is never mutated.\r\n */\r\nexport class ColourSet implements IColourSet {\r\n  readonly entries: ReadonlyArray<ColourEntry>;\r\n\r\n  private readonly _index: ReadonlyMap<string, ColourEntry>;\r\n\r\n  constructor(entries: ColourEntry[]) {\r\n    this.entries = Object.freeze([...entries]);\r\n    const index = new Map<string, ColourEntry>();\r\n    for (const entry of entries) {\r\n      index.set(entry.id, entry);\r\n    }\r\n    this._index = index;\r\n  }\r\n\r\n  get(id: string): ColourEntry | null {\r\n    return this._index.get(id) ?? null;\r\n  }\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-engine-schemas-glyph-renderer-schema-yaml",
+  "udi": "prismata.meta-canonical-engine-schemas.wrapped-schema.glyph-renderer-schema-0752b7649f",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "glyph-renderer.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/engine.schemas/glyph-renderer.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/engine.schemas/glyph-renderer.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "f2ede19e8b1ff38a4fcf13ebc15aa91fa02b28f9b6357ea3892022a3fc63407d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: glyph-renderer\r\nschema_type: engine\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.glyph-renderer\r\n  name: glyph-renderer.schema\r\n  location: /Prismata/Meta/engine.schemas/glyph-renderer.schema.yaml\r\n  description: Canonical schema defining glyph rendering rules.\r\n\r\nspec:\r\n  target_kind: glyph-renderer\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: glyphSet\r\n    path: glyphSet\r\n    type: object\r\n    required: true\r\n\r\n  - name: colour\r\n    path: colour\r\n    type: string\r\n    required: false\r\n\r\nobject:\r\n  glyphSet: {}\r\n  colour: \"\"\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

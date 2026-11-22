@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-astalyzer-tsconfig-json",
+  "udi": "prismata.projects-tooling-astalyzer.wrapped-object.tsconfig-e42971c0e2",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "tsconfig.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Tooling/ASTalyzer/tsconfig.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/ASTalyzer/tsconfig.json",
+    "encoding": "utf-8",
+    "content_sha256": "7514d49faf24e84ee7c1b7a7eb3b62974a6d86a81d08f815c06c41c479112d42"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  // Visit https://aka.ms/tsconfig to read more about this file\n  \"compilerOptions\": {\n    // File Layout\n    // \"rootDir\": \"./src\",\n    // \"outDir\": \"./dist\",\n\n    // Environment Settings\n    // See also https://aka.ms/tsconfig/module\n    \"module\": \"nodenext\",\n    \"target\": \"esnext\",\n    \"types\": [],\n    // For nodejs:\n    // \"lib\": [\"esnext\"],\n    // \"types\": [\"node\"],\n    // and npm install -D @types/node\n\n    // Other Outputs\n    \"sourceMap\": true,\n    \"declaration\": true,\n    \"declarationMap\": true,\n\n    // Stricter Typechecking Options\n    \"noUncheckedIndexedAccess\": true,\n    \"exactOptionalPropertyTypes\": true,\n\n    // Style Options\n    // \"noImplicitReturns\": true,\n    // \"noImplicitOverride\": true,\n    // \"noUnusedLocals\": true,\n    // \"noUnusedParameters\": true,\n    // \"noFallthroughCasesInSwitch\": true,\n    // \"noPropertyAccessFromIndexSignature\": true,\n\n    // Recommended Options\n    \"strict\": true,\n    \"jsx\": \"react-jsx\",\n    \"verbatimModuleSyntax\": true,\n    \"isolatedModules\": true,\n    \"noUncheckedSideEffectImports\": true,\n    \"moduleDetection\": \"force\",\n    \"skipLibCheck\": true,\n  }\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

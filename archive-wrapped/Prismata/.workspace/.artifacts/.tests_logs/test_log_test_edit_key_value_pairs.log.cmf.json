@@ -1,0 +1,36 @@
+{
+  "id": "workspace-artifacts-tests-logs-test-log-test-edit-key-value-pairs-log",
+  "udi": "prismata.workspace-artifacts-tests-logs.wrapped-artifact.test-log-test-edit-key-value-pairs-42a552007b",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_log_test_edit_key_value_pairs.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/.artifacts/.tests_logs/test_log_test_edit_key_value_pairs.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.artifacts/.tests_logs/test_log_test_edit_key_value_pairs.log",
+    "encoding": "utf-8",
+    "content_sha256": "712ff68b843c7abd9d870a7c8eaea54c1642e21619db2ccf125cc9aa6bc55547"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 13:20:41  ======================================================================\r\n2026-08-30 13:20:41 |  Test 6: test_edit_key_value_pairs                                   |\r\n2026-08-30 13:20:41  ======================================================================\r\n2026-08-30 13:20:41 Running: 6 test_edit_key_value_pairs \u2014 edit_key_value_pairs \u2014 update, cancel, break\r\n2026-08-30 13:20:41 result = CLIMenuHandler. edit_key_value_pairs with arguments: title='Edit Settings' data={'name': 'test', 'count': '5'} prompts={...}\r\n2026-08-30 13:20:41 ran successfully. Producing output: {'name': 'test_project', 'count': '5', 'enabled': 'true'}\r\n2026-08-30 13:20:41 All-defaults PASSED\r\n2026-08-30 13:20:41 Update one value PASSED\r\n2026-08-30 13:20:41 Validator result: {'name': 'test_project', 'count': 'valid_name', 'enabled': 'true'}\r\n2026-08-30 13:20:41 cancel input \u2192 {'name': 'test_project', 'count': '5', 'enabled': 'true'}\r\n2026-08-30 13:20:41 Long value \u2192 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\r\n2026-08-30 13:20:41 PASSED: edit_key_value_pairs complete\r\n2026-08-30 13:20:41 \u2705 PASSED: 6 test_edit_key_value_pairs\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 22:16:01  ======================================================================\r\n2026-08-30 22:16:01 |  Test 6: test_edit_key_value_pairs                                   |\r\n2026-08-30 22:16:01  ======================================================================\r\n2026-08-30 22:16:01 Running: 6 test_edit_key_value_pairs \u2014 edit_key_value_pairs \u2014 update, cancel, break\r\n2026-08-30 22:16:01 result = CLIMenuHandler. edit_key_value_pairs with arguments: title='Edit Settings' data={'name': 'test', 'count': '5'} prompts={...}\r\n2026-08-30 22:16:01 ran successfully. Producing output: {'name': 'test_project', 'count': '5', 'enabled': 'true'}\r\n2026-08-30 22:16:01 All-defaults PASSED\r\n2026-08-30 22:16:01 Update one value PASSED\r\n2026-08-30 22:16:01 Validator result: {'name': 'test_project', 'count': 'valid_name', 'enabled': 'true'}\r\n2026-08-30 22:16:01 cancel input \u2192 {'name': 'test_project', 'count': '5', 'enabled': 'true'}\r\n2026-08-30 22:16:01 Long value \u2192 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\r\n2026-08-30 22:16:01 PASSED: edit_key_value_pairs complete\r\n2026-08-30 22:16:01 \u2705 PASSED: 6 test_edit_key_value_pairs\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-09-08 12:07:54  ======================================================================\r\n2026-09-08 12:07:54 |  Test 6: test_edit_key_value_pairs                                   |\r\n2026-09-08 12:07:54  ======================================================================\r\n2026-09-08 12:07:54 Running: 6 test_edit_key_value_pairs \u2014 edit_key_value_pairs \u2014 update, cancel, break\r\n2026-09-08 12:07:54 result = CLIMenuHandler. edit_key_value_pairs with arguments: title='Edit Settings' data={'name': 'test', 'count': '5'} prompts={...}\r\n2026-09-08 12:07:54 ran successfully. Producing output: {'name': 'test_project', 'count': '5', 'enabled': 'true'}\r\n2026-09-08 12:07:54 All-defaults PASSED\r\n2026-09-08 12:07:54 Update one value PASSED\r\n2026-09-08 12:07:54 Validator result: {'name': 'test_project', 'count': 'valid_name', 'enabled': 'true'}\r\n2026-09-08 12:07:54 cancel input \u2192 {'name': 'test_project', 'count': '5', 'enabled': 'true'}\r\n2026-09-08 12:07:54 Long value \u2192 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\r\n2026-09-08 12:07:54 PASSED: edit_key_value_pairs complete\r\n2026-09-08 12:07:54 \u2705 PASSED: 6 test_edit_key_value_pairs\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

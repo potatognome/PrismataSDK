@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-chromascheme-rolebindingresolver-ts",
+  "udi": "prismata.projects-tooling-chromascheme.wrapped-codeblock.rolebindingresolver-1406f49a75",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "roleBindingResolver.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/chromascheme/roleBindingResolver.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/chromascheme/roleBindingResolver.ts",
+    "encoding": "utf-8",
+    "content_sha256": "acd5f0f54970ecd5f3d01b222e2517dcad2709680311f3317f01e3a5b4820fc0"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import {\r\n  IRoleBindings,\r\n  RoleBindings,\r\n  RoleLayerEntry,\r\n} from \"./interfaces\";\r\n\r\n/**\r\n * Typed, read-only wrapper around a RoleBindings map.\r\n * Roles remain semantic (not positional); the underlying object is frozen\r\n * to prevent accidental mutation.\r\n */\r\nexport class RoleBindingResolver implements IRoleBindings {\r\n  readonly roles: Readonly<RoleBindings>;\r\n\r\n  constructor(roles: RoleBindings) {\r\n    this.roles = Object.freeze({ ...roles });\r\n  }\r\n\r\n  getRole(name: keyof RoleBindings): RoleLayerEntry | null {\r\n    return this.roles[name] ?? null;\r\n  }\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

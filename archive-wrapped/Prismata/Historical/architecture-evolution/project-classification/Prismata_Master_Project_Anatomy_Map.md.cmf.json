@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-project-classification-prismata-master-project-anatomy-map-md",
+  "udi": "prismata.historical-architecture-evolution-project-classification.wrapped-document.prismata-master-project-anatomy-map-e0a1f54676",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "Prismata_Master_Project_Anatomy_Map.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/project-classification/Prismata_Master_Project_Anatomy_Map.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/project-classification/Prismata_Master_Project_Anatomy_Map.md",
+    "encoding": "utf-8",
+    "content_sha256": "0cefed5847bd906b5dc9757ab9f2e74ce998934877eb86af00852a544f7ff27d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Prismata Master Project Anatomy Map\r\n\r\n## LAST UPDATE: 2026-07-23\r\n\r\nCanonical anatomy map consolidating previous snapshots.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

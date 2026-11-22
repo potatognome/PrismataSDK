@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-udi-uditool-scanner-py",
+  "udi": "prismata.projects-tooling-udi-uditool.wrapped-codeblock.scanner-eacee9f5aa",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "scanner.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/udi/uditool/scanner.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/udi/uditool/scanner.py",
+    "encoding": "utf-8",
+    "content_sha256": "14526d8d6d61470bb0edde2b4bba65fb19e050158d10af6b009e7f1d9b7bb724"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import glob\r\nimport os\r\nimport yaml\r\nfrom .config import DETECTOR_VERSION, UDI_REGEX, CANONICAL_KINDS\r\nfrom .udi_utils import derive_udi_from_path_and_content, parse_udi, validate_udi\r\n\r\n\r\ndef _find_udi_location(data):\r\n    \"\"\"Return (udi_value, location_string) where location_string describes where the udi was found.\"\"\"\r\n    if not isinstance(data, dict):\r\n        return None, None\r\n    # top-level udi\r\n    if \"udi\" in data and data.get(\"udi\"):\r\n        return data.get(\"udi\"), \"top-level.udi\"\r\n    # legacy id fields at top-level\r\n    for legacy in (\"id\", \"schema_id\", \"capability_id\", \"menu_id\"):\r\n        if legacy in data and data.get(legacy):\r\n            return data.get(legacy), f\"top-level.{legacy}\"\r\n    # metadata subsection\r\n    meta = data.get(\"metadata\")\r\n    if isinstance(meta, dict):\r\n        if \"udi\" in meta and meta.get(\"udi\"):\r\n            return meta.get(\"udi\"), \"metadata.udi\"\r\n        for legacy in (\"id\", \"schema_id\", \"capability_id\", \"menu_id\"):\r\n            if legacy in meta and meta.get(legacy):\r\n                return meta.get(legacy), f\"metadata.{legacy}\"\r\n    return None, None\r\n\r\n\r\ndef scan_globs(globs, out_dir, aggregate=False):\r\n    os.makedirs(out_dir, exist_ok=True)\r\n    files = []\r\n    for g in globs:\r\n        files.extend(glob.glob(g, recursive=True))\r\n    reports = []\r\n    for f in files:\r\n        try:\r\n            with open(f, \"r\", encoding=\"utf-8\") as fh:\r\n                content = fh.read()\r\n            data = yaml.safe_load(content) or {}\r\n        except Exception:\r\n            data = {}\r\n        udi = None\r\n        udi_loc = None\r\n        if isinstance(data, dict):\r\n            udi, udi_loc = _find_udi_location(data)\r\n        record = {\"artifact_path\": f, \"existing_ids\": {\"udi\": udi, \"location\": udi_loc}, \"drift\": []}\r\n        if not udi:\r\n            expected = derive_udi_from_path_and_content(f, metadata_name=(data.get(\"metadata\") or {}).get(\"name\") if isinstance(data.get(\"metadata\"), dict) else None)\r\n            # prefer recommending placement under metadata.udi\r\n            record[\"expected_udi\"] = expected\r\n            record[\"suggested_udi_location\"] = \"metadata.udi\"\r\n            # keep drift compact: code + severity + actual (no repeated expected field)\r\n            record[\"drift\"].append({\"code\": \"MISSING_UDI\", \"severity\": \"critical\", \"actual\": None})\r\n        else:\r\n            valid, errors = validate_udi(udi)\r\n            if not valid:\r\n                record[\"drift\"].append({\"code\": \"INVALID_UDI_PATTERN\", \"severity\": \"critical\", \"actual\": udi, \"errors\": errors})\r\n            else:\r\n                parsed = parse_udi(udi)\r\n                # kind check\r\n                if parsed and parsed.get(\"kind\") not in CANONICAL_KINDS:\r\n                    record[\"drift\"].append({\"code\": \"INVALID_KIND\", \"severity\": \"high\", \"actual\": parsed.get(\"kind\")})\r\n        reports.append(record)\r\n        outpath = os.path.join(out_dir, os.path.basename(f) + \".udi-report.yaml\")\r\n        with open(outpath, \"w\", encoding=\"utf-8\") as oh:\r\n            yaml.safe_dump(record, oh)\r\n    summary = {\"detector_version\": DETECTOR_VERSION, \"scanned\": len(files), \"reports\": len(reports)}\r\n    with open(os.path.join(out_dir, \"summary.yaml\"), \"w\", encoding=\"utf-8\") as sh:\r\n        yaml.safe_dump(summary, sh)\r\n    if aggregate:\r\n        full = {\"detector_version\": DETECTOR_VERSION, \"scanned\": len(files), \"reports\": len(reports), \"generated_at\": None, \"files\": reports}\r\n        # generated_at left None for caller to populate if desired; write to out_dir/full-report.yaml\r\n        with open(os.path.join(out_dir, \"full-report.yaml\"), \"w\", encoding=\"utf-8\") as fh:\r\n            yaml.safe_dump(full, fh)\r\n    return reports\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

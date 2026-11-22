@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-modules-scraper-onload-ps1",
+  "udi": "prismata.projects-tooling-modules-scraper.wrapped-codeblock.onload-d941c0ee27",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "onload.ps1",
+    "source_file_type": "ps1",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/modules/Scraper/onload.ps1",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/modules/Scraper/onload.ps1",
+    "encoding": "utf-8",
+    "content_sha256": "4f83f11a99f8c41d27946df2386de6c99a7bf84df7bfe04876822abe1eefae07"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "Write-Host \">>> Scraper module LOADED (manifest initialization)\" -ForegroundColor Cyan\r\nWrite-Host \">>> Module root: $PSScriptRoot\" -ForegroundColor Gray\r\n\r\n# Define global defaults here so they ALWAYS load\r\n$Global:ScraperDefaults = @{\r\n    includeType   = @(\"*\")\r\n    ignoreType    = @()\r\n    includeFolders = @(\"*\")\r\n    excludeFolders = @()\r\n    mode = @(\"default\")\r\n}\r\n\r\nWrite-Host \">>> Scraper defaults initialized\" -ForegroundColor Green\r\nWrite-Host \"\"\r\n\r\n# Import ConfigMerge for canonical config merging (optional: fail loudly)\r\n$configMergePath = Join-Path $PSScriptRoot '..\\ConfigMerge\\ConfigMerge.psd1'\r\nif (Test-Path $configMergePath) {\r\n    try {\r\n        Import-Module $configMergePath -Force -ErrorAction Stop\r\n        Write-Host \">>> ConfigMerge imported from: $configMergePath\" -ForegroundColor Cyan\r\n    } catch {\r\n            Write-Host \">>> Failed to import ConfigMerge: $_ - continuing without it\" -ForegroundColor Yellow\r\n    }\r\n} else {\r\n        Write-Host \">>> ConfigMerge not found at: $configMergePath - continuing without it\" -ForegroundColor Yellow\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

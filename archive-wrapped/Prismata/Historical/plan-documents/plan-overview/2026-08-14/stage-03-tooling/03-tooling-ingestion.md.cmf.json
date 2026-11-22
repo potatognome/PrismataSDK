@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-plan-overview-2026-08-14-stage-03-tooling-03-tooling-ingestion-md",
+  "udi": "prismata.historical-plan-documents-plan-overview-2026-08-14-stage-03-tool.wrapped-plan.x-03-tooling-ingestion-19b8991a3a",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "03-tooling-ingestion.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/plan-overview/2026-08-14/stage-03-tooling/03-tooling-ingestion.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/plan-overview/2026-08-14/stage-03-tooling/03-tooling-ingestion.md",
+    "encoding": "utf-8",
+    "content_sha256": "a8e1e56b71d705ee1c903554c4e788cf136e78f43cf7342f84f5ff4ebee4a3a6"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff# 03-tooling-ingestion.md\n# Version: 1.0.0\n# Archived: stage-03-tooling\n\n# Prismata Historical Document \u2014 03-tooling-ingestion.md\n# Version: 1.0.0\n# Archive Class: Stage 3\n\n## Overview\nTooling ingestion expands Prismata beyond ASTalyzer and Universe, enabling\nsemantic tooling, module utilities, and developer workflows.\n\n## Tooling Categories\n- CLI utilities  \n- Schema editors  \n- Module inspectors  \n- Canonical diff tools  \n- Universe package helpers  \n\n## Ingestion Rules\n- Tools must declare canonical metadata  \n- Tools must register ingestion version  \n- Tools must reuse ASTalyzer primitives  \n- Tools must integrate with pcms-2026 menus  \n\n## Example Tool Registration\n2026-03-02 09:44:11 [tooling] ingest \"canonical-diff\"\n2026-03-02 09:44:12 [tooling] register version 0.3.1\n\n\n## Versioning\nTooling ingestion is versioned as:\n- tooling-ingest-v1  \n- tooling-registry-v1  \n\n## Notes\nArchived under `/historical/stage-03/`.\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

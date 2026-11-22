@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-default-schemas-default-layout-schema-yaml",
+  "udi": "prismata.meta-domain-default-schemas.wrapped-schema.default-layout-schema-53bdc26bee",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "default-layout.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/domain/default.schemas/default-layout.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/default.schemas/default-layout.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "fed76c1aac8b94bf50bd04f12f68acfad959cc8287ecac12f05985e9b6f70ff8"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: default-layout\r\nschema_type: defaults\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.default-layout\r\n  name: default-layout.schema\r\n  description: Canonical schema defining default UI layout configuration.\r\n\r\nspec:\r\n  target_kind: default-layout\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: grid\r\n    path: grid\r\n    type: object\r\n    required: false\r\n\r\n  - name: panes\r\n    path: panes\r\n    type: array\r\n    required: false\r\n    item:\r\n      type: object\r\n\r\nobject:\r\n  grid: {}\r\n  panes: []\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

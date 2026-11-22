@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-validate-menu-actions-0-0-1-manifest-fragment-yaml",
+  "udi": "prismata.workspace-universe-archive-tooling-validate-menu-actions-0-0-1.wrapped-manifest.manifest-fragment-d7885d49ad",
+  "kind": "wrapped-manifest",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "manifest.fragment.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "manifest",
+    "relative_path": ".workspace/universe/archive/tooling.validate-menu-actions/0.0.1/manifest.fragment.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.validate-menu-actions/0.0.1/manifest.fragment.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "749b20eb7725d338f8a2510b9670227d0db3ed67adfaa6741afd5d1a6beeb6da"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "udi: tooling.validate-menu-actions\nname: ValidateMenuActions\nversion: 0.1.0\nmodule: generators/validate_menu_actions.py\n",
+    "classification": {
+      "subtype": "manifest",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

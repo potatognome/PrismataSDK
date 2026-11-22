@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-project-management-changelog-vaultguard-md",
+  "udi": "prismata.historical-plan-documents-project-management.wrapped-plan.changelog-vaultguard-ab88429f69",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "CHANGELOG-VaultGuard.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/project-management/CHANGELOG-VaultGuard.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/project-management/CHANGELOG-VaultGuard.md",
+    "encoding": "utf-8",
+    "content_sha256": "99a15bff78a349b857d318f5c4e28042c25aed02c0d9bdb74f1d9561c9b4f64d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# VaultGuard \u2014 CHANGELOG\r\n\r\n## [2026-08-17]\r\n\r\n- Canonicalized VaultGuard governance and onboarding notes; archived originals.\r\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "workspace-system-system-history-root-yaml",
+  "udi": "prismata.workspace-system-system-history.wrapped-object.root-f9ca12392a",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "_root.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/system/system.history/_root.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/system/system.history/_root.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "1bf73dd9f7d4e98003c1ce084b79fd30e92efef78f51a1e2ff9fd83b2fc79637"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.1.0\r\nkind: workspace-folder\r\nmetadata:\r\n  name: system.history\r\n  description: Local historical snapshots and activity traces that remain outside the tracked baseline.\r\nspec:\r\n  path: .workspace/system.history\r\n  lifecycle: volatile\r\n  tracking: ignored\r\n  volatility: medium\r\n  naming:\r\n    reserved_files:\r\n      - _root.yaml\r\n      - \"*.history.yaml\"\r\n    versioning: semver\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

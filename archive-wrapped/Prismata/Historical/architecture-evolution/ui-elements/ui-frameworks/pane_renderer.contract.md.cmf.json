@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-ui-elements-ui-frameworks-pane-renderer-contract-md",
+  "udi": "prismata.historical-architecture-evolution-ui-elements-ui-frameworks.wrapped-document.pane-renderer-contract-74a662536f",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "pane_renderer.contract.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/ui-elements/ui-frameworks/pane_renderer.contract.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/ui-elements/ui-frameworks/pane_renderer.contract.md",
+    "encoding": "utf-8",
+    "content_sha256": "af820cb1bd660c35e0d5ebf6133f88695c7390d1d63e37ffe2f0ac81e95ddf87"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Pane Renderer Contract\r\n\r\nDefines the responsibilities, guarantees, and integration rules for\r\nrendering pane content within the Prismata/PCMS\u20112026 UI ecosystem.\r\n\r\nThe pane renderer is responsible for drawing:\r\n\r\n1. Borders (structural styling)\r\n2. Canvas (background fill)\r\n3. Colour styling (foreground/background)\r\n4. Content (supplied by commands)\r\n5. Carousel items (if enabled)\r\n6. Diff relational pairs (if diff_view)\r\n7. Header styling (if present)\r\n\r\nHistory\r\n-------\r\n- Canonicalized from `../../../archive/ui-frameworks/2026-08-24-pane_renderer.contract.md`.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

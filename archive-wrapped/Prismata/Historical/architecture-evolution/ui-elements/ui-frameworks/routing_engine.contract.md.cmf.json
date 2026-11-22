@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-ui-elements-ui-frameworks-routing-engine-contract-md",
+  "udi": "prismata.historical-architecture-evolution-ui-elements-ui-frameworks.wrapped-document.routing-engine-contract-4036040a37",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "routing_engine.contract.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/ui-elements/ui-frameworks/routing_engine.contract.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/ui-elements/ui-frameworks/routing_engine.contract.md",
+    "encoding": "utf-8",
+    "content_sha256": "f413cd5f79cbda83c63dd229f3df809f03b4c2f9da5e729051b44399ba89148f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Routing Engine Contract\r\n\r\nRouting engine selects UI framework, loads presentation layer, dispatches\r\ncommands, and binds content to panes. It does not render content or apply\r\nstyling.\r\n\r\n## Responsibilities:\r\n\r\n- interpret menu selection\r\n- select ui_framework\r\n- instantiate pane geometry\r\n- load colour_scheme + border_pattern\r\n- dispatch command\r\n- bind content\r\n- forward UI events\r\n\r\n## Forbidden:\r\n\r\n- rendering\r\n- styling\r\n- content modification\r\n- UI-framework modification\r\n\r\nHistory\r\n-------\r\n- Canonicalized from `../../../archive/ui-frameworks/2026-08-24-routing_engine.contract.md`.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

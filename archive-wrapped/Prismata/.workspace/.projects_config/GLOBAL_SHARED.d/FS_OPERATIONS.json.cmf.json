@@ -1,0 +1,36 @@
+{
+  "id": "workspace-projects-config-global-shared-d-fs-operations-json",
+  "udi": "prismata.workspace-projects-config-global-shared-d.wrapped-object.fs-operations-b6f6e61562",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "FS_OPERATIONS.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/.projects_config/GLOBAL_SHARED.d/FS_OPERATIONS.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.projects_config/GLOBAL_SHARED.d/FS_OPERATIONS.json",
+    "encoding": "utf-8",
+    "content_sha256": "8f06262c8f70ea2b48884175cfa8a7fd03c076fcb8d7afd640bab27993734ec4"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\r\n    \"FS_OPERATIONS\": {\r\n        \"CREATE_MISSING_FOLDERS\": true,\r\n        \"CREATE_MISSING_FILES\": true\r\n\r\n        }\r\n\r\n}",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

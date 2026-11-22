@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-composition-schemas-menu-schema-yaml",
+  "udi": "prismata.meta-canonical-composition-schemas.wrapped-schema.menu-schema-fc7d96d2e2",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "menu.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/composition.schemas/menu.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/composition.schemas/menu.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "6ca0a5391446c9956b6513055b911484db0dcadaa283eaee9b44e28e7a9e9366"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.3\r\nkind: menu\r\nschema_type: composition\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.menu\r\n  name: menu.schema\r\n  description: Canonical menu composition schema with optional headers, item-level borders, and per-item colour roles.\r\n\r\nspec:\r\n  target_kind: menu\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: title\r\n    path: title\r\n    type: string\r\n    required: false\r\n\r\n  - name: header\r\n    path: header\r\n    type: object\r\n    required: false\r\n\r\n  - name: colour_role\r\n    path: colour_role\r\n    type: string\r\n    required: false\r\n\r\n  - name: border_pattern\r\n    path: border_pattern\r\n    type: string\r\n    required: false\r\n\r\n  - name: items\r\n    path: items\r\n    type: array\r\n    required: true\r\n\r\nobject:\r\n  title: \"\"\r\n  header:\r\n    id: \"\"\r\n    text: \"\"\r\n    colour_role: \"\"\r\n    colour_scheme: \"\"\r\n    border_pattern: \"\"\r\n  colour_role: \"menu_surface\"\r\n  border_pattern: \"default\"\r\n  items: []\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

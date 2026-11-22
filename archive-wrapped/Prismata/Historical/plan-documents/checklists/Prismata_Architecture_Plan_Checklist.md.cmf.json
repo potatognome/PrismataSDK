@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-checklists-prismata-architecture-plan-checklist-md",
+  "udi": "prismata.historical-plan-documents-checklists.wrapped-checklist.prismata-architecture-plan-checklist-90cf8eadd5",
+  "kind": "wrapped-checklist",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "Prismata_Architecture_Plan_Checklist.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "checklist",
+    "relative_path": "Historical/plan-documents/checklists/Prismata_Architecture_Plan_Checklist.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/checklists/Prismata_Architecture_Plan_Checklist.md",
+    "encoding": "utf-8",
+    "content_sha256": "272cbc737519f5b16bc25ca4ecab446483af59f6b773e2b1661b92d9bb772f3f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# PRISMATA - ARCHITECTURAL PLANNING DOCUMENT\r\n\r\nLast canonicalized: 2026-07-23 (see `archive/plan-documents/checklists/2026-07-23-plan-prismata-architecture.checklist.md`)\r\n\r\nThis checklist captures planning stages and next actions for the Universe schema editor and ASTalyzer.\r\n\r\n## PLANNING STAGES\r\n\r\nPHASE 1 \u2014 CANONICAL FOUNDATIONS (COMPLETE)\r\n- UDI Standard (v0.1.0)\r\n- Canonical Schema Directory (Meta/canonical)\r\n- UDI Validator Spec\r\n- Deterministic UDI Pattern + Segments\r\n- Cross-document uniqueness rules\r\n\r\nPHASE 2 \u2014 CORE ANALYSIS LAYER (COMPLETE)\r\n- ASTalyzer (Python AST)\r\n- ASTalyzer Menu\r\n- OS-dependent load/save dialogs\r\n- Interface primitives (file/folder pickers)\r\n- Deterministic AST output\r\n\r\nPHASE 3 \u2014 APPLICATION LAYER (IN PROGRESS)\r\n- Universe basic menu\r\n- Universe schema viewer\r\n- Universe schema loader\r\n- Universe integration with canonical schemas\r\n- TODO: Universe editing verbs, validation pipeline, save pipeline\r\n\r\nPHASE 4 \u2014 VALIDATION & SELF-MAINTENANCE (BEGINNING)\r\n- TODO: Universe + ASTalyzer integration loop, schema mutation \u2192 validation \u2192 save \u2192 re-validate\r\n\r\nPHASE 5 \u2014 AWARENESS & DOCUMENTATION (NOT STARTED)\r\n- TODO: ASTalyzer TS support, unified AST, human-readable summaries\r\n\r\n## NEXT THREE HIGH-LEVERAGE STEPS\r\n1. Add Universe editing verbs (create/update/delete/rename/move/validate/diff)\r\n2. Add ASTalyzer TypeScript support (ts-morph / tsc)\r\n3. Add ASTalyzer human-readable summaries and Universe preview integration\r\n\r\n## HISTORY\r\n- 2026-07-23: Canonicalized from dated snapshot (see archive)\r\n",
+    "classification": {
+      "subtype": "checklist",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

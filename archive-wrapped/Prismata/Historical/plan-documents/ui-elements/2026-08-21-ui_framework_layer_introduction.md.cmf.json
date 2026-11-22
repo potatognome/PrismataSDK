@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-ui-elements-2026-08-21-ui-framework-layer-introduction-md",
+  "udi": "prismata.historical-plan-documents-ui-elements.wrapped-plan.x-2026-08-21-ui-framework-layer-introduction-6ebdf8cc3a",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "2026-08-21-ui_framework_layer_introduction.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/ui-elements/2026-08-21-ui_framework_layer_introduction.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/ui-elements/2026-08-21-ui_framework_layer_introduction.md",
+    "encoding": "utf-8",
+    "content_sha256": "6fe60f145c3bde6a77542330466e76fb5935b41a991a1b87fd25eca82c2ecc9f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# UI Framework \u2014 Canonical Documentation\r\nThe ui_framework layer defines how frameworks are shaped, arranged,\r\nand navigated within PrismCommand and PCMS-2026.\r\n\r\n---\r\n\r\n## 1. Purpose\r\nThe ui_framework schema answers:\r\n\r\n- **Where** the framework appears\r\n- **How** the framework is shaped\r\n- **With\u2011what** UI framework it is rendered\r\n\r\nIt does not define content.\r\n\r\n---\r\n\r\n## 2. UI Frameworks\r\nCanonical frameworks:\r\n\r\n- basic\r\n- menu\r\n- pane\r\n- multi_pane\r\n- structured_editor\r\n- toggle_table\r\n- diff_view\r\n- validation_panel\r\n- custom\r\n\r\nFrameworks define interface shape only.\r\n\r\n---\r\n\r\n## 3. Pane System\r\nA pane is a rectangular region with:\r\n\r\n- id\r\n- role\r\n- coordinates\r\n- optional carousel\r\n\r\nPanes render content supplied by commands.\r\n\r\n---\r\n\r\n## 4. Carousel System\r\nCarousels navigate content inside panes.\r\n\r\n- next/prev/jump/refresh\r\n- pane handles overflow\r\n- commands supply items\r\n- content is not interpreted by carousel\r\n\r\n---\r\n\r\n## 5. Diff View\r\nA specialized multi-pane layout with:\r\n\r\n- left pane\r\n- right pane\r\n- synchronized navigation\r\n- relational pairs\r\n\r\nPairs define diff navigation.\r\n\r\n---\r\n\r\n## 6. Override System\r\nProject-level and tenant-level overrides may redefine:\r\n\r\n- pane coordinates\r\n- pane roles\r\n- navigation rules\r\n- carousel behavior\r\n\r\nCanonical definitions remain stable.\r\n\r\n---\r\n\r\n## 7. Content Independence\r\nUI frameworks do not care what content occupies them.\r\n\r\nCommands produce content.\r\nPanes render content.\r\nCarousels navigate content.\r\n\r\n---\r\n\r\n## 8. Architectural Guarantees\r\n- UI and content remain fully decoupled\r\n- basic is the default framework\r\n- overrides allow customization\r\n- canonical schema defines stable defaults\r\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

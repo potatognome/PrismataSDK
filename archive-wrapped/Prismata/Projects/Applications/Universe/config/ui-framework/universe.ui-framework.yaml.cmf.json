@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-ui-framework-universe-ui-framework-yaml",
+  "udi": "prismata.projects-applications-universe-config-ui-framework.wrapped-object.universe-ui-framework-0105b1f524",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "universe.ui-framework.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/Universe/config/ui-framework/universe.ui-framework.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/ui-framework/universe.ui-framework.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "80ba7e791a276b36eed661dd4f18944462312aedb48d0f4c473466cea348ce1a"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: universe.ui-framework.yaml\r\n## Type: application UI framework config\r\n## Purpose: Defines the default UI framework for the Universe application,\r\n## including pane layout and project/tenant override file paths.\r\n\r\nui_interface:\r\n  ui_framework: multi_pane\r\n\r\n  overrides:\r\n    project: project/ui/multi_pane.override.yaml\r\n    tenant: tenant/ui/multi_pane.override.yaml\r\n\r\n  panes:\r\n    - id: results_list\r\n      role: list\r\n      coordinates:\r\n        x: 0\r\n        y: 0\r\n        width: 40\r\n        height: 100\r\n      border_pattern: default\r\n      colour_scheme: default\r\n      carousel:\r\n        enabled: false\r\n\r\n    - id: preview\r\n      role: preview\r\n      coordinates:\r\n        x: 40\r\n        y: 0\r\n        width: 35\r\n        height: 100\r\n      border_pattern: default\r\n      colour_scheme: default\r\n      carousel:\r\n        enabled: false\r\n\r\n    - id: version_carousel\r\n      role: list\r\n      coordinates:\r\n        x: 75\r\n        y: 0\r\n        width: 25\r\n        height: 60\r\n      border_pattern: default\r\n      colour_scheme: default\r\n      carousel:\r\n        enabled: true\r\n        active_index: 0\r\n        navigation:\r\n          wrap: true\r\n          jump: true\r\n          refresh: true\r\n\r\n    - id: diff_panel\r\n      role: diff_right\r\n      coordinates:\r\n        x: 75\r\n        y: 60\r\n        width: 25\r\n        height: 40\r\n      border_pattern: default\r\n      colour_scheme: default\r\n      carousel:\r\n        enabled: false\r\n\r\n  diff_view:\r\n    synchronized_navigation: true\r\n    active_index: 0\r\n    pairs: []\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

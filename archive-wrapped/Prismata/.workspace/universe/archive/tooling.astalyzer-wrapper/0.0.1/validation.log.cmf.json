@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-astalyzer-wrapper-0-0-1-validation-log",
+  "udi": "prismata.workspace-universe-archive-tooling-astalyzer-wrapper-0-0-1.wrapped-artifact.validation-ca8db0dc28",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "validation.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/universe/archive/tooling.astalyzer-wrapper/0.0.1/validation.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.astalyzer-wrapper/0.0.1/validation.log",
+    "encoding": "utf-8",
+    "content_sha256": "ce93ad26a3405807951cfe940e0941407af3e057b11887a5daad24f51189677d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "validated tooling.astalyzer-wrapper\ncanonicalized tooling.astalyzer-wrapper\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

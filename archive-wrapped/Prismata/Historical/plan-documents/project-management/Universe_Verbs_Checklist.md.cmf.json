@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-project-management-universe-verbs-checklist-md",
+  "udi": "prismata.historical-plan-documents-project-management.wrapped-checklist.universe-verbs-checklist-b24efb5efe",
+  "kind": "wrapped-checklist",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "Universe_Verbs_Checklist.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "checklist",
+    "relative_path": "Historical/plan-documents/project-management/Universe_Verbs_Checklist.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/project-management/Universe_Verbs_Checklist.md",
+    "encoding": "utf-8",
+    "content_sha256": "193a07cc76898fd9cd84f8bd327e62148ed26c6089068e27ef185ec2b2519b11"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# UNIVERSE VERBS - MVP CHECKLIST\r\n\r\nCanonicalized from `archive/plan-documents/project-management/2026-07-23-plan-checklist-universe-verbs.md`.\r\n\r\nLast updated (original): 2026-07-23\r\n\r\nSummary:\r\n- Pre-verb requirements: loader, writer, canonical awareness, UDI checks, ASTalyzer integration, dirty state tracking.\r\n- Verb infra: dispatcher, mutation utilities, validation & save pipeline.\r\n- Verbs to implement: `create_field`, `update_field`, `delete_field`, `rename_field`, `move_field`, `validate_schema`, `diff_schema`.\r\n\r\nHistory:\r\n- 2026-07-23: Original checklist (see archive for full text).\r\n",
+    "classification": {
+      "subtype": "checklist",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

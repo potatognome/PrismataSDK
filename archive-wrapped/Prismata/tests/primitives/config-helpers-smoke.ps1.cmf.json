@@ -1,0 +1,36 @@
+{
+  "id": "tests-primitives-config-helpers-smoke-ps1",
+  "udi": "prismata.tests-primitives.wrapped-codeblock.config-helpers-smoke-e9a2735620",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "config-helpers-smoke.ps1",
+    "source_file_type": "ps1",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "tests/primitives/config-helpers-smoke.ps1",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "tests/primitives/config-helpers-smoke.ps1",
+    "encoding": "utf-8",
+    "content_sha256": "feb524d5f2abea4d2435e800b9116ef97a67787b6c136ed903fb5dbf3374c1ba"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff$helpersPath = Join-Path $PSScriptRoot '..\\..\\Projects\\Tooling\\primitives\\config-helpers.ps1'\n. $helpersPath\n\n$sampleJson = '{\"a\":null,\"b\":\"value\",\"c\":{\"d\":\"\",\"e\":\"ok\",\"arr\":[1,2,3]}}'\nWrite-Host '--- Remove missing values JSON ---' -ForegroundColor Cyan\nRemove-MissingValuesText -InputString $sampleJson -Format json -AsJson\nWrite-Host '--- Convert to text JSON ---' -ForegroundColor Cyan\nConvert-ConfigToText -InputString $sampleJson -Format json -RemovePunctuation -IncludeTypeNames -AsJson\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

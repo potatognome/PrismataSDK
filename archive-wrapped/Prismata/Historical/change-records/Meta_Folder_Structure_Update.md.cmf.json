@@ -1,0 +1,36 @@
+{
+  "id": "historical-change-records-meta-folder-structure-update-md",
+  "udi": "prismata.historical-change-records.wrapped-document.meta-folder-structure-update-12e8986127",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "Meta_Folder_Structure_Update.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/change-records/Meta_Folder_Structure_Update.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/change-records/Meta_Folder_Structure_Update.md",
+    "encoding": "utf-8",
+    "content_sha256": "7e3eaf651f7af1d0dfebb73ad0ada20c912ca0bfe8c1f2b0775092771ce6df02"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "Meta Folder Structure Update\r\n=========================================\r\n\r\nCanonicalized from: `archive/change-records/2026-09-14-Meta-folder-structure-update.md`\r\n\r\nDate (original): 2026-09-14\r\n\r\n## Summary\r\n\r\nStandardized naming, UDI application, and folder layout for `Meta` schema and defaults. This canonical document summarizes the core conventions adopted and directs readers to the archived detailed record for full context.\r\n\r\n## Key Points\r\n\r\n- Adopted UDI pattern `prismata.meta.ui-schema.<kebab-case>` for UI schema artifacts.\r\n- Standardized filename convention to kebab-case and `.schema.yaml` suffix for shape schemas; registry schemas append `-registry`.\r\n- Moved defaults into `Meta/defaults/ui` and deprecated several old registries in `Meta/deprecated/ui.schemas`.\r\n\r\n## History\r\n\r\n- 2026-09-14: Detailed structural and naming migration performed. See archived snapshot in `archive/change-records/2026-09-14-Meta-folder-structure-update.md`.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

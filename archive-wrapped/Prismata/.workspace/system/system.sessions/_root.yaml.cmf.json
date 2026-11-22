@@ -1,0 +1,36 @@
+{
+  "id": "workspace-system-system-sessions-root-yaml",
+  "udi": "prismata.workspace-system-system-sessions.wrapped-object.root-962c3273a4",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "_root.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/system/system.sessions/_root.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/system/system.sessions/_root.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "cae5287ec3122fa4839ab93a838125399edfc433d7fbac1b9363d49edfe0a3b1"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.1.0\r\nkind: workspace-folder\r\nmetadata:\r\n  name: system.sessions\r\n  description: Ephemeral session records for active workspace runs and resumable interactions.\r\nspec:\r\n  path: .workspace/system.sessions\r\n  lifecycle: volatile\r\n  tracking: ignored\r\n  volatility: high\r\n  naming:\r\n    reserved_files:\r\n      - _root.yaml\r\n      - \"*.session.yaml\"\r\n    versioning: semver\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

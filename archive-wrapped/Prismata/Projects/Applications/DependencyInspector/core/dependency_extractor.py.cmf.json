@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-dependencyinspector-core-dependency-extractor-py",
+  "udi": "prismata.projects-applications-dependencyinspector-core.wrapped-codeblock.dependency-extractor-43348a0856",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "dependency_extractor.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/DependencyInspector/core/dependency_extractor.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/DependencyInspector/core/dependency_extractor.py",
+    "encoding": "utf-8",
+    "content_sha256": "2a87ed60935b4775ee0318984b89a200779a5c924f011df3174b6da67b3f9b2e"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import yaml\r\nfrom .utils import find_field\r\n\r\ndef extract_dependencies_from_schema(schema):\r\n    deps = []\r\n    for field in schema.get(\"fields\", []):\r\n        f_type = field.get(\"type\")\r\n        f_name = field.get(\"name\")\r\n        required = field.get(\"required\", False)\r\n\r\n        if f_type == \"string\":\r\n            deps.append({\"field\": f_name, \"type\": \"single\", \"required\": required})\r\n        elif f_type == \"array\":\r\n            deps.append({\"field\": f_name, \"type\": \"list\", \"required\": required})\r\n    return deps\r\n\r\ndef analyze_manifest(manifest_file, deps, registry):\r\n    data = yaml.safe_load(manifest_file.read_text())\r\n    out = []\r\n    out.append(f\"Dependency Graph for {manifest_file.name}\")\r\n    out.append(\"------------------------------------------------------------\")\r\n\r\n    for dep in deps:\r\n        field = dep[\"field\"]\r\n        dtype = dep[\"type\"]\r\n        required = dep[\"required\"]\r\n\r\n        value = find_field(data, field)\r\n\r\n        if value is None:\r\n            fallback = \"(fallback applies)\" if not required else \"(missing required dependency)\"\r\n            out.append(f\"  \u251c\u2500 {field}: \u2718 missing {fallback}\")\r\n            continue\r\n\r\n        if dtype == \"single\":\r\n            if value in registry:\r\n                out.append(f\"  \u251c\u2500 {field}: \u2714 {value} loaded\")\r\n            else:\r\n                out.append(f\"  \u251c\u2500 {field}: \u2718 {value} missing (fallback applies)\")\r\n        elif dtype == \"list\":\r\n            out.append(f\"  \u251c\u2500 {field}:\")\r\n            for ref in value:\r\n                if ref in registry:\r\n                    out.append(f\"  \u2502   \u251c\u2500 {ref}: \u2714 loaded\")\r\n                else:\r\n                    out.append(f\"  \u2502   \u251c\u2500 {ref}: \u2718 missing (fallback applies)\")\r\n\r\n    return \"\\n\".join(out)\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

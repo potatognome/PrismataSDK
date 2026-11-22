@@ -1,0 +1,36 @@
+{
+  "id": "workspace-artifacts-checklists-migration-dryrun-log",
+  "udi": "prismata.workspace-artifacts-checklists.wrapped-checklist.migration-dryrun-e59767f512",
+  "kind": "wrapped-checklist",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "migration-dryrun.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "checklist",
+    "relative_path": ".workspace/.artifacts/.checklists/migration-dryrun.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.artifacts/.checklists/migration-dryrun.log",
+    "encoding": "utf-8",
+    "content_sha256": "a3ac0f564612ab4f0cfbfa6d811b064d8eb5e4e2148dff722828e787aa12b018"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "DRY RUN - planned changes:\r\n\r\nUnresolved tokens:\r\nC:/Repository/Daniel/dev_local/Prismata/Meta/registry/border-pattern.d/double-line.border-pattern.entry.yaml\r\nC:/Repository/Daniel/dev_local/Prismata/Meta/registry/colour-scheme.d/default.colour-scheme.entry.yaml\r\naccent-surface\r\nalert-surface\r\nbasic\r\nborder\r\ncustom\r\ndefault\r\ndiff_view\r\ndouble-line\r\nfooter\r\nheader\r\nmenu\r\nmenu_surface\r\nmulti_pane\r\npane\r\nprimary-application\r\nprimary-surface\r\nsecondary-surface\r\nsingle-line\r\nstructured_editor\r\ntoggle_table\r\n",
+    "classification": {
+      "subtype": "checklist",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

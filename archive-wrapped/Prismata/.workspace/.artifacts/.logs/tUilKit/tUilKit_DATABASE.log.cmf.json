@@ -1,0 +1,36 @@
+{
+  "id": "workspace-artifacts-logs-tuilkit-tuilkit-database-log",
+  "udi": "prismata.workspace-artifacts-logs-tuilkit.wrapped-artifact.tuilkit-database-45349f7b07",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "tUilKit_DATABASE.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_DATABASE.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_DATABASE.log",
+    "encoding": "utf-8",
+    "content_sha256": "0c7f1d1752d94839b9bff5b442d1bca86bd03382c5ee8427362bdfe5ef82d266"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "2026-08-30 22:16:33 Testing custom 'database' category\r\n2026-09-08 12:07:35 Testing custom 'database' category\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

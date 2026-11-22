@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-src-versioning-versionutil-ts",
+  "udi": "prismata.projects-applications-universe-src-versioning.wrapped-codeblock.versionutil-9ef9eaf949",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "versionUtil.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/Universe/src/versioning/versionUtil.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/src/versioning/versionUtil.ts",
+    "encoding": "utf-8",
+    "content_sha256": "f09724285aea951ea5eae2ba1049b3836e46269e0e180518c9e61a2c0e69d12f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "// src/versioning/versionUtils.ts\r\n\r\nexport type VersionModel = \"semantic\" | \"integer\" | \"date\" | \"unknown\";\r\n\r\nexport interface NormalizedVersion {\r\n  model: VersionModel;\r\n  major?: number;\r\n  minor?: number;\r\n  patch?: number;\r\n  int?: number;\r\n  date?: Date;\r\n  raw: string;\r\n}\r\n\r\n/**\r\n * Detect version model from raw string.\r\n */\r\nexport function detectVersionModel(raw: string): VersionModel {\r\n  if (/^\\d+\\.\\d+\\.\\d+$/.test(raw)) return \"semantic\";\r\n  if (/^\\d+$/.test(raw)) return \"integer\";\r\n  if (/^\\d{4}-\\d{2}-\\d{2}$/.test(raw)) return \"date\";\r\n  return \"unknown\";\r\n}\r\n\r\n/**\r\n * Normalize any version string into a structured NormalizedVersion object.\r\n */\r\nexport function normalizeVersion(raw: string): NormalizedVersion {\r\n  const model = detectVersionModel(raw);\r\n\r\n  switch (model) {\r\n    case \"semantic\": {\r\n      const [major, minor, patch] = raw.split(\".\").map(n => parseInt(n, 10));\r\n      return { model, major, minor, patch, raw };\r\n    }\r\n\r\n    case \"integer\": {\r\n      return { model, int: parseInt(raw, 10), raw };\r\n    }\r\n\r\n    case \"date\": {\r\n      return { model, date: new Date(raw), raw };\r\n    }\r\n\r\n    default:\r\n      return { model: \"unknown\", raw };\r\n  }\r\n}\r\n\r\n/**\r\n * Compare two normalized versions.\r\n * Returns:\r\n *   -1 if a < b\r\n *    0 if a == b\r\n *    1 if a > b\r\n */\r\nexport function compareVersions(a: NormalizedVersion, b: NormalizedVersion): number {\r\n  if (a.model === \"semantic\" && b.model === \"semantic\") {\r\n    if (a.major! !== b.major!) return a.major! < b.major! ? -1 : 1;\r\n    if (a.minor! !== b.minor!) return a.minor! < b.minor! ? -1 : 1;\r\n    if (a.patch! !== b.patch!) return a.patch! < b.patch! ? -1 : 1;\r\n    return 0;\r\n  }\r\n\r\n  if (a.model === \"integer\" && b.model === \"integer\") {\r\n    return a.int! < b.int! ? -1 : a.int! > b.int! ? 1 : 0;\r\n  }\r\n\r\n  if (a.model === \"date\" && b.model === \"date\") {\r\n    return a.date!.getTime() < b.date!.getTime()\r\n      ? -1\r\n      : a.date!.getTime() > b.date!.getTime()\r\n      ? 1\r\n      : 0;\r\n  }\r\n\r\n  return a.raw < b.raw ? -1 : a.raw > b.raw ? 1 : 0;\r\n}\r\n\r\n/**\r\n * Check if two versions are compatible (same model or normalizable).\r\n */\r\nexport function versionsCompatible(a: string, b: string): boolean {\r\n  const na = normalizeVersion(a);\r\n  const nb = normalizeVersion(b);\r\n\r\n  if (na.model === \"unknown\" || nb.model === \"unknown\") return false;\r\n  if (na.model === nb.model) return true;\r\n\r\n  if (na.model === \"semantic\" && nb.model === \"integer\") return true;\r\n  if (na.model === \"integer\" && nb.model === \"semantic\") return true;\r\n\r\n  if (na.model === \"date\" || nb.model === \"date\") return false;\r\n\r\n  return false;\r\n}\r\n\r\n/**\r\n * Apply forward or backward version remapping.\r\n */\r\nexport function remapVersion(\r\n  raw: string,\r\n  direction: \"forward\" | \"backward\"\r\n): string {\r\n  const n = normalizeVersion(raw);\r\n\r\n  switch (n.model) {\r\n    case \"semantic\": {\r\n      const major = n.major!;\r\n      const minor = n.minor!;\r\n      const patch = n.patch!;\r\n      return direction === \"forward\"\r\n        ? `${major}.${minor}.${patch + 1}`\r\n        : `${major}.${minor}.${Math.max(0, patch - 1)}`;\r\n    }\r\n\r\n    case \"integer\": {\r\n      const next = direction === \"forward\" ? n.int! + 1 : Math.max(0, n.int! - 1);\r\n      return `${next}`;\r\n    }\r\n\r\n    case \"date\": {\r\n      const d = new Date(n.date!);\r\n      const delta = direction === \"forward\" ? 1 : -1;\r\n      d.setDate(d.getDate() + delta);\r\n      return d.toISOString().split(\"T\")[0];\r\n    }\r\n\r\n    default:\r\n      return raw;\r\n  }\r\n}\r\n\r\n/**\r\n * Build a version lineage map for a list of version strings.\r\n */\r\nexport function buildVersionLineage(versions: string[]): string[] {\r\n  const normalized = versions.map(v => normalizeVersion(v));\r\n  normalized.sort(compareVersions);\r\n  return normalized.map(v => v.raw);\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

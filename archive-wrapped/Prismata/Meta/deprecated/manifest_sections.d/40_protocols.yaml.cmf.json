@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-manifest-sections-d-40-protocols-yaml",
+  "udi": "prismata.meta-deprecated-manifest-sections-d.wrapped-object.x-40-protocols-42321b1980",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "40_protocols.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/manifest_sections.d/40_protocols.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/manifest_sections.d/40_protocols.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "aed795177932890b38e76e12bf9fb0d40398dd15e58acd43fb8b0572d1cb082e"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff_META:\r\n  SORT_ORDER: 40\r\n  description: \"Classification tags for discovery and grouping.\"\r\n\r\ntags: []\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "pnpm-workspace-yaml",
+  "udi": "prismata.root.wrapped-object.pnpm-workspace-5c19168a36",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "pnpm-workspace.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "pnpm-workspace.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "pnpm-workspace.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "f9eb0adda922c359b948d9528a2599f1619243d3b39313f01ff321746edfb4b5"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "packages:\r\n  - \"Projects/Applications/*\"\r\n  - \"Projects/Services/*\"\r\n  - \"Projects/Infrastructure/*\"\r\n  - \"Projects/Tenant/*\"\r\n  - \"Projects/Tooling/*\"\r\nallowBuilds:\r\n  esbuild: set this to true or false\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-ui-elements-ui-frameworks-ui-framework-contract-md",
+  "udi": "prismata.historical-architecture-evolution-ui-elements-ui-frameworks.wrapped-document.ui-framework-contract-0e1172f31c",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "UI_framework_Contract.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/ui-elements/ui-frameworks/UI_framework_Contract.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/ui-elements/ui-frameworks/UI_framework_Contract.md",
+    "encoding": "utf-8",
+    "content_sha256": "a92e4acb25ef14be6d6207b0bebcdcb50e2f9d915769a899dd4c7f481e6a4a23"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# UI Interface Contract\r\n\r\nDefines the architectural contract for the ui_framework layer. This layer answers the interface questions of **where**, **how**, and **with\u2011what-style** an interface is rendered, without concern for the content occupying it.\r\n\r\n---\r\n\r\n## 1. Purpose\r\n\r\nThe ui_framework layer provides a stable, declarative specification for UI behavior. It separates:\r\n\r\n- UI shape (framework)\r\n- UI rules (coordinates, navigation, pane roles)\r\n- UI components (panes, carousels)\r\n- Content (supplied by commands)\r\n\r\nThis separation ensures UI evolution without impacting command logic.\r\n\r\n---\r\n\r\n## 2. Framework Contract\r\n\r\nEvery ui_framework must declare a `ui_framework`:\r\n\r\n- basic\r\n- menu\r\n- pane\r\n- multi_pane\r\n- structured_editor\r\n- toggle_table\r\n- diff_view\r\n- validation_panel\r\n- custom\r\n\r\n`basic` is the default for backwards compatibility.\r\n\r\nFrameworks define **interface shape**, not content.\r\n\r\n---\r\n\r\n## 3. Pane Contract\r\n\r\nA pane is a rectangular UI region defined by:\r\n\r\n- id\r\n- role\r\n- coordinates (x, y, width, height)\r\n- optional carousel\r\n\r\nPanes render content but do not interpret it.\r\n\r\n---\r\n\r\n## 4. Carousel Contract\r\n\r\nA carousel is a navigation mechanism inside a pane.\r\n\r\n- Displays one item at a time\r\n- Supports next/prev/jump/refresh\r\n- Pane handles overflow\r\n- Commands supply carousel items\r\n- Carousel does not interpret content\r\n\r\n---\r\n\r\nHistory\r\n-------\r\n- Canonicalized from `../../../archive/ui-frameworks/2026-08-21-UI_framework_Contract.md` and related 2026-08-24 contract fragments. See `CHANGELOG.md` and `../../../archive/ui-frameworks/` for snapshots.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

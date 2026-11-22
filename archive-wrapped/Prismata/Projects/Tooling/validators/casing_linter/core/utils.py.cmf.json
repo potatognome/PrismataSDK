@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-validators-casing-linter-core-utils-py",
+  "udi": "prismata.projects-tooling-validators-casing-linter-core.wrapped-codeblock.utils-9bf37fa888",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "utils.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/validators/casing_linter/core/utils.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/validators/casing_linter/core/utils.py",
+    "encoding": "utf-8",
+    "content_sha256": "0e2b39497de1a5a8f3dc8121945c9cdbb7963bef70641d4d151c9ed2c5aad86b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Reserved for future shared utilities\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

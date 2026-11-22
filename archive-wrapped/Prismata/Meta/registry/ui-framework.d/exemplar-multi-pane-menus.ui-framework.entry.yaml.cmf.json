@@ -1,0 +1,36 @@
+{
+  "id": "meta-registry-ui-framework-d-exemplar-multi-pane-menus-ui-framework-entry-yaml",
+  "udi": "prismata.meta-registry-ui-framework-d.wrapped-object.exemplar-multi-pane-menus-ui-framework-entry-e9d42f29ad",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "exemplar-multi-pane-menus.ui-framework.entry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/registry/ui-framework.d/exemplar-multi-pane-menus.ui-framework.entry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/registry/ui-framework.d/exemplar-multi-pane-menus.ui-framework.entry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "d53bccea0ee5de86adb41f8399fcccadc6b5ed7e8d7e4f7650cac075b01c8ffd"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: exemplar-multi-pane-menus.ui-framework.entry.yaml\r\n## Type: ui-framework registry entry\r\n## Purpose: Registry-backed multi-pane menu framework using two side-by-side panes.\r\n\r\nid: exemplar-multi-pane-menus\r\nudi: prismata.meta.ui-framework.exemplar-multi-pane-menus\r\nname: exemplar-multi-pane-menus.ui-framework\r\nlabel: \"Exemplar Multi-Pane Menus\"\r\nkind: ui-framework\r\ndescription: \"Two side-by-side panes with explicit pane-to-menu bindings and header-driven menu titles.\"\r\nschema_version: 0.4.3\r\n\r\npanes:\r\n  - prismata.meta.pane.lh-pane\r\n  - prismata.meta.pane.rh-pane\r\nmenus:\r\n  - prismata.meta.menu.exemplar-primary\r\n  - prismata.meta.menu.exemplar-secondary\r\npane_bindings:\r\n  - pane: prismata.meta.pane.lh-pane\r\n    menu: prismata.meta.menu.exemplar-primary\r\n  - pane: prismata.meta.pane.rh-pane\r\n    menu: prismata.meta.menu.exemplar-secondary\r\ncolour_scheme: default\r\nactive_pane: prismata.meta.pane.lh-pane\r\nborder_pattern: single-line\r\n\r\nmeta:\r\n  created_by: copilot\r\n  created_at: 2026-10-02\r\n  schema_version: 0.4.3\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-project-classification-core-layer-md",
+  "udi": "prismata.historical-architecture-evolution-project-classification.wrapped-document.core-layer-40bf5a4fc2",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "Core_Layer.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/project-classification/Core_Layer.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/project-classification/Core_Layer.md",
+    "encoding": "utf-8",
+    "content_sha256": "32e6d7e80b1ff0b78781d8d5010b3169fb91b849f72f8d814a405a95dd17294f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Core Layer\r\n\r\n## LAST UPDATE: 2026-08-17\r\n\r\nThis revision supersedes earlier historical wording that implied `Core`, `Infrastructure`, and `Tenant` were the canonical physical layout for project folders.\r\n\r\nThe canonical physical project layout is now:\r\n\r\n- `Prismata/Projects/Applications`\r\n- `Prismata/Projects/Services`\r\n- `Prismata/Projects/Tooling`\r\n\r\n`Core` / `Infrastructure` / `Tenant` remain useful as conceptual classification categories, but they are not the authoritative repository path structure.\r\n\r\n                            CORE LAYER (THE PHYSICS)\r\n                            =========================\r\n                                \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\r\n                                \u2502   SCHEMAS     \u2502\r\n                                \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\r\n                                       v\r\n        \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\r\n        \u2502 primary config schema \u2014 defines project structure            \u2502\r\n        \u2502 flowspec schema \u2014 defines workflow structure                 \u2502\r\n        \u2502 jobspec schema \u2014 defines job execution structure             \u2502\r\n        \u2502 project classification schema \u2014 defines type/role rules      \u2502\r\n        \u2502 interface capability schema \u2014 defines interface structure    \u2502\r\n        \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\r\n\r\n                               \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\r\n                               \u2502  TAXONOMIES   \u2502\r\n                               \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\r\n                                      v\r\n        \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\r\n        \u2502 colour taxonomy \u2014 semantic hue families                      \u2502\r\n        \u2502 role taxonomy \u2014 allowed roles                                \u2502\r\n        \u2502 project_type taxonomy \u2014 Applications/Services/Tooling        \u2502\r\n        \u2502 interface taxonomy \u2014 semantic interface categories           \u2502\r\n        \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\r\n\r\n                               \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\r\n                               \u2502  SUBSTRATES   \u2502\r\n                               \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\r\n                                      v\r\n        \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\r\n        \u2502 logging substrate \u2014 unified logging behaviour                \u2502\r\n        \u2502 compositor substrate \u2014 windowed UI behaviour                 \u2502\r\n        \u2502 interface grammar \u2014 rules for UI/CLI/TUI                     \u2502\r\n        \u2502 colour engine \u2014 OKLCH + brightness + hue logic               \u2502\r\n        \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\r\n\r\nNotes:\r\n\r\n- `project_type` now maps conceptually to `Applications`, `Services`, and `Tooling` for physical placement under `Prismata/Projects/`.\r\n- Keep using `Core`/`Infrastructure`/`Tenant` as conceptual classifications where helpful, but prefer the physical grouping for repository layout and CI paths.\r\n- Historical references to `Core`/`Infrastructure`/`Tenant` as physical path roots should be read as historical context only, not as the current canonical folder structure.\r\n\r\nHistory\r\n-------\r\n- Canonicalized from `../../archive/project-classification/2026-08-17-Core_Layer.md` (latest snapshot). See `CHANGELOG.md` for a short history and `../../archive/project-classification/` for full dated snapshots.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

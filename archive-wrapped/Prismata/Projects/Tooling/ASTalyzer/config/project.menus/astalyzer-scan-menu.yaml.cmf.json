@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-astalyzer-config-project-menus-astalyzer-scan-menu-yaml",
+  "udi": "prismata.projects-tooling-astalyzer-config-project-menus.wrapped-object.astalyzer-scan-menu-84fe228164",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "astalyzer-scan-menu.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Tooling/ASTalyzer/config/project.menus/astalyzer-scan-menu.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/ASTalyzer/config/project.menus/astalyzer-scan-menu.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "ad2f761b39f3f55e3752bebd5f6b9029af928beffbcec12f5759e8bc5bdaaa02"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# ASTalyzer scan menu\r\nid: \"prismata.astalyzer.menu.scan\"\r\nversion: 0.2.0\r\nkind: menu\r\ndescription: Recursive scan actions for ASTalyzer.\r\n\r\nlayout:\r\n  type: list\r\n  title: ASTalyzer \u2014 Recursive Scan\r\n\r\nitems:\r\n  - id: \"prismata.astalyzer.menu-item.scan-api-recursive-run\"\r\n    label: Run Recursive Scan\r\n    group: analysis\r\n    action:\r\n      type: udi-capability\r\n      capability_id: \"prismata.astalyzer.capability.scan-api-recursive\"\r\n    visibility:\r\n      selection:\r\n        required: false\r\n      compatibility:\r\n        types:\r\n          - folder\r\n          - file\r\n        modes:\r\n          - single\r\n    hints:\r\n      short: Recursively scan folder or file for APIs, imports, and signatures.\r\n      long: >\r\n        Select a folder or file and recursively scan for external API usage,\r\n        imports, function signatures, inputs, outputs, and inferred types.\r\n\r\n  - id: \"prismata.astalyzer.menu-item.scan-api-view-last-output\"\r\n    label: View Last Output\r\n    group: output\r\n    action: \"view_last_output\"\r\n\r\n  - id: \"prismata.astalyzer.menu-item.scan-api-save-last-output\"\r\n    label: Save Last Output to File\r\n    group: output\r\n    action: \"save_last_output\"\r\n\r\n  - id: \"back\"\r\n    label: Back\r\n    group: navigation\r\n    action: \"back\"",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

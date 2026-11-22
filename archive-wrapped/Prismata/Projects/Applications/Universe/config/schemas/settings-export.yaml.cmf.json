@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-schemas-settings-export-yaml",
+  "udi": "prismata.projects-applications-universe-config-schemas.wrapped-schema.settings-export-0e9378ccaf",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "settings-export.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Applications/Universe/config/schemas/settings-export.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/schemas/settings-export.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "85c41bdb776f1ac1e0081435c4cdb435c9ddef11a3047c4b489bdde74c18a326"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: settings-export.yaml\r\n## Type: schema\r\n## Purpose: Schema controlling export options (types, extensions,\r\n## and versioning) for export tooling.\r\n\r\nmetadata:\r\n  udi: prismata.universe.schema.settings-export\r\n  name: settings-export\r\n  kind: schema-definition\r\n  description: \"Schema controlling export options (types, extensions, and versioning).\"\r\n\r\n\r\nid: \"prismata.universe.schema.settings-export\"\r\nversion: \"1.0.0\"\r\ntype: object\r\nproperties:\r\n  default_export_type: { type: string }\r\n  allowed_extensions: { type: array }\r\n  auto_append_version: { type: boolean }\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

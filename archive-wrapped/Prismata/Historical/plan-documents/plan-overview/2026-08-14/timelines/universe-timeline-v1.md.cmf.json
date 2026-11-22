@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-plan-overview-2026-08-14-timelines-universe-timeline-v1-md",
+  "udi": "prismata.historical-plan-documents-plan-overview-2026-08-14-timelines.wrapped-plan.universe-timeline-v1-2a3feaf0a5",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "universe-timeline-v1.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/plan-overview/2026-08-14/timelines/universe-timeline-v1.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/plan-overview/2026-08-14/timelines/universe-timeline-v1.md",
+    "encoding": "utf-8",
+    "content_sha256": "36078e46ca2a6cfe3a189b0c8c3673674103b504cebe6d0ed44c3c2d654d2531"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff# universe-timeline-v1.md\n# Version: 1.0.0\n# Universe Timeline \u2014 universe-timeline-v1.md\n# Version: 1.0.0\n\n## Universe Evolution\n- Stage 2: MVP ingestion  \n- Stage 2: MVI ingestion  \n- Stage 3: Tooling integration  \n- Stage 4: Semantic validation  \n- Stage 5: Manifest registry integration  \n- Stage 6: Documentation integration\n\n## Notes\nArchived under `/historical/timeline/`.\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

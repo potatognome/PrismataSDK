@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-schemas-verify-reference-yaml",
+  "udi": "prismata.projects-applications-universe-config-schemas.wrapped-schema.verify-reference-0259e2460c",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "verify-reference.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Applications/Universe/config/schemas/verify-reference.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/schemas/verify-reference.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "193833cfa7ff7265a7b60dcb045f2a9cc7d91bd4cbbc91227e6cbf748a015a31"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: verify-reference.yaml\r\n## Type: schema\r\n## Purpose: Schema used to verify references between objects (compatibility\r\n## checks and reference validation during ingestion/migration).\r\n\r\nmetadata:\r\n  udi: prismata.universe.schema.verify-reference\r\n  name: verify-reference\r\n  kind: schema-definition\r\n  description: \"Schema used to verify references between objects during ingestion/migration.\"\r\n\r\n\r\nid: \"prismata.universe.schema.verify-reference\"\r\nversion: \"1.1.0\"\r\ntype: object\r\nproperties:\r\n  reference_object: { type: object }\r\n  selected_objects: { type: array }\r\n  compatibility_matrix: { type: object }\r\n  verification_results: { type: array }\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-astalyzer-src-astalyzer-api-scanner-ts",
+  "udi": "prismata.projects-tooling-astalyzer-src-astalyzer.wrapped-codeblock.api-scanner-ac87a87c4d",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "api-scanner.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/ASTalyzer/src/astalyzer/api-scanner.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/ASTalyzer/src/astalyzer/api-scanner.ts",
+    "encoding": "utf-8",
+    "content_sha256": "bdd75bececbd20a6a9d6235302f1f1de6bb7e750a325436310dbb13c23d94374"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "// Recursive API scanner \r\nimport * as fs from \"fs\";\r\nimport * as path from \"path\";\r\n\r\nexport interface APIScanResult {\r\n  udi: string;\r\n  root_path: string;\r\n  files_scanned: string[];\r\n  external_apis: any[];\r\n  functions: any[];\r\n}\r\n\r\nfunction deriveScanUdi(rootPath: string): string {\r\n  const slug = rootPath\r\n    .toLowerCase()\r\n    .replace(/\\\\/g, \"/\")\r\n    .replace(/[^a-z0-9/]/g, \"-\")\r\n    .replace(/\\/+/g, \"-\")\r\n    .replace(/-+/g, \"-\")\r\n    .replace(/^-|-$/g, \"\")\r\n    .slice(0, 64);\r\n  return `prismata.astalyzer.scan-result.${slug}`;\r\n}\r\n\r\nexport function scanAPIsRecursive(root: string): APIScanResult {\r\n  const files: string[] = [];\r\n\r\n  function walk(p: string) {\r\n    const stat = fs.statSync(p);\r\n    if (stat.isDirectory()) {\r\n      for (const entry of fs.readdirSync(p)) {\r\n        walk(path.join(p, entry));\r\n      }\r\n    } else {\r\n      files.push(p);\r\n    }\r\n  }\r\n\r\n  walk(root);\r\n\r\n  return {\r\n    udi: deriveScanUdi(path.resolve(root)),\r\n    root_path: root,\r\n    files_scanned: files,\r\n    external_apis: [],\r\n    functions: [],\r\n  };\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-canonical-config-sections-d-alt-config-json",
+  "udi": "prismata.meta-deprecated-canonical-config-sections-d.wrapped-object.alt-config-0010faacdc",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "ALT_CONFIG.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/canonical/config_sections.d/ALT_CONFIG.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/canonical/config_sections.d/ALT_CONFIG.json",
+    "encoding": "utf-8",
+    "content_sha256": "096e890330a58cc7c3eedd9d710d100a373a8485f0df665fc0b42d690e5075e5"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\r\n    \"_META\"                            : {\r\n        \"SORT_ORDER\"                   : 50\r\n    },\r\n    \"ALT_CONFIG\": {\r\n        \"ENABLED\": true,\r\n        \"FILE_PATHS\": [\".workspace/.projects_config/ALT_CONFIG.d/\"]\r\n        \r\n    },\r\n    \"REMOVE_ALT_CONFIG\"                : []\r\n}\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

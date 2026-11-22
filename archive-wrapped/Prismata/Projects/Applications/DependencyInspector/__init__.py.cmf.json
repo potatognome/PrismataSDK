@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-dependencyinspector-init-py",
+  "udi": "prismata.projects-applications-dependencyinspector.wrapped-codeblock.init-c83846c9bd",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "__init__.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/DependencyInspector/__init__.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/DependencyInspector/__init__.py",
+    "encoding": "utf-8",
+    "content_sha256": "c7f24b74aaf120fcc582bce02d9bec5558c054dcc3b250b6e7945f88191ccf2d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff# Prismata Dependency Inspector\r\n\r\nA standalone tool for:\r\n\r\n- schema-driven dependency extraction  \r\n- manifest dependency resolution  \r\n- fallback inference  \r\n- renderer simulation  \r\n- GUI visualization  \r\n\r\nRun CLI:\r\n\r\npython -m dependency_inspector --schema pane\r\npython -m dependency_inspector --all\r\n\r\nRun GUI:\r\n\r\npython -m dependency_inspector --gui\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

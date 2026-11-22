@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-create-tests-dummy-manifest-yaml",
+  "udi": "prismata.workspace-universe-create-tests.wrapped-manifest.dummy-manifest-d721233b39",
+  "kind": "wrapped-manifest",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "dummy.manifest.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "manifest",
+    "relative_path": ".workspace/universe/create-tests/dummy.manifest.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/create-tests/dummy.manifest.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "d3b299c546ca8875860932be15e7038e2b72a4141b51ed501709b74581c68f4f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "id: prismata.universe.test.manifest\nname: Universe Test Panel\nversion: 0.0.2\nkind: module\n",
+    "classification": {
+      "subtype": "manifest",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

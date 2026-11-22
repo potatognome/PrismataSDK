@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-scrape-folder-0-0-1-manifest-fragment-yaml",
+  "udi": "prismata.workspace-universe-archive-tooling-scrape-folder-0-0-1.wrapped-manifest.manifest-fragment-c3681c4c9b",
+  "kind": "wrapped-manifest",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "manifest.fragment.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "manifest",
+    "relative_path": ".workspace/universe/archive/tooling.scrape-folder/0.0.1/manifest.fragment.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.scrape-folder/0.0.1/manifest.fragment.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "a379cc9579c0b9302180d1010a3c93cd1405ddca01c0eaa73c6796bbd662f3f0"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "udi: tooling.scrape-folder\nname: ScrapeFolder\nversion: 0.1.0\nmodule: primitives/powershell/scrape-folder.ps1\n",
+    "classification": {
+      "subtype": "manifest",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

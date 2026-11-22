@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-project-classification-core-infrastructure-tenant-md",
+  "udi": "prismata.historical-architecture-evolution-project-classification.wrapped-document.core-infrastructure-tenant-3d5f011e54",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "Core_Infrastructure_Tenant.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/project-classification/Core_Infrastructure_Tenant.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/project-classification/Core_Infrastructure_Tenant.md",
+    "encoding": "utf-8",
+    "content_sha256": "507a1a782e827dd1c643bf45339e7b75b3c51bf402233b107437a0c907bcdfce"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Core / Infrastructure / Tenant (Conceptual)\r\n\r\n## LAST UPDATE: 2026-08-17\r\n\r\nCanonical conceptual classification guidance for Core, Infrastructure, and Tenant categories. Use these as conceptual classifications rather than authoritative repository paths.\r\n\r\nHistory\r\n-------\r\n- Canonicalized from `../../archive/project-classification/2026-08-17-core-infrastructure-tenant.md`. See `CHANGELOG-core_infra_tenant.md` and `../../archive/project-classification/` for snapshots.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

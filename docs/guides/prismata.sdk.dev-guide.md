@@ -518,6 +518,8 @@ The SDK contains operational helpers under `core/ops/`:
 - `check_source_paths.py`: source-path verification.
 - `extract_versions.py`: version extraction.
 - `set_versions_by_udi.py`: version updates associated with UDIs.
+- `wrap_repository_to_cmf.py`: wraps repository text files into deterministic CMF backup artifacts (`kind=wrapped-<subtype>`).
+- `unwrap_cmf_archive.py`: restores snapshot/reference files from wrapped CMF artifacts with path sanitization, conflict policies, and digest verification.
 
 Use manifest and UDI metadata consistently. Do not add versioning, ownership, or source provenance through ad hoc
 hardcoding when an existing metadata or registry mechanism is available.

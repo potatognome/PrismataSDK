@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-module-tuilkit-0-0-1-metadata-json",
+  "udi": "prismata.workspace-universe-archive-module-tuilkit-0-0-1.wrapped-object.metadata-89e9949a1b",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "metadata.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/archive/module.tuilkit/0.0.1/metadata.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/module.tuilkit/0.0.1/metadata.json",
+    "encoding": "utf-8",
+    "content_sha256": "ebc741e967548207fd51eea1b3f27611dc7017b0ef61b1ae59265213dda5864d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  \"package_name\": \"tUilKit\",\n  \"udi\": \"module.tuilkit\",\n  \"version\": \"0.0.1\",\n  \"source_kind\": \"module\",\n  \"source_path\": \"C:\\\\Repository\\\\Daniel\\\\dev_local\\\\tUilKit\",\n  \"ingested_at_utc\": \"2026-08-24T19:04:35.895Z\",\n  \"metadata\": {\n    \"reused_primitives\": [\n      \"scraper\",\n      \"foldertree\",\n      \"configmerge\",\n      \"config-helpers\",\n      \"path-helpers\",\n      \"colour-path-helpers\",\n      \"menu-helpers\",\n      \"vile\",\n      \"ASTalyzer\"\n    ]\n  }\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

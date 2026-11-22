@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-dependencyinspector-main-py",
+  "udi": "prismata.projects-applications-dependencyinspector.wrapped-codeblock.main-f4c9a0a463",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "__main__.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/DependencyInspector/__main__.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/DependencyInspector/__main__.py",
+    "encoding": "utf-8",
+    "content_sha256": "296f3fdb78e50e68a65d0bb7b5a502b98753fceb27b357ce43ea2c07060f2e78"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import sys\r\nfrom pathlib import Path\r\n\r\n# Add Prismata root to sys.path\r\nROOT = Path(__file__).resolve().parents[3]   # goes up to your repo root\r\nprint(\"\")\r\nprint (f\"Root Folder: {ROOT}\")\r\nprint(\"\")\r\n\r\nsys.path.insert(0, str(ROOT))\r\n\r\n\r\nfrom Projects.Applications.DependencyInspector.cli import run_cli\r\nfrom Projects.Applications.DependencyInspector.gui import run_gui\r\n\r\nif __name__ == \"__main__\":\r\n    if \"--gui\" in sys.argv:\r\n        run_gui()\r\n    else:\r\n        run_cli()\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

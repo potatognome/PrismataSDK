@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-project-menus-edit-create-menu-yaml",
+  "udi": "prismata.projects-applications-universe-config-project-menus.wrapped-object.edit-create-menu-b0880cea76",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "edit-create-menu.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/Universe/config/project-menus/edit-create-menu.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/project-menus/edit-create-menu.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "864397f3b469b4ee898f686ac1f95880797649d70bd56903994a0763317438df"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "metadata:\r\n  udi: prismata.universe.menu.edit.create\r\n  name: \"Edit > Create Menu\"\r\n  version: \"0.1.0\"\r\n  kind: menu\r\n  description: \"Submenu for creating new objects from reference context.\"\r\n\r\nitems:\r\n  - key: \"1\"\r\n    udi: \"prismata.universe.menu.edit.create.create\"\r\n    label: \"Create New Object\"\r\n    description: \"Create a new object from the current reference object context.\"\r\n    capability: \"prismata.universe.capability.fs-create-from-object\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

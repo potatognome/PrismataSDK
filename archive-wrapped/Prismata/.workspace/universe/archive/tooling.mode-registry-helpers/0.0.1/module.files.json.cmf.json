@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-mode-registry-helpers-0-0-1-module-files-json",
+  "udi": "prismata.workspace-universe-archive-tooling-mode-registry-helpers-0-0-1.wrapped-object.module-files-f0f6ad98a5",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "module.files.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/archive/tooling.mode-registry-helpers/0.0.1/module.files.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.mode-registry-helpers/0.0.1/module.files.json",
+    "encoding": "utf-8",
+    "content_sha256": "a646bd4d1e0fdff1b73f923548048ca07a5248941379fe881cff20c930d1d772"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  \"count\": 1,\n  \"files\": [\n    \"Projects/Tooling/primitives/powershell/mode-registry.helpers.ps1\"\n  ]\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

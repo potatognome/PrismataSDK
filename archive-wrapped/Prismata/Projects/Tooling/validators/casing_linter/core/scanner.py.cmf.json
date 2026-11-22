@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-validators-casing-linter-core-scanner-py",
+  "udi": "prismata.projects-tooling-validators-casing-linter-core.wrapped-codeblock.scanner-9bf8bd3d60",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "scanner.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/validators/casing_linter/core/scanner.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/validators/casing_linter/core/scanner.py",
+    "encoding": "utf-8",
+    "content_sha256": "e406625b7a9915d0008856bc64a80eeb2b800a21940556b2d8304bad3e661eb7"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "from pathlib import Path\nimport yaml\nfrom Projects.Tooling.validators.casing_linter.core.rules import classify_yaml_key\nfrom Projects.Tooling.validators.validator_suite.utils import should_ignore\n\nREGISTRY_ROOT = Path('Meta/registry')\nSCHEMA_ROOT = Path('Meta/canonical/object.schemas')\n\ndef scan_yaml_file(path):\n    issues = []\n    data = yaml.safe_load(path.read_text())\n\n    def walk(obj):\n        if isinstance(obj, dict):\n            for key, value in obj.items():\n                casing = classify_yaml_key(key)\n                if casing.startswith('invalid'):\n                    issues.append((path, key, casing))\n                walk(value)\n        elif isinstance(obj, list):\n            for item in obj:\n                walk(item)\n\n    walk(data)\n    return issues\n\ndef scan_all_yaml():\n    issues = []\n    root = Path(\"Meta\")\n\n    for file in root.rglob(\"*.yaml\"):\n        if should_ignore(file):\n            continue\n\n    for root in (REGISTRY_ROOT, SCHEMA_ROOT):\n        for file in root.rglob('*.yaml'):\n            issues.extend(scan_yaml_file(file))\n\n    return issues",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-project-classification-workspace-master-project-classification-table-md",
+  "udi": "prismata.historical-architecture-evolution-project-classification.wrapped-document.workspace-master-project-classification-table-90d99a7b75",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "Workspace_Master_Project_Classification_Table.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/project-classification/Workspace_Master_Project_Classification_Table.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/project-classification/Workspace_Master_Project_Classification_Table.md",
+    "encoding": "utf-8",
+    "content_sha256": "5dfd4bc439bc4b515f1ca8d148a0129e1755a1edb5d0858cec102f021b70999e"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Workspace Master Project Classification Table\r\n\r\n## LAST UPDATE: 2026-06-01\r\n\r\nCanonical workspace master classification table.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

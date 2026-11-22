@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-templates-chromatutor-ts",
+  "udi": "prismata.meta-deprecated-templates.wrapped-codeblock.chromatutor-416e7ce714",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "ChromaTutor.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Meta/deprecated/templates/ChromaTutor.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/templates/ChromaTutor.ts",
+    "encoding": "utf-8",
+    "content_sha256": "d4f66b580bb89c9c83fee8d35c939c7f420521ff1c06746ff85a21dcd0f6b886"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "export const ChromaTutor = {\n    interpret(text: string) {\n        return {\n            colours: [],\n            glyphs: [],\n            animations: []\n        }\n    }\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

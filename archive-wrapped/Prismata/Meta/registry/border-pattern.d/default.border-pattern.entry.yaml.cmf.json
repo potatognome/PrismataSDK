@@ -1,0 +1,36 @@
+{
+  "id": "meta-registry-border-pattern-d-default-border-pattern-entry-yaml",
+  "udi": "prismata.meta-registry-border-pattern-d.wrapped-object.default-border-pattern-entry-cf597ba188",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "default.border-pattern.entry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/registry/border-pattern.d/default.border-pattern.entry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/registry/border-pattern.d/default.border-pattern.entry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "6d469ab1dfd7739d6214ba657ff819ed988f74513b7b02c0c31b8af4695a6de5"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: default.border-pattern.entry.yaml\r\n## Type: border-pattern registry entry (0.4.0)\r\n## Purpose: Default Prismata terminal border-pattern registry entry.\r\n## Provides border patterns for UI surfaces, borders,\r\n## menus, and interactive elements.\r\n\r\nid: default\r\nudi: prismata.meta.border-pattern.default\r\nname: default.border-pattern\r\nlabel: \"Prismata Default Terminal Border Pattern (0.4.0)\"\r\nkind: border-pattern\r\ndescription: Default terminal border pattern for Prismata UI.\r\nschema_version: 0.4.0\r\n\r\nglyphs:\r\n  top: \"\\u2500\"\r\n  bottom: \"\\u2500\"\r\n  left: \"\\u2502\"\r\n  right: \"\\u2502\"\r\n  corner_top_left: \"\\u250C\"\r\n  corner_top_right: \"\\u2510\"\r\n  corner_bottom_left: \"\\u2514\"\r\n  corner_bottom_right: \"\\u2518\"\r\n\r\nthickness: 1\r\npadding: 1\r\ncolour_role: border\r\n\r\nmeta:\r\n  created_by: copilot\r\n  created_at: 2026-09-24\r\n  schema_version: 0.4.0\r\n\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

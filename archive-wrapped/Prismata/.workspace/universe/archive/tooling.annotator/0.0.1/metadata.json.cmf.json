@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-annotator-0-0-1-metadata-json",
+  "udi": "prismata.workspace-universe-archive-tooling-annotator-0-0-1.wrapped-object.metadata-7622c2605b",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "metadata.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/archive/tooling.annotator/0.0.1/metadata.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.annotator/0.0.1/metadata.json",
+    "encoding": "utf-8",
+    "content_sha256": "d90a4700f30d51a063baf628212f1dbb61ae2bef1f52802faad8e2155bda1d82"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  \"package_name\": \"Annotator\",\n  \"udi\": \"tooling.annotator\",\n  \"version\": \"0.0.1\",\n  \"source_kind\": \"module\",\n  \"source_path\": \"C:\\\\Repository\\\\Daniel\\\\dev_local\\\\Prismata\\\\Projects\\\\Tooling\\\\primitives\\\\powershell\\\\annotator.ps1\",\n  \"ingested_at_utc\": \"2026-08-24T19:04:35.975Z\",\n  \"metadata\": {\n    \"origin\": \"tooling.manifest.yaml\"\n  }\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

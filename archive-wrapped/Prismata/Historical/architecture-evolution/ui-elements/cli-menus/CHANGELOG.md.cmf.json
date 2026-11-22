@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-ui-elements-cli-menus-changelog-md",
+  "udi": "prismata.historical-architecture-evolution-ui-elements-cli-menus.wrapped-document.changelog-62a785a1c0",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "CHANGELOG.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/ui-elements/cli-menus/CHANGELOG.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/ui-elements/cli-menus/CHANGELOG.md",
+    "encoding": "utf-8",
+    "content_sha256": "4f5d09eaa90a6aa7a5e10ecdb0efca0b44e08e8a0c6cc622bff5cd83981d84c8"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Changelog \u2014 CLI Menu Standard (PCMS)\r\n\r\n- 2026-07-23 \u2014 Loader discovery preference: `config/project-menus`; canonicalized YAMLs and ACTIONS mapping; icons and colour registry normalization.\r\n- 2026-07-15 \u2014 Canonical menu schema inventory added (menu.schema.yaml, menu-item.schema.yaml, registry schemas) and AST-friendly summary.\r\n- 2026-07-06 \u2014 Initial CLI menu standard snapshot and loader pipeline (menu loader pipeline, rendering system, condition system).\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

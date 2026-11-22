@@ -1,0 +1,36 @@
+{
+  "id": "workspace-artifacts-logs-tuilkit-tuilkit-config-read-log",
+  "udi": "prismata.workspace-artifacts-logs-tuilkit.wrapped-artifact.tuilkit-config-read-1381ef5b90",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "tUilKit_CONFIG_READ.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_CONFIG_READ.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_CONFIG_READ.log",
+    "encoding": "utf-8",
+    "content_sha256": "bdaee6557630f1b40c8cc2e710f6c02de7a83f6b8ec1fb1792912d75e7e6fe7c"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "2026-08-30 22:16:33 Testing 'all' category (logs to all files)\r\n2026-09-08 12:07:35 Testing 'all' category (logs to all files)\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

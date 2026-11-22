@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-module-tuilkit-0-0-1-validation-log",
+  "udi": "prismata.workspace-universe-archive-module-tuilkit-0-0-1.wrapped-artifact.validation-7d505f3abe",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "validation.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/universe/archive/module.tuilkit/0.0.1/validation.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/module.tuilkit/0.0.1/validation.log",
+    "encoding": "utf-8",
+    "content_sha256": "f3169a708e3ffa1285a6705014a361ec60a90f57ba63d74942258d461601cf80"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "validated module.tuilkit\ncanonicalized module.tuilkit\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "workspace-system-system-cache-root-yaml",
+  "udi": "prismata.workspace-system-system-cache.wrapped-object.root-bf608ed645",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "_root.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/system/system.cache/_root.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/system/system.cache/_root.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "de8b5ce9a33a92e1bf39af6aec1b84554058f766e2842d9b93bd5179576a8f09"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.1.0\r\nkind: workspace-folder\r\nmetadata:\r\n  name: system.cache\r\n  description: Rebuildable cache entries used to accelerate workspace operations.\r\nspec:\r\n  path: .workspace/system.cache\r\n  lifecycle: volatile\r\n  tracking: ignored\r\n  volatility: high\r\n  naming:\r\n    reserved_files:\r\n      - _root.yaml\r\n      - \"*.cache.yaml\"\r\n    versioning: semver\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

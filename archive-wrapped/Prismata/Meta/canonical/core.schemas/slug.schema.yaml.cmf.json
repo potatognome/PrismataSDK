@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-core-schemas-slug-schema-yaml",
+  "udi": "prismata.meta-canonical-core-schemas.wrapped-schema.slug-schema-af1b97bfb0",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "slug.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/core.schemas/slug.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/core.schemas/slug.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "23153d85fe182458f8d247cddfc35be858658ae2dcb455ccdb3a3f85c628dfc9"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: slug\r\nschema_type: core\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.slug\r\n  name: slug.schema\r\n  description: Canonical schema defining slug rules for UDI identity.\r\n\r\nspec:\r\n  target_kind: slug\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: pattern\r\n    path: pattern\r\n    type: string\r\n    required: true\r\n\r\n  - name: maxLength\r\n    path: maxLength\r\n    type: integer\r\n    required: true\r\n\r\n  - name: allowSeparator\r\n    path: allowSeparator\r\n    type: boolean\r\n    required: true\r\n\r\nobject:\r\n  pattern: \"^[a-z0-9-]+(\\\\|[a-z0-9-]+)*$\"\r\n  maxLength: 64\r\n  allowSeparator: true\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

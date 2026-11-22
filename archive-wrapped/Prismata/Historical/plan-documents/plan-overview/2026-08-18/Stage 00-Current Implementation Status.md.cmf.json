@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-plan-overview-2026-08-18-stage-00-current-implementation-status-md",
+  "udi": "prismata.historical-plan-documents-plan-overview-2026-08-18.wrapped-plan.stage-00-current-implementation-status-bd11a0aeaa",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "Stage 00-Current Implementation Status.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/plan-overview/2026-08-18/Stage 00-Current Implementation Status.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/plan-overview/2026-08-18/Stage 00-Current Implementation Status.md",
+    "encoding": "utf-8",
+    "content_sha256": "738645910be42bb810e069098f14defbd096b9c89db0eb110844dc5a0f69da59"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Stage 00 \u2014 Current Implementation Status\r\n\r\n## Date\r\n\r\n2026-08-18\r\n\r\n## Purpose\r\n\r\nThis document captures the current implementation state of Prismata as it exists in the repo, with emphasis on what is operational, what is scaffolded, and what is still pending activation.\r\n\r\n## Executive summary\r\n\r\nThe system is in a bootstrap-and-ingestion stabilization phase. Universe is active in a real bootstrap workflow, tool manifests are being ingested, and VaultGuard is present as a service scaffold. However, no end-to-end live VaultGuard runtime has been fully activated in the current application path, and the broader ecosystem stages remain only partially implemented.\r\n\r\n## Current repo reality\r\n\r\n### 1) Universe bootstrap is operational\r\n\r\nEvidence:\r\n\r\n- `Prismata/Projects/Applications/Universe/src/ingestion/pipeline.ts`\r\n- `Prismata/.workspace/universe/ingestion/first-ingestion.json`\r\n\r\nUniverse currently:\r\n\r\n- creates ingestion and registry directories,\r\n- seeds default items,\r\n- validates and canonicalizes items,\r\n- writes archive metadata and registry entries,\r\n- creates a versioned bootstrap record,\r\n- marks the system as initialized.\r\n\r\n### 2) VaultGuard is scaffolded and present under Services\r\n\r\nEvidence:\r\n\r\n- `Prismata/Projects/Services/VaultGuard/terraform/main.tf`\r\n- `Prismata/Projects/Services/VaultGuard/policies/prismcommand-service.hcl`\r\n- `Prismata/Projects/Services/VaultGuard/policies/prismcommand-operator.hcl`\r\n- `Prismata/Projects/Services/VaultGuard/policies/rbac.yaml`\r\n\r\nVaultGuard currently includes:\r\n\r\n- Terraform deployment scaffolding\r\n- Helm and Kustomize bootstrap artifacts\r\n- HA + Raft Vault configuration\r\n- explicit PrismCommand service and operator policy definitions\r\n- RBAC for namespace and service access boundaries\r\n\r\n### 3) Universe still treats VaultGuard as a placeholder at bootstrap time\r\n\r\nEvidence:\r\n\r\n- `Prismata/.workspace/universe/ingestion/first-ingestion.json`\r\n\r\nThe VaultGuard record shows:\r\n\r\n- `sourceKind: \"placeholder\"`\r\n- `manifestFragment` from governance docs\r\n- `metadata.placeholder = true`\r\n- `provenance` set to the governance onboarding doc\r\n\r\nThis means VaultGuard is recognized by Universe but is not yet upgraded to a live installed service.\r\n\r\n### 4) The wider architecture stages are partially implemented\r\n\r\nThe historical 2026-08-14 plan-documents describe the intended sequence:\r\n\r\n- bootstrap\r\n- ASTalyzer finalization\r\n- Universe MVP/MVI\r\n- tooling ingestion\r\n- semantic substrate\r\n- manifest registry\r\n- DocLibrarian\r\n\r\nThe repo shows actual implementation of the bootstrap/ingestion layer, but the later stages remain partly conceptual or scaffolded rather than fully operational in the active runtime.\r\n\r\n## Current status by area\r\n\r\n### Bootstrap\r\n\r\nStatus: active\r\nSummary: the boot sequence and archive/registry flow are real and working at a baseline level.\r\n\r\n### Universe\r\n\r\nStatus: active\r\nSummary: the ingestion pipeline is in place and recording items.\r\n\r\n### VaultGuard\r\n\r\nStatus: scaffolded but not fully live\r\nSummary: the service is in the repo and formally represented, but still waiting for full runtime activation and production-grade binding.\r\n\r\n### ASTalyzer / semantic substrate / DocLibrarian\r\n\r\nStatus: partial / planned\r\nSummary: these appear as architecture foundations or future stages, not fully closed operational flows in the active codebase.\r\n\r\n## Implementation maturity assessment\r\n\r\n### Completed enough to support a baseline\r\n\r\n- bootstrap directory creation\r\n- ingestion registry flow\r\n- canonical item handling\r\n- version assignment and archive output\r\n- seeded Universe package registration\r\n\r\n### Not yet complete\r\n\r\n- full runtime activation for VaultGuard\r\n- real Universe-to-service binding for VaultGuard secrets/policies\r\n- closure of ASTalyzer and semantic pipeline into a live operational suite\r\n- end-to-end validation for all later-stage integrations\r\n\r\n## Recommendation\r\n\r\nThe repo is currently in a pre-integration stabilization state.\r\n\r\nThe next milestone is not broad ecosystem completion. The immediate milestone is:\r\n\r\n- convert VaultGuard from placeholder to installed runtime status,\r\n- validate the actual service contract,\r\n- then proceed to broader Universe onboarding for the remaining projects.\r\n\r\n## Immediate next checkpoint\r\n\r\nThe next checkpoint should answer one question clearly:\r\n\r\nHas VaultGuard moved from a validated scaffold to a fully wired, operational service in the runtime path used by Universe and PrismCommand?\r\n\r\nIf not, the system remains in bootstrap-plus-scaffold status rather than full integration status.\r\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

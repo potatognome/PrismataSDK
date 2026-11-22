@@ -1,0 +1,36 @@
+{
+  "id": "workspace-artifacts-tests-logs-test-log-test-show-menu-with-preview-log",
+  "udi": "prismata.workspace-artifacts-tests-logs.wrapped-artifact.test-log-test-show-menu-with-preview-4a96126864",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_log_test_show_menu_with_preview.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/.artifacts/.tests_logs/test_log_test_show_menu_with_preview.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.artifacts/.tests_logs/test_log_test_show_menu_with_preview.log",
+    "encoding": "utf-8",
+    "content_sha256": "b5498e00ec89e0cc6792f60f4acde551322a4d59a3c8ddf55fa25e477b4e06af"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 13:20:42  ======================================================================\r\n2026-08-30 13:20:42 |  Test 8: test_show_menu_with_preview                                 |\r\n2026-08-30 13:20:42  ======================================================================\r\n2026-08-30 13:20:42 Running: 8 test_show_menu_with_preview \u2014 show_menu_with_preview \u2014 preview fn integration\r\n2026-08-30 13:20:42 result = CLIMenuHandler. show_menu_with_preview with arguments: title='Preview Menu' items=[{label, data}, ...] preview_func=<fn>\r\n2026-08-30 13:20:43 ran successfully. Producing output: {'value': 1, 'desc': 'First item'}\r\n2026-08-30 13:20:43 cancel \u2192 None PASSED\r\n2026-08-30 13:20:43 Invalid then cancel \u2192 None\r\n2026-08-30 13:20:43 Raising preview_func did not propagate: None\r\n2026-08-30 13:20:43 PASSED: show_menu_with_preview complete\r\n2026-08-30 13:20:43 \u2705 PASSED: 8 test_show_menu_with_preview\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 22:16:02  ======================================================================\r\n2026-08-30 22:16:02 |  Test 8: test_show_menu_with_preview                                 |\r\n2026-08-30 22:16:02  ======================================================================\r\n2026-08-30 22:16:02 Running: 8 test_show_menu_with_preview \u2014 show_menu_with_preview \u2014 preview fn integration\r\n2026-08-30 22:16:02 result = CLIMenuHandler. show_menu_with_preview with arguments: title='Preview Menu' items=[{label, data}, ...] preview_func=<fn>\r\n2026-08-30 22:16:02 ran successfully. Producing output: {'value': 1, 'desc': 'First item'}\r\n2026-08-30 22:16:02 cancel \u2192 None PASSED\r\n2026-08-30 22:16:02 Invalid then cancel \u2192 None\r\n2026-08-30 22:16:02 Raising preview_func did not propagate: None\r\n2026-08-30 22:16:02 PASSED: show_menu_with_preview complete\r\n2026-08-30 22:16:02 \u2705 PASSED: 8 test_show_menu_with_preview\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-09-08 12:07:55  ======================================================================\r\n2026-09-08 12:07:55 |  Test 8: test_show_menu_with_preview                                 |\r\n2026-09-08 12:07:55  ======================================================================\r\n2026-09-08 12:07:55 Running: 8 test_show_menu_with_preview \u2014 show_menu_with_preview \u2014 preview fn integration\r\n2026-09-08 12:07:55 result = CLIMenuHandler. show_menu_with_preview with arguments: title='Preview Menu' items=[{label, data}, ...] preview_func=<fn>\r\n2026-09-08 12:07:55 ran successfully. Producing output: {'value': 1, 'desc': 'First item'}\r\n2026-09-08 12:07:55 cancel \u2192 None PASSED\r\n2026-09-08 12:07:55 Invalid then cancel \u2192 None\r\n2026-09-08 12:07:55 Raising preview_func did not propagate: None\r\n2026-09-08 12:07:55 PASSED: show_menu_with_preview complete\r\n2026-09-08 12:07:55 \u2705 PASSED: 8 test_show_menu_with_preview\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

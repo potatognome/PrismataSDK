@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-examples-menu-samples-full-full-menu-types-v2-yaml",
+  "udi": "prismata.meta-deprecated-examples-menu-samples-full.wrapped-object.full-menu-types-v2-2bcf8a4d31",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "full-menu-types.v2.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/examples/menu.samples/full/full-menu-types.v2.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/examples/menu.samples/full/full-menu-types.v2.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "1f7161a733cc17aad2c07d4b5260569fd3db2067a1e564cbc731b49017f25c2f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "menuTypes:\r\r\n  main:\r\r\n    defaultColourScheme: main-menu\r\r\n    defaultBorderScheme: main-menu\r\r\n    defaultHeaderStyle: header\r\r\n    defaultHeaderColourScheme: header\r\r\n    defaultHeaderBorderScheme: main-menu\r\r\n    defaultSelectionMethod: number\r\r\n    defaultItemType: action\r\r\n\r\r\n  settings:\r\r\n    defaultColourScheme: settings-menu\r\r\n    defaultBorderScheme: settings-menu\r\r\n    defaultHeaderStyle: header\r\r\n    defaultHeaderColourScheme: header\r\r\n    defaultHeaderBorderScheme: settings-menu\r\r\n    defaultSelectionMethod: number\r\r\n    defaultItemType: toggle\r\r\n\r\r\n  admin:\r\r\n    defaultColourScheme: admin-menu\r\r\n    defaultBorderScheme: default\r\r\n    defaultHeaderStyle: header\r\r\n    defaultHeaderColourScheme: header\r\r\n    defaultHeaderBorderScheme: default\r\r\n    defaultSelectionMethod: number\r\r\n    defaultItemType: action\r\r\n\r\r\n  diagnostics:\r\r\n    defaultColourScheme: diagnostics-menu\r\r\n    defaultBorderScheme: default\r\r\n    defaultHeaderStyle: header\r\r\n    defaultHeaderColourScheme: header\r\r\n    defaultHeaderBorderScheme: default\r\r\n    defaultSelectionMethod: number\r\r\n    defaultItemType: static\r\r\n\r\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

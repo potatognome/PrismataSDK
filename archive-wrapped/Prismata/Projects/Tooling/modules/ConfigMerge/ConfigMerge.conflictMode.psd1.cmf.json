@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-modules-configmerge-configmerge-conflictmode-psd1",
+  "udi": "prismata.projects-tooling-modules-configmerge.wrapped-artifact.configmerge-conflictmode-590ae3dd1e",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "ConfigMerge.conflictMode.psd1",
+    "source_file_type": "psd1",
+    "wrapped_subtype": "artifact",
+    "relative_path": "Projects/Tooling/modules/ConfigMerge/ConfigMerge.conflictMode.psd1",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/modules/ConfigMerge/ConfigMerge.conflictMode.psd1",
+    "encoding": "utf-8",
+    "content_sha256": "63618a2dee0c8c4217abd1f76bdab416e1a2b48b26c910976a9d0c30558b7941"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "@{\r\n    # ==================================================================\r\n    #  ConflictMode Manifest (UDI-Compliant)\r\n    #  Provides module-level configuration for conflictMode behavior.\r\n    #  Loaded during boot and cached during runtime/duty cycle.\r\n    # ==================================================================\r\n\r\n    ManifestVersion = '1.0.0'\r\n    ManifestName    = 'ConfigMerge ConflictMode Manifest'\r\n    UDICompliant    = $true\r\n\r\n    # ------------------------------------------------------------------\r\n    #  Registry Path\r\n    #  Points to the authoritative conflictMode.registry.yaml\r\n    # ------------------------------------------------------------------\r\n    RegistryPath = 'conflictMode.registry.yaml'\r\n\r\n    # ------------------------------------------------------------------\r\n    #  Default Conflict Mode\r\n    #  Used when no mode is specified in defaults, config, mode, style,\r\n    #  or CLI. Must exist in the registry.\r\n    # ------------------------------------------------------------------\r\n    DefaultConflictMode = 'unionWins'\r\n\r\n    # ------------------------------------------------------------------\r\n    #  Validation Rules\r\n    #  Ensures all conflictModes are schema-valid and UDI-compliant.\r\n    # ------------------------------------------------------------------\r\n    Validation = @{\r\n        RequiredFields = @(\r\n            'name',\r\n            'description',\r\n            'behavior',\r\n            'appliesTo',\r\n            'precedence',\r\n            'asciiIndicator',\r\n            'udiCompliant'\r\n        )\r\n\r\n        # Allowed modes must match registry entries\r\n        AllowedModes = @(\r\n            'removeWins',\r\n            'unionWins',\r\n            'includeWins',\r\n            'cliWins'\r\n        )\r\n\r\n        # Optional: enforce UDI compliance at manifest level\r\n        EnforceUDI = $true\r\n    }\r\n\r\n    # ------------------------------------------------------------------\r\n    #  Visualization Settings\r\n    #  Used by ConfigMerge.Visualize to render merge tables.\r\n    # ------------------------------------------------------------------\r\n    Visualization = @{\r\n        AsciiIndicators = @{\r\n            removeWins  = '-'\r\n            unionWins   = '='\r\n            includeWins = '+'\r\n            cliWins     = '!'\r\n        }\r\n\r\n        # Optional: colourKey integration (future PR)\r\n        ColourKeys = @{\r\n            removeWins  = 'conflict.remove'\r\n            unionWins   = 'conflict.union'\r\n            includeWins = 'conflict.include'\r\n            cliWins     = 'conflict.cli'\r\n        }\r\n\r\n        # Whether colourKeyPath is required (currently false)\r\n        RequireColourKey = $false\r\n    }\r\n\r\n    # ------------------------------------------------------------------\r\n    #  Runtime Integration\r\n    #  Defines how conflictMode is applied during merge operations.\r\n    # ------------------------------------------------------------------\r\n    Runtime = @{\r\n        # Load registry at boot\r\n        LoadRegistryOnBoot = $true\r\n\r\n        # Validate conflictMode before applying merge logic\r\n        ValidateBeforeApply = $true\r\n\r\n        # Apply conflictMode to both arrays and scalars\r\n        AppliesTo = @('array', 'scalar')\r\n\r\n        # Enable audit trail logging\r\n        EnableAuditTrail = $true\r\n\r\n        # Log file path (optional)\r\n        AuditLogPath = './logs/conflictMode.audit.log'\r\n    }\r\n\r\n    # ------------------------------------------------------------------\r\n    #  Notes\r\n    # ------------------------------------------------------------------\r\n    Notes = @(\r\n        'This manifest ensures conflictMode behavior is deterministic,',\r\n        'UDI-compliant, and portable across all modules.',\r\n        'ColourKey integration is optional and will be enabled in a future PR.'\r\n    )\r\n}\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

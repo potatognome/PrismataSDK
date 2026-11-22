@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-state-settings-json",
+  "udi": "prismata.workspace-universe-state.wrapped-object.settings-51d6da1fc5",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "settings.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/state/settings.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/state/settings.json",
+    "encoding": "utf-8",
+    "content_sha256": "e48e663c04b72f703ec42d0209af74fdc7395eb632801a65e76d4b18067bd539"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\r\n  \"paths\": {\r\n    \"canonical_folder\": \"C:\\\\Repository\\\\Daniel\\\\dev_local\\\\Prismata\\\\Projects\\\\Applications\\\\Universe\",\r\n    \"project_scope\": [\r\n      \"C:\\\\Repository\\\\Daniel\\\\dev_local\\\\Prismata\\\\Meta\\\\canonical\\\\object.schemas\",\r\n      \"C:\\\\Repository\\\\Daniel\\\\dev_local\\\\Prismata\\\\Projects\\\\Applications\",\r\n      \"C:\\\\Repository\\\\Daniel\\\\dev_local\\\\Prismata\"\r\n    ],\r\n    \"workspace_root\": \"C:\\\\Repository\\\\Daniel\\\\dev_local\\\\Prismata\\\\.workspace\",\r\n    \"project_root\": \"C:\\\\Repository\\\\Daniel\\\\dev_local\\\\Prismata\\\\Projects\\\\Applications\\\\Universe\"\r\n  },\r\n  \"naming\": {\r\n    \"naming_convention_enabled\": true\r\n  },\r\n  \"export\": {},\r\n  \"registry\": {},\r\n  \"features\": {\r\n    \"autoArchive\": false,\r\n    \"autoVersioning\": false\r\n  },\r\n  \"ignore_extensions\": [],\r\n  \"searchParams\": {\r\n    \"folders\": [\r\n      \"C:/Repository/Daniel/dev_local/Prismata/Projects\"\r\n    ],\r\n    \"projects\": [],\r\n    \"fileTypes\": [\r\n      \"yaml\"\r\n    ],\r\n    \"queries\": [\r\n      \"udi\"\r\n    ],\r\n    \"tags\": [],\r\n    \"canonicalOnly\": false,\r\n    \"recursive\": true\r\n  }\r\n}\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

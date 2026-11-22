@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-prismatalabs-examples-objects-menu-items-rotate-colour-menu-item-yaml",
+  "udi": "prismata.projects-applications-prismatalabs-examples-objects-menu-items.wrapped-object.rotate-colour-menu-item-d32bca049e",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "rotate-colour.menu-item.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/PrismataLabs/examples/objects/menu-items/rotate-colour.menu-item.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/PrismataLabs/examples/objects/menu-items/rotate-colour.menu-item.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "5ec7dad5234bc656f06c8eda6b562554e336349ec3c08948fdd1772661945662"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "id: example-rotate-colour-role\r\nudi: prismata.examples.menu-item.rotate-colour-role\r\nkind: menu-item\r\nlabel: Rotate active pane colour roles\r\ncapability: prismata.examples.capability.rotate-colour-role\r\ncolour_role: prismata.examples.colour-role.menu-accent\r\ncolour_scheme: prismata.examples.colour-scheme.surface\r\nborder_pattern: prismata.examples.border.example-item\r\nheader:\r\n  id: example-rotate-header\r\n  text: Colour\r\n  colour_role: prismata.examples.colour-role.menu-accent\r\n  colour_scheme: prismata.examples.colour-scheme.surface\r\n  border_pattern: prismata.examples.border.example-item\r\nvisibility_mode: static\r\nenable_mode: enabled\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

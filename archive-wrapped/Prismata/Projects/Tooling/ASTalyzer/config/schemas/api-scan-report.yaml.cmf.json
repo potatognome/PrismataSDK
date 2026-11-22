@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-astalyzer-config-schemas-api-scan-report-yaml",
+  "udi": "prismata.projects-tooling-astalyzer-config-schemas.wrapped-schema.api-scan-report-ff34bdfed0",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "api-scan-report.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Tooling/ASTalyzer/config/schemas/api-scan-report.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/ASTalyzer/config/schemas/api-scan-report.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "bdc6c4254bef3242db5f0e372849431dc492f9fbc938ca8fc0d5a72c5c7f551b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# API scan report schema\r\nmetadata:\r\n  udi: prismata.astalyzer.schema.api-scan-report\r\n  name: api-scan-report\r\n  version: 0.1.0\r\n  kind: schema-definition\r\n  description: Structured report for recursive API scanning.\r\n\r\nid: \"prismata.astalyzer.schema.api-scan-report\"\r\nversion: 0.1.0\r\nkind: schema-definition\r\ndescription: >\r\n  Structured report for recursive API scanning.\r\n\r\ntype: object\r\n\r\nfields:\r\n  root_path:\r\n    type: string\r\n    required: true\r\n\r\n  files_scanned:\r\n    type: array\r\n    items:\r\n      type: string\r\n    required: true\r\n\r\n  external_apis:\r\n    type: array\r\n    items:\r\n      type: object\r\n      fields:\r\n        module:\r\n          type: string\r\n        symbol:\r\n          type: string\r\n        import_type:\r\n          type: string\r\n        location:\r\n          type: string\r\n    required: false\r\n\r\n  functions:\r\n    type: array\r\n    items:\r\n      type: object\r\n      fields:\r\n        name:\r\n          type: string\r\n        inputs:\r\n          type: array\r\n          items:\r\n            type: string\r\n        outputs:\r\n          type: array\r\n          items:\r\n            type: string\r\n        location:\r\n          type: string\r\n    required: false\r\n\r\n_tags:\r\n  category: code_analysis\r\n  tags:\r\n    - api\r\n    - scanner\r\n    - recursive\r\n    - pcms2026\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

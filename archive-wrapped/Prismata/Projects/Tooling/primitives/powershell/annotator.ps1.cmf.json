@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-primitives-powershell-annotator-ps1",
+  "udi": "prismata.projects-tooling-primitives-powershell.wrapped-codeblock.annotator-61e1aa4782",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "annotator.ps1",
+    "source_file_type": "ps1",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/primitives/powershell/annotator.ps1",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/primitives/powershell/annotator.ps1",
+    "encoding": "utf-8",
+    "content_sha256": "6a85b8ed5529919f32218571e12fd0280f2b8d03cb3374625c2c5da6f728d1ba"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "param(\r\n    [Parameter(Mandatory=$true)]\r\n    [string]$input,\r\n\r\n    [Parameter(Mandatory=$true)]\r\n    [string]$output,\r\n\r\n    [string]$config = \"\",\r\n    [string]$include = \"\",\r\n    [string]$exclude = \"\",\r\n    [string]$skipFolders = \"\",\r\n    [switch]$relative\r\n)\r\n\r\n# -----------------------------------------\r\n# Resolve script root\r\n# -----------------------------------------\r\n$scriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Path\r\n\r\n# -----------------------------------------\r\n# Load config if provided\r\n# -----------------------------------------\r\nfunction Load-Yaml($path) {\r\n    if (Get-Command ConvertFrom-Yaml -ErrorAction SilentlyContinue) {\r\n        return ConvertFrom-Yaml (Get-Content $path -Raw)\r\n    }\r\n    throw \"YAML parser not available. Install powershell-yaml or use CLI args.\"\r\n}\r\n\r\n$configData = $null\r\nif ($config -ne \"\") {\r\n    $configPath = (Resolve-Path $config).Path\r\n    $configData = Load-Yaml $configPath\r\n}\r\n\r\n# -----------------------------------------\r\n# Defaults\r\n# -----------------------------------------\r\n$defaultInclude = @(\".ts\", \".json\", \".yaml\")\r\n$defaultExclude = @(\".log\", \".tmp\", \".cache\")\r\n$defaultSkip    = @(\"node_modules\", \".git\", \"dist\", \"build\", \".workspace\")\r\n\r\n# -----------------------------------------\r\n# Merge config + CLI overrides\r\n# -----------------------------------------\r\n$includeList = if ($include -ne \"\") { $include.Split(\",\") } elseif ($configData) { $configData.extensionRules.include } else { $defaultInclude }\r\n$excludeList = if ($exclude -ne \"\") { $exclude.Split(\",\") } elseif ($configData) { $configData.extensionRules.exclude } else { $defaultExclude }\r\n$skipList    = if ($skipFolders -ne \"\") { $skipFolders.Split(\",\") } elseif ($configData) { $configData.folderSummaryRules } else { $defaultSkip }\r\n\r\n# -----------------------------------------\r\n# Resolve input/output paths\r\n# -----------------------------------------\r\nif ($relative) {\r\n    $workspaceRoot = Split-Path -Parent $scriptRoot\r\n    $inputRoot  = Join-Path $workspaceRoot $input\r\n    $outputRoot = Join-Path $workspaceRoot $output\r\n} else {\r\n    $inputRoot  = (Resolve-Path $input).Path\r\n    $outputRoot = (Resolve-Path $output).Path\r\n}\r\n\r\nNew-Item -ItemType Directory -Force -Path $outputRoot | Out-Null\r\n\r\n# -----------------------------------------\r\n# Helper: extension filter\r\n# -----------------------------------------\r\nfunction ShouldIncludeExtension($filePath) {\r\n    $ext = [System.IO.Path]::GetExtension($filePath)\r\n    if ($includeList -contains $ext) { return $true }\r\n    if ($excludeList -contains $ext) { return $false }\r\n    return $true\r\n}\r\n\r\n# -----------------------------------------\r\n# Helper: skip folder check\r\n# -----------------------------------------\r\nfunction ShouldSkipFolder($folderPath) {\r\n    $folderName = Split-Path $folderPath -Leaf\r\n    return $skipList -contains $folderName\r\n}\r\n\r\n# -----------------------------------------\r\n# Helper: folder summary generator\r\n# -----------------------------------------\r\nfunction SummarizeFolder($folderPath) {\r\n    $files = Get-ChildItem -Recurse $folderPath -File\r\n    $summary = @{}\r\n\r\n    foreach ($f in $files) {\r\n        $ext = [System.IO.Path]::GetExtension($f.FullName)\r\n        if (-not $summary.ContainsKey($ext)) { $summary[$ext] = 0 }\r\n        $summary[$ext]++\r\n    }\r\n\r\n    $output = \"SUMMARY FOR FOLDER: $folderPath`n\"\r\n    $output += \"Total files: $($files.Count)`n\"\r\n    $output += \"By extension:`n\"\r\n\r\n    foreach ($key in $summary.Keys) {\r\n        $output += \"  $key : $($summary[$key])`n\"\r\n    }\r\n\r\n    return $output\r\n}\r\n\r\n# -----------------------------------------\r\n# Annotation output file\r\n# -----------------------------------------\r\n$annotationFile = Join-Path $outputRoot \"folder-annotation.txt\"\r\n\"\" | Out-File $annotationFile\r\n\r\n\"================ DIRECTORY TREE ================\" | Out-File $annotationFile -Append\r\ntree $inputRoot /f | Out-File $annotationFile -Append\r\n\r\n\"================ FILE CONTENTS ================\" | Out-File $annotationFile -Append\r\n\r\n# -----------------------------------------\r\n# Annotation engine\r\n# -----------------------------------------\r\nGet-ChildItem -Recurse $inputRoot | ForEach-Object {\r\n\r\n    if ($_.PSIsContainer) {\r\n        if (ShouldSkipFolder $_.FullName) {\r\n            SummarizeFolder $_.FullName | Out-File $annotationFile -Append\r\n        }\r\n        return\r\n    }\r\n\r\n    if (-not (ShouldIncludeExtension $_.FullName)) {\r\n        return\r\n    }\r\n\r\n    \"------------------------------------------------------------\" | Out-File $annotationFile -Append\r\n    \"FILE: $($_.FullName)\" | Out-File $annotationFile -Append\r\n    \"------------------------------------------------------------\" | Out-File $annotationFile -Append\r\n\r\n    Get-Content $_.FullName | Out-File $annotationFile -Append\r\n    \"`n\" | Out-File $annotationFile -Append\r\n}\r\n\r\nWrite-Host \"Annotation complete.\"\r\nWrite-Host \"Annotation file written to: $annotationFile\"\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

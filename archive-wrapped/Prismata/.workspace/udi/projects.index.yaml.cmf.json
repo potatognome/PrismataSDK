@@ -1,0 +1,36 @@
+{
+  "id": "workspace-udi-projects-index-yaml",
+  "udi": "prismata.workspace-udi.wrapped-object.projects-index-96658dd1d2",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "projects.index.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/udi/projects.index.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/udi/projects.index.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "fff52aeace94aae5feb144c9615ca47b990f49f9f6fb6b7f536e35091a105868"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeffprojects:\n\n  Universe:\n    path: \"/Prismata/Projects/Applications/Universe\"\n    type: \"application\"\n    architecture: \"unknown\"\n    tags: []\n\n  ASTalyzer:\n    path: \"/Prismata/Projects/Tooling/ASTalyzer\"\n    type: \"tooling\"\n    architecture: \"analysis\"\n    tags: []\n\n  tUilKit:\n    path: \"/tUilKit\"\n    type: \"folder\"\n    architecture: \"unknown\"\n    tags: []\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

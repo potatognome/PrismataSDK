@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-checklists-changelog-prismata-architecture-plan-checklist-md",
+  "udi": "prismata.historical-plan-documents-checklists.wrapped-checklist.changelog-prismata-architecture-plan-checklist-d39d2a50b6",
+  "kind": "wrapped-checklist",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "CHANGELOG-Prismata_Architecture_Plan_Checklist.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "checklist",
+    "relative_path": "Historical/plan-documents/checklists/CHANGELOG-Prismata_Architecture_Plan_Checklist.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/checklists/CHANGELOG-Prismata_Architecture_Plan_Checklist.md",
+    "encoding": "utf-8",
+    "content_sha256": "4d01e5d54ee9ce4574fca6bc7c2ea6757973c2a19830baf3599721cfaa647a4b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Prismata Architecture Plan Checklist \u2014 CHANGELOG\r\n\r\n## [2026-07-23]\r\n\r\n- Canonicalized planning checklist for Universe schema editor & ASTalyzer; moved dated snapshot to `archive/plan-documents/checklists/2026-07-23-plan-prismata-architecture.checklist.md`.\r\n",
+    "classification": {
+      "subtype": "checklist",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-plan-overview-2026-08-14-stage-00-bootstrap-00-bootstrap-plan-md",
+  "udi": "prismata.historical-plan-documents-plan-overview-2026-08-14-stage-00-boot.wrapped-plan.x-00-bootstrap-plan-71be85e0e7",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "00-bootstrap-plan.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/plan-overview/2026-08-14/stage-00-bootstrap/00-bootstrap-plan.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/plan-overview/2026-08-14/stage-00-bootstrap/00-bootstrap-plan.md",
+    "encoding": "utf-8",
+    "content_sha256": "af60d02ee975c99e9103c375e515be2cd52ad7b1e0c2c1a6f65de0c1cecbb441"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff# 00-bootstrap-plan.md\n# Version: 1.0.0\n# Archived: stage-00-bootstrap\n\n# Prismata Historical Document \u2014 00-bootstrap-plan.md\n# Version: 1.0.0\n# Archive Class: Bootstrap\n# Timestamp Format: YYYY-MM-DD HH:MM:SS\n\n## Overview\nThis document records the earliest bootstrap logic for Prismata\u2019s architectural lineage.\nIt establishes the initialization flags, fallback logging format, and the canonical\nrules for historical document versioning.\n\n## Initialization Flags\n- INIT_BOOTSTRAP = true  \n- INIT_CANONICAL_DIR = true  \n- INIT_LOG_FALLBACK = \"YYYY-MM-DD HH:MM:SS\"  \n- INIT_HISTORY_REGISTRY = true  \n- INIT_UNIVERSE_PRIMITIVES = true  \n\nThese flags are stored in the bootstrap ledger and reused by later stages.\n\n## Fallback Logging Format\nAll bootstrap logs MUST follow:\n\n2026-01-04 13:22:51 [bootstrap] initializing canonical directory\u2026\n2026-01-04 13:22:52 [bootstrap] loading primitives\u2026\n\n\n## Canonical Directories\n- `/canonical/` \u2014 schema definitions  \n- `/historical/` \u2014 archived plan documents  \n- `/pcms/` \u2014 menu architecture  \n- `/universe/` \u2014 registry + package manager  \n\n## Reused Primitives\n- UDI segment parser  \n- Canonical schema loader  \n- PCMS menu primitives  \n- ASTalyzer base interface  \n\n## Chronology\n1. Bootstrap ledger created  \n2. Canonical directory initialized  \n3. Universe primitives loaded  \n4. Historical registry activated  \n\n## Notes\nThis document is immutable and archived under `/historical/plan-documents/bootstrap/`.\n\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

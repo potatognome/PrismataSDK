@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-plan-overview-2026-08-14-stage-06-doclibrarian-06-doclibrarian-pipeline-md",
+  "udi": "prismata.historical-plan-documents-plan-overview-2026-08-14-stage-06-docl.wrapped-plan.x-06-doclibrarian-pipeline-ae092167c6",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "06-doclibrarian-pipeline.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/plan-overview/2026-08-14/stage-06-doclibrarian/06-doclibrarian-pipeline.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/plan-overview/2026-08-14/stage-06-doclibrarian/06-doclibrarian-pipeline.md",
+    "encoding": "utf-8",
+    "content_sha256": "77fc0518e1180b3917298d6598393888130485c7e23a5d6d9bb8d4b95e81ba47"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff# 06-doclibrarian-pipeline.md\n# Version: 1.0.0\n# Archived: stage-06-doclibrarian\n# Prismata Historical Document \u2014 06-doclibrarian-pipeline.md\n# Version: 1.0.0\n# Archive Class: Stage 6\n\n## Overview\nDocLibrarian is the documentation pipeline that generates human-readable\nsummaries, module descriptions, and historical archives.\n\n## Pipeline Stages\n1. Ingest ASTalyzer output  \n2. Apply semantic substrate  \n3. Generate human-readable summaries  \n4. Archive documents  \n5. Register version lineage  \n\n## Example Summary\nModule: schema.core\nSummary: Provides canonical schema definitions for Universe ingestion.\n\n## Versioning\n- doclibrarian-pipeline-v1  \n- doclibrarian-summary-v1  \n\n## Notes\nArchived under `/historical/stage-06/`.\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

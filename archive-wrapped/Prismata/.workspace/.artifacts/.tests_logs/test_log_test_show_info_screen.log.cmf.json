@@ -1,0 +1,36 @@
+{
+  "id": "workspace-artifacts-tests-logs-test-log-test-show-info-screen-log",
+  "udi": "prismata.workspace-artifacts-tests-logs.wrapped-artifact.test-log-test-show-info-screen-e7a05880ae",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_log_test_show_info_screen.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/.artifacts/.tests_logs/test_log_test_show_info_screen.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.artifacts/.tests_logs/test_log_test_show_info_screen.log",
+    "encoding": "utf-8",
+    "content_sha256": "8f486c69ac2a234c46d7682e2a1d6a3973815e7f668a75df1ba460c4a38c60de"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 13:20:41  ======================================================================\r\n2026-08-30 13:20:41 |  Test 5: test_show_info_screen                                       |\r\n2026-08-30 13:20:41  ======================================================================\r\n2026-08-30 13:20:41 Running: 5 test_show_info_screen \u2014 show_info_screen \u2014 various value types\r\n2026-08-30 13:20:41 (side-effect) CLIMenuHandler. show_info_screen with arguments: title='System Info' info={...} wait_for_input=False\r\n2026-08-30 13:20:41 show_info_screen rendered\r\n2026-08-30 13:20:41 Empty dict info screen rendered\r\n2026-08-30 13:20:41 Mixed type info screen rendered\r\n2026-08-30 13:20:41 wait_for_input=True handled\r\n2026-08-30 13:20:41 PASSED: show_info_screen complete\r\n2026-08-30 13:20:41 \u2705 PASSED: 5 test_show_info_screen\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 22:16:01  ======================================================================\r\n2026-08-30 22:16:01 |  Test 5: test_show_info_screen                                       |\r\n2026-08-30 22:16:01  ======================================================================\r\n2026-08-30 22:16:01 Running: 5 test_show_info_screen \u2014 show_info_screen \u2014 various value types\r\n2026-08-30 22:16:01 (side-effect) CLIMenuHandler. show_info_screen with arguments: title='System Info' info={...} wait_for_input=False\r\n2026-08-30 22:16:01 show_info_screen rendered\r\n2026-08-30 22:16:01 Empty dict info screen rendered\r\n2026-08-30 22:16:01 Mixed type info screen rendered\r\n2026-08-30 22:16:01 wait_for_input=True handled\r\n2026-08-30 22:16:01 PASSED: show_info_screen complete\r\n2026-08-30 22:16:01 \u2705 PASSED: 5 test_show_info_screen\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-09-08 12:07:53  ======================================================================\r\n2026-09-08 12:07:53 |  Test 5: test_show_info_screen                                       |\r\n2026-09-08 12:07:53  ======================================================================\r\n2026-09-08 12:07:53 Running: 5 test_show_info_screen \u2014 show_info_screen \u2014 various value types\r\n2026-09-08 12:07:54 (side-effect) CLIMenuHandler. show_info_screen with arguments: title='System Info' info={...} wait_for_input=False\r\n2026-09-08 12:07:54 show_info_screen rendered\r\n2026-09-08 12:07:54 Empty dict info screen rendered\r\n2026-09-08 12:07:54 Mixed type info screen rendered\r\n2026-09-08 12:07:54 wait_for_input=True handled\r\n2026-09-08 12:07:54 PASSED: show_info_screen complete\r\n2026-09-08 12:07:54 \u2705 PASSED: 5 test_show_info_screen\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

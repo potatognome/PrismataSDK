@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-compare-menu-templates-0-0-1-metadata-json",
+  "udi": "prismata.workspace-universe-archive-tooling-compare-menu-templates-0-0-1.wrapped-object.metadata-874d4396af",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "metadata.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/archive/tooling.compare-menu-templates/0.0.1/metadata.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.compare-menu-templates/0.0.1/metadata.json",
+    "encoding": "utf-8",
+    "content_sha256": "9c6e01f80971d3e157bca42a1001a7dc7b82b46362739cbcf280734f241ad736"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  \"package_name\": \"CompareMenuTemplates\",\n  \"udi\": \"tooling.compare-menu-templates\",\n  \"version\": \"0.0.1\",\n  \"source_kind\": \"module\",\n  \"source_path\": \"C:\\\\Repository\\\\Daniel\\\\dev_local\\\\Prismata\\\\Projects\\\\Tooling\\\\generators\\\\compare_menu_templates.py\",\n  \"ingested_at_utc\": \"2026-08-24T19:04:35.994Z\",\n  \"metadata\": {\n    \"origin\": \"tooling.manifest.yaml\"\n  }\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

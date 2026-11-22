@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-tests-ui-interface-migration-test-ts",
+  "udi": "prismata.projects-applications-universe-tests.wrapped-codeblock.ui-interface-migration-test-5a46d268b3",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "ui.interface.migration.test.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/Universe/tests/ui.interface.migration.test.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/tests/ui.interface.migration.test.ts",
+    "encoding": "utf-8",
+    "content_sha256": "a120ddb0ab446879daea3cbedbd3c34d490636b4a03838d0d653b13a44fd9989"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import { test } from \"node:test\";\r\nimport assert from \"node:assert/strict\";\r\n\r\nimport {\r\n  loadMenu,\r\n  loadMenuYaml,\r\n  normalizeMenuItemFrameworks,\r\n} from \"../../../Tooling/primitives/typescript/menuLoaders\";\r\nimport { loadUniverseUiFrameworksConfig } from \"../../../Tooling/primitives/typescript/uiInterfaceLoader\";\r\nimport { resolvePrismataRoot } from \"../src/utils/paths\";\r\nimport { renderMenu, MenuDefinition } from \"../../../Tooling/primitives/typescript/menuRenderer\";\r\n\r\ntest(\"menu loader normalizes missing ui_framework to basic\", () => {\r\n  const menu = loadMenuYaml(`\r\nid: \"prismata.universe.menu.test\"\r\ntype: \"menu\"\r\ntitle: \"Test\"\r\nitems:\r\n  - key: \"1\"\r\n    label: \"Test Item\"\r\n    capability: \"prismata.universe.capability.fs-search\"\r\n    submenu_ref: null\r\n`);\r\n\r\n  const normalized = normalizeMenuItemFrameworks(menu, \"test-menu.yaml\");\r\n  assert.equal(normalized.items[0]?.ui_framework, \"basic\");\r\n});\r\n\r\ntest(\"menu loader accepts canonical menu item fields and keeps runtime compatibility\", () => {\r\n  const menu = loadMenuYaml(`\r\nid: \"prismata.universe.menu.canonical\"\r\ntype: \"menu\"\r\ntitle: \"Canonical Test\"\r\nitems:\r\n  - key: \"find\"\r\n    name: \"Find\"\r\n    order: 1\r\n    type: \"navigate\"\r\n    selectionMethod: \"number\"\r\n    action: \"navigate\"\r\n    navigateTarget: \"prismata.universe.menu-find\"\r\n    capability: \"prismata.universe.capability.fs-search-results\"\r\n    ui_framework: \"menu\"\r\n`);\r\n\r\n  assert.equal(menu.items[0]?.label, \"Find\");\r\n  assert.equal(menu.items[0]?.submenu_ref, \"prismata.universe.menu-find\");\r\n  assert.equal(menu.items[0]?.ui_framework, \"menu\");\r\n});\r\n\r\ntest(\"main menu items include a resolved ui_framework\", () => {\r\n  const menu = loadMenu(\"prismata.universe.menu.main\");\r\n  assert.ok(menu.items.length > 0);\r\n  for (const item of menu.items) {\r\n    assert.ok(item.ui_framework, `Expected ui_framework for item ${item.label}`);\r\n  }\r\n});\r\n\r\ntest(\"flattened UDI menu ids resolve to the existing project menu files\", () => {\r\n  const menu = loadMenu(\"prismata.universe.menu-settings\");\r\n\r\n  assert.equal(menu.id, \"prismata.universe.menu.settings\");\r\n  assert.equal(menu.title, \"Settings\");\r\n  assert.equal(menu.items[1]?.submenu_ref, \"prismata.universe.menu.settings.paths\");\r\n  assert.equal(menu.items[2]?.submenu_ref, \"prismata.universe.menu.settings.ignore\");\r\n});\r\n\r\ntest(\"ui_frameworks config loader resolves framework and override files\", () => {\r\n  const prismataRoot = resolvePrismataRoot();\r\n  const config = loadUniverseUiFrameworksConfig(prismataRoot);\r\n\r\n  assert.equal(config.ui_framework, \"multi_pane\");\r\n  assert.equal(config.hasProjectOverride, true);\r\n  assert.equal(config.hasTenantOverride, true);\r\n\r\n  const resultsPane = config.panes.find(p => p.id === \"results_list\");\r\n  assert.ok(resultsPane);\r\n  assert.equal(resultsPane?.coordinates.width, 42);\r\n\r\n  const previewPane = config.panes.find(p => p.id === \"preview\");\r\n  assert.ok(previewPane);\r\n  assert.equal(previewPane?.coordinates.x, 42);\r\n});\r\n\r\ntest(\"renderMenu filters visible panes by available ui_interface pane IDs\", () => {\r\n  const menu: MenuDefinition = {\r\n    id: \"prismata.universe.menu.test\",\r\n    type: \"menu\",\r\n    title: \"Test\",\r\n    items: [\r\n      {\r\n        key: \"1\",\r\n        label: \"Find\",\r\n        capability: \"prismata.universe.capability.fs-search-results\",\r\n        submenu_ref: null,\r\n      },\r\n    ],\r\n  };\r\n\r\n  const rendered = renderMenu(\r\n    menu,\r\n    [],\r\n    undefined,\r\n    {\r\n      bootstrapMode: false,\r\n      initialized: true,\r\n      vileIngested: true,\r\n      initializedFlagPath: \"\",\r\n      settings: {},\r\n    },\r\n    [\"results_list\"]\r\n  );\r\n\r\n  assert.deepEqual(rendered.visiblePanes, [\"results_list\"]);\r\n});\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

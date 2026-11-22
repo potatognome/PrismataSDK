@@ -1,0 +1,36 @@
+{
+  "id": "workspace-artifacts-checklists-smoke-testi9kkgf8t-tmp",
+  "udi": "prismata.workspace-artifacts-checklists.wrapped-checklist.smoke-testi9kkgf8t-2e44480afb",
+  "kind": "wrapped-checklist",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "smoke-testi9kkgf8t.tmp",
+    "source_file_type": "tmp",
+    "wrapped_subtype": "checklist",
+    "relative_path": ".workspace/.artifacts/.checklists/smoke-testi9kkgf8t.tmp",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.artifacts/.checklists/smoke-testi9kkgf8t.tmp",
+    "encoding": "utf-8",
+    "content_sha256": "5c7de721ece8878758b264f988ce9dd4850e949b6b7936574ebe649069a6dae5"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "C:/a.yaml: missing id\r\nC:/b.yaml: missing udi\r\n",
+    "classification": {
+      "subtype": "checklist",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

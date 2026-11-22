@@ -1,0 +1,36 @@
+{
+  "id": "workspace-artifacts-logs-tuilkit-tuilkit-warning-log",
+  "udi": "prismata.workspace-artifacts-logs-tuilkit.wrapped-artifact.tuilkit-warning-a844c778c2",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "tUilKit_WARNING.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_WARNING.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_WARNING.log",
+    "encoding": "utf-8",
+    "content_sha256": "72c56f12c7495cb510f64bf1613e77c53682a9b0db05132179886086714f3449"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "2026-08-30 22:16:33 Testing custom 'warning' category\r\n2026-09-08 12:07:35 Testing custom 'warning' category\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

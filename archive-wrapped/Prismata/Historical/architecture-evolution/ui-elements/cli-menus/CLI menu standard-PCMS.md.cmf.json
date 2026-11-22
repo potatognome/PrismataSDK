@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-ui-elements-cli-menus-cli-menu-standard-pcms-md",
+  "udi": "prismata.historical-architecture-evolution-ui-elements-cli-menus.wrapped-document.cli-menu-standard-pcms-7e2bd7439c",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "CLI menu standard-PCMS.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/ui-elements/cli-menus/CLI menu standard-PCMS.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/ui-elements/cli-menus/CLI menu standard-PCMS.md",
+    "encoding": "utf-8",
+    "content_sha256": "1e564de4f2ab3f5dca8a6a634215307cf937aa6dafe7201a4f69cbd1bb4fa14c"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# CLI MENU STANDARD - PCMS\r\n\r\n## LAST UPDATE: 2026-07-23\r\n\r\n- Loader discovery behavior updated: menu loaders now prefer `config/project-menus` inside each project (PCMS-2026). Loaders fall back to legacy `project-menus` if the new location is absent.\r\n- Menu YAMLs and ACTIONS mapping canonicalized across projects and services. Validation run with `Projects/Tooling/generators/validate_menu_actions.py` \u2014 no missing actions reported.\r\n- Compatibility shims added for legacy modules (example: `M3m01r5.cli.menu` exposes `LOG_FILES`, `set_logger`, and `run()` aliases).\r\n- Icons and colour registry pointers normalized to use the workspace canonical colours: `.workspace/.projects_config/GLOBAL_SHARED.d/COLOURS.json`.\r\n\r\nSee also: Boot sequence architecture in [boot-sequence-architecture](../boot-sequence/boot-sequence-architecture.md).\r\n\r\nHistory\r\n-------\r\n- Canonicalized from `../../../archive/cli-menus/2026-07-23-CLI menu standard-PCMS.md`. See `CHANGELOG.md` and `../../../archive/cli-menus/` for archived snapshots.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

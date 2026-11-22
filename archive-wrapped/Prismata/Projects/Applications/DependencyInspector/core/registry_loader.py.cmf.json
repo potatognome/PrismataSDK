@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-dependencyinspector-core-registry-loader-py",
+  "udi": "prismata.projects-applications-dependencyinspector-core.wrapped-codeblock.registry-loader-a4d7a711be",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "registry_loader.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/DependencyInspector/core/registry_loader.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/DependencyInspector/core/registry_loader.py",
+    "encoding": "utf-8",
+    "content_sha256": "6ecf5d39a87925f4591b46ff21f12ccc43167a6df598f6681700713101493a1f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "from pathlib import Path\r\nimport yaml\r\n\r\nREGISTRY_ROOT = Path(\"Meta/registry\")\r\n\r\ndef load_registry():\r\n    registry = {}\r\n    for folder in REGISTRY_ROOT.glob(\"*\"):\r\n        if folder.is_dir() and folder.name.endswith(\".d\"):\r\n            kind = folder.name.replace(\".d\", \"\")\r\n            registry[kind] = {}\r\n            for file in folder.glob(\"*.yaml\"):\r\n                try:\r\n                    data = yaml.safe_load(file.read_text())\r\n                    entry_id = data.get(\"id\")\r\n                    if entry_id:\r\n                        registry[kind][entry_id] = {\r\n                            \"file\": file,\r\n                            \"data\": data\r\n                        }\r\n                except Exception:\r\n                    pass\r\n    return registry\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-module-tuilkit-0-0-1-manifest-fragment-yaml",
+  "udi": "prismata.workspace-universe-archive-module-tuilkit-0-0-1.wrapped-manifest.manifest-fragment-6a1ae22bca",
+  "kind": "wrapped-manifest",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "manifest.fragment.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "manifest",
+    "relative_path": ".workspace/universe/archive/module.tuilkit/0.0.1/manifest.fragment.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/module.tuilkit/0.0.1/manifest.fragment.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "971fd96e5c9b77f0ab6e0b4380dba0abc45d34c9dd76367244eaf2e4af1e174f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "udi: module.tuilkit\nname: tUilKit\n",
+    "classification": {
+      "subtype": "manifest",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

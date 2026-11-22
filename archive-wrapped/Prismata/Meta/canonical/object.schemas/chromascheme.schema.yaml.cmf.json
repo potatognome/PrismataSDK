@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-object-schemas-chromascheme-schema-yaml",
+  "udi": "prismata.meta-canonical-object-schemas.wrapped-schema.chromascheme-schema-162457a1bc",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "chromascheme.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/object.schemas/chromascheme.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/object.schemas/chromascheme.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "aec159c608fc9dd641b2b4f9631be4902b58da4f46bca3fe4acf518ee61e317e"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: chromascheme\r\nschema_type: object\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.chromascheme\r\n  name: chromascheme.schema\r\n  description: Canonical chromascheme schema.\r\n\r\nspec:\r\n  target_kind: chromascheme\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: colour_set\r\n    path: colour_set\r\n    type: array\r\n    required: true\r\n\r\n  - name: roles\r\n    path: roles\r\n    type: array\r\n    required: false\r\n\r\n  - name: geometry\r\n    path: geometry\r\n    type: array\r\n    required: false\r\n\r\nobject:\r\n  colour_set: []\r\n  roles: []\r\n  geometry: []\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

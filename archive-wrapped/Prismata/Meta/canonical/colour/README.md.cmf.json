@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-colour-readme-md",
+  "udi": "prismata.meta-canonical-colour.wrapped-document.readme-1e50a00b0f",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "README.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Meta/canonical/colour/README.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/colour/README.md",
+    "encoding": "utf-8",
+    "content_sha256": "9a2b553574ef37fb8accfae4e37b3cfd284a82c59e4b35b746678c158eb1df43"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Canonical colour schema fixtures\r\n\r\nThis directory contains the canonical JSON Schema definitions and sample data used by the Prismata colour validator tests.\r\n\r\nThese files restore the expected schema contract for:\r\n\r\n- chromascheme-output.schema.yaml\r\n- colour-roles.schema.yaml\r\n- colour-preview-multipane.schema.yaml\r\n\r\nThey are intentionally lightweight while preserving the validation semantics exercised by the repository test suite.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

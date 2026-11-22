@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-plan-overview-2026-08-14-timelines-prismata-timeline-v1-md",
+  "udi": "prismata.historical-plan-documents-plan-overview-2026-08-14-timelines.wrapped-plan.prismata-timeline-v1-48c1e8c9f1",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "prismata-timeline-v1.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/plan-overview/2026-08-14/timelines/prismata-timeline-v1.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/plan-overview/2026-08-14/timelines/prismata-timeline-v1.md",
+    "encoding": "utf-8",
+    "content_sha256": "96c5ec154bd8d0f91e334176ba0a5f4c6ef65acd088b9bb0cecc5796750ce204"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff# prismata-timeline-v1.md\n# Version: 1.0.0\n# Prismata Timeline \u2014 prismata-timeline-v1.md\n# Version: 1.0.0\n\n## Chronological Timeline\n1. Bootstrap (00)  \n2. ASTalyzer Finalization (01)  \n3. Universe MVP/MVI (02)  \n4. Tooling Ingestion (03)  \n5. Semantic Substrate (04)  \n6. Manifest Registry (05)  \n7. DocLibrarian Pipeline (06)\n\n## Notes\nThis timeline is canonical and archived under `/historical/timeline/`.\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

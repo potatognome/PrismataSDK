@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-border-patterns-0-0-1-manifest-fragment-yaml",
+  "udi": "prismata.workspace-universe-archive-tooling-border-patterns-0-0-1.wrapped-manifest.manifest-fragment-56b65544a8",
+  "kind": "wrapped-manifest",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "manifest.fragment.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "manifest",
+    "relative_path": ".workspace/universe/archive/tooling.border-patterns/0.0.1/manifest.fragment.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.border-patterns/0.0.1/manifest.fragment.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "15d274675795b070968e90dc27cb0f81b7085d577fbadc575a3878c4729d3d0a"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "udi: tooling.border-patterns\nname: BorderPatterns\nversion: 0.1.0\nmodule: primitives/python/border_patterns.py\n",
+    "classification": {
+      "subtype": "manifest",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

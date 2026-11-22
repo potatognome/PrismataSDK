@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-project-menus-edit-multi-menu-yaml",
+  "udi": "prismata.projects-applications-universe-config-project-menus.wrapped-object.edit-multi-menu-8e0fc4f687",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "edit-multi-menu.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/Universe/config/project-menus/edit-multi-menu.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/project-menus/edit-multi-menu.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "3431fcd5eda296ba6f2548c6586d6fee40aa61a2ca87088458b19806a2ff7ea0"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "metadata:\r\n  udi: prismata.universe.menu.edit.multi\r\n  name: \"Edit > Multi-Edit Menu\"\r\n  version: \"0.1.0\"\r\n  kind: menu\r\n  description: \"Submenu for multi-edit and update-fields operations.\"\r\n\r\nudi: \"prismata.universe.menu.edit-multi\"\r\nkind: menu\r\ntype: \"menu\"\r\ntitle: \"Multi-Edit\"\r\n\r\nitems:\r\n  - key: \"1\"\r\n    udi: \"prismata.universe.menu.edit.multi.run\"\r\n    label: \"Run Multi-Edit\"\r\n    description: \"Apply multi-edit operations to selected compatible objects.\"\r\n    capability: \"prismata.universe.capability.fs-edit-multi\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"2\"\r\n    udi: \"prismata.universe.menu.edit.multi.update-fields\"\r\n    label: \"Update Fields\"\r\n    description: \"Add missing mandatory and optional fields for selected objects.\"\r\n    capability: \"prismata.universe.capability.fs-update-fields\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

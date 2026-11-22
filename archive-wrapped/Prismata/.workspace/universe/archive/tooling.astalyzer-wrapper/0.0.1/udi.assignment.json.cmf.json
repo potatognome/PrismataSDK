@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-astalyzer-wrapper-0-0-1-udi-assignment-json",
+  "udi": "prismata.workspace-universe-archive-tooling-astalyzer-wrapper-0-0-1.wrapped-object.udi-assignment-02dd088fa7",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "udi.assignment.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/archive/tooling.astalyzer-wrapper/0.0.1/udi.assignment.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.astalyzer-wrapper/0.0.1/udi.assignment.json",
+    "encoding": "utf-8",
+    "content_sha256": "742af47a1611dbcf96606764e7232dcb07e4da2e1cf688b569459373e2f9832d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  \"udi\": \"tooling.astalyzer-wrapper\",\n  \"package_name\": \"ASTalyzerWrapper\"\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

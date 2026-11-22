@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-project-management-vaultguard-onboarding-md",
+  "udi": "prismata.historical-plan-documents-project-management.wrapped-plan.vaultguard-onboarding-b6a420a7ae",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "VaultGuard_Onboarding.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/project-management/VaultGuard_Onboarding.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/project-management/VaultGuard_Onboarding.md",
+    "encoding": "utf-8",
+    "content_sha256": "04a67afdc0491d23473ab3b053ec08e20138c629fc5734c1e943ace3a3b677be"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# VaultGuard \u2014 PrismCommand Onboarding\r\n\r\nCanonicalized from `archive/plan-documents/project-management/vaultguard-prismcommand-onboarding.md`.\r\n\r\nSummary:\r\n- Notes and steps for onboarding `VaultGuard` with PrismCommand; see archive for full details.\r\n\r\nHistory:\r\n- archived snapshot preserved (see archive).\r\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

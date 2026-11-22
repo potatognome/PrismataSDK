@@ -1,0 +1,36 @@
+{
+  "id": "workspace-projects-config-global-shared-d-tests-options-json",
+  "udi": "prismata.workspace-projects-config-global-shared-d.wrapped-object.tests-options-b041188db8",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "TESTS_OPTIONS.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/.projects_config/GLOBAL_SHARED.d/TESTS_OPTIONS.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.projects_config/GLOBAL_SHARED.d/TESTS_OPTIONS.json",
+    "encoding": "utf-8",
+    "content_sha256": "6f5782bc8b5e4458f535c7cf19949f9b34122398c26c89e1b361b024c0ecb300"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\r\n    \"TESTS_OPTIONS\"                 : {        \r\n        \"TEST_LOGS_PREFIX\"          : [\"{TEST_SCRIPT_NAME}\", \" - \"]\r\n    }\r\n}",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

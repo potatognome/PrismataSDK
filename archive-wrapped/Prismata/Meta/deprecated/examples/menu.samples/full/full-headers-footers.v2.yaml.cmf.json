@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-examples-menu-samples-full-full-headers-footers-v2-yaml",
+  "udi": "prismata.meta-deprecated-examples-menu-samples-full.wrapped-object.full-headers-footers-v2-e72ea2aaec",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "full-headers-footers.v2.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/examples/menu.samples/full/full-headers-footers.v2.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/examples/menu.samples/full/full-headers-footers.v2.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "64751f6d9a9a2ac8d88e07cfe669d532f2f30ed9382bd48baa62151334f34876"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "header:\r\r\n  udi: prismata.header.demo.main\r\r\n  text: Header/Footer Demo\r\r\n  style: header\r\r\n  colourScheme: header\r\r\n  borderScheme: main-menu\r\r\n  visibilityMode: Static\r\r\n  visibilityCondition: null\r\r\n  visibilityDependencies:\r\r\n    - demo_mode\r\r\n\r\r\nsubheader:\r\r\n  udi: prismata.header.demo.sub\r\r\n  text: Section A\r\r\n  style: subheader\r\r\n  colourScheme: subheader\r\r\n  borderScheme: main-menu\r\r\n  visibilityMode: Conditional\r\r\n  visibilityCondition: feature_flag('section_a') == true\r\r\n  visibilityDependencies:\r\r\n    - section_a\r\r\n\r\r\nfooter:\r\r\n  udi: prismata.footer.demo.main\r\r\n  text: F1: Help | F2: Options | Q: Quit\r\r\n  style: footer\r\r\n  colourScheme: footer\r\r\n  borderScheme: main-menu\r\r\n  visibilityMode: Static\r\r\n  visibilityCondition: null\r\r\n  visibilityDependencies:\r\r\n    - help_enabled\r\r\n\r\r\nsubfooter:\r\r\n  udi: prismata.subfooter.demo.main\r\r\n  text: Progress: 73%\r\r\n  style: subfooter\r\r\n  colourScheme: footer-progress\r\r\n  borderScheme: main-menu\r\r\n  visibilityMode: Conditional\r\r\n  visibilityCondition: env('SHOW_PROGRESS') == true\r\r\n  visibilityDependencies:\r\r\n    - show_progress\r\r\n\r\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

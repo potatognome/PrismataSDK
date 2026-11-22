@@ -1,0 +1,36 @@
+{
+  "id": "workspace-artifacts-tests-logs-test-log-test-colour-log-log",
+  "udi": "prismata.workspace-artifacts-tests-logs.wrapped-artifact.test-log-test-colour-log-7d285dabc6",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_log_test_colour_log.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/.artifacts/.tests_logs/test_log_test_colour_log.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.artifacts/.tests_logs/test_log_test_colour_log.log",
+    "encoding": "utf-8",
+    "content_sha256": "16455374a515a122ce798e70aef84956230637088aa691a85363590843e3df76"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 13:08:05  ======================================================================\r\n2026-08-30 13:08:05 |  Test 5: test_colour_log                                             |\r\n2026-08-30 13:08:05  ======================================================================\r\n2026-08-30 13:08:05 Running: 5 test_colour_log \u2014 colour_log \u2014 argument patterns and log_files\r\n2026-08-30 13:08:05 (side-effect only) Logger. colour_log with arguments: *args (various) log_files\r\n2026-08-30 13:08:05 single token call\r\n2026-08-30 13:08:05 single token logged\r\n2026-08-30 13:08:05 multi: val1 42 step\r\n2026-08-30 13:08:05 multi-token logged\r\n2026-08-30 13:08:05 default log_files logged\r\n2026-08-30 13:08:05 None log_files handled\r\n2026-08-30 13:08:05 string log_files handled\r\n2026-08-30 13:08:05    with spacer=2\r\n2026-08-30 13:08:05 spacer handled\r\n2026-08-30 13:08:05\r\n2026-08-30 13:08:05 Empty colour_log did not raise\r\n2026-08-30 13:08:05 !nonexistent_xyz unknown key value\r\n2026-08-30 13:08:05 Unknown key handled without crash\r\n2026-08-30 13:08:05 PASSED: colour_log break tests complete\r\n2026-08-30 13:08:05 \u2705 PASSED: 5 test_colour_log\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 22:16:20  ======================================================================\r\n2026-08-30 22:16:20 |  Test 5: test_colour_log                                             |\r\n2026-08-30 22:16:20  ======================================================================\r\n2026-08-30 22:16:20 Running: 5 test_colour_log \u2014 colour_log \u2014 argument patterns and log_files\r\n2026-08-30 22:16:20 (side-effect only) Logger. colour_log with arguments: *args (various) log_files\r\n2026-08-30 22:16:20 single token call\r\n2026-08-30 22:16:20 single token logged\r\n2026-08-30 22:16:20 multi: val1 42 step\r\n2026-08-30 22:16:20 multi-token logged\r\n2026-08-30 22:16:20 default log_files logged\r\n2026-08-30 22:16:20 None log_files handled\r\n2026-08-30 22:16:20 string log_files handled\r\n2026-08-30 22:16:20    with spacer=2\r\n2026-08-30 22:16:20 spacer handled\r\n2026-08-30 22:16:20\r\n2026-08-30 22:16:20 Empty colour_log did not raise\r\n2026-08-30 22:16:20 !nonexistent_xyz unknown key value\r\n2026-08-30 22:16:20 Unknown key handled without crash\r\n2026-08-30 22:16:20 PASSED: colour_log break tests complete\r\n2026-08-30 22:16:20 \u2705 PASSED: 5 test_colour_log\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-09-08 12:08:12  ======================================================================\r\n2026-09-08 12:08:12 |  Test 5: test_colour_log                                             |\r\n2026-09-08 12:08:12  ======================================================================\r\n2026-09-08 12:08:12 Running: 5 test_colour_log \u2014 colour_log \u2014 argument patterns and log_files\r\n2026-09-08 12:08:12 (side-effect only) Logger. colour_log with arguments: *args (various) log_files\r\n2026-09-08 12:08:12 single token call\r\n2026-09-08 12:08:12 single token logged\r\n2026-09-08 12:08:12 multi: val1 42 step\r\n2026-09-08 12:08:12 multi-token logged\r\n2026-09-08 12:08:12 default log_files logged\r\n2026-09-08 12:08:12 None log_files handled\r\n2026-09-08 12:08:12 string log_files handled\r\n2026-09-08 12:08:12    with spacer=2\r\n2026-09-08 12:08:12 spacer handled\r\n2026-09-08 12:08:12\r\n2026-09-08 12:08:12 Empty colour_log did not raise\r\n2026-09-08 12:08:12 !nonexistent_xyz unknown key value\r\n2026-09-08 12:08:12 Unknown key handled without crash\r\n2026-09-08 12:08:12 PASSED: colour_log break tests complete\r\n2026-09-08 12:08:12 \u2705 PASSED: 5 test_colour_log\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

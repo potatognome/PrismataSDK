@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-plan-overview-2026-08-14-stage-02-universe-02-universe-mvp-mvi-md",
+  "udi": "prismata.historical-plan-documents-plan-overview-2026-08-14-stage-02-univ.wrapped-plan.x-02-universe-mvp-mvi-a4ec9e90a7",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "02-universe-mvp-mvi.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/plan-overview/2026-08-14/stage-02-universe/02-universe-mvp-mvi.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/plan-overview/2026-08-14/stage-02-universe/02-universe-mvp-mvi.md",
+    "encoding": "utf-8",
+    "content_sha256": "7646072fa747247694e9f74a1c39fb7d2340620a660d9d7d5e0033107eb3d4a8"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff# 02-universe-mvp-mvi.md\n# Version: 1.0.0\n# Archived: stage-02-universe\n# Prismata Historical Document \u2014 02-universe-mvp-mvi.md\n# Version: 1.0.0\n# Archive Class: Stage 2\n\n## Overview\nUniverse becomes the **package manager**, **registry**, **validator**, **installer**, and **publisher**.\nThis is the MVP/MVI ingestion stage.\n\n## MVP Scope\n- Load canonical schemas  \n- Validate schema structure  \n- Register packages  \n- Install local modules  \n- Publish modules to registry  \n\n## MVI Scope\n- Multi-version ingestion  \n- Historical version tracking  \n- Canonical diffing  \n- Package lineage reconstruction  \n\n## Example Ingestion Flow\n2026-02-11 14:10:22 [universe] ingest package \"schema.core\"\n2026-02-11 14:10:23 [universe] validate canonical fields\n2026-02-11 14:10:24 [universe] register version 1.0.0\n\n\n## PCMS Alignment\nUniverse menu integrates with:\n- pcms-2026 registry menu  \n- pcms-2026 validator menu  \n- pcms-2026 ingestion menu  \n\n## Versioning\nUniverse MVP/MVI is versioned as:\n- universe-ingest-v1  \n- universe-registry-v1  \n- universe-validator-v1  \n\n## Notes\nArchived under `/historical/stage-02/`.\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

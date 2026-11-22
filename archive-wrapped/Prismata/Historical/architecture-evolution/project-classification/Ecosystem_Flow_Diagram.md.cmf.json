@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-project-classification-ecosystem-flow-diagram-md",
+  "udi": "prismata.historical-architecture-evolution-project-classification.wrapped-document.ecosystem-flow-diagram-952cfa77aa",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "Ecosystem_Flow_Diagram.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/project-classification/Ecosystem_Flow_Diagram.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/project-classification/Ecosystem_Flow_Diagram.md",
+    "encoding": "utf-8",
+    "content_sha256": "59e10dd1c04914b818d20a010c6f7882d4a337e4eb2882fba88054d5b3f2fd47"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Ecosystem Flow Diagram\r\n\r\n## LAST UPDATE: 2026-07-23\r\n\r\nCanonical ecosystem flow diagram reference consolidated from dated snapshots.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

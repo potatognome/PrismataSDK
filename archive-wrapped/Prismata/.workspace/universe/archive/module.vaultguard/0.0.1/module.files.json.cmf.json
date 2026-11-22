@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-module-vaultguard-0-0-1-module-files-json",
+  "udi": "prismata.workspace-universe-archive-module-vaultguard-0-0-1.wrapped-object.module-files-da9c60e1b6",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "module.files.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/archive/module.vaultguard/0.0.1/module.files.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/module.vaultguard/0.0.1/module.files.json",
+    "encoding": "utf-8",
+    "content_sha256": "ca6042808e99959cd3becee40cab3d8fcd288f9d71b52fe56fea6fbda39689a5"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  \"count\": 0,\n  \"files\": [],\n  \"missing_source\": true\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

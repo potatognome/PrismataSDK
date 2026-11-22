@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-editor-schemas-editor-config-schema-yaml",
+  "udi": "prismata.meta-canonical-editor-schemas.wrapped-schema.editor-config-schema-e2c47ae8c3",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "editor-config.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/editor.schemas/editor-config.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/editor.schemas/editor-config.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "ea5cb32d1f1458f07022ea141921672796c53256926eb14f9782f4779faf87e4"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: editor-config\r\nschema_type: editor\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.editor-config\r\n  name: editor-config.schema\r\n  location: /Prismata/Meta/editor.schemas/editor-config.schema.yaml\r\n  description: Canonical schema defining editor configuration.\r\n\r\nspec:\r\n  target_kind: editor-config\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: theme\r\n    path: theme\r\n    type: string\r\n    required: false\r\n\r\n  - name: layoutMode\r\n    path: layoutMode\r\n    type: string\r\n    required: false\r\n\r\n  - name: debug\r\n    path: debug\r\n    type: boolean\r\n    required: false\r\n\r\nobject:\r\n  theme: \"\"\r\n  layoutMode: \"\"\r\n  debug: false\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

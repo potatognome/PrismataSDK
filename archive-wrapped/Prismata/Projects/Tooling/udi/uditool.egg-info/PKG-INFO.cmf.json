@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-udi-uditool-egg-info-pkg-info",
+  "udi": "prismata.projects-tooling-udi-uditool-egg-info.wrapped-artifact.pkg-info-ac2c1b58de",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "PKG-INFO",
+    "source_file_type": "",
+    "wrapped_subtype": "artifact",
+    "relative_path": "Projects/Tooling/udi/uditool.egg-info/PKG-INFO",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/udi/uditool.egg-info/PKG-INFO",
+    "encoding": "utf-8",
+    "content_sha256": "0a83ecd0b63d1481c1db66c6bc4f46736abe31b561f03e2ce47a351ecc135e75"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "Metadata-Version: 2.4\r\nName: uditool\r\nVersion: 0.0.0\r\nSummary: Prismata UDI tooling\r\nRequires-Python: >=3.10\r\nDescription-Content-Type: text/markdown\r\nProvides-Extra: dev\r\nRequires-Dist: pytest; extra == \"dev\"\r\nRequires-Dist: ruamel.yaml; extra == \"dev\"\r\nRequires-Dist: typer; extra == \"dev\"\r\n\r\n# Prismata UDI Tooling\r\n\r\nSmall toolkit for scanning, validating, and proposing deterministic UDIs for Prismata artifacts.\r\n\r\nUsage (development):\r\n\r\n```powershell\r\npython -m venv .venv\r\n.venv\\Scripts\\Activate.ps1\r\npip install -e .[dev]\r\npython -m uditool.cli scan --help\r\n```\r\n\r\nAll generated tooling lives under `Projects/Tooling/udi`.\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

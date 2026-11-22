@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-examples-schemas-example-capability-schema-yaml",
+  "udi": "prismata.meta-domain-examples-schemas.wrapped-schema.example-capability-schema-5145671c3d",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "example-capability.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/domain/examples.schemas/example-capability.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/examples.schemas/example-capability.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "ff5728928d7953abbeca4192c97f51244b56e4fe2876d2e5d9c06a3ae4b391fb"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: example-capability\r\nschema_type: examples\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.example-capability\r\n  name: example-capability.schema\r\n  description: Minimal example capability for documentation and testing.\r\n\r\nspec:\r\n  target_kind: example-capability\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: slug\r\n    path: slug\r\n    type: string\r\n    required: true\r\n\r\n  - name: domain\r\n    path: domain\r\n    type: string\r\n    required: true\r\n\r\nobject:\r\n  slug: \"example|do-thing\"\r\n  domain: \"example\"\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

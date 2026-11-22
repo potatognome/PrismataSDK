@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-schemas-verify-version-yaml",
+  "udi": "prismata.projects-applications-universe-config-schemas.wrapped-schema.verify-version-1ef0405d7e",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "verify-version.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Applications/Universe/config/schemas/verify-version.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/schemas/verify-version.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "ae478b5e5ac06da52d03fb43b2a6d1c460e299afdd6c59902d73eba46ca5d3db"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: verify-version.yaml\r\n## Type: schema\r\n## Purpose: Schema for verifying version changes during migrations or\r\n## batch updates. Used by ingestion/migration tooling.\r\n\r\nmetadata:\r\n  udi: prismata.universe.schema.verify-version\r\n  name: verify-version\r\n  kind: schema-definition\r\n  description: \"Schema for verifying version changes during migrations or batch updates.\"\r\n\r\n\r\nid: \"prismata.universe.schema.verify-version\"\r\nversion: \"1.1.0\"\r\ntype: object\r\nproperties:\r\n  selected_objects: { type: array }\r\n  target_version: { type: string }\r\n  direction: { type: string }\r\n  remap_results: { type: array }\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

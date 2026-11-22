@@ -1,0 +1,36 @@
+{
+  "id": "workspace-artifacts-tests-logs-test-log-test-browse-directory-log",
+  "udi": "prismata.workspace-artifacts-tests-logs.wrapped-artifact.test-log-test-browse-directory-c2f4b93351",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_log_test_browse_directory.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/.artifacts/.tests_logs/test_log_test_browse_directory.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.artifacts/.tests_logs/test_log_test_browse_directory.log",
+    "encoding": "utf-8",
+    "content_sha256": "6d87b2af1f7e566ecc9b69160a42bf92e8eb3465101694f572cdf3a36be75146"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 13:20:41  ======================================================================\r\n2026-08-30 13:20:41 |  Test 7: test_browse_directory                                       |\r\n2026-08-30 13:20:41  ======================================================================\r\n2026-08-30 13:20:41 Running: 7 test_browse_directory \u2014 browse_directory \u2014 navigate, cancel, bad path\r\n2026-08-30 13:20:42 result = CLIMenuHandler. browse_directory with arguments: start_path='C:\\\\Repository\\\\Daniel\\\\dev_local\\\\tUilKit' title='Browse' allow_creation=False\r\n2026-08-30 13:20:42 ran successfully. Producing output: 'C:\\\\Repository\\\\Daniel\\\\dev_local\\\\tUilKit'\r\n2026-08-30 13:20:42 Select current dir PASSED\r\n2026-08-30 13:20:42 cancel \u2192 None PASSED\r\n2026-08-30 13:20:42 Navigate parent then select \u2192 'C:\\\\Repository\\\\Daniel\\\\dev_local'\r\n2026-08-30 13:20:42 Invalid inputs \u2192 eventually selected: 'C:\\\\Repository\\\\Daniel\\\\dev_local\\\\tUilKit'\r\n2026-08-30 13:20:42 Nonexistent start_path \u2192 'C:\\\\Repository\\\\Daniel\\\\dev_local\\\\tUilKit\\\\examples'\r\n2026-08-30 13:20:42 PASSED: browse_directory complete\r\n2026-08-30 13:20:42 \u2705 PASSED: 7 test_browse_directory\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 22:16:01  ======================================================================\r\n2026-08-30 22:16:01 |  Test 7: test_browse_directory                                       |\r\n2026-08-30 22:16:01  ======================================================================\r\n2026-08-30 22:16:01 Running: 7 test_browse_directory \u2014 browse_directory \u2014 navigate, cancel, bad path\r\n2026-08-30 22:16:02 result = CLIMenuHandler. browse_directory with arguments: start_path='C:\\\\Repository\\\\Daniel\\\\dev_local\\\\tUilKit' title='Browse' allow_creation=False\r\n2026-08-30 22:16:02 ran successfully. Producing output: 'C:\\\\Repository\\\\Daniel\\\\dev_local\\\\tUilKit'\r\n2026-08-30 22:16:02 Select current dir PASSED\r\n2026-08-30 22:16:02 cancel \u2192 None PASSED\r\n2026-08-30 22:16:02 Navigate parent then select \u2192 'C:\\\\Repository\\\\Daniel\\\\dev_local'\r\n2026-08-30 22:16:02 Invalid inputs \u2192 eventually selected: 'C:\\\\Repository\\\\Daniel\\\\dev_local\\\\tUilKit'\r\n2026-08-30 22:16:02 Nonexistent start_path \u2192 'C:\\\\Repository\\\\Daniel\\\\dev_local\\\\tUilKit\\\\examples'\r\n2026-08-30 22:16:02 PASSED: browse_directory complete\r\n2026-08-30 22:16:02 \u2705 PASSED: 7 test_browse_directory\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-09-08 12:07:54  ======================================================================\r\n2026-09-08 12:07:54 |  Test 7: test_browse_directory                                       |\r\n2026-09-08 12:07:54  ======================================================================\r\n2026-09-08 12:07:54 Running: 7 test_browse_directory \u2014 browse_directory \u2014 navigate, cancel, bad path\r\n2026-09-08 12:07:54 result = CLIMenuHandler. browse_directory with arguments: start_path='C:\\\\Repository\\\\Daniel\\\\dev_local\\\\tUilKit' title='Browse' allow_creation=False\r\n2026-09-08 12:07:54 ran successfully. Producing output: 'C:\\\\Repository\\\\Daniel\\\\dev_local\\\\tUilKit'\r\n2026-09-08 12:07:54 Select current dir PASSED\r\n2026-09-08 12:07:54 cancel \u2192 None PASSED\r\n2026-09-08 12:07:54 Navigate parent then select \u2192 'C:\\\\Repository\\\\Daniel\\\\dev_local'\r\n2026-09-08 12:07:54 Invalid inputs \u2192 eventually selected: 'C:\\\\Repository\\\\Daniel\\\\dev_local\\\\tUilKit'\r\n2026-09-08 12:07:54 Nonexistent start_path \u2192 'C:\\\\Repository\\\\Daniel\\\\dev_local\\\\tUilKit\\\\examples'\r\n2026-09-08 12:07:54 PASSED: browse_directory complete\r\n2026-09-08 12:07:54 \u2705 PASSED: 7 test_browse_directory\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

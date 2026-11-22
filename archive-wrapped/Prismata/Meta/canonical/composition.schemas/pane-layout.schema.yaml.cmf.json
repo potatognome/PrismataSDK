@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-composition-schemas-pane-layout-schema-yaml",
+  "udi": "prismata.meta-canonical-composition-schemas.wrapped-schema.pane-layout-schema-0d08223e3a",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "pane-layout.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/composition.schemas/pane-layout.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/composition.schemas/pane-layout.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "74a5730ee70e34842f4ae62e85cd95658478d371cd1fe47cfd4d4ffa5d4d5b19"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: pane-layout\r\nschema_type: composition\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.pane-layout\r\n  name: pane-layout.schema\r\n  description: Composition schema defining nested pane trees and layout rules.\r\n\r\nspec:\r\n  target_kind: pane-layout\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: root\r\n    path: root\r\n    type: object\r\n    required: true\r\n\r\n  - name: children\r\n    path: children\r\n    type: array\r\n    required: false\r\n\r\nobject:\r\n  root: {}\r\n  children: []\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

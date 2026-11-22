@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-prismatalabs-config-labs-settings-yaml",
+  "udi": "prismata.projects-applications-prismatalabs-config.wrapped-object.labs-settings-87c193dcfd",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "labs.settings.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/PrismataLabs/config/labs.settings.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/PrismataLabs/config/labs.settings.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "107e29e04bf2be2f4609a1f23f3e59ec52f4c93e22d3dbbbcd33196604673b46"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "default_folder: C:/Repository/Daniel/dev_local/Prismata/Projects/Applications\r\nlastSelected:\r\n  colour_scheme: C:/Repository/Daniel/dev_local/Prismata/Meta/registry/colour-scheme.d/default.colour-scheme.entry.yaml\r\n  border_pattern: C:/Repository/Daniel/dev_local/Prismata/Meta/registry/border-pattern.d/double-line.border-pattern.entry.yaml\r\n  object: C:/Repository/Daniel/dev_local/Prismata/Meta/registry/pane.d/rh-pane.pane.entry.yaml\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

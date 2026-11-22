@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-canonical-copilot-instructions-d-building-exemplar-md",
+  "udi": "prismata.meta-deprecated-canonical-copilot-instructions-d.wrapped-agent-instruction.building-exemplar-c40aafb8da",
+  "kind": "wrapped-agent-instruction",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "building_exemplar.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "agent-instruction",
+    "relative_path": "Meta/deprecated/canonical/copilot-instructions.d/building_exemplar.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/canonical/copilot-instructions.d/building_exemplar.md",
+    "encoding": "utf-8",
+    "content_sha256": "0fd1d1f012519b712ed350eeea9e4a241c5e4a93c14fe6275b94902d7d3b8ccf"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Building Exemplar Policy\r\n\r\n## Purpose\r\n\r\nThe `examples/` folder contains **supplementary test scripts that operate outside of pytest**.\r\nThese scripts serve a different purpose from pytest unit tests:\r\n\r\n- **Exercise all public functions** with all reasonable input scenarios.\r\n- **Deliberately attempt to break UI menus** and edge-case error paths (empty input,\r\n  out-of-range values, special characters, very long strings).\r\n- Provide visual, interactive, **colour-logged output** for human review alongside structured\r\n  log files.\r\n- Serve as **living documentation** of how each module behaves under normal and adversarial\r\n  conditions.\r\n\r\nIn addition to these supplementary tests, the `examples/` folder should always contain a file called\r\n`exemplar.py`.  The purpose of this file is to serve as a mock entry point for the applications operation.\r\n\r\nThe `exemplar.py` application should:\r\n    - Load tUilKit factory imports in verbose mode where available (e.g. ConfigLoader)\r\n    - Generate a standard CLI menu, including project name header and submenus  \r\n    - Read projects primary config file\r\n    - read and test load all ROOT_MODES\r\n    - verify and display paths for LOG_FILES, CONFIG files and input data files\r\n",
+    "classification": {
+      "subtype": "agent-instruction",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

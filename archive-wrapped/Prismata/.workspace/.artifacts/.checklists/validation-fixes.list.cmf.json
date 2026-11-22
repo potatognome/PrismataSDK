@@ -1,0 +1,36 @@
+{
+  "id": "workspace-artifacts-checklists-validation-fixes-list",
+  "udi": "prismata.workspace-artifacts-checklists.wrapped-checklist.validation-fixes-7bb841b581",
+  "kind": "wrapped-checklist",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "validation-fixes.list",
+    "source_file_type": "list",
+    "wrapped_subtype": "checklist",
+    "relative_path": ".workspace/.artifacts/.checklists/validation-fixes.list",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.artifacts/.checklists/validation-fixes.list",
+    "encoding": "utf-8",
+    "content_sha256": "ca33571c54a45dd40b23d2fb70ae928a2e18c19c683f6a8f1c84b4d357272b0e"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "C:/Repository/Daniel/dev_local/Prismata/Meta/registry/pane.d/default.pane.entry.yaml: Invalid UDI format for 'border_pattern': single-line\r\nC:/Repository/Daniel/dev_local/Prismata/Meta/registry/pane.d/default.pane.entry.yaml: Invalid UDI format for 'colour_role': primary-surface\r\nC:/Repository/Daniel/dev_local/Prismata/Meta/registry/pane.d/default.pane.entry.yaml: Invalid UDI format for 'colour_scheme': default\r\nC:/Repository/Daniel/dev_local/Prismata/Meta/registry/pane.d/default.pane.entry.yaml: Invalid UDI format for 'content_role': primary-surface\r\nC:/Repository/Daniel/dev_local/Prismata/Meta/registry/pane.d/lh-pane.pane.entry.yaml: Invalid UDI format for 'border_pattern': single-line\r\nC:/Repository/Daniel/dev_local/Prismata/Meta/registry/pane.d/lh-pane.pane.entry.yaml: Invalid UDI format for 'colour_role': primary-surface\r\nC:/Repository/Daniel/dev_local/Prismata/Meta/registry/pane.d/lh-pane.pane.entry.yaml: Invalid UDI format for 'colour_scheme': default\r\nC:/Repository/Daniel/dev_local/Prismata/Meta/registry/pane.d/lh-pane.pane.entry.yaml: Invalid UDI format for 'content_role': primary-surface\r\nC:/Repository/Daniel/dev_local/Prismata/Meta/registry/pane.d/rh-pane.pane.entry.yaml: Invalid UDI format for 'border_pattern': single-line\r\nC:/Repository/Daniel/dev_local/Prismata/Meta/registry/pane.d/rh-pane.pane.entry.yaml: Invalid UDI format for 'colour_role': secondary-surface\r\nC:/Repository/Daniel/dev_local/Prismata/Meta/registry/pane.d/rh-pane.pane.entry.yaml: Invalid UDI format for 'colour_scheme': default\r\nC:/Repository/Daniel/dev_local/Prismata/Meta/registry/pane.d/rh-pane.pane.entry.yaml: Invalid UDI format for 'content_role': secondary-surface\r\n",
+    "classification": {
+      "subtype": "checklist",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

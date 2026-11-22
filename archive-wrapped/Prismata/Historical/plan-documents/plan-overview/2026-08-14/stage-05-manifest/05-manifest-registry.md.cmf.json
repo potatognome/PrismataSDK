@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-plan-overview-2026-08-14-stage-05-manifest-05-manifest-registry-md",
+  "udi": "prismata.historical-plan-documents-plan-overview-2026-08-14-stage-05-mani.wrapped-plan.x-05-manifest-registry-d474f37888",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "05-manifest-registry.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/plan-overview/2026-08-14/stage-05-manifest/05-manifest-registry.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/plan-overview/2026-08-14/stage-05-manifest/05-manifest-registry.md",
+    "encoding": "utf-8",
+    "content_sha256": "a61843bb92b0bff42a57c31fe80b20bbb75eb812a98fd85872637da4b380f393"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff# 05-manifest-registry.md\n# Version: 1.0.0\n# Archived: stage-05-manifest\n# Prismata Historical Document \u2014 05-manifest-registry.md\n# Version: 1.0.0\n# Archive Class: Stage 5\n\n## Overview\nThe manifest registry stores canonical metadata for packages, schemas, modules,\nand tooling. It is the authoritative source of version lineage.\n\n## Manifest Types\n- Schema manifests  \n- Package manifests  \n- Tool manifests  \n- Semantic manifests  \n\n## Registry Rules\n- All manifests must be canonical  \n- All manifests must include version lineage  \n- All manifests must be human-readable  \n- All manifests must be archived  \n\n## Example Manifest Entry (Simplified)\nmanifest:\nid: \"schema.core\"\nversion: \"1.0.0\"\nlineage: [\"0.9.0\", \"0.9.5\"]\n\n\n## Versioning\n- manifest-registry-v1  \n- manifest-lineage-v1  \n\n## Notes\nArchived under `/historical/stage-05/`.\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

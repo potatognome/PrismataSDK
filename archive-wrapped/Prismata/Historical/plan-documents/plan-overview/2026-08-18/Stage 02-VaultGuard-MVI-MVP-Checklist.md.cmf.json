@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-plan-overview-2026-08-18-stage-02-vaultguard-mvi-mvp-checklist-md",
+  "udi": "prismata.historical-plan-documents-plan-overview-2026-08-18.wrapped-checklist.stage-02-vaultguard-mvi-mvp-checklist-b145684530",
+  "kind": "wrapped-checklist",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "Stage 02-VaultGuard-MVI-MVP-Checklist.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "checklist",
+    "relative_path": "Historical/plan-documents/plan-overview/2026-08-18/Stage 02-VaultGuard-MVI-MVP-Checklist.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/plan-overview/2026-08-18/Stage 02-VaultGuard-MVI-MVP-Checklist.md",
+    "encoding": "utf-8",
+    "content_sha256": "1427548900458efd7210ef039774b85a98e4dc8078a8268ff6a353060255fd3a"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Stage 02 \u2014 VaultGuard MVI / MVP Checklist\r\n\r\n## Date\r\n\r\n2026-08-18\r\n\r\n## Purpose\r\n\r\nDefine the minimum viable activation path for VaultGuard so it can move from scaffolded placeholder status to a trusted service-level integration under Universe and PrismCommand.\r\n\r\n## Current status\r\n\r\nVaultGuard is present in the repo as a real scaffold under:\r\n\r\n- `Prismata/Projects/Services/VaultGuard/`\r\n\r\nIt includes:\r\n\r\n- Terraform deployment\r\n- Helm/Kustomize bootstrap config\r\n- RBAC and policy files\r\n- governance documentation\r\n\r\nHowever, in the current Universe bootstrap it is still recorded as a placeholder rather than an installed service.\r\n\r\n## MVI / MVP definition\r\n\r\nThe MVI/MVP state for VaultGuard should include the following:\r\n\r\n### 1) Source-of-truth path\r\n\r\nVaultGuard must have a canonical service path designated in the repo as the live implementation path.\r\n\r\nTarget:\r\n\r\n- `Prismata/Projects/Services/VaultGuard/`\r\n\r\n### 2) Terraform validation\r\n\r\nThe infrastructure scaffold must validate cleanly.\r\n\r\nRequired:\r\n\r\n- `terraform fmt -check -recursive`\r\n- `terraform init -backend=false`\r\n- `terraform validate`\r\n\r\n### 3) Policy validation\r\n\r\nAll HCL policy files must be checked for syntactic correctness and security intent.\r\n\r\nRequired review:\r\n\r\n- `prismcommand-service.hcl`\r\n- `prismcommand-operator.hcl`\r\n- `rbac.yaml`\r\n\r\n### 4) Runtime identity contract\r\n\r\nVaultGuard must define and document the runtime principle under which PrismCommand authenticates and reads secrets.\r\n\r\nRequired:\r\n\r\n- namespace-scoped or service-account-based auth\r\n- secret path boundary under `secret/data/prismcommand/*`\r\n- clear distinction between runtime and operator privilege models\r\n\r\n### 5) Universe promotion from placeholder to installed\r\n\r\nUniverse must not continue to classify VaultGuard as generic placeholder after the service is available.\r\n\r\nRequired state transition:\r\n\r\n- placeholder status removed\r\n- valid source path registered\r\n- install status changed to `installed`\r\n- validation and canonicalization status recorded as pass or pass-with-notes\r\n\r\n### 6) PrismCommand integration contract\r\n\r\nThe service contract should be explicit and not implicit.\r\n\r\nRequired:\r\n\r\n- PrismCommand reads only approved secret paths\r\n- operator actions are limited to governance/admin pathways\r\n- policies are auditable and versioned\r\n\r\n### 7) Operational readiness\r\n\r\nThe service should be ready to move from bootstrap to runtime test coverage.\r\n\r\nRequired:\r\n\r\n- environment overlays\r\n- secret environment configuration\r\n- drift checks\r\n- integration smoke validation\r\n\r\n## Checklist\r\n\r\n### Engineering Checklist\r\n\r\n- [ ] VaultGuard canonical repo path is confirmed\r\n- [ ] Terraform scaffolding validates cleanly\r\n- [ ] Policies validate syntactically\r\n- [ ] RBAC model is consistent with runtime requirements\r\n- [ ] Universe metadata moves from placeholder to installed state\r\n- [ ] PrismCommand consumption contract is documented\r\n- [ ] Deployment overlays are defined for dev/stage/prod\r\n- [ ] Integration smoke tests are defined and passing\r\n\r\n### Governance Checklist\r\n\r\n- [ ] Access boundaries are explicit\r\n- [ ] Secrets path policy is documented\r\n- [ ] Operator rights are separated from service rights\r\n- [ ] Secret rotation and lifecycle policy is documented\r\n- [ ] production readiness is gated behind validation\r\n\r\n## Definition of done\r\n\r\nVaultGuard is considered MVI/MVP-complete when:\r\n\r\n1. the real service scaffold is the canonical source path\r\n2. Terraform validates without errors\r\n3. policies and RBAC are validated\r\n4. Universe no longer marks it as a placeholder in regular bootstrap output\r\n5. PrismCommand can consume the secret contract in a defined runtime flow\r\n6. governance and security boundaries are explicit and testable\r\n\r\n## Current blocker\r\n\r\nThe blocker is not missing files; it is missing runtime trust. The repo contains the scaffold, but the system still needs the transition from metadata to operational service integration.\r\n\r\n## Next action\r\n\r\nProceed from scaffold validation into a live integration test sequence that proves VaultGuard is not merely discovered by Universe, but actually usable by PrismCommand under the approved access model.\r\n",
+    "classification": {
+      "subtype": "checklist",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-dependencyinspector-core-renderer-simulator-py",
+  "udi": "prismata.projects-applications-dependencyinspector-core.wrapped-codeblock.renderer-simulator-88d077bc6e",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "renderer_simulator.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/DependencyInspector/core/renderer_simulator.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/DependencyInspector/core/renderer_simulator.py",
+    "encoding": "utf-8",
+    "content_sha256": "2a4e6eece7361a35f9197c3c88b8a47481dcb7444fd001feb1a0bd6d7b7e7265"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "def simulate_renderer(kind, entry_id, registry):\r\n    entry = registry.get(kind, {}).get(entry_id)\r\n    if not entry:\r\n        return f\"{kind} '{entry_id}' not found.\"\r\n\r\n    data = entry[\"data\"]\r\n    out = []\r\n    out.append(f\"Renderer Simulation for {kind} '{entry_id}'\")\r\n    out.append(\"------------------------------------------------------------\")\r\n\r\n    if kind == \"pane\":\r\n        bp = data.get(\"pane\", {}).get(\"border_pattern\")\r\n        cs = data.get(\"pane\", {}).get(\"colour_scheme\")\r\n        cr = data.get(\"pane\", {}).get(\"colour_role\")\r\n\r\n        border = registry.get(\"border-pattern\", {}).get(bp)\r\n        scheme = registry.get(\"colour-scheme\", {}).get(cs)\r\n        role = registry.get(\"colour-role\", {}).get(cr)\r\n\r\n        out.append(f\"\u2714 colour_scheme: {cs}\" if scheme else f\"\u2718 colour_scheme: {cs} \u2192 fallback: black/white\")\r\n        out.append(f\"\u2714 border_pattern: {bp}\" if border else f\"\u2718 border_pattern: {bp} \u2192 fallback: invisible border\")\r\n        out.append(f\"\u2714 colour_role: {cr}\" if role else f\"\u2718 colour_role: {cr} \u2192 fallback: neutral_fg\")\r\n\r\n    return \"\\n\".join(out)\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

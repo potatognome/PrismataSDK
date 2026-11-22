@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-core-schemas-metadata-schema-yaml",
+  "udi": "prismata.meta-canonical-core-schemas.wrapped-schema.metadata-schema-fcd0c24881",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "metadata.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/core.schemas/metadata.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/core.schemas/metadata.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "760a08096b8d7492db3d91f67874d7a066a84d4a01e11709e9b2bba6fd4e618f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.1\r\nkind: metadata\r\nschema_type: core\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.metadata\r\n  name: metadata.schema\r\n  description: Canonical schema defining metadata blocks for all Prismata objects.\r\n\r\nspec:\r\n  target_kind: metadata\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: name\r\n    path: name\r\n    type: string\r\n    required: true\r\n\r\n  - name: description\r\n    path: description\r\n    type: string\r\n    required: false\r\n\r\n  - name: tags\r\n    path: tags\r\n    type: array\r\n    required: false\r\n\r\nobject:\r\n  udi: \"\"\r\n  name: \"\"\r\n  description: \"\"\r\n  tags: []\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

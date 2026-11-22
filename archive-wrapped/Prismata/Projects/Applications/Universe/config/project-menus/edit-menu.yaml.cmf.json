@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-project-menus-edit-menu-yaml",
+  "udi": "prismata.projects-applications-universe-config-project-menus.wrapped-object.edit-menu-8a64b230a6",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "edit-menu.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/Universe/config/project-menus/edit-menu.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/project-menus/edit-menu.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "0097e1e0d808ecbefd0bd757de950dc5052e4009e3c50bf0e9df8cd889bd0e9b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "metadata:\r\n  udi: prismata.universe.menu.edit\r\n  name: \"Edit Menu\"\r\n  version: \"0.1.0\"\r\n  kind: menu\r\n  description: \"Edit menu for create, multi-edit, update-fields, version, and export workflows.\"\r\n\r\nudi: \"prismata.universe.menu.edit\"\r\nkind: menu\r\ntype: \"menu\"\r\ntitle: \"Edit\"\r\n\r\nitems:\r\n  - key: \"1\"\r\n    udi: \"prismata.universe.menu.edit.create-from-object\"\r\n    label: \"Create From Object\"\r\n    description: \"Create a new object based on the selected reference object.\"\r\n    capability: \"prismata.universe.capability.fs-create-from-object\"\r\n    ui_framework: menu\r\n    submenu_ref: \"prismata.universe.menu.edit-create\"\r\n\r\n  - key: \"2\"\r\n    udi: \"prismata.universe.menu.edit.multi-edit\"\r\n    label: \"Multi-Edit\"\r\n    description: \"Edit multiple selected objects with type-compatible operations.\"\r\n    capability: \"prismata.universe.capability.fs-edit-multi\"\r\n    ui_framework: menu\r\n    submenu_ref: \"prismata.universe.menu.edit-multi\"\r\n\r\n  - key: \"3\"\r\n    udi: \"prismata.universe.menu.edit.update-fields\"\r\n    label: \"Update Fields\"\r\n    description: \"Add missing mandatory fields and optional fields from registry or reference object.\"\r\n    capability: \"prismata.universe.capability.fs-update-fields\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"4\"\r\n    udi: \"prismata.universe.menu.edit.create-new-version\"\r\n    label: \"Create New Version\"\r\n    description: \"Generate a new version of selected objects.\"\r\n    capability: \"prismata.universe.capability.fs-update-version\"\r\n\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"5\"\r\n    udi: \"prismata.universe.menu.edit.insert-known-keys-values\"\r\n    label: \"Insert Known Keys/Values\"\r\n    description: \"Add registry-defined keys or values to selected objects.\"\r\n    capability: \"prismata.universe.capability.fs-edit-registry-insert\"\r\n\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"6\"\r\n    udi: \"prismata.universe.menu.edit.export-as\"\r\n    label: \"Export As\"\r\n    description: \"Export object using custom file name or type.\"\r\n    capability: \"prismata.universe.capability.fs-export-custom\"\r\n    ui_framework: menu\r\n    submenu_ref: \"prismata.universe.menu.edit-export\"\r\n\r\n  - key: \"7\"\r\n    udi: \"prismata.universe.menu.edit.open-in-vile-editor\"\r\n    label: \"Open in Vile Editor\"\r\n    description: \"Edit selected object using the Vile editor. Only available for single-file edits.\"\r\n    capability: \"prismata.universe.capability.fs-edit-vile\"\r\n    mode: \"vile\"\r\n\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

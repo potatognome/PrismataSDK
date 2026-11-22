@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-ui-elements-interface-categorization-2026-06-01-interface-full-categorization-table-md",
+  "udi": "prismata.historical-architecture-evolution-ui-elements-interface-categori.wrapped-document.x-2026-06-01-interface-full-categorization-table-a3ba0824c0",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "2026-06-01-interface_full_categorization_table.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/ui-elements/interface-categorization/2026-06-01-interface_full_categorization_table.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/ui-elements/interface-categorization/2026-06-01-interface_full_categorization_table.md",
+    "encoding": "utf-8",
+    "content_sha256": "38aa4bc8e97fbca1f89513fca46da0d431850fe83027507b5e895759db0620b7"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Interface Full Categorization Table\r\n\r\nLast updated: 2026-06-01\r\n\r\n+----------------------+-------------+-------------+----------------+-----------------------+\r\n| Interface Capability | Invocation  | Interaction | Execution Mode | Notes                 |\r\n+----------------------+-------------+-------------+----------------+-----------------------+\r\n| cli                  |      *      |             |                | basic trigger         |\r\n| cli_args             |      *      |             |                | scripted trigger      |\r\n| cli_menu             |      *      |      *      |                | interactive CLI       |\r\n| cli_menu_args        |      *      |      *      |                | menu + automation     |\r\n| config_driven_cli    |      *      |      *      |        *       | full PrismCorp CLI    |\r\n| api                  |      *      |      *      |        *       | agent/robot interface |\r\n| service              |      *      |             |        *       | daemon mode           |\r\n| cli_invisible        |      *      |             |        *       | backend for compositor|\r\n| tui                  |             |      *      |                | terminal UI           |\r\n| compositor           |             |      *      |        *       | windowed UI + backend |\r\n| logging_only         |             |             |        *       | no UI, no CLI         |\r\n+----------------------+-------------+-------------+----------------+-----------------------+",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

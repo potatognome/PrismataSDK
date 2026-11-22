@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-cognitive-elements-2026-06-01-prismata-cognitive-feedback-loop-specification-2026-05-27-md",
+  "udi": "prismata.historical-architecture-evolution-cognitive-elements.wrapped-document.x-2026-06-01-prismata-cognitive-feedback-loop-specification-2026",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "2026-06-01-Prismata Cognitive Feedback Loop Specification - 2026-05-27.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/cognitive-elements/2026-06-01-Prismata Cognitive Feedback Loop Specification - 2026-05-27.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/cognitive-elements/2026-06-01-Prismata Cognitive Feedback Loop Specification - 2026-05-27.md",
+    "encoding": "utf-8",
+    "content_sha256": "0f8cb009f4023a6246bd3a1e2f8f3dc9823669c2ae8ae272dcf4ca227ce8984a"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Prismata Cognitive Feedback Loop Specification\r\n\r\nLast updated: 2026-06-01\r\n\r\nVersion: 0.1.0\r\n\r\n(BE / WHEN / WHEN\u2011NOT / DO / HOW / WHERE)\r\n\r\nCode\r\n# Prismata Cognitive Identity & Duty\u2011Cycle Model\r\nversion: 1.0.0\r\nstatus: evolving\r\n\u2b50 1. Overview\r\nPrismata\u2019s cognition is governed by a dual\u2011layer identity engine:\r\n\r\nBE \u2014 what a project is\r\n\r\nDO \u2014 what a project does\r\n\r\nThese two layers form a cybernetic loop, continuously shaping and reshaping each other.\r\n\r\nInside BE live the activation and inhibition systems:\r\n\r\nWHEN \u2014 activation\r\n\r\nWHEN\u2011NOT \u2014 inhibition\r\n\r\nInside DO live the realization systems:\r\n\r\nImplementational HOW \u2014 how behavior is physically realized\r\n\r\nWHERE \u2014 where the implementation lives\r\n\r\nTogether, these form Prismata\u2019s cognitive feedback and duty\u2011cycling engine.\r\n\r\n\ud83e\udde0 2. BE \u2014 Ontological Identity\r\nCode\r\nbe:\r\n  identity:\r\n    id:\r\n    name:\r\n    version:\r\n    description:\r\nBE defines:\r\n\r\nconceptual identity\r\n\r\nsemantic role\r\n\r\nontological relationships\r\n\r\nemergent meaning\r\n\r\nBE contains the ontological HOW:\r\n\r\nproject_type\r\n\r\nproject_role\r\n\r\nproject_interfaces\r\n\r\nThis is the Mind of the organism.\r\n\r\n\u23f3 3. WHEN \u2014 Activation Layer (Inside BE)\r\nCode\r\nbe:\r\n  when:\r\n    temporal:\r\n    triggered:\r\n    emergent:\r\nWHEN defines all conditions under which a project becomes active.\r\n\r\nModes:\r\nTemporal \u2014 cron, intervals, windows\r\n\r\nTriggered \u2014 events, changes, signals\r\n\r\nEmergent \u2014 readiness, thresholds, organism\u2011state\r\n\r\nWHEN is the activation engine of the organism.\r\n\r\n\ud83d\udeab 4. WHEN\u2011NOT \u2014 Inhibition Layer (Inside BE)\r\nCode\r\nbe:\r\n  when_not:\r\n    temporal:\r\n    triggered:\r\n    emergent:\r\nWHEN\u2011NOT defines all conditions under which a project must not activate.\r\n\r\nModes:\r\nTemporal inhibition \u2014 blackout windows\r\n\r\nTriggered inhibition \u2014 failure events, unsafe states\r\n\r\nEmergent inhibition \u2014 unmet thresholds, conflicting conditions\r\n\r\nWHEN\u2011NOT is the safety and suppression engine.\r\n\r\n\ud83e\udde9 5. Ontological HOW (Inside BE)\r\nCode\r\nbe:\r\n  how:\r\n    conceptual_structure:\r\n    semantic_relationships:\r\n    identity_composition:\r\nOntological HOW defines:\r\n\r\nhow the project exists conceptually\r\n\r\nhow it fits into the organism\u2019s meaning graph\r\n\r\nhow its identity is composed\r\n\r\nThis is the semantic structure of the project.\r\n\r\nGuided Link: ontological HOW\r\n\r\n\u2699\ufe0f 6. DO \u2014 Behavioral Identity\r\nCode\r\ndo:\r\n  capabilities:\r\n  responsibilities:\r\n  workflows:\r\n  interfaces:\r\nDO defines:\r\n\r\nwhat the project does\r\n\r\nhow it behaves\r\n\r\nwhat it exposes\r\n\r\nwhat it depends on\r\n\r\nThis is the behavioral expression of identity.\r\n\r\nGuided Link: DO layer\r\n\r\n\ud83c\udfd7\ufe0f 7. Implementational HOW (Inside DO)\r\nCode\r\ndo:\r\n  how:\r\n    code_structure:\r\n    runtime_architecture:\r\n    module_boundaries:\r\n    dependency_graph:\r\nImplementational HOW defines:\r\n\r\nhow the project is physically realized\r\n\r\nhow its code is structured\r\n\r\nhow its runtime is wired\r\n\r\nhow its modules interact\r\n\r\nThis is the Body of the organism.\r\n\r\nGuided Link: implementational HOW\r\n\r\n\ud83d\udccd 8. WHERE \u2014 Physical Location (Inside Implementational HOW)\r\nCode\r\ndo:\r\n  how:\r\n    where:\r\n      path:\r\n      repo:\r\n      module:\r\nWHERE defines:\r\n\r\nwhere the project lives\r\n\r\nwhere its code resides\r\n\r\nwhere its manifest and schema are located\r\n\r\nThis is the physical anchor of the project.\r\n\r\nGuided Link: WHERE / Index\r\n\r\n\ud83d\udd04 9. The Cognitive Feedback Loop\r\nCode\r\nBE \u2192 WHEN \u2192 DO \u2192 HOW \u2192 WHERE \u2192 WHEN\u2011NOT \u2192 BE\r\nLoop Dynamics:\r\nBE defines identity\r\n\r\nWHEN activates potential\r\n\r\nDO expresses behavior\r\n\r\nImplementational HOW realizes behavior\r\n\r\nWHERE anchors behavior\r\n\r\nWHEN\u2011NOT inhibits or halts behavior\r\n\r\nBE updates identity\r\n\r\nLoop repeats\r\n\r\nGuided Link: cognitive loop\r\n\r\nThis loop is continuous, adaptive, and emergent.\r\n\r\n\ud83d\udd01 10. Duty\u2011Cycling Model\r\nDuty\u2011cycling is the rhythmic activation and inhibition of projects based on:\r\n\r\nWHEN (activation)\r\n\r\nWHEN\u2011NOT (inhibition)\r\n\r\norganism state\r\n\r\nreadiness\r\n\r\ndependency health\r\n\r\ntemporal windows\r\n\r\nDuty\u2011cycling ensures:\r\n\r\nstability\r\n\r\nefficiency\r\n\r\nemergent coordination\r\n\r\nself\u2011regulation\r\n\r\nGuided Link: duty cycling\r\n\r\n\u2b50 11. Summary\r\nLayer\tPurpose\tGuided Link\r\nBE\tOntological identity\tIdentity\r\nWHEN\tActivation\tActivation\r\nWHEN\u2011NOT\tInhibition\tSafety\r\nOntological HOW\tConceptual structure\tMeaning\r\nDO\tBehavioral identity\tAction\r\nImplementational HOW\tPhysical realization\tBody\r\nWHERE\tPhysical location\tAnchor\r\n\r\n\r\nThis is the Prismata Cognitive Identity Engine.",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

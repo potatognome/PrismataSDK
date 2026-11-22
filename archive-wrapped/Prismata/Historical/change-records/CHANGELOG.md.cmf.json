@@ -1,0 +1,36 @@
+{
+  "id": "historical-change-records-changelog-md",
+  "udi": "prismata.historical-change-records.wrapped-document.changelog-d10f977562",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "CHANGELOG.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/change-records/CHANGELOG.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/change-records/CHANGELOG.md",
+    "encoding": "utf-8",
+    "content_sha256": "23917e1b60ff309a84cd8cf4d4f02b4289caa1757f5ae0bfb08088eb8702dc99"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Prismata Changelog\r\n\r\nAll notable changes to the Prismata workspace are documented in this file.\r\n\r\n## [0.1.5] - 2026-08-21\r\n\r\n### Added\r\n- Added Universe application changelog at `Projects/Applications/Universe/CHANGELOG.md`.\r\n- Added canonical ui_interface migration documentation artifacts in `Historical/architecture-evolution`, `Historical/change-records`, and `Historical/plan-documents` for the 2026-08-21 rollout.\r\n\r\n### Changed\r\n- Bumped `Projects/Applications/Universe/package.json` version from `0.1.0` to `0.1.1` (lockfile updated).\r\n- Applied the first staged ui_interface migration to Universe with soft `ui_framework` defaulting and menu framework annotations.\r\n- Introduced Universe ui_interface loader precedence behavior (`canonical < project < tenant`) and pane-aware runtime gating for results rendering paths.\r\n\r\n## [0.1.4] - 2026-07-18\r\n\r\n### Added\r\n- Recorded next three architectural steps in `../plan-documents/project-management/UDI-ASTalyzer-Universe-Architecture-Plan.md`.\r\n  - Step 1: Establish the UDI Standard (scan targets: `Meta/canonical`, `projects/`, `projects/Universe`, `projects/ASTalyzer`).\r\n  - Step 2: Complete ASTalyzer \u2014 integrate UDI tagging into AST nodes and validate schemas against canonical rules.\r\n  - Step 3: Complete Universe \u2014 enforce UDI rules, consume ASTalyzer output, and serve as the single source of truth for canonical schema creation and validation.\r\n\r\n## [0.1.3] - 2026-07-06\r\n\r\n### Added\r\n- Updates to Project and folder structure underway.\r\n\r\n## [0.1.2] - 2026-06-08\r\n\r\n### Added\r\n- Added tenant menu-tree rollout coverage for PrismCommander in `.workspace/projects.menus/PrismCommander`.\r\n\r\n### Changed\r\n- Expanded shared CLI menu standard adoption across active CLI applications using `tUilKit` menu object rendering and tenant menu trees.\r\n- Standardized submenu indexing and reserved navigation behavior through `tUilKit` menu engine updates.\r\n- Synchronized release metadata and documentation across Prismata, tUilKit, and tenant applications using shared CLI menu modules.\r\n\r\n## [0.1.1] - 2026-06-01\r\n\r\n### Added\r\n- Added a physical organization record for Prismata projects under `Prismata/Projects/Core`, `Prismata/Projects/Infrastructure`, and `Prismata/Projects/Tenant`.\r\n- Added `Last updated: 2026-06-01` metadata to all Markdown documents in `Historical/architecture-evolution`.\r\n- Added a Markdown replacement for the generic enterprise architecture image assets in `Historical/architecture-evolution/enterprise_architecture_4_layers.md`.\r\n- Added canonical `Meta/canonical/projects.schemas` and `Meta/canonical/projects.manifests` directories for schema and manifest bundle assets.\r\n\r\n### Changed\r\n- Migrated infrastructure projects into `Prismata/Projects/Infrastructure`, including V4l1d8r, H3l3n, LogStation, and Syncbot.\r\n- Migrated tenant projects into `Prismata/Projects/Tenant`, including OrgArchitect, PrismCommander, crUPto, M3m01r5, HomeOffice, and ThoughtFire.\r\n- Migrated the remaining core projects into `Prismata/Projects/Core`, including Prism, tUilKit, and Chromaverse (with Chromaspace and related Chroma subprojects under the Chromaverse umbrella).\r\n- Updated project configuration roots and relative path handling to match the new Prismata project layout.\r\n- Updated PrismCommand to resolve OrgArchitect from its canonical tenant location.\r\n- Updated architecture classification documents to distinguish conceptual layering from physical folder placement and to place V4l1d8r in Infrastructure.\r\n- Updated `Meta/projects.schemas/validator.spec.yaml` to validate against canonical schema and manifest bundle paths under `Meta/canonical`.\r\n\r\n### Removed\r\n- Removed the duplicate `Prismata/Projects/Infrastructure/OrgArchitect` copy in favor of the canonical tenant location.\r\n- Removed the superseded `enterprise_architecture_4_layers.png` and `enterprise_architecture_4_layers.webp` assets after replacing them with Markdown documentation.\r\n\r\n## [0.1.0] - 2026-05-25\r\n\r\n### Added\r\n- Established initial Prismata workspace scaffold and governance structure.\r\n- Defined canonical separation of runtime workspace state, governance assets, and historical records.\r\n- Introduced foundational top-level domains: .workspace, Meta, Historical, Mind_Body, Projects, and Tooling.\r\n- Recorded initial migration/governance alignment artifacts and workspace contracts.\r\n\r\n### Changed\r\n- Set initial Prismata workspace version to 0.1.0.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

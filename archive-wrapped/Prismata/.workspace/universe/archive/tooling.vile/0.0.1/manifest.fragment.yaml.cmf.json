@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-vile-0-0-1-manifest-fragment-yaml",
+  "udi": "prismata.workspace-universe-archive-tooling-vile-0-0-1.wrapped-manifest.manifest-fragment-db63cfd918",
+  "kind": "wrapped-manifest",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "manifest.fragment.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "manifest",
+    "relative_path": ".workspace/universe/archive/tooling.vile/0.0.1/manifest.fragment.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.vile/0.0.1/manifest.fragment.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "98da8f4f7e1193bc5b0c3d95f883b45ce732f69b0d58056fa707434e25b988d0"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "udi: tooling.vile\nname: VILE\nversion: 0.1.0\nmodule: primitives/python/vile.py\n",
+    "classification": {
+      "subtype": "manifest",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

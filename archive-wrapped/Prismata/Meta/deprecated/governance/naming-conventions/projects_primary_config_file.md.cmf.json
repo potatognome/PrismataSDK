@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-governance-naming-conventions-projects-primary-config-file-md",
+  "udi": "prismata.meta-deprecated-governance-naming-conventions.wrapped-document.projects-primary-config-file-0d4c2a46a5",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "projects_primary_config_file.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Meta/deprecated/governance/naming-conventions/projects_primary_config_file.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/governance/naming-conventions/projects_primary_config_file.md",
+    "encoding": "utf-8",
+    "content_sha256": "14c5c65c0a56d425bc663a983c62b0891ed0303c699619bb80da1ec981a95023"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## Project Primary Configuration Files (JSON)\r\nEach project in the Prismata workspace contains a standard primary config file defining the project metadata, workspace root mode and primary workspace paths.\r\n\r\nThe Primary config file will be placed in each respective projects /config folder within the project root /{$PROJECT_NAME}/config/\r\n\r\nThe config file will be named based on the project name, in matched casing, and with the appended suffix \"_CONFIG.json\"\r\n\r\nPrimary Config file: {$PROJECT_NAME}_CONFIG.json ",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

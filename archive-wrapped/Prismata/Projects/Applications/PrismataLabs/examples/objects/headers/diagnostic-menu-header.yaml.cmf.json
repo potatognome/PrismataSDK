@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-prismatalabs-examples-objects-headers-diagnostic-menu-header-yaml",
+  "udi": "prismata.projects-applications-prismatalabs-examples-objects-headers.wrapped-object.diagnostic-menu-header-2aeb0cd9c2",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "diagnostic-menu-header.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/PrismataLabs/examples/objects/headers/diagnostic-menu-header.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/PrismataLabs/examples/objects/headers/diagnostic-menu-header.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "e24dc992c1ee7f6feffc57afeb055174aaf7517dda3f719cec186d427cfef3ca"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "id: example-diagnostic-menu-header\r\nudi: prismata.examples.menu-header.diagnostic\r\nkind: menu-header\r\ntext: Diagnostic Pane Controls\r\ncolour_role: prismata.examples.colour-role.menu-accent\r\ncolour_scheme: prismata.examples.colour-scheme.surface\r\nborder_pattern: prismata.examples.border.example-menu\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

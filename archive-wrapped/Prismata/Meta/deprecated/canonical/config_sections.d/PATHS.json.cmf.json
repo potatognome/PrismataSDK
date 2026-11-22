@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-canonical-config-sections-d-paths-json",
+  "udi": "prismata.meta-deprecated-canonical-config-sections-d.wrapped-object.paths-681ffe84a3",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "PATHS.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/canonical/config_sections.d/PATHS.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/canonical/config_sections.d/PATHS.json",
+    "encoding": "utf-8",
+    "content_sha256": "ad59e4c6c46e87a57cf32e483752698596bf7d7e69d65ea47fd4c108376b6cc0"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\r\n    \"_META\": {\r\n        \"SORT_ORDER\": 30\r\n    },\r\n    \"PATHS\": {\r\n        \"CONFIG\": \".workspace/.projects_config/\",\r\n        \"LOGS\": \".workspace/.logs/$PROJECT_NAME/\",\r\n        \"INPUTS\": \".workspace/.projects_data/inputs/$PROJECT_NAME/\",\r\n        \"OUTPUTS\": \".workspace/.projects_data/outputs/$PROJECT_NAME/\",\r\n        \"TESTS_CONFIG\": \".workspace/.tests_config/\",\r\n        \"TESTS_LOGS\": \".workspace/.tests_logs/\",\r\n        \"TESTS_INPUTS\": \".workspace/.tests_data/inputs/$PROJECT_NAME/\",\r\n        \"TESTS_OUTPUTS\": \".workspace/.tests_data/outputs/$PROJECT_NAME/\",\r\n        \"GLOBAL_SHARED.d\": \".workspace/.projects_config/GLOBAL_SHARED.d/\"\r\n    },\r\n    \r\n\t\"REMOVE_PATHS\": []\r\n\r\n}\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

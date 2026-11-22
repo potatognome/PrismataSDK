@@ -1,0 +1,36 @@
+{
+  "id": "meta-registry-pane-d-exemplar-exception-pane-entry-yaml",
+  "udi": "prismata.meta-registry-pane-d.wrapped-object.exemplar-exception-pane-entry-f6bd2cdb72",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "exemplar-exception.pane.entry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/registry/pane.d/exemplar-exception.pane.entry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/registry/pane.d/exemplar-exception.pane.entry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "a98ae883d5d693a8b88ccc0cb57804aae5a056ede4585d91e2e8550d86cc4516"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: exemplar-exception.pane.entry.yaml\r\n## Type: pane registry entry (0.4.0)\r\n## Purpose: Exception pane with a prominent alert surface and overlap styling.\r\n\r\nid: exemplar-exception\r\nudi: prismata.meta.pane.exemplar-exception\r\nname: exemplar-exception.pane\r\nlabel: \"Exception\"\r\nkind: pane\r\ndescription: \"Warning/exception pane in the exemplar layout. It sits in the lower right area and overlaps the secondary panel.\"\r\nschema_version: 0.4.2\r\n\r\nborder_pattern: double-line\r\ncolour_scheme: default\r\ncontent_role: alert-surface\r\ncolour_role: alert-surface\r\nborder_role: border\r\nx: 64\r\ny: 42\r\nwidth: 28\r\nheight: 18\r\nlayout:\r\n  mode: single\r\n\r\nmeta:\r\n  created_by: copilot\r\n  created_at: 2026-10-01\r\n  schema_version: 0.4.2\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "meta-system-runtime-schemas-dispatch-table-schema-yaml",
+  "udi": "prismata.meta-system-runtime-schemas.wrapped-schema.dispatch-table-schema-90a4f1a679",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "dispatch-table.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/system/runtime.schemas/dispatch-table.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/system/runtime.schemas/dispatch-table.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "8bb8fc737dd1c8a4ed68bd3ae0727823ff78894b45e490e47cfe609bbf46b1f4"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: dispatch-table\r\nschema_type: runtime\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.dispatch-table\r\n  name: dispatch-table.schema\r\n  location: /Prismata/Meta/runtime.schemas/dispatch-table.schema.yaml\r\n  description: Canonical schema defining event-to-action dispatch rules.\r\n\r\nspec:\r\n  target_kind: dispatch-table\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: entries\r\n    path: entries\r\n    type: array\r\n    required: true\r\n\r\nobject:\r\n  entries: []\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

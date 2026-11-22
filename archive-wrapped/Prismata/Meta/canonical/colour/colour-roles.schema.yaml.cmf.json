@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-colour-colour-roles-schema-yaml",
+  "udi": "prismata.meta-canonical-colour.wrapped-schema.colour-roles-schema-a9259c59ff",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "colour-roles.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/colour/colour-roles.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/colour/colour-roles.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "011717af7686a4d265ca551870d3c902d5be56e652f53a891e4f6a72fd1608a8"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "$schema: \"http://json-schema.org/draft-07/schema#\"\r\ntitle: Colour roles\r\n\r\ntype: object\r\nproperties:\r\n  roles:\r\n    type: object\r\n    additionalProperties:\r\n      type: object\r\n      properties:\r\n        layers:\r\n          type: object\r\n          additionalProperties:\r\n            type: object\r\n            properties:\r\n              colourRef:\r\n                type: string\r\n            required:\r\n              - colourRef\r\n            additionalProperties: true\r\n      additionalProperties: true\r\nadditionalProperties: true\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-plan-overview-2026-08-14-stage-04-semantic-04-semantic-substrate-md",
+  "udi": "prismata.historical-plan-documents-plan-overview-2026-08-14-stage-04-sema.wrapped-plan.x-04-semantic-substrate-c6c8fce5f2",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "04-semantic-substrate.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/plan-overview/2026-08-14/stage-04-semantic/04-semantic-substrate.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/plan-overview/2026-08-14/stage-04-semantic/04-semantic-substrate.md",
+    "encoding": "utf-8",
+    "content_sha256": "3afcf3d1b34c94145050ebdb8ad5253a8c4a1eb902ed8b96433d54de866ec7c1"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff# 04-semantic-substrate.md\n# Version: 1.0.0\n# Archived: stage-04-semantic\n# Prismata Historical Document \u2014 04-semantic-substrate.md\n# Version: 1.0.0\n# Archive Class: Stage 4\n\n## Overview\nThe semantic substrate provides meaning-aware processing across ASTalyzer,\nUniverse, and tooling. It is the foundation for documentation and module reasoning.\n\n## Components\n- Semantic graph builder  \n- Canonical meaning registry  \n- Type inference substrate  \n- Cross-module semantic linking  \n\n## Example Semantic Link\nFunctionDef \"load_schema\" \u2192 Concept \"Schema Loader\"\n\n## Integration\n- Universe validation  \n- Tooling diffing  \n- DocLibrarian summarization  \n\n## Versioning\n- semantic-substrate-v1  \n- semantic-graph-v1  \n\n## Notes\nArchived under `/historical/stage-04/`.\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

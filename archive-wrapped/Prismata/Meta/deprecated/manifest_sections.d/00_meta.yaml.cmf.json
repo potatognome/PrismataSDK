@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-manifest-sections-d-00-meta-yaml",
+  "udi": "prismata.meta-deprecated-manifest-sections-d.wrapped-object.x-00-meta-d2f752e7ab",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "00_meta.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/manifest_sections.d/00_meta.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/manifest_sections.d/00_meta.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "d0d34f96602103785b9b359050377c08a20f198b4361fb74d0d5b0d58bd02076"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff_META:\r\n  SORT_ORDER: 0\r\n  description: \"Core identity fields shared by all project manifests.\"\r\n\r\nid: prismata.scope.$PROJECT_NAME\r\nname: $PROJECT_NAME\r\nversion: \"0.1.0\"\r\ndescription: \"\"\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

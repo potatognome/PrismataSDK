@@ -1,0 +1,36 @@
+{
+  "id": "workspace-artifacts-tests-logs-test-log-test-colour-fstr-log",
+  "udi": "prismata.workspace-artifacts-tests-logs.wrapped-artifact.test-log-test-colour-fstr-55816c5263",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_log_test_colour_fstr.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/.artifacts/.tests_logs/test_log_test_colour_fstr.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.artifacts/.tests_logs/test_log_test_colour_fstr.log",
+    "encoding": "utf-8",
+    "content_sha256": "6f88ef55cf0ef12b1adc5c19a9acf4a0bf3b811389f2941c13ed6fafafb96675"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 13:08:03  ======================================================================\r\n2026-08-30 13:08:03 |  Test 1: test_colour_fstr                                            |\r\n2026-08-30 13:08:03  ======================================================================\r\n2026-08-30 13:08:03 Running: 1 test_colour_fstr \u2014 colour_fstr \u2014 normal, edge, and break inputs\r\n2026-08-30 13:08:03 result = ColourManager. colour_fstr with arguments: *args=['!info', 'hello world'] bg=None separator=' '\r\n2026-08-30 13:08:03 ran successfully. Producing output: '\\x1b[38;2;190;190;190m\\x1b[48;2;0;0;0mhello world\\x1b[38;2; \u2192 assigned to result\r\n2026-08-30 13:08:03 Assert: ANSI escape present in output\r\n2026-08-30 13:08:03 \r\n2026-08-30 13:08:03 result_empty = ColourManager. colour_fstr with arguments: (none)\r\n2026-08-30 13:08:03 Assert: empty args returns str\r\n2026-08-30 13:08:03 \r\n2026-08-30 13:08:03 Assert: multi-key call returns str\r\n2026-08-30 13:08:03 \r\n2026-08-30 13:08:03 Custom separator result (first 40): '\\x1b[38;2;190;190;190m\\x1b[48;2;0;0;0mx\r\n2026-08-30 13:08:03 Unknown key result: '\\x1b[38;2;190;190;190m!nonexistent_key_\r\n2026-08-30 13:08:03 None arg did not raise \u2014 coerced to: '\\x1b[38;2;190;190;190m\\x1b[48\r\n2026-08-30 13:08:03 List arg result: '\\x1b[38;2;190;190;190m\\x1b[48;2;0;0;0ma\r\n2026-08-30 13:08:03 bg override result (first 40): '\\x1b[38;2;190;190;190m\\x1b[48;2;0;0;0mb\r\n2026-08-30 13:08:03 \u2705 PASSED: 1 test_colour_fstr\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 22:16:18  ======================================================================\r\n2026-08-30 22:16:18 |  Test 1: test_colour_fstr                                            |\r\n2026-08-30 22:16:18  ======================================================================\r\n2026-08-30 22:16:18 Running: 1 test_colour_fstr \u2014 colour_fstr \u2014 normal, edge, and break inputs\r\n2026-08-30 22:16:18 result = ColourManager. colour_fstr with arguments: *args=['!info', 'hello world'] bg=None separator=' '\r\n2026-08-30 22:16:18 ran successfully. Producing output: '\\x1b[38;2;190;190;190m\\x1b[48;2;0;0;0mhello world\\x1b[38;2; \u2192 assigned to result\r\n2026-08-30 22:16:18 Assert: ANSI escape present in output\r\n2026-08-30 22:16:18 \r\n2026-08-30 22:16:18 result_empty = ColourManager. colour_fstr with arguments: (none)\r\n2026-08-30 22:16:18 Assert: empty args returns str\r\n2026-08-30 22:16:18 \r\n2026-08-30 22:16:18 Assert: multi-key call returns str\r\n2026-08-30 22:16:18 \r\n2026-08-30 22:16:18 Custom separator result (first 40): '\\x1b[38;2;190;190;190m\\x1b[48;2;0;0;0mx\r\n2026-08-30 22:16:18 Unknown key result: '\\x1b[38;2;190;190;190m!nonexistent_key_\r\n2026-08-30 22:16:18 None arg did not raise \u2014 coerced to: '\\x1b[38;2;190;190;190m\\x1b[48\r\n2026-08-30 22:16:18 List arg result: '\\x1b[38;2;190;190;190m\\x1b[48;2;0;0;0ma\r\n2026-08-30 22:16:18 bg override result (first 40): '\\x1b[38;2;190;190;190m\\x1b[48;2;0;0;0mb\r\n2026-08-30 22:16:18 \u2705 PASSED: 1 test_colour_fstr\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-09-08 12:08:10  ======================================================================\r\n2026-09-08 12:08:10 |  Test 1: test_colour_fstr                                            |\r\n2026-09-08 12:08:10  ======================================================================\r\n2026-09-08 12:08:10 Running: 1 test_colour_fstr \u2014 colour_fstr \u2014 normal, edge, and break inputs\r\n2026-09-08 12:08:11 result = ColourManager. colour_fstr with arguments: *args=['!info', 'hello world'] bg=None separator=' '\r\n2026-09-08 12:08:11 ran successfully. Producing output: '\\x1b[38;2;190;190;190m\\x1b[48;2;0;0;0mhello world\\x1b[38;2; \u2192 assigned to result\r\n2026-09-08 12:08:11 Assert: ANSI escape present in output\r\n2026-09-08 12:08:11 \r\n2026-09-08 12:08:11 result_empty = ColourManager. colour_fstr with arguments: (none)\r\n2026-09-08 12:08:11 Assert: empty args returns str\r\n2026-09-08 12:08:11 \r\n2026-09-08 12:08:11 Assert: multi-key call returns str\r\n2026-09-08 12:08:11 \r\n2026-09-08 12:08:11 Custom separator result (first 40): '\\x1b[38;2;190;190;190m\\x1b[48;2;0;0;0mx\r\n2026-09-08 12:08:11 Unknown key result: '\\x1b[38;2;190;190;190m!nonexistent_key_\r\n2026-09-08 12:08:11 None arg did not raise \u2014 coerced to: '\\x1b[38;2;190;190;190m\\x1b[48\r\n2026-09-08 12:08:11 List arg result: '\\x1b[38;2;190;190;190m\\x1b[48;2;0;0;0ma\r\n2026-09-08 12:08:11 bg override result (first 40): '\\x1b[38;2;190;190;190m\\x1b[48;2;0;0;0mb\r\n2026-09-08 12:08:11 \u2705 PASSED: 1 test_colour_fstr\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

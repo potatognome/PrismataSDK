@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-vile-0-0-1-metadata-json",
+  "udi": "prismata.workspace-universe-archive-tooling-vile-0-0-1.wrapped-object.metadata-c0908e5db2",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "metadata.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/archive/tooling.vile/0.0.1/metadata.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.vile/0.0.1/metadata.json",
+    "encoding": "utf-8",
+    "content_sha256": "c1a638abb53a3251a15b12742a9f1537989ba875f4075c7dc5c885bb425c0704"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  \"package_name\": \"VILE\",\n  \"udi\": \"tooling.vile\",\n  \"version\": \"0.0.1\",\n  \"source_kind\": \"module\",\n  \"source_path\": \"C:\\\\Repository\\\\Daniel\\\\dev_local\\\\Prismata\\\\Projects\\\\Tooling\\\\primitives\\\\python\\\\vile.py\",\n  \"ingested_at_utc\": \"2026-08-24T19:04:35.983Z\",\n  \"metadata\": {\n    \"origin\": \"tooling.manifest.yaml\"\n  }\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

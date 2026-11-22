@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-project-classification-core-full-categorization-table-md",
+  "udi": "prismata.historical-architecture-evolution-project-classification.wrapped-document.core-full-categorization-table-0383bb7d83",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "Core_Full_Categorization_Table.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/project-classification/Core_Full_Categorization_Table.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/project-classification/Core_Full_Categorization_Table.md",
+    "encoding": "utf-8",
+    "content_sha256": "a4f8b426cfba42666dabbdb19eae6ff355d3d81345db9582482fa51adebfc70c"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Core Full Categorization Table\r\n\r\n## LAST UPDATE: 2026-06-01\r\n\r\nCanonical categorization table consolidated from snapshot.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "readme-md",
+  "udi": "prismata.root.wrapped-document.readme-275d783e29",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "README.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "README.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "README.md",
+    "encoding": "utf-8",
+    "content_sha256": "54cfae6addfe41e6ff13e7b93cba0303a8637359be7c6468c7049f35ed3791a6"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff# Prismata\n\nCurrent version: 0.1.3\n\nPrismata is a cybernetic development ecosystem that organizes governance, runtime workspace state, tooling, and project domains into a single coherent scaffold.\n\n## Repository Intent\n\nPrismata separates:\n\n- what should happen (governance and canonical standards)\n- what is happening now (workspace runtime state)\n- what has happened (historical record)\n\nThis keeps implementation concerns, policy, and audit history distinct while still coordinated.\n\n## Canonical Top-Level Layout\n\n- .workspace/ : untracked runtime workspace for instantiated config, working memory, audit trails, temporary files, data files, cache, and session/history state\n- Meta/ : tracked governance and canonical assets (schemas, manifests, registries, copilot instructions, config sections, manifest sections)\n- Historical/ : tracked historical archive of decisions, architecture evolution, and operational history\n- Mind_Body/ : cybernetic linkage layer connecting orchestration/tooling to mind, knowledge, body, brain, and nervous-system domains\n- Projects/ : transitional project landing area (planned evolution toward Core, Infrastructure, Tenant destination roots)\n- Projects/Tooling/ : validator/scaffolding/operations tooling domain\n\n## Workspace Contract\n\nThe .workspace scaffold is intentionally local-runtime focused.\n\nExpected responsibilities include:\n\n- instantiated project config snapshots\n- runtime logs and temporary outputs\n- project data ingress/egress staging\n- system cache, session state, and short-lived operational memory\n\nThis area is not intended to represent canonical governance truth.\n\n## Governance Contract\n\nThe Meta scaffold is the source of policy and canonical definitions.\n\nExpected responsibilities include:\n\n- canonical schemas and manifest templates\n- canonical config and manifest section bundles\n- copilot instruction baselines\n- governance plans and migration inventory\n\nOperational runtime outputs should not be treated as canonical when a Meta equivalent exists.\n\n## Shared CLI Menu Standard\n\nPrismata now standardizes interactive CLI menu behavior via `tUilKit` shared menu modules and tenant menu trees under `.workspace/projects.menus/`.\n\nCurrent rollout includes:\n\n- `V4l1d8r` full multi-level menu tree wiring\n- `M3m01r5` tenant main menu wiring\n- `PrismCommander` tenant main menu wiring\n\n## Historical Contract\n\nHistorical captures how the system evolved over time.\n\nExpected responsibilities include:\n\n- architecture evolution artifacts\n- migration and change records\n- major decision history\n- deprecated model and pattern records\n\nHistorical is a reflection layer, not a prescriptive policy layer.\n\n## Current Direction\n\n- Keep governance assets in Meta.\n- Keep historical artifacts in Historical at repository root.\n- Keep runtime/ephemeral workspace state in .workspace.\n- Keep Mind_Body as the orchestration-to-cybernetics linkage model.\n- Continue transitioning Projects toward explicit Core, Infrastructure, and Tenant roots.\n\n## Contributing Notes\n\n- Prefer config-driven paths and root modes over hardcoded machine paths.\n- Preserve deterministic naming and schema/manifest alignment.\n- Update governance artifacts when structure or policy changes.\n- Preserve historical context when moving or deprecating architecture components.\n\n## License\n\nSee LICENSE.\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-astalyzer-wrapper-0-0-1-module-files-json",
+  "udi": "prismata.workspace-universe-archive-tooling-astalyzer-wrapper-0-0-1.wrapped-object.module-files-ae198a2e01",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "module.files.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/archive/tooling.astalyzer-wrapper/0.0.1/module.files.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.astalyzer-wrapper/0.0.1/module.files.json",
+    "encoding": "utf-8",
+    "content_sha256": "2c4d96a149f2acde35f649228029b5c8ec269c2d3e788c50a954db7314fc8665"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  \"count\": 5,\n  \"files\": [\n    \"Projects/Tooling/ASTalyzer/wrapper/astalyzer_cli.py\",\n    \"Projects/Tooling/ASTalyzer/wrapper/README.md\",\n    \"Projects/Tooling/ASTalyzer/wrapper/tests/run_smoke.py\",\n    \"Projects/Tooling/ASTalyzer/wrapper/tests/test_wrapper_run.py\",\n    \"Projects/Tooling/ASTalyzer/wrapper/__pycache__/astalyzer_cli.cpython-314.pyc\"\n  ]\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-udi-tests-test-udi-utils-py",
+  "udi": "prismata.projects-tooling-udi-tests.wrapped-codeblock.test-udi-utils-8fd6abab9a",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_udi_utils.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/udi/tests/test_udi_utils.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/udi/tests/test_udi_utils.py",
+    "encoding": "utf-8",
+    "content_sha256": "f4c7312d15c824ad3be05227cc43e7cbfa5f04bff319632abf01f6499b939d1f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "from uditool.udi_utils import slugify, parse_udi, build_udi, validate_udi\r\n\r\n\r\ndef test_slugify_basic():\r\n    assert slugify(\"My Example Name\") == \"my-example-name\"\r\n\r\n\r\ndef test_parse_and_build():\r\n    u = build_udi(\"prismata\", \"demo\", \"schema\", \"my-slug\")\r\n    p = parse_udi(u)\r\n    assert p[\"namespace\"] == \"prismata\"\r\n    assert p[\"kind\"] == \"schema\"\r\n\r\n\r\ndef test_validate_good():\r\n    ok, errs = validate_udi(\"prismata.demo.schema.my-slug\")\r\n    assert ok\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

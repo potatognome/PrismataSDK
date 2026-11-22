@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-colour-key-helpers-0-0-1-module-files-json",
+  "udi": "prismata.workspace-universe-archive-tooling-colour-key-helpers-0-0-1.wrapped-object.module-files-0a092cd2e7",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "module.files.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/archive/tooling.colour_key-helpers/0.0.1/module.files.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.colour_key-helpers/0.0.1/module.files.json",
+    "encoding": "utf-8",
+    "content_sha256": "3b3f87cf6e14e6f4f473f2d4b0c18cd4a0d6efd2726bdcab4e900ea79713f507"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  \"count\": 1,\n  \"files\": [\n    \"Projects/Tooling/primitives/powershell/colour_key-helpers.ps1\"\n  ]\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

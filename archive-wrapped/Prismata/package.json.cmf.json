@@ -1,0 +1,36 @@
+{
+  "id": "package-json",
+  "udi": "prismata.root.wrapped-object.package-7030d0b2f7",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "package.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": "package.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "package.json",
+    "encoding": "utf-8",
+    "content_sha256": "6a97d69c9fa221a48502c7d8c82bc51f4df78d775ba716bfb50e685bba2d4912"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\r\n  \"name\": \"prismata\",\r\n  \"version\": \"0.1.1\",\r\n  \"private\": true,\r\n  \"workspaces\": [\r\n    \"Projects/Applications/*\",\r\n    \"Projects/Services/*\",\r\n    \"Projects/Infrastructure/*\",\r\n    \"Projects/Tenant/*\",\r\n    \"Projects/Tooling/*\"\r\n  ]\r\n}\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-primitives-python-tuilkit-fallbacks-py",
+  "udi": "prismata.projects-tooling-primitives-python.wrapped-codeblock.tuilkit-fallbacks-50882d5c4f",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "tuilkit_fallbacks.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/primitives/python/tuilkit_fallbacks.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/primitives/python/tuilkit_fallbacks.py",
+    "encoding": "utf-8",
+    "content_sha256": "94b74a3e9974aad56f94b0c90427aebac6621dbb4ccaca5ee749fb108ae2997a"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\"\"\"Fallback helpers for Prismata when tUilKit is unavailable or not yet ingested.\"\"\"\r\n\r\nfrom __future__ import annotations\r\n\r\nfrom pathlib import Path\r\nfrom typing import Any, Dict, Iterable, List, Optional\r\n\r\n\r\ndef resolve_prismata_root(start: Optional[Path] = None) -> Path:\r\n    \"\"\"Resolve the workspace root that contains both Meta and Projects.\"\"\"\r\n    current = (start or Path.cwd()).resolve()\r\n    for candidate in [current, *current.parents]:\r\n        if (candidate / \"Meta\").exists() and (candidate / \"Projects\").exists():\r\n            return candidate\r\n    return current\r\n\r\n\r\ndef bootstrap_tuilkit_factories() -> None:\r\n    \"\"\"Wire the local tUilKit config into the shared factories if present.\"\"\"\r\n    try:\r\n        from tUilKit import factories as tuilkit_factories\r\n        from tUilKit.utils.config import ConfigLoader\r\n\r\n        config_path = Path(__file__).resolve().parents[5] / \"tUilKit\" / \"config\" / \"tUilKit_CONFIG.json\"\r\n        if config_path.exists():\r\n            tuilkit_factories._config_loader = ConfigLoader(config_path=str(config_path))\r\n            tuilkit_factories._colour_manager = None\r\n            tuilkit_factories._logger = None\r\n    except Exception:\r\n        pass\r\n\r\n\r\nclass NullLogger:\r\n    \"\"\"Minimal logger-compatible object used during bootstrap fallback.\"\"\"\r\n\r\n    def colour_log(self, *parts: Any, **_: Any) -> None:\r\n        text = \" \".join(str(part) for part in parts if not str(part).startswith(\"!\"))\r\n        if text:\r\n            print(text)\r\n\r\n    def log_exception(self, *parts: Any, **_: Any) -> None:\r\n        text = \" \".join(str(part) for part in parts)\r\n        if text:\r\n            print(text)\r\n\r\n\r\nclass NullConfigLoader:\r\n    \"\"\"Configuration fallback that mirrors the minimal API the apps consume.\"\"\"\r\n\r\n    def __init__(self, prismata_root: Optional[Path] = None):\r\n        self._prismata_root = Path(prismata_root) if prismata_root else Path.cwd()\r\n        self.global_config: Dict[str, Any] = {\r\n            \"ROOTS\": {\r\n                \"WORKSPACE\": str(self._prismata_root),\r\n                \"PROJECT\": str(self._prismata_root),\r\n            },\r\n            \"PATHS\": {\r\n                \"GLOBAL_SHARED.d\": \".workspace/.projects_config/GLOBAL_SHARED.d/\",\r\n            },\r\n        }\r\n\r\n    def load_colour_config(self) -> Dict[str, Any]:\r\n        return {}\r\n\r\n\r\nclass NullMenuHandler:\r\n    \"\"\"Deterministic renderer used when interactive tUilKit handlers are unavailable.\"\"\"\r\n\r\n    def render_lines(self, title: str, options: Iterable[str], default: Optional[int] = None) -> List[str]:\r\n        labels = [str(option) for option in options]\r\n        lines: List[str] = [title, \"=\" * max(len(title), 12)]\r\n        for index, item in enumerate(labels, start=1):\r\n            lines.append(f\"{index}. {item}\")\r\n        if default is not None:\r\n            lines.append(f\"default={default}\")\r\n        return lines\r\n\r\n    def show_numbered_menu(self, title: str, options: Iterable[str], default: Optional[int] = None) -> List[str]:\r\n        return self.render_lines(title, options, default)\r\n\r\n\r\ndef runtime_fallback_status(prismata_root: Path, reason: str) -> Dict[str, Any]:\r\n    return {\r\n        \"runtime\": \"prismata-fallback\",\r\n        \"package\": \"fallback\",\r\n        \"prismata_root\": str(prismata_root),\r\n        \"logger_ready\": True,\r\n        \"menu_ready\": True,\r\n        \"fallback\": True,\r\n        \"reason\": reason,\r\n    }\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

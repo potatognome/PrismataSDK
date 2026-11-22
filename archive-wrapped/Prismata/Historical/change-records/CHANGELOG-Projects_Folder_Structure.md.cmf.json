@@ -1,0 +1,36 @@
+{
+  "id": "historical-change-records-changelog-projects-folder-structure-md",
+  "udi": "prismata.historical-change-records.wrapped-document.changelog-projects-folder-structure-44c0252adf",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "CHANGELOG-Projects_Folder_Structure.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/change-records/CHANGELOG-Projects_Folder_Structure.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/change-records/CHANGELOG-Projects_Folder_Structure.md",
+    "encoding": "utf-8",
+    "content_sha256": "dc00d658c73be63655b6b12466f2b9d063a5358a5be27b29d8b64429f2912bbb"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Projects Folder Structure \u2014 CHANGELOG\r\n\r\nAll notable entries for the `Projects Folder Structure` topic.\r\n\r\n## [2026-07-16]\r\n\r\n- Observed and recorded current `Projects` layout; recommended canonical grouping of `Applications`, `Services`, and `Tooling`.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

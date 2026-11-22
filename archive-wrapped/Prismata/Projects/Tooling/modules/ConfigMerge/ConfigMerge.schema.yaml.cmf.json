@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-modules-configmerge-configmerge-schema-yaml",
+  "udi": "prismata.projects-tooling-modules-configmerge.wrapped-schema.configmerge-schema-2b88664183",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "ConfigMerge.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Tooling/modules/ConfigMerge/ConfigMerge.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/modules/ConfigMerge/ConfigMerge.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "e3f930defdb12b7c72284e0b148fcdbbdad9803ce27f894063f406245faf1bcb"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "metadata:\r\n  udi: prismata.tooling.schema.config-merge\r\n  name: ConfigMergeSettings\r\n  version: 1.0.0\r\n  kind: schema-definition\r\n  description: Mergeable configuration schema for ConfigMerge primitive.\r\n\r\nfields:\r\n  conflictMode:\r\n    type: string\r\n    enum:\r\n      - removeWins\r\n      - includeWins\r\n      - unionWins\r\n      - cliWins\r\n    default: unionWins\r\n    description: >\r\n      Controls how include*/exclude* conflicts are resolved after all layers are merged.\r\n\r\n  includeTypes:\r\n    type: array\r\n    items: { type: string }\r\n\r\n  excludeTypes:\r\n    type: array\r\n    items: { type: string }\r\n\r\n  includeFolders:\r\n    type: array\r\n    items: { type: string }\r\n\r\n  excludeFolders:\r\n    type: array\r\n    items: { type: string }\r\n\r\n  includePatterns:\r\n    type: array\r\n    items: { type: string }\r\n\r\n  excludePatterns:\r\n    type: array\r\n    items: { type: string }\r\n\r\n  includeAttributes:\r\n    type: array\r\n    items: { type: string }\r\n\r\n  excludeAttributes:\r\n    type: array\r\n    items: { type: string }\r\n\r\n  mode:\r\n    type: string\r\n\r\n  outputFormat:\r\n    type: string\r\n\r\n  colourKeyPath:\r\n    type: string\r\n    default: null\r\n    description: >\r\n      Optional path to an alternate COLOURS/COLOUR_KEY JSON file. This path\r\n      is treated as an optional override and is passed through the merge\r\n      precedence chain without altering existing precedence semantics.\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-plan-overview-2026-08-14-timelines-tooling-timeline-v1-md",
+  "udi": "prismata.historical-plan-documents-plan-overview-2026-08-14-timelines.wrapped-plan.tooling-timeline-v1-36e2ca4ee4",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "tooling-timeline-v1.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/plan-overview/2026-08-14/timelines/tooling-timeline-v1.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/plan-overview/2026-08-14/timelines/tooling-timeline-v1.md",
+    "encoding": "utf-8",
+    "content_sha256": "e8c81df930124f346ffc537d6f589c5c7f24cdf13b1ef7f55d8de58846e6c1bd"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff# tooling-timeline-v1.md\n# Version: 1.0.0\n# Tooling Timeline \u2014 tooling-timeline-v1.md\n# Version: 1.0.0\n\n## Tooling Evolution\n- Stage 3: Initial ingestion  \n- Stage 4: Semantic substrate integration  \n- Stage 5: Manifest registry integration  \n- Stage 6: DocLibrarian integration\n\n## Notes\nArchived under `/historical/timeline/`.\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

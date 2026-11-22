@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-shared-schemas-shared-registry-entry-schema-yaml",
+  "udi": "prismata.meta-canonical-shared-schemas.wrapped-schema.shared-registry-entry-schema-e655a30707",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "shared-registry-entry.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/shared.schemas/shared-registry-entry.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/shared.schemas/shared-registry-entry.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "6b3e5c7fec1b973732a918c222b06b33fe5f4fbab5b1d60a4c1a724930096b29"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: shared-registry-entry\r\nschema_type: shared\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.shared-registry-entry\r\n  name: shared-registry-entry.schema\r\n  description: Reusable registry entry structure.\r\n\r\nspec:\r\n  target_kind: shared-registry-entry\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: id\r\n    path: id\r\n    type: string\r\n    required: true\r\n\r\n  - name: label\r\n    path: label\r\n    type: string\r\n    required: false\r\n\r\n  - name: metadata\r\n    path: metadata\r\n    type: object\r\n    required: false\r\n\r\nobject:\r\n  id: \"\"\r\n  label: \"\"\r\n  metadata: {}\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

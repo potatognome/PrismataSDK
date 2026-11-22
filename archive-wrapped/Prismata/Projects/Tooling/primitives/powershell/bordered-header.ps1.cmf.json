@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-primitives-powershell-bordered-header-ps1",
+  "udi": "prismata.projects-tooling-primitives-powershell.wrapped-codeblock.bordered-header-766995aa79",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "bordered-header.ps1",
+    "source_file_type": "ps1",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/primitives/powershell/bordered-header.ps1",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/primitives/powershell/bordered-header.ps1",
+    "encoding": "utf-8",
+    "content_sha256": "fe027f7d7610240af4923bfaa8c78031209bceb46aadf8b27691c5a2304b9d8d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "function Show-BorderedHeader {\r\n    [CmdletBinding()]\r\n    param(\r\n        [Parameter(Mandatory=$true, Position=0)]\r\n        [string] $Message,\r\n\r\n        [Parameter(Mandatory=$false)]\r\n        [string] $BorderChar = '=',\r\n\r\n        [Parameter(Mandatory=$false)]\r\n        [string] $BorderColor = 'Cyan',\r\n\r\n        [Parameter(Mandatory=$false)]\r\n        [string] $MessageColor = 'White',\r\n\r\n        [Parameter(Mandatory=$false)]\r\n        [int] $Width = 0\r\n    )\r\n\r\n    # Determine terminal width if not provided\r\n    if (-not $Width -or $Width -le 0) {\r\n        try {\r\n            $Width = $Host.UI.RawUI.WindowSize.Width\r\n        } catch {\r\n            $Width = 80\r\n        }\r\n    }\r\n\r\n    if ($Width -lt 10) { $Width = 10 }\r\n\r\n    # Ensure message fits\r\n    if ($Message.Length -ge $Width) {\r\n        $Message = $Message.Substring(0, $Width - 2)\r\n    }\r\n\r\n    # Build full border line by repeating the border char/pattern\r\n    $repeat = [math]::Ceiling($Width / [Math]::Max(1, $BorderChar.Length))\r\n    $full = ($BorderChar * $repeat).Substring(0, $Width)\r\n\r\n    # Compute left/right fills for centered message\r\n    $available = $Width - $Message.Length\r\n    $leftCount = [math]::Floor($available/2)\r\n    $rightCount = $available - $leftCount\r\n\r\n    $left = ($BorderChar * [math]::Ceiling($leftCount / [Math]::Max(1, $BorderChar.Length))).Substring(0, $leftCount)\r\n    $right = ($BorderChar * [math]::Ceiling($rightCount / [Math]::Max(1, $BorderChar.Length))).Substring(0, $rightCount)\r\n\r\n    # Print top border\r\n    Write-Host $full -ForegroundColor $BorderColor\r\n\r\n    # Print centered message with colored border segments\r\n    Write-Host -NoNewline $left -ForegroundColor $BorderColor\r\n    Write-Host -NoNewline $Message -ForegroundColor $MessageColor\r\n    Write-Host $right -ForegroundColor $BorderColor\r\n\r\n    # Print bottom border\r\n    Write-Host $full -ForegroundColor $BorderColor\r\n}\r\n\r\n# Example: Show-BorderedHeader -Message 'Starting Scrape' -BorderChar '=' -BorderColor Cyan -MessageColor Magenta\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

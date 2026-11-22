@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-scraper-0-0-1-manifest-fragment-yaml",
+  "udi": "prismata.workspace-universe-archive-tooling-scraper-0-0-1.wrapped-manifest.manifest-fragment-098fd34e4e",
+  "kind": "wrapped-manifest",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "manifest.fragment.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "manifest",
+    "relative_path": ".workspace/universe/archive/tooling.scraper/0.0.1/manifest.fragment.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.scraper/0.0.1/manifest.fragment.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "55e096020aae12da612704d9f1e8c7c45b9fb76444ea901c4f7c77088fd396f9"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "udi: tooling.scraper\nname: Scraper\nversion: 1.0.0\nmodule: modules/Scraper\n",
+    "classification": {
+      "subtype": "manifest",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

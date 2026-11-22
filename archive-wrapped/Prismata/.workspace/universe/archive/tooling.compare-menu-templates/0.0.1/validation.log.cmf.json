@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-compare-menu-templates-0-0-1-validation-log",
+  "udi": "prismata.workspace-universe-archive-tooling-compare-menu-templates-0-0-1.wrapped-artifact.validation-24937773f0",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "validation.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/universe/archive/tooling.compare-menu-templates/0.0.1/validation.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.compare-menu-templates/0.0.1/validation.log",
+    "encoding": "utf-8",
+    "content_sha256": "2515efbbed610910c6c87244b87407741685a6698eec9425317f53dd1b4b51c1"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "validated tooling.compare-menu-templates\ncanonicalized tooling.compare-menu-templates\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

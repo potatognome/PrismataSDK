@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-sanitize-output-0-0-1-module-files-json",
+  "udi": "prismata.workspace-universe-archive-tooling-sanitize-output-0-0-1.wrapped-object.module-files-7811330dde",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "module.files.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/archive/tooling.sanitize-output/0.0.1/module.files.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.sanitize-output/0.0.1/module.files.json",
+    "encoding": "utf-8",
+    "content_sha256": "691faf716c66f2d1571bcaf706b6f9f93006110211c1348a92049a3632e48e6d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  \"count\": 1,\n  \"files\": [\n    \"Projects/Tooling/primitives/powershell/sanitize-output.ps1\"\n  ]\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

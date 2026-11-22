@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-schemas-edit-create-yaml",
+  "udi": "prismata.projects-applications-universe-config-schemas.wrapped-schema.edit-create-294baab999",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "edit-create.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Applications/Universe/config/schemas/edit-create.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/schemas/edit-create.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "3dce87a14316abeba86131144b25ea48940cb119029fcac19beaf1baf77a6812"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: edit-create.yaml\r\n## Type: schema\r\n## Purpose: Schema for create/edit workflows describing reference objects,\r\n## chosen version, and the new object payload.\r\n\r\nmetadata:\r\n  udi: prismata.universe.schema.edit-create\r\n  name: edit-create\r\n  kind: schema-definition\r\n  description: \"Schema for create/edit workflows describing reference objects, chosen version, and new object payload.\"\r\n\r\n\r\nid: \"prismata.universe.schema.edit-create\"\r\nversion: \"2.0.0\"\r\ntype: object\r\nproperties:\r\n  reference_object: { type: object }\r\n  selected_version: { type: string }\r\n  new_object: { type: object }\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-compare-menu-templates-0-0-1-module-files-json",
+  "udi": "prismata.workspace-universe-archive-tooling-compare-menu-templates-0-0-1.wrapped-object.module-files-37f5301eb3",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "module.files.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/archive/tooling.compare-menu-templates/0.0.1/module.files.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.compare-menu-templates/0.0.1/module.files.json",
+    "encoding": "utf-8",
+    "content_sha256": "31b0354d8067d754ae8c38a75cb1e0eb9382b0c8a36234fa530aae1142c55df5"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  \"count\": 1,\n  \"files\": [\n    \"Projects/Tooling/generators/compare_menu_templates.py\"\n  ]\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

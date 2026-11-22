@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-udi-uditool-egg-info-sources-txt",
+  "udi": "prismata.projects-tooling-udi-uditool-egg-info.wrapped-document.sources-daee88769f",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "SOURCES.txt",
+    "source_file_type": "txt",
+    "wrapped_subtype": "document",
+    "relative_path": "Projects/Tooling/udi/uditool.egg-info/SOURCES.txt",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/udi/uditool.egg-info/SOURCES.txt",
+    "encoding": "utf-8",
+    "content_sha256": "1c62cccbc4a58f10b1cd23411b9728ccc6664c1f0ecfd735b590c61f249c054c"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "README.md\npyproject.toml\ntests/test_scanner.py\ntests/test_udi_utils.py\nuditool/__init__.py\nuditool/cli.py\nuditool/config.py\nuditool/scanner.py\nuditool/udi_utils.py\nuditool.egg-info/PKG-INFO\nuditool.egg-info/SOURCES.txt\nuditool.egg-info/dependency_links.txt\nuditool.egg-info/entry_points.txt\nuditool.egg-info/requires.txt\nuditool.egg-info/top_level.txt",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

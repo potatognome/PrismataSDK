@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-scaffolding-annotator-config-yaml",
+  "udi": "prismata.projects-tooling-scaffolding.wrapped-object.annotator-config-f1fa825227",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "annotator-config.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Tooling/scaffolding/annotator-config.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/scaffolding/annotator-config.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "624dd1920d53399547e8c5285f3a45562b43c6d8e065ea9f60bc5d55d9706cb8"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "workspaceRoot: \"C:\\\\Repository\\\\Daniel\\\\dev_local\"\r\n\r\nprojectPath: \"Prismata\\\\Projects\\\\Tooling\\\\Universe-scaffold\"\r\nprojectPathIsRelative: true\r\n\r\noutputPath: \"Prismata\\\\.workspace\\\\.project-snapshot\\\\Universe-scaffold\"\r\noutputPathIsRelative: true\r\n\r\n# Dictionary of file extensions to include/exclude\r\nextensionRules:\r\n  include:\r\n    - \".ts\"\r\n    - \".py\"\r\n    - \".md\"\r\n    - \".yaml\"\r\n    - \".json\"\r\n  exclude:\r\n    - \".log\"\r\n    - \".tmp\"\r\n    - \".cache\"\r\n\r\n# Dictionary of folder names that should be summarized\r\nfolderSummaryRules:\r\n  - \"node_modules\"\r\n  - \"dist\"\r\n  - \"build\"\r\n  - \".git\"\r\n  - \".workspace\"\r\n  - \".logs\"\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "tools-migrate-report-token-candidates-py",
+  "udi": "prismata.tools-migrate.wrapped-codeblock.report-token-candidates-ea8ae859a6",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "report_token_candidates.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "tools/migrate/report_token_candidates.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "tools/migrate/report_token_candidates.py",
+    "encoding": "utf-8",
+    "content_sha256": "62df993dcfa4e36e887bb6a86c538f36a3dff0cf497551862e75453f8035c11d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "#!/usr/bin/env python3\r\n\"\"\"Report candidate registry matches for unresolved migration tokens.\r\n\r\nReads `.workspace/.artifacts/.checklists/migration-dryrun.log` for unresolved tokens\r\nand searches `Meta/registry/**` YAML entries for id, udi, slug/name, and udi tail\r\nmatches. Writes results to `.workspace/.artifacts/.checklists/token-candidates.log` and\r\nprints a concise summary to stdout.\r\n\"\"\"\r\nfrom __future__ import annotations\r\n\r\nimport re\r\nfrom pathlib import Path\r\nimport yaml\r\nfrom typing import Dict, List\r\n\r\nROOT = Path(__file__).resolve().parents[3]\r\nARTIFACTS = ROOT / '.workspace' / '.artifacts' / '.checklists'\r\nDRYLOG = ARTIFACTS / 'migration-dryrun.log'\r\nOUT = ARTIFACTS / 'token-candidates.log'\r\nREGROOT = ROOT / 'Meta' / 'registry'\r\n\r\n\r\ndef load_tokens() -> List[str]:\r\n    if not DRYLOG.exists():\r\n        return []\r\n    text = DRYLOG.read_text(encoding='utf-8')\r\n    tokens = []\r\n    in_section = False\r\n    for line in text.splitlines():\r\n        if line.strip() == 'Unresolved tokens:':\r\n            in_section = True\r\n            continue\r\n        if in_section:\r\n            s = line.strip()\r\n            if not s:\r\n                continue\r\n            # lines that look like paths should be ignored\r\n            if s.lower().endswith('.yaml'):\r\n                continue\r\n            tokens.append(s)\r\n    return tokens\r\n\r\n\r\ndef scan_registries() -> Dict[str, List[Dict[str, str]]]:\r\n    entries = {}\r\n    if not REGROOT.exists():\r\n        return entries\r\n    for y in REGROOT.rglob('*.yaml'):\r\n        try:\r\n            data = yaml.safe_load(y.read_text(encoding='utf-8'))\r\n        except Exception:\r\n            continue\r\n        if not isinstance(data, dict):\r\n            continue\r\n        udi = data.get('udi')\r\n        idv = data.get('id')\r\n        slug = data.get('slug') or data.get('name')\r\n        key = str(y)\r\n        entries[key] = []\r\n        entries[key].append({'udi': udi or '', 'id': idv or '', 'slug': slug or ''})\r\n    return entries\r\n\r\n\r\ndef find_candidates(tokens, entries):\r\n    candidates = {t: [] for t in tokens}\r\n    for path, infos in entries.items():\r\n        for info in infos:\r\n            udi = info.get('udi','')\r\n            idv = info.get('id','')\r\n            slug = info.get('slug','')\r\n            tail = udi.split('.')[-1] if udi and '.' in udi else ''\r\n            for t in tokens:\r\n                tl = t.lower()\r\n                matched = False\r\n                reasons = []\r\n                if idv and tl == idv.lower():\r\n                    matched = True\r\n                    reasons.append('id')\r\n                if slug and tl == slug.lower():\r\n                    matched = True\r\n                    reasons.append('slug')\r\n                if udi and tl == udi.lower():\r\n                    matched = True\r\n                    reasons.append('udi')\r\n                if tail and tl == tail.lower():\r\n                    matched = True\r\n                    reasons.append('udi_tail')\r\n                if udi and udi.lower().endswith(tl):\r\n                    matched = True\r\n                    reasons.append('udi_endswith')\r\n                if matched:\r\n                    candidates[t].append({'path': path, 'udi': udi, 'id': idv, 'slug': slug, 'reasons': reasons})\r\n    return candidates\r\n\r\n\r\ndef main():\r\n    tokens = load_tokens()\r\n    entries = scan_registries()\r\n    candidates = find_candidates(tokens, entries)\r\n    ARTIFACTS.mkdir(parents=True, exist_ok=True)\r\n    out_lines = []\r\n    for t in tokens:\r\n        out_lines.append(f\"Token: {t}\")\r\n        cand = candidates.get(t, [])\r\n        if not cand:\r\n            out_lines.append('  No candidates found')\r\n        else:\r\n            for c in cand:\r\n                out_lines.append(f\"  - {c['path']} -> udi={c['udi'] or '<none>'}, id={c['id'] or '<none>'}, slug={c['slug'] or '<none>'}, reasons={','.join(c['reasons'])}\")\r\n        out_lines.append('')\r\n    OUT.write_text('\\n'.join(out_lines), encoding='utf-8')\r\n    print(OUT)\r\n\r\n\r\nif __name__ == '__main__':\r\n    main()\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

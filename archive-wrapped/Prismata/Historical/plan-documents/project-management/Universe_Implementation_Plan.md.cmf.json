@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-project-management-universe-implementation-plan-md",
+  "udi": "prismata.historical-plan-documents-project-management.wrapped-plan.universe-implementation-plan-e36016a736",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "Universe_Implementation_Plan.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/project-management/Universe_Implementation_Plan.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/project-management/Universe_Implementation_Plan.md",
+    "encoding": "utf-8",
+    "content_sha256": "d508848fec1a276dfe1634e079feb4ad42b9ade1c1cf46f0973e540df01d4603"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# PRISMATA - UNIVERSE IMPLEMENTATION PLAN\r\n\r\nCanonicalized from `archive/plan-documents/project-management/2026-07-23-plan-universe-implementation.md`.\r\n\r\nLast updated (original): 2026-07-23\r\n\r\nSummary:\r\n- Defines seven core verbs, required support modules (`schema_loader`, `schema_writer`, `schema_validator`, `schema_diff`), and the editing pipeline (load \u2192 apply_verb \u2192 validate \u2192 save \u2192 re-validate).\r\n\r\nNext actions:\r\n1. Implement `schema_loader.js` and `schema_writer.js`.\r\n2. Implement `validate_schema()` integrating ASTalyzer and UDI checks.\r\n3. Implement core verbs and integrate into Universe menus.\r\n\r\nHistory:\r\n- 2026-07-23: Original blueprint archived.\r\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

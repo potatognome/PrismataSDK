@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-tenant-ui-multi-pane-override-yaml",
+  "udi": "prismata.projects-applications-universe-config-tenant-ui.wrapped-object.multi-pane-override-268da7adc5",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "multi_pane.override.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/Universe/config/tenant/ui/multi_pane.override.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/tenant/ui/multi_pane.override.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "7c86bd6f3f3eec206b9159cef222d1180b707e2e8a1d54a0e13c442d5ea924d6"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: multi_pane.override.yaml\r\n## Type: tenant UI override\r\n## Purpose: Tenant-level overrides for the multi-pane UI layout (coordinates\r\n## and pane sizing). These values overlay the application defaults.\r\n\r\nuser_interfaces:\r\n  ui_framework: multi_pane\r\n\r\n  panes:\r\n    - id: results_list\r\n      role: list\r\n      coordinates:\r\n        x: 0\r\n        y: 0\r\n        width: 42\r\n        height: 100\r\n\r\n    - id: preview\r\n      role: preview\r\n      coordinates:\r\n        x: 42\r\n        y: 0\r\n        width: 36\r\n        height: 100\r\n\r\n    - id: version_carousel\r\n      role: list\r\n      coordinates:\r\n        x: 78\r\n        y: 0\r\n        width: 22\r\n        height: 60\r\n\r\n    - id: diff_panel\r\n      role: diff_right\r\n      coordinates:\r\n        x: 78\r\n        y: 60\r\n        width: 22\r\n        height: 40\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

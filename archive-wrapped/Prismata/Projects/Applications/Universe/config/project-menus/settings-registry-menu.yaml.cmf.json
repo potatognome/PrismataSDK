@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-project-menus-settings-registry-menu-yaml",
+  "udi": "prismata.projects-applications-universe-config-project-menus.wrapped-object.settings-registry-menu-a1929acbe8",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "settings-registry-menu.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/Universe/config/project-menus/settings-registry-menu.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/project-menus/settings-registry-menu.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "116a7ccd7846e5c0fc55f070be339a4dcb360a39062de35377ea94bc892472ef"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: settings-registry-menu.yaml\r\n## Type: project menu\r\n## Purpose: Menu to configure settings registry paths, semantic rules,\r\n## and key synonyms for the application.\r\n\r\nmetadata:\r\n  udi: prismata.universe.menu.settings.registry\r\n  name: \"Settings > Registry Menu\"\r\n  version: \"0.1.0\"\r\n  kind: menu\r\n  description: \"Submenu for registry path and semantic rules.\"\r\n\r\nitems:\r\n  - key: \"1\"\r\n    udi: \"prismata.universe.menu.settings.registry.path\"\r\n    label: \"Set Registry Path\"\r\n    description: \"Set the registry file/folder path used by Universe operations.\"\r\n    capability: \"prismata.universe.capability.app-settings-registry\"\r\n    setting_key: \"registry_path\"\r\n    value_type: \"string\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"2\"\r\n    udi: \"prismata.universe.menu.settings.registry.rules\"\r\n    label: \"Set Semantic Rules (JSON)\"\r\n    description: \"Set semantic rules using a JSON object payload.\"\r\n    capability: \"prismata.universe.capability.app-settings-registry\"\r\n    setting_key: \"semantic_rules\"\r\n    value_type: \"object_json\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n\r\n  - key: \"3\"\r\n    udi: \"prismata.universe.menu.settings.registry.synonyms\"\r\n    label: \"Set Key Synonyms (JSON)\"\r\n    description: \"Set key synonyms using a JSON object payload.\"\r\n    capability: \"prismata.universe.capability.app-settings-registry\"\r\n    setting_key: \"key_synonyms\"\r\n    value_type: \"object_json\"\r\n    ui_framework: basic\r\n    submenu_ref: null\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-project-classification-changelog-enterprise-architecture-md",
+  "udi": "prismata.historical-architecture-evolution-project-classification.wrapped-document.changelog-enterprise-architecture-9c974aba53",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "CHANGELOG-enterprise_architecture.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/project-classification/CHANGELOG-enterprise_architecture.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/project-classification/CHANGELOG-enterprise_architecture.md",
+    "encoding": "utf-8",
+    "content_sha256": "ae4a40024b47a02e812ab85c6fe5ebfdb9f8384bcf7ea86820b76f704ba00aa0"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Changelog \u2014 Enterprise Architecture (4 Layers)\r\n\r\n- 2026-08-17 \u2014 Clarified layer responsibilities and updated guidance for project placement and boundaries.\r\n- 2026-07-23 \u2014 Minor wording updates and reclassification examples.\r\n- 2026-06-01 \u2014 Initial draft: four-layer model and conceptual diagrams.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

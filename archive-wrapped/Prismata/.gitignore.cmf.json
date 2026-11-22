@@ -1,0 +1,36 @@
+{
+  "id": "gitignore",
+  "udi": "prismata.root.wrapped-artifact.gitignore-a5cc2925ca",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": ".gitignore",
+    "source_file_type": "",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".gitignore",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".gitignore",
+    "encoding": "utf-8",
+    "content_sha256": "0495df2f6e952f3e86f270257fa77cf38c52cd694960d10586f7e3a21e046c72"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": ".workspace/*\r\n\r\n# Node modules\r\nnode_modules/\r\n\r\n# Byte-compiled files\r\n*.pyc\r\n*.pyo\r\n*.pycache/\r\n*.pytest_cache/\r\n**/__pycache__/\r\n\r\n# Virtual environment folders\r\nvenv/\r\nenv/\r\n*.env\r\n.env.*\r\n\r\n# Logs and temporary files\r\n*.log\r\n*.tmp\r\n*.zip\r\n\r\n# Deprecated folders and files\r\ndeprecated/\r\n\r\n# System files\r\n.DS_Store\r\nThumbs.db\r\ndesktop.ini\r\n\r\n# IDE/Editor settings\r\n.vscode/\r\n.idea/\r\n.projects_config/\r\n.projects_data/\r\n.tests_config/\r\n.tests_logs/\r\n\r\n# Test coverage reports\r\n.coverage\r\nhtmlcov/\r\n\r\n# Pytest cache\r\n.pytest_cache/\r\n\r\n# Build files\r\ndist/\r\nbuild/\r\n*.egg-info/\r\n\r\n# Jupyter Notebook checkpoints\r\n.ipynb_checkpoints/\r\n.git_archived_*\r\n*.bak*\r\n*.bak*\r\nexamples/test_paths.json\r\n\r\n# Miscellaneous Archive and Backup folders\r\narchive/*\r\nbackup/*",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-schemas-settings-paths-yaml",
+  "udi": "prismata.projects-applications-universe-config-schemas.wrapped-schema.settings-paths-0db3b7294c",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "settings-paths.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Applications/Universe/config/schemas/settings-paths.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/schemas/settings-paths.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "437682e6481e5105ecc00a63f742806b355744dab8ad0b258cc69401baa70cbe"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: settings-paths.yaml\r\n## Type: schema\r\n## Purpose: Schema defining canonical path settings used by Universe\r\n## configuration (project roots, canonical folders, temp locations).\r\n\r\nmetadata:\r\n  udi: prismata.universe.schema.settings-paths\r\n  name: settings-paths\r\n  kind: schema-definition\r\n  description: \"Schema defining canonical path settings used by Universe configuration.\"\r\n\r\n\r\nid: \"prismata.universe.schema.settings-paths\"\r\nversion: \"1.0.0\"\r\ntype: object\r\nproperties:\r\n  canonical_folder: { type: string }\r\n  project_root: { type: string }\r\n  workspace_root: { type: string }\r\n  temp_folder: { type: string }\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

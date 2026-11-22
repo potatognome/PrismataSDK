@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-prismatalabs-examples-objects-ui-frameworks-dual-pane-ui-framework-yaml",
+  "udi": "prismata.projects-applications-prismatalabs-examples-objects-ui-framework.wrapped-object.dual-pane-ui-framework-d8efb5b7e1",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "dual-pane.ui-framework.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/PrismataLabs/examples/objects/ui_frameworks/dual-pane.ui-framework.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/PrismataLabs/examples/objects/ui_frameworks/dual-pane.ui-framework.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "8b04f5a16a770aaf2c40c57ddc28f5549b5deb408870d45051ba5050979e47e1"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "id: example-dual-pane-framework\r\nudi: prismata.examples.ui-framework.dual-pane\r\nkind: ui-framework\r\nlabel: Dual Pane Example\r\ntitle: Dual Pane Example\r\nactive_pane: example-left-pane\r\ncolour_scheme: prismata.examples.colour-scheme.surface\r\nborder_pattern: prismata.examples.border.example-pane\r\npanes:\r\n- id: example-left-pane\r\n  udi: prismata.examples.pane.left\r\n  kind: pane\r\n  label: Left Pane\r\n  title: Left Pane\r\n  content_role: prismata.examples.colour-role.pane-primary\r\n  colour_role: prismata.examples.colour-role.pane-primary\r\n  border_role: prismata.examples.colour-role.border\r\n  border_pattern: prismata.examples.border.example-pane\r\n  colour_scheme: prismata.examples.colour-scheme.surface\r\n  x: 2\r\n  y: 3\r\n  width: 46\r\n  height: 22\r\n  menu: &id001\r\n    id: example-dual-pane-menu\r\n    udi: prismata.examples.menu.dual-pane\r\n    kind: menu\r\n    title: Dual Pane Demo\r\n    header:\r\n      id: example-dual-pane-menu-header\r\n      text: Dual Pane Demo\r\n      colour_role: prismata.examples.colour-role.menu-accent\r\n      colour_scheme: prismata.examples.colour-scheme.surface\r\n      border_pattern: prismata.examples.border.example-menu\r\n    colour_role: prismata.examples.colour-role.menu-accent\r\n    colour_scheme: prismata.examples.colour-scheme.surface\r\n    border_pattern: prismata.examples.border.example-menu\r\n    items:\r\n    - id: example-open-alt-pane\r\n      udi: prismata.examples.menu-item.open-alt-pane\r\n      kind: menu-item\r\n      label: Open alternate pane\r\n      capability: prismata.examples.capability.open-alt-pane\r\n      colour_role: prismata.examples.colour-role.menu-accent\r\n      colour_scheme: prismata.examples.colour-scheme.surface\r\n      border_pattern: prismata.examples.border.example-item\r\n      header:\r\n        id: example-alt-pane-header\r\n        text: Pane\r\n        colour_role: prismata.examples.colour-role.menu-accent\r\n        colour_scheme: prismata.examples.colour-scheme.surface\r\n        border_pattern: prismata.examples.border.example-item\r\n      visibility_mode: static\r\n      enable_mode: enabled\r\n    - id: example-print-left-pane\r\n      udi: prismata.examples.menu-item.print-left-pane\r\n      kind: menu-item\r\n      label: 'Print Hello World to Left '\r\n      capability: prismata.examples.capability.print-left\r\n      colour_role: prismata.examples.colour-role.menu-accent\r\n      colour_scheme: prismata.examples.colour-scheme.surface\r\n      border_pattern: prismata.examples.border.example-item\r\n      header:\r\n        id: example-print-left-header\r\n        text: Left\r\n        colour_role: prismata.examples.colour-role.menu-accent\r\n        colour_scheme: prismata.examples.colour-scheme.surface\r\n        border_pattern: prismata.examples.border.example-item\r\n      visibility_mode: static\r\n      enable_mode: enabled\r\n    - id: example-print-right-pane\r\n      udi: prismata.examples.menu-item.print-right-pane\r\n      kind: menu-item\r\n      label: Print Hello World to Right\r\n      capability: prismata.examples.capability.print-right\r\n      colour_role: prismata.examples.colour-role.menu-accent\r\n      colour_scheme: prismata.examples.colour-scheme.surface\r\n      border_pattern: prismata.examples.border.example-item\r\n      header:\r\n        id: example-print-right-header\r\n        text: Right\r\n        colour_role: prismata.examples.colour-role.menu-accent\r\n        colour_scheme: prismata.examples.colour-scheme.surface\r\n        border_pattern: prismata.examples.border.example-item\r\n      visibility_mode: static\r\n      enable_mode: enabled\r\n    - id: example-switch-active-pane\r\n      udi: prismata.examples.menu-item.switch-active-pane\r\n      kind: menu-item\r\n      label: Change Active Pane\r\n      capability: prismata.examples.capability.switch-pane\r\n      colour_role: prismata.examples.colour-role.menu-accent\r\n      colour_scheme: prismata.examples.colour-scheme.surface\r\n      border_pattern: prismata.examples.border.example-item\r\n      header:\r\n        id: example-switch-pane-header\r\n        text: Switch\r\n        colour_role: prismata.examples.colour-role.menu-accent\r\n        colour_scheme: prismata.examples.colour-scheme.surface\r\n        border_pattern: prismata.examples.border.example-item\r\n      visibility_mode: static\r\n      enable_mode: enabled\r\n    - id: example-clear-target-pane\r\n      udi: prismata.examples.menu-item.clear-target-pane\r\n      kind: menu-item\r\n      label: Clear selected pane\r\n      capability: prismata.examples.capability.clear-target-pane\r\n      colour_role: prismata.examples.colour-role.alert\r\n      colour_scheme: prismata.examples.colour-scheme.surface\r\n      border_pattern: prismata.examples.border.example-item\r\n      header:\r\n        id: example-clear-target-header\r\n        text: Select\r\n        colour_role: prismata.examples.colour-role.alert\r\n        colour_scheme: prismata.examples.colour-scheme.surface\r\n        border_pattern: prismata.examples.border.example-item\r\n      visibility_mode: static\r\n      enable_mode: enabled\r\n- id: example-right-pane\r\n  udi: prismata.examples.pane.right\r\n  kind: pane\r\n  label: Right Pane\r\n  title: Right Pane\r\n  content_role: prismata.examples.colour-role.pane-secondary\r\n  colour_role: prismata.examples.colour-role.pane-secondary\r\n  border_role: prismata.examples.colour-role.border\r\n  border_pattern: prismata.examples.border.example-pane\r\n  colour_scheme: prismata.examples.colour-scheme.surface\r\n  x: 52\r\n  y: 3\r\n  width: 46\r\n  height: 22\r\n  menu: *id001\r\nmenus:\r\n- *id001\r\npane_bindings:\r\n- pane: prismata.examples.pane.left\r\n  menu: prismata.examples.menu.dual-pane\r\n- pane: prismata.examples.pane.right\r\n  menu: prismata.examples.menu.dual-pane\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

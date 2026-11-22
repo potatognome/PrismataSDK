@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-plan-overview-2026-08-14-index-version-history-index-md",
+  "udi": "prismata.historical-plan-documents-plan-overview-2026-08-14-index.wrapped-plan.version-history-index-8f7b70477d",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "version-history-index.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/plan-overview/2026-08-14/index/version-history-index.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/plan-overview/2026-08-14/index/version-history-index.md",
+    "encoding": "utf-8",
+    "content_sha256": "35d104216f3d99e7560ba310c18f5602f26a019a9e772cf1aeb81e4530f36b67"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff# version-history-index.md\n# Version: 1.0.0\n# Version History Index \u2014 version-history-index.md\n# Version: 1.0.0\n\n## Index Overview\nThis index lists all historical documents and their canonical versions.\n\n## Documents\n- 00-bootstrap-plan.md \u2014 v1.0.0  \n- 01-astalyzer-finalization.md \u2014 v1.0.0  \n- 02-universe-mvp-mvi.md \u2014 v1.0.0  \n- 03-tooling-ingestion.md \u2014 v1.0.0  \n- 04-semantic-substrate.md \u2014 v1.0.0  \n- 05-manifest-registry.md \u2014 v1.0.0  \n- 06-doclibrarian-pipeline.md \u2014 v1.0.0  \n\n## Timelines\n- prismata-timeline-v1.md \u2014 v1.0.0  \n- universe-timeline-v1.md \u2014 v1.0.0  \n- tooling-timeline-v1.md \u2014 v1.0.0  \n\n## Notes\nArchived under `/historical/index/`.\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

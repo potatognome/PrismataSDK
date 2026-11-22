@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-plan-overview-changelog-md",
+  "udi": "prismata.historical-plan-documents-plan-overview.wrapped-plan.changelog-be22eeef1c",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "CHANGELOG.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/plan-overview/CHANGELOG.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/plan-overview/CHANGELOG.md",
+    "encoding": "utf-8",
+    "content_sha256": "f7643aa0eedffcaf0c461648f584f0217cdbe5f5d5c6b234b90fa2b00bd1f576"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Changelog \u2014 Plan Overview\r\n\r\n- 2026-09-11 \u2014 Prismata multi-tenant plan (Q4 draft) canonicalized.\r\n- 2026-08-18 \u2014 Development stage notes and timelines (see archived folder).\r\n- 2026-08-14 \u2014 Initial stage snapshots and checklists.\r\n- 2026-07-30 \u2014 Post-integration plan snapshot.\r\n\r\nNotes:\r\n- Full contents of the `2026-08-14` and `2026-08-18` folders were archived under `Prismata/Historical/archive/plan-overview/`.\r\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-prismatalabs-python-configure-default-folders-py",
+  "udi": "prismata.projects-applications-prismatalabs-python.wrapped-codeblock.configure-default-folders-c5da3aafb1",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "configure_default_folders.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/PrismataLabs/python/configure_default_folders.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/PrismataLabs/python/configure_default_folders.py",
+    "encoding": "utf-8",
+    "content_sha256": "b327bc53fffe9b86247ffded1213b5766f3d8ceac6d180bac61435c337d52d7d"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff\"\"\"\r\nPrismataLabs \u00e2\u20ac\u201d configure_default_folders capability\r\n\r\nAllows the user to configure default search paths for previewable objects.\r\nInvoked by:\r\n\r\n    prismata.prismatalabs.capability.default-folders\r\n\"\"\"\r\n\r\nfrom __future__ import annotations\r\n\r\nfrom pathlib import Path\r\nfrom typing import Dict, Any\r\n\r\nfrom Projects.Tooling.primitives.python.path_helper import (\r\n    select_folder,\r\n    find_prismata_root,\r\n)\r\nfrom Projects.Tooling.primitives.python.settings_store import (\r\n    load_mapping,\r\n    resolve_app_root,\r\n    save_mapping,\r\n)\r\n\r\n\r\nSETTINGS_FILE = \"labs.settings.yaml\"\r\nLEGACY_SETTINGS_FILE = \"labs2.settings.yaml\"\r\n\r\n\r\ndef _resolve_app_root(payload: Dict[str, Any]) -> Path:\r\n    app_root = payload.get(\"appRoot\") if isinstance(payload, dict) else None\r\n    if isinstance(app_root, str) and app_root.strip():\r\n        return Path(app_root)\r\n\r\n    prismata_root = find_prismata_root()\r\n    return resolve_app_root(prismata_root, \"PrismataLabs\")\r\n\r\n\r\ndef load_settings(root: Path) -> Dict[str, Any]:\r\n    path = root / \"config\" / SETTINGS_FILE\r\n    legacy_path = root / \"config\" / LEGACY_SETTINGS_FILE\r\n    return load_mapping(path, defaults={}, file_format=\"yaml\", legacy_paths=[legacy_path])\r\n\r\n\r\ndef save_settings(root: Path, settings: Dict[str, Any]):\r\n    path = root / \"config\" / SETTINGS_FILE\r\n    save_mapping(path, settings, file_format=\"yaml\")\r\n\r\n\r\ndef configure_default_folders(payload: Dict[str, Any]) -> Dict[str, Any]:\r\n    app_root = _resolve_app_root(payload)\r\n    settings = load_settings(app_root)\r\n\r\n    payload_selected = payload.get(\"selectedFolder\") if isinstance(payload, dict) else None\r\n    picked = str(payload_selected) if isinstance(payload_selected, str) and payload_selected.strip() else select_folder()\r\n    if not picked:\r\n        return {\r\n            \"message\": \"No folder selected.\",\r\n            \"settings\": settings,\r\n        }\r\n\r\n    settings[\"default_folder\"] = picked\r\n    save_settings(app_root, settings)\r\n\r\n    return {\r\n        \"message\": f\"Default folder set to: {picked}\",\r\n        \"settings\": settings,\r\n    }\r\n\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

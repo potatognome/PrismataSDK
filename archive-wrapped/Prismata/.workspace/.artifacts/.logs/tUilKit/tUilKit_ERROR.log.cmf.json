@@ -1,0 +1,36 @@
+{
+  "id": "workspace-artifacts-logs-tuilkit-tuilkit-error-log",
+  "udi": "prismata.workspace-artifacts-logs-tuilkit.wrapped-artifact.tuilkit-error-5ba717b33d",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "tUilKit_ERROR.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_ERROR.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.artifacts/.logs/tUilKit/tUilKit_ERROR.log",
+    "encoding": "utf-8",
+    "content_sha256": "9075d832654b7b5750a2c5693dd67f198300d294d28e06bc594911f848aeff55"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\r\n\r\n2026-08-30 13:08:06 UNEXPECTED ERROR: Deliberate ValueError during examples bad value\r\n\r\n\r\n2026-08-30 13:08:06 UNEXPECTED ERROR: Deliberate FileNotFoundError during examples no such file\r\n\r\n\r\n2026-08-30 13:08:06 UNEXPECTED ERROR: Deliberate TypeError during examples wrong type\r\n\r\n\r\n2026-08-30 13:08:07 UNEXPECTED ERROR: Deliberate KeyError during examples 'missing_key'\r\n\r\n\r\n2026-08-30 13:08:07 UNEXPECTED ERROR: Deliberate RuntimeError during examples something went wrong\r\n\r\n\r\n2026-08-30 22:16:21 UNEXPECTED ERROR: Deliberate ValueError during examples bad value\r\n\r\n\r\n2026-08-30 22:16:21 UNEXPECTED ERROR: Deliberate FileNotFoundError during examples no such file\r\n\r\n\r\n2026-08-30 22:16:21 UNEXPECTED ERROR: Deliberate TypeError during examples wrong type\r\n\r\n\r\n2026-08-30 22:16:21 UNEXPECTED ERROR: Deliberate KeyError during examples 'missing_key'\r\n\r\n\r\n2026-08-30 22:16:21 UNEXPECTED ERROR: Deliberate RuntimeError during examples something went wrong\r\n2026-08-30 22:16:33 Testing 'all' category (logs to all files)\r\n2026-08-30 22:16:33 Authentication attempt\r\n2026-08-30 22:16:33 Critical system error\r\n2026-08-30 22:16:33 Module user_mgmt warning\r\n2026-08-30 22:16:33 Module payment warning\r\n2026-08-30 22:16:33 Module inventory warning\r\n2026-08-30 22:16:33 Module reporting warning\r\n2026-09-08 12:07:35 Testing 'all' category (logs to all files)\r\n2026-09-08 12:07:35 Authentication attempt\r\n2026-09-08 12:07:35 Critical system error\r\n2026-09-08 12:07:35 Module user_mgmt warning\r\n2026-09-08 12:07:35 Module payment warning\r\n2026-09-08 12:07:35 Module inventory warning\r\n2026-09-08 12:07:35 Module reporting warning\r\n\r\n\r\n2026-09-08 12:08:13 UNEXPECTED ERROR: Deliberate ValueError during examples bad value\r\n\r\n\r\n2026-09-08 12:08:13 UNEXPECTED ERROR: Deliberate FileNotFoundError during examples no such file\r\n\r\n\r\n2026-09-08 12:08:13 UNEXPECTED ERROR: Deliberate TypeError during examples wrong type\r\n\r\n\r\n2026-09-08 12:08:13 UNEXPECTED ERROR: Deliberate KeyError during examples 'missing_key'\r\n\r\n\r\n2026-09-08 12:08:13 UNEXPECTED ERROR: Deliberate RuntimeError during examples something went wrong\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

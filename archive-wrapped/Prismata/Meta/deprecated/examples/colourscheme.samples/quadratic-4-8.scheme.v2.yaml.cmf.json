@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-examples-colourscheme-samples-quadratic-4-8-scheme-v2-yaml",
+  "udi": "prismata.meta-deprecated-examples-colourscheme-samples.wrapped-object.quadratic-4-8-scheme-v2-022d194f24",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "quadratic-4-8.scheme.v2.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/examples/colourscheme.samples/quadratic-4-8.scheme.v2.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/examples/colourscheme.samples/quadratic-4-8.scheme.v2.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "8104cf8d29c0f5baba926cf141a239546c21c10fc787bc9e622bfb32c3241941"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "colourSet:\r\r\n  - id: \"c0\"\r\r\n    origin: \"base\"\r\r\n    rgb: { r: 255, g: 120, b: 200 }\r\r\n\r\r\n  - id: \"c1\"\r\r\n    origin: \"base\"\r\r\n    rgb: { r: 120, g: 200, b: 255 }\r\r\n\r\r\n  - id: \"c2\"\r\r\n    origin: \"base\"\r\r\n    rgb: { r: 200, g: 255, b: 120 }\r\r\n\r\r\n  - id: \"c3\"\r\r\n    origin: \"base\"\r\r\n    rgb: { r: 255, g: 200, b: 120 }\r\r\n\r\r\n  - id: \"c4\"\r\r\n    origin: \"derived\"\r\r\n    rgb: { r: 230, g: 150, b: 255 }\r\r\n\r\r\nroles:\r\r\n  primary_surface:\r\r\n    layers:\r\r\n      bg: { colourRef: \"c0\" }\r\r\n\r\r\n  secondary_surface:\r\r\n    layers:\r\r\n      bg: { colourRef: \"c1\" }\r\r\n\r\r\n  tertiary_surface:\r\r\n    layers:\r\r\n      bg: { colourRef: \"c2\" }\r\r\n\r\r\n  accent_surface:\r\r\n    layers:\r\r\n      bg: { colourRef: \"c3\" }\r\r\n\r\r\n  border_fg:\r\r\n    layers:\r\r\n      fg: { colourRef: \"c4\" }\r\r\n\r\r\ngeometry:\r\r\n  baseGeometry: \"quadratic\"\r\r\n  overlays:\r\r\n    - type: \"harmonic\"\r\r\n      params: { rotation: 45 }\r\r\n\r\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

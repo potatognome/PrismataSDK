@@ -1,0 +1,36 @@
+{
+  "id": "meta-registry-colour-role-d-default-colour-role-entry-yaml",
+  "udi": "prismata.meta-registry-colour-role-d.wrapped-object.default-colour-role-entry-8510afefc7",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "default.colour-role.entry.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/registry/colour-role.d/default.colour-role.entry.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/registry/colour-role.d/default.colour-role.entry.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "2338993c9c42269df7cabee5800658e96f54f5a0329ba4b1ef02fa5c22855485"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "id: default\r\nudi: prismata.meta.colour-role.default\r\nslug: default\r\nname: default.colour-role\r\nlabel: \"Default Colour Role\"\r\nkind: colour-role\r\ndescription: Fallback semantic colour role.\r\nschema_version: 0.4.1\r\n\r\nlayers:\r\n  bg: \"ansi:rgb(10,10,12)\"\r\n  fg: \"ansi:rgb(220,220,220)\"\r\n\r\nmeta:\r\n  created_by: Daniel\r\n  created_at: 2026-10-05\r\n  schema_version: 0.4.1\r\n\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

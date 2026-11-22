@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-project-classification-architecture-update-md",
+  "udi": "prismata.historical-architecture-evolution-project-classification.wrapped-document.architecture-update-ce0ed55180",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "Architecture_Update.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/project-classification/Architecture_Update.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/project-classification/Architecture_Update.md",
+    "encoding": "utf-8",
+    "content_sha256": "b778b35c459a7a63087b1385a9b67907b7f65ee1f4e9266f3ef8b17bfbbb3584"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Architecture Update Notes\r\n\r\n## LAST UPDATE: 2026-07-23\r\n\r\nConsolidated architecture update notes. See `CHANGELOG.md` for history and `../../archive/project-classification/` for snapshots.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

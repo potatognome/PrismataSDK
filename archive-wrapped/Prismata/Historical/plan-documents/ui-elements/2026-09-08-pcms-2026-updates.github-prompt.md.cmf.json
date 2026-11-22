@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-ui-elements-2026-09-08-pcms-2026-updates-github-prompt-md",
+  "udi": "prismata.historical-plan-documents-ui-elements.wrapped-plan.x-2026-09-08-pcms-2026-updates-github-prompt-bae1638842",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "2026-09-08-pcms-2026-updates.github-prompt.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/ui-elements/2026-09-08-pcms-2026-updates.github-prompt.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/ui-elements/2026-09-08-pcms-2026-updates.github-prompt.md",
+    "encoding": "utf-8",
+    "content_sha256": "8114fb6e2003be79ca673f5be54a3c8780ae8d8de39bd31c1f52001e17f1b284"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# PCMS-2026 & Menu-helper Consolidation Update Prompt\r\n\r\n# Last Updated: 2026-09-08\r\n\r\nYou are entering PRISMATA MENU CONSOLIDATION + PCMS\u20112026 UPDATE PLANNING MODE.\r\n\r\nYour tasks:\r\n\r\n============================================================\r\n1. REVIEW UPDATED SCHEMA FILES IN Prismata/Meta/canonical/\r\n============================================================\r\nReview menu-helper primitives in:\r\n  tUilKit/src/tUilKit/\r\n  Prismata/Projects/Tooling/primitives/python/\r\n  Prismata/Projects/Tooling/primitives/typescript/\r\n\r\nReview all schema files in:\r\n  Prismata/Meta/canonical/\r\n\r\nPay special attention to:\r\n  - Prismata/Meta/canonical/ui.schemas (menu registry defaults collapsed here)\r\n  - Prismata/Meta/examples/menu.samples\r\n  - Prismata/Meta/canonical/ui.schemas\r\n  - Prismata/Meta/canonical/ui.schemas\r\n\r\nGoals:\r\n  - Identify all schema changes since the last consolidation pass.\r\n  - Detect missing or outdated fields.\r\n  - Ensure all schemas include a valid UDI field following Prismata\u2019s UDI namespace rules.\r\n  - Produce a delta report describing required updates.\r\n\r\n============================================================\r\n2. ENTER PLANNING MODE AND PROPOSE AN UPDATE PLAN\r\n============================================================\r\nPlanning mode must produce:\r\n  - A dependency map of all schema files.\r\n  - A list of required updates to menu helpers.\r\n  - A list of required updates to PCMS\u20112026 menu metadata.\r\n  - A list of required updates to UI framework registry entries.\r\n  - A list of deprecated fields to remove.\r\n  - A list of new fields to add (UDI, ui_framework, header item support, etc.).\r\n  - A migration plan for updating all affected Prismata projects.\r\n\r\nDo NOT write code yet.\r\nPlanning mode outputs:\r\n  - analysis\r\n  - refactor plan\r\n  - schema delta\r\n  - migration checklist\r\n\r\nWait for explicit instruction:\r\n  \u201cProceed with implementation.\u201d\r\n\r\n============================================================\r\n3. ENSURE ALL UPDATED SCHEMA FILES INCLUDE A UDI FIELD\r\n============================================================\r\nFor each schema file reviewed:\r\n  - Verify presence of a UDI field.\r\n  - Ensure UDI field follows Prismata\u2019s canonical namespace rules.\r\n  - Propose updates where UDI fields are missing or incorrect.\r\n  - Identify any schema files that require UDI metadata blocks.\r\n\r\n============================================================\r\n4. GENERATE DOCUMENTATION UPDATES\r\n============================================================\r\nGenerate documentation updates for:\r\n  - Prismata/Historical/architecture-evolution/ui-elements/cli-menus (Architectural blueprints)\r\n  - Prismata/Historical/plan-documents/ui-elements  (Implementation and planning documents)\r\n  - Prismata/Historical/change-records/ (completed, tested, validated and verified items go here)\r\n\r\nRequirements:\r\n  - Each newly generated filename must be datestamped (YYYY-MM-DD).\r\n  - Include:\r\n      - Summary of schema changes or key updates\r\n      - Summary of menu helper consolidation changes\r\n      - Summary of PCMS\u20112026 menu updates\r\n      - Summary of UDI compliance updates\r\n  - Produce a list of new documentation files to create.\r\n\r\n============================================================\r\n5. ENSURE PCMS\u20112026 MENUS ARE UPDATED\r\n============================================================\r\nScan all PCMS\u20112026 menu definitions in:\r\n  Prismata/Projects/*/config/project-menus/\r\n\r\nEnsure each menu item includes updated required fields:\r\n  - udi\r\n  - name\r\n  - type\r\n  - order\r\n  - selectionMethod\r\n  - action\r\n  - ui_framework (pane layout)\r\n  - capability\r\n  - UDI metadata\r\n\r\nAlso ensure:\r\n  - header items use action: none and selectionMethod: none\r\n  - navigation items include navigateTarget\r\n  - action items include executeTarget\r\n  - visibilityMode / visibilityCondition are valid\r\n  - borderScheme / colourScheme overrides are valid\r\n\r\nProduce:\r\n  - A PCMS\u20112026 menu compliance report\r\n  - A list of required updates\r\n  - A migration plan for menu metadata\r\n\r\n============================================================\r\n6. OUTPUT REQUIREMENTS\r\n============================================================\r\nPLANNING MODE ONLY.\r\n\r\nOutput:\r\n  - schema review report\r\n  - UDI compliance report\r\n  - menu helper consolidation plan\r\n  - PCMS\u20112026 menu update plan\r\n  - documentation update plan\r\n  - file-by-file checklist\r\n\r\nWait for explicit instruction:\r\n  \u201cProceed with implementation.\u201d\r\n\r\nBegin by summarizing the current Prismata menu helper architecture and the current PCMS\u20112026 menu metadata structure, then proceed into the full planning sweep.\r\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

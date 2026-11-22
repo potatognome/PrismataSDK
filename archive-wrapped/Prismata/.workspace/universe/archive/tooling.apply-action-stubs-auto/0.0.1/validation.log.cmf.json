@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-apply-action-stubs-auto-0-0-1-validation-log",
+  "udi": "prismata.workspace-universe-archive-tooling-apply-action-stubs-auto-0-0-1.wrapped-artifact.validation-429497a289",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "validation.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/universe/archive/tooling.apply-action-stubs-auto/0.0.1/validation.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.apply-action-stubs-auto/0.0.1/validation.log",
+    "encoding": "utf-8",
+    "content_sha256": "8976c0d79df6fbef4227bdc5d43d9f7968222d6a2486eda08fffd90328ab5651"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "validated tooling.apply-action-stubs-auto\ncanonicalized tooling.apply-action-stubs-auto\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

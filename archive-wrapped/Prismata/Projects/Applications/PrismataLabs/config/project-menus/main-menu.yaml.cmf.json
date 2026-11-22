@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-prismatalabs-config-project-menus-main-menu-yaml",
+  "udi": "prismata.projects-applications-prismatalabs-config-project-menus.wrapped-object.main-menu-8687faf612",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "main-menu.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Projects/Applications/PrismataLabs/config/project-menus/main-menu.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/PrismataLabs/config/project-menus/main-menu.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "8a8d03e957caa418dbcc6882c79e30f9c60f5829374cf0e5eeec91c8b2c49da9"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeffmetadata:\r\n  udi: prismata.prismatalabs.menu.main\r\n  name: PrismataLabs Main Menu\r\n  version: 0.4.0\r\n  kind: PCMS-Menu\r\n\r\nmenus:\r\n  - id: menu.main\r\n    key: menu.main\r\n    udi: prismata.prismatalabs.menu.main\r\n    name: PrismataLabs\r\n    title: PrismataLabs\r\n    label: PrismataLabs\r\n    position: Main\r\n    order: 1\r\n    type: main\r\n    icon: \"labs\"\r\n    colour_scheme: primary-application\r\n    border_scheme: primary-application\r\n    description: PrismataLabs preview environment for UI components.\r\n    finalItemType: Quit\r\n\r\n    header:\r\n      udi: prismata.prismatalabs.menu.main.header\r\n      text: |\r\n        PrismataLabs Preview\r\n        ---------------------\r\n        Colour Scheme Selected: {{selected.colour_scheme}}\r\n        Border Pattern Selected: {{selected.border_pattern}}\r\n        Object Selected: {{selected.object}}\r\n      style: header\r\n      colour_scheme: header\r\n      border_scheme: header-border\r\n      visibility_mode: static\r\n\r\n    footer:\r\n      udi: prismata.prismatalabs.menu.main.footer\r\n      text: \"0: Quit | Enter: Select\"\r\n      style: footer\r\n      colour_scheme: footer\r\n      border_scheme: primary-application\r\n      visibility_mode: static\r\n\r\n    items:\r\n      - udi: prismata.prismatalabs.menu.main.preview-object\r\n        key: \"1\"\r\n        name: Preview Object\r\n        label: Preview Object\r\n        type: action\r\n        order: 1\r\n        selectionMethod: number\r\n        action: execute\r\n        ui_framework: multi_pane\r\n        capability: prismata.prismatalabs.capability.preview-object\r\n        executeTarget: preview_object\r\n        icon: \"preview\"\r\n        colour_scheme: default\r\n        description: Render a preview of the selected object.\r\n        visibility_mode: static\r\n        enable_mode: conditional\r\n        enable_condition: selected.object is not None\r\n\r\n      - udi: prismata.prismatalabs.menu.main.validate-preview\r\n        key: \"2\"\r\n        name: Validate Preview\r\n        label: Validate Preview\r\n        type: action\r\n        order: 2\r\n        selectionMethod: number\r\n        action: execute\r\n        ui_framework: basic\r\n        capability: prismata.prismatalabs.capability.validate-preview\r\n        executeTarget: validate_preview\r\n        icon: \"validate\"\r\n        colour_scheme: default\r\n        description: Validate the loaded object using canonical schema rules.\r\n        visibility_mode: static\r\n        enable_mode: conditional\r\n        enable_condition: selected.object is not None\r\n\r\n      - udi: prismata.prismatalabs.menu.main.select-load\r\n        key: \"3\"\r\n        name: Select & Load Object(s)\r\n        label: Select & Load Object(s)\r\n        type: action\r\n        order: 3\r\n        selectionMethod: number\r\n        action: execute\r\n        ui_framework: structured_editor\r\n        capability: prismata.prismatalabs.capability.select-load\r\n        executeTarget: select_load_objects\r\n        icon: \"load\"\r\n        colour_scheme: default\r\n        description: Select colour-schemes, border-patterns, panes, menus, or ui-frameworks.\r\n        visibility_mode: static\r\n        enable_mode: enabled\r\n\r\n      - udi: prismata.prismatalabs.menu.main.default-folders\r\n        key: \"4\"\r\n        name: Default Folder Path(s)\r\n        label: Default Folder Path(s)\r\n        type: action\r\n        order: 4\r\n        selectionMethod: number\r\n        action: execute\r\n        ui_framework: basic\r\n        capability: prismata.prismatalabs.capability.default-folders\r\n        executeTarget: configure_default_folders\r\n        icon: \"settings\"\r\n        colour_scheme: default\r\n        description: Configure default search paths for previewable objects.\r\n        visibility_mode: static\r\n        enable_mode: enabled\r\n\r\n      - udi: prismata.prismatalabs.menu.main.quit\r\n        key: \"0\"\r\n        name: Quit\r\n        label: Quit\r\n        type: action\r\n        order: 5\r\n        selectionMethod: number\r\n        action: exit\r\n        ui_framework: basic\r\n        capability: prismata.prismatalabs.capability.app-quit\r\n        executeTarget: exit_application\r\n        icon: \"quit\"\r\n        colour_scheme: default\r\n        description: Exit PrismataLabs.\r\n        visibility_mode: static\r\n        enable_mode: enabled\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

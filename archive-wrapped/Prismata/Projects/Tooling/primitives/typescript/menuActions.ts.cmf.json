@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-primitives-typescript-menuactions-ts",
+  "udi": "prismata.projects-tooling-primitives-typescript.wrapped-codeblock.menuactions-9012112264",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "menuActions.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/primitives/typescript/menuActions.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/primitives/typescript/menuActions.ts",
+    "encoding": "utf-8",
+    "content_sha256": "bf0f5fdaf332896d2deed80000511eef82072273844b08b9c780fb9ecfe7aac7"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "export type MenuAction = \"back\" | \"exit\" | \"quit\" | \"navigate\" | \"execute\" | \"noop\";\r\n\r\nexport interface MenuActionDescriptor {\r\n  action: MenuAction;\r\n  target?: string;\r\n  label?: string;\r\n  description?: string;\r\n}\r\n\r\nexport function defaultMenuAction(label: string): MenuActionDescriptor {\r\n  return {\r\n    action: \"noop\",\r\n    label,\r\n    description: \"No action is defined for this menu item.\",\r\n  };\r\n}\r\n\r\nexport function renderActionIterator(items: Array<{ key: string; label: string }>): string[] {\r\n  return items.map(item => `${item.key}) ${item.label}`);\r\n}\r\n\r\nexport function confirmBackOption(items: Array<{ key: string; label: string }>): Array<{ key: string; label: string }> {\r\n  return [...items, { key: \"0\", label: \"Back\" }];\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

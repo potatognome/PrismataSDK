@@ -1,0 +1,36 @@
+{
+  "id": "meta-domain-examples-schemas-example-engine-renderer-schema-yaml",
+  "udi": "prismata.meta-domain-examples-schemas.wrapped-schema.example-engine-renderer-schema-de5e197b4f",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "example-engine-renderer.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/domain/examples.schemas/example-engine-renderer.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/domain/examples.schemas/example-engine-renderer.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "adbc020e5f158b50f447667b0021e0981feb38f56a04aa2241d93a1b44c6c46b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.0\r\nkind: example-engine-renderer\r\nschema_type: examples\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.example-engine-renderer\r\n  name: example-engine-renderer.schema\r\n  description: Minimal example renderer for documentation and testing.\r\n\r\nspec:\r\n  target_kind: example-engine-renderer\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: rendererType\r\n    path: rendererType\r\n    type: string\r\n    required: true\r\n\r\nobject:\r\n  rendererType: \"example-renderer\"\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

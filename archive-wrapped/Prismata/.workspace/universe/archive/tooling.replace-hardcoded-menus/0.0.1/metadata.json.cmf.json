@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-replace-hardcoded-menus-0-0-1-metadata-json",
+  "udi": "prismata.workspace-universe-archive-tooling-replace-hardcoded-menus-0-0-1.wrapped-object.metadata-d7492bcf2a",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "metadata.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/archive/tooling.replace-hardcoded-menus/0.0.1/metadata.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.replace-hardcoded-menus/0.0.1/metadata.json",
+    "encoding": "utf-8",
+    "content_sha256": "41998989e0b0903d4baec8a1a7a2c929358e4e2f5c192c18fd4db57b709714b3"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  \"package_name\": \"ReplaceHardcodedMenus\",\n  \"udi\": \"tooling.replace-hardcoded-menus\",\n  \"version\": \"0.0.1\",\n  \"source_kind\": \"module\",\n  \"source_path\": \"C:\\\\Repository\\\\Daniel\\\\dev_local\\\\Prismata\\\\Projects\\\\Tooling\\\\generators\\\\replace_hardcoded_menus.py\",\n  \"ingested_at_utc\": \"2026-08-24T19:04:35.989Z\",\n  \"metadata\": {\n    \"origin\": \"tooling.manifest.yaml\"\n  }\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

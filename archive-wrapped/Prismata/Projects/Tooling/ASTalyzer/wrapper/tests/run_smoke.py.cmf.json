@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-astalyzer-wrapper-tests-run-smoke-py",
+  "udi": "prismata.projects-tooling-astalyzer-wrapper-tests.wrapped-codeblock.run-smoke-391c7fa27d",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "run_smoke.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/ASTalyzer/wrapper/tests/run_smoke.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/ASTalyzer/wrapper/tests/run_smoke.py",
+    "encoding": "utf-8",
+    "content_sha256": "4023257685fcb6f32d362a2540e36273dfe6f0450b4b3c314699d0cc729c26af"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import importlib.util\r\nimport sys\r\nfrom pathlib import Path\r\nimport tempfile\r\n\r\n\r\ndef load_module_from_path(path: Path):\r\n    spec = importlib.util.spec_from_file_location(\"astalyzer_cli\", str(path))\r\n    module = importlib.util.module_from_spec(spec)\r\n    spec.loader.exec_module(module)\r\n    return module\r\n\r\n\r\ndef main():\r\n    base = Path(__file__).resolve().parent.parent\r\n    module_path = base / \"astalyzer_cli.py\"\r\n    if not module_path.exists():\r\n        print(f\"Module not found: {module_path}\")\r\n        sys.exit(2)\r\n\r\n    # ensure the canonical Tooling/primitives/python folder is on sys.path so local modules can be imported\r\n    tooling_dir = module_path.resolve().parents[2]\r\n    primitives_python_dir = tooling_dir / \"primitives\" / \"python\"\r\n    if str(primitives_python_dir) not in sys.path:\r\n        sys.path.insert(0, str(primitives_python_dir))\r\n\r\n    # provide a minimal yaml shim if PyYAML isn't installed in this environment\r\n    if 'yaml' not in sys.modules:\r\n        import types\r\n\r\n        def _safe_load(x):\r\n            return {}\r\n\r\n        yaml_stub = types.SimpleNamespace(safe_load=_safe_load)\r\n        sys.modules['yaml'] = yaml_stub\r\n\r\n    mod = load_module_from_path(module_path)\r\n\r\n    # create tiny sample\r\n    tmp = Path(tempfile.mkdtemp())\r\n    sample = tmp / \"sample\"\r\n    sample.mkdir()\r\n    (sample / \"a.py\").write_text('def foo(x: int) -> int:\\n    return x * 2\\n')\r\n\r\n    print(f\"Running run_astalyzer on: {sample}\")\r\n    # call with explicit python + absolute main.py to avoid PATH issues\r\n    main_py = module_path.resolve().parent.parent / \"main.py\"\r\n    explicit_cmd = [sys.executable, str(main_py)]\r\n    temp_path, summary = mod.run_astalyzer(str(sample), cmd=explicit_cmd, timeout=10)\r\n    print(\"Summary:\")\r\n    print(summary)\r\n    print(\"Temp file:\", temp_path)\r\n    sys.exit(0)\r\n\r\n\r\nif __name__ == '__main__':\r\n    main()\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

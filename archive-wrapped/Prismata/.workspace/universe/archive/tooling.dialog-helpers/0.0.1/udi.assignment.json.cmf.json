@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-dialog-helpers-0-0-1-udi-assignment-json",
+  "udi": "prismata.workspace-universe-archive-tooling-dialog-helpers-0-0-1.wrapped-object.udi-assignment-29eb3a129b",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "udi.assignment.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/archive/tooling.dialog-helpers/0.0.1/udi.assignment.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.dialog-helpers/0.0.1/udi.assignment.json",
+    "encoding": "utf-8",
+    "content_sha256": "bfd0119f124b4519fecd288c68a0be0895da823d49007f9b0dea16582da25b53"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  \"udi\": \"tooling.dialog-helpers\",\n  \"package_name\": \"DialogHelpers\"\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

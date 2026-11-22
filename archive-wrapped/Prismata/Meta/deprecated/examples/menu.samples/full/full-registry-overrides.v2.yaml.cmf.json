@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-examples-menu-samples-full-full-registry-overrides-v2-yaml",
+  "udi": "prismata.meta-deprecated-examples-menu-samples-full.wrapped-object.full-registry-overrides-v2-21156107df",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "full-registry-overrides.v2.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/examples/menu.samples/full/full-registry-overrides.v2.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/examples/menu.samples/full/full-registry-overrides.v2.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "8ca2137f1ae4eb059858594b06161bdcb172c4f3a12c4458bdcbdbd2fecef694"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "menuTypes:\r\r\n  main:\r\r\n    defaultColourScheme: main-menu\r\r\n    defaultBorderScheme: main-menu\r\r\n    defaultHeaderStyle: header\r\r\n    defaultHeaderColourScheme: header\r\r\n    defaultHeaderBorderScheme: main-menu\r\r\n    defaultSelectionMethod: number\r\r\n    defaultItemType: action\r\r\n\r\r\n  settings:\r\r\n    defaultColourScheme: settings-menu\r\r\n    defaultBorderScheme: settings-menu\r\r\n    defaultHeaderStyle: header\r\r\n    defaultHeaderColourScheme: header\r\r\n    defaultHeaderBorderScheme: settings-menu\r\r\n    defaultSelectionMethod: number\r\r\n    defaultItemType: toggle\r\r\n\r\r\n  admin:\r\r\n    defaultColourScheme: admin-menu\r\r\n    defaultBorderScheme: default\r\r\n    defaultHeaderStyle: header\r\r\n    defaultHeaderColourScheme: header\r\r\n    defaultHeaderBorderScheme: default\r\r\n    defaultSelectionMethod: number\r\r\n    defaultItemType: action\r\r\n\r\r\nmenuItemTypes:\r\r\n  action:\r\r\n    defaultColourScheme: primary-action\r\r\n    defaultSelectionMethod: number\r\r\n    behaviourFlags:\r\r\n      - executable\r\r\n      - routable\r\r\n\r\r\n  navigate:\r\r\n    defaultColourScheme: navigation-item\r\r\n    defaultSelectionMethod: number\r\r\n    behaviourFlags:\r\r\n      - routable\r\r\n\r\r\n  toggle:\r\r\n    defaultColourScheme: accent-toggle\r\r\n    defaultSelectionMethod: toggle\r\r\n    behaviourFlags:\r\r\n      - stateful\r\r\n\r\r\n  slider:\r\r\n    defaultColourScheme: slider-item\r\r\n    defaultSelectionMethod: slider\r\r\n    behaviourFlags:\r\r\n      - continuous\r\r\n\r\r\n  carousel:\r\r\n    defaultColourScheme: carousel-item\r\r\n    defaultSelectionMethod: carousel\r\r\n    behaviourFlags:\r\r\n      - cyclical\r\r\n\r\r\n  static:\r\r\n    defaultColourScheme: neutral-static\r\r\n    defaultSelectionMethod: none\r\r\n    behaviourFlags:\r\r\n      - informational\r\r\n\r\r\n  header:\r\r\n    defaultColourScheme: header-item\r\r\n    defaultSelectionMethod: none\r\r\n    behaviourFlags:\r\r\n      - noninteractive\r\r\n\r\r\n  menu:\r\r\n    defaultColourScheme: menu-item\r\r\n    defaultSelectionMethod: number\r\r\n    behaviourFlags:\r\r\n      - navigable\r\r\n\r\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-src-main-ts",
+  "udi": "prismata.projects-applications-universe-src.wrapped-codeblock.main-f56b234b5d",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "main.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/Universe/src/main.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/src/main.ts",
+    "encoding": "utf-8",
+    "content_sha256": "7b23f2fd7a3850064147301969a9a04f46c68496a60fd4a05937c1cc63c7239f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import { runCli } from \"./cli/runCli\";\r\n\r\nrunCli().catch(err => {\r\n  console.error(\"Universe runtime failed:\", err);\r\n});\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

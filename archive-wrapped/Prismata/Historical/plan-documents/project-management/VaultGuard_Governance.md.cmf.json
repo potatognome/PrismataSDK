@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-project-management-vaultguard-governance-md",
+  "udi": "prismata.historical-plan-documents-project-management.wrapped-plan.vaultguard-governance-751d80a997",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "VaultGuard_Governance.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/project-management/VaultGuard_Governance.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/project-management/VaultGuard_Governance.md",
+    "encoding": "utf-8",
+    "content_sha256": "4a170e2f82d66bc52fcbc35a26551dad6344ba0b38ddbf8c594faf324d36a65b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# VaultGuard Governance\r\n\r\nCanonicalized from `archive/plan-documents/project-management/2026-08-17-vaultguard-governance.md`.\r\n\r\nSummary:\r\n- Governance notes for `VaultGuard` project and its interactions with PrismCommand and tenant onboarding.\r\n\r\nHistory:\r\n- 2026-08-17: Original governance notes archived.\r\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-prismatalabs-python-preview-common-py",
+  "udi": "prismata.projects-applications-prismatalabs-python.wrapped-codeblock.preview-common-f7a3ad8951",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "preview_common.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/PrismataLabs/python/preview_common.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/PrismataLabs/python/preview_common.py",
+    "encoding": "utf-8",
+    "content_sha256": "8a49281ef8609a8f06920de87eccd7c7f2323d6daba30b8ef4c32617870a712b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff\"\"\"\r\nPrismataLabs \u00e2\u20ac\u201d preview_common\r\n\r\nShared registry loaders for preview_object and validate_preview.\r\n\"\"\"\r\n\r\nfrom __future__ import annotations\r\n\r\nfrom pathlib import Path\r\nimport yaml\r\nfrom typing import Dict, Any\r\n\r\n\r\ndef _load_registry_entries(root: Path) -> list[Dict[str, Any]]:\r\n    \"\"\"Load registry entries from canonical registry files.\r\n\r\n    Supports both:\r\n    - Directory of yaml entries (e.g. Meta/registry/colour-role.d/*.yaml)\r\n    - Single yaml file with entries[] (used in examples/shared)\r\n    \"\"\"\r\n    entries: list[Dict[str, Any]] = []\r\n    if not root.exists():\r\n        return entries\r\n\r\n    files: list[Path] = []\r\n    if root.is_file() and root.suffix.lower() in {\".yaml\", \".yml\"}:\r\n        files = [root]\r\n    elif root.is_dir():\r\n        files = sorted(root.glob(\"*.yaml\")) + sorted(root.glob(\"*.yml\"))\r\n\r\n    for file in files:\r\n        try:\r\n            data = yaml.safe_load(file.read_text(encoding=\"utf-8\"))\r\n        except Exception:\r\n            continue\r\n\r\n        if isinstance(data, dict):\r\n            data_entries = data.get(\"entries\")\r\n            if isinstance(data_entries, list):\r\n                for entry in data_entries:\r\n                    if isinstance(entry, dict):\r\n                        entries.append(entry)\r\n                continue\r\n            if \"udi\" in data:\r\n                entries.append(data)\r\n\r\n    return entries\r\n\r\n\r\ndef _build_udi_index(entries: list[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:\r\n    \"\"\"Build a strict UDI index for registry entries.\"\"\"\r\n    registry: Dict[str, Dict[str, Any]] = {}\r\n    for entry in entries:\r\n        udi = entry.get(\"udi\")\r\n        if isinstance(udi, str) and udi.strip():\r\n            registry[udi.strip()] = entry\r\n    return registry\r\n\r\n\r\ndef load_colour_scheme_registry(root: Path) -> Dict[str, Dict[str, Any]]:\r\n    return _build_udi_index(_load_registry_entries(root))\r\n\r\n\r\ndef load_colour_role_registry(root: Path) -> Dict[str, Dict[str, Any]]:\r\n    return _build_udi_index(_load_registry_entries(root))\r\n\r\n\r\ndef load_ui_framework_registry(root: Path) -> Dict[str, Dict[str, Any]]:\r\n    return _build_udi_index(_load_registry_entries(root))\r\n\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

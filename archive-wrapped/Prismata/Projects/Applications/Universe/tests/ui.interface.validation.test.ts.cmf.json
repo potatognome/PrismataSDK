@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-tests-ui-interface-validation-test-ts",
+  "udi": "prismata.projects-applications-universe-tests.wrapped-codeblock.ui-interface-validation-test-1789414c2c",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "ui.interface.validation.test.ts",
+    "source_file_type": "ts",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Applications/Universe/tests/ui.interface.validation.test.ts",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/tests/ui.interface.validation.test.ts",
+    "encoding": "utf-8",
+    "content_sha256": "d678c736fccd107a9692a650c5ddf5d7d811ebfecefbbf77ba40f01d785276b2"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "import { test } from \"node:test\";\r\nimport assert from \"node:assert/strict\";\r\nimport fs from \"node:fs\";\r\nimport path from \"node:path\";\r\n\r\nimport { loadUniverseUiFrameworksConfig } from \"../../../Tooling/primitives/typescript/uiInterfaceLoader\";\r\nimport { resolvePrismataRoot } from \"../src/utils/paths\";\r\n\r\ntest(\"uiInterfaceLoader logs warnings when mocked validator fails\", () => {\r\n  const prismataRoot = resolvePrismataRoot();\r\n  const nm = path.join(prismataRoot, \"node_modules\");\r\n  const ajvDir = path.join(nm, \"ajv\");\r\n  const jsyamlDir = path.join(nm, \"js-yaml\");\r\n\r\n  try {\r\n    fs.mkdirSync(ajvDir, { recursive: true });\r\n    fs.mkdirSync(jsyamlDir, { recursive: true });\r\n\r\n    // Minimal mocked Ajv that fails validation for ui_framework === 'multi_pane'\r\n    const ajvIndex = `module.exports = function Ajv(opts) {\r\n  return {\r\n    compile: function(schema) {\r\n      function validate(payload) {\r\n        if (payload && payload.ui_framework === 'multi_pane') {\r\n          validate.errors = [{ message: 'mocked invalid ui_framework' }];\r\n          return false;\r\n        }\r\n        return true;\r\n      }\r\n      validate.errors = null;\r\n      return validate;\r\n    }\r\n  };\r\n};`;\r\n    fs.writeFileSync(path.join(ajvDir, \"index.js\"), ajvIndex, \"utf8\");\r\n\r\n    // Minimal mocked js-yaml that returns an empty object for schema loads\r\n    const jsyamlIndex = `exports.load = function(text) { try { return JSON.parse(text); } catch(e) { return {}; } }`;\r\n    fs.writeFileSync(path.join(jsyamlDir, \"index.js\"), jsyamlIndex, \"utf8\");\r\n\r\n    const warnings: string[] = [];\r\n    const origWarn = console.warn;\r\n    console.warn = (msg?: any, ...args: any[]) => {\r\n      warnings.push(String(msg) + (args.length ? ` ${args.join(' ')}` : ''));\r\n    };\r\n\r\n    try {\r\n      // Run the loader which will attempt to require our mocked modules\r\n      const cfg = loadUniverseUiFrameworksConfig(prismataRoot);\r\n\r\n      // Our mock Ajv returns false for ui_framework === 'multi_pane', so we\r\n      // expect at least one warning message to have been emitted.\r\n      assert.ok(warnings.length > 0, 'Expected validation warnings to be emitted');\r\n      const joined = warnings.join(' ');\r\n      assert.ok(\r\n        joined.includes('mocked invalid') || joined.toLowerCase().includes('ui_framework'),\r\n        `Unexpected warning contents: ${joined}`\r\n      );\r\n    } finally {\r\n      console.warn = origWarn;\r\n    }\r\n  } finally {\r\n    // Clean up only the mocks we created\r\n    try {\r\n      fs.rmSync(ajvDir, { recursive: true, force: true });\r\n    } catch (e) {\r\n      // ignore\r\n    }\r\n    try {\r\n      fs.rmSync(jsyamlDir, { recursive: true, force: true });\r\n    } catch (e) {\r\n      // ignore\r\n    }\r\n  }\r\n});\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

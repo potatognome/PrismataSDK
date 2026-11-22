@@ -1,0 +1,36 @@
+{
+  "id": "workspace-artifacts-tests-logs-test-log-test-get-numeric-choice-log",
+  "udi": "prismata.workspace-artifacts-tests-logs.wrapped-artifact.test-log-test-get-numeric-choice-a9f0a860ab",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_log_test_get_numeric_choice.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/.artifacts/.tests_logs/test_log_test_get_numeric_choice.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.artifacts/.tests_logs/test_log_test_get_numeric_choice.log",
+    "encoding": "utf-8",
+    "content_sha256": "f8b6f5ccf6a3ab7a889cda5115d033ee8b3006de0ba8f8ede3af752966c1dd2f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 13:20:40  ======================================================================\r\n2026-08-30 13:20:40 |  Test 4: test_get_numeric_choice                                     |\r\n2026-08-30 13:20:40  ======================================================================\r\n2026-08-30 13:20:40 Running: 4 test_get_numeric_choice \u2014 get_numeric_choice \u2014 bounds, retry, cancel\r\n2026-08-30 13:20:41 result = CLIMenuHandler. get_numeric_choice with arguments: min_val=1 max_val=5 prompt='Select option' allow_cancel=True\r\n2026-08-30 13:20:41 ran successfully. Producing output: 3\r\n2026-08-30 13:20:41 Valid choice PASSED\r\n2026-08-30 13:20:41 Min boundary PASSED\r\n2026-08-30 13:20:41 Max boundary PASSED\r\n2026-08-30 13:20:41 cancel \u2192 None PASSED\r\n2026-08-30 13:20:41 Retry after invalid PASSED\r\n2026-08-30 13:20:41 Float retry PASSED\r\n2026-08-30 13:20:41 Empty/long string retry PASSED\r\n2026-08-30 13:20:41 allow_cancel=False PASSED\r\n2026-08-30 13:20:41 \u2705 PASSED: 4 test_get_numeric_choice\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 22:16:00  ======================================================================\r\n2026-08-30 22:16:00 |  Test 4: test_get_numeric_choice                                     |\r\n2026-08-30 22:16:00  ======================================================================\r\n2026-08-30 22:16:00 Running: 4 test_get_numeric_choice \u2014 get_numeric_choice \u2014 bounds, retry, cancel\r\n2026-08-30 22:16:00 result = CLIMenuHandler. get_numeric_choice with arguments: min_val=1 max_val=5 prompt='Select option' allow_cancel=True\r\n2026-08-30 22:16:00 ran successfully. Producing output: 3\r\n2026-08-30 22:16:00 Valid choice PASSED\r\n2026-08-30 22:16:00 Min boundary PASSED\r\n2026-08-30 22:16:00 Max boundary PASSED\r\n2026-08-30 22:16:00 cancel \u2192 None PASSED\r\n2026-08-30 22:16:00 Retry after invalid PASSED\r\n2026-08-30 22:16:00 Float retry PASSED\r\n2026-08-30 22:16:00 Empty/long string retry PASSED\r\n2026-08-30 22:16:00 allow_cancel=False PASSED\r\n2026-08-30 22:16:00 \u2705 PASSED: 4 test_get_numeric_choice\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-09-08 12:07:53  ======================================================================\r\n2026-09-08 12:07:53 |  Test 4: test_get_numeric_choice                                     |\r\n2026-09-08 12:07:53  ======================================================================\r\n2026-09-08 12:07:53 Running: 4 test_get_numeric_choice \u2014 get_numeric_choice \u2014 bounds, retry, cancel\r\n2026-09-08 12:07:53 result = CLIMenuHandler. get_numeric_choice with arguments: min_val=1 max_val=5 prompt='Select option' allow_cancel=True\r\n2026-09-08 12:07:53 ran successfully. Producing output: 3\r\n2026-09-08 12:07:53 Valid choice PASSED\r\n2026-09-08 12:07:53 Min boundary PASSED\r\n2026-09-08 12:07:53 Max boundary PASSED\r\n2026-09-08 12:07:53 cancel \u2192 None PASSED\r\n2026-09-08 12:07:53 Retry after invalid PASSED\r\n2026-09-08 12:07:53 Float retry PASSED\r\n2026-09-08 12:07:53 Empty/long string retry PASSED\r\n2026-09-08 12:07:53 allow_cancel=False PASSED\r\n2026-09-08 12:07:53 \u2705 PASSED: 4 test_get_numeric_choice\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

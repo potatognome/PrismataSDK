@@ -1,0 +1,36 @@
+{
+  "id": "workspace-projects-config-global-shared-d-time-stamp-options-json",
+  "udi": "prismata.workspace-projects-config-global-shared-d.wrapped-object.time-stamp-options-58329766e1",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "TIME_STAMP_OPTIONS.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/.projects_config/GLOBAL_SHARED.d/TIME_STAMP_OPTIONS.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.projects_config/GLOBAL_SHARED.d/TIME_STAMP_OPTIONS.json",
+    "encoding": "utf-8",
+    "content_sha256": "e15541a84aa979737e5dfc776f821ba8d2bce12b247db7e1d6348cb88efe0402"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\r\n    \"TIME_STAMP_OPTIONS\" : {\r\n        \"FORMAT\"             : \"%Y%m%d_%H%M%S\",\r\n        \"STAMP_LOGS\"         : false,\r\n        \"STAMP_FILES\"        : false,\r\n        \"STAMP_OUTPUT_ROOT\"  : false\r\n }\r\n}\r\n \r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

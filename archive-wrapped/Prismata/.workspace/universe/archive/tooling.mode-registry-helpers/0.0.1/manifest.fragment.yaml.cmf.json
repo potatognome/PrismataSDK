@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-mode-registry-helpers-0-0-1-manifest-fragment-yaml",
+  "udi": "prismata.workspace-universe-archive-tooling-mode-registry-helpers-0-0-1.wrapped-manifest.manifest-fragment-599302f819",
+  "kind": "wrapped-manifest",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "manifest.fragment.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "manifest",
+    "relative_path": ".workspace/universe/archive/tooling.mode-registry-helpers/0.0.1/manifest.fragment.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.mode-registry-helpers/0.0.1/manifest.fragment.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "e163731c38ef8db94c6ecf407051dcf1f45e39d7b9e45b2b9c7854a7d532a93f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "udi: tooling.mode-registry-helpers\nname: ModeRegistryHelpers\nversion: 0.1.0\nmodule: primitives/powershell/mode-registry.helpers.ps1\n",
+    "classification": {
+      "subtype": "manifest",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

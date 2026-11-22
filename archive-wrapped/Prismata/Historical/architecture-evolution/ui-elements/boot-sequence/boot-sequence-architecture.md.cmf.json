@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-ui-elements-boot-sequence-boot-sequence-architecture-md",
+  "udi": "prismata.historical-architecture-evolution-ui-elements-boot-sequence.wrapped-document.boot-sequence-architecture-74309ed2d1",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "boot-sequence-architecture.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/ui-elements/boot-sequence/boot-sequence-architecture.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/ui-elements/boot-sequence/boot-sequence-architecture.md",
+    "encoding": "utf-8",
+    "content_sha256": "279c1bfc914d3d25873d0975e58d4c7335ccfffef4d66505f7c3358af482167e"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Boot Sequence Architecture\r\n\r\n## LAST UPDATE: 2026-07-23\r\n\r\nPurpose\r\n\r\nThis document describes the canonical boot sequence and CLI menu initialization pipeline used across Prismata projects. It complements the CLI menu standard by defining the runtime startup order so that menu state, registries, and rendering subsystems are initialized consistently.\r\n\r\nBoot Sequence Stages\r\n\r\n1. Process Launch\r\n- Parse CLI args and env.\r\n- Configure logging early (loader may call `set_logger()` shim if provided).\r\n\r\n2. Resolve Project Root\r\n- Determine project root (package location or repository root).\r\n\r\n3. Locate Menu Definitions (Menu Loader)\r\n- Prefer `config/project-menus` under the project root.\r\n- Fall back to legacy `project-menus` and then to workspace-level `.workspace/projects-menus`.\r\n- Support filename variants: `{menu_id}.yaml`, `menu_{menu_id}.yaml`, `{menu_id}_menu.yaml`.\r\n\r\n4. Parse DSL and Load Registries\r\n- Parse YAML menu tree DSL into menu + item objects.\r\n- Load canonical registries (colour schemes, border schemes, menu type registry).\r\n- Apply project/service registry overrides.\r\n\r\n5. Resolve Defaults & Inject Reserved Entries\r\n- Apply menu type defaults, inject reserved items (Back, Quit).\r\n\r\n6. Evaluate Conditions\r\n- Evaluate visibility/enable conditions using MCL (Menu Condition Language) with feature flags and environment state.\r\n\r\n7. Canonical Sorting & Finalization\r\n- Sort menu items by `order` and finalize renderable objects.\r\n\r\n8. Register Actions\r\n- Ensure `action:` identifiers map to callables in `menu_actions.ACTIONS` (validation tool checks these).\r\n- Populate safe stubs if an action is missing (development mode only).\r\n\r\n9. Render / Launch\r\n- If `tUilKit` available, initialize TUI renderer with chosen colour/border schemes.\r\n- Otherwise fall back to plain-text renderer (still displays `icon` before `label`).\r\n\r\n10. Run Loop\r\n- Enter menu loop; handle navigation, action dispatch, and exit conditions.\r\n\r\nNotes and Best Practices\r\n- Loaders must be robust to repository layout differences and prefer `config/project.menus` to match PCMS-2026.\r\n- Validation: run `Projects/Tooling/generators/validate_menu_actions.py` in CI to prevent missing-action runtime errors.\r\n- Backwards compatibility: keep small shims in legacy modules during migration but remove after all projects move to `config/project.menus`.\r\n\r\nHistory\r\n-------\r\n- Canonicalized from `../../../archive/boot-sequence/2026-07-23-boot-sequence-architecture.md`. See `CHANGELOG.md` and `../../../archive/boot-sequence/` for snapshots.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

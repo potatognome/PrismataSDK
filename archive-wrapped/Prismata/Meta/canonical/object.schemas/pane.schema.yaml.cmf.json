@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-object-schemas-pane-schema-yaml",
+  "udi": "prismata.meta-canonical-object-schemas.wrapped-schema.pane-schema-6b32e176bc",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "pane.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/object.schemas/pane.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/object.schemas/pane.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "d840f7e4f5015e9faf42ff9d84ba2e9797df6ec03a6da1f3a100f5ef966c79ca"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.2\r\nkind: pane\r\nschema_type: object\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.pane\r\n  name: pane.schema\r\n  description: Canonical pane schema defining rectangular UI regions.\r\n\r\nspec:\r\n  target_kind: pane\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n  imports:\r\n    - prismata.meta.schema.shared-udi-fields\r\n    - prismata.meta.schema.shared-styling\r\n    - prismata.meta.schema.shared-control-structures\r\n\r\nfields:\r\n  - name: id\r\n    path: id\r\n    type: string\r\n    required: true\r\n  - name: udi\r\n    path: udi\r\n    type: string\r\n    required: true\r\n  - name: content_role\r\n    path: content_role\r\n    type: string\r\n    required: true\r\n\r\n  - name: x\r\n    path: x\r\n    type: integer\r\n    required: true\r\n  - name: y\r\n    path: y\r\n    type: integer\r\n    required: true\r\n  - name: width\r\n    path: width\r\n    type: integer\r\n    required: true\r\n  - name: height\r\n    path: height\r\n    type: integer\r\n    required: true\r\n\r\n# Optional Pane colour_role overrides or for single pane interfaces where no ui-framework file reference exists.\r\n  - name: colour_role\r\n    path: colour_role\r\n    type: string\r\n    required: false\r\n\r\n  - name: border_pattern\r\n    path: border_pattern\r\n    type: string\r\n    required: false\r\n\r\n# Will add later to allow for specific object items to validate to specific manifest versions\r\n  - name: schema_version\r\n    path: schema_version\r\n    type: string\r\n    required: false\r\n\r\nobject:\r\n  id: \"\"\r\n  udi: \"\"\r\n  content_role: \"\"\r\n  x: 0\r\n  y: 0\r\n  width: 100\r\n  height: 100\r\n  colour_role: \"\"\r\n  border_pattern: \"\"\r\n  schema_version: \"0.4.0\"\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

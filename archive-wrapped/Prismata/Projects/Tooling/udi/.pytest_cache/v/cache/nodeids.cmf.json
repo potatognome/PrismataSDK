@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-udi-pytest-cache-v-cache-nodeids",
+  "udi": "prismata.projects-tooling-udi-pytest-cache-v-cache.wrapped-artifact.nodeids-a5cf08b361",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "nodeids",
+    "source_file_type": "",
+    "wrapped_subtype": "artifact",
+    "relative_path": "Projects/Tooling/udi/.pytest_cache/v/cache/nodeids",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/udi/.pytest_cache/v/cache/nodeids",
+    "encoding": "utf-8",
+    "content_sha256": "be48793e7b8e1f5f93c727a7c2222ef3b66f659fef76da70346833a5b9db6f50"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "[\r\n  \"tests/test_scanner.py::test_scan_sample\",\r\n  \"tests/test_udi_utils.py::test_parse_and_build\",\r\n  \"tests/test_udi_utils.py::test_slugify_basic\",\r\n  \"tests/test_udi_utils.py::test_validate_good\"\r\n]",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

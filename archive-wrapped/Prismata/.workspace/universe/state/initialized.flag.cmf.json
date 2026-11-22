@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-state-initialized-flag",
+  "udi": "prismata.workspace-universe-state.wrapped-artifact.initialized-0381236064",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "initialized.flag",
+    "source_file_type": "flag",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/universe/state/initialized.flag",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/state/initialized.flag",
+    "encoding": "utf-8",
+    "content_sha256": "daa481ecd4c2aeffc4965a2bf1af126a2bf1b557d2689ff32558c5c380414505"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "initialized=true\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-modules-configmerge-examples-foldertree-ps1",
+  "udi": "prismata.projects-tooling-modules-configmerge-examples.wrapped-codeblock.foldertree-0069d96df6",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "FolderTree.ps1",
+    "source_file_type": "ps1",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/modules/ConfigMerge/examples/FolderTree.ps1",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/modules/ConfigMerge/examples/FolderTree.ps1",
+    "encoding": "utf-8",
+    "content_sha256": "7b17880e6720cb76f9699c36d66d85e294546ff564d01c3ea8a0290ba7880a49"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeffImport-Module \"$PSScriptRoot/../ConfigMerge.psm1\" -Force\r\n\r\nfunction Invoke-FolderTree {\r\n    param(\r\n        [hashtable] $Defaults,\r\n        [hashtable] $ModeConfig,\r\n        [hashtable] $UserConfig,\r\n        [hashtable] $StyleConfig,\r\n        [hashtable] $CliConfig\r\n    )\r\n\r\n    if (-not $Defaults.ContainsKey('conflictMode')) {\r\n        $Defaults.conflictMode = 'includeWins'\r\n    }\r\n\r\n    $settings = Merge-Config -Defaults $Defaults `\r\n                             -Mode     $ModeConfig `\r\n                             -Config   $UserConfig `\r\n                             -Style    $StyleConfig `\r\n                             -Cli      $CliConfig\r\n\r\n    return $settings\r\n}\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

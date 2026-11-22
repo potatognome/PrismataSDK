@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-governance-copilot-instructions-d-version-bumping-md",
+  "udi": "prismata.meta-deprecated-governance-copilot-instructions-d.wrapped-agent-instruction.version-bumping-c7db3f16e8",
+  "kind": "wrapped-agent-instruction",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "version_bumping.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "agent-instruction",
+    "relative_path": "Meta/deprecated/governance/copilot-instructions.d/version_bumping.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/governance/copilot-instructions.d/version_bumping.md",
+    "encoding": "utf-8",
+    "content_sha256": "00945f097718ff103a5217797c82613518709d3b2b1725b1e1eba326e8b4b36f"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Version Bumping Guidelines\r\n\r\nPurpose\r\n- Employ standardized versioning.\r\n- Ensure project versions are properly synced across workspace\r\n\r\n## Current Version Syncing\r\n\r\n Ensure Current Version is included/updated in any or all of the following locations, where available.\r\n - \\$PROJECT_ROOT\\config\\($PROJECT_NAME)_CONFIG.json\r\n - \\$PROJECT_ROOT\\CHANGELOG.md\r\n - \\$PROJECT_ROOT\\pyproject.toml\r\n - \\$PROJECT_ROOT\\README.md\r\n\r\n\r\n## Changelog Updates\r\n\r\nInclude all updates in Project's change log file \\$PROJECT_ROOT\\CHANGELOG.md and automatically bump version by 0.0.1 on incremental updates.\r\nInclude date in CHANGELOG entries, limit automatic reversioning to 3 times per day.\r\nEnsure all locations have synced versioning after all CHANGELOG updates.\r\nWhen asked to manually reversion (by 0.1.0 or more), round down after the update. (e.g. 0.9.3 -> 1.0.0) and include an entry in the CHANGELOG stating 'VERSION UPDATED MANUALLY: $OLD_VERSION -> $NEW_VERSION'\r\n\r\n## Version Disputes\r\n\r\nIn the case of disputed version numbers, always sync to the higher version number, (Highest to Lowest, Left to Right)\r\n\r\n",
+    "classification": {
+      "subtype": "agent-instruction",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-vile-0-0-1-validation-log",
+  "udi": "prismata.workspace-universe-archive-tooling-vile-0-0-1.wrapped-artifact.validation-a6aeb58514",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "validation.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/universe/archive/tooling.vile/0.0.1/validation.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.vile/0.0.1/validation.log",
+    "encoding": "utf-8",
+    "content_sha256": "fc11bc91dd6c1077d5f0a58e6764cd44bf09b8f11ea547735df343e80a300229"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "validated tooling.vile\ncanonicalized tooling.vile\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

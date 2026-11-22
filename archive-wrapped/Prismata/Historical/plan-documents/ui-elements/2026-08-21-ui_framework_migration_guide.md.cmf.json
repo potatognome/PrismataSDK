@@ -1,0 +1,36 @@
+{
+  "id": "historical-plan-documents-ui-elements-2026-08-21-ui-framework-migration-guide-md",
+  "udi": "prismata.historical-plan-documents-ui-elements.wrapped-plan.x-2026-08-21-ui-framework-migration-guide-64544b97e0",
+  "kind": "wrapped-plan",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "2026-08-21-ui_framework_migration_guide.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "plan",
+    "relative_path": "Historical/plan-documents/ui-elements/2026-08-21-ui_framework_migration_guide.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/plan-documents/ui-elements/2026-08-21-ui_framework_migration_guide.md",
+    "encoding": "utf-8",
+    "content_sha256": "e0cbcc7a4eb6c7532155de755a2592567873746e583be64f0eaf83d9f1c30f6b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# UI Framework Migration Guide\r\nMigrating existing UI definitions to the new ui_framework schema layer.\r\n\r\n---\r\n\r\n## 1. Overview\r\nThe ui_framework layer introduces a clean separation between:\r\n\r\n- UI shape (framework)\r\n- UI rules (pane layout, navigation)\r\n- Content (supplied by commands)\r\n\r\nExisting menu definitions and UI behaviors must be updated to use\r\n`ui_framework` and pane definitions.\r\n\r\n---\r\n\r\n## 2. Step-by-Step Migration\r\n\r\n### Step 1 \u2014 Add ui_framework to menu items\r\nOld:\r\n  capability: \"fs.edit\"\r\n\r\nNew:\r\n  capability: \"fs.edit\"\r\n  ui_framework: pane\r\n\r\nIf omitted, `basic` is assumed.\r\n\r\n---\r\n\r\n### Step 2 \u2014 Move pane layout into ui_framework\r\nOld systems embedded layout logic inside commands or menus.\r\n\r\nNew:\r\n  ui_framework:\r\n    ui_framework: multi_pane\r\n    panes: [...]\r\n\r\n---\r\n\r\n### Step 3 \u2014 Move carousel logic into pane definitions\r\nOld:\r\n  command handled navigation\r\n\r\nNew:\r\n  pane.carousel.enabled: true\r\n  pane.carousel.items: supplied by command\r\n\r\n---\r\n\r\n### Step 4 \u2014 Add diff_view relational pairs\r\nOld:\r\n  diff logic embedded in command\r\n\r\nNew:\r\n  diff_view.pairs:\r\n    - left: ...\r\n      right: ...\r\n\r\n---\r\n\r\n### Step 5 \u2014 Add override files\r\nCreate:\r\n  project/ui/multi_pane.override.yaml\r\n  tenant/ui/multi_pane.override.yaml\r\n\r\nOverrides replace canonical coordinates.\r\n\r\n---\r\n\r\n## 3. Backwards Compatibility\r\nIf ui_framework is missing:\r\n  ui_framework: basic\r\n\r\nLegacy commands continue to work.\r\n\r\n---\r\n\r\n## 4. Validation\r\nRun schema validation to ensure:\r\n\r\n- pane coordinates valid\r\n- carousel items valid\r\n- diff pairs valid\r\n- overrides load correctly\r\n\r\n---\r\n\r\n## 5. Completion\r\nOnce migrated, UI becomes fully decoupled from content and commands.\r\n",
+    "classification": {
+      "subtype": "plan",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

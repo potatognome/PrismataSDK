@@ -1,0 +1,36 @@
+{
+  "id": "workspace-artifacts-tests-logs-test-log-test-confirm-log",
+  "udi": "prismata.workspace-artifacts-tests-logs.wrapped-artifact.test-log-test-confirm-55bbc16e10",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_log_test_confirm.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/.artifacts/.tests_logs/test_log_test_confirm.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/.artifacts/.tests_logs/test_log_test_confirm.log",
+    "encoding": "utf-8",
+    "content_sha256": "eb0331006358536a8694a0c8f013e82524b0a73a4cd257c1c525ff5818e9452c"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 13:20:39  ======================================================================\r\n2026-08-30 13:20:39 |  Test 2: test_confirm                                                |\r\n2026-08-30 13:20:39  ======================================================================\r\n2026-08-30 13:20:39 Running: 2 test_confirm \u2014 confirm \u2014 y/n, defaults, break inputs\r\n2026-08-30 13:20:40 result = CLIMenuHandler. confirm with arguments: message='Proceed with operation?' default=False\r\n2026-08-30 13:20:40 ran successfully. Producing output: True\r\n2026-08-30 13:20:40 Assert: 'y' returns True\r\n2026-08-30 13:20:40 \r\n2026-08-30 13:20:40 'n' \u2192 False PASSED\r\n2026-08-30 13:20:40 Empty \u2192 default False PASSED\r\n2026-08-30 13:20:40 Empty \u2192 default True PASSED\r\n2026-08-30 13:20:40 'yes' \u2192 True\r\n2026-08-30 13:20:40 'no' \u2192 False\r\n2026-08-30 13:20:40 'YES' \u2192 True\r\n2026-08-30 13:20:40 Break (empty string) \u2192 False\r\n2026-08-30 13:20:40 Break (out-of-range number) \u2192 False\r\n2026-08-30 13:20:40 Break (non-numeric text) \u2192 False\r\n2026-08-30 13:20:40 Break (very long string) \u2192 False\r\n2026-08-30 13:20:40 Break (null byte) \u2192 False\r\n2026-08-30 13:20:40 Break (tab/newline) \u2192 False\r\n2026-08-30 13:20:40 \u2705 PASSED: 2 test_confirm\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-08-30 22:15:59  ======================================================================\r\n2026-08-30 22:15:59 |  Test 2: test_confirm                                                |\r\n2026-08-30 22:15:59  ======================================================================\r\n2026-08-30 22:15:59 Running: 2 test_confirm \u2014 confirm \u2014 y/n, defaults, break inputs\r\n2026-08-30 22:16:00 result = CLIMenuHandler. confirm with arguments: message='Proceed with operation?' default=False\r\n2026-08-30 22:16:00 ran successfully. Producing output: True\r\n2026-08-30 22:16:00 Assert: 'y' returns True\r\n2026-08-30 22:16:00 \r\n2026-08-30 22:16:00 'n' \u2192 False PASSED\r\n2026-08-30 22:16:00 Empty \u2192 default False PASSED\r\n2026-08-30 22:16:00 Empty \u2192 default True PASSED\r\n2026-08-30 22:16:00 'yes' \u2192 True\r\n2026-08-30 22:16:00 'no' \u2192 False\r\n2026-08-30 22:16:00 'YES' \u2192 True\r\n2026-08-30 22:16:00 Break (empty string) \u2192 False\r\n2026-08-30 22:16:00 Break (out-of-range number) \u2192 False\r\n2026-08-30 22:16:00 Break (non-numeric text) \u2192 False\r\n2026-08-30 22:16:00 Break (very long string) \u2192 False\r\n2026-08-30 22:16:00 Break (null byte) \u2192 False\r\n2026-08-30 22:16:00 Break (tab/newline) \u2192 False\r\n2026-08-30 22:16:00 \u2705 PASSED: 2 test_confirm\r\nX-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X-O-X\r\n2026-09-08 12:07:52  ======================================================================\r\n2026-09-08 12:07:52 |  Test 2: test_confirm                                                |\r\n2026-09-08 12:07:52  ======================================================================\r\n2026-09-08 12:07:52 Running: 2 test_confirm \u2014 confirm \u2014 y/n, defaults, break inputs\r\n2026-09-08 12:07:53 result = CLIMenuHandler. confirm with arguments: message='Proceed with operation?' default=False\r\n2026-09-08 12:07:53 ran successfully. Producing output: True\r\n2026-09-08 12:07:53 Assert: 'y' returns True\r\n2026-09-08 12:07:53 \r\n2026-09-08 12:07:53 'n' \u2192 False PASSED\r\n2026-09-08 12:07:53 Empty \u2192 default False PASSED\r\n2026-09-08 12:07:53 Empty \u2192 default True PASSED\r\n2026-09-08 12:07:53 'yes' \u2192 True\r\n2026-09-08 12:07:53 'no' \u2192 False\r\n2026-09-08 12:07:53 'YES' \u2192 True\r\n2026-09-08 12:07:53 Break (empty string) \u2192 False\r\n2026-09-08 12:07:53 Break (out-of-range number) \u2192 False\r\n2026-09-08 12:07:53 Break (non-numeric text) \u2192 False\r\n2026-09-08 12:07:53 Break (very long string) \u2192 False\r\n2026-09-08 12:07:53 Break (null byte) \u2192 False\r\n2026-09-08 12:07:53 Break (tab/newline) \u2192 False\r\n2026-09-08 12:07:53 \u2705 PASSED: 2 test_confirm\r\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

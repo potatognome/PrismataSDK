@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-universe-scaffold-0-0-1-module-files-json",
+  "udi": "prismata.workspace-universe-archive-tooling-universe-scaffold-0-0-1.wrapped-object.module-files-72072841b0",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "module.files.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/archive/tooling.universe-scaffold/0.0.1/module.files.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.universe-scaffold/0.0.1/module.files.json",
+    "encoding": "utf-8",
+    "content_sha256": "acbb0c16bec3dc39f50b4e96c954745741de2e4ee73072bdc82f17c46e9befd8"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  \"count\": 18,\n  \"files\": [\n    \"Projects/Tooling/Universe-scaffold/config/project-menus/universe-edit.yaml\",\n    \"Projects/Tooling/Universe-scaffold/config/project-menus/universe-find.yaml\",\n    \"Projects/Tooling/Universe-scaffold/config/project-menus/universe-main.yaml\",\n    \"Projects/Tooling/Universe-scaffold/config/schemas/find-location.yaml\",\n    \"Projects/Tooling/Universe-scaffold/config/schemas/find-parameters.yaml\",\n    \"Projects/Tooling/Universe-scaffold/config/schemas/find-results.yaml\",\n    \"Projects/Tooling/Universe-scaffold/src/core/dirty-state.ts\",\n    \"Projects/Tooling/Universe-scaffold/src/core/schema-diff.ts\",\n    \"Projects/Tooling/Universe-scaffold/src/core/schema-loader.ts\",\n    \"Projects/Tooling/Universe-scaffold/src/core/schema-validator.ts\",\n    \"Projects/Tooling/Universe-scaffold/src/core/schema-writer.ts\",\n    \"Projects/Tooling/Universe-scaffold/src/verbs/create-field.ts\",\n    \"Projects/Tooling/Universe-scaffold/src/verbs/delete-field.ts\",\n    \"Projects/Tooling/Universe-scaffold/src/verbs/diff-schema.ts\",\n    \"Projects/Tooling/Universe-scaffold/src/verbs/move-field.ts\",\n    \"Projects/Tooling/Universe-scaffold/src/verbs/rename-field.ts\",\n    \"Projects/Tooling/Universe-scaffold/src/verbs/update-field.ts\",\n    \"Projects/Tooling/Universe-scaffold/src/verbs/validate-schema.ts\"\n  ]\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

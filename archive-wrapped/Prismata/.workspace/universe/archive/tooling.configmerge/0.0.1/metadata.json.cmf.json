@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-configmerge-0-0-1-metadata-json",
+  "udi": "prismata.workspace-universe-archive-tooling-configmerge-0-0-1.wrapped-object.metadata-85a758a183",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "metadata.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/archive/tooling.configmerge/0.0.1/metadata.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.configmerge/0.0.1/metadata.json",
+    "encoding": "utf-8",
+    "content_sha256": "f6fba681ed7ab3ffda5e8a503f8de3d2ab3c41eb57d887772425af4eb074d066"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  \"package_name\": \"ConfigMerge\",\n  \"udi\": \"tooling.configmerge\",\n  \"version\": \"0.0.1\",\n  \"source_kind\": \"module\",\n  \"source_path\": \"C:\\\\Repository\\\\Daniel\\\\dev_local\\\\Prismata\\\\Projects\\\\Tooling\\\\modules\\\\ConfigMerge\",\n  \"ingested_at_utc\": \"2026-08-24T19:04:35.951Z\",\n  \"metadata\": {\n    \"origin\": \"tooling.manifest.yaml\"\n  }\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

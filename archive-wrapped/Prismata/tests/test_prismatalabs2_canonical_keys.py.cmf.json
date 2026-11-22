@@ -1,0 +1,36 @@
+{
+  "id": "tests-test-prismatalabs2-canonical-keys-py",
+  "udi": "prismata.tests.wrapped-codeblock.test-prismatalabs2-canonical-keys-b7aa0dea63",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "test_prismatalabs2_canonical_keys.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "tests/test_prismatalabs2_canonical_keys.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "tests/test_prismatalabs2_canonical_keys.py",
+    "encoding": "utf-8",
+    "content_sha256": "7b27755bbf82b5aef28e6580db4e04c54bb25f78ae82457af6a5d2640bd93ac3"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufefffrom __future__ import annotations\r\n\r\nimport sys\r\nfrom pathlib import Path\r\n\r\nimport pytest\r\n\r\nROOT = Path(__file__).resolve().parents[1]\r\nif str(ROOT) not in sys.path:\r\n    sys.path.insert(0, str(ROOT))\r\n\r\nfrom Projects.Tooling.primitives.python.border_patterns import load_border_pattern_registry\r\nfrom Projects.Tooling.primitives.python.menu_renderer import (\r\n    load_colour_role_registry,\r\n    load_colour_scheme_registry,\r\n    render_menu,\r\n)\r\n\r\n\r\ndef _meta_root() -> Path:\r\n    return ROOT / \"Meta\"\r\n\r\n\r\ndef test_render_menu_rejects_legacy_menu_items_key_without_items():\r\n    meta_root = _meta_root()\r\n    border_registry = load_border_pattern_registry(meta_root / \"registry\" / \"border-pattern.d\")\r\n    colour_roles = load_colour_role_registry(meta_root / \"registry\" / \"colour-role.d\")\r\n    colour_schemes = load_colour_scheme_registry(meta_root / \"registry\" / \"colour-scheme.d\")\r\n\r\n    legacy_menu = {\r\n        \"id\": \"legacy-menu\",\r\n        \"udi\": \"prismata.tests.menu.legacy\",\r\n        \"kind\": \"menu\",\r\n        \"title\": \"Legacy\",\r\n        \"menu-items\": [{\"label\": \"Legacy Item\"}],\r\n        \"colour_role\": \"default\",\r\n        \"border_pattern\": \"default\",\r\n    }\r\n\r\n    with pytest.raises(ValueError, match=\"canonical 'items' key\"):\r\n        render_menu(\r\n            legacy_menu,\r\n            border_registry,\r\n            colour_roles,\r\n            colour_schemes,\r\n            ui_framework={\"colour_scheme\": \"default\"},\r\n            context={},\r\n            preview_mode=True,\r\n        )\r\n\r\n\r\ndef test_examples_do_not_use_legacy_key_aliases():\r\n    files = [\r\n        ROOT / \"Projects\" / \"Applications\" / \"PrismataLabs\" / \"examples\" / \"pcms_2026_level1_single_pane.py\",\r\n        ROOT / \"Projects\" / \"Applications\" / \"PrismataLabs\" / \"examples\" / \"pcms_2026_level2_dual_pane.py\",\r\n        ROOT / \"Projects\" / \"Applications\" / \"PrismataLabs\" / \"examples\" / \"pcms_2026_level3_diagnostic_dual_pane.py\",\r\n        ROOT / \"Projects\" / \"Applications\" / \"PrismataLabs\" / \"examples\" / \"example-object-scenarios.py\",\r\n        ROOT / \"Projects\" / \"Applications\" / \"PrismataLabs\" / \"examples\" / \"exemplar-multi-pane-menus.py\",\r\n    ]\r\n\r\n    for file in files:\r\n        source = file.read_text(encoding=\"utf-8\")\r\n        assert \"menu-items\" not in source\r\n        assert \"colourRole\" not in source\r\n        assert \"borderPattern\" not in source\r\n        assert \"contentRole\" not in source\r\n        assert \"borderRole\" not in source\r\n\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

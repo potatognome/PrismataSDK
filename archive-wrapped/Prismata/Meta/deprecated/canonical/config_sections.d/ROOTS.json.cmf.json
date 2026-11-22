@@ -1,0 +1,36 @@
+{
+  "id": "meta-deprecated-canonical-config-sections-d-roots-json",
+  "udi": "prismata.meta-deprecated-canonical-config-sections-d.wrapped-object.roots-b27ad43cee",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "ROOTS.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": "Meta/deprecated/canonical/config_sections.d/ROOTS.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/deprecated/canonical/config_sections.d/ROOTS.json",
+    "encoding": "utf-8",
+    "content_sha256": "04ad49ec07e08a029f5a2bceae261e28ddba2f74a1ec1d2b172c1a6228b3dedb"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "\ufeff{\r\n    \"_META\"                            : {\r\n        \"SORT_ORDER\"                   : 10\r\n    },\r\n    \"ROOTS\"                            : {\r\n        \"WORKSPACE\"                    : \"C:/Repository/Daniel/dev_local/Prismata/\",\r\n        \"PROJECT\"                      : \"C:/Repository/Daniel/dev_local/Prismata/Projects/$PROJECT_CLASSIFICATION/$PROJECT_NAME\",\r\n        \"TUILKit\"                      : \"C:/Repository/Daniel/dev_local/Prismata/Projects/Core/tUilKit\"\r\n    },\r\n    \"REMOVE_ROOTS\"                     : []\r\n}\r\n\r\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

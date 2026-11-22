@@ -1,0 +1,36 @@
+{
+  "id": "projects-applications-universe-config-schemas-settings-naming-yaml",
+  "udi": "prismata.projects-applications-universe-config-schemas.wrapped-schema.settings-naming-9702f4a963",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "settings-naming.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Projects/Applications/Universe/config/schemas/settings-naming.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Applications/Universe/config/schemas/settings-naming.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "dfb02513bed7251b1714e1ed72a0735bdecd1b6b3796c8533d7a8208b25947ca"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "## File: settings-naming.yaml\r\n## Type: schema\r\n## Purpose: Schema for naming conventions (regex, version formatting)\r\n## enforced by settings validation tooling.\r\n\r\nmetadata:\r\n  udi: prismata.universe.schema.settings-naming\r\n  name: settings-naming\r\n  kind: schema-definition\r\n  description: \"Schema for naming conventions (regex, version formatting) enforced by settings validation.\"\r\n\r\n\r\nid: \"prismata.universe.schema.settings-naming\"\r\nversion: \"1.0.0\"\r\ntype: object\r\nproperties:\r\n  naming_convention_enabled: { type: boolean }\r\n  regex_pattern: { type: string }\r\n  version_format: { type: string }\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

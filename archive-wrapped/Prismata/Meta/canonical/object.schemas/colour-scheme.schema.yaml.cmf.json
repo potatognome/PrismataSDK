@@ -1,0 +1,36 @@
+{
+  "id": "meta-canonical-object-schemas-colour-scheme-schema-yaml",
+  "udi": "prismata.meta-canonical-object-schemas.wrapped-schema.colour-scheme-schema-24c8fc9630",
+  "kind": "wrapped-schema",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "colour-scheme.schema.yaml",
+    "source_file_type": "yaml",
+    "wrapped_subtype": "schema",
+    "relative_path": "Meta/canonical/object.schemas/colour-scheme.schema.yaml",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Meta/canonical/object.schemas/colour-scheme.schema.yaml",
+    "encoding": "utf-8",
+    "content_sha256": "e8ab533456291adc99c0cd38895ac67ccb146bebc0c0ffcdc26117da4ddd550b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "version: 0.4.1\r\nkind: colour-scheme\r\nschema_type: object\r\n\r\nmetadata:\r\n  udi: prismata.meta.schema.colour-scheme\r\n  name: colour-scheme.schema\r\n  description: Canonical colour scheme schema.\r\n\r\nspec:\r\n  target_kind: colour-scheme\r\n  naming:\r\n    file_suffix: .schema.yaml\r\n  versioning:\r\n    semver: true\r\n\r\nfields:\r\n  - name: id\r\n    path: id\r\n    type: string\r\n    required: true\r\n\r\n  - name: roles\r\n    path: roles\r\n    type: array\r\n    required: true\r\n\r\nobject:\r\n  roles: []\r\n\r\n",
+    "classification": {
+      "subtype": "schema",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

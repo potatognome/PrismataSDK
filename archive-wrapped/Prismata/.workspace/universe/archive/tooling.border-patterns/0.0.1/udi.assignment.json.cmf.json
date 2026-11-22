@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-border-patterns-0-0-1-udi-assignment-json",
+  "udi": "prismata.workspace-universe-archive-tooling-border-patterns-0-0-1.wrapped-object.udi-assignment-b71ed68c4e",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "udi.assignment.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/archive/tooling.border-patterns/0.0.1/udi.assignment.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.border-patterns/0.0.1/udi.assignment.json",
+    "encoding": "utf-8",
+    "content_sha256": "e1772fd2a8ec4bb52406b234e6dec92880427e193ca7c13956caab56615c1551"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  \"udi\": \"tooling.border-patterns\",\n  \"package_name\": \"BorderPatterns\"\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

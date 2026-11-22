@@ -1,0 +1,36 @@
+{
+  "id": "projects-tooling-validators-bom-validator-core-report-py",
+  "udi": "prismata.projects-tooling-validators-bom-validator-core.wrapped-codeblock.report-a96a63cfd7",
+  "kind": "wrapped-codeblock",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "report.py",
+    "source_file_type": "py",
+    "wrapped_subtype": "codeblock",
+    "relative_path": "Projects/Tooling/validators/bom_validator/core/report.py",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Projects/Tooling/validators/bom_validator/core/report.py",
+    "encoding": "utf-8",
+    "content_sha256": "9075aa0bf04b6b0ded740dc1046ee01d6fc166bbc9276b0f16e67aecd400396b"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "def generate_report(files):\n    lines = []\n    lines.append('BOM Audit Report')\n    lines.append('----------------')\n    lines.append(f'Files containing BOM: {len(files)}')\n    lines.append('')\n\n    for f in files:\n        lines.append(str(f))\n\n    return '\\\\n'.join(lines)\r\n",
+    "classification": {
+      "subtype": "codeblock",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

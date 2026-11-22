@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-sample-0-0-1-validation-log",
+  "udi": "prismata.workspace-universe-archive-tooling-sample-0-0-1.wrapped-artifact.validation-b922853fa9",
+  "kind": "wrapped-artifact",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "validation.log",
+    "source_file_type": "log",
+    "wrapped_subtype": "artifact",
+    "relative_path": ".workspace/universe/archive/tooling.sample/0.0.1/validation.log",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.sample/0.0.1/validation.log",
+    "encoding": "utf-8",
+    "content_sha256": "dd2fd3fbb26b08c0e7ff8d80f13e6fccbfc311e99516069e8ccc47ddb8346158"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "validated tooling.sample\ncanonicalized tooling.sample\n",
+    "classification": {
+      "subtype": "artifact",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

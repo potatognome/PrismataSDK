@@ -1,0 +1,36 @@
+{
+  "id": "historical-architecture-evolution-project-classification-changelog-core-infra-tenant-md",
+  "udi": "prismata.historical-architecture-evolution-project-classification.wrapped-document.changelog-core-infra-tenant-411e7bc57a",
+  "kind": "wrapped-document",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "CHANGELOG-core_infra_tenant.md",
+    "source_file_type": "md",
+    "wrapped_subtype": "document",
+    "relative_path": "Historical/architecture-evolution/project-classification/CHANGELOG-core_infra_tenant.md",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": "Historical/architecture-evolution/project-classification/CHANGELOG-core_infra_tenant.md",
+    "encoding": "utf-8",
+    "content_sha256": "28f21e8d6082c0d3d14df8a13d7ea90e97f96236f42d6d58ef9e9709100edbba"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "# Changelog \u2014 Core/Infrastructure/Tenant\r\n\r\n- 2026-08-17 \u2014 Reiterated that `Core`/`Infrastructure`/`Tenant` are conceptual classifications; recommended physical repo layout under `Prismata/Projects/Applications|Services|Tooling`.\r\n- 2026-07-23 \u2014 Notes on mapping `project_type` to physical placement and CI considerations.\r\n- 2026-06-01 \u2014 Initial notes on core layer and physical grouping.\r\n",
+    "classification": {
+      "subtype": "document",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}

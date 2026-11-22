@@ -1,0 +1,36 @@
+{
+  "id": "workspace-universe-archive-tooling-configmerge-0-0-1-module-files-json",
+  "udi": "prismata.workspace-universe-archive-tooling-configmerge-0-0-1.wrapped-object.module-files-332f655b35",
+  "kind": "wrapped-object",
+  "version": "1.0.0",
+  "tenant": null,
+  "metadata": {
+    "name": "module.files.json",
+    "source_file_type": "json",
+    "wrapped_subtype": "object",
+    "relative_path": ".workspace/universe/archive/tooling.configmerge/0.0.1/module.files.json",
+    "wrapper_version": "1.0.0"
+  },
+  "source": {
+    "path": ".workspace/universe/archive/tooling.configmerge/0.0.1/module.files.json",
+    "encoding": "utf-8",
+    "content_sha256": "d4542328f66211e3ab8b643b862624239d261563b8098d305545c7dccdd57bc3"
+  },
+  "relations": [],
+  "validation": {
+    "udi_pattern": "^[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]*\\.[a-z][a-z0-9-]+$",
+    "deterministic": true,
+    "immutable_identity": true
+  },
+  "notes": [
+    "Wrapped from existing Prismata repository artifact.",
+    "Preserves source metadata for future unwrap support."
+  ],
+  "content": {
+    "text": "{\n  \"count\": 9,\n  \"files\": [\n    \"Projects/Tooling/modules/ConfigMerge/ConfigMerge.conflictMode.psd1\",\n    \"Projects/Tooling/modules/ConfigMerge/ConfigMerge.psd1\",\n    \"Projects/Tooling/modules/ConfigMerge/ConfigMerge.psm1\",\n    \"Projects/Tooling/modules/ConfigMerge/ConfigMerge.schema.yaml\",\n    \"Projects/Tooling/modules/ConfigMerge/conflictMode.registry.yaml\",\n    \"Projects/Tooling/modules/ConfigMerge/examples/FolderTree.ps1\",\n    \"Projects/Tooling/modules/ConfigMerge/examples/Scraper.ps1\",\n    \"Projects/Tooling/modules/ConfigMerge/logs/conflictMode.audit.log\",\n    \"Projects/Tooling/modules/ConfigMerge/README.md\"\n  ]\n}\n",
+    "classification": {
+      "subtype": "object",
+      "rationale": "path_and_filetype_inference"
+    }
+  }
+}
