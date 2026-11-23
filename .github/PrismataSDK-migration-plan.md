@@ -253,5 +253,5 @@ Remaining migration order:
 3. Approve Corp-owned tenant/archive/policy candidates in PrismataCorp.
 4. Rebuild approved SDK runtime/tooling behavior without legacy interfaces.
 5. Validate migrated artifacts and examples through the CMF -> PSO pipeline.
-6. Integrate approved repository-specific changes and update this checklist at each gate.
+6. Integrate approved repository-specific changes and update `.github/checklists/prismatasdk-migration-checklist.md` at each gate.
 7. Complete preview, tenant override, CLI, and Vile/Vise/Universe migration work.
