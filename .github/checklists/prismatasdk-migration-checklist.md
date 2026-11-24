@@ -44,6 +44,10 @@ This checklist tracks the execution status of the PrismataSDK migration against 
 - [ ] Add CLI commands for validate, build, preview, list, and inspect using CMF + PSO.
 - [ ] Add examples for panes, menus, chroma, borders, and UI frameworks that match the migrated architecture.
 - [ ] Add app migration tasks for Vile, Vise, and Universe integration.
+- [ ] Review and resolve the 313 staged compatibility gaps (deprecated, historical, quarantine-only, and NeedsReview items).
+- [ ] Approve PrismataCore-owned schema/law candidates and PrismataCorp-owned tenant/archive/policy candidates.
+- [ ] Reconstruct approved legacy behavior through current canonical schemas, manifests, CMF-to-PSO loading, and SDK runtime contracts.
+- [ ] Integrate the approved staged candidates into PrismataCore, PrismataSDK, and PrismataCorp.
 
 ## Execution Notes
 
@@ -58,3 +62,5 @@ This checklist tracks the execution status of the PrismataSDK migration against 
 - Example reference source: `/PrismataSDK/examples/registry`
 - UI-first gate: framework loader + pane resolution + menu routing must remain complete and validated before chroma/border/ANSI work proceeds.
 - Breaking changes remain acceptable and expected until migration is complete.
+- Wrapped archive status: 791 artifacts inventoried, 505 review candidates staged, 286 ArchiveOnly workspace/runtime artifacts retained as quarantine-only report entries, 313 compatibility gaps open, and zero invalid or missing wrapped sources.
+- Archive review implementation: PrismataSDK PR #3; staging is review evidence and remains non-canonical until approved and integrated.

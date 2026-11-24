@@ -1,6 +1,6 @@
 # PrismataSDK Migration Plan
 
-## Created: 2026-10-15  Last Updated: 2026-10-17
+## Created: 2026-10-15  Last Updated: 2026-11-22
 
 ## Architectural References
 
@@ -229,4 +229,29 @@ Vile, Vise, Universe run on the new SDK.
 
 14. Next Steps
 
-After this document, create the Copilot instruction file that references this migration plan and guides Copilot in assisting with SDK development.
+The wrapped legacy Prismata archive review phase has a generated migration corpus under `archive-wrapped/review-corpus/` and a review-first staged corpus under `archive-wrapped/staged-migration/`.
+
+Current archive migration status:
+
+- Complete: wrapped corpus preservation and deterministic CMF inventory.
+- Complete: initial Core, SDK, Corp, ArchiveOnly, and NeedsReview ownership routing.
+- Complete: review corpus and compatibility reports for 791 wrapped artifacts.
+- Complete: staging of 505 reviewable candidates.
+- Complete: quarantine-only reporting for 286 workspace/runtime artifacts; these artifacts are not copied into the staged payload.
+- Complete: review tooling and focused wrapper/unwrapper tests (15 passing).
+- Open: reconcile 313 compatibility gaps, including deprecated, historical, quarantine-only, and NeedsReview items.
+- Open: approve Core and Corp candidates with their respective repository owners.
+- Open: reconstruct approved legacy behavior through current canonical schemas, manifests, CMF-to-PSO loading, and SDK runtime contracts.
+- Open: validate and integrate approved artifacts into PrismataCore, PrismataSDK, and PrismataCorp.
+
+The implementation is tracked in PrismataSDK PR #3. The staged corpus is evidence for review and is not itself canonical; repository integration must remain blocked until ownership and compatibility decisions are approved.
+
+Remaining migration order:
+
+1. Resolve the staged compatibility gaps and record each disposition decision.
+2. Approve Core-owned schema/law candidates in PrismataCore.
+3. Approve Corp-owned tenant/archive/policy candidates in PrismataCorp.
+4. Rebuild approved SDK runtime/tooling behavior without legacy interfaces.
+5. Validate migrated artifacts and examples through the CMF -> PSO pipeline.
+6. Integrate approved repository-specific changes and update `.github/checklists/prismatasdk-migration-checklist.md` at each gate.
+7. Complete preview, tenant override, CLI, and Vile/Vise/Universe migration work.
