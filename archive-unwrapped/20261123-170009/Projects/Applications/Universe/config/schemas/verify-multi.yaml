@@ -1,0 +1,21 @@
+## File: verify-multi.yaml
+## Type: schema
+## Purpose: Schema for multi-selection verification (compatibility checks,
+## allowed operations, and summaries used by batch operations).
+
+metadata:
+  udi: prismata.universe.schema.verify-multi
+  name: verify-multi
+  kind: schema-definition
+  description: "Schema for multi-selection verification (compatibility checks, allowed operations, and summaries)."
+
+
+id: "prismata.universe.schema.verify-multi"
+version: "2.0.0"
+type: object
+properties:
+  selected_objects: { type: array }
+  selection_type: { type: string }
+  type_compatibility_matrix: { type: object }
+  allowed_operations: { type: array }
+  verification_summary: { type: object }

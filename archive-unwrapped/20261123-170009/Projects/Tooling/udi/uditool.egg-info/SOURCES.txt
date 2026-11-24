@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+tests/test_scanner.py
+tests/test_udi_utils.py
+uditool/__init__.py
+uditool/cli.py
+uditool/config.py
+uditool/scanner.py
+uditool/udi_utils.py
+uditool.egg-info/PKG-INFO
+uditool.egg-info/SOURCES.txt
+uditool.egg-info/dependency_links.txt
+uditool.egg-info/entry_points.txt
+uditool.egg-info/requires.txt
+uditool.egg-info/top_level.txt

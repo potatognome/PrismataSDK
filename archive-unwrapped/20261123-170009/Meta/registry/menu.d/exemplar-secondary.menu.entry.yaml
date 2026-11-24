@@ -1,0 +1,37 @@
+## File: exemplar-secondary.menu.entry.yaml
+## Type: menu registry entry
+## Purpose: Right-hand menu in the exemplar multi-pane registry layout.
+
+id: exemplar-secondary
+udi: prismata.meta.menu.exemplar-secondary
+name: exemplar-secondary.menu
+label: "Secondary Menu"
+kind: menu
+description: "Secondary no-op menu used by the right-hand exemplar pane with a title header and per-item styling."
+schema_version: 0.4.3
+
+menu:
+  title: "Exemplar Secondary Menu 0.4.3"
+  header:
+    text: "Exemplar Secondary Menu 0.4.3"
+  items:
+    - label: "Prismata Default Menu Item (0.4.3)"
+      colour_role: accent-surface
+      border_pattern: single-line
+      header:
+        text: "Alert"
+    - label: "Prismata Default Menu Item (0.4.3)"
+      colour_role: primary-surface
+      border_pattern: single-line
+      header:
+        text: "Primary"
+    - label: "Prismata Default Menu Item (0.4.3)"
+      colour_role: secondary-surface
+      border_pattern: single-line
+      header:
+        text: "Secondary"
+
+meta:
+  created_by: copilot
+  created_at: 2026-10-02
+  schema_version: 0.4.3

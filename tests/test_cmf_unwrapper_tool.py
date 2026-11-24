@@ -114,3 +114,22 @@ def test_unwrap_warns_on_digest_mismatch_by_default(tmp_path: Path):
 
     assert report["restored_count"] == 1
     assert report["warning_count"] >= 1
+
+
+def test_unwrap_preserves_crlf_content_exactly(tmp_path: Path):
+    input_root = tmp_path / "wrapped"
+    output_root = tmp_path / "restored"
+    text = "line1\r\nline2\r\n"
+    _write_wrapped(input_root / "x.cmf.json", "docs/crlf.md", text)
+
+    unwrap_archive(
+        input_root=input_root,
+        output_root=output_root,
+        include_globs=("**/*.cmf.json",),
+        exclude_globs=(),
+        datestamp_output=False,
+    )
+
+    with open(output_root / "docs" / "crlf.md", "r", encoding="utf-8", newline="") as handle:
+        restored = handle.read()
+    assert restored == text

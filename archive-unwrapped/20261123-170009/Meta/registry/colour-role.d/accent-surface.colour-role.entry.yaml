@@ -1,0 +1,17 @@
+id: accent-surface
+udi: prismata.meta.colour-role.accent-surface
+slug: accent-surface
+name: accent-surface.colour-role
+label: "Accent Surface"
+kind: colour-role
+description: Semantic role for an accented content surface in multi-pane layouts.
+schema_version: 0.4.1
+
+layers:
+  bg: "ansi:rgb(12,22,34)"
+  fg: "ansi:rgb(120,220,255)"
+
+meta:
+  created_by: copilot
+  created_at: 2026-10-01
+  schema_version: 0.4.1

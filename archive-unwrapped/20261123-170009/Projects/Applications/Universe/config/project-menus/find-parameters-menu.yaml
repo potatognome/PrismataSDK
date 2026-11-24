@@ -1,0 +1,63 @@
+metadata:
+  udi: prismata.universe.menu.find.parameters
+  name: "Find Parameters Menu"
+  version: "0.1.0"
+  kind: menu
+  description: "Submenu for configuring multi-modal search filters."
+
+udi: "prismata.universe.menu.find.parameters"
+kind: menu
+type: "menu"
+title: "Set Search Parameters"
+header:
+  type: "search_params"
+
+items:
+
+  - key: "1"
+    udi: "prismata.universe.menu.find.locations.select-project-scope"
+    label: "Add/Remove Search Path(s)"
+    description: "Add or remove project search paths (supports multiple entries)."
+    capability: "prismata.universe.capability.fs-search-location"
+    ui_framework: basic
+    submenu_ref: null
+
+  - key: "2"
+    udi: "prismata.universe.menu.find.parameters.file-type"
+    label: "Add/Remove File Type(s)"
+    description: "Filter search results by artifact type."
+    capability: "prismata.universe.capability.fs-search"
+    ui_framework: basic
+    submenu_ref: null
+
+  - key: "3"
+    udi: "prismata.universe.menu.find.parameters.text-query"
+    label: "Add/Remove Text Queries"
+    description: "Search by keyword, title, or semantic fragment."
+    capability: "prismata.universe.capability.fs-search"
+    ui_framework: basic
+    submenu_ref: null
+
+  - key: "4"
+    udi: "prismata.universe.menu.find.parameters.tags"
+    label: "Add/Remove Tags"
+    description: "Restrict search using canonical tags or semantic labels."
+    capability: "prismata.universe.capability.fs-search"
+    ui_framework: basic
+    submenu_ref: null
+
+  - key: "5"
+    udi: "prismata.universe.menu.find.parameters.canonical-only"
+    label: "Search Canonical Folders Only (Y/N)"
+    description: "Limit matches to canonical registry entries."
+    capability: "prismata.universe.capability.fs-search"
+    ui_framework: basic
+    submenu_ref: null
+
+  - key: "6"
+    udi: "prismata.universe.menu.find.parameters.recursive"
+    label: "Search Folders Recursively (Y/N)"
+    description: "Toggle recursive folder search."
+    capability: "prismata.universe.capability.fs-search"
+    ui_framework: basic
+    submenu_ref: null

@@ -1,0 +1,131 @@
+﻿metadata:
+  udi: prismata.prismatalabs.menu.main
+  name: PrismataLabs Main Menu
+  version: 0.4.0
+  kind: PCMS-Menu
+
+menus:
+  - id: menu.main
+    key: menu.main
+    udi: prismata.prismatalabs.menu.main
+    name: PrismataLabs
+    title: PrismataLabs
+    label: PrismataLabs
+    position: Main
+    order: 1
+    type: main
+    icon: "labs"
+    colour_scheme: primary-application
+    border_scheme: primary-application
+    description: PrismataLabs preview environment for UI components.
+    finalItemType: Quit
+
+    header:
+      udi: prismata.prismatalabs.menu.main.header
+      text: |
+        PrismataLabs Preview
+        ---------------------
+        Colour Scheme Selected: {{selected.colour_scheme}}
+        Border Pattern Selected: {{selected.border_pattern}}
+        Object Selected: {{selected.object}}
+      style: header
+      colour_scheme: header
+      border_scheme: header-border
+      visibility_mode: static
+
+    footer:
+      udi: prismata.prismatalabs.menu.main.footer
+      text: "0: Quit | Enter: Select"
+      style: footer
+      colour_scheme: footer
+      border_scheme: primary-application
+      visibility_mode: static
+
+    items:
+      - udi: prismata.prismatalabs.menu.main.preview-object
+        key: "1"
+        name: Preview Object
+        label: Preview Object
+        type: action
+        order: 1
+        selectionMethod: number
+        action: execute
+        ui_framework: multi_pane
+        capability: prismata.prismatalabs.capability.preview-object
+        executeTarget: preview_object
+        icon: "preview"
+        colour_scheme: default
+        description: Render a preview of the selected object.
+        visibility_mode: static
+        enable_mode: conditional
+        enable_condition: selected.object is not None
+
+      - udi: prismata.prismatalabs.menu.main.validate-preview
+        key: "2"
+        name: Validate Preview
+        label: Validate Preview
+        type: action
+        order: 2
+        selectionMethod: number
+        action: execute
+        ui_framework: basic
+        capability: prismata.prismatalabs.capability.validate-preview
+        executeTarget: validate_preview
+        icon: "validate"
+        colour_scheme: default
+        description: Validate the loaded object using canonical schema rules.
+        visibility_mode: static
+        enable_mode: conditional
+        enable_condition: selected.object is not None
+
+      - udi: prismata.prismatalabs.menu.main.select-load
+        key: "3"
+        name: Select & Load Object(s)
+        label: Select & Load Object(s)
+        type: action
+        order: 3
+        selectionMethod: number
+        action: execute
+        ui_framework: structured_editor
+        capability: prismata.prismatalabs.capability.select-load
+        executeTarget: select_load_objects
+        icon: "load"
+        colour_scheme: default
+        description: Select colour-schemes, border-patterns, panes, menus, or ui-frameworks.
+        visibility_mode: static
+        enable_mode: enabled
+
+      - udi: prismata.prismatalabs.menu.main.default-folders
+        key: "4"
+        name: Default Folder Path(s)
+        label: Default Folder Path(s)
+        type: action
+        order: 4
+        selectionMethod: number
+        action: execute
+        ui_framework: basic
+        capability: prismata.prismatalabs.capability.default-folders
+        executeTarget: configure_default_folders
+        icon: "settings"
+        colour_scheme: default
+        description: Configure default search paths for previewable objects.
+        visibility_mode: static
+        enable_mode: enabled
+
+      - udi: prismata.prismatalabs.menu.main.quit
+        key: "0"
+        name: Quit
+        label: Quit
+        type: action
+        order: 5
+        selectionMethod: number
+        action: exit
+        ui_framework: basic
+        capability: prismata.prismatalabs.capability.app-quit
+        executeTarget: exit_application
+        icon: "quit"
+        colour_scheme: default
+        description: Exit PrismataLabs.
+        visibility_mode: static
+        enable_mode: enabled
+

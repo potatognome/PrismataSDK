@@ -1,0 +1,19 @@
+## File: edit-export.yaml
+## Type: schema
+## Purpose: Schema for export operation parameters used by edit/export
+## commands (path, type, naming options).
+
+metadata:
+  udi: prismata.universe.schema.edit-export
+  name: edit-export
+  kind: schema-definition
+  description: "Schema for export operation parameters used by edit/export commands."
+
+
+id: "prismata.universe.schema.edit-export"
+version: "1.0.0"
+type: object
+properties:
+  export_path: { type: string }
+  file_type: { type: string }
+  naming_convention_enabled: { type: boolean }

@@ -1,0 +1,31 @@
+## File: exemplar-multi-pane-menus.ui-framework.entry.yaml
+## Type: ui-framework registry entry
+## Purpose: Registry-backed multi-pane menu framework using two side-by-side panes.
+
+id: exemplar-multi-pane-menus
+udi: prismata.meta.ui-framework.exemplar-multi-pane-menus
+name: exemplar-multi-pane-menus.ui-framework
+label: "Exemplar Multi-Pane Menus"
+kind: ui-framework
+description: "Two side-by-side panes with explicit pane-to-menu bindings and header-driven menu titles."
+schema_version: 0.4.3
+
+panes:
+  - prismata.meta.pane.lh-pane
+  - prismata.meta.pane.rh-pane
+menus:
+  - prismata.meta.menu.exemplar-primary
+  - prismata.meta.menu.exemplar-secondary
+pane_bindings:
+  - pane: prismata.meta.pane.lh-pane
+    menu: prismata.meta.menu.exemplar-primary
+  - pane: prismata.meta.pane.rh-pane
+    menu: prismata.meta.menu.exemplar-secondary
+colour_scheme: default
+active_pane: prismata.meta.pane.lh-pane
+border_pattern: single-line
+
+meta:
+  created_by: copilot
+  created_at: 2026-10-02
+  schema_version: 0.4.3

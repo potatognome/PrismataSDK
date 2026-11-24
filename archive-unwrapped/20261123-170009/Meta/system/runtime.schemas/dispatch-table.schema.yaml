@@ -1,0 +1,26 @@
+version: 0.4.0
+kind: dispatch-table
+schema_type: runtime
+
+metadata:
+  udi: prismata.meta.schema.dispatch-table
+  name: dispatch-table.schema
+  location: /Prismata/Meta/runtime.schemas/dispatch-table.schema.yaml
+  description: Canonical schema defining event-to-action dispatch rules.
+
+spec:
+  target_kind: dispatch-table
+  naming:
+    file_suffix: .schema.yaml
+  versioning:
+    semver: true
+
+fields:
+  - name: entries
+    path: entries
+    type: array
+    required: true
+
+object:
+  entries: []
+

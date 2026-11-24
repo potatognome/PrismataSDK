@@ -1,0 +1,31 @@
+version: 0.4.0
+kind: schema-location
+schema_type: tooling
+
+metadata:
+  udi: prismata.meta.schema.schema-location
+  name: schema-location.schema
+  description: Canonical schema defining folder locations for schema groups.
+
+spec:
+  target_kind: schema-location
+  naming:
+    file_suffix: .schema.yaml
+  versioning:
+    semver: true
+
+fields:
+  - name: group
+    path: group
+    type: string
+    required: true
+
+  - name: path
+    path: path
+    type: string
+    required: true
+
+object:
+  group: ""
+  path: ""
+

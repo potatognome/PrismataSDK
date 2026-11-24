@@ -1,0 +1,26 @@
+## File: exemplar.ui-framework.entry.yaml
+## Type: ui-framework registry entry
+## Purpose: Exemplar multi-pane terminal layout with overlap and non-overlap.
+
+id: exemplar
+udi: prismata.meta.ui-framework.exemplar
+name: exemplar.ui-framework
+label: "Prismata Exemplar UI Framework (0.4.2)"
+kind: ui-framework
+description: "Multi-pane terminal layout showing overlapping and non-overlapping panes for exemplar rendering."
+schema_version: 0.4.2
+
+menus: []
+panes:
+  - prismata.meta.pane.exemplar-primary
+  - prismata.meta.pane.exemplar-secondary
+  - prismata.meta.pane.exemplar-tertiary
+  - prismata.meta.pane.exemplar-exception
+colour_scheme: default
+active_pane: prismata.meta.pane.exemplar-primary
+border_pattern: single-line
+
+meta:
+  created_by: copilot
+  created_at: 2026-10-01
+  schema_version: 0.4.2

@@ -1,0 +1,28 @@
+# ASTalyzer main menu 
+id: "prismata.astalyzer.menu.main"
+version: 0.2.0
+kind: menu
+description: Main PCMS-2026 menu for ASTalyzer tools.
+
+layout:
+  type: list
+  title: ASTalyzer — Prompt & Code Analysis Tools
+
+items:
+  - id: "prismata.astalyzer.menu-item.analyze-prompt-ticcseo"
+    label: Analyze Prompt (TICCSEO AST)
+    group: analysis
+    action:
+      type: udi-capability
+      capability_id: "prismata.astalyzer.capability.analyze-prompt-ticcseo"
+    hints:
+      short: Parse a raw prompt into TICCSEO AST.
+      long: >
+        Takes a raw prompt string, parses it into Task, Input, Context,
+        Constraints, Style, Examples, and Output Format, and returns a
+        structured AST object conforming to prompt-ast-ticcseo schema.
+
+  - id: "prismata.astalyzer.menu-item.scan-api-recursive"
+    label: Scan Folder for APIs (Recursive)
+    group: analysis
+    action: "prismata.astalyzer.menu.scan"

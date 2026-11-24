@@ -1,0 +1,192 @@
+## File: generated-exemplar.chromascheme.entry.yaml
+## Type: chromascheme registry entry (0.4.0)
+## Purpose: Generated exemplar Prismata terminal chromascheme registry entry.
+## Provides colour mappings for UI surfaces, borders,
+## menus, and interactive elements.
+
+id: generated-exemplar
+udi: prismata.meta.chromascheme.generated-exemplar
+name: generated-exemplar.chromascheme
+label: "Prismata Generated Exemplar Terminal ChromaScheme (0.4.0)"
+kind: chromascheme
+description: Generated exemplar terminal chromascheme for Prismata UI.
+schema_version: 0.4.0
+
+colour_set:
+  -
+    id: "c0"
+    origin: "base"
+    rgb:
+      r: 163
+      g: 138
+      b: 134
+    oklch:
+      l: 0.64
+      c: 0.0576
+      h: 9.444444
+    origin_metadata:
+      hue_offset: 45.0
+  -
+    id: "c1"
+    origin: "base"
+    rgb:
+      r: 149
+      g: 170
+      b: 138
+    oklch:
+      l: 0.666667
+      c: 0.0608
+      h: 99.444444
+    origin_metadata:
+      hue_offset: 135.0
+  -
+    id: "c2"
+    origin: "base"
+    rgb:
+      r: 141
+      g: 171
+      b: 177
+    oklch:
+      l: 0.693333
+      c: 0.064
+      h: 189.444444
+    origin_metadata:
+      hue_offset: 225.0
+  -
+    id: "c3"
+    origin: "base"
+    rgb:
+      r: 170
+      g: 145
+      b: 184
+    oklch:
+      l: 0.72
+      c: 0.0672
+      h: 279.444444
+    origin_metadata:
+      hue_offset: 315.0
+  -
+    id: "c4"
+    origin: "derived"
+    rgb:
+      r: 163
+      g: 133
+      b: 127
+    oklch:
+      l: 0.64
+      c: 0.0704
+      h: 9.444444
+    origin_metadata:
+      hue_offset: 45.0
+  -
+    id: "c5"
+    origin: "derived"
+    rgb:
+      r: 144
+      g: 170
+      b: 131
+    oklch:
+      l: 0.666667
+      c: 0.0736
+      h: 99.444444
+    origin_metadata:
+      hue_offset: 135.0
+  -
+    id: "c6"
+    origin: "derived"
+    rgb:
+      r: 134
+      g: 170
+      b: 177
+    oklch:
+      l: 0.693333
+      c: 0.0768
+      h: 189.444444
+    origin_metadata:
+      hue_offset: 225.0
+  -
+    id: "c7"
+    origin: "derived"
+    rgb:
+      r: 168
+      g: 138
+      b: 184
+    oklch:
+      l: 0.72
+      c: 0.08
+      h: 279.444444
+    origin_metadata:
+      hue_offset: 315.0
+
+roles:
+  primary-surface:
+    layers:
+      bg:
+        colourRef: "c0"
+  secondary-surface:
+    layers:
+      bg:
+        colourRef: "c1"
+  tertiary-surface:
+    layers:
+      bg:
+        colourRef: "c2"
+  accent-surface:
+    layers:
+      bg:
+        colourRef: "c3"
+  border-fg:
+    layers:
+      fg:
+        colourRef: "c4"
+  menu-fg:
+    layers:
+      fg:
+        colourRef: "c5"
+  menu-bg:
+    layers:
+      bg:
+        colourRef: "c6"
+  interactive-fg:
+    layers:
+      fg:
+        colourRef: "c7"
+  interactive-bg:
+    layers:
+      bg:
+        colourRef: "c0"
+  neutral-fg:
+    layers:
+      fg:
+        colourRef: "c1"
+  neutral-bg:
+    layers:
+      bg:
+        colourRef: "c2"
+
+geometry:
+  baseGeometry: "quadratic"
+  overlays:
+    -
+      type: "harmonic"
+      params:
+        rotation: 45
+    -
+      type: "luminance_wheel"
+      params:
+        amplitude: 0.08
+    -
+      type: "chroma_spiral"
+      params:
+        step: 0.01
+  expressions:
+    parageometric: true
+    offsets:
+      - 45.0
+      - 135.0
+      - 225.0
+      - 315.0
+      - 45.0
+      - 135.0
+      - 225.0
+      - 315.0

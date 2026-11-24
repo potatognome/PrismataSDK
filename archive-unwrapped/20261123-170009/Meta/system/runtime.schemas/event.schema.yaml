@@ -1,0 +1,38 @@
+version: 0.4.0
+kind: event
+schema_type: runtime
+
+metadata:
+  udi: prismata.meta.schema.event
+  name: event.schema
+  location: /Prismata/Meta/runtime.schemas/event.schema.yaml
+  description: Canonical runtime event schema.
+
+spec:
+  target_kind: event
+  naming:
+    file_suffix: .schema.yaml
+  versioning:
+    semver: true
+
+fields:
+  - name: id
+    path: id
+    type: string
+    required: true
+
+  - name: source
+    path: source
+    type: string
+    required: true
+
+  - name: payload
+    path: payload
+    type: object
+    required: false
+
+object:
+  id: ""
+  source: ""
+  payload: {}
+

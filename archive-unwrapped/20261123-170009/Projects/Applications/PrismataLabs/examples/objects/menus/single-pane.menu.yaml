@@ -1,0 +1,62 @@
+id: example-single-pane-menu
+udi: prismata.examples.menu.single-pane
+kind: menu
+title: Single Pane Demo
+header:
+  id: example-single-pane-menu-header
+  text: Single Pane Demo
+  colour_role: prismata.examples.colour-role.menu-accent
+  colour_scheme: prismata.examples.colour-scheme.surface
+  border_pattern: prismata.examples.border.example-menu
+colour_role: prismata.examples.colour-role.menu-accent
+colour_scheme: prismata.examples.colour-scheme.surface
+border_pattern: prismata.examples.border.example-menu
+items:
+- id: example-print-hello-world
+  udi: prismata.examples.menu-item.print-hello-world
+  kind: menu-item
+  label: Print Hello World
+  capability: prismata.examples.capability.print-hello
+  colour_role: prismata.examples.colour-role.menu-accent
+  colour_scheme: prismata.examples.colour-scheme.surface
+  border_pattern: prismata.examples.border.example-item
+  header:
+    id: example-print-hello-header
+    text: Hello
+    colour_role: prismata.examples.colour-role.menu-accent
+    colour_scheme: prismata.examples.colour-scheme.surface
+    border_pattern: prismata.examples.border.example-item
+  visibility_mode: static
+  enable_mode: enabled
+- id: example-clear-hello-world
+  udi: prismata.examples.menu-item.clear-hello-world
+  kind: menu-item
+  label: Clear all Hello World
+  capability: prismata.examples.capability.clear-hello
+  colour_role: prismata.examples.colour-role.alert
+  colour_scheme: prismata.examples.colour-scheme.surface
+  border_pattern: prismata.examples.border.example-item
+  header:
+    id: example-clear-header
+    text: Clear
+    colour_role: prismata.examples.colour-role.alert
+    colour_scheme: prismata.examples.colour-scheme.surface
+    border_pattern: prismata.examples.border.example-item
+  visibility_mode: static
+  enable_mode: enabled
+- id: example-exit-app
+  udi: prismata.examples.menu-item.exit
+  kind: menu-item
+  label: Exit
+  capability: prismata.examples.capability.exit
+  colour_role: prismata.examples.colour-role.alert
+  colour_scheme: prismata.examples.colour-scheme.surface
+  border_pattern: prismata.examples.border.example-item
+  header:
+    id: example-exit-header
+    text: Quit
+    colour_role: prismata.examples.colour-role.alert
+    colour_scheme: prismata.examples.colour-scheme.surface
+    border_pattern: prismata.examples.border.example-item
+  visibility_mode: static
+  enable_mode: enabled

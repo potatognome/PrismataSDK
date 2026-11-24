@@ -1,0 +1,19 @@
+## File: edit-update-fields.yaml
+## Type: schema
+## Purpose: Schema describing results from update-field operations
+## (missing mandatory/optional fields and the updated object payload).
+
+metadata:
+  udi: prismata.universe.schema.edit-update-fields
+  name: edit-update-fields
+  kind: schema-definition
+  description: "Schema describing results from update-field operations."
+
+
+id: "prismata.universe.schema.edit-update-fields"
+version: "1.0.0"
+type: object
+properties:
+  missing_mandatory: { type: array }
+  missing_optional: { type: array }
+  updated_object: { type: object }

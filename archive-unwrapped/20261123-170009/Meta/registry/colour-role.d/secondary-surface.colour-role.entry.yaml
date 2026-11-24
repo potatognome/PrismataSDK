@@ -1,0 +1,19 @@
+id: secondary-surface
+udi: prismata.meta.colour-role.secondary-surface
+slug: secondary-surface
+name: secondary-surface.colour-role
+label: "Secondary Surface"
+kind: colour-role
+description: Semantic role for the secondary background surface.
+schema_version: 0.4.1
+
+layers:
+  bg: "ansi:rgb(18,18,20)"
+  fg: "ansi:rgb(200,200,200)"
+
+meta:
+  created_by: Daniel
+  created_at: 2026-10-01
+  schema_version: 0.4.1
+
+

@@ -1,0 +1,18 @@
+## File: find-parameters.yaml
+## Type: schema
+## Purpose: Schema for search/find parameters (query string and filters)
+## used by search ingestion and UI components.
+
+metadata:
+  udi: prismata.universe.schema.find-parameters
+  name: find-parameters
+  kind: schema-definition
+  description: "Schema for search/find parameters (query string and filters)."
+
+
+id: "prismata.universe.schema.find-parameters"
+version: "1.0.0"
+type: object
+properties:
+  query: { type: string }
+  filters: { type: array }

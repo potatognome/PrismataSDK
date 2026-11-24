@@ -1,0 +1,59 @@
+## File: find-results-menu.yaml
+## Type: project menu
+## Purpose: Menu for search results actions and panes (results list,
+## preview pane, diff finder). Used by search and navigation workflows.
+
+metadata:
+  udi: prismata.universe.menu.find.results
+  name: "Find Results Menu"
+  version: "0.1.0"
+  kind: menu
+  description: "Submenu for search result actions and pane views."
+
+udi: "prismata.universe.menu.find.results"
+kind: menu
+type: "menu"
+title: "Search Results"
+header:
+  type: "search_params"
+
+items:
+  - key: "1"
+    udi: "prismata.universe.menu.find.results.results-list"
+    label: "Results List"
+    description: "Display the current search result set in ranked order."
+    capability: "prismata.universe.capability.fs-search-results"
+    ui_framework: pane
+    submenu_ref: null
+
+  - key: "2"
+    udi: "prismata.universe.menu.find.results.preview-pane"
+    label: "Preview Pane"
+    description: "Show the active object preview and metadata summary."
+    capability: "prismata.universe.capability.fs-exemplar-preview"
+    ui_framework: pane
+    submenu_ref: null
+
+  - key: "3"
+    udi: "prismata.universe.menu.find.results.version-carousel"
+    label: "Version Carousel"
+    description: "Page through compatible versions of the active result."
+    capability: "prismata.universe.capability.fs-search-results"
+    ui_framework: multi_pane
+    submenu_ref: null
+
+  - key: "4"
+    udi: "prismata.universe.menu.find.results.diff-finder"
+    label: "Diff Finder"
+    description: "Compare semantic fields and normalized values across matches."
+    capability: "prismata.universe.capability.fs-diff-compatible"
+    ui_framework: diff_view
+    submenu_ref: null
+
+  - key: "5"
+    udi: "prismata.universe.menu.find.results.refresh-results"
+    label: "Refresh Results"
+    description: "Re-run the current find operation and refresh pane output."
+    capability: "prismata.universe.capability.fs-search-execute"
+    ui_framework: basic
+    submenu_ref: null

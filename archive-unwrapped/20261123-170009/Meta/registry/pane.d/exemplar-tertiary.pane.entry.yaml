@@ -1,0 +1,28 @@
+## File: exemplar-tertiary.pane.entry.yaml
+## Type: pane registry entry (0.4.0)
+## Purpose: Tertiary exemplar pane with a separate border profile and accent content.
+
+id: exemplar-tertiary
+udi: prismata.meta.pane.exemplar-tertiary
+name: exemplar-tertiary.pane
+label: "Tertiary"
+kind: pane
+description: "Tertiary pane in the exemplar layout. It overlaps both the primary and secondary panes."
+schema_version: 0.4.2
+
+border_pattern: default
+colour_scheme: default
+content_role: accent-surface
+colour_role: accent-surface
+border_role: border
+x: 18
+y: 42
+width: 42
+height: 28
+layout:
+  mode: single
+
+meta:
+  created_by: copilot
+  created_at: 2026-10-01
+  schema_version: 0.4.2

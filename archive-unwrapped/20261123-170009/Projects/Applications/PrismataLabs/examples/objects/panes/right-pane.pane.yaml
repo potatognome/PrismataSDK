@@ -1,0 +1,109 @@
+id: example-right-pane
+udi: prismata.examples.pane.right
+kind: pane
+label: Right Pane
+title: Right Pane
+content_role: prismata.examples.colour-role.pane-secondary
+colour_role: prismata.examples.colour-role.pane-secondary
+border_role: prismata.examples.colour-role.border
+border_pattern: prismata.examples.border.example-pane
+colour_scheme: prismata.examples.colour-scheme.surface
+x: 52
+y: 3
+width: 46
+height: 22
+menu:
+  id: example-dual-pane-menu
+  udi: prismata.examples.menu.dual-pane
+  kind: menu
+  title: Dual Pane Demo
+  header:
+    id: example-dual-pane-menu-header
+    text: Dual Pane Demo
+    colour_role: prismata.examples.colour-role.menu-accent
+    colour_scheme: prismata.examples.colour-scheme.surface
+    border_pattern: prismata.examples.border.example-menu
+  colour_role: prismata.examples.colour-role.menu-accent
+  colour_scheme: prismata.examples.colour-scheme.surface
+  border_pattern: prismata.examples.border.example-menu
+  items:
+  - id: example-open-alt-pane
+    udi: prismata.examples.menu-item.open-alt-pane
+    kind: menu-item
+    label: Open alternate pane
+    capability: prismata.examples.capability.open-alt-pane
+    colour_role: prismata.examples.colour-role.menu-accent
+    colour_scheme: prismata.examples.colour-scheme.surface
+    border_pattern: prismata.examples.border.example-item
+    header:
+      id: example-alt-pane-header
+      text: Pane
+      colour_role: prismata.examples.colour-role.menu-accent
+      colour_scheme: prismata.examples.colour-scheme.surface
+      border_pattern: prismata.examples.border.example-item
+    visibility_mode: static
+    enable_mode: enabled
+  - id: example-print-left-pane
+    udi: prismata.examples.menu-item.print-left-pane
+    kind: menu-item
+    label: 'Print Hello World to Left '
+    capability: prismata.examples.capability.print-left
+    colour_role: prismata.examples.colour-role.menu-accent
+    colour_scheme: prismata.examples.colour-scheme.surface
+    border_pattern: prismata.examples.border.example-item
+    header:
+      id: example-print-left-header
+      text: Left
+      colour_role: prismata.examples.colour-role.menu-accent
+      colour_scheme: prismata.examples.colour-scheme.surface
+      border_pattern: prismata.examples.border.example-item
+    visibility_mode: static
+    enable_mode: enabled
+  - id: example-print-right-pane
+    udi: prismata.examples.menu-item.print-right-pane
+    kind: menu-item
+    label: Print Hello World to Right
+    capability: prismata.examples.capability.print-right
+    colour_role: prismata.examples.colour-role.menu-accent
+    colour_scheme: prismata.examples.colour-scheme.surface
+    border_pattern: prismata.examples.border.example-item
+    header:
+      id: example-print-right-header
+      text: Right
+      colour_role: prismata.examples.colour-role.menu-accent
+      colour_scheme: prismata.examples.colour-scheme.surface
+      border_pattern: prismata.examples.border.example-item
+    visibility_mode: static
+    enable_mode: enabled
+  - id: example-switch-active-pane
+    udi: prismata.examples.menu-item.switch-active-pane
+    kind: menu-item
+    label: Change Active Pane
+    capability: prismata.examples.capability.switch-pane
+    colour_role: prismata.examples.colour-role.menu-accent
+    colour_scheme: prismata.examples.colour-scheme.surface
+    border_pattern: prismata.examples.border.example-item
+    header:
+      id: example-switch-pane-header
+      text: Switch
+      colour_role: prismata.examples.colour-role.menu-accent
+      colour_scheme: prismata.examples.colour-scheme.surface
+      border_pattern: prismata.examples.border.example-item
+    visibility_mode: static
+    enable_mode: enabled
+  - id: example-clear-target-pane
+    udi: prismata.examples.menu-item.clear-target-pane
+    kind: menu-item
+    label: Clear selected pane
+    capability: prismata.examples.capability.clear-target-pane
+    colour_role: prismata.examples.colour-role.alert
+    colour_scheme: prismata.examples.colour-scheme.surface
+    border_pattern: prismata.examples.border.example-item
+    header:
+      id: example-clear-target-header
+      text: Select
+      colour_role: prismata.examples.colour-role.alert
+      colour_scheme: prismata.examples.colour-scheme.surface
+      border_pattern: prismata.examples.border.example-item
+    visibility_mode: static
+    enable_mode: enabled

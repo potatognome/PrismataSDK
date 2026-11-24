@@ -1,0 +1,31 @@
+version: 0.4.0
+kind: introspection
+schema_type: tooling
+
+metadata:
+  udi: prismata.meta.schema.introspection
+  name: introspection.schema
+  description: Canonical schema defining introspection rules for schema analysis.
+
+spec:
+  target_kind: introspection
+  naming:
+    file_suffix: .schema.yaml
+  versioning:
+    semver: true
+
+fields:
+  - name: targets
+    path: targets
+    type: array
+    required: true
+
+  - name: rules
+    path: rules
+    type: array
+    required: false
+
+object:
+  targets: []
+  rules: []
+

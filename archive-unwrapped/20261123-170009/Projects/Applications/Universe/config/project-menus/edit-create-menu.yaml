@@ -1,0 +1,15 @@
+metadata:
+  udi: prismata.universe.menu.edit.create
+  name: "Edit > Create Menu"
+  version: "0.1.0"
+  kind: menu
+  description: "Submenu for creating new objects from reference context."
+
+items:
+  - key: "1"
+    udi: "prismata.universe.menu.edit.create.create"
+    label: "Create New Object"
+    description: "Create a new object from the current reference object context."
+    capability: "prismata.universe.capability.fs-create-from-object"
+    ui_framework: basic
+    submenu_ref: null

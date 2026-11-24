@@ -1,0 +1,20 @@
+## File: verify-reference.yaml
+## Type: schema
+## Purpose: Schema used to verify references between objects (compatibility
+## checks and reference validation during ingestion/migration).
+
+metadata:
+  udi: prismata.universe.schema.verify-reference
+  name: verify-reference
+  kind: schema-definition
+  description: "Schema used to verify references between objects during ingestion/migration."
+
+
+id: "prismata.universe.schema.verify-reference"
+version: "1.1.0"
+type: object
+properties:
+  reference_object: { type: object }
+  selected_objects: { type: array }
+  compatibility_matrix: { type: object }
+  verification_results: { type: array }

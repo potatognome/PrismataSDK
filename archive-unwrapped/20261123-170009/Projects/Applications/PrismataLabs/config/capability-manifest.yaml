@@ -1,0 +1,185 @@
+﻿metadata:
+  udi: prismata.prismatalabs.capability.manifest
+  name: PrismataLabs Capability Manifest
+  version: 0.4.0
+  kind: capability-manifest
+  description: >
+    Declares all capabilities used by PrismataLabs for previewing,
+    validating, selecting, loading, and configuring UI components.
+
+capabilities:
+
+  # -------------------------------------------------------------------------
+  # Preview Capabilities
+  # -------------------------------------------------------------------------
+
+  - udi: prismata.prismatalabs.capability.preview-object
+    name: Preview Object
+    kind: capability
+    version: 0.4.0
+    action: execute
+    executeTarget: preview_object
+    description: Render a preview of the selected object using Python preview engine.
+    visibilityMode: static
+    enableMode: conditional
+    enableCondition: selected.object is not None
+
+  - udi: prismata.prismatalabs.capability.validate-preview
+    name: Validate Preview
+    kind: capability
+    version: 0.4.0
+    action: execute
+    executeTarget: validate_preview
+    description: Validate the selected object using canonical schema rules.
+    visibilityMode: static
+    enableMode: conditional
+    enableCondition: selected.object is not None
+
+  # -------------------------------------------------------------------------
+  # Selection & Loading Capabilities
+  # -------------------------------------------------------------------------
+
+  - udi: prismata.prismatalabs.capability.select-load
+    name: Select & Load Objects
+    kind: capability
+    version: 0.4.0
+    action: execute
+    executeTarget: select_load_objects
+    description: >
+      Select colour-schemes, border-patterns, panes, menus, menu-items,
+      or ui-frameworks using the shared path_helper module.
+    visibilityMode: static
+    enableMode: enabled
+
+  # -------------------------------------------------------------------------
+  # Configuration Capabilities
+  # -------------------------------------------------------------------------
+
+  - udi: prismata.prismatalabs.capability.default-folders
+    name: Configure Default Folder Paths
+    kind: capability
+    version: 0.4.0
+    action: execute
+    executeTarget: configure_default_folders
+    description: Configure default search paths for previewable objects.
+    visibilityMode: static
+    enableMode: enabled
+
+  # -------------------------------------------------------------------------
+  # Application Lifecycle
+  # -------------------------------------------------------------------------
+
+  - udi: prismata.prismatalabs.capability.app-quit
+    name: Quit Application
+    kind: capability
+    version: 0.4.0
+    action: exit
+    executeTarget: exit_application
+    description: Exit PrismataLabs.
+    visibilityMode: static
+    enableMode: enabled
+
+  # -------------------------------------------------------------------------
+  # Example Fixture Capabilities (for deterministic schema-validated demos)
+  # -------------------------------------------------------------------------
+
+  - udi: prismata.examples.capability.print-hello
+    name: Print Hello
+    kind: capability
+    version: 0.4.0
+    action: execute
+    executeTarget: example_print_hello
+    description: Example capability for single-pane hello output.
+    visibilityMode: static
+    enableMode: enabled
+
+  - udi: prismata.examples.capability.clear-hello
+    name: Clear Hello
+    kind: capability
+    version: 0.4.0
+    action: execute
+    executeTarget: example_clear_hello
+    description: Example capability to clear hello output.
+    visibilityMode: static
+    enableMode: enabled
+
+  - udi: prismata.examples.capability.exit
+    name: Example Exit
+    kind: capability
+    version: 0.4.0
+    action: exit
+    executeTarget: example_exit
+    description: Example capability for exiting demo flows.
+    visibilityMode: static
+    enableMode: enabled
+
+  - udi: prismata.examples.capability.open-alt-pane
+    name: Open Alternate Pane
+    kind: capability
+    version: 0.4.0
+    action: execute
+    executeTarget: example_open_alt_pane
+    description: Example capability for activating alternate pane focus.
+    visibilityMode: static
+    enableMode: enabled
+
+  - udi: prismata.examples.capability.print-left
+    name: Print Left
+    kind: capability
+    version: 0.4.0
+    action: execute
+    executeTarget: example_print_left
+    description: Example capability to print to the left pane.
+    visibilityMode: static
+    enableMode: enabled
+
+  - udi: prismata.examples.capability.print-right
+    name: Print Right
+    kind: capability
+    version: 0.4.0
+    action: execute
+    executeTarget: example_print_right
+    description: Example capability to print to the right pane.
+    visibilityMode: static
+    enableMode: enabled
+
+  - udi: prismata.examples.capability.switch-pane
+    name: Switch Active Pane
+    kind: capability
+    version: 0.4.0
+    action: execute
+    executeTarget: example_switch_pane
+    description: Example capability to switch active pane focus.
+    visibilityMode: static
+    enableMode: enabled
+
+  - udi: prismata.examples.capability.clear-target-pane
+    name: Clear Target Pane
+    kind: capability
+    version: 0.4.0
+    action: execute
+    executeTarget: example_clear_target_pane
+    description: Example capability to clear currently targeted pane output.
+    visibilityMode: static
+    enableMode: enabled
+
+  - udi: prismata.examples.capability.rotate-colour-role
+    name: Rotate Colour Role
+    kind: capability
+    version: 0.4.0
+    action: execute
+    executeTarget: example_rotate_colour_role
+    description: Example capability for colour role rotation in diagnostics.
+    visibilityMode: static
+    enableMode: enabled
+
+  - udi: prismata.examples.capability.diagnostic-print
+    name: Diagnostic Print
+    kind: capability
+    version: 0.4.0
+    action: execute
+    executeTarget: example_diagnostic_print
+    description: Example capability for diagnostic pane output.
+    visibilityMode: static
+    enableMode: enabled
+

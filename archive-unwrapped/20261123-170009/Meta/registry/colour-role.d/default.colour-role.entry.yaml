@@ -1,0 +1,19 @@
+id: default
+udi: prismata.meta.colour-role.default
+slug: default
+name: default.colour-role
+label: "Default Colour Role"
+kind: colour-role
+description: Fallback semantic colour role.
+schema_version: 0.4.1
+
+layers:
+  bg: "ansi:rgb(10,10,12)"
+  fg: "ansi:rgb(220,220,220)"
+
+meta:
+  created_by: Daniel
+  created_at: 2026-10-05
+  schema_version: 0.4.1
+
+

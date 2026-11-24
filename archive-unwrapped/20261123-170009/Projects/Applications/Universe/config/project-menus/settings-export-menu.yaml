@@ -1,0 +1,47 @@
+## File: settings-export-menu.yaml
+## Type: project menu
+## Purpose: Menu exposing export-related settings (default type,
+## allowed extensions, version suffix behavior) for the application.
+
+metadata:
+  udi: prismata.universe.menu.settings.export
+  name: "Settings > Export Menu"
+  version: "0.1.0"
+  kind: menu
+  description: "Submenu for export-related settings."
+
+udi: "prismata.universe.menu.settings-export"
+kind: menu
+type: "menu"
+title: "Export Settings"
+
+items:
+  - key: "1"
+    udi: "prismata.universe.menu.settings.export.default-type"
+    label: "Set Default Export Type"
+    description: "Set default export type (for example: yaml, json)."
+    capability: "prismata.universe.capability.app-settings-export"
+    setting_key: "default_export_type"
+    value_type: "string"
+    ui_framework: basic
+    submenu_ref: null
+
+  - key: "2"
+    udi: "prismata.universe.menu.settings.export.allowed-ext"
+    label: "Set Allowed Extensions"
+    description: "Set allowed export extensions as a list (prompt supports multi-value input)."
+    capability: "prismata.universe.capability.app-settings-export"
+    setting_key: "allowed_extensions"
+    value_type: "string_array"
+    ui_framework: basic
+    submenu_ref: null
+
+  - key: "3"
+    udi: "prismata.universe.menu.settings.export.auto-append"
+    label: "Set Auto Append Version"
+    description: "Enable or disable automatic version suffix appending on export."
+    capability: "prismata.universe.capability.app-settings-export"
+    setting_key: "auto_append_version"
+    value_type: "boolean"
+    ui_framework: basic
+    submenu_ref: null

@@ -1,0 +1,28 @@
+## File: lh-pane.pane.entry.yaml
+## Type: pane registry entry
+## Purpose: Left-hand pane in a side-by-side multi-pane layout.
+
+id: lh-pane
+udi: prismata.meta.pane.lh-pane
+name: lh-pane.pane
+label: "LH Pane"
+kind: pane
+description: "Primary left-hand pane that fills the left side of a multi-pane terminal layout."
+schema_version: 0.4.2
+
+border_pattern: single-line
+colour_scheme: default
+content_role: primary-surface
+colour_role: primary-surface
+border_role: border
+x: 5
+y: 5
+width: 44
+height: 64
+layout:
+  mode: single
+
+meta:
+  created_by: copilot
+  created_at: 2026-10-02
+  schema_version: 0.4.2

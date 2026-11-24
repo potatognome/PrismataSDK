@@ -1,0 +1,29 @@
+workspaceRoot: "C:\\Repository\\Daniel\\dev_local"
+
+projectPath: "Prismata\\Projects\\Tooling\\Universe-scaffold"
+projectPathIsRelative: true
+
+outputPath: "Prismata\\.workspace\\.project-snapshot\\Universe-scaffold"
+outputPathIsRelative: true
+
+# Dictionary of file extensions to include/exclude
+extensionRules:
+  include:
+    - ".ts"
+    - ".py"
+    - ".md"
+    - ".yaml"
+    - ".json"
+  exclude:
+    - ".log"
+    - ".tmp"
+    - ".cache"
+
+# Dictionary of folder names that should be summarized
+folderSummaryRules:
+  - "node_modules"
+  - "dist"
+  - "build"
+  - ".git"
+  - ".workspace"
+  - ".logs"

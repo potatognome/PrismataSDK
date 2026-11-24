@@ -1,0 +1,16 @@
+id: example-print-hello-world
+udi: prismata.examples.menu-item.print-hello-world
+kind: menu-item
+label: Print Hello World
+capability: prismata.examples.capability.print-hello
+colour_role: prismata.examples.colour-role.menu-accent
+colour_scheme: prismata.examples.colour-scheme.surface
+border_pattern: prismata.examples.border.example-item
+header:
+  id: example-print-hello-header
+  text: Hello
+  colour_role: prismata.examples.colour-role.menu-accent
+  colour_scheme: prismata.examples.colour-scheme.surface
+  border_pattern: prismata.examples.border.example-item
+visibility_mode: static
+enable_mode: enabled

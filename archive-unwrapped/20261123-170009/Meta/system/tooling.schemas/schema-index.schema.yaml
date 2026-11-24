@@ -1,0 +1,25 @@
+version: 0.4.0
+kind: schema-index
+schema_type: tooling
+
+metadata:
+  udi: prismata.meta.schema.schema-index
+  name: schema-index.schema
+  description: Index of all schemas and their canonical locations.
+
+spec:
+  target_kind: schema-index
+  naming:
+    file_suffix: .schema.yaml
+  versioning:
+    semver: true
+
+fields:
+  - name: entries
+    path: entries
+    type: array
+    required: true
+
+object:
+  entries: []
+

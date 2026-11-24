@@ -1,0 +1,20 @@
+## File: find-results.yaml
+## Type: schema
+## Purpose: Schema describing the layout and payloads returned by find
+## operations (results list, preview, version carousel, diff panel).
+
+metadata:
+  udi: prismata.universe.schema.find-results
+  name: find-results
+  kind: schema-definition
+  description: "Schema describing the layout and payloads returned by find operations."
+
+
+id: "prismata.universe.schema.find-results"
+version: "2.0.0"
+type: object
+properties:
+  results_list: { type: array }
+  preview: { type: object }
+  version_carousel: { type: object }
+  diff_panel: { type: object }

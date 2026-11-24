@@ -1,0 +1,27 @@
+kind: colour-schemes
+entries:
+- id: example-surface-scheme
+  udi: prismata.examples.colour-scheme.surface
+  kind: colour-scheme
+  roles:
+    example-pane-primary:
+      fg: ansi:rgb(220,220,220)
+      bg: ansi:rgb(12,17,26)
+    example-pane-secondary:
+      fg: ansi:rgb(210,240,255)
+      bg: ansi:rgb(22,30,38)
+    example-menu-accent:
+      fg: ansi:rgb(120,220,255)
+      bg: ansi:rgb(12,22,34)
+    example-menu-border:
+      fg: ansi:rgb(255,205,120)
+      bg: ansi:rgb(32,21,12)
+    example-item-border:
+      fg: ansi:rgb(160,160,160)
+      bg: ansi:rgb(17,17,22)
+    example-alert:
+      fg: ansi:rgb(255,160,120)
+      bg: ansi:rgb(38,12,10)
+    example-border:
+      fg: ansi:rgb(163,175,200)
+      bg: ansi:rgb(10,10,12)

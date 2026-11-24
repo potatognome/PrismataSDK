@@ -1,0 +1,42 @@
+## File: settings-ignore-menu.yaml
+## Type: project menu
+## Purpose: Menu for managing ignored file extensions and related
+## ignore-list features used by ingestion and tooling.
+
+metadata:
+  udi: prismata.universe.menu.settings-ignore
+  name: "Settings > Ignore Menu"
+  version: "0.1.0"
+  kind: menu
+  description: "Submenu for managing ignored file extensions."
+
+menu-items:
+  - menu-key: "1"
+    udi: "prismata.universe.menu.settings.ignore.add"
+    label: "Add Ignore Extension"
+    description: "Add a file extension (e.g. .mid, .wav) to the ignore list. Stored in settings.ignore_extensions."
+    capability: "prismata.universe.capability.app-settings-ignore"
+    args:
+      action: "add"
+    ui_framework: basic
+    submenu_ref: null
+
+  - menu-key: "2"
+    udi: "prismata.universe.menu.settings.ignore.remove"
+    label: "Remove Ignore Extension"
+    description: "Remove an extension from the ignore list."
+    capability: "prismata.universe.capability.app-settings-ignore"
+    args:
+      action: "remove"
+    ui_framework: basic
+    submenu_ref: null
+
+  - menu-key: "3"
+    udi: "prismata.universe.menu.settings.ignore.list"
+    label: "List Ignore Extensions"
+    description: "Show currently configured ignored file extensions."
+    capability: "prismata.universe.capability.app-settings-ignore"
+    args:
+      action: "list"
+    ui_framework: basic
+    submenu_ref: null

@@ -1,0 +1,66 @@
+# =====================================================================
+#  Scraper default config
+#  UDI-Compliant Scraper configuration schema for Prismata Scraper module.
+#  This file defines the default configuration for the Scraper module.
+#  Defines universal, portable, schema-agnostic merge behaviors
+# =====================================================================
+
+version: 1.0.0
+registryName: "Scraper Default Configuration"
+udiCompliant: true
+
+# =====================================================================
+# Scraper Input Spec - Folders
+# =====================================================================
+
+ignoreFolder:
+  - ".git"
+  - "node_modules"
+  - "bin"
+  - "obj"
+
+includeFolders: null
+
+excludeFolders:
+  - ".workspace"
+  - ".git"
+  - "node_modules"
+  - "bin"
+  - "obj"
+
+summarizeFolder:
+  - ".workspace"
+
+# =====================================================================
+# Scraper Input Spec - Files
+# =====================================================================
+
+ignoreType: null
+
+includeType:
+  - ".ts"
+  - ".py"
+  - ".json"
+  - ".yaml"
+  - ".md"
+
+excludeType: null
+
+summarizeType:
+  - ".ts"
+  - ".py"
+  - ".json"
+  - ".yaml"
+  - ".md"
+
+# =====================================================================
+# General Scraper Settings
+# =====================================================================
+
+FolderTree: true
+
+AddFilesAsLeaves: true
+
+AddTreeToScrapeFile: false
+
+outputFolder: ".workspace/.scrapes"

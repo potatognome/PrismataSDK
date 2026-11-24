@@ -1,0 +1,51 @@
+metadata:
+  udi: prismata.universe.menu.find.select
+  name: "Find & Select Menu"
+  version: "0.1.0"
+  kind: menu
+  description: "Menu for finding, selecting, and previewing objects."
+
+udi: "prismata.universe.menu.find.select"
+kind: menu
+type: "menu"
+title: "Find & Select Menu"
+header:
+  type: "search_params"
+
+items:
+  - key: "1"
+    udi: "prismata.universe.menu.find.set-search-parameters"
+    label: "Set Search Parameters"
+    description: "Configure multi-modal search filters."
+    capability: "prismata.universe.capability.fs-search"
+    ui_framework: menu
+    submenu_ref: "prismata.universe.menu.find.parameters"
+
+  - key: "2"
+    udi: "prismata.universe.menu.find.search-results"
+    label: "Search Results"
+    description: "View results with preview, version carousel, and diff finder panes."
+    capability: "prismata.universe.capability.fs-search-results"
+    ui_framework: menu
+    submenu_ref: null
+
+  - key: "3"
+    udi: "prismata.universe.menu.find.select.multi-select"
+    label: "Multi-Select"
+    capability: "prismata.universe.capability.fs-select-multi"
+    ui_framework: menu
+    submenu_ref: null
+
+  - key: "4"
+    udi: "prismata.universe.menu.find.select.single-select-reference"
+    label: "Single Select (Reference)"
+    capability: "prismata.universe.capability.fs-select-single"
+    ui_framework: menu
+    submenu_ref: null
+
+  - key: "5"
+    udi: "prismata.universe.menu.find.select.exemplar-registry"
+    label: "Exemplar Registry"
+    capability: "prismata.universe.capability.fs-exemplar-preview"
+    ui_framework: menu
+    submenu_ref: null

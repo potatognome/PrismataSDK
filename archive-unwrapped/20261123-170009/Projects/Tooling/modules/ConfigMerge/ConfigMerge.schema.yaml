@@ -1,0 +1,64 @@
+metadata:
+  udi: prismata.tooling.schema.config-merge
+  name: ConfigMergeSettings
+  version: 1.0.0
+  kind: schema-definition
+  description: Mergeable configuration schema for ConfigMerge primitive.
+
+fields:
+  conflictMode:
+    type: string
+    enum:
+      - removeWins
+      - includeWins
+      - unionWins
+      - cliWins
+    default: unionWins
+    description: >
+      Controls how include*/exclude* conflicts are resolved after all layers are merged.
+
+  includeTypes:
+    type: array
+    items: { type: string }
+
+  excludeTypes:
+    type: array
+    items: { type: string }
+
+  includeFolders:
+    type: array
+    items: { type: string }
+
+  excludeFolders:
+    type: array
+    items: { type: string }
+
+  includePatterns:
+    type: array
+    items: { type: string }
+
+  excludePatterns:
+    type: array
+    items: { type: string }
+
+  includeAttributes:
+    type: array
+    items: { type: string }
+
+  excludeAttributes:
+    type: array
+    items: { type: string }
+
+  mode:
+    type: string
+
+  outputFormat:
+    type: string
+
+  colourKeyPath:
+    type: string
+    default: null
+    description: >
+      Optional path to an alternate COLOURS/COLOUR_KEY JSON file. This path
+      is treated as an optional override and is passed through the merge
+      precedence chain without altering existing precedence semantics.

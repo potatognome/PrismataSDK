@@ -1,0 +1,47 @@
+kind: border-patterns
+entries:
+- id: example-pane-border
+  udi: prismata.examples.border.example-pane
+  kind: border-pattern
+  glyphs:
+    top: ─
+    bottom: ─
+    left: │
+    right: │
+    corner_top_left: ┌
+    corner_top_right: ┐
+    corner_bottom_left: └
+    corner_bottom_right: ┘
+  thickness: 1
+  padding: 1
+  colour_role: prismata.examples.colour-role.border
+- id: example-menu-border
+  udi: prismata.examples.border.example-menu
+  kind: border-pattern
+  glyphs:
+    top: ═
+    bottom: ═
+    left: ║
+    right: ║
+    corner_top_left: ╔
+    corner_top_right: ╗
+    corner_bottom_left: ╚
+    corner_bottom_right: ╝
+  thickness: 1
+  padding: 1
+  colour_role: prismata.examples.colour-role.menu-border
+- id: example-item-border
+  udi: prismata.examples.border.example-item
+  kind: border-pattern
+  glyphs:
+    top: ─
+    bottom: ─
+    left: │
+    right: │
+    corner_top_left: ╭
+    corner_top_right: ╮
+    corner_bottom_left: ╰
+    corner_bottom_right: ╯
+  thickness: 1
+  padding: 0
+  colour_role: prismata.examples.colour-role.item-border

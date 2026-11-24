@@ -1,0 +1,27 @@
+## File: default.ui-framework.entry.yaml
+## Type: ui-framework registry entry
+## Purpose: Default Prismata ui-framework registry entry.
+## Provides default border pattern, colour scheme, and layout for panes.
+
+id: default
+udi: prismata.meta.ui-framework.default
+name: default.ui-framework
+label: "Default UI Framework (0.4.1)"
+kind: ui-framework
+description: "Minimal UI framework wiring menus, panes, and colour schemes."
+schema_version: 0.4.1
+
+menus:
+  - prismata.meta.menu.default
+panes:
+  - prismata.meta.pane.default
+colour_scheme: default
+active_pane: prismata.meta.pane.default
+border_pattern: single-line
+
+meta:
+  created_by: copilot
+  created_at: 2026-09-24
+  schema_version: 0.4.1
+
+

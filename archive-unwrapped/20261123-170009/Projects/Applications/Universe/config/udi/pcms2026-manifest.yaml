@@ -1,0 +1,52 @@
+## File: pcms2026-manifest.yaml
+## Type: UDI manifest
+## Purpose: Project manifest describing PCMS2026 capabilities and UDI
+## metadata used by ingestion and tooling.
+
+id: prismata.universe.manifest.pcms2026
+schema_version: 0.4.1
+
+metadata:
+  udi: prismata.universe.manifest.pcms2026
+  name: PCMS-2026 Universe
+  version: "0.9.1"
+  kind: manifest
+  description: "Universe project: schema-driven editor for discovery, selection, editing, verification, and configuration."
+
+udi: prismata.universe.manifest.pcms2026
+kind: manifest
+
+capabilities:
+  - id: "prismata.universe.capability.fs-search"
+  - id: "prismata.universe.capability.fs-search-location"
+  - id: "prismata.universe.capability.fs-search-execute"
+  - id: "prismata.universe.capability.fs-search-results"
+  - id: "prismata.universe.capability.fs-select-multi"
+  - id: "prismata.universe.capability.fs-select-single"
+  - id: "prismata.universe.capability.fs-exemplar-preview"
+  - id: "prismata.universe.capability.fs-create-from-object"
+  - id: "prismata.universe.capability.fs-edit-multi"
+  - id: "prismata.universe.capability.fs-update-fields"
+  - id: "prismata.universe.capability.fs-update-version"
+  - id: "prismata.universe.capability.fs-edit-vile"
+  - id: "prismata.universe.capability.fs-edit-registry-insert"
+  - id: "prismata.universe.capability.fs-export-custom"
+  - id: "prismata.universe.capability.fs-verify-reference"
+  - id: "prismata.universe.capability.fs-verify-multi"
+  - id: "prismata.universe.capability.fs-verify-sequence"
+  - id: "prismata.universe.capability.fs-verify-collective"
+  - id: "prismata.universe.capability.fs-version-apply"
+  - id: "prismata.universe.capability.fs-diff-compatible"
+  - id: "prismata.universe.capability.fs-edit-conform"
+  - id: "prismata.universe.capability.value-match"
+  - id: "prismata.universe.capability.semantic-primitive-extract"
+  - id: "prismata.universe.capability.semantic-dependency-graph"
+  - id: "prismata.universe.capability.semantic-bundle"
+  - id: "prismata.universe.capability.app-settings-paths"
+  - id: "prismata.universe.capability.app-settings-naming"
+  - id: "prismata.universe.capability.app-settings-export"
+  - id: "prismata.universe.capability.app-settings-registry"
+  - id: "prismata.universe.capability.app-settings-auto-archive"
+  - id: "prismata.universe.capability.app-settings-auto-versioning"
+  - id: "prismata.universe.capability.app-bootstrap-run"
+  - id: "prismata.universe.capability.app-quit"

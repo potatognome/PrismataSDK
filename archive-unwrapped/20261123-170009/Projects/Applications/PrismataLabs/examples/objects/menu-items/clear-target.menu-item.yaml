@@ -1,0 +1,16 @@
+id: example-clear-target-pane
+udi: prismata.examples.menu-item.clear-target-pane
+kind: menu-item
+label: Clear selected pane
+capability: prismata.examples.capability.clear-target-pane
+colour_role: prismata.examples.colour-role.alert
+colour_scheme: prismata.examples.colour-scheme.surface
+border_pattern: prismata.examples.border.example-item
+header:
+  id: example-clear-target-header
+  text: Select
+  colour_role: prismata.examples.colour-role.alert
+  colour_scheme: prismata.examples.colour-scheme.surface
+  border_pattern: prismata.examples.border.example-item
+visibility_mode: static
+enable_mode: enabled

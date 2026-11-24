@@ -1,0 +1,72 @@
+## File: settings-menu.yaml
+## Type: project menu
+## Purpose: Top-level Settings menu that exposes submenus for path
+## configuration, naming, export options, registry, and feature toggles.
+
+metadata:
+  udi: prismata.universe.menu.settings
+  name: "Settings Menu"
+  version: "0.1.0"
+  kind: menu
+  description: "Top-level settings menu for paths, naming, export, and registry."
+
+header:
+  type: "settings_features"
+
+items:
+  - key: "1"
+    udi: "prismata.universe.menu.settings.select-universe"
+    label: "Select Active Universe Folder Path"
+    description: "Set the active tenant-universe workspace root. Triggers bootstrap on empty folders."
+    capability: "prismata.universe.capability.app-settings-paths"
+    args:
+      key_value: "workspace_root"
+      pick_mode: "folder"
+    ui_framework: basic
+    submenu_ref: null
+
+  - key: "2"
+    udi: "prismata.universe.menu.settings.default-folder-paths"
+    label: "Default Folder Paths"
+    capability: "prismata.universe.capability.app-settings-paths"
+    ui_framework: menu
+    submenu_ref: "prismata.universe.menu.settings.paths"
+
+  - key: "3"
+    udi: "prismata.universe.menu.settings.ignore-file-types"
+    label: "Ignore File Types"
+    capability: "prismata.universe.capability.app-settings-ignore"
+    ui_framework: menu
+    submenu_ref: "prismata.universe.menu.settings.ignore"
+
+  - key: "4"
+    udi: "prismata.universe.menu.settings.auto-archive"
+    label: "Auto-Archive (toggle)"
+    description: "Automatically archive previous file versions before overwriting. Stored in settings.features.autoArchive."
+    capability: "prismata.universe.capability.app-settings-auto-archive"
+    ui_framework: basic
+    submenu_ref: null
+
+  - key: "5"
+    udi: "prismata.universe.menu.settings.auto-versioning"
+    label: "Auto-Versioning (toggle)"
+    description: "Automatically increment the version field when creating new versions. Stored in settings.features.autoVersioning."
+    capability: "prismata.universe.capability.app-settings-auto-versioning"
+    ui_framework: basic
+    submenu_ref: null
+
+  - key: "6"
+    udi: "prismata.universe.menu.settings.export"
+    label: "Export Settings"
+    description: "Configure default export type, allowed extensions, and version suffix behavior."
+    capability: "prismata.universe.capability.app-settings-export"
+    ui_framework: menu
+    submenu_ref: "prismata.universe.menu.settings.export"
+
+  - key: "7"
+    udi: "prismata.universe.menu.settings.registry"
+    label: "Registry Configuration"
+    description: "Set registry path, semantic rules, and key synonym mappings."
+    capability: "prismata.universe.capability.app-settings-registry"
+    ui_framework: menu
+    submenu_ref: "prismata.universe.menu.settings.registry"

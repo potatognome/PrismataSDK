@@ -1,0 +1,20 @@
+## File: verify-version.yaml
+## Type: schema
+## Purpose: Schema for verifying version changes during migrations or
+## batch updates. Used by ingestion/migration tooling.
+
+metadata:
+  udi: prismata.universe.schema.verify-version
+  name: verify-version
+  kind: schema-definition
+  description: "Schema for verifying version changes during migrations or batch updates."
+
+
+id: "prismata.universe.schema.verify-version"
+version: "1.1.0"
+type: object
+properties:
+  selected_objects: { type: array }
+  target_version: { type: string }
+  direction: { type: string }
+  remap_results: { type: array }

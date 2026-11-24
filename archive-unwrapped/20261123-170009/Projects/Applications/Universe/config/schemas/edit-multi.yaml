@@ -1,0 +1,19 @@
+## File: edit-multi.yaml
+## Type: schema
+## Purpose: Schema for bulk edit operations (selection, compatibility,
+## and allowed operations) used by multi-edit tooling.
+
+metadata:
+  udi: prismata.universe.schema.edit-multi
+  name: edit-multi
+  kind: schema-definition
+  description: "Schema for bulk edit operations (selection, compatibility, and allowed operations)."
+
+
+id: "prismata.universe.schema.edit-multi"
+version: "2.0.0"
+type: object
+properties:
+  selected_objects: { type: array }
+  type_compatibility_matrix: { type: object }
+  allowed_operations: { type: array }

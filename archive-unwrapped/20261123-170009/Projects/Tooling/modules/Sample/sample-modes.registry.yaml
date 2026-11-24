@@ -1,0 +1,34 @@
+﻿modes:
+
+  # ---------------------------------------------------------
+  # Base Modes
+  # ---------------------------------------------------------
+
+  default:
+    sampleString: "Sample String (Mode-default)"
+    sampleInt: 100
+    samplePath: "C:\\Sample\\Path\\Mode-default"
+    sampleArray: ["Sample", "Array", "Mode-default"]
+
+  # ---------------------------------------------------------
+  # Composite / Inherited Modes
+  # ---------------------------------------------------------
+
+  sample-composite:
+    extends: "default"
+    sampleString: "Sample String (Mode: sample-composite)"
+    sampleInt: 200
+    samplePath: "C:\\Sample\\Path\\Mode sample-composite"
+    sampleArray: ["Mode-sample-composite"]
+
+  # ---------------------------------------------------------
+  # Highly Filtered / Specialized Modes
+  # ---------------------------------------------------------
+
+  sample-filtered:
+    filters: "sample-composite"
+    sampleString: "Sample String (Mode: sample-filtered)"
+    sampleInt: 50
+    samplePath: "C:\\Mode sample-filtered"
+    sampleArray: ["Mode-sample-filtered"]
+

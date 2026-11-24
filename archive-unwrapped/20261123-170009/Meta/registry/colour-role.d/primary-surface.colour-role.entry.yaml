@@ -1,0 +1,19 @@
+id: primary-surface
+udi: prismata.meta.colour-role.primary-surface
+slug: primary-surface
+name: primary-surface.colour-role
+label: "Primary Surface"
+kind: colour-role
+description: Semantic role for the primary background surface.
+schema_version: 0.4.1
+
+layers:
+  bg: "ansi:rgb(10,10,12)"
+  fg: "ansi:rgb(220,220,220)"
+
+meta:
+  created_by: Daniel
+  created_at: 2026-10-01
+  schema_version: 0.4.1
+
+

@@ -1,0 +1,26 @@
+name: UDI Validator
+
+on:
+  push:
+    paths:
+      - 'Projects/Tooling/udi/**'
+  pull_request:
+    paths:
+      - 'Projects/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e Projects/Tooling/udi[dev]
+      - name: Run dry-run scan
+        run: |
+          python -m uditool.cli scan --globs "Meta/canonical/**/*.yaml" "Projects/**/config/**/*.yaml" --out Projects/meta/udi-migration-logs/ --dry-run

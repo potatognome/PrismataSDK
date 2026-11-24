@@ -1,0 +1,38 @@
+version: 0.4.0
+kind: runtime-state
+schema_type: runtime
+
+metadata:
+  udi: prismata.meta.schema.runtime-state
+  name: runtime-state.schema
+  location: /Prismata/Meta/runtime.schemas/runtime-state.schema.yaml
+  description: Canonical schema defining mutable runtime UI state.
+
+spec:
+  target_kind: runtime-state
+  naming:
+    file_suffix: .schema.yaml
+  versioning:
+    semver: true
+
+fields:
+  - name: panes
+    path: panes
+    type: object
+    required: false
+
+  - name: menus
+    path: menus
+    type: object
+    required: false
+
+  - name: context
+    path: context
+    type: object
+    required: false
+
+object:
+  panes: {}
+  menus: {}
+  context: {}
+

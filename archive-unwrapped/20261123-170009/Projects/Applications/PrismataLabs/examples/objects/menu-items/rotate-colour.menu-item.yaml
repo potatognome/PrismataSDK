@@ -1,0 +1,16 @@
+id: example-rotate-colour-role
+udi: prismata.examples.menu-item.rotate-colour-role
+kind: menu-item
+label: Rotate active pane colour roles
+capability: prismata.examples.capability.rotate-colour-role
+colour_role: prismata.examples.colour-role.menu-accent
+colour_scheme: prismata.examples.colour-scheme.surface
+border_pattern: prismata.examples.border.example-item
+header:
+  id: example-rotate-header
+  text: Colour
+  colour_role: prismata.examples.colour-role.menu-accent
+  colour_scheme: prismata.examples.colour-scheme.surface
+  border_pattern: prismata.examples.border.example-item
+visibility_mode: static
+enable_mode: enabled

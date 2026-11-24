@@ -1,0 +1,42 @@
+## File: settings-registry-menu.yaml
+## Type: project menu
+## Purpose: Menu to configure settings registry paths, semantic rules,
+## and key synonyms for the application.
+
+metadata:
+  udi: prismata.universe.menu.settings.registry
+  name: "Settings > Registry Menu"
+  version: "0.1.0"
+  kind: menu
+  description: "Submenu for registry path and semantic rules."
+
+items:
+  - key: "1"
+    udi: "prismata.universe.menu.settings.registry.path"
+    label: "Set Registry Path"
+    description: "Set the registry file/folder path used by Universe operations."
+    capability: "prismata.universe.capability.app-settings-registry"
+    setting_key: "registry_path"
+    value_type: "string"
+    ui_framework: basic
+    submenu_ref: null
+
+  - key: "2"
+    udi: "prismata.universe.menu.settings.registry.rules"
+    label: "Set Semantic Rules (JSON)"
+    description: "Set semantic rules using a JSON object payload."
+    capability: "prismata.universe.capability.app-settings-registry"
+    setting_key: "semantic_rules"
+    value_type: "object_json"
+    ui_framework: basic
+    submenu_ref: null
+
+  - key: "3"
+    udi: "prismata.universe.menu.settings.registry.synonyms"
+    label: "Set Key Synonyms (JSON)"
+    description: "Set key synonyms using a JSON object payload."
+    capability: "prismata.universe.capability.app-settings-registry"
+    setting_key: "key_synonyms"
+    value_type: "object_json"
+    ui_framework: basic
+    submenu_ref: null

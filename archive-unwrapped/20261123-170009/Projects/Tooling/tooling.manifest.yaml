@@ -1,0 +1,74 @@
+metadata:
+  udi: prismata.tooling.manifest.tooling
+  name: Tooling Manifest
+  version: 1.0.0
+  kind: manifest
+  description: Versionable tooling and primitives manifest listing archived generators and active capability modules.
+
+udi: prismata.tooling.manifest.tooling
+kind: manifest
+
+# Overrides marking archived generator implementations and pointing to archived originals
+_archived_primitives:
+  - udi: prismata.tooling.capability.apply-menu-templates
+    archived: true
+    module: generators/_archived_originals/apply_menu_templates.py
+    notes: >
+      Archived generator. Active deprecation stub remains at generators/apply_menu_templates.py.
+
+  - udi: prismata.tooling.capability.validate-menu-actions
+    archived: true
+    module: generators/_archived_originals/validate_menu_actions.py
+    notes: >
+      Archived generator. Active deprecation stub remains at generators/validate_menu_actions.py.
+
+  - udi: prismata.tooling.capability.replace-hardcoded-menus
+    archived: true
+    module: generators/_archived_originals/replace_hardcoded_menus.py
+    notes: >
+      Archived generator. Active deprecation stub remains at generators/replace_hardcoded_menus.py.
+
+  - udi: prismata.tooling.capability.apply-action-stubs
+    archived: true
+    module: generators/_archived_originals/apply_action_stubs.py
+    notes: >
+      Archived generator. Active deprecation stub remains at generators/apply_action_stubs.py.
+
+  - udi: prismata.tooling.capability.apply-action-stubs-auto
+    archived: true
+    module: generators/_archived_originals/apply_action_stubs_auto.py
+    notes: >
+      Archived generator. Active deprecation stub remains at generators/apply_action_stubs_auto.py.
+
+  - udi: prismata.tooling.capability.compare-menu-templates
+    archived: true
+    module: generators/_archived_originals/compare_menu_templates.py
+    notes: >
+      Archived generator. Active deprecation stub remains at generators/compare_menu_templates.py.
+
+  - udi: prismata.tooling.capability.menu-tree-tooling
+    archived: true
+    module: generators/_archived_originals/menu_tree_tooling.py
+    notes: >
+      Archived generator. Active deprecation stub remains at generators/menu_tree_tooling.py.
+
+modules:
+  - udi: prismata.universe.capability.auto-archive
+    name: Auto-Archive Toggle
+    version: 1.0.0
+    module: Projects/Applications/Universe/src/capabilities/handlers.ts
+    capability: prismata.universe.capability.app-settings-auto-archive
+    description: >
+      Toggles the auto-archive feature flag in Universe settings. When enabled,
+      file-write operations (fs-create-from-object, fs-edit-vile) archive the
+      previous file version to the Universe archive directory before overwriting.
+
+  - udi: prismata.universe.capability.auto-versioning
+    name: Auto-Versioning Toggle
+    version: 1.0.0
+    module: Projects/Applications/Universe/src/capabilities/handlers.ts
+    capability: prismata.universe.capability.app-settings-auto-versioning
+    description: >
+      Toggles the auto-versioning feature flag in Universe settings. When enabled,
+      fs-update-version reads the version field from selected YAML/JSON files and
+      increments it using the shared versionUtil (remapVersion) forward/backward logic.

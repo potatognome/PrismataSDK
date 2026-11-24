@@ -1,0 +1,31 @@
+version: 0.4.0
+kind: registry-loader
+schema_type: tooling
+
+metadata:
+  udi: prismata.meta.schema.registry-loader
+  name: registry-loader.schema
+  description: Canonical schema defining how registries are loaded and interpreted.
+
+spec:
+  target_kind: registry-loader
+  naming:
+    file_suffix: .schema.yaml
+  versioning:
+    semver: true
+
+fields:
+  - name: registry
+    path: registry
+    type: string
+    required: true
+
+  - name: entries
+    path: entries
+    type: array
+    required: false
+
+object:
+  registry: ""
+  entries: []
+

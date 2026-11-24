@@ -1,0 +1,2 @@
+[console_scripts]
+uditool = uditool.cli:main

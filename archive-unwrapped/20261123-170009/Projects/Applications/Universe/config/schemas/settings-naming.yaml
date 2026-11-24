@@ -1,0 +1,19 @@
+## File: settings-naming.yaml
+## Type: schema
+## Purpose: Schema for naming conventions (regex, version formatting)
+## enforced by settings validation tooling.
+
+metadata:
+  udi: prismata.universe.schema.settings-naming
+  name: settings-naming
+  kind: schema-definition
+  description: "Schema for naming conventions (regex, version formatting) enforced by settings validation."
+
+
+id: "prismata.universe.schema.settings-naming"
+version: "1.0.0"
+type: object
+properties:
+  naming_convention_enabled: { type: boolean }
+  regex_pattern: { type: string }
+  version_format: { type: string }

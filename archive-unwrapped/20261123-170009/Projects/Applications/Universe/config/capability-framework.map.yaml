@@ -1,0 +1,10 @@
+# capability -> ui_framework mapping used for menu migration
+# format: capability: ui_framework
+
+prismata.universe.capability.app-bootstrap-run: basic
+prismata.universe.capability.app-quit: basic
+prismata.universe.capability.fs-search-results: menu
+prismata.universe.capability.fs-select-multi: menu
+prismata.universe.capability.fs-edit-multi: menu
+prismata.universe.capability.fs-verify-multi: menu
+prismata.universe.capability.app-settings-paths: menu

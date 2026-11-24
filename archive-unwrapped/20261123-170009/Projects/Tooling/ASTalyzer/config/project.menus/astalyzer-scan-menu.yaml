@@ -1,0 +1,46 @@
+# ASTalyzer scan menu
+id: "prismata.astalyzer.menu.scan"
+version: 0.2.0
+kind: menu
+description: Recursive scan actions for ASTalyzer.
+
+layout:
+  type: list
+  title: ASTalyzer — Recursive Scan
+
+items:
+  - id: "prismata.astalyzer.menu-item.scan-api-recursive-run"
+    label: Run Recursive Scan
+    group: analysis
+    action:
+      type: udi-capability
+      capability_id: "prismata.astalyzer.capability.scan-api-recursive"
+    visibility:
+      selection:
+        required: false
+      compatibility:
+        types:
+          - folder
+          - file
+        modes:
+          - single
+    hints:
+      short: Recursively scan folder or file for APIs, imports, and signatures.
+      long: >
+        Select a folder or file and recursively scan for external API usage,
+        imports, function signatures, inputs, outputs, and inferred types.
+
+  - id: "prismata.astalyzer.menu-item.scan-api-view-last-output"
+    label: View Last Output
+    group: output
+    action: "view_last_output"
+
+  - id: "prismata.astalyzer.menu-item.scan-api-save-last-output"
+    label: Save Last Output to File
+    group: output
+    action: "save_last_output"
+
+  - id: "back"
+    label: Back
+    group: navigation
+    action: "back"

@@ -1,0 +1,19 @@
+## File: settings-registry.yaml
+## Type: schema
+## Purpose: Schema for settings registry entries (paths, semantic rules,
+## and synonyms) used by settings management tooling.
+
+metadata:
+  udi: prismata.universe.schema.settings-registry
+  name: settings-registry
+  kind: schema-definition
+  description: "Schema for settings registry entries (paths, semantic rules, and synonyms)."
+
+
+id: "prismata.universe.schema.settings-registry"
+version: "1.0.0"
+type: object
+properties:
+  registry_path: { type: string }
+  semantic_rules: { type: object }
+  key_synonyms: { type: object }

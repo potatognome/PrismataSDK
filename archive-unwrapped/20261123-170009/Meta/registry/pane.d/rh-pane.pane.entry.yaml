@@ -1,0 +1,29 @@
+## File: rh-pane.pane.entry.yaml
+## Type: pane registry entry
+## Purpose: Right-hand pane in a side-by-side multi-pane layout.
+
+id: rh-pane
+udi: prismata.meta.pane.rh-pane
+
+name: rh-pane.pane
+label: "RH Pane"
+kind: pane
+description: "Secondary right-hand pane that fills the right side of a multi-pane terminal layout."
+schema_version: 0.4.2
+
+border_pattern: single-line
+colour_scheme: default
+content_role: secondary-surface
+colour_role: secondary-surface
+border_role: accent-surface
+x: 51
+y: 5
+width: 44
+height: 64
+layout:
+  mode: single
+
+meta:
+  created_by: copilot
+  created_at: 2026-10-02
+  schema_version: 0.4.2

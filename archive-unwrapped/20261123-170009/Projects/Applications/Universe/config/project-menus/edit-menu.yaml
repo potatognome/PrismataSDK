@@ -1,0 +1,72 @@
+metadata:
+  udi: prismata.universe.menu.edit
+  name: "Edit Menu"
+  version: "0.1.0"
+  kind: menu
+  description: "Edit menu for create, multi-edit, update-fields, version, and export workflows."
+
+udi: "prismata.universe.menu.edit"
+kind: menu
+type: "menu"
+title: "Edit"
+
+items:
+  - key: "1"
+    udi: "prismata.universe.menu.edit.create-from-object"
+    label: "Create From Object"
+    description: "Create a new object based on the selected reference object."
+    capability: "prismata.universe.capability.fs-create-from-object"
+    ui_framework: menu
+    submenu_ref: "prismata.universe.menu.edit-create"
+
+  - key: "2"
+    udi: "prismata.universe.menu.edit.multi-edit"
+    label: "Multi-Edit"
+    description: "Edit multiple selected objects with type-compatible operations."
+    capability: "prismata.universe.capability.fs-edit-multi"
+    ui_framework: menu
+    submenu_ref: "prismata.universe.menu.edit-multi"
+
+  - key: "3"
+    udi: "prismata.universe.menu.edit.update-fields"
+    label: "Update Fields"
+    description: "Add missing mandatory fields and optional fields from registry or reference object."
+    capability: "prismata.universe.capability.fs-update-fields"
+    ui_framework: basic
+    submenu_ref: null
+
+  - key: "4"
+    udi: "prismata.universe.menu.edit.create-new-version"
+    label: "Create New Version"
+    description: "Generate a new version of selected objects."
+    capability: "prismata.universe.capability.fs-update-version"
+
+    ui_framework: basic
+    submenu_ref: null
+
+  - key: "5"
+    udi: "prismata.universe.menu.edit.insert-known-keys-values"
+    label: "Insert Known Keys/Values"
+    description: "Add registry-defined keys or values to selected objects."
+    capability: "prismata.universe.capability.fs-edit-registry-insert"
+
+    ui_framework: basic
+    submenu_ref: null
+
+  - key: "6"
+    udi: "prismata.universe.menu.edit.export-as"
+    label: "Export As"
+    description: "Export object using custom file name or type."
+    capability: "prismata.universe.capability.fs-export-custom"
+    ui_framework: menu
+    submenu_ref: "prismata.universe.menu.edit-export"
+
+  - key: "7"
+    udi: "prismata.universe.menu.edit.open-in-vile-editor"
+    label: "Open in Vile Editor"
+    description: "Edit selected object using the Vile editor. Only available for single-file edits."
+    capability: "prismata.universe.capability.fs-edit-vile"
+    mode: "vile"
+
+    ui_framework: basic
+    submenu_ref: null

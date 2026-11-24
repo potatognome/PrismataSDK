@@ -1,0 +1,19 @@
+## File: select-registry.yaml
+## Type: schema
+## Purpose: Schema describing registry data used for selection and type
+## classification during UI and tooling operations.
+
+metadata:
+  udi: prismata.universe.schema.select-registry
+  name: select-registry
+  kind: schema-definition
+  description: "Schema describing registry data used for selection and type classification."
+
+
+id: "prismata.universe.schema.select-registry"
+version: "1.0.0"
+type: object
+properties:
+  exemplars: { type: array }
+  version_map: { type: object }
+  type_classification: { type: object }

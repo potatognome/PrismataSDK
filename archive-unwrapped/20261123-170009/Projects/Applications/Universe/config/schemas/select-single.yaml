@@ -1,0 +1,18 @@
+## File: select-single.yaml
+## Type: schema
+## Purpose: Schema for single selection validation and exemplar checks
+## used by selection tooling.
+
+metadata:
+  udi: prismata.universe.schema.select-single
+  name: select-single
+  kind: schema-definition
+  description: "Schema for single selection validation and exemplar checks."
+
+
+id: "prismata.universe.schema.select-single"
+version: "1.0.0"
+type: object
+properties:
+  exemplar: { type: object }
+  exemplar_valid: { type: boolean }

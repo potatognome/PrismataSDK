@@ -1,0 +1,58 @@
+# TICCSEO AST schema
+metadata:
+  udi: prismata.astalyzer.schema.prompt-ast-ticcseo
+  name: prompt-ast-ticcseo
+  version: 0.1.0
+  kind: schema-definition
+  description: Canonical AST schema for TICCSEO prompt analysis output.
+
+id: "prismata.astalyzer.schema.prompt-ast-ticcseo"
+version: 0.1.0
+kind: schema-definition
+description: >
+  Canonical AST schema for TICCSEO prompt analysis output.
+
+type: object
+
+fields:
+  task:
+    type: string
+    required: false
+
+  inputs:
+    type: array
+    items:
+      type: string
+    required: false
+
+  context:
+    type: string
+    required: false
+
+  constraints:
+    type: array
+    items:
+      type: string
+    required: false
+
+  style:
+    type: string
+    required: false
+
+  examples:
+    type: array
+    items:
+      type: string
+    required: false
+
+  output_format:
+    type: string
+    required: false
+
+_tags:
+  category: prompt_ast
+  tags:
+    - ast
+    - ticcseo
+    - prompt
+    - pcms2026

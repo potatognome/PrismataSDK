@@ -1,0 +1,25 @@
+version: 0.4.0
+kind: schema-validator
+schema_type: tooling
+
+metadata:
+  udi: prismata.meta.schema.schema-validator
+  name: schema-validator.schema
+  description: Canonical schema defining validation rules for Prismata schemas.
+
+spec:
+  target_kind: schema-validator
+  naming:
+    file_suffix: .schema.yaml
+  versioning:
+    semver: true
+
+fields:
+  - name: rules
+    path: rules
+    type: array
+    required: true
+
+object:
+  rules: []
+

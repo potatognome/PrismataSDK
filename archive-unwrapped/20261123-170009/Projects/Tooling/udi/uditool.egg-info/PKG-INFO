@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: uditool
+Version: 0.0.0
+Summary: Prismata UDI tooling
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ruamel.yaml; extra == "dev"
+Requires-Dist: typer; extra == "dev"
+
+# Prismata UDI Tooling
+
+Small toolkit for scanning, validating, and proposing deterministic UDIs for Prismata artifacts.
+
+Usage (development):
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -e .[dev]
+python -m uditool.cli scan --help
+```
+
+All generated tooling lives under `Projects/Tooling/udi`.

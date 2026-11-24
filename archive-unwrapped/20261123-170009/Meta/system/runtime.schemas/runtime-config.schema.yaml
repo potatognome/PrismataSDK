@@ -1,0 +1,32 @@
+version: 0.4.0
+kind: runtime-context
+schema_type: runtime
+
+metadata:
+  udi: prismata.meta.schema.runtime-context
+  name: runtime-context.schema
+  location: /Prismata/Meta/runtime.schemas/runtime-context.schema.yaml
+  description: Canonical schema defining runtime context for UI execution.
+
+spec:
+  target_kind: runtime-context
+  naming:
+    file_suffix: .schema.yaml
+  versioning:
+    semver: true
+
+fields:
+  - name: session
+    path: session
+    type: object
+    required: false
+
+  - name: environment
+    path: environment
+    type: object
+    required: false
+
+object:
+  session: {}
+  environment: {}
+

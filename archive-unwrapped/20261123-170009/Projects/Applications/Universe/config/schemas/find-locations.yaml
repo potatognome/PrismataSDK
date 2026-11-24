@@ -1,0 +1,18 @@
+## File: find-locations.yaml
+## Type: schema
+## Purpose: Schema for find location descriptors (folder and recursion)
+## used by file search and ingestion tasks.
+
+metadata:
+  udi: prismata.universe.schema.find-location
+  name: find-location
+  kind: schema-definition
+  description: "Schema for find location descriptors (folder and recursion) used by file search."
+
+
+id: "prismata.universe.schema.find-location"
+version: "1.0.0"
+type: object
+properties:
+  folder: { type: string }
+  recursive: { type: boolean }

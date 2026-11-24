@@ -1,0 +1,68 @@
+# API scan report schema
+metadata:
+  udi: prismata.astalyzer.schema.api-scan-report
+  name: api-scan-report
+  version: 0.1.0
+  kind: schema-definition
+  description: Structured report for recursive API scanning.
+
+id: "prismata.astalyzer.schema.api-scan-report"
+version: 0.1.0
+kind: schema-definition
+description: >
+  Structured report for recursive API scanning.
+
+type: object
+
+fields:
+  root_path:
+    type: string
+    required: true
+
+  files_scanned:
+    type: array
+    items:
+      type: string
+    required: true
+
+  external_apis:
+    type: array
+    items:
+      type: object
+      fields:
+        module:
+          type: string
+        symbol:
+          type: string
+        import_type:
+          type: string
+        location:
+          type: string
+    required: false
+
+  functions:
+    type: array
+    items:
+      type: object
+      fields:
+        name:
+          type: string
+        inputs:
+          type: array
+          items:
+            type: string
+        outputs:
+          type: array
+          items:
+            type: string
+        location:
+          type: string
+    required: false
+
+_tags:
+  category: code_analysis
+  tags:
+    - api
+    - scanner
+    - recursive
+    - pcms2026

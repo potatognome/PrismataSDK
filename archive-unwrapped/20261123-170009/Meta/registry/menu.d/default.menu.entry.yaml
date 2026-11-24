@@ -1,0 +1,25 @@
+## File: default.menu.entry.yaml
+## Type: menu registry entry (0.4.3)
+## Purpose: Default Prismata menu registry entry.
+
+id: default
+udi: prismata.meta.menu.default
+name: default.menu
+label: "Prismata Default Menu (0.4.3)"
+kind: menu
+description: "Basic menu with a title header and item-local styling support."
+schema_version: 0.4.3
+
+menu:
+  title: "Default Menu 0.4.3"
+  header:
+    text: "Default Menu 0.4.3"
+  items:
+    - prismata.meta.menu-item.default
+
+meta:
+  created_by: copilot
+  created_at: 2026-10-02
+  schema_version: 0.4.3
+
+

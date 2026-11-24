@@ -1,0 +1,16 @@
+id: example-diagnostic-print
+udi: prismata.examples.menu-item.diagnostic-print
+kind: menu-item
+label: Diagnostic Print
+capability: prismata.examples.capability.diagnostic-print
+colour_role: prismata.examples.colour-role.menu-accent
+colour_scheme: prismata.examples.colour-scheme.surface
+border_pattern: prismata.examples.border.example-item
+header:
+  id: example-diagnostic-header
+  text: Diagnostics
+  colour_role: prismata.examples.colour-role.menu-accent
+  colour_scheme: prismata.examples.colour-scheme.surface
+  border_pattern: prismata.examples.border.example-item
+visibility_mode: static
+enable_mode: enabled

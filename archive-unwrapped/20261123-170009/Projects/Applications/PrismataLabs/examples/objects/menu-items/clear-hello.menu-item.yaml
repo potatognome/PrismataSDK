@@ -1,0 +1,16 @@
+id: example-clear-hello-world
+udi: prismata.examples.menu-item.clear-hello-world
+kind: menu-item
+label: Clear all Hello World
+capability: prismata.examples.capability.clear-hello
+colour_role: prismata.examples.colour-role.alert
+colour_scheme: prismata.examples.colour-scheme.surface
+border_pattern: prismata.examples.border.example-item
+header:
+  id: example-clear-header
+  text: Clear
+  colour_role: prismata.examples.colour-role.alert
+  colour_scheme: prismata.examples.colour-scheme.surface
+  border_pattern: prismata.examples.border.example-item
+visibility_mode: static
+enable_mode: enabled

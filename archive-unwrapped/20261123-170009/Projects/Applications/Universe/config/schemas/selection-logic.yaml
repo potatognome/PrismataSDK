@@ -1,0 +1,29 @@
+## File: selection-logic.yaml
+## Type: schema
+## Purpose: Schema describing selection logic (compatibility checks,
+## visible operations) used by UI and CLI selection subsystems.
+
+metadata:
+  udi: prismata.universe.schema.selection-logic
+  name: selection-logic
+  kind: schema-definition
+  description: "Schema describing selection logic (compatibility checks, visible operations)."
+
+
+id: "prismata.universe.schema.selection-logic"
+version: "1.0.0"
+type: object
+properties:
+  selection_type: { type: string }
+  selection_count: { type: integer }
+  reference_object_selected: { type: boolean }
+  compatibility_matrix:
+    type: object
+    properties:
+      type_compatible: { type: boolean }
+      semantic_compatible: { type: boolean }
+      version_compatible: { type: boolean }
+      registry_compatible: { type: boolean }
+  visible_operations:
+    type: array
+    items: { type: string }

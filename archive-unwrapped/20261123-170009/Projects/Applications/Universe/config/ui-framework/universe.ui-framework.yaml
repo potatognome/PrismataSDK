@@ -1,0 +1,70 @@
+## File: universe.ui-framework.yaml
+## Type: application UI framework config
+## Purpose: Defines the default UI framework for the Universe application,
+## including pane layout and project/tenant override file paths.
+
+ui_interface:
+  ui_framework: multi_pane
+
+  overrides:
+    project: project/ui/multi_pane.override.yaml
+    tenant: tenant/ui/multi_pane.override.yaml
+
+  panes:
+    - id: results_list
+      role: list
+      coordinates:
+        x: 0
+        y: 0
+        width: 40
+        height: 100
+      border_pattern: default
+      colour_scheme: default
+      carousel:
+        enabled: false
+
+    - id: preview
+      role: preview
+      coordinates:
+        x: 40
+        y: 0
+        width: 35
+        height: 100
+      border_pattern: default
+      colour_scheme: default
+      carousel:
+        enabled: false
+
+    - id: version_carousel
+      role: list
+      coordinates:
+        x: 75
+        y: 0
+        width: 25
+        height: 60
+      border_pattern: default
+      colour_scheme: default
+      carousel:
+        enabled: true
+        active_index: 0
+        navigation:
+          wrap: true
+          jump: true
+          refresh: true
+
+    - id: diff_panel
+      role: diff_right
+      coordinates:
+        x: 75
+        y: 60
+        width: 25
+        height: 40
+      border_pattern: default
+      colour_scheme: default
+      carousel:
+        enabled: false
+
+  diff_view:
+    synchronized_navigation: true
+    active_index: 0
+    pairs: []

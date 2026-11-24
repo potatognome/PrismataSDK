@@ -1,0 +1,125 @@
+# =====================================================================
+#  conflictMode.registry.yaml
+#  UDI-Compliant Conflict Mode Registry
+#  Defines universal, portable, schema-agnostic merge behaviors
+# =====================================================================
+
+version: 1.0.0
+registryName: "ConfigMerge ConflictMode Registry"
+udiCompliant: true
+
+schema:
+  requiredFields:
+    - name
+    - description
+    - behavior
+    - appliesTo
+    - precedence
+    - asciiIndicator
+    - udiCompliant
+  optionalFields:
+    - colourKey
+    - notes
+    - examples
+
+modes:
+
+  # ---------------------------------------------------------------
+  # 0. removeWins — legacy paired include/exclude resolver
+  # ---------------------------------------------------------------
+  - name: removeWins
+    description: >
+      Legacy behavior where exclude* entries are removed from include*
+      after layered merge. Maintained for backward compatibility.
+    behavior: remove
+    appliesTo: [array, scalar]
+    precedence: normal
+    asciiIndicator: "-"
+    colourKey: "conflict.remove"
+    udiCompliant: true
+
+    notes: >
+      This mode assumes paired include*/exclude* keys and applies
+      include-side removal when both sides are present.
+
+  # ---------------------------------------------------------------
+  # 1. unionWins — additive merge (UDI-compliant)
+  # ---------------------------------------------------------------
+  - name: unionWins
+    description: >
+      All layers contribute. Arrays are merged by union; scalars use the
+      highest-precedence non-null value. No assumptions about remove or
+      exclude semantics. Safe default for all schemas.
+    behavior: union
+    appliesTo: [array, scalar]
+    precedence: normal
+    asciiIndicator: "="
+    colourKey: "conflict.union"     # optional, used only when colourKeyPath is enabled
+    udiCompliant: true
+
+    notes: >
+      This mode is portable across all modules and schemas. It does not
+      assume the existence of excludeType or remove semantics. Works for
+      includeType-only and includeType/excludeType schemas.
+
+    examples:
+      - default: [a,b]
+        config: [b,c]
+        mode: [d]
+        final: [a,b,c,d]
+
+  # ---------------------------------------------------------------
+  # 2. includeWins — full replacement (UDI-compliant)
+  # ---------------------------------------------------------------
+  - name: includeWins
+    description: >
+      Higher-precedence arrays or scalars replace lower-precedence values.
+      No assumptions about remove or exclude semantics. Works for both
+      includeType-only and includeType/excludeType schemas.
+    behavior: replace
+    appliesTo: [array, scalar]
+    precedence: override
+    asciiIndicator: "+"
+    colourKey: "conflict.include"
+    udiCompliant: true
+
+    notes: >
+      This mode is ideal for schemas where the higher layer should fully
+      override lower layers. It does not require excludeType or remove
+      semantics, making it universally portable.
+
+    examples:
+      - default: [a,b]
+        config: [b,c]
+        mode: [d]
+        final: [d]
+
+  # ---------------------------------------------------------------
+  # 3. cliWins — top-layer override (UDI-compliant)
+  # ---------------------------------------------------------------
+  - name: cliWins
+    description: >
+      CLI values override all other layers. Scalars and arrays are replaced
+      entirely by CLI input. This mode is universal and does not assume any
+      schema-specific semantics.
+    behavior: override
+    appliesTo: [array, scalar]
+    precedence: top
+    asciiIndicator: "!"
+    colourKey: "conflict.cli"
+    udiCompliant: true
+
+    notes: >
+      This mode is used for debugging, runtime overrides, audit-loop
+      corrections, and user-driven configuration changes. It is always safe
+      because CLI is the highest-precedence layer.
+
+    examples:
+      - default: [a,b]
+        config: [b,c]
+        cli: [x,y]
+        final: [x,y]
+
+# =====================================================================
+# End of registry
+# =====================================================================

@@ -1,0 +1,29 @@
+## File: default.menu-item.entry.yaml
+## Type: menu-item registry entry
+## Purpose: Default Prismata menu-item registry entry.
+
+id: default
+udi: prismata.meta.menu-item.default
+name: default.menu-item
+label: "Prismata Default Menu Item (0.4.3)"
+kind: menu-item
+description: "Basic menu item with label, action, optional header, and per-item styling support."
+schema_version: 0.4.3
+
+capability: prismata.meta.capability.noop
+semantic_role: action
+colour_role: accent-surface
+colour_scheme: default
+border_pattern: single-line
+header:
+  text: "Default Action"
+  colour_role: primary-surface
+visibility_mode: static
+enable_mode: enabled
+
+meta:
+  created_by: copilot
+  created_at: 2026-10-02
+  schema_version: 0.4.3
+
+

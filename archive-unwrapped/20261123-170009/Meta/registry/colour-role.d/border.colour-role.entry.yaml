@@ -1,0 +1,24 @@
+## File: border.colour-role.entry.yaml
+## Type: colour-role registry entry (0.4.0)
+## Purpose: Border colour-role registry entry for Prismata terminal UI.
+## Provides semantic role mapping for the border foreground and background colours.
+
+id: border
+udi: prismata.meta.colour-role.border
+slug: border
+name: border.colour-role
+label: "Border"
+kind: colour-role
+description: Semantic role for the border foreground & background.
+schema_version: 0.4.1
+
+layers:
+  bg: "ansi:rgb(10,10,12)"
+  fg: "ansi:rgb(160,160,160)"
+
+meta:
+  created_by: Daniel
+  created_at: 2026-10-01
+  schema_version: 0.4.1
+
+

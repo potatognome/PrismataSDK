@@ -165,7 +165,8 @@ def unwrap_archive(
         restored.append(destination_rel)
         if not dry_run:
             destination.parent.mkdir(parents=True, exist_ok=True)
-            destination.write_text(text, encoding="utf-8")
+            with open(destination, "w", encoding="utf-8", newline="") as handle:
+                handle.write(text)
 
     report = {
         "mode": "snapshot",

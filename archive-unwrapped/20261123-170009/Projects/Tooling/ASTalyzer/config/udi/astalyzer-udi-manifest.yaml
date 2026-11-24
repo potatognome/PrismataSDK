@@ -1,0 +1,51 @@
+# UDI manifest
+metadata:
+  udi: prismata.astalyzer.manifest.astalyzer
+  name: ASTalyzer
+  version: 0.2.0
+  kind: manifest
+  description: UDI manifest for the ASTalyzer prompt and API scanning tool.
+
+udi: prismata.astalyzer.manifest.astalyzer
+version: 0.2.0
+kind: manifest
+application: ASTalyzer
+
+capabilities:
+  - id: "prismata.astalyzer.capability.analyze-prompt-ticcseo"
+    name: Analyze Prompt (TICCSEO AST)
+    description: Parse a raw prompt string into a TICCSEO AST.
+    inputs:
+      - id: prompt_raw
+        type: text
+        required: true
+    outputs:
+      - id: prompt_ast
+        type: object
+        schema_id: "prismata.astalyzer.schema.prompt-ast-ticcseo"
+        required: true
+
+  - id: "prismata.astalyzer.capability.scan-api-recursive"
+    name: Scan APIs (Recursive)
+    description: Recursively scan a folder or file for external API usage.
+    inputs:
+      - id: root_path
+        type: path
+        required: true
+    outputs:
+      - id: api_report
+        type: object
+        schema_id: "prismata.astalyzer.schema.api-scan-report"
+        required: true
+    options:
+      - id: include_internal
+        type: boolean
+        default: false
+      - id: include_types
+        type: boolean
+        default: true
+
+routing:
+  engine: pcms2026
+  mode: cli
+  entrypoint: src/astalyzer/main.ts

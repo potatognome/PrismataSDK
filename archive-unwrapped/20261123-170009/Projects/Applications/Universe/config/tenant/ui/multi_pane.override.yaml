@@ -1,0 +1,40 @@
+## File: multi_pane.override.yaml
+## Type: tenant UI override
+## Purpose: Tenant-level overrides for the multi-pane UI layout (coordinates
+## and pane sizing). These values overlay the application defaults.
+
+user_interfaces:
+  ui_framework: multi_pane
+
+  panes:
+    - id: results_list
+      role: list
+      coordinates:
+        x: 0
+        y: 0
+        width: 42
+        height: 100
+
+    - id: preview
+      role: preview
+      coordinates:
+        x: 42
+        y: 0
+        width: 36
+        height: 100
+
+    - id: version_carousel
+      role: list
+      coordinates:
+        x: 78
+        y: 0
+        width: 22
+        height: 60
+
+    - id: diff_panel
+      role: diff_right
+      coordinates:
+        x: 78
+        y: 60
+        width: 22
+        height: 40

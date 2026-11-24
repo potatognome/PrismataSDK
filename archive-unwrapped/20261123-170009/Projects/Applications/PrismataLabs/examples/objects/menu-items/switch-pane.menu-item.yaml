@@ -1,0 +1,16 @@
+id: example-switch-active-pane
+udi: prismata.examples.menu-item.switch-active-pane
+kind: menu-item
+label: Change Active Pane
+capability: prismata.examples.capability.switch-pane
+colour_role: prismata.examples.colour-role.menu-accent
+colour_scheme: prismata.examples.colour-scheme.surface
+border_pattern: prismata.examples.border.example-item
+header:
+  id: example-switch-pane-header
+  text: Switch
+  colour_role: prismata.examples.colour-role.menu-accent
+  colour_scheme: prismata.examples.colour-scheme.surface
+  border_pattern: prismata.examples.border.example-item
+visibility_mode: static
+enable_mode: enabled

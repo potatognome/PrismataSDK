@@ -1,0 +1,54 @@
+## File: default.colour-scheme.entry.yaml
+## Type: colour-scheme registry entry (0.4.0)
+## Purpose: Default Prismata terminal colour-scheme registry entry.
+## Provides semantic-role â†’ ANSI RGB mappings for UI surfaces, borders,
+## menus, and interactive elements. Compatible with ChromaScheme 0.4.0.
+
+id: default
+udi: prismata.meta.colour-scheme.default
+slug: default
+name: default.colour-scheme
+label: "Prismata Default Terminal Scheme (0.4.1)"
+kind: colour-scheme
+description: Default terminal-focused colour mapping produced from a ChromaScheme 0.4.0 source.
+schema_version: 0.4.1
+
+roles:
+  default:
+    fg: "ansi:rgb(220,220,220)"
+    bg: "ansi:rgb(10,10,12)"
+
+  primary-surface:
+    fg: "ansi:rgb(220,220,220)"
+    bg: "ansi:rgb(10,10,12)"
+
+  secondary-surface:
+    fg: "ansi:rgb(200,200,200)"
+    bg: "ansi:rgb(18,18,20)"
+
+  border:
+    fg: "ansi:rgb(160,160,160)"
+    bg: "ansi:rgb(10,10,12)"
+
+  accent-surface:
+    fg: "ansi:rgb(120,220,255)"
+    bg: "ansi:rgb(12,22,34)"
+
+  alert-surface:
+    fg: "ansi:rgb(255,160,120)"
+    bg: "ansi:rgb(38,12,10)"
+
+  background:
+    fg: "ansi:rgb(220,220,220)"
+    bg: "ansi:rgb(10,10,12)"
+
+  menu_surface:
+    fg: "ansi:rgb(220,220,220)"
+    bg: "ansi:rgb(10,10,12)"
+
+meta:
+  created_by: copilot
+  created_at: 2026-09-24
+  schema_version: 0.4.1
+
+

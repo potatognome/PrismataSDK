@@ -1,0 +1,95 @@
+﻿modes:
+
+  # ---------------------------------------------------------
+  # Base Modes
+  # ---------------------------------------------------------
+
+  default:
+    includeType: ["*"]
+    excludeFolders: ["node_modules", "dist", "build", ".git"]
+    
+  docs-only:
+    includeType: [".md", ".txt"]
+    excludeFolders: ["node_modules", "dist", "build", ".git"]
+
+  yaml:
+    includeType: [".yaml"]
+    excludeFolders: ["node_modules", ".git"]
+
+  json:
+    includeType: [".json"]
+    excludeFolders: ["node_modules", ".git"]
+
+  ts:
+    includeType: [".ts"]
+    excludeFolders: ["node_modules", "dist", "build"]
+
+  py:
+    includeType: [".py"]
+    excludeFolders: ["__pycache__", ".git"]
+
+  copilot:
+    includeFolders: [".github"]
+    includeType: [".md", ".txt"]
+    excludeFolders: ["node_modules", "dist", "build"]
+
+  # ---------------------------------------------------------
+  # Composite / Inherited Modes
+  # ---------------------------------------------------------
+
+  summary-docs:
+    extends: "docs-only"
+    ignoreType: [".txt"]
+    excludeFolders: ["drafts", "archive"]
+
+  code-only:
+    includeType: [".ts", ".py", ".ps1", ".psm1", ".psd1"]
+    excludeFolders: ["node_modules", "dist", "build", "__pycache__", ".git"]
+
+  config-only:
+    includeType: [".json", ".yaml"]
+    excludeFolders: ["node_modules", "dist", "build", ".git"]
+
+  config-clean:
+    extends: "config-only"
+    excludeFolders: ["archive", "legacy"]
+
+  ts-docs:
+    extends: "ts"
+    includeType: [".ts", ".md"]
+    excludeFolders: ["node_modules", "dist", "build"]
+
+  py-docs:
+    extends: "py"
+    includeType: [".py", ".md"]
+    excludeFolders: ["__pycache__", ".git"]
+
+  analysis:
+    includeType: [".md", ".yaml", ".json"]
+    excludeFolders: ["node_modules", "dist", "build", "__pycache__", ".git"]
+
+  frontend:
+    includeType: [".ts", ".md", ".json"]
+    excludeFolders: ["node_modules", "dist", "build"]
+
+  backend:
+    includeType: [".py", ".json", ".yaml"]
+    excludeFolders: ["__pycache__", ".git", "dist", "build"]
+
+  # ---------------------------------------------------------
+  # Highly Filtered / Specialized Modes
+  # ---------------------------------------------------------
+
+  docs-minimal:
+    extends: "docs-only"
+    ignoreType: [".txt"]
+    excludeFolders: ["drafts", "samples", "archive", "temp"]
+
+  config-schema:
+    extends: "config-only"
+    includeFolders: ["schema"]
+    excludeFolders: ["node_modules", "dist", "build", ".git"]
+
+  copilot-clean:
+    extends: "copilot"
+    excludeFolders: ["drafts", "samples"]

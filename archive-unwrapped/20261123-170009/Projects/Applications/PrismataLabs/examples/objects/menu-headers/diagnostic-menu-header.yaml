@@ -1,0 +1,7 @@
+id: example-diagnostic-menu-header
+udi: prismata.examples.menu-header.diagnostic
+kind: menu-header
+text: Diagnostic Pane Controls
+colour_role: prismata.examples.colour-role.menu-accent
+colour_scheme: prismata.examples.colour-scheme.surface
+border_pattern: prismata.examples.border.example-menu

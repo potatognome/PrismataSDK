@@ -1,0 +1,19 @@
+## File: settings-export.yaml
+## Type: schema
+## Purpose: Schema controlling export options (types, extensions,
+## and versioning) for export tooling.
+
+metadata:
+  udi: prismata.universe.schema.settings-export
+  name: settings-export
+  kind: schema-definition
+  description: "Schema controlling export options (types, extensions, and versioning)."
+
+
+id: "prismata.universe.schema.settings-export"
+version: "1.0.0"
+type: object
+properties:
+  default_export_type: { type: string }
+  allowed_extensions: { type: array }
+  auto_append_version: { type: boolean }

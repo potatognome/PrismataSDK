@@ -1,0 +1,5 @@
+sampleString: "Sample String (config.yaml)"
+sampleInt: 48
+samplePath: "C:\\Sample\\Path\\Config"
+sampleArray: ["Sample", "Array", "Config"]
+sampleSwitch: true  

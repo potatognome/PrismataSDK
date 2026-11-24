@@ -1,0 +1,19 @@
+## File: edit-create.yaml
+## Type: schema
+## Purpose: Schema for create/edit workflows describing reference objects,
+## chosen version, and the new object payload.
+
+metadata:
+  udi: prismata.universe.schema.edit-create
+  name: edit-create
+  kind: schema-definition
+  description: "Schema for create/edit workflows describing reference objects, chosen version, and new object payload."
+
+
+id: "prismata.universe.schema.edit-create"
+version: "2.0.0"
+type: object
+properties:
+  reference_object: { type: object }
+  selected_version: { type: string }
+  new_object: { type: object }

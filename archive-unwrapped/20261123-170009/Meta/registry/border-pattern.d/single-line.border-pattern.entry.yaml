@@ -1,0 +1,34 @@
+## File: default.border-pattern.entry.yaml
+## Type: border-pattern registry entry (0.4.0)
+## Purpose: Default Prismata terminal border-pattern registry entry.
+## Provides border patterns for UI surfaces, borders,
+## menus, and interactive elements.
+
+id: single-line
+udi: prismata.meta.border-pattern.single-line
+name: single-line.border-pattern
+label: "Prismata Single-Line Terminal Border Pattern (0.4.0)"
+kind: border-pattern
+description: Single-line terminal border pattern for Prismata UI.
+schema_version: 0.4.0
+
+glyphs:
+  top: "\u2500"
+  bottom: "\u2500"
+  left: "\u2502"
+  right: "\u2502"
+  corner_top_left: "\u250C"
+  corner_top_right: "\u2510"
+  corner_bottom_left: "\u2514"
+  corner_bottom_right: "\u2518"
+
+thickness: 1
+padding: 1
+colour_role: border
+
+meta:
+  created_by: copilot
+  created_at: 2026-09-24
+  schema_version: 0.4.0
+
+

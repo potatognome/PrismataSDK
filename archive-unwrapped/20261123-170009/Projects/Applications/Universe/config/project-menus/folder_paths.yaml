@@ -1,0 +1,38 @@
+## File: folder_paths.yaml
+## Type: settings manifest
+## Purpose: Canonical folder path mapping used by the Default Folder Paths
+## settings menu. Maps settings keys to labels and capability metadata.
+
+id: "prismata.universe.config.folder-paths"
+udi: "prismata.universe.config.folder-paths"
+schema_version: "1.0.0"
+version: "1.0.0"
+description: >
+  Canonical folder path keys used by Universe's Default Folder Paths settings menu.
+  Each entry maps a settings key (stored in settings.paths) to its menu label and
+  the capability that resolves it (app-settings-paths).
+
+paths:
+  - key: "canonical_folder"
+    label: "Canonical Folder"
+    description: "Root folder for canonical registry schemas and manifests."
+    capability: "prismata.universe.capability.app-settings-paths"
+    pick_mode: "folder"
+
+  - key: "project_root"
+    label: "Project Root"
+    description: "Root folder for the active Prismata project."
+    capability: "prismata.universe.capability.app-settings-paths"
+    pick_mode: "folder"
+
+  - key: "workspace_root"
+    label: "Workspace Root"
+    description: "Universe workspace directory (state, ingestion, registry, archive)."
+    capability: "prismata.universe.capability.app-settings-paths"
+    pick_mode: "folder"
+
+  - key: "temp_folder"
+    label: "Temp Folder"
+    description: "Temporary working directory for intermediate outputs."
+    capability: "prismata.universe.capability.app-settings-paths"
+    pick_mode: "folder"

@@ -1,0 +1,15 @@
+metadata:
+  udi: prismata.universe.menu.edit.export
+  name: "Edit > Export Menu"
+  version: "0.1.0"
+  kind: menu
+  description: "Submenu for exporting objects using current runtime settings."
+
+items:
+  - key: "1"
+    udi: "prismata.universe.menu.edit.export.custom"
+    label: "Export With Current Settings"
+    description: "Export selected objects using current runtime and naming settings."
+    capability: "prismata.universe.capability.fs-export-custom"
+    ui_framework: basic
+    submenu_ref: null

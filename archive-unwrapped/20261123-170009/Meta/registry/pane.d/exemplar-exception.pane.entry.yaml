@@ -1,0 +1,28 @@
+## File: exemplar-exception.pane.entry.yaml
+## Type: pane registry entry (0.4.0)
+## Purpose: Exception pane with a prominent alert surface and overlap styling.
+
+id: exemplar-exception
+udi: prismata.meta.pane.exemplar-exception
+name: exemplar-exception.pane
+label: "Exception"
+kind: pane
+description: "Warning/exception pane in the exemplar layout. It sits in the lower right area and overlaps the secondary panel."
+schema_version: 0.4.2
+
+border_pattern: double-line
+colour_scheme: default
+content_role: alert-surface
+colour_role: alert-surface
+border_role: border
+x: 64
+y: 42
+width: 28
+height: 18
+layout:
+  mode: single
+
+meta:
+  created_by: copilot
+  created_at: 2026-10-01
+  schema_version: 0.4.2

@@ -1,0 +1,107 @@
+﻿metadata:
+  udi: prismata.prismatalabs.manifest
+  name: PrismataLabs Application Manifest
+  version: 0.3.1
+  kind: application-manifest
+  description: >
+    PrismataLabs preview environment for colour-schemes, border-patterns,
+    panes, menus, menu-items, and ui-frameworks. Provides a Python-first
+    preview engine and structured menu-driven workflow. Updated menu schema
+    version: 0.4.3.
+
+# ---------------------------------------------------------------------------
+# Application Roots
+# ---------------------------------------------------------------------------
+
+paths:
+  pythonBridge: "./python/python_bridge.py"
+  capabilities: "./config/capability-manifest.yaml"
+  projectMenus: "./config/project-menus"
+  settings: "./config/labs.settings.yaml"
+
+# ---------------------------------------------------------------------------
+# Preview Engine Configuration
+# ---------------------------------------------------------------------------
+
+preview:
+  enable: true
+
+  # Default preview roles
+  defaultColourScheme: "default"
+  defaultBorderPattern: "default"
+  defaultUIFramework: "default"
+
+  # Preview behaviour flags
+  showBorder: true
+  showColour: true
+  showHeader: true
+  showFooter: true
+
+  # Multi-pane preview defaults
+  multiPane:
+    layout: "horizontal"
+    maxWidth: 120
+    maxHeight: 40
+
+# ---------------------------------------------------------------------------
+# Registry Roots (canonical Meta)
+# ---------------------------------------------------------------------------
+
+registry:
+  colourSchemes: "../../../Meta/registry/colour-scheme.d"
+  colourRoles: "../../../Meta/registry/colour-role.d"
+  borderPatterns: "../../../Meta/registry/border-pattern.d"
+  uiFrameworks: "../../../Meta/registry/ui-framework.d"
+  panes: "../../../Meta/registry/pane.d"
+
+# ---------------------------------------------------------------------------
+# Manifest & Schema Roots
+# ---------------------------------------------------------------------------
+
+schemas:
+  manifestSchemas: "../../../Meta/domain/manifest.schemas"
+  objectSchemas: "../../../Meta/canonical/object.schemas"
+  compositionSchemas: "../../../Meta/canonical/composition.schemas"
+
+# ---------------------------------------------------------------------------
+# Application Behaviour
+# ---------------------------------------------------------------------------
+
+behaviour:
+  allowDynamicHeader: true
+  allowDynamicFooter: true
+  allowConditionalVisibility: true
+  allowConditionalEnablement: true
+  allowMenuItemInjection: true
+
+# ---------------------------------------------------------------------------
+# Universe2 Integration
+# ---------------------------------------------------------------------------
+
+universeIntegration:
+  ingestMenus: true
+  ingestCapabilities: true
+  ingestPreviewEngine: true
+  submenuName: "PrismataLabs"
+  submenuIcon: "ðŸ§ª"
+
+# ---------------------------------------------------------------------------
+# PrismCommander Integration (future)
+# ---------------------------------------------------------------------------
+
+prismCommander:
+  ingestComponents: true
+  ingestPreviewableObjects: true
+  submenuName: "Labs2 Components"
+  submenuIcon: "ðŸ”§"
+
+# ---------------------------------------------------------------------------
+# Diagnostics
+# ---------------------------------------------------------------------------
+
+diagnostics:
+  enableLogging: true
+  logFile: "./logs/labs2.log"
+  showValidationErrors: true
+  showPreviewMetadata: true
+

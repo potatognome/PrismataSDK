@@ -1,0 +1,28 @@
+metadata:
+  udi: prismata.universe.menu.edit.multi
+  name: "Edit > Multi-Edit Menu"
+  version: "0.1.0"
+  kind: menu
+  description: "Submenu for multi-edit and update-fields operations."
+
+udi: "prismata.universe.menu.edit-multi"
+kind: menu
+type: "menu"
+title: "Multi-Edit"
+
+items:
+  - key: "1"
+    udi: "prismata.universe.menu.edit.multi.run"
+    label: "Run Multi-Edit"
+    description: "Apply multi-edit operations to selected compatible objects."
+    capability: "prismata.universe.capability.fs-edit-multi"
+    ui_framework: basic
+    submenu_ref: null
+
+  - key: "2"
+    udi: "prismata.universe.menu.edit.multi.update-fields"
+    label: "Update Fields"
+    description: "Add missing mandatory and optional fields for selected objects."
+    capability: "prismata.universe.capability.fs-update-fields"
+    ui_framework: basic
+    submenu_ref: null

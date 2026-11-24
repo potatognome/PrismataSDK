@@ -1,0 +1,19 @@
+## File: select-multi.yaml
+## Type: schema
+## Purpose: Schema for multi-selection behavior and operation filtering used
+## by bulk UI operations.
+
+metadata:
+  udi: prismata.universe.schema.select-multi
+  name: select-multi
+  kind: schema-definition
+  description: "Schema for multi-selection behavior and operation filtering."
+
+
+id: "prismata.universe.schema.select-multi"
+version: "1.0.0"
+type: object
+properties:
+  selected_objects: { type: array }
+  type_compatibility_matrix: { type: object }
+  filtered_operations: { type: array }

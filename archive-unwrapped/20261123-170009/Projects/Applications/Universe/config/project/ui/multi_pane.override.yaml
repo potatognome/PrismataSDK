@@ -1,0 +1,35 @@
+user_interfaces:
+  ui_framework: multi_pane
+
+  panes:
+    - id: results_list
+      role: list
+      coordinates:
+        x: 0
+        y: 0
+        width: 45
+        height: 100
+
+    - id: preview
+      role: preview
+      coordinates:
+        x: 45
+        y: 0
+        width: 35
+        height: 100
+
+    - id: version_carousel
+      role: list
+      coordinates:
+        x: 80
+        y: 0
+        width: 20
+        height: 60
+
+    - id: diff_panel
+      role: diff_right
+      coordinates:
+        x: 80
+        y: 60
+        width: 20
+        height: 40

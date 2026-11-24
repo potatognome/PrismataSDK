@@ -1,0 +1,17 @@
+id: alert-surface
+udi: prismata.meta.colour-role.alert-surface
+slug: alert-surface
+name: alert-surface.colour-role
+label: "Alert Surface"
+kind: colour-role
+description: Semantic role for a warning or exception surface in multi-pane layouts.
+schema_version: 0.4.1
+
+layers:
+  bg: "ansi:rgb(38,12,10)"
+  fg: "ansi:rgb(255,160,120)"
+
+meta:
+  created_by: copilot
+  created_at: 2026-10-01
+  schema_version: 0.4.1

@@ -1,0 +1,82 @@
+## File: main-menu.yaml
+## Type: project menu
+## Purpose: Application main menu; entry point for bootstrapping, find,
+## edit, and verify workflows exposed to the user via UI frameworks.
+
+metadata:
+  udi: prismata.universe.menu.main
+  name: "Main Menu"
+  version: "0.1.0"
+  kind: menu
+  description: "Application main menu for bootstrapping, find, edit, and verify workflows."
+
+udi: "prismata.universe.menu.main"
+kind: menu
+type: "menu"
+title: "Main Menu"
+header:
+  type: "runtime_state"
+
+items:
+  - key: "1"
+    udi: "prismata.universe.menu.main.run-bootstrap-sequence"
+    label: "Run Bootstrap Sequence"
+    description: "Initialize Universe ingestion, archive, and registry state."
+    capability: "prismata.universe.capability.app-bootstrap-run"
+    ui_framework: basic
+    submenu_ref: null
+    visibility_condition: "bootstrap_mode"
+
+  - key: "0"
+    udi: "prismata.universe.menu.main.quit"
+    label: "Quit"
+    description: "Exit the application."
+    capability: "prismata.universe.capability.app-quit"
+    ui_framework: basic
+    submenu_ref: null
+    visibility_condition: "initialized"
+
+  - key: "1"
+    udi: "prismata.universe.menu.main.find"
+    label: "Find & Select"
+    description: "Search for files, preview results, and perform diff operations."
+    capability: "prismata.universe.capability.fs-search-results"
+    ui_framework: menu
+    submenu_ref: "prismata.universe.menu.find"
+    visibility_condition: "initialized"
+
+  - key: "2"
+    udi: "prismata.universe.menu.main.edit"
+    label: "Create & Edit"
+    description: "Create new objects, update fields, conform to reference objects, and export."
+    capability: "prismata.universe.capability.fs-edit-multi"
+    ui_framework: menu
+    submenu_ref: "prismata.universe.menu.edit"
+    visibility_condition: "initialized_and_vile_ingested"
+
+  - key: "2"
+    udi: "prismata.universe.menu.main.edit-locked-until-vile-ingestion"
+    label: "Edit (Locked until Vile ingestion)"
+    description: "Create/Edit remains locked until tooling.vile is ingested."
+    capability: "prismata.universe.capability.fs-edit-multi"
+    ui_framework: basic
+    submenu_ref: null
+    visibility_condition: "initialized_and_vile_not_ingested"
+
+  - key: "3"
+    udi: "prismata.universe.menu.main.verify"
+    label: "Verify"
+    description: "Validate objects, run semantic substrate operations, apply version changes, and run diff panels."
+    capability: "prismata.universe.capability.fs-verify-multi"
+    ui_framework: menu
+    submenu_ref: "prismata.universe.menu.verify"
+    visibility_condition: "initialized"
+
+  - key: "4"
+    udi: "prismata.universe.menu.main.settings"
+    label: "Settings"
+    description: "Configure folder paths, naming conventions, export rules, and registry behavior."
+    capability: "prismata.universe.capability.app-settings-paths"
+    ui_framework: menu
+    submenu_ref: "prismata.universe.menu.settings"
+    visibility_condition: "initialized"

@@ -1,0 +1,44 @@
+kind: colour-roles
+entries:
+- id: example-pane-primary
+  udi: prismata.examples.colour-role.pane-primary
+  kind: colour-role
+  layers:
+    fg: ansi:rgb(220,220,220)
+    bg: ansi:rgb(12,17,26)
+- id: example-pane-secondary
+  udi: prismata.examples.colour-role.pane-secondary
+  kind: colour-role
+  layers:
+    fg: ansi:rgb(210,240,255)
+    bg: ansi:rgb(22,30,38)
+- id: example-menu-accent
+  udi: prismata.examples.colour-role.menu-accent
+  kind: colour-role
+  layers:
+    fg: ansi:rgb(120,220,255)
+    bg: ansi:rgb(12,22,34)
+- id: example-menu-border
+  udi: prismata.examples.colour-role.menu-border
+  kind: colour-role
+  layers:
+    fg: ansi:rgb(255,205,120)
+    bg: ansi:rgb(32,21,12)
+- id: example-item-border
+  udi: prismata.examples.colour-role.item-border
+  kind: colour-role
+  layers:
+    fg: ansi:rgb(160,160,160)
+    bg: ansi:rgb(17,17,22)
+- id: example-alert
+  udi: prismata.examples.colour-role.alert
+  kind: colour-role
+  layers:
+    fg: ansi:rgb(255,160,120)
+    bg: ansi:rgb(38,12,10)
+- id: example-border
+  udi: prismata.examples.colour-role.border
+  kind: colour-role
+  layers:
+    fg: ansi:rgb(163,175,200)
+    bg: ansi:rgb(10,10,12)

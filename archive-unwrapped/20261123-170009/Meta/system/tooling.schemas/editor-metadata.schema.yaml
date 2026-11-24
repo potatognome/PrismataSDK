@@ -1,0 +1,37 @@
+version: 0.4.0
+kind: editor-metadata
+schema_type: tooling
+
+metadata:
+  udi: prismata.meta.schema.editor-metadata
+  name: editor-metadata.schema
+  description: Canonical schema defining metadata for Prismata editor tooling.
+
+spec:
+  target_kind: editor-metadata
+  naming:
+    file_suffix: .schema.yaml
+  versioning:
+    semver: true
+
+fields:
+  - name: displayName
+    path: displayName
+    type: string
+    required: true
+
+  - name: icon
+    path: icon
+    type: string
+    required: false
+
+  - name: category
+    path: category
+    type: string
+    required: false
+
+object:
+  displayName: ""
+  icon: ""
+  category: ""
+

@@ -1,0 +1,90 @@
+## File: verify-menu.yaml
+## Type: project menu
+## Purpose: Menu definition for verification workflows (verify against
+## reference object, multi-selection checks, diffs). Loaded by menu
+## loaders and runtime UI.
+
+metadata:
+  udi: prismata.universe.menu.verify
+  name: "Verify Menu"
+  version: "0.1.0"
+  kind: menu
+  description: "Menu for verification, version, diff, and semantic operations."
+
+items:
+  - key: "1"
+    udi: "prismata.universe.menu.verify.verify-against-reference-object"
+    label: "Verify Against Reference Object"
+    description: "Verify selected objects against a reference object or exemplar."
+    capability: "prismata.universe.capability.fs-verify-reference"
+    ui_framework: menu
+    submenu_ref: null
+    visibility_condition: "reference_object_selected"
+
+  - key: "2"
+    udi: "prismata.universe.menu.verify.verify-multi-selection"
+    label: "Verify Multi-Selection"
+    description: "Verify multiple selected objects using type-compatible operations."
+    capability: "prismata.universe.capability.fs-verify-multi"
+    ui_framework: menu
+    submenu_ref: null
+
+  - key: "2.1"
+    udi: "prismata.universe.menu.verify.run-sequential-validation"
+    label: "Run Sequential Validation"
+    capability: "prismata.universe.capability.fs-verify-sequence"
+
+    ui_framework: basic
+    submenu_ref: null
+
+  - key: "2.2"
+    udi: "prismata.universe.menu.verify.run-collective-validation"
+    label: "Run Collective Validation"
+    capability: "prismata.universe.capability.fs-verify-collective"
+
+    ui_framework: basic
+    submenu_ref: null
+
+  - key: "3"
+    udi: "prismata.universe.menu.verify.apply-version-change-to-selection"
+    label: "Apply Version Change to Selection"
+    description: "Forward or backward version remapping for selected objects."
+    capability: "prismata.universe.capability.fs-version-apply"
+    ui_framework: menu
+    submenu_ref: null
+
+  - key: "4"
+    udi: "prismata.universe.menu.verify.diff-panel"
+    label: "Diff Panel"
+    description: "Cross-type diffing using semantic key/value matching."
+    capability: "prismata.universe.capability.fs-diff-compatible"
+    ui_framework: menu
+    submenu_ref: null
+
+  - key: "5"
+    udi: "prismata.universe.menu.verify.semantic-primitive-extraction"
+    label: "Semantic Primitive Extraction"
+    description: "Extract semantic primitive metadata from the current context."
+    capability: "prismata.universe.capability.semantic-primitive-extract"
+
+    ui_framework: basic
+    submenu_ref: null
+
+  - key: "6"
+    udi: "prismata.universe.menu.verify.semantic-dependency-graph"
+    label: "Semantic Dependency Graph"
+    description: "Generate a semantic dependency graph for active primitives."
+    capability: "prismata.universe.capability.semantic-dependency-graph"
+
+    ui_framework: basic
+    submenu_ref: null
+
+  - key: "7"
+    udi: "prismata.universe.menu.verify.semantic-bundle"
+    label: "Semantic Bundle"
+    description: "Generate and archive semantic bundle output."
+    capability: "prismata.universe.capability.semantic-bundle"
+
+    ui_framework: basic
+    submenu_ref: null
+

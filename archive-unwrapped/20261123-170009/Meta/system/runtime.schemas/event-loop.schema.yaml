@@ -1,0 +1,32 @@
+version: 0.4.0
+kind: event-loop
+schema_type: runtime
+
+metadata:
+  udi: prismata.meta.schema.event-loop
+  name: event-loop.schema
+  location: /Prismata/Meta/runtime.schemas/event-loop.schema.yaml
+  description: Canonical schema defining the Prismata runtime event loop.
+
+spec:
+  target_kind: event-loop
+  naming:
+    file_suffix: .schema.yaml
+  versioning:
+    semver: true
+
+fields:
+  - name: queue
+    path: queue
+    type: array
+    required: true
+
+  - name: handlers
+    path: handlers
+    type: array
+    required: false
+
+object:
+  queue: []
+  handlers: []
+
